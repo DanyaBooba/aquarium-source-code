@@ -14,6 +14,10 @@ use App\Http\Controllers\PostController;
 |
 */
 
+//
+// CRUD (create, read, update, delete)
+//
+
 Route::get('posts', [PostController::class, 'index'])->name('posts.index');
 
 Route::get('posts/create', [PostController::class, 'create'])->name('posts.create');
@@ -26,4 +30,8 @@ Route::get('posts/{post}/edit', [PostController::class, 'edit'])->name('posts.ed
 
 Route::put('posts/{post}', [PostController::class, 'update'])->name('posts.update');
 
-Route::delete('posts/{post}', [PostController::class, 'delete'])->name('posts.delete');
+Route::delete('posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
+
+// Route::resource('posts', PostController::class);
+
+Route::put('posts/{post}/like', [PostController::class, 'like'])->name('posts.like');
