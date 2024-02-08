@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\Posts\CommentController;
+
 Route::prefix('user')->group(function () {
 
     // Route::resource('posts', PostController::class);
