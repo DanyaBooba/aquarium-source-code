@@ -15,6 +15,9 @@ class LogMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
+        // info('Запрос', ['foo' => 'bar']);
+        info('Запрос 2', $request->all());
+
         return $next($request);
     }
 }

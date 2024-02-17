@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BaseController;
+use App\Http\Middleware\LogMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,9 @@ Route::post('register', [RegisterController::class, 'store'])->name('register.st
 Route::get('login', [LoginController::class, 'index'])->name('login.index');
 
 Route::post('login', [LoginController::class, 'store'])->name('login.store');
+
+//
+// Middleware
+//
+
+//Route::get('login', [LoginController::class, 'index'])->name('login.index')->middleware(LogMiddleware::class);
