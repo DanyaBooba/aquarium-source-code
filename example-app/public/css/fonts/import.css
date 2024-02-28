@@ -1,20 +1,18 @@
 @font-face {
     font-family: ResistSans-Title;
     font-style: normal;
-    src: url("/fonts/ResistSans/ResistSansText-Medium.woff") format("woff"),
-        url("/fonts/ResistSans/ResistSansText-Medium.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: ResistSans-Text;
-    font-style: normal;
-    src: url("/fonts/ResistSans/ResistSansText-Light.woff") format("woff"),
-        url("/fonts/ResistSans/ResistSansText-Light.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: ResistSans-Bold;
-    font-style: bold;
-    src: url("/fonts/ResistSans/ResistSansText-Regular.woff") format("woff")
+    src: url("/fonts/ResistSans/ResistSansText-Regular.woff") format("woff"),
         url("/fonts/ResistSans/ResistSansText-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    src: url("/fonts/Inter/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: Inter-Bold;
+    font-style: bold;
+    src: url("/fonts/Inter/Inter-Medium.ttf");
 }

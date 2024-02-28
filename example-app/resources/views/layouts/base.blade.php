@@ -57,7 +57,7 @@
         @include('includes.alert')
         @include('includes.header')
 
-        <main class="flex-grow-1 py-3">
+        <main class="flex-grow-1 py-1">
             @yield('content')
         </main>
 

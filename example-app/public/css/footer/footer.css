@@ -1,0 +1,4 @@
+footer {
+    border-top: 1px solid var(--footer-border-top);
+    background: var(--footer-background-color);
+}

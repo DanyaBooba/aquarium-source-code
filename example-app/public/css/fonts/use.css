@@ -6,12 +6,12 @@ nav,
 main,
 header,
 footer {
-    font-family: ResistSans-Text;
+    font-family: Inter;
 }
 
 b,
 .fw-bold {
-    font-family: ResistSans-Bold;
+    font-family: Inter-Bold;
 }
 
 h1,
