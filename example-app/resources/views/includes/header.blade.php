@@ -18,10 +18,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="nav col-12 ms-lg-3 col-lg-auto me-lg-auto mb-md-0 header-content-links">
-                    <li><a href="{{ route('main.index') }}" class="nav-link active">{{ __('Привет') }}</a></li>
-                    <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('Привет') }}</a></li>
-                    <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('Привет') }}</a></li>
-                    <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('Привет') }}</a></li>
+                    <li><a href="{{ route('main.index') }}" class="nav-link active">{{ __('Информация') }}</a></li>
+                    <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('FAQ') }}</a></li>
+                    <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('Блог') }}</a></li>
+                    <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('OAuth') }}</a></li>
+                    <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('Технологии') }}</a></li>
                 </ul>
                 <a href="{{ route('user.index') }}" class="link-body-emphasis header-content-profile">
                     <img src="https://github.com/mdo.png" alt="Профиль">

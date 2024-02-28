@@ -1,6 +1,7 @@
 :root {
-    --header-border-bottom: #dee2e6;
     --header-background-color: #fff;
+    --header-border-bottom: #dee2e6;
+    --svg-icon: #000;
     --body-color: #fdfdfd;
     --text-color: #212529;
     --text-color-hover: ##0984e3;

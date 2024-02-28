@@ -25,6 +25,7 @@ header .header-content-logo {
 
 header .header-content-logo svg {
     width: 200px;
+    fill: var(--svg-icon);
 }
 
 header .header-content-links {
@@ -59,6 +60,10 @@ header .header-content button.navbar-toggler {
     margin-left: 1rem;
 }
 
+header .header-content-profile {
+    justify-content: center;
+}
+
 @media(hover: hover) {
     header a.header-content-profile:is(:hover, :focus) p {
         color: var(--text-color-hover);
@@ -66,5 +71,15 @@ header .header-content button.navbar-toggler {
 
     header .header-content-links li a:is(:hover, :focus) {
         color: var(--text-color-hover);
+    }
+}
+
+@media(max-width: 991px) {
+    .header-content-links {
+        margin-top: 1rem;
+    }
+
+    .header-content-profile {
+        margin-top: 1rem;
     }
 }
