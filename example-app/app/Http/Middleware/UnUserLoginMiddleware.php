@@ -6,12 +6,12 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class UserLoginMiddleware
+class UnUserLoginMiddleware
 {
     public function handle(Request $request, Closure $next): Response
     {
         return session('login')
-            ? $next($request)
-            : redirect()->route('auth.signin');
+            ? redirect()->route('user.index')
+            : $next($request);
     }
 }

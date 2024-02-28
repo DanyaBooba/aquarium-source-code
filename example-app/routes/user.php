@@ -6,5 +6,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('user')->middleware(['login.session', 'log'])->group(function () {
 
-    Route::get('/', [UserController::class, 'index'])->name('user.posts.index');
+    Route::get('/', [UserController::class, 'index'])->name('user.index');
 });
