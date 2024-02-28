@@ -13,11 +13,11 @@ class MainRouteController extends Controller
 
     public function about()
     {
-        return "";
+        return view('main.about');
     }
 
     public function faq()
     {
-        return "";
+        return view('main.faq');
     }
 }

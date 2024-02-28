@@ -18,8 +18,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="nav col-12 ms-lg-3 col-lg-auto me-lg-auto mb-md-0 header-content-links">
-                    <li><a href="{{ route('main.index') }}" class="nav-link active">{{ __('Информация') }}</a></li>
-                    <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('FAQ') }}</a></li>
+                    <li><a href="{{ route('main.about') }}" class="nav-link {{ active_link('main.about') }}">{{ __('Информация') }}</a></li>
+                    <li><a href="{{ route('main.faq') }}" class="nav-link ">{{ __('FAQ') }}</a></li>
                     <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('Блог') }}</a></li>
                     <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('OAuth') }}</a></li>
                     <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('Технологии') }}</a></li>

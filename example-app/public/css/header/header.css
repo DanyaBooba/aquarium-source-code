@@ -64,12 +64,23 @@ header .header-content-profile {
     justify-content: center;
 }
 
+header .header-content-links li a:focus {
+    color: var(--text-color-hover);
+    text-decoration: none;
+}
+
+header a.header-content-profile:focus p {
+    color: var(--text-color-hover);
+    text-decoration: none;
+}
+
 @media(hover: hover) {
-    header a.header-content-profile:is(:hover, :focus) p {
+    header a.header-content-profile:hover p {
         color: var(--text-color-hover);
+        text-decoration: underline;
     }
 
-    header .header-content-links li a:is(:hover, :focus) {
+    header .header-content-links li a:hover {
         color: var(--text-color-hover);
         text-decoration: underline;
     }
