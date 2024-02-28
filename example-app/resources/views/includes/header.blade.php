@@ -1,8 +1,7 @@
-
 <header class="header navbar-expand-lg bg-body-tertiary">
     <div class="container">
         <div class="header-content justify-content-lg-start">
-            <a href="{{ route('main.index') }}" aria-label="Главная страница" class="header-content-logo mb-lg-0 link-body-emphasis">
+            <a href="{{ route('main.index') }}" aria-label="Главная страница" class="header-content-logo link-body-emphasis">
                 <svg viewBox="0 0 1403 270" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1356.22 62.9C1387.42 62.9 1402.42 87.8 1402.42 121.1V215H1377.82V126.8C1377.82 98 1371.52 83.9 1347.22 83.9C1317.52 83.9 1299.82 110.3 1299.82 149.3V215H1275.22V126.8C1275.22 98 1268.92 83.9 1244.62 83.9C1214.92 83.9 1197.22 110.3 1197.22 149.3V215H1172.62V65.9H1197.22V91.4L1193.32 108.2H1200.22C1206.22 81.2 1221.82 62.9 1253.62 62.9C1280.62 62.9 1295.02 81.5 1298.32 108.2H1302.82C1308.82 81.2 1324.42 62.9 1356.22 62.9Z" />
                     <path d="M1055.07 197C1086.57 197 1108.77 172.1 1108.77 132.2V65.9H1133.07V215H1108.77V189.2L1112.67 172.1H1105.77C1099.77 199.1 1080.87 218 1048.47 218C1014.57 218 992.67 198.5 992.67 157.1V65.9H1017.27V153.8C1017.27 185 1029.27 197 1055.07 197Z" />
@@ -15,14 +14,14 @@
                 </svg>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                123
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-md-0 header-content-links">
-                    <li><a href="{{ route('main.index') }}" class="nav-link link-secondary">{{ __('Привет') }}</a></li>
-                    <li><a href="{{ route('main.index') }}" class="nav-link link-body-emphasis">{{ __('Привет') }}</a></li>
-                    <li><a href="{{ route('main.index') }}" class="nav-link link-body-emphasis">{{ __('Привет') }}</a></li>
-                    <li><a href="{{ route('main.index') }}" class="nav-link link-body-emphasis">{{ __('Привет') }}</a></li>
+                <ul class="nav col-12 ms-lg-3 col-lg-auto me-lg-auto mb-md-0 header-content-links">
+                    <li><a href="{{ route('main.index') }}" class="nav-link active">{{ __('Привет') }}</a></li>
+                    <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('Привет') }}</a></li>
+                    <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('Привет') }}</a></li>
+                    <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('Привет') }}</a></li>
                 </ul>
                 <a href="{{ route('user.index') }}" class="link-body-emphasis header-content-profile">
                     <img src="https://github.com/mdo.png" alt="Профиль">
@@ -30,12 +29,12 @@
                         {{ __('Даниил Дыбка') }}
                     </p>
                 </a>
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 header-content-sign">
+                {{-- <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 header-content-sign">
                     <li><a href="{{ route('main.index') }}" class="nav-link link-secondary">Overview</a></li>
                     <li><a href="{{ route('main.index') }}" class="nav-link link-body-emphasis">Inventory</a></li>
                     <li><a href="{{ route('main.index') }}" class="nav-link link-body-emphasis">Customers</a></li>
                     <li><a href="{{ route('main.index') }}" class="nav-link link-body-emphasis">Products</a></li>
-                </ul>
+                </ul> --}}
             </div>
         </div>
     </div>
