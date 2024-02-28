@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('page.title', config('app.name'))</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vars.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
     @stack('css')
 </head>
 <body>
@@ -21,7 +23,7 @@
         @include('includes.footer')
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('js/bootstrap.js') }}" />
     @stack('js')
 </body>
 </html>
