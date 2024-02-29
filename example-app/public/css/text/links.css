@@ -16,3 +16,10 @@ a:is(:focus, :focus-within, :focus-visible) {
         text-decoration-color: var(--text-color-hover) !important;
     }
 }
+
+@media(hover: none) {
+    a:active {
+        color: var(--text-color-hover) !important;
+        text-decoration-color: var(--text-color-hover) !important;
+    }
+}
