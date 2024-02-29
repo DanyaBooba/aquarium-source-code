@@ -4,7 +4,7 @@
 
 @push('css')
     <style>
-        @media(max-width: 767px) {
+        @media(max-width: 767.98px) {
             div.row .col-3 {
                 width: 100%;
             }
@@ -12,6 +12,11 @@
             div.row .col-8 {
                 width: 100%;
             }
+        }
+
+        div.row ul li {
+            margin-bottom: .5rem;
+            list-style-type: lower-greek;
         }
     </style>
 @endpush
