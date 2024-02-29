@@ -52,19 +52,5 @@
 
     <x-head.metrix />
 </head>
-<body>
-    <div class="d-flex flex-column justify-content-between min-vh-100">
-        @include('includes.alert')
-        @include('includes.header')
-
-        <main class="flex-grow-1 py-1">
-            @yield('content')
-        </main>
-
-        @include('includes.footer')
-    </div>
-
-    <script src="{{ asset('js/bootstrap.js') }}"></script>
-    @stack('js')
-</body>
+@yield('body')
 </html>
