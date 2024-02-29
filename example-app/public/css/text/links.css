@@ -1,0 +1,18 @@
+a {
+    color: var(--text-default) !important;
+    text-decoration-thickness: .05rem !important;
+    text-underline-offset: .2rem;
+    text-decoration-color: var(--text-color-link-underline) !important;
+}
+
+a:is(:focus, :focus-within, :focus-visible) {
+    color: var(--text-color-hover) !important;
+    text-decoration: none;
+}
+
+@media(hover: hover) {
+    a:hover {
+        color: var(--text-color-hover) !important;
+        text-decoration-color: var(--text-color-hover) !important;
+    }
+}

@@ -50,6 +50,11 @@ header .header-content-profile p {
     margin-left: .5rem;
 }
 
+header a.header-content-profile p {
+    text-decoration-thickness: .05rem !important;
+    text-underline-offset: .2rem;
+}
+
 header .header-content-links li a {
     padding-left: .5rem;
     padding-right: .5rem;
