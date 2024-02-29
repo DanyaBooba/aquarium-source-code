@@ -11,6 +11,11 @@ class AuthController extends Controller
         return view('sign.in.index');
     }
 
+    public function signinpost()
+    {
+        return "post";
+    }
+
     public function signup()
     {
         return view('sign.up.index');

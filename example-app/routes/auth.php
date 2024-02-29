@@ -7,6 +7,8 @@ Route::middleware(['log', 'unlogin'])->group(function () {
 
     Route::get('signin', [AuthController::class, 'signin'])->name('auth.signin');
 
+    Route::post('signin', [AuthController::class, 'signinpost'])->name('auth.signin.post');
+
     Route::get('signup', [AuthController::class, 'signup'])->name('auth.signup');
 
     Route::get('login', function () {

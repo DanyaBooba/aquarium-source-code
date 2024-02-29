@@ -8,4 +8,11 @@
     --text-color: #e8f3ff;
     --text-color-hover: #0984e3;
     --text-color-link-underline: #565656;
+
+    --signin-choose-background-color: #34305e;
+    --signin-choose-background-color-hover: #48437b;
+
+    --signin-choose-or-border-bottom: #2f2c52;
+
+    --authentication-back: #262443;
 }
