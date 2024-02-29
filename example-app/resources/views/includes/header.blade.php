@@ -20,22 +20,20 @@
                 <ul class="nav col-12 ms-lg-3 col-lg-auto me-lg-auto mb-md-0 header-content-links">
                     <li><a href="{{ route('main.about') }}" class="nav-link {{ active_link('main.about') }}">{{ __('Информация') }}</a></li>
                     <li><a href="{{ route('main.faq') }}" class="nav-link {{ active_link('main.faq') }}">{{ __('FAQ') }}</a></li>
-                    <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('Блог') }}</a></li>
-                    <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('OAuth') }}</a></li>
-                    <li><a href="{{ route('main.index') }}" class="nav-link ">{{ __('Технологии') }}</a></li>
+                    <li><a href="{{ route('blog.index') }}" class="nav-link {{ active_link('blog.index') }}">{{ __('Блог') }}</a></li>
+                    <li><a href="{{ route('main.oauth') }}" class="nav-link {{ active_link('main.oauth') }}">{{ __('OAuth') }}</a></li>
+                    <li><a href="{{ route('main.tech') }}" class="nav-link {{ active_link('main.tech') }}">{{ __('Технологии') }}</a></li>
                 </ul>
-                <a href="{{ route('user.index') }}" class="link-body-emphasis header-content-profile">
+                {{-- <a href="{{ route('user.index') }}" class="link-body-emphasis header-content-profile">
                     <img src="https://github.com/mdo.png" alt="Профиль">
                     <p>
                         {{ __('Даниил Дыбка') }}
                     </p>
-                </a>
-                {{-- <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 header-content-sign">
-                    <li><a href="{{ route('main.index') }}" class="nav-link link-secondary">Overview</a></li>
-                    <li><a href="{{ route('main.index') }}" class="nav-link link-body-emphasis">Inventory</a></li>
-                    <li><a href="{{ route('main.index') }}" class="nav-link link-body-emphasis">Customers</a></li>
-                    <li><a href="{{ route('main.index') }}" class="nav-link link-body-emphasis">Products</a></li>
-                </ul> --}}
+                </a> --}}
+                <ul class="nav col-12 col-lg-auto ms-lg-auto mb-md-0 header-content-links">
+                    <li><a href="{{ route('auth.signin') }}" class="nav-link link-secondary">{{ __('Вход') }}</a></li>
+                    <li><a href="{{ route('auth.signup') }}" class="nav-link link-body-emphasis">{{ __('Регистрация') }}</a></li>
+                </ul>
             </div>
         </div>
     </div>

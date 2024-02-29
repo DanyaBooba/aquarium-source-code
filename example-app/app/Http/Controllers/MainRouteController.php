@@ -20,4 +20,14 @@ class MainRouteController extends Controller
     {
         return view('main.faq');
     }
+
+    public function oauth()
+    {
+        return view('main.oauth');
+    }
+
+    public function tech()
+    {
+        return view('main.tech');
+    }
 }
