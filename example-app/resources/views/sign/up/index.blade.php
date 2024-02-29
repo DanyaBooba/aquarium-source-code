@@ -52,6 +52,4 @@
 
     <button class="btn btn-primary py-2" type="submit">Войти</button>
 </form>
-
-<p class="mt-5 mb-3 text-body-secondary text-center">© 2020–{{ date('Y') }}</p>
 @endsection

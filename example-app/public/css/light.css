@@ -9,10 +9,10 @@
     --text-color-hover: #0984e3;
     --text-color-link-underline: #a8a8a8;
 
-    --signin-choose-background-color: #e9eff5;
-    --signin-choose-background-color-hover: #c8dbed;
+    --signin-choose-background-color: #ebebeb;
+    --signin-choose-background-color-hover: #e4e4e4;
 
     --signin-choose-or-border-bottom: #e2e2e2;
 
-    --authentication-back: #ebebeb;
+    --authentication-back: #f5f5f5;
 }
