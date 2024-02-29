@@ -38,26 +38,28 @@
     align-items: center;
 
     color: var(--text-color);
-    background-color: var(--signin-choose-background-color);
+    background-color: var(--body-color);
+    border: .1rem solid var(--signin-choose-background-color);
 
-    border-radius: 8px;
+    border-radius: 12px;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-yandex button svg {
     width: 32px;
-    margin-right: .5rem;
+    margin-right: 1rem;
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-google button svg {
     width: 32px;
-    margin-right: .5rem;
+    margin-right: 1rem;
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-email button svg {
     width: 32px;
-    margin-right: .3rem;
+    height: 32px;
+    margin-right: 1rem;
 }
 
 .authentication #signin-choose .d-flex div button:is(:focus, :focus-visible, :focus-within) {
@@ -71,9 +73,22 @@
 }
 
 .authentication #signin-choose .signin-choose-or {
-    margin-top: -30px;
+    margin-top: -37px;
     margin-bottom: 16px !important;
     text-align: center;
+}
+
+.authentication #signin-choose .signin-choose-or-white {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.authentication #signin-choose .signin-choose-or-white span {
+    background-color: var(--body-color) !important;
+    margin-top: -22px;
+    width: 50px !important;
+    height: 20px !important;
 }
 
 .authentication #signin-choose .signin-choose-or span {

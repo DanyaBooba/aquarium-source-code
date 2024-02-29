@@ -8,19 +8,20 @@
 <div id="signin-choose">
     <div class="d-flex flex-column">
         <div id="signin-choose-yandex">
-            <button class="btn" onClick="signinYandex()">
+            <button class="btn fs-5" onClick="signinYandex()">
                 <x-yandex />
                 Яндекс
             </button>
         </div>
-        <div class="mb-3" id="signin-choose-google">
-            <button class="btn" onClick="signinGoogle()">
+        <div id="signin-choose-google">
+            <button class="btn fs-5" onClick="signinGoogle()">
                 <x-google />
                 Google
             </button>
         </div>
+        <x-sign.choose-or />
         <div id="signin-choose-email">
-            <button class="btn" onClick="showEmail()">
+            <button class="btn fs-5" onClick="showEmail()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail">
                     <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                 </svg>
