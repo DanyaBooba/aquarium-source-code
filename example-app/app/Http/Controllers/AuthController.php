@@ -8,6 +8,11 @@ class AuthController extends Controller
 {
     public function signin()
     {
-        return "";
+        return view('sign.in.index');
+    }
+
+    public function signup()
+    {
+        return view('sign.up.index');
     }
 }

@@ -8,4 +8,24 @@ Route::middleware(['log', 'unlogin'])->group(function () {
     Route::get('signin', [AuthController::class, 'signin'])->name('auth.signin');
 
     Route::get('signup', [AuthController::class, 'signup'])->name('auth.signup');
+
+    Route::get('login', function () {
+        return redirect()->route('auth.signin');
+    });
+
+    Route::get('log', function () {
+        return redirect()->route('auth.signin');
+    });
+
+    Route::get('register', function () {
+        return redirect()->route('auth.signup');
+    });
+
+    Route::get('registration', function () {
+        return redirect()->route('auth.signup');
+    });
+
+    Route::get('reg', function () {
+        return redirect()->route('auth.signup');
+    });
 });
