@@ -1,5 +1,5 @@
-<div>
-    <div class="bg-white d-flex flex-column p-4" style="border-radius: 8px; min-height: 300px">
+<div class="blog-post">
+    <div class="blog-post-content p-4">
         <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
         <a href="{{ route('blog.show', 1) }}" class="d-flex align-items-center mt-auto mb-2">
             {{ __('Читать') }}

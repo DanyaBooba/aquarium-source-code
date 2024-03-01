@@ -31,3 +31,20 @@
 .container.container-blog nav ul.pagination .page-link.page-link-prev svg {
     margin-right: .5rem;
 }
+
+.container.container-blog .row-blog div.blog-post .blog-post-content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    min-height: 300px;
+}
+
+.container.container-blog .row-blog div.blog-post:first-child .blog-post-content {
+    background: var(--blog-dark-post);
+    color: var(--blog-text-on-dark);
+}
+
+.container.container-blog .row-blog div.blog-post:not(:first-child) .blog-post-content {
+    background: var(--blog-white-post);
+    color: var(--text-color);
+}
