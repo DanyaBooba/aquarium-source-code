@@ -8,6 +8,31 @@ body {
     padding: 1rem;
 }
 
-.form-signin .form-floating:focus-within {
+.form-signup {
+    max-width: 1000px;
+    padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within,
+.form-signup .form-floating:focus-within {
     z-index: 2;
+}
+
+.form-signup-display {
+    padding: 3rem;
+}
+
+.form-signup-logo {
+    max-width: 300px;
+}
+
+@media(max-width: 767.98px) {
+    .form-signup {
+        max-width: 330px;
+        padding: 1rem;
+    }
+
+    .form-signup-display {
+        display: none !important;
+    }
 }
