@@ -40,19 +40,19 @@
     border: 1px solid var(--pagination-active);
 }
 
-.container.container-blog .row-blog div.blog-post .blog-post-content {
+.container.container-blog .row-blog .blog-post .blog-post-content {
     display: flex;
     flex-direction: column;
     border-radius: 8px;
     min-height: 300px;
 }
 
-.container.container-blog .row-blog div.blog-post:first-child .blog-post-content {
-    background: var(--blog-dark-post);
+.container.container-blog .row-blog .blog-post:first-child .blog-post-content {
+    background-color: var(--blog-dark-post);
     color: var(--blog-text-on-dark);
 }
 
-.container.container-blog .row-blog div.blog-post:not(:first-child) .blog-post-content {
-    background: var(--blog-white-post);
+.container.container-blog .row-blog .blog-post:not(:first-child) .blog-post-content {
+    background-color: var(--blog-white-post);
     color: var(--text-color);
 }
