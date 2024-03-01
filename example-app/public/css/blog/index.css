@@ -10,18 +10,22 @@
 
 .container.container-blog nav ul.pagination .page-link {
     border: none;
-    border-radius: 8px !important;
 
     background-color: transparent !important;
 
     margin-left: .5rem;
     margin-right: .5rem;
+
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 50% !important;
 }
 
 .container.container-blog nav ul.pagination .page-link.page-link-next,
 .container.container-blog nav ul.pagination .page-link.page-link-prev {
     display: flex;
     align-items: center;
+    border-radius: 8px !important;
 }
 
 .container.container-blog nav ul.pagination .page-link.page-link-next svg {
@@ -30,6 +34,10 @@
 
 .container.container-blog nav ul.pagination .page-link.page-link-prev svg {
     margin-right: .5rem;
+}
+
+.container.container-blog nav ul.pagination .page-link.active {
+    border: 1px solid var(--pagination-active);
 }
 
 .container.container-blog .row-blog div.blog-post .blog-post-content {
