@@ -22,6 +22,11 @@
 @endpush
 
 @section('main.content')
+
+    <nav class="position-sticky" style="top: 2rem;">
+        123
+    </nav>
+
     <div class="row gx-3">
         <div class="col-3 p-3">
             <ul id="left-bar-anchors"></ul>
@@ -37,6 +42,126 @@
             <h2>Lorem, ipsum dolor.1</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, corporis!
+            </p>
+            <h3>Lorem, ipsum dolor.2</h3>
+            <p>
+                Lorem ipsum dolor sit.
+            </p>
+            <h3>Lorem, ipsum dolor.3</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
+            </p>
+            <h3>Lorem, ipsum dolor.4</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
+            </p>
+            <h3>Lorem, ipsum dolor.2</h3>
+            <p>
+                Lorem ipsum dolor sit.
+            </p>
+            <h3>Lorem, ipsum dolor.3</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
+            </p>
+            <h3>Lorem, ipsum dolor.4</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
+            </p>
+            <h3>Lorem, ipsum dolor.2</h3>
+            <p>
+                Lorem ipsum dolor sit.
+            </p>
+            <h3>Lorem, ipsum dolor.3</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
+            </p>
+            <h3>Lorem, ipsum dolor.4</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
+            </p>
+            <h3>Lorem, ipsum dolor.2</h3>
+            <p>
+                Lorem ipsum dolor sit.
+            </p>
+            <h3>Lorem, ipsum dolor.3</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
+            </p>
+            <h3>Lorem, ipsum dolor.4</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
+            </p>
+            <h3>Lorem, ipsum dolor.2</h3>
+            <p>
+                Lorem ipsum dolor sit.
+            </p>
+            <h3>Lorem, ipsum dolor.3</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
+            </p>
+            <h3>Lorem, ipsum dolor.4</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
+            </p>
+            <h3>Lorem, ipsum dolor.2</h3>
+            <p>
+                Lorem ipsum dolor sit.
+            </p>
+            <h3>Lorem, ipsum dolor.3</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
+            </p>
+            <h3>Lorem, ipsum dolor.4</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
+            </p>
+            <h3>Lorem, ipsum dolor.2</h3>
+            <p>
+                Lorem ipsum dolor sit.
+            </p>
+            <h3>Lorem, ipsum dolor.3</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
+            </p>
+            <h3>Lorem, ipsum dolor.4</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
+            </p>
+            <h3>Lorem, ipsum dolor.2</h3>
+            <p>
+                Lorem ipsum dolor sit.
+            </p>
+            <h3>Lorem, ipsum dolor.3</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
+            </p>
+            <h3>Lorem, ipsum dolor.4</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
             </p>
             <h3>Lorem, ipsum dolor.2</h3>
             <p>
