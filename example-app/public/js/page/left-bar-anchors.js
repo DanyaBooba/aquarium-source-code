@@ -26,7 +26,9 @@ function anchors() {
             `<li><a href='#${title.id}'>${title.textContent}</a></li>`
         );
         title.classList.add("title-anchor");
-        title.innerHTML = `<a href='#${title.id}' onClick='copyLink("${window.location.href}#${title.id}")'>${svgAnchor}</a>${title.innerHTML}`;
+        title.innerHTML = `<a href='#${title.id}'
+            onClick='copyLink("${window.location.href}#${title.id}")'>
+            ${svgAnchor}</a>${title.innerHTML}`;
     });
 }
 
