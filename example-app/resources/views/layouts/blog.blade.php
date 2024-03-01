@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@push('css')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/blog/index.css') }}" />
+@endpush
+
 @section('body')
 <body>
     <div class="d-flex flex-column justify-content-between min-vh-100">
@@ -8,7 +12,7 @@
 
         <main class="flex-grow-1 py-1">
             <section>
-                <div class="container" style="max-width: 1000px">
+                <div class="container container-blog">
                     <div class="d-flex align-items-start" style="margin-bottom: 50px; margin-top: 30px">
                         <h1 class="display-1 col-6 mb-0 text-end pe-5">{{ __('Блог') }}</h1>
                         <div class="d-flex justify-content-end flex-column py-3 ps-5 col-2">
