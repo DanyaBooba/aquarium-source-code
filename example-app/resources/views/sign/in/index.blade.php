@@ -22,20 +22,20 @@
                 <path d="M0.900024 173.6C0.900024 149.9 15 133.7 49.8 130.1L109.2 124.4C107.7 97.1 93 83.6 67.2 83.6C45.6 83.6 25.5 93.2 25.5 121.4H1.50003C1.50003 90.5 24.9 62.9 67.2 62.9C108.9 62.9 133.8 90.5 133.8 130.4V194H155.7V215H129.3C117.9 215 111.6 208.7 111.6 197.6V189.5L115.5 173.9H108.3C102.6 196.7 86.7 218 50.7 218C7.50003 218 0.900024 189.2 0.900024 173.6ZM25.5 170.6C25.5 187.7 36.3 197 53.7 197C87.6 197 109.2 173.6 109.2 142.7L54 148.4C35.1 150.2 25.5 155.9 25.5 170.6Z" />
             </svg>
 
-            <h1 class="h3">Войти в аккаунт</h1>
+            <h1 class="h3">{{ __('Войти в аккаунт') }}</h1>
 
             <div id="signin-choose">
                 <div class="d-flex flex-column">
                     <div id="signin-choose-yandex">
                         <button class="btn fs-5" onClick="signinYandex()">
                             <x-yandex />
-                            Яндекс
+                            {{ __('Яндекс') }}
                         </button>
                     </div>
                     <div id="signin-choose-google">
                         <button class="btn fs-5" onClick="signinGoogle()">
                             <x-google />
-                            Google
+                            {{ __('Google') }}
                         </button>
                     </div>
                     <x-sign.choose-or />
@@ -44,7 +44,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail">
                                 <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                             </svg>
-                            Почта
+                            {{ __('Почта') }}
                         </button>
                     </div>
                 </div>
@@ -54,21 +54,21 @@
                 @csrf
                 <div class="form-floating">
                     <input type="email" class="form-control" id="email" placeholder="name@example.com" autofocus>
-                    <label for="email">Почта</label>
+                    <label for="email">{{ __('Почта') }}</label>
                 </div>
                 <div class="form-floating">
                     <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Пароль</label>
+                    <label for="floatingPassword">{{ __('Пароль') }}</label>
                 </div>
 
                 <div class="form-check text-start my-3">
                     <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
                     <label class="form-check-label" for="flexCheckDefault">
-                        Запомнить меня
+                        {{ __('Запомнить меня') }}
                     </label>
                 </div>
 
-                <button class="btn btn-primary py-2" type="submit">Войти</button>
+                <button class="btn btn-primary py-3" type="submit">{{ __('Войти') }}</button>
             </form>
 
             <p class="mt-5 mb-3 text-body-secondary text-center">© 2020–{{ date('Y') }} {{ env('APP_TITLE_SHORT') }}</p>

@@ -53,4 +53,5 @@
     <x-head.metrix />
 </head>
 @yield('body')
+<script src="{{ asset('js/main/button.js') }}"></script>
 </html>
