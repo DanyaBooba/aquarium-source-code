@@ -20,4 +20,9 @@ class AuthController extends Controller
     {
         return view('sign.up.index');
     }
+
+    public function signuppost()
+    {
+        return "post";
+    }
 }

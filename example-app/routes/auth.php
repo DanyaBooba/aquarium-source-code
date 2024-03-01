@@ -11,6 +11,8 @@ Route::middleware(['log', 'unlogin'])->group(function () {
 
     Route::get('signup', [AuthController::class, 'signup'])->name('auth.signup');
 
+    Route::post('signup', [AuthController::class, 'signuppost'])->name('auth.signup.post');
+
     Route::get('login', function () {
         return redirect()->route('auth.signin');
     });
