@@ -6,6 +6,8 @@
 
 @import "text/text.css";
 
+@import "text/title-anchor.css";
+
 @import "text/links.css";
 
 @import "fonts/index.css";
