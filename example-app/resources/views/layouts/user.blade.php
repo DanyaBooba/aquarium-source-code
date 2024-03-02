@@ -5,7 +5,7 @@
 @endpush
 
 @section('body')
-<body>
+<body class="container-fluid">
     <div class="row row-user min-vh-100">
         <section class="col-3 row-user-bar p-5">
             @include('includes.user.bar')
@@ -17,6 +17,7 @@
                 </div>
             </section>
         </main>
+        @include('includes.user.nav')
     </div>
 
     <script src="{{ asset('js/bootstrap.js') }}"></script>

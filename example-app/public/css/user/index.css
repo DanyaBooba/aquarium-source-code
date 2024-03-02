@@ -1,33 +1,3 @@
-/* .row-user {
-    background: #000;
-} */
+@import "row-user.css";
 
-.row-user-bar {
-    background: var(--user-bar);
-}
-
-.row-user-bar svg.logo {
-    margin-bottom: 3rem;
-    fill: var(--svg-icon);
-}
-
-.row-user-bar ul {
-    list-style-type: none;
-    padding-left: .25rem;
-}
-
-.row-user-bar ul li {
-    margin-bottom: 2rem;
-}
-
-.row-user-bar ul li a {
-    display: flex;
-    align-items: center;
-
-    text-decoration: none;
-}
-
-.row-user-bar ul li a svg {
-    margin-right: .5rem;
-    margin-bottom: .25rem;
-}
+@import "nav.css";
