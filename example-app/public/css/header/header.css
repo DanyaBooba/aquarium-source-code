@@ -85,6 +85,10 @@ header .header-content-links li a.active {
     text-decoration: underline;
 }
 
+header .header-content button.navbar-toggler {
+    border: none !important;
+}
+
 @media(hover: hover) {
     header a.header-content-profile:hover p {
         color: var(--text-color-hover);
@@ -105,22 +109,24 @@ header .header-content-links li a.active {
     .header-content-profile {
         margin-top: 1rem;
     }
-}
 
-@media(min-width: 992px) {
-    header .header-content-links li a {
-        text-underline-offset: 1.8rem !important;
-        text-decoration-thickness: 0.15rem !important;
+    .header-content-logo {
+        margin-right: auto;
     }
-}
 
-@media(max-width: 767.98px) {
     header .header-content-links {
         flex-direction: column;
     }
 
     header .header-content-links li {
         text-align: end;
+    }
+}
+
+@media(min-width: 992px) {
+    header .header-content-links li a {
+        text-underline-offset: 1.8rem !important;
+        text-decoration-thickness: 0.15rem !important;
     }
 }
 

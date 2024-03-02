@@ -5,7 +5,7 @@
 @endpush
 
 @section('main.content')
-    <div class="row row-first gx-3">
+    <div class="row row-first mb-2 gx-3">
         <div class="col-sm-8 col-md-8 col-lg-8">
             <div class="p-3">
                 <div class="d-flex justify-content-center pb-2 mt-auto" style="margin-top: -10px">
@@ -18,14 +18,14 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="col-sm-4 col-md-4 col-lg-4 mb-3">
             <div class="p-3">
                 <div class="py-3 p-2">
                     <h1>Аквариум</h1>
                 </div>
                 <div class="d-flex flex-column mt-auto">
-                    <button class="btn btn-primary text-center py-3 mb-3" onClick="buttonOpenURL('{{ route('auth.signin') }}')">Войти</button>
-                    <button class="btn btn-success text-center py-3" onClick="buttonOpenURL('{{ route('auth.signup') }}')">Зарегистрироваться</button>
+                    <button class="btn btn-outline-light py-3 mb-3" onClick="buttonOpenURL('{{ route('auth.signin') }}')">Войти</button>
+                    <button class="btn btn-success py-3" onClick="buttonOpenURL('{{ route('auth.signup') }}')">Зарегистрироваться</button>
                 </div>
             </div>
         </div>
