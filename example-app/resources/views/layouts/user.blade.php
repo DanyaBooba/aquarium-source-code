@@ -2,19 +2,17 @@
 
 @section('body')
 <body>
-    <div class="d-flex flex-column justify-content-between min-vh-100">
-        @include('includes.alert')
-        @include('includes.header')
-
-        <main class="flex-grow-1 py-1">
-            <section>
+    <div class="row min-vh-100">
+        <section class="col-3">
+            @include('includes.user.bar')
+        </section>
+        <main class="flex-grow-1 col-9">
+            <section class="py-3">
                 <div class="container">
                     @yield('user.content')
                 </div>
             </section>
         </main>
-
-        @include('includes.footer')
     </div>
 
     <script src="{{ asset('js/bootstrap.js') }}"></script>
