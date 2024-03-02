@@ -8,6 +8,13 @@ class UserController extends Controller
 {
     public function index()
     {
-        return "";
+        return view('user.index');
+    }
+
+    public function show($id)
+    {
+        return view('user.show', [
+            "id" => $id
+        ]);
     }
 }

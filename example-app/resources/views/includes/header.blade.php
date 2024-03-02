@@ -27,16 +27,19 @@
                     <li><a href="{{ route('main.oauth') }}" class="nav-link {{ active_link('main.oauth') }}">{{ __('OAuth') }}</a></li>
                     <li><a href="{{ route('main.tech') }}" class="nav-link {{ active_link('main.tech') }}">{{ __('Технологии') }}</a></li>
                 </ul>
-                {{-- <a href="{{ route('user.index') }}" class="link-body-emphasis header-content-profile">
-                    <img src="https://github.com/mdo.png" alt="Профиль">
+                @if($login = session('login'))
+                <a href="{{ route('user.index') }}" class="link-body-emphasis header-content-profile">
+                    <img src="https://github.com/mdo.png" alt="{{ $login }}">
                     <p>
-                        {{ __('Даниил Дыбка') }}
+                        {{ $login }}
                     </p>
-                </a> --}}
+                </a>
+                @else
                 <ul class="nav col-12 col-lg-auto ms-lg-auto mb-md-0 header-content-links">
                     <li><a href="{{ route('auth.signin') }}" class="nav-link link-secondary">{{ __('Вход') }}</a></li>
                     <li><a href="{{ route('auth.signup') }}" class="nav-link link-body-emphasis">{{ __('Регистрация') }}</a></li>
                 </ul>
+                @endif
             </div>
         </div>
     </div>

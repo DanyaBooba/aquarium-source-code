@@ -27,6 +27,7 @@ body {
 }
 
 .form-signup-logo {
+    fill: var(--svg-icon);
     max-width: 300px;
 }
 
@@ -38,5 +39,15 @@ body {
 
     .form-signup-display {
         display: none !important;
+    }
+
+    .form-signup-logo:not(.form-signup-logo-mobile) {
+        display: none;
+    }
+}
+
+@media(min-width: 768px) {
+    .form-signup-logo.form-signup-logo-mobile {
+        display: none;
     }
 }

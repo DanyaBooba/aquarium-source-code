@@ -13,7 +13,9 @@ class AuthController extends Controller
 
     public function signinpost()
     {
-        return "post";
+        session(['login' => 'login']);
+
+        return route('user.index');
     }
 
     public function signup()
@@ -23,6 +25,8 @@ class AuthController extends Controller
 
     public function signuppost()
     {
-        return "post";
+        session(['login' => 'login']);
+
+        return route('user.index');
     }
 }
