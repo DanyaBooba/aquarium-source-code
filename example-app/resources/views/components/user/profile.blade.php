@@ -21,7 +21,7 @@
             <button class="btn btn-outline-primary px-4">
                 {{ __('Редактировать') }}
             </button>
-            <button class="btn btn-primary ms-2 px-4">
+            <button class="btn btn-primary px-4">
                 {{ __('Добавить пост') }}
             </button>
         </div>

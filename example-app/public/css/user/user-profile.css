@@ -16,8 +16,6 @@
     display: flex;
     align-items: start;
     justify-content: end;
-
-    min-width: 49%;
 }
 
 .user-profile .user-profile-image-point {
@@ -26,8 +24,8 @@
     align-items: center;
 
     position: absolute;
-    right: 83%;
-    bottom: 25%;
+    margin-left: 110px;
+    margin-top: 110px;
 
     width: 24px;
     height: 24px;
@@ -88,7 +86,7 @@
     display: flex;
     position: relative;
 
-    min-height: 50px;
+    min-height: 116px;
     background: var(--user-profile-image-background);
 
     padding: 1rem;
@@ -109,4 +107,22 @@
 
 .user-profile .user-profile-right button {
     border-radius: 6px;
+    width: 180px;
+}
+
+@media(min-width: 1440px) {
+    .user-profile-right button:not(:first-child) {
+        margin-left: .5rem;
+    }
+}
+
+@media(max-width: 1439.98px) {
+    .user-profile-right {
+        flex-direction: column-reverse;
+        align-items: end !important;
+    }
+
+    .user-profile-right button:not(:first-child) {
+        margin-bottom: .5rem;
+    }
 }
