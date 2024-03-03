@@ -31,6 +31,32 @@
     min-height: 24px;
 }
 
+.row-user-bar .social {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.row-user-bar .social .social-left,
+.row-user-bar .social .social-right {
+    display: flex;
+}
+
+.row-user-bar .social .social-left {
+    margin-right: auto;
+}
+
+.row-user-bar .social .social-left div {
+    margin-right: .75rem;
+}
+
+.row-user-bar .social .social-right div {
+    margin-left: .75rem;
+}
+
+.row-user-bar .social .social-left div a.social-left-exit svg {
+    stroke: var(--user-bar-exit);
+}
+
 @media(max-width: 767.98px) {
     .row-user-bar {
         display: none;
