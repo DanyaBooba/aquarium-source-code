@@ -13,6 +13,6 @@ class BlogController extends Controller
 
     public function show()
     {
-        return "";
+        return view('blog.show');
     }
 }
