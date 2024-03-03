@@ -62,3 +62,23 @@
         display: none;
     }
 }
+
+@media(max-width: 1023.98px) {
+    .row-user-bar {
+        width: 280px;
+    }
+
+    .row-user-content {
+        width: calc(100% - 280px);
+    }
+}
+
+@media(min-width: 1024px) {
+    .row-user-bar {
+        width: 350px;
+    }
+
+    .row-user-content {
+        width: calc(100% - 350px);
+    }
+}
