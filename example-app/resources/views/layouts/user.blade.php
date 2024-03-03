@@ -7,7 +7,7 @@
 @section('body')
 <body class="container-fluid">
     <div class="row row-user min-vh-100">
-        <section class="row-user-bar p-5">
+        <section class="row-user-bar">
             @include('includes.user.bar')
         </section>
         <main class="flex-grow-1 row-user-content">

@@ -1,5 +1,6 @@
 .row-user-bar {
     background: var(--user-bar);
+    padding: 3rem 2rem;
 }
 
 .row-user-bar svg.logo {
