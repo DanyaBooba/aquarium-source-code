@@ -1,5 +1,5 @@
 <div class="user-profile">
-    <img class="user-profile-cap" src="{{ asset('img/user/bg/BG1.jpg') }}">
+    <img class="user-profile-cap" src="{{ asset('img/user/bg/BG7.jpg') }}">
     <div class="user-profile-content">
         <div class="user-profile-left">
             <div class="user-profile-image">
@@ -18,10 +18,10 @@
             </div>
         </div>
         <div class="user-profile-right">
-            <button class="btn btn-outline-primary px-4">
+            <button class="btn btn-outline-primary px-4" onClick="buttonOpenURL('{{ route('user.settings') }}')">
                 {{ __('Редактировать') }}
             </button>
-            <button class="btn btn-primary px-4">
+            <button class="btn btn-primary px-4" onClick="buttonOpenURL('{{ route('user.index') }}')">
                 {{ __('Добавить пост') }}
             </button>
         </div>
