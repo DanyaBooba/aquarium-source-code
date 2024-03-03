@@ -126,3 +126,24 @@
         margin-bottom: .5rem;
     }
 }
+
+@media(max-width: 767.98px) {
+    .user-profile-content {
+        flex-direction: column;
+    }
+
+    .user-profile-left {
+        flex-direction: column;
+        align-items: center !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+
+    .user-profile .user-profile-right {
+        margin-top: 1rem;
+    }
+
+    .user-profile .user-profile-right button {
+        width: 100% !important;
+    }
+}

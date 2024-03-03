@@ -73,6 +73,10 @@
     .row-user-bar {
         display: none;
     }
+
+    .row-user-content {
+        margin-bottom: 4rem;
+    }
 }
 
 @media(max-width: 1023.98px) {
