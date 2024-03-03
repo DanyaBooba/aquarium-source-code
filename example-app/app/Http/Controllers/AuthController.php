@@ -15,7 +15,7 @@ class AuthController extends Controller
     {
         session(['login' => 'login']);
 
-        return route('user.index');
+        return redirect()->route('user.index');
     }
 
     public function signup()
@@ -27,6 +27,6 @@ class AuthController extends Controller
     {
         session(['login' => 'login']);
 
-        return route('user.index');
+        return redirect()->route('user.index');
     }
 }

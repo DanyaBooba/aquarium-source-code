@@ -1,51 +1,43 @@
-.fixed-bottom {
-    background: var(--bg-color-rgba-3);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid var(--text-color-3);
+.fixed-bottom.fixed-bottom-nav {
+    background-color: var(--body-color);
+    border-top: 1px solid var(--user-nav-border);
     height: 60px;
 }
 
-.fixed-bottom__nav {
-    width: 100%;
+.fixed-bottom.fixed-bottom-nav .container-fluid {
     display: flex;
+
+    width: 100%;
+    height: 100%;
+
     justify-content: space-around;
     padding-top: 8px;
 }
 
-.fixed-bottom__link {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    cursor: pointer;
-
+.fixed-bottom.fixed-bottom-nav .container-fluid div a {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    text-align: center;
-    height: 60px;
-
-    width: 100%;
     align-items: center;
 
-    color: var(--text-default);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
 }
 
-.fixed-bottom__link svg {
-    fill: var(--left-bar-icon);
+.fixed-bottom.fixed-bottom-nav .container-fluid div a svg {
+    margin-bottom: .25rem;
+    margin-right: .1rem;
 }
 
-.fixed-bottom__svg {
-    width: 22px;
-    height: 22px;
-    margin-bottom: 4px;
+.fixed-bottom.fixed-bottom-nav .container-fluid div a.active {
+    color: var(--user-nav-link-active) !important;
 }
 
-.fixed-bottom__link span {
-    font-size: 11px;
-    color: var(--left-bar-icon) !important;
+.fixed-bottom.fixed-bottom-nav .container-fluid div a.active svg {
+    stroke: var(--user-nav-link-active) !important;
+}
+
+@media(min-width: 768px) {
+    .fixed-bottom.fixed-bottom-nav {
+        display: none;
+    }
 }
