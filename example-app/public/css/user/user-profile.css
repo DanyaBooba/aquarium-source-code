@@ -7,7 +7,17 @@
     display: flex;
     align-items: end;
 
+    margin-right: auto;
+
     margin-top: -4.5rem;
+}
+
+.user-profile .user-profile-right {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+
+    min-width: 49%;
 }
 
 .user-profile .user-profile-image-point {
@@ -23,7 +33,7 @@
     height: 24px;
 
     border-radius: 50%;
-    background: #fff;
+    background: var(--user-profile-image-background);
 }
 
 .user-profile .user-profile-image-point span {
@@ -79,9 +89,10 @@
     position: relative;
 
     min-height: 50px;
-    background: #fff;
+    background: var(--user-profile-image-background);
 
-    padding: 1rem 2rem;
+    padding: 1rem;
+    padding-left: 2rem;
     margin-top: -14px;
 
     border-radius: 12px;
@@ -94,4 +105,8 @@
 
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+}
+
+.user-profile .user-profile-right button {
+    border-radius: 6px;
 }

@@ -31,6 +31,14 @@
     min-height: 24px;
 }
 
+.row-user-bar ul li a.active {
+    color: var(--text-color-hover) !important;
+}
+
+.row-user-bar ul li a.active svg {
+    stroke: var(--text-color-hover);
+}
+
 .row-user-bar .social {
     display: flex;
     margin-bottom: 2rem;
@@ -55,6 +63,10 @@
 
 .row-user-bar .social .social-left div a.social-left-exit svg {
     stroke: var(--user-bar-exit);
+}
+
+.row-user-bar .social a.active svg {
+    stroke: var(--text-color-hover);
 }
 
 @media(max-width: 767.98px) {
