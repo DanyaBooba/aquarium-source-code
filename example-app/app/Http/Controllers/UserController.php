@@ -48,6 +48,8 @@ class UserController extends Controller
 
     public function exit()
     {
+        session()->forget('login');
+
         return view('user.exit');
     }
 

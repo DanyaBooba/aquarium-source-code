@@ -73,7 +73,7 @@
                 <button class="btn btn-success py-3" type="submit">{{ __('Регистрация') }}</button>
             </form>
 
-            <p class="mt-5 mb-3 text-body-secondary text-center">© 2020–{{ date('Y') }} {{ env('APP_TITLE_SHORT') }}</p>
+            <p class="mt-5 mb-3 text-body-secondary small text-center">© 2020–{{ date('Y') }} {{ env('APP_TITLE_SHORT') }}</p>
         </div>
     </main>
 
