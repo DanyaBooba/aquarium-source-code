@@ -21,6 +21,8 @@ Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
 
     Route::get('exit', [UserController::class, 'exit'])->name('user.exit');
 
+    Route::get('exit/exactly', [UserController::class, 'exitexactly'])->name('user.exit.exactly');
+
     Route::get('delete', [UserController::class, 'delete'])->name('user.delete');
 
 

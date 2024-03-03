@@ -1,0 +1,97 @@
+.user-profile
+{
+    background-color: var(--body-color);
+}
+
+.user-profile .user-profile-left {
+    display: flex;
+    align-items: end;
+
+    margin-top: -4.5rem;
+}
+
+.user-profile .user-profile-image-point {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: 83%;
+    bottom: 25%;
+
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    background: #fff;
+}
+
+.user-profile .user-profile-image-point span {
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+}
+
+.user-profile .user-profile-image-point span.point-red {
+    background-color: red;
+}
+
+.user-profile .user-profile-image {
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+    border: .1rem solid var(--user-profile-image-border);
+}
+
+.user-profile .user-profile-image img {
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 50%;
+    padding: .5rem;
+    background: var(--user-profile-image-background);
+}
+
+.user-profile .user-profile-text {
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 1rem;
+}
+
+.user-profile .user-profile-text p {
+    margin-left: 1rem;
+    margin-bottom: 0;
+}
+
+.user-profile .user-profile-text p.user-profile-name
+{
+    font-size: 30px;
+    font-family: ResistSans-Title;
+}
+
+.user-profile .user-profile-content {
+    display: flex;
+    position: relative;
+
+    min-height: 50px;
+    background: #fff;
+
+    padding: 1rem 2rem;
+    margin-top: -14px;
+
+    border-radius: 12px;
+}
+
+.user-profile img.user-profile-cap {
+    width: 100% !important;
+    height: 300px;
+    object-fit: cover;
+
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}

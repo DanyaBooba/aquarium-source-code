@@ -3,5 +3,7 @@
 @section('page.title', 'Ваш профиль')
 
 @section('user.content')
-123
+
+<x-user.profile />
+
 @endsection

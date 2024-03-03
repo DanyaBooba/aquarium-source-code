@@ -48,9 +48,16 @@ class UserController extends Controller
 
     public function exit()
     {
-        session()->forget('login');
+        // session()->forget('login');
 
         return view('user.exit');
+    }
+
+    public function exitexactly()
+    {
+        session()->forget('login');
+
+        return redirect()->route('main.index');
     }
 
     public function delete()
