@@ -23,8 +23,29 @@
 
 @section('main.content')
 
-    <nav class="position-sticky" style="top: 2rem;">
-        123
+    <nav class="position-sticky top-info-bar">
+        <div class="top-info-bar-content">
+            <ul>
+                <li>
+                    <a href="#">
+                        элемент 1
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        элемент 2
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        элемент 3
+                    </a>
+                </li>
+                <a href="#" class="top-info-bar-register">
+                    регистрация
+                </a>
+            </ul>
+        </div>
     </nav>
 
     <div class="row gx-3">
