@@ -29,6 +29,21 @@ h6,
     font-family: ResistSans-Title;
 }
 
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+.h1 a,
+.h2 a,
+.h3 a,
+.h4 a,
+.h5 a,
+.h6 a {
+    font-family: ResistSans-Title;
+}
+
 h1 b,
 h1 nobr,
 h2 b,

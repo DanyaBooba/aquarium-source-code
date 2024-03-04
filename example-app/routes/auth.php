@@ -13,6 +13,8 @@ Route::middleware(['log', 'unlogin'])->group(function () {
 
     Route::post('signup', [AuthController::class, 'signuppost'])->name('auth.signup.post');
 
+    Route::get('sign/help', [AuthController::class, 'help'])->name('auth.help');
+
     Route::get('login', function () {
         return redirect()->route('auth.signin');
     });

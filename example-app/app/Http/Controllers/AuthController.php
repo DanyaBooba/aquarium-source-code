@@ -29,4 +29,9 @@ class AuthController extends Controller
 
         return redirect()->route('user.index');
     }
+
+    public function help()
+    {
+        return view('sign.help');
+    }
 }

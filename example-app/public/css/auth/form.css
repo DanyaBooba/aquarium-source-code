@@ -52,13 +52,52 @@
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-yandex button svg {
-    width: 32px;
-    margin-right: 1rem;
+    width: 125px;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.authentication #signin-choose .d-flex div#signin-choose-vk button svg {
+    width: 200px;
+    height: 36px;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.authentication #signin-choose .d-flex div#signin-choose-mailru button svg {
+    width: 200px;
+    height: 36px;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-google button svg {
     width: 32px;
-    margin-right: 1rem;
+}
+
+.authentication #signin-choose .d-flex div#signin-choose-github button svg {
+    width: 32px;
+    height: 32px;
+}
+
+.authentication #signin-email .buttons {
+    margin-top: 1rem;
+}
+
+.authentication #signin-email .buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--signin-more-buttons-background);
+    border-color: var(--signin-more-buttons-background);
+
+    margin-top: .25rem;
+    border-radius: 8px;
+}
+
+.authentication #signin-email .buttons button svg {
+    margin-right: .25rem;
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-email button svg {
@@ -103,5 +142,10 @@
 @media(hover: hover) {
     .authentication #signin-choose .d-flex div button:hover {
         background-color: var(--signin-choose-background-color-hover);
+    }
+
+    .authentication #signin-email .buttons button:hover {
+        background-color: var(--signin-more-buttons-hover);
+        border-color: var(--signin-more-buttons-hover);
     }
 }

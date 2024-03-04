@@ -4,6 +4,8 @@
     --header-border-bottom: #dee2e6;
     --footer-border-top: #dee2e6;
     --svg-icon: #000;
+    --svg-github: #24292f;
+
     --body-color: #f9f9f9;
     --text-color: #212529;
     --text-color-hover: #0984e3;
@@ -11,6 +13,9 @@
 
     --signin-choose-background-color: #d9d9d9;
     --signin-choose-background-color-hover: #f6f6f6;
+
+    --signin-more-buttons-background: #97bffb;
+    --signin-more-buttons-hover: #77adfe;
 
     --signin-choose-or-border-bottom: #e2e2e2;
 

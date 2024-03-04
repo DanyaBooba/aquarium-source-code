@@ -35,17 +35,45 @@
         <div class="col-sm-4 col-md-4 col-lg-4">
             <div class="p-4">
                 <h2>Стикеры за регистрацию</h2>
-
+                <div class="d-flex align-items-center">
+                    <a href="{{ route('auth.signup') }}">
+                        <img src="{{ asset('img/stickers/sticker1.png') }}" width="120px" alt="Стикер аквариума">
+                    </a>
+                    <a href="{{ route('auth.signup') }}">
+                        <img src="{{ asset('img/stickers/sticker2.png') }}" width="120px" alt="Стикер аквариума">
+                    </a>
+                    <a href="{{ route('auth.signup') }}">
+                        <img src="{{ asset('img/stickers/sticker3.png') }}" width="120px" alt="Стикер аквариума">
+                    </a>
+                </div>
             </div>
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4">
             <div class="p-4">
                 <h2>Удобная авторизация через соцсети</h2>
+                <div class="d-flex align-items-center mt-4">
+                    <a href="{{ route('auth.signin') }}">
+                        <img src="{{ asset('img/social/yandex.svg') }}" width="60px" class="me-2" alt="Яндекс">
+                    </a>
+                    <a href="{{ route('auth.signin') }}">
+                        <img src="{{ asset('img/social/vk.svg') }}" width="60px" class="mx-2" alt="Вконтакте">
+                    </a>
+                    <a href="{{ route('auth.signin') }}">
+                        <img src="{{ asset('img/social/mail_text.svg') }}" width="140px" class="ms-2" alt="Меил ру">
+                    </a>
+                </div>
             </div>
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4">
             <div class="p-4">
-                <h2>Новости проекта и телеграм канал</h2>
+                <h2>
+                    <a href="{{ route('blog.index') }}">
+                        Новости проекта
+                    </a>
+                и телеграм канал</h2>
+                <a href="//aquariumsocial.t.me" target="_blank">
+                    <img src="{{ asset('img/social/telegram.svg') }}" width="80px" class="mt-3" alt="Телеграм">
+                </a>
             </div>
         </div>
     </div>
