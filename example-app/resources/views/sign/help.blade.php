@@ -70,7 +70,7 @@
                         <label for="floatingPassword">{{ __('Пароль') }}</label>
                     </div>
 
-                    <div class="form-check text-start my-3">
+                    <div class="form-check text-start mb-3 mt-2">
                         <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             {{ __('Запомнить меня') }}

@@ -23,8 +23,14 @@
                 <div class="py-3 p-2">
                     <h1>Аквариум</h1>
                 </div>
+                <div class="d-flex justify-content-end align-items-center">
+                    <p class="mb-0 col-md-4 fs-5">
+                        Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                    <img src="{{ asset('img/stickers/sticker1-2.png') }}" class="col-md-8" alt="">
+                </div>
                 <div class="d-flex flex-column mt-auto">
-                    <button class="btn btn-outline-light py-3 mb-3" onClick="buttonOpenURL('{{ route('auth.signin') }}')">Войти</button>
+                    <button class="btn btn-light py-3 mb-3" onClick="buttonOpenURL('{{ route('auth.signin') }}')">Войти</button>
                     <button class="btn btn-success py-3" onClick="buttonOpenURL('{{ route('auth.signup') }}')">Зарегистрироваться</button>
                 </div>
             </div>
@@ -78,69 +84,71 @@
         </div>
     </div>
 
-    <div class="row row-third row-cols-1 row-cols-lg-3 g-4">
-        <div class="col p-4">
-            <img src="{{ asset('img/emoji/partying-face.png') }}" width="80" class="img-fluid mb-3" alt="Белый голубь">
-            <h3 class="mb-2">Удобство</h3>
-            <p class="mb-0 fs-6 mx-auto col-md-7">
-                Для мобильных и десктопных версий.
-            </p>
-        </div>
-        <div class="col p-4">
-            <img src="{{ asset('img/emoji/robot.png') }}" width="80" class="img-fluid mb-3" alt="Робот">
-            <h3 class="mb-2">Безопасность</h3>
-            <p class="mb-0 fs-6 mx-auto col-md-7">
-                Шифрование и конфиденциальность.
-            </p>
-        </div>
-        <div class="col p-4">
-            <img src="{{ asset('img/emoji/rocket.png') }}" width="80" class="img-fluid mb-3" alt="Ракета">
-            <h3 class="mb-2">Скорость</h3>
-            <p class="mb-0 fs-6 mx-auto col-md-7">
-                Быстрая загрузка даже при слабой сети.
-            </p>
-        </div>
-        <div class="col p-4">
-            <img src="{{ asset('img/emoji/fish.png') }}" width="80" class="img-fluid mb-3" alt="Рыбка">
-            <h3 class="mb-2">Тематика</h3>
-            <p class="fs-6 mx-auto col-md-7">
-                Социальная платформа подойдет для каждого.
-            </p>
-        </div>
-        <div class="col p-4">
-            <img src="{{ asset('img/emoji/friends.png') }}" width="80" class="img-fluid mb-3" alt="Друзья">
-            <h3 class="mb-2">Аудитория</h3>
-            <p class="mb-0 fs-6 mx-auto col-md-7">
-                Большое количество разных интересных людей.
-            </p>
-        </div>
-        <div class="col p-4">
-            <img src="{{ asset('img/emoji/dizzy.png') }}" width="80" class="img-fluid mb-3" alt="Звезда">
-            <h3 class="mb-2">Лента</h3>
-            <p class="mb-0 fs-6 mx-auto col-md-7">
-                Персональная лента с вашими подписками.
-            </p>
-        </div>
-        <div class="col p-4">
-            <img src="{{ asset('img/emoji/heart.png') }}" width="80" class="img-fluid mb-3" alt="Сердце">
-            <h3 class="mb-2">Эмоции</h3>
-            <p class="mb-0 fs-6 mx-auto col-md-7">
-                Сохраняйте воспоминания и делитесь с друзьями.
-            </p>
-        </div>
-        <div class="col p-4">
-            <img src="{{ asset('img/emoji/shooting-star.png') }}" width="80" class="img-fluid mb-3" alt="Падающая звезда">
-            <h3 class="mb-2">Фотографии</h3>
-            <p class="mb-0 fs-6 mx-auto col-md-7">
-                Персонализируйте вашу страницу.
-            </p>
-        </div>
-        <div class="col p-4">
-            <img src="{{ asset('img/emoji/dove.png') }}" width="80" class="img-fluid mb-3" alt="Белый голубь">
-            <h3 class="mb-2">Открытость</h3>
-            <p class="mb-0 fs-6 mx-auto col-md-7">
-                Открытый исходный код <nobr>и API</nobr> для разработчиков.
-            </p>
+    <div class="container container-blog">
+        <div class="row row-third row-cols-1 row-cols-lg-3 g-4">
+            <div class="col p-4">
+                <img src="{{ asset('img/emoji/partying-face.png') }}" width="80" class="img-fluid mb-3" alt="Белый голубь">
+                <h3 class="mb-2">Удобство</h3>
+                <p class="mb-0 fs-6 mx-auto col-md-10">
+                    Для мобильных и десктопных версий.
+                </p>
+            </div>
+            <div class="col p-4">
+                <img src="{{ asset('img/emoji/robot.png') }}" width="80" class="img-fluid mb-3" alt="Робот">
+                <h3 class="mb-2">Безопасность</h3>
+                <p class="mb-0 fs-6 mx-auto col-md-10">
+                    Шифрование и конфиденциальность.
+                </p>
+            </div>
+            <div class="col p-4">
+                <img src="{{ asset('img/emoji/rocket.png') }}" width="80" class="img-fluid mb-3" alt="Ракета">
+                <h3 class="mb-2">Скорость</h3>
+                <p class="mb-0 fs-6 mx-auto col-md-10">
+                    Быстрая загрузка даже при слабой сети.
+                </p>
+            </div>
+            <div class="col p-4">
+                <img src="{{ asset('img/emoji/fish.png') }}" width="80" class="img-fluid mb-3" alt="Рыбка">
+                <h3 class="mb-2">Тематика</h3>
+                <p class="fs-6 mx-auto col-md-10">
+                    Социальная платформа подойдет для каждого.
+                </p>
+            </div>
+            <div class="col p-4">
+                <img src="{{ asset('img/emoji/friends.png') }}" width="80" class="img-fluid mb-3" alt="Друзья">
+                <h3 class="mb-2">Аудитория</h3>
+                <p class="mb-0 fs-6 mx-auto col-md-10">
+                    Большое количество разных интересных людей.
+                </p>
+            </div>
+            <div class="col p-4">
+                <img src="{{ asset('img/emoji/dizzy.png') }}" width="80" class="img-fluid mb-3" alt="Звезда">
+                <h3 class="mb-2">Лента</h3>
+                <p class="mb-0 fs-6 mx-auto col-md-10">
+                    Персональная лента с вашими подписками.
+                </p>
+            </div>
+            <div class="col p-4">
+                <img src="{{ asset('img/emoji/heart.png') }}" width="80" class="img-fluid mb-3" alt="Сердце">
+                <h3 class="mb-2">Эмоции</h3>
+                <p class="mb-0 fs-6 mx-auto col-md-10">
+                    Сохраняйте воспоминания и делитесь с друзьями.
+                </p>
+            </div>
+            <div class="col p-4">
+                <img src="{{ asset('img/emoji/shooting-star.png') }}" width="80" class="img-fluid mb-3" alt="Падающая звезда">
+                <h3 class="mb-2">Фотографии</h3>
+                <p class="mb-0 fs-6 mx-auto col-md-10">
+                    Персонализируйте вашу страницу.
+                </p>
+            </div>
+            <div class="col p-4">
+                <img src="{{ asset('img/emoji/dove.png') }}" width="80" class="img-fluid mb-3" alt="Белый голубь">
+                <h3 class="mb-2">Открытость</h3>
+                <p class="mb-0 fs-6 mx-auto col-md-10">
+                    Открытый исходный код <nobr>и API</nobr> для разработчиков.
+                </p>
+            </div>
         </div>
     </div>
 

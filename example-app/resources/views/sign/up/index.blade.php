@@ -81,7 +81,7 @@
                         </a>
                     </div>
 
-                    <div class="form-check text-start my-3">
+                    <div class="form-check text-start mb-3 mt-2">
                         <input class="form-check-input" type="checkbox" value="privacy" id="check" onInput="checkOnInput()">
                         <label class="form-check-label small" for="check">
                             {{ __('Подтверждаете') }}

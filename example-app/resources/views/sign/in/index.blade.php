@@ -76,7 +76,7 @@
                         </a>
                     </div>
 
-                    <div class="form-check text-start my-3">
+                    <div class="form-check text-start mb-3 mt-2">
                         <input class="form-check-input" type="checkbox" value="remember-me" id="check">
                         <label class="form-check-label" for="check">
                             {{ __('Запомнить меня') }}
