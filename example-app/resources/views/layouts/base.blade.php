@@ -29,7 +29,7 @@
     <meta name="google" content="notranslate">
     <meta name="format-detection" content="phone=no">
 
-    <title>@yield('page.title', config('app.name'))</title>
+    <title>@yield('page.title', config('app.name')) – Аквариум</title>
 
     <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script><script>
         if (matchMedia("(prefers-color-scheme: dark)").media === "not all") {

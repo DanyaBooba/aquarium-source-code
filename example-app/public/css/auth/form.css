@@ -84,18 +84,11 @@
     margin-top: 1rem;
 }
 
-.authentication #signin-email .buttons.signup button {
-    background-color: var(--signup-more-buttons-background);
-    border-color: var(--signup-more-buttons-background);
-}
 
 .authentication #signin-email .buttons button {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background-color: var(--signin-more-buttons-background);
-    border-color: var(--signin-more-buttons-background);
 
     margin-top: .25rem;
     border-radius: 8px;
@@ -147,15 +140,5 @@
 @media(hover: hover) {
     .authentication #signin-choose .d-flex div button:hover {
         background-color: var(--signin-choose-background-color-hover);
-    }
-
-    .authentication #signin-email .buttons button:hover {
-        background-color: var(--signin-more-buttons-hover);
-        border-color: var(--signin-more-buttons-hover);
-    }
-
-    .authentication #signin-email .buttons.signup button:hover {
-        background-color: var(--signup-more-buttons-hover);
-        border-color: var(--signup-more-buttons-hover);
     }
 }

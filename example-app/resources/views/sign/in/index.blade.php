@@ -81,12 +81,12 @@
                 </form>
 
                 <div class="buttons">
-                    <button class="btn btn-secondary w-100 py-2" onClick="showChoose()">
+                    <button class="btn btn-outline-primary w-100 py-2" onClick="showChoose()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
                         {{ __('Назад') }}
                     </button>
 
-                    <button class="btn btn-secondary w-100 py-2" onClick="buttonOpenURL('{{ route('auth.help') }}')">
+                    <button class="btn btn-outline-primary w-100 py-2" onClick="buttonOpenURL('{{ route('auth.help') }}')">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-question"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
                         {{ __('Проблемы со входом?') }}
                     </button>
@@ -98,6 +98,7 @@
     </main>
 
     <script src="{{ asset('js/auth/sign.js') }}"></script>
+    <script src="{{ asset('js/auth/button-disabled.js') }}"></script>
     <script src="{{ asset('js/auth/signin.js') }}"></script>
 </body>
 @endsection
