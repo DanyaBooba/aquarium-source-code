@@ -58,7 +58,7 @@
                 </div>
             </div>
 
-            <div id="signin-email">
+            <div class="signin-email" id="signin-email">
                 <form method="post">
                     @csrf
                     <div class="form-floating">

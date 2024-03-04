@@ -15,6 +15,14 @@ Route::middleware(['log', 'unlogin'])->group(function () {
 
     Route::get('sign/help', [AuthController::class, 'help'])->name('auth.help');
 
+    Route::get('sign/restore', [AuthController::class, 'restore'])->name('auth.restore');
+
+    Route::post('sign/restore', [AuthController::class, 'restorepost'])->name('auth.restore.post');
+
+    Route::get('sign/code', [AuthController::class, 'code'])->name('auth.code');
+
+    Route::post('sign/code', [AuthController::class, 'codepost'])->name('auth.code.post');
+
     Route::get('login', function () {
         return redirect()->route('auth.signin');
     });

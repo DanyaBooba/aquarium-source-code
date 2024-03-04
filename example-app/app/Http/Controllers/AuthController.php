@@ -34,4 +34,14 @@ class AuthController extends Controller
     {
         return view('sign.help');
     }
+
+    public function restore()
+    {
+        return view('sign.restore.index');
+    }
+
+    public function code()
+    {
+        return view('sign.code.index');
+    }
 }
