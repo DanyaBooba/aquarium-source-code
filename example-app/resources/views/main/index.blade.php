@@ -21,18 +21,16 @@
         <div class="col-sm-4 col-md-4 col-lg-4 mb-3">
             <div class="p-3">
                 <div class="py-3 p-2">
-                    <h1>Аквариум</h1>
-                </div>
-                <div class="row justify-content-end align-items-center">
-                    <p class="mb-0 col-md-5 text-center fs-4">
-                        Морская семья
+                    <h1 class="mb-4">Аквариум</h1>
+                    <p class="fs-5">
+                        Социальная сеть для каждого: открытая платформа,
+                        уютное общение и удобный сервис.
                     </p>
-                    <img src="{{ asset('img/stickers/sticker1-2.png') }}" class="col-md-7" alt="">
                 </div>
-                <div class="d-flex flex-column mt-auto">
-                    <button class="btn btn-light py-3 mb-3" onClick="buttonOpenURL('{{ route('auth.signin') }}')">Войти</button>
-                    <button class="btn btn-success py-3" onClick="buttonOpenURL('{{ route('auth.signup') }}')">Зарегистрироваться</button>
+                <div class="row-first-button">
+                    <button class="btn btn-light col-md-6" onClick="buttonOpenURL('{{ route('auth.signin') }}')">Войти</button>
                 </div>
+                <img src="{{ asset('img/stickers/sticker1-2.png') }}" alt="Морская звезда">
             </div>
         </div>
     </div>
@@ -41,7 +39,7 @@
         <div class="col-sm-4 col-md-4 col-lg-4">
             <div class="p-4">
                 <h2>Стикеры за регистрацию</h2>
-                <div class="d-flex align-items-center">
+                <div class="row-second-content row-second-stickers">
                     <a href="{{ route('auth.signup') }}">
                         <img src="{{ asset('img/stickers/sticker1.png') }}" width="120px" alt="Стикер аквариума">
                     </a>
@@ -57,7 +55,7 @@
         <div class="col-sm-4 col-md-4 col-lg-4">
             <div class="p-4">
                 <h2>Удобная авторизация через соцсети</h2>
-                <div class="d-flex align-items-center mt-4">
+                <div class="row-second-content row-second-social">
                     <a href="{{ route('auth.signin') }}">
                         <img src="{{ asset('img/social/yandex.svg') }}" width="60px" class="me-2" alt="Яндекс">
                     </a>
