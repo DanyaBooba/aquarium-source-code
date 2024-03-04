@@ -68,17 +68,17 @@
                 <form method="post">
                     @csrf
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com" autofocus>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" onInput="checkOnInput()" autofocus>
                         <label for="email">{{ __('Почта') }}</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">{{ __('Пароль') }}</label>
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Пароль" onInput="checkOnInput()">
+                        <label for="password">{{ __('Пароль') }}</label>
                     </div>
 
                     <div class="form-check text-start my-3">
-                        <input class="form-check-input" type="checkbox" value="privacy" id="flexCheckDefault">
-                        <label class="form-check-label small" for="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="privacy" id="check" onInput="checkOnInput()">
+                        <label class="form-check-label small" for="check">
                             {{ __('Подтверждаете') }}
                             <a href="{{ route('main.user.privacy') }}">
                                 {{ __('политику конфиденциальности') }}
