@@ -65,10 +65,6 @@
                         <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" onInput="checkOnInput()" required autofocus>
                         <label for="email">{{ __('Почта') }}</label>
                     </div>
-                    {{-- <div class="form-floating">
-                        <input type="password" name="password" class="form-control" id="password" placeholder="Password" onInput="checkOnInput()" required>
-                        <label for="password">{{ __('Пароль') }}</label>
-                    </div> --}}
 
                     <div class="input-group input-password" id="password-form1">
                         <div class="form-floating">
