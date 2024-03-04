@@ -1,7 +1,7 @@
+let inputs = document.querySelectorAll("#signin-email form input");
 let button = document.querySelector("#signin-email form button[type='submit']");
 
 function checkFormInput() {
-    let inputs = document.querySelectorAll("#signin-email form input");
     let status = true;
 
     inputs.forEach((input) => {
