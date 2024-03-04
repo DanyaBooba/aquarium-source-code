@@ -3,5 +3,5 @@
 @section('page.title', 'Ваш профиль')
 
 @section('user.content')
-Горячее
+trends
 @endsection

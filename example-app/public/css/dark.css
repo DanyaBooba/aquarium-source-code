@@ -11,11 +11,8 @@
     --text-color-hover: #0984e3;
     --text-color-link-underline: #565656;
 
-    --signup-choose-background-color: #34305e;
-    --signup-choose-background-color-hover: #48437b;
-
-    --signin-more-buttons-background: #221d52;
-    --signin-more-buttons-hover: #2e2775;
+    --signin-choose-background-color: #34305e;
+    --signin-choose-background-color-hover: #48437b;
 
     --signin-choose-or-border-bottom: #2f2c52;
 

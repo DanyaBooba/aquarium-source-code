@@ -55,6 +55,11 @@
                             {{ __('Почта') }}
                         </button>
                     </div>
+                    <div>
+                        <a href="{{ route('auth.signup') }}">
+                            Не зарегистрированы?
+                        </a>
+                    </div>
                 </div>
             </div>
 

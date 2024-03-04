@@ -41,9 +41,9 @@ class UserController extends Controller
         return view('user.feed');
     }
 
-    public function hot()
+    public function trends()
     {
-        return view('user.hot');
+        return view('user.trends');
     }
 
     public function exit()

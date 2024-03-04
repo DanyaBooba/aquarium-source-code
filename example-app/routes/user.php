@@ -17,7 +17,7 @@ Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
 
     Route::get('feed', [UserController::class, 'feed'])->name('user.feed');
 
-    Route::get('hot', [UserController::class, 'hot'])->name('user.hot');
+    Route::get('trends', [UserController::class, 'trends'])->name('user.trends');
 
     Route::get('exit', [UserController::class, 'exit'])->name('user.exit');
 

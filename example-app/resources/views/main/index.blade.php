@@ -23,11 +23,11 @@
                 <div class="py-3 p-2">
                     <h1>Аквариум</h1>
                 </div>
-                <div class="d-flex justify-content-end align-items-center">
-                    <p class="mb-0 col-md-4 fs-5">
-                        Lorem ipsum dolor sit amet consectetur.
+                <div class="row justify-content-end align-items-center">
+                    <p class="mb-0 col-md-5 text-center fs-4">
+                        Морская семья
                     </p>
-                    <img src="{{ asset('img/stickers/sticker1-2.png') }}" class="col-md-8" alt="">
+                    <img src="{{ asset('img/stickers/sticker1-2.png') }}" class="col-md-7" alt="">
                 </div>
                 <div class="d-flex flex-column mt-auto">
                     <button class="btn btn-light py-3 mb-3" onClick="buttonOpenURL('{{ route('auth.signin') }}')">Войти</button>

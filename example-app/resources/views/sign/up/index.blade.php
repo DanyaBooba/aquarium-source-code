@@ -61,6 +61,11 @@
                             {{ __('Почта') }}
                         </button>
                     </div>
+                    <div>
+                        <a href="{{ route('auth.signin') }}">
+                            Есть аккаунт?
+                        </a>
+                    </div>
                 </div>
             </div>
 
