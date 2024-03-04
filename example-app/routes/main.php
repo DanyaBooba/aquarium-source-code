@@ -8,6 +8,8 @@ Route::prefix('/')->group(function () {
 
     Route::get('/', [MainRouteController::class, 'index'])->name('main.index');
 
+    Route::get('download', [MainRouteController::class, 'download'])->name('main.download');
+
     Route::get('faq', [MainRouteController::class, 'faq'])->name('main.faq');
 
     Route::prefix('about')->group(function () {

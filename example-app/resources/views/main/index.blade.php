@@ -143,4 +143,18 @@
             </p>
         </div>
     </div>
+
+    <div class="container container-blog" style="margin-top: 60px">
+        <h2 class="display-4 mb-3 text-center">Новости проекта</h2>
+        <div class="row row-blog row-cols-3 g-2">
+            @for($i = 0; $i < 3; $i++)
+            <x-blog.card />
+            @endfor
+        </div>
+        <div class="text-center mt-3">
+            <a href="{{ route('blog.index') }}">
+                Читать ещё
+            </a>
+        </div>
+    </div>
 @endsection

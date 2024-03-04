@@ -27,7 +27,8 @@
                 @else
                 <ul class="nav col-12 col-lg-auto ms-lg-auto mb-md-0 header-content-links">
                     <li><a href="{{ route('auth.signin') }}" class="nav-link link-secondary">{{ __('Вход') }}</a></li>
-                    <li><a href="{{ route('auth.signup') }}" class="nav-link link-body-emphasis">{{ __('Регистрация') }}</a></li>
+                    {{-- <li><a href="{{ route('auth.signup') }}" class="nav-link link-secondary">{{ __('Регистрация') }}</a></li> --}}
+                    <li><a href="{{ route('main.download') }}" class="nav-link link-download">{{ __('Скачать') }}</a></li>
                 </ul>
                 @endif
             </div>

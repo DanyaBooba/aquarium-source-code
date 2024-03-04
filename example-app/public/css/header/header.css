@@ -30,6 +30,17 @@ header .header-content-logo svg {
     fill: var(--svg-icon);
 }
 
+header .header-content-links a.link-download {
+    border: .1rem solid var(--header-border-bottom);
+    border-radius: 8px;
+
+    text-decoration: none !important;
+
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-left: 1rem;
+}
+
 header .header-content-links {
     justify-content: center;
 }
@@ -125,7 +136,7 @@ header .header-content button.navbar-toggler {
 
 @media(min-width: 992px) {
     header .header-content-links li a {
-        text-underline-offset: 1.8rem !important;
+        text-underline-offset: 1.9rem !important;
         text-decoration-thickness: 0.15rem !important;
     }
 }

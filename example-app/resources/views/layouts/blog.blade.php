@@ -1,9 +1,5 @@
 @extends('layouts.base')
 
-@push('css')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/blog/index.css') }}" />
-@endpush
-
 @section('body')
 <body>
     <div class="d-flex flex-column justify-content-between min-vh-100">
