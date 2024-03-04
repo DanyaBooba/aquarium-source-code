@@ -77,7 +77,7 @@
                     </div>
 
                     <div class="form-check text-start my-3">
-                        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="privacy" id="flexCheckDefault">
                         <label class="form-check-label small" for="flexCheckDefault">
                             {{ __('Подтверждаете') }}
                             <a href="{{ route('main.user.privacy') }}">
@@ -102,6 +102,7 @@
     </main>
 
     <script src="{{ asset('js/auth/sign.js') }}"></script>
+    <script src="{{ asset('js/auth/button-disabled.js') }}"></script>
     <script src="{{ asset('js/auth/signin.js') }}"></script>
 </body>
 @endsection
