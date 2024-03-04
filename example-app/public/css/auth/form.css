@@ -84,6 +84,11 @@
     margin-top: 1rem;
 }
 
+.authentication #signin-email .buttons.signup button {
+    background-color: var(--signup-more-buttons-background);
+    border-color: var(--signup-more-buttons-background);
+}
+
 .authentication #signin-email .buttons button {
     display: flex;
     align-items: center;
@@ -147,5 +152,10 @@
     .authentication #signin-email .buttons button:hover {
         background-color: var(--signin-more-buttons-hover);
         border-color: var(--signin-more-buttons-hover);
+    }
+
+    .authentication #signin-email .buttons.signup button:hover {
+        background-color: var(--signup-more-buttons-hover);
+        border-color: var(--signup-more-buttons-hover);
     }
 }

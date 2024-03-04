@@ -28,14 +28,29 @@
                     <div id="signin-choose-yandex">
                         <button class="btn fs-5" onClick="signinYandex()">
                             <x-yandex />
-                            {{ __('Яндекс') }}
                         </button>
                     </div>
-                    <div id="signin-choose-google">
-                        <button class="btn fs-5" onClick="signinGoogle()">
-                            <x-google />
-                            {{ __('Google') }}
+                    <div id="signin-choose-vk">
+                        <button class="btn fs-5" onClick="signinVK()">
+                            <x-vk />
                         </button>
+                    </div>
+                    <div id="signin-choose-mailru">
+                        <button class="btn fs-5" onClick="signinMailru()">
+                            <x-mailru />
+                        </button>
+                    </div>
+                    <div class="row row-cols-2 gx-2">
+                        <div id="signin-choose-google">
+                            <button class="btn fs-5" onClick="signinGoogle()">
+                                <x-google />
+                            </button>
+                        </div>
+                        <div id="signin-choose-github">
+                            <button class="btn fs-5" onClick="signinGoogle()">
+                                <x-github />
+                            </button>
+                        </div>
                     </div>
                     <x-sign.choose-or />
                     <div id="signin-choose-email">
@@ -49,29 +64,38 @@
                 </div>
             </div>
 
-            <form id="signin-email" method="post">
-                @csrf
-                <div class="form-floating">
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com" autofocus>
-                    <label for="email">{{ __('Почта') }}</label>
-                </div>
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">{{ __('Пароль') }}</label>
-                </div>
+            <div id="signin-email">
+                <form method="post">
+                    @csrf
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com" autofocus>
+                        <label for="email">{{ __('Почта') }}</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">{{ __('Пароль') }}</label>
+                    </div>
 
-                <div class="form-check text-start my-3">
-                    <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-                    <label class="form-check-label small" for="flexCheckDefault">
-                        {{ __('Подтверждаете') }}
-                        <a href="{{ route('main.user.privacy') }}">
-                            {{ __('политику конфиденциальности') }}
-                        </a>
-                    </label>
-                </div>
+                    <div class="form-check text-start my-3">
+                        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+                        <label class="form-check-label small" for="flexCheckDefault">
+                            {{ __('Подтверждаете') }}
+                            <a href="{{ route('main.user.privacy') }}">
+                                {{ __('политику конфиденциальности') }}
+                            </a>
+                        </label>
+                    </div>
 
-                <button class="btn btn-success py-3" type="submit">{{ __('Регистрация') }}</button>
-            </form>
+                    <button class="btn btn-success py-3" type="submit">{{ __('Регистрация') }}</button>
+                </form>
+
+                <div class="buttons signup">
+                    <button class="btn btn-success w-100 py-2" onClick="showChoose()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
+                        {{ __('Назад') }}
+                    </button>
+                </div>
+            </div>
 
             <p class="mt-5 mb-3 text-body-secondary small text-center">© 2020–{{ date('Y') }} {{ env('APP_TITLE_SHORT') }}</p>
         </div>
