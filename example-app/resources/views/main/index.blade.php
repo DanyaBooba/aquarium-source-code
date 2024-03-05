@@ -69,14 +69,15 @@
             </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="p-4">
+            <div class="p-4 row-second-telegram">
                 <h2>
                     <a href="{{ route('blog.index') }}">
                         Новости проекта
                     </a>
-                и телеграм канал</h2>
+                    и телеграм канал
+                </h2>
                 <a href="//aquariumsocial.t.me" target="_blank">
-                    <img src="{{ asset('img/social/telegram.svg') }}" width="80px" class="mt-3" alt="Телеграм">
+                    <img src="{{ asset('img/social/telegram.svg') }}" alt="Телеграм">
                 </a>
             </div>
         </div>

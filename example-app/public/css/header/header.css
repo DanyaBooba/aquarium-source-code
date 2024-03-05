@@ -132,6 +132,11 @@ header .header-content button.navbar-toggler {
     header .header-content-links li {
         text-align: end;
     }
+
+    header .header-content-links a.link-download {
+        width: 100px !important;
+        margin-left: auto;
+    }
 }
 
 @media(min-width: 992px) {
