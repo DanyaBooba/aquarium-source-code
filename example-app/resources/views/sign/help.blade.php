@@ -36,7 +36,7 @@
                     </div>
                     <div class="row row-cols-2 gx-2">
                         <div id="signin-choose-google">
-                            <button class="btn fs-5" onClick="signinGoogle()">
+                            <button class="btn fs-5" onClick="openButtonURL('123')">
                                 <x-google />
                             </button>
                         </div>
@@ -97,7 +97,6 @@
         </div>
     </main>
 
-    <script src="{{ asset('js/auth/sign.js') }}"></script>
     <script src="{{ asset('js/auth/signin.js') }}"></script>
 </body>
 @endsection

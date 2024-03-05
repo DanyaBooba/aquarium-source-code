@@ -27,8 +27,8 @@
     margin-left: 110px;
     margin-top: 110px;
 
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
 
     border-radius: 50%;
     background: var(--user-profile-image-background);
@@ -44,7 +44,7 @@
 }
 
 .user-profile .user-profile-image-point span.point-red {
-    background-color: red;
+    background-color: #1dd51d;
 }
 
 .user-profile .user-profile-image {

@@ -111,7 +111,6 @@
         </div>
     </main>
 
-    <script src="{{ asset('js/auth/sign.js') }}"></script>
     <script src="{{ asset('js/auth/button-disabled.js') }}"></script>
     <script src="{{ asset('js/auth/signin.js') }}"></script>
 </body>

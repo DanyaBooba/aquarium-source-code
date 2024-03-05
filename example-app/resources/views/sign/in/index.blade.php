@@ -20,28 +20,28 @@
             <div id="signin-choose">
                 <div class="d-flex flex-column">
                     <div id="signin-choose-yandex">
-                        <button class="btn fs-5" onClick="signinYandex()">
+                        <button class="btn fs-5" onClick="buttonOpenURL('{{ route('auth.yandex') }}')">
                             <x-yandex />
                         </button>
                     </div>
                     <div id="signin-choose-vk">
-                        <button class="btn fs-5" onClick="signinVK()">
+                        <button class="btn fs-5" onClick="buttonOpenURL('{{ route('auth.vk') }}')">
                             <x-vk />
                         </button>
                     </div>
                     <div id="signin-choose-mailru">
-                        <button class="btn fs-5" onClick="signinMailru()">
+                        <button class="btn fs-5" onClick="buttonOpenURL('{{ route('auth.mailru') }}')">
                             <x-mailru />
                         </button>
                     </div>
                     <div class="row row-cols-2 gx-2">
                         <div id="signin-choose-google">
-                            <button class="btn fs-5" onClick="signinGoogle()">
+                            <button class="btn fs-5" onClick="buttonOpenURL('{{ route('auth.google') }}')">
                                 <x-google />
                             </button>
                         </div>
                         <div id="signin-choose-github">
-                            <button class="btn fs-5" onClick="signinGoogle()">
+                            <button class="btn fs-5" onClick="buttonOpenURL('{{ route('auth.github') }}')">
                                 <x-github />
                             </button>
                         </div>
@@ -108,7 +108,6 @@
         </div>
     </main>
 
-    <script src="{{ asset('js/auth/sign.js') }}"></script>
     <script src="{{ asset('js/auth/signin.js') }}"></script>
     <script src="{{ asset('js/auth/button-password.js') }}"></script>
     <script src="{{ asset('js/auth/button-disabled.js') }}"></script>

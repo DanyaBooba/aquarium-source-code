@@ -23,6 +23,16 @@ Route::middleware(['log', 'unlogin'])->group(function () {
 
     Route::post('sign/code', [AuthController::class, 'codepost'])->name('auth.code.post');
 
+    Route::get('sign/google', [AuthController::class, 'google'])->name('auth.google');
+
+    Route::get('sign/github', [AuthController::class, 'github'])->name('auth.github');
+
+    Route::get('sign/mailru', [AuthController::class, 'mailru'])->name('auth.mailru');
+
+    Route::get('sign/yandex', [AuthController::class, 'yandex'])->name('auth.yandex');
+
+    Route::get('sign/vk', [AuthController::class, 'vk'])->name('auth.vk');
+
     Route::get('login', function () {
         return redirect()->route('auth.signin');
     });

@@ -1,3 +1,0 @@
-function signinGoogle() {}
-
-function signinYandex() {}

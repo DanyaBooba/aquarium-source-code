@@ -2,6 +2,7 @@ form input[type="password"],
 form input[type="email"],
 form input[type="text"],
 form input[type="number"],
+form input[type="search"],
 form textarea {
     background: var(--body-color) !important;
     color: var(--text-color) !important;

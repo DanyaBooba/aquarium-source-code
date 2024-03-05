@@ -44,4 +44,39 @@ class AuthController extends Controller
     {
         return view('sign.code.index');
     }
+
+    public function google()
+    {
+        session(['login' => 'login']);
+
+        return redirect()->route('user.index');
+    }
+
+    public function yandex()
+    {
+        session(['login' => 'login']);
+
+        return redirect()->route('user.index');
+    }
+
+    public function github()
+    {
+        session(['login' => 'login']);
+
+        return redirect()->route('user.index');
+    }
+
+    public function mailru()
+    {
+        session(['login' => 'login']);
+
+        return redirect()->route('user.index');
+    }
+
+    public function vk()
+    {
+        session(['login' => 'login']);
+
+        return redirect()->route('user.index');
+    }
 }
