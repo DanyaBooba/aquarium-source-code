@@ -1,9 +1,9 @@
-@extends('layouts.blog')
+@extends('layouts.post')
 
-@section('main.content')
+@section('post.content')
+<img src="{{ asset('img/emoji/heart.png') }}" class="img-fluid mb-4 mt-3" width="100px" alt="">
 
-<img src="{{ asset('img/emoji/heart.png') }}" alt="">
-<h1 style="max-width: 500px">
+<h1>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ipsa!
 </h1>
 

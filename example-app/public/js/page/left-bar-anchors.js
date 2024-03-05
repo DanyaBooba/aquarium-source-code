@@ -17,16 +17,15 @@ function clearLink(text) {
 function anchors() {
     let list = document.getElementById("left-bar-anchors");
 
-    if (!list) return;
-
     document.querySelectorAll("h2, h3, h4, h5, h6").forEach((title) => {
         title.id = clearLink(title.textContent);
-        list.insertAdjacentHTML(
-            "beforeend",
-            `<li class='left-bar-anchors-${title.tagName.toLowerCase()}'><a href='#${
-                title.id
-            }'>${title.textContent}</a></li>`
-        );
+        if (list)
+            list.insertAdjacentHTML(
+                "beforeend",
+                `<li class='left-bar-anchors-${title.tagName.toLowerCase()}'><a href='#${
+                    title.id
+                }'>${title.textContent}</a></li>`
+            );
         title.classList.add("title-anchor");
         title.innerHTML = `<a href='#${title.id}'
             onClick='copyLink("${window.location.href}#${title.id}")'>

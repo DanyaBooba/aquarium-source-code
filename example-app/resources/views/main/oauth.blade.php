@@ -52,7 +52,7 @@
         <div class="col-3 p-3">
             <ul id="left-bar-anchors"></ul>
         </div>
-        <div class="col-9 p-3">
+        <div class="col-7 p-3">
             <h1>
                 OAuth
             </h1>
