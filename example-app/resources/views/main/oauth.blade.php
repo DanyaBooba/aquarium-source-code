@@ -23,10 +23,10 @@
 
 @section('main.content')
 
-    <nav class="position-sticky top-info-bar">
+    <nav class="top-info-bar">
         <div class="top-info-bar-content">
             <ul>
-                <li>
+                <li class="active">
                     <a href="#">
                         элемент 1
                     </a>

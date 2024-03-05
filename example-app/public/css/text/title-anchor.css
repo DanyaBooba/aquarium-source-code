@@ -4,7 +4,7 @@ h4.title-anchor,
 h5.title-anchor,
 h6.title-anchor
 {
-    margin-left: -2rem;
+    margin-left: -2.5rem;
 }
 
 h2.title-anchor a,
@@ -15,6 +15,7 @@ h6.title-anchor a
 {
     opacity: 0;
     margin-right: .5rem;
+    margin-left: .5rem;
 
     transition: .3s;
 }
@@ -27,20 +28,23 @@ h6.title-anchor a:is(:focus, :focus-visible, :focus-within) {
     opacity: 1;
 }
 
-@media(hover: hover) {
-    h2.title-anchor a:hover,
-    h3.title-anchor a:hover,
-    h4.title-anchor a:hover,
-    h5.title-anchor a:hover,
-    h6.title-anchor a:hover {
-        opacity: 1;
-    }
+h2.title-anchor:hover a,
+h3.title-anchor:hover a,
+h4.title-anchor:hover a,
+h5.title-anchor:hover a,
+h6.title-anchor:hover a {
+    opacity: 1;
+}
 
-    h2.title-anchor:hover a,
-    h3.title-anchor:hover a,
-    h4.title-anchor:hover a,
-    h5.title-anchor:hover a,
-    h6.title-anchor:hover a {
-        opacity: 1;
+@media(max-width: 767.98px) {
+    h2.title-anchor,
+    h3.title-anchor,
+    h4.title-anchor,
+    h5.title-anchor,
+    h6.title-anchor {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: start;
+        margin-left: 0;
     }
 }

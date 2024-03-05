@@ -84,7 +84,7 @@
     </div>
 
     <div class="container container-blog">
-        <div class="row row-third row-cols-1 row-cols-lg-3 g-4">
+        <div class="row row-third row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
             <div class="col p-4">
                 <img src="{{ asset('img/emoji/partying-face.png') }}" width="80" class="img-fluid mb-3" alt="Белый голубь">
                 <h3 class="mb-2">Удобство</h3>

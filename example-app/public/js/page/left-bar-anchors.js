@@ -23,7 +23,9 @@ function anchors() {
         title.id = clearLink(title.textContent);
         list.insertAdjacentHTML(
             "beforeend",
-            `<li><a href='#${title.id}'>${title.textContent}</a></li>`
+            `<li class='left-bar-anchors-${title.tagName.toLowerCase()}'><a href='#${
+                title.id
+            }'>${title.textContent}</a></li>`
         );
         title.classList.add("title-anchor");
         title.innerHTML = `<a href='#${title.id}'

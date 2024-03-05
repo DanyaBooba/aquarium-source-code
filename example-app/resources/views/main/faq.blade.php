@@ -3,22 +3,7 @@
 @section('page.title', 'Ответы на вопросы')
 
 @push('css')
-    <style>
-        @media(max-width: 767.98px) {
-            div.row .col-3 {
-                width: 100%;
-            }
-
-            div.row .col-8 {
-                width: 100%;
-            }
-        }
-
-        div.row ul li {
-            margin-bottom: .5rem;
-            list-style-type: lower-greek;
-        }
-    </style>
+<link rel="stylesheet" type="text/css" href="{{ asset('css/faq/index.css') }}" />
 @endpush
 
 @section('main.content')
@@ -26,7 +11,7 @@
         <div class="col-3 p-3">
             <ul id="left-bar-anchors"></ul>
         </div>
-        <div class="col-9 p-3">
+        <div class="col-7 p-3">
             <h1>
                 Ответы на вопросы
             </h1>
@@ -53,6 +38,11 @@
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
             </p>
+            <h4>123123</h4>
+            <h2>9999</h2>
+            <h2>9999</h2>
+            <h2>9999</h2>
+            <h2>9999</h2>
         </div>
     </div>
 @endsection
