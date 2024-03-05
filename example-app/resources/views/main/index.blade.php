@@ -30,45 +30,45 @@
                 <div class="row-first-button">
                     <button class="btn btn-light col-md-6" onClick="buttonOpenURL('{{ route('auth.signin') }}')">Войти</button>
                 </div>
-                <img src="{{ asset('img/stickers/sticker1-2.png') }}" alt="Морская звезда">
+                {{-- <img src="{{ asset('img/stickers/sticker1-2.png') }}" alt="Морская звезда"> --}}
             </div>
         </div>
     </div>
 
-    <div class="row row-second gx-3">
-        <div class="col-sm-4 col-md-4 col-lg-4">
+    <div class="row row-second g-3">
+        <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="p-4">
                 <h2>Стикеры за регистрацию</h2>
                 <div class="row-second-content row-second-stickers">
                     <a href="{{ route('auth.signup') }}">
-                        <img src="{{ asset('img/stickers/sticker1.png') }}" width="120px" alt="Стикер аквариума">
+                        <img src="{{ asset('img/stickers/sticker1.png') }}" alt="Стикер аквариума">
                     </a>
                     <a href="{{ route('auth.signup') }}">
-                        <img src="{{ asset('img/stickers/sticker2.png') }}" width="120px" alt="Стикер аквариума">
+                        <img src="{{ asset('img/stickers/sticker2.png') }}" alt="Стикер аквариума">
                     </a>
                     <a href="{{ route('auth.signup') }}">
-                        <img src="{{ asset('img/stickers/sticker3.png') }}" width="120px" alt="Стикер аквариума">
+                        <img src="{{ asset('img/stickers/sticker3.png') }}" alt="Стикер аквариума">
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="p-4">
                 <h2>Удобная авторизация через соцсети</h2>
                 <div class="row-second-content row-second-social">
                     <a href="{{ route('auth.signin') }}">
-                        <img src="{{ asset('img/social/yandex.svg') }}" width="60px" class="me-2" alt="Яндекс">
+                        <img src="{{ asset('img/social/yandex.svg') }}" alt="Яндекс">
                     </a>
                     <a href="{{ route('auth.signin') }}">
-                        <img src="{{ asset('img/social/vk.svg') }}" width="60px" class="mx-2" alt="Вконтакте">
+                        <img src="{{ asset('img/social/vk.svg') }}" alt="Вконтакте">
                     </a>
                     <a href="{{ route('auth.signin') }}">
-                        <img src="{{ asset('img/social/mail_text.svg') }}" width="140px" class="ms-2" alt="Меил ру">
+                        <img src="{{ asset('img/social/mail_text.svg') }}" class="row-second-social-mailru" alt="Меил ру">
                     </a>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="p-4">
                 <h2>
                     <a href="{{ route('blog.index') }}">
@@ -152,7 +152,7 @@
 
     <div class="container container-blog" style="margin-top: 60px">
         <h2 class="display-4 mb-3 text-center">Новости проекта</h2>
-        <div class="row row-blog row-cols-3 g-2">
+        <div class="row row-blog row-cols-sm-1 row-cols-sm-2 row-cols-lg-3 g-2">
             @for($i = 0; $i < 3; $i++)
             <x-blog.card />
             @endfor
