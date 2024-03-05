@@ -3,5 +3,7 @@
 @section('page.title', 'Ваш профиль')
 
 @section('user.content')
-профыл
+
+<x-user.profile :local=false />
+
 @endsection

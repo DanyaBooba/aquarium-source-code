@@ -105,7 +105,7 @@
     border-top-right-radius: 12px;
 }
 
-.user-profile .user-profile-right button {
+.user-profile .user-profile-right button::content(:not(svg)) {
     border-radius: 6px;
     width: 180px;
 }

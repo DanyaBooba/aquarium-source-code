@@ -1,12 +1,12 @@
 @extends('layouts.user')
 
-@section('page.title', 'Ваш профиль')
+@section('page.title', 'Поиск')
 
 @section('user.content')
 
 <div class="row gx-3 user-search">
     <form action="?" method="get" class="col-md-8">
-        <input type="search" name="search" class="form-control" placeholder="Найти..." />
+        <input type="search" name="search" class="form-control" placeholder="Найти" />
     </form>
 </div>
 
