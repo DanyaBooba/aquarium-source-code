@@ -19,6 +19,8 @@ Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
 
     Route::get('trends', [UserController::class, 'trends'])->name('user.trends');
 
+    Route::get('post/add', [UserController::class, 'addpost'])->name('user.add-post');
+
     Route::get('exit', [UserController::class, 'exit'])->name('user.exit');
 
     Route::get('exit/exactly', [UserController::class, 'exitexactly'])->name('user.exit.exactly');

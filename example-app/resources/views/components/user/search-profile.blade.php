@@ -1,4 +1,4 @@
-<div class="p-2 mt-0">
+<div class="p-2 mt-0" name="Даниил Дыбка" desc="123">
     <a href="{{ route('user.show', 1) }}" class="user-search-users-content">
         <img src="{{ asset('img/user/logo/MAN1.png') }}" alt="">
         <p class="h5 mb-4">

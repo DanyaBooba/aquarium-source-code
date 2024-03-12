@@ -43,24 +43,25 @@
     justify-content: center;
     width: 100%;
 
-    border-radius: 40px;
-
-    border-color: var(--user-search-button-background);
+    border: .1rem solid transparent;
     color: var(--text-color);
 }
 
 .user-search-users .user-search-users-content button:is(:focus, :focus-visible, :focus-within) {
-    background-color: var(--user-search-button-background);
+    border: .1rem solid var(--user-search-button-background);
+    background-color: transparent;
 }
 
 @media(hover: hover) {
     .user-search-users .user-search-users-content button:hover {
-        background-color: var(--user-search-button-background);
+        border: .1rem solid var(--user-search-button-background);
+        background-color: transparent;
     }
 }
 
 @media(hover: none) {
     .user-search-users .user-search-users-content button:active {
-        background-color: var(--user-search-button-background);
+        border: .1rem solid var(--user-search-button-background);
+        background-color: transparent;
     }
 }

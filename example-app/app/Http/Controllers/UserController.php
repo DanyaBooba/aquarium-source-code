@@ -46,6 +46,11 @@ class UserController extends Controller
         return view('user.trends');
     }
 
+    public function addpost()
+    {
+        return view('user.add-post');
+    }
+
     public function exit()
     {
         // session()->forget('login');
