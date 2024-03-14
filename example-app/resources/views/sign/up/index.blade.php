@@ -70,6 +70,17 @@
             </div>
 
             <div id="signin-email">
+                @if($errors->any())
+                    <div class="alert alert-danger small p-2">
+                        <ul class="mb-0">
+                            @foreach($errors->all() as $message)
+                                <li>
+                                    {{ $message }}
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <form method="post">
                     @csrf
                     <div class="form-floating">
@@ -87,7 +98,7 @@
                     </div>
 
                     <div class="form-check text-start mb-3 mt-2">
-                        <input class="form-check-input" type="checkbox" value="privacy" id="check" onInput="checkOnInput()">
+                        <input class="form-check-input" name="agreement" type="checkbox" value="privacy" id="check" onInput="checkOnInput()">
                         <label class="form-check-label small" for="check">
                             {{ __('Подтверждаете') }}
                             <a href="{{ route('main.user.privacy') }}">

@@ -1,9 +1,6 @@
 let chooseBlockSignin = document.getElementById("signin-choose");
 let emailBlockSignin = document.getElementById("signin-email");
 
-function signinBasic() {
-    showChoose();
-}
 
 function showEmail() {
     chooseBlockSignin.classList.add("d-none");
@@ -15,4 +12,8 @@ function showChoose() {
     emailBlockSignin.classList.add("d-none");
 }
 
-signinBasic();
+if (isemail === null) {
+    showChoose();
+} else {
+    showEmail();
+}

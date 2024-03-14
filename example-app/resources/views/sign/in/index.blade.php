@@ -64,7 +64,7 @@
             </div>
 
             <div id="signin-email">
-                <form method="post">
+                <form action={{ route('auth.signin.post') }} method="post">
                     @csrf
                     <div class="form-floating">
                         <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" onInput="checkOnInput()" required autofocus>

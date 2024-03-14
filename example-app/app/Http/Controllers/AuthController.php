@@ -11,9 +11,16 @@ class AuthController extends Controller
         return view('sign.in.index');
     }
 
-    public function signinpost()
+    public function signinpost(Request $request)
     {
+        $validated = $request->validate([
+            'email' => ['required', 'string', 'max:300', 'min: 3', 'email'],
+            'password' => ['required', 'string', 'min:3', 'max:300'],
+        ]);
+
         session(['login' => 'login']);
+        session(['email' => $validated['email']]);
+        session(['avatar' => 'MAN1']);
 
         return redirect()->route('user.index');
     }
@@ -23,9 +30,19 @@ class AuthController extends Controller
         return view('sign.up.index');
     }
 
-    public function signuppost()
+    public function signuppost(Request $request)
     {
-        session(['login' => 'login']);
+        $validated = $request->validate([
+            'email' => ['required', 'string', 'max:300', 'min: 3', 'email'],
+            'password' => ['required', 'string', 'min:3', 'max:300'],
+            'agreement' => ['accepted'],
+        ]);
+
+        // session(['login' => 'login']);
+        // session(['email' => $validated['email']]);
+        // session(['avatar' => 'MAN1']);
+
+        dd($validated);
 
         return redirect()->route('user.index');
     }
