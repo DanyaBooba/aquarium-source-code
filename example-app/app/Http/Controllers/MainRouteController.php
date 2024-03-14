@@ -31,6 +31,11 @@ class MainRouteController extends Controller
         return view('main.tech');
     }
 
+    public function api()
+    {
+        return view('main.api');
+    }
+
     public function download()
     {
         return view('main.download');

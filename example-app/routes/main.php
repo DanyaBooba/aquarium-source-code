@@ -13,9 +13,8 @@ Route::prefix('/')->group(function () {
     Route::prefix('about')->group(function () {
 
         Route::get('/', [MainRouteController::class, 'about'])->name('main.about');
-
         Route::get('oauth', [MainRouteController::class, 'oauth'])->name('main.oauth');
-
+        Route::get('api', [MainRouteController::class, 'api'])->name('main.api');
         Route::get('tech', [MainRouteController::class, 'tech'])->name('main.tech');
 
         Route::prefix('user')->group(function () {
