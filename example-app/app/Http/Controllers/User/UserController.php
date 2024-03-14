@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -16,9 +17,9 @@ class UserController extends Controller
         return view('user.search');
     }
 
-    public function settings()
+    public function show()
     {
-        return view('user.settings.index');
+        return view('user.show');
     }
 
     public function notifications()
@@ -39,18 +40,6 @@ class UserController extends Controller
     public function trends()
     {
         return view('user.trends');
-    }
-
-    public function exit()
-    {
-        return view('user.exit');
-    }
-
-    public function exitexactly()
-    {
-        exit_account();
-
-        return redirect()->route('main.index');
     }
 
     public function delete()

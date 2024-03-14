@@ -8,3 +8,12 @@ if (!function_exists('active_link')) {
         return Route::is($name) ? $active : '';
     }
 }
+
+if (!function_exists('exit_account')) {
+    function exit_account()
+    {
+        session()->forget('login');
+        session()->forget('email');
+        session()->forget('avatar');
+    }
+}

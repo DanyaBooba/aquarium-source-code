@@ -4,10 +4,20 @@
 
 .authentication .authentication-back {
     display: flex;
-    justify-content: end;
+    align-items: center;
 }
 
-.authentication .authentication-back svg {
+.authentication .authentication-back a.authentication-back-back {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.authentication .authentication-back a.authentication-back-close {
+    margin-left: auto;
+}
+
+.authentication .authentication-back a.authentication-back-close svg {
     width: 40px;
     height: 40px;
 
@@ -47,7 +57,7 @@
     background-color: var(--body-color);
     border: .1rem solid var(--signin-choose-background-color);
 
-    border-radius: 12px;
+    border-radius: 8px;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
@@ -63,38 +73,37 @@
     background-color: var(--body-color);
     border: .1rem solid var(--signin-choose-background-color);
 
-    border-radius: 12px;
+    border-radius: 8px;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-yandex button svg {
-    width: 125px;
+    height: 30px;
     margin-top: .5rem;
     margin-bottom: .5rem;
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-vk button svg {
-    width: 200px;
-    height: 36px;
+    height: 30px;
     margin-top: .5rem;
     margin-bottom: .5rem;
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-mailru button svg {
-    width: 200px;
-    height: 36px;
+    height: 30px;
     margin-top: .5rem;
     margin-bottom: .5rem;
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-google button svg {
-    width: 32px;
+    width: 30px;
+        height: 30px;
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-github button svg {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+        height: 30px;
 }
 
 .authentication #signin-email .buttons {
@@ -132,6 +141,7 @@
 }
 
 .authentication #signin-choose .signin-choose-or {
+    color: var(--signin-choose-or-text-color);
     margin-top: -37px;
     margin-bottom: 16px !important;
     text-align: center;

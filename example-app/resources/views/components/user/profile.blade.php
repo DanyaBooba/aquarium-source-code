@@ -21,7 +21,7 @@
         </div>
         <div class="user-profile-right">
             @if($local)
-            <button class="btn btn-outline-primary px-4" onClick="buttonOpenURL('{{ route('user.settings') }}')">
+            <button class="btn btn-outline-primary px-4" onClick="buttonOpenURL('{{ route('user.settings.index') }}')">
                 {{ __('Редактировать') }}
             </button>
             <button class="btn btn-primary px-4" onClick="buttonOpenURL('{{ route('user.index') }}')">

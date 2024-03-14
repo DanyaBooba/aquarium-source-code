@@ -6,46 +6,46 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    public function signin()
-    {
-        return view('sign.in.index');
-    }
+    // public function signin()
+    // {
+    //     return view('sign.in.index');
+    // }
 
-    public function signinpost(Request $request)
-    {
-        $validated = $request->validate([
-            'email' => ['required', 'string', 'max:300', 'min: 3', 'email'],
-            'password' => ['required', 'string', 'min:3', 'max:300'],
-        ]);
+    // public function signinpost(Request $request)
+    // {
+    //     $validated = $request->validate([
+    //         'email' => ['required', 'string', 'max:300', 'min: 3', 'email'],
+    //         'password' => ['required', 'string', 'min:3', 'max:300'],
+    //     ]);
 
-        session(['login' => 'login']);
-        session(['email' => $validated['email']]);
-        session(['avatar' => 'MAN1']);
+    //     session(['login' => 'login']);
+    //     session(['email' => $validated['email']]);
+    //     session(['avatar' => 'MAN1']);
 
-        return redirect()->route('user.index');
-    }
+    //     return redirect()->route('user.index');
+    // }
 
-    public function signup()
-    {
-        return view('sign.up.index');
-    }
+    // public function signup()
+    // {
+    //     return view('sign.up.index');
+    // }
 
-    public function signuppost(Request $request)
-    {
-        $validated = $request->validate([
-            'email' => ['required', 'string', 'max:300', 'min: 3', 'email'],
-            'password' => ['required', 'string', 'min:3', 'max:300'],
-            'agreement' => ['accepted'],
-        ]);
+    // public function signuppost(Request $request)
+    // {
+    //     $validated = $request->validate([
+    //         'email' => ['required', 'string', 'max:300', 'min: 3', 'email'],
+    //         'password' => ['required', 'string', 'min:3', 'max:300'],
+    //         'agreement' => ['accepted'],
+    //     ]);
 
-        // session(['login' => 'login']);
-        // session(['email' => $validated['email']]);
-        // session(['avatar' => 'MAN1']);
+    //     // session(['login' => 'login']);
+    //     // session(['email' => $validated['email']]);
+    //     // session(['avatar' => 'MAN1']);
 
-        dd($validated);
+    //     dd($validated);
 
-        return redirect()->route('user.index');
-    }
+    //     return redirect()->route('user.index');
+    // }
 
     public function help()
     {
@@ -60,40 +60,5 @@ class AuthController extends Controller
     public function code()
     {
         return view('sign.code.index');
-    }
-
-    public function google()
-    {
-        session(['login' => 'login']);
-
-        return redirect()->route('user.index');
-    }
-
-    public function yandex()
-    {
-        session(['login' => 'login']);
-
-        return redirect()->route('user.index');
-    }
-
-    public function github()
-    {
-        session(['login' => 'login']);
-
-        return redirect()->route('user.index');
-    }
-
-    public function mailru()
-    {
-        session(['login' => 'login']);
-
-        return redirect()->route('user.index');
-    }
-
-    public function vk()
-    {
-        session(['login' => 'login']);
-
-        return redirect()->route('user.index');
     }
 }

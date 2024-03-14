@@ -30,4 +30,9 @@ class MainRouteController extends Controller
     {
         return view('main.tech');
     }
+
+    public function download()
+    {
+        return view('main.download');
+    }
 }

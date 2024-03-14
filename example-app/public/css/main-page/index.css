@@ -71,6 +71,7 @@
 
 .row-second .row-second-content.row-second-social {
     margin-top: 2rem;
+    justify-content: space-around;
 }
 
 .row-second .row-second-content.row-second-social img {
@@ -90,6 +91,9 @@
     margin-right: 0;
 }
 
+.row-second .row-second-content.row-second-stickers {
+    justify-content: space-around;
+}
 .row-second .row-second-content.row-second-stickers img {
     width: 120px;
     max-width: 100%;
