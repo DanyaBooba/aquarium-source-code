@@ -50,8 +50,79 @@
                 После регистрации аккаунта потребуется зарегистрировать приложение по <a href="#">ссылке</a>.
             </p>
             <h3>{{ __('Настройка приложения') }}</h3>
-            <h3>{{ __('Токены') }}</h3>
+            <p>
+                После регистрации аккаунта и создания приложения, потребуется его настроить. Для настройки приложения нужно указать название приложения, добавить аватарку по желанию, указать данные, которые потребуется для авторизации и указать Redirect URI.
+            </p>
+            <h4>{{ __('Redirect URI') }}</h4>
+            <p>
+                Для того, чтобы иметь возможность обработать полученные данные пользователей после успешной авторизации через OAuth Аквариума, потребуется внести данные пути в настройки приложения — Redirect URI. Если попытаться отправить запрос на неавторизированный путь, запрос будет отклонен. Данная защита работает против несанкционированного доступа.
+            </p>
+            <h4>{{ __('ClientID, Client secret, токен') }}</h4>
+            <p>
+                ClientID — идентификатор приложения. Используется в запросах для получения OAuth-токена.
+            </p>
+            <p>
+                Client secret — секретный ключ, который используется для подписи запросов.
+            </p>
+            <p>
+                Токен — единоразовый ключ для доступа к данным пользователя.
+            </p>
+            <h3>{{ __('Публикация приложения') }}</h3>
+            <p>
+                После настройки приложения, следует отправить его на модерацию. После успешного прохождения модерации, у вас появится возможность использовать OAuth Аквариума для авторизации через сервисы. В противном случае вам потребуется внести изменения в приложение и повторно отправить на проверку модератором.
+            </p>
             <h2>{{ __('Пример приложения') }}</h2>
+            <h3>{{ __('Клиент на PHP') }}</h3>
+            <code>
+                <pre>
+$yandex_url = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query([
+    'client_id' => TokenYandex()["client_id"],
+    'redirect_uri' => TokenYandex()["redirect_uri"],
+    'response_type' => 'code'
+]));
+                </pre>
+            </code>
+            <h3>{{ __('Сервер на PHP') }}</h3>
+            <code>
+                <pre>
+if (!empty($_GET['code'])) {
+
+    $params = array(
+        'grant_type'    => 'authorization_code',
+        'code'          => $_GET['code'],
+        'client_id'     => TokenYandex()["client_id"],
+        'client_secret' => TokenYandex()["client_secret"],
+    );
+
+    $ch = curl_init('https://oauth.yandex.ru/token');
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    $data = curl_exec($ch);
+    curl_close($ch);
+
+    $data = json_decode($data, true);
+
+    if (!empty($data['access_token'])) {
+        $ch = curl_init('https://login.yandex.ru/info');
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, ['format' => 'json']);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Authorization: OAuth ' . $data['access_token']]);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        $info = curl_exec($ch);
+        curl_close($ch);
+
+        $info = json_decode($info, true);
+
+        // ...
+    }
+}
+                </pre>
+            </code>
         </div>
     </div>
 @endsection
