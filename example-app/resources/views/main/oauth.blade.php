@@ -125,6 +125,8 @@ if (!empty($_GET['code'])) {
             </code>
         </div>
     </div>
+
+    <x-button-top />
 @endsection
 
 @once

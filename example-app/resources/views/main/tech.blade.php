@@ -1,24 +1,9 @@
 @extends('layouts.main')
 
-@section('page.title', 'Ответы на вопросы')
+@section('page.title', 'Технологии')
 
 @push('css')
-    <style>
-        @media(max-width: 767.98px) {
-            div.row .col-3 {
-                width: 100%;
-            }
-
-            div.row .col-8 {
-                width: 100%;
-            }
-        }
-
-        div.row ul li {
-            margin-bottom: .5rem;
-            list-style-type: lower-greek;
-        }
-    </style>
+<link rel="stylesheet" type="text/css" href="{{ asset('css/faq/index.css') }}" />
 @endpush
 
 @section('main.content')
@@ -27,34 +12,29 @@
             <ul id="left-bar-anchors"></ul>
         </div>
         <div class="col-7 p-3">
-            <h1>
-                Технологии проекта
-            </h1>
-            <p>
-                Как начинался проект Аквариум? Что имеем на текущий счет? Чего ждать в будущем? Ответим на эти
-                и на другие вопросы.
+            <h1>{{ __('Технологии') }}</h1>
+            <p class="fs-5">
+                Технологии предназначенны для обеспечения удобства использования, повышения функциональности и возможности масштабирования приложения.
             </p>
-            <h2>Lorem, ipsum dolor.1</h2>
+            <h2>{{ __('Laravel') }}</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, corporis!
-            </p>
-            <h3>Lorem, ipsum dolor.2</h3>
-            <p>
-                Lorem ipsum dolor sit.
-            </p>
-            <h3>Lorem, ipsum dolor.3</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
-            </p>
-            <h3>Lorem, ipsum dolor.4</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
+                Laravel, как современный и мощный фреймворк, обеспечивает разработку функционального и безопасного frontend и backend для проекта. Он используется для построения надежной архитектуры и обработки веб-запросов.
             </p>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
+                Использование Laravel способствует повышению эффективности разработки и обеспечивает более высокую безопасность проекта.
+            </p>
+            <h2>{{ __('Bootstrap') }}</h2>
+            <p>
+                Использование Bootstrap обеспечивает разработку гибкого и адаптивного frontend. Улучшение пользовательского контента и визуального оформления проекта, обеспечение адаптивности для различных устройств.
+            </p>
+            <h2>{{ __('OAuth') }}</h2>
+            <p>
+                Использование протокола OAuth обеспечивает быстрый и безопасный вход пользователей в систему. OAuth позволяет сильно упростить авторизацию в собственный аккаунт посредством использования аккаунтов из других сервисов.
             </p>
         </div>
     </div>
+
+    <x-button-top />
 @endsection
 
 @once

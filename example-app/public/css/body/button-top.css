@@ -1,0 +1,38 @@
+.button-top {
+    position: fixed;
+    bottom: 50px;
+    right: 90px;
+}
+
+.button-top a svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--text-color);
+    transition: .3s;
+}
+
+.button-top a:hover svg {
+    stroke: var(--text-color-hover);
+}
+
+.button-top-disabled {
+    opacity: 0;
+    transition: .3s opacity;
+}
+
+.button-top-active {
+    opacity: 1;
+    transition: .3s opacity;
+}
+
+@media(max-width: 991.98px) {
+    .button-top {
+        bottom: 40px;
+        right: 30px;
+    }
+
+    .button-top a svg {
+        width: 24px;
+        height: 24px;
+    }
+}

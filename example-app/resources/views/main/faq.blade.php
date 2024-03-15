@@ -220,6 +220,8 @@
             </ul>
         </div>
     </div>
+
+    <x-button-top />
 @endsection
 
 @once

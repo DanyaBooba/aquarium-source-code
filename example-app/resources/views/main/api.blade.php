@@ -18,6 +18,8 @@
             </p>
         </div>
     </div>
+
+    <x-button-top />
 @endsection
 
 @once
