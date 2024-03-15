@@ -1,204 +1,57 @@
 @extends('layouts.main')
 
-@section('page.title', 'Ответы на вопросы')
+@section('page.title', 'OAuth')
 
 @push('css')
-    <style>
-        @media(max-width: 767.98px) {
-            div.row .col-3 {
-                width: 100%;
-            }
-
-            div.row .col-8 {
-                width: 100%;
-            }
-        }
-
-        div.row ul li {
-            margin-bottom: .5rem;
-            list-style-type: lower-greek;
-        }
-    </style>
+<link rel="stylesheet" type="text/css" href="{{ asset('css/faq/index.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('css/oauth/index.css') }}" />
 @endpush
 
 @section('main.content')
-
-    <nav class="top-info-bar">
-        <div class="top-info-bar-content">
-            <ul>
-                <li class="active">
-                    <a href="#">
-                        элемент 1
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        элемент 2
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        элемент 3
-                    </a>
-                </li>
-                <a href="#" class="top-info-bar-register">
-                    регистрация
-                </a>
-            </ul>
-        </div>
-    </nav>
-
     <div class="row gx-3">
         <div class="col-3 p-3">
             <ul id="left-bar-anchors"></ul>
         </div>
         <div class="col-7 p-3">
-            <h1>
-                OAuth
-            </h1>
-            <p>
-                Как начинался проект Аквариум? Что имеем на текущий счет? Чего ждать в будущем? Ответим на эти
-                и на другие вопросы.
+            <h1>{{ __('OAuth') }}</h1>
+            <p class="fs-5">
+                Открытый протокол авторизации при помощи соцсети Аквариум. С помощью OAuth у пользователей есть возможность входить в аккаунты других сервисов используя аккаунт социальной сети Аквариум. При авторизации у пользователя есть возможность указать, какими данными можно поделиться.
             </p>
-            <h2>Lorem, ipsum dolor.1</h2>
+            <h2>{{ __('Для чего нужен OAuth?') }}</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, corporis!
-            </p>
-            <h3>Lorem, ipsum dolor.2</h3>
-            <p>
-                Lorem ipsum dolor sit.
-            </p>
-            <h3>Lorem, ipsum dolor.3</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
-            </p>
-            <h3>Lorem, ipsum dolor.4</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
+                Одной из главных целей OAuth является обеспечение безопасности, упрощение процесса авторизации и содействие безопасному обмену данными между пользователями и онлайн-ресурсами.
             </p>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
-            </p>
-            <h3>Lorem, ipsum dolor.2</h3>
-            <p>
-                Lorem ipsum dolor sit.
-            </p>
-            <h3>Lorem, ipsum dolor.3</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
-            </p>
-            <h3>Lorem, ipsum dolor.4</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
+                С помощью этой технологии пользователи могут удобно авторизоваться в других сервисах, контролировать доступ к своей личной информации и быть уверенным, что их данные будут передаваться только в соответствии с их собственными настройками и разрешениями.
             </p>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
+                OAuth играет важную роль в создании более сильной, связанной и безопасной онлайн среды. Благодаря этой технологии веб-приложения могут интегрироваться, обмениваться данными и предоставлять передовые услуги, сохраняя при этом высокий уровень безопасности и конфиденциальности.
             </p>
-            <h3>Lorem, ipsum dolor.2</h3>
+            <h2>{{ __('Дизайн кнопки авторизации') }}</h2>
+            <div class="faq-design-button">
+                <div class="faq-design-button-light">
+                    <button class="btn btn-dark btn-lg">
+                        Авторизоваться
+                    </button>
+                </div>
+                <div class="faq-design-button-dark">
+                    <button class="btn btn-light btn-lg">
+                        Авторизоваться
+                    </button>
+                </div>
+            </div>
+            <h2>{{ __('Подключить OAuth') }}</h2>
+            <h3>{{ __('Регистрация') }}</h3>
             <p>
-                Lorem ipsum dolor sit.
+                Вам необходимо зарегистрироваться в панели разработчиков Аквариума по <a href="#">ссылке</a>. Вы можете использовать аккаунт Аквариума.
             </p>
-            <h3>Lorem, ipsum dolor.3</h3>
+            <h3>{{ __('Создание приложения') }}</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
+                После регистрации аккаунта потребуется зарегистрировать приложение по <a href="#">ссылке</a>.
             </p>
-            <h3>Lorem, ipsum dolor.4</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
-            </p>
-            <h3>Lorem, ipsum dolor.2</h3>
-            <p>
-                Lorem ipsum dolor sit.
-            </p>
-            <h3>Lorem, ipsum dolor.3</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
-            </p>
-            <h3>Lorem, ipsum dolor.4</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
-            </p>
-            <h3>Lorem, ipsum dolor.2</h3>
-            <p>
-                Lorem ipsum dolor sit.
-            </p>
-            <h3>Lorem, ipsum dolor.3</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
-            </p>
-            <h3>Lorem, ipsum dolor.4</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
-            </p>
-            <h3>Lorem, ipsum dolor.2</h3>
-            <p>
-                Lorem ipsum dolor sit.
-            </p>
-            <h3>Lorem, ipsum dolor.3</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
-            </p>
-            <h3>Lorem, ipsum dolor.4</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
-            </p>
-            <h3>Lorem, ipsum dolor.2</h3>
-            <p>
-                Lorem ipsum dolor sit.
-            </p>
-            <h3>Lorem, ipsum dolor.3</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
-            </p>
-            <h3>Lorem, ipsum dolor.4</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
-            </p>
-            <h3>Lorem, ipsum dolor.2</h3>
-            <p>
-                Lorem ipsum dolor sit.
-            </p>
-            <h3>Lorem, ipsum dolor.3</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
-            </p>
-            <h3>Lorem, ipsum dolor.4</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
-            </p>
-            <h3>Lorem, ipsum dolor.2</h3>
-            <p>
-                Lorem ipsum dolor sit.
-            </p>
-            <h3>Lorem, ipsum dolor.3</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quas?
-            </p>
-            <h3>Lorem, ipsum dolor.4</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id odit iste enim facilis libero ullam ratione, esse magnam. Quia, vitae!
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, voluptatem!
-            </p>
+            <h3>{{ __('Настройка приложения') }}</h3>
+            <h3>{{ __('Токены') }}</h3>
+            <h2>{{ __('Пример приложения') }}</h2>
         </div>
     </div>
 @endsection

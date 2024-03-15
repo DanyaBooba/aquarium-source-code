@@ -12,7 +12,7 @@
                     <li><a href="{{ route('main.about') }}" class="nav-link {{ active_link('main.about') }}">{{ __('Информация') }}</a></li>
                     <li><a href="{{ route('main.faq') }}" class="nav-link {{ active_link('main.faq') }}">{{ __('FAQ') }}</a></li>
                     <li><a href="{{ route('blog.index') }}" class="nav-link {{ active_link('blog.index') }}">{{ __('Новости') }}</a></li>
-                    <li><a href="{{ route('main.api') }}" class="nav-link {{ active_link('main.tech') }}">{{ __('API') }}</a></li>
+                    <li><a href="{{ route('main.api') }}" class="nav-link {{ active_link('main.api') }}">{{ __('API') }}</a></li>
                     <li><a href="{{ route('main.oauth') }}" class="nav-link {{ active_link('main.oauth') }}">{{ __('OAuth') }}</a></li>
                 </ul>
                 @if($login = session('login'))

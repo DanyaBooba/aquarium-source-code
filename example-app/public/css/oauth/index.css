@@ -1,0 +1,30 @@
+.faq-design-button {
+    display: flex;
+    min-height: 200px;
+    margin-bottom: 12px;
+}
+
+.faq-design-button div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-design-button div.faq-design-button-light {
+    background-color: #fff;
+    border-radius: 8px 0 0 8px;
+}
+
+.faq-design-button div.faq-design-button-dark {
+    background-color: #123;
+    border-radius: 0 8px 8px 0;
+}
+
+.faq-design-button div button {
+    border-radius: 8px;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
