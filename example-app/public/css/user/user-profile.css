@@ -138,10 +138,12 @@
 
 .user-profile .user-profile-buttons button {
     background-color: var(--user-profile-button);
+    border: none;
     border-radius: 8px;
     padding: .5rem 1rem;
     margin-right: .25rem;
     min-width: fit-content;
+    color: var(--user-profile-button-text);
 }
 
 @media(max-width: 767.98px) {

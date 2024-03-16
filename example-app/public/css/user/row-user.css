@@ -1,6 +1,9 @@
 .row-user-bar {
     background: var(--user-bar);
     padding: 3rem 2rem;
+
+    position: sticky;
+    top: 1rem;
 }
 
 .row-user-bar svg.logo {

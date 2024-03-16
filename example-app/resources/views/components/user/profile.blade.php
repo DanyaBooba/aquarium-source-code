@@ -31,16 +31,16 @@
         </div>
     </div>
     <div class="user-profile-buttons">
-        <button class="btn btn-light" onClick="buttonOpenURL('')">
+        <button class="" onClick="buttonOpenURL('')">
             Поделиться
         </button>
-        <button class="btn btn-light" onClick="buttonOpenURL('{{ route('user.add-post') }}')">
+        <button onClick="buttonOpenURL('{{ route('user.add-post') }}')">
             Добавить пост
         </button>
-        <button class="btn btn-light" onClick="buttonOpenURL('')">
+        <button onClick="buttonOpenURL('')">
             Изменить профиль
         </button>
-        <button class="btn btn-light" onClick="buttonOpenURL('{{ route('user.settings.index') }}')">
+        <button onClick="buttonOpenURL('{{ route('user.settings.index') }}')">
             Настройки
         </button>
     </div>

@@ -37,12 +37,13 @@
     --main-button-register: #27ae60;
     --main-button-register-hover: #259354;
 
-    --user-bar: #e9e9eb;
+    --user-bar: #f1f1f4;
     --user-bar-exit: #dd303f;
 
     --user-nav-link-active: #0984e3;
     --user-nav-background: #fff;
     --user-nav-border: #edeff2;
+    --user-nav-border-text: #000;
 
     --user-profile-image-background: #fff;
     --user-profile-image-background-image: #fff;
