@@ -1,3 +1,11 @@
 <footer class="footer py-3 mt-4">
-    <p class="text-center small">© 2020-{{ date('Y') }} {{ env('APP_TITLE_SHORT') }}</p>
+    <div class="container">
+        <p class="small me-auto">
+            © 2020-{{ date('Y') }}
+            <a href="{{ route('main.index') }}">
+                {{ env('APP_TITLE_SHORT') }}
+            </a>
+        </p>
+        <a href="{{ route('main.user.privacy') }}" class="small">политика конфиденциальности</a>
+    </div>
 </footer>

@@ -16,6 +16,8 @@
                 </div>
             </section>
         </main>
+
+        @include('includes.footer')
     </div>
 
     <script src="{{ asset('js/bootstrap.js') }}"></script>

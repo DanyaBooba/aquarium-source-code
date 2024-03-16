@@ -6,3 +6,12 @@ footer {
 footer p {
     margin-bottom: 0;
 }
+
+footer a {
+    text-decoration: none;
+}
+
+footer div.container {
+    display: flex;
+    align-items: center;
+}
