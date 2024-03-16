@@ -135,7 +135,10 @@
 }
 
 .authentication #signin-choose .signin-choose-or-background {
-    border-bottom: 2px dashed var(--signin-choose-or-border-bottom);
+    margin-left: 1rem;
+        margin-right: 1rem;
+    
+        border-bottom: .1rem solid var(--signin-choose-or-border-bottom);
     margin-top: 20px;
     margin-bottom: 16px !important;
 }
