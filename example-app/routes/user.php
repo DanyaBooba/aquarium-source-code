@@ -25,6 +25,7 @@ Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
 
     Route::get('delete', [DeleteController::class, 'delete'])->name('user.delete');
 
-    Route::get('/{nickname}', [ShowController::class, 'nickname'])->name('user.show.nickname');
-    Route::get('/id/{id}', [ShowController::class, 'id'])->name('user.show.id');
 });
+
+Route::get('user/{nickname}', [ShowController::class, 'nickname'])->middleware(['log'])->name('user.show.nickname');
+Route::get('user/id/{id}', [ShowController::class, 'id'])->middleware(['log'])->name('user.show.id');

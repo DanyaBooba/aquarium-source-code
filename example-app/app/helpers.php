@@ -17,3 +17,10 @@ if (!function_exists('exit_account')) {
         session()->forget('avatar');
     }
 }
+
+if (!function_exists('user_login')) {
+    function user_login()
+    {
+        return session()->has('login') && session()->has('email') && session()->has('avatar');
+    }
+}

@@ -9,11 +9,11 @@ class ShowController extends Controller
 {
     public function nickname(Request $request)
     {
-        return "nick";
+        return view('user.show');
     }
 
     public function id(Request $request)
     {
-        return "id";
+        return view('user.show');
     }
 }

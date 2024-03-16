@@ -12,9 +12,9 @@
                 </a>
             </div>
             <x-sign.logo />
-            <h1 class="h3">{{ __('Выйти из аккаунта') }}</h1>
+            <h1 class="visually-hidden">{{ __('Выйти из аккаунта') }}</h1>
 
-            <button class="btn btn-danger mb-2 py-3" type="submit" onClick="buttonOpenURL('{{ route('user.exit.exactly') }}')">{{ __('Выйти') }}</button>
+            <button class="btn btn-danger mb-2 py-3" type="submit" onClick="buttonOpenURL('{{ route('user.exit.exactly') }}')">{{ __('Выйти из аккаунта') }}</button>
 
         </div>
     </main>

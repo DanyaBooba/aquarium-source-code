@@ -10,7 +10,7 @@ class UserLoginMiddleware
 {
     public function handle(Request $request, Closure $next): Response
     {
-        return session('login')
+        return user_login()
             ? $next($request)
             : redirect()->route('auth.signin');
     }

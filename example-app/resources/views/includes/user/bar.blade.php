@@ -1,3 +1,4 @@
+@if(user_login())
 <div class="social">
     <div class="social-left">
         <div>
@@ -24,12 +25,14 @@
         </div>
     </div>
 </div>
+@endif
 
 <a href="{{ route('user.index') }}">
     <x-user.bar-logo />
 </a>
 
 <ul>
+@if(user_login())
     <li>
         <a href="{{ route('user.index') }}" class="{{ active_link('user.index') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -66,4 +69,18 @@
             {{ __('Настройки') }}
         </a>
     </li>
+@else
+    <li>
+        <a href="{{ route('auth.signin') }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
+            {{ __('Войти') }}
+        </a>
+    </li>
+    <li>
+        <a href="{{ route('auth.signup') }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rectangle-ellipsis"><rect width="20" height="12" x="2" y="6" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
+            {{ __('Создать аккаунт') }}
+        </a>
+    </li>
+@endif
 </ul>
