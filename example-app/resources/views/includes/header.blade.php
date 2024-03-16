@@ -15,11 +15,11 @@
                     <li><a href="{{ route('main.api') }}" class="nav-link {{ active_link('main.api') }}">{{ __('API') }}</a></li>
                     <li><a href="{{ route('main.oauth') }}" class="nav-link {{ active_link('main.oauth') }}">{{ __('OAuth') }}</a></li>
                 </ul>
-                @if($login = session('login'))
+                @if(user_login())
                 <a href="{{ route('user.index') }}" class="link-body-emphasis header-content-profile">
-                    <img src="https://github.com/mdo.png" alt="{{ $login }}">
+                    <img src="https://github.com/mdo.png" alt="Профиль">
                     <p>
-                        {{ $login }}
+                        Профиль
                     </p>
                 </a>
                 @else

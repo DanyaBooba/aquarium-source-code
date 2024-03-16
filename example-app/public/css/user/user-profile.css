@@ -24,11 +24,11 @@
     align-items: center;
 
     position: absolute;
-    margin-left: 110px;
-    margin-top: 110px;
+    margin-left: 112px;
+    margin-top: 112px;
 
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
 
     border-radius: 50%;
     background: var(--user-profile-image-background);
@@ -61,7 +61,7 @@
 
     border-radius: 50%;
     padding: .5rem;
-    background: var(--user-profile-image-background);
+    background: var(--user-profile-image-background-image);
 }
 
 .user-profile .user-profile-text {
@@ -69,6 +69,7 @@
     flex-direction: column;
 
     padding-bottom: 1rem;
+    min-height: 85px;
 }
 
 .user-profile .user-profile-text p {
@@ -147,5 +148,9 @@
 
     .user-profile .user-profile-right button {
         width: 100% !important;
+    }
+
+    .user-profile .user-profile-text {
+        min-height: min-content !important;
     }
 }

@@ -1,4 +1,6 @@
 @props(['local' => false])
+@props(['name' => ''])
+@props(['desc' => ''])
 
 <div class="user-profile">
     <img class="user-profile-cap" src="{{ asset('img/user/bg/BG7.jpg') }}">
@@ -11,12 +13,10 @@
                 <img src="{{ asset('img/user/logo/MAN1.png') }}">
             </div>
             <div class="user-profile-text">
-                <p class="user-profile-name">
-                    Даниил Дыбка
-                </p>
-                <p class="user-profile-desc">
-                    Описание профиля.
-                </p>
+                <p class="user-profile-name">{{ $name ?? "<безымянный>" }}</p>
+                @isset($desc)
+                <p class="user-profile-desc">{{ $desc }}</p>
+                @endisset
             </div>
         </div>
         <div class="user-profile-right">
