@@ -1,0 +1,7 @@
+.container-simple {
+    max-width: 800px;
+}
+
+.container-simple .logo {
+    margin-top: 5rem;
+}
