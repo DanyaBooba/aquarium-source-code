@@ -15,20 +15,16 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->string('username')->max(100)->min(3);
-            $table->string('email')->unique();
-            $table->string('avatar')->nullable();
-
-            $table->boolean('verified')->default(false);
+            $table->boolean('verified')->default(true);
             $table->boolean('blocked')->default(false);
 
-            $table->string('description')->nullable()->max(100);
+            $table->string('username')->unique();
+            $table->string('email')->unique();
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
+            $table->string('avatar')->nullable();
 
-            $table->string('friend_token')->max(30);
-
-            $table->json('settings_notifications');
+            $table->json('settings_notifications')->nullable();
 
             $table->string('password');
             $table->rememberToken();
