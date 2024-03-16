@@ -14,8 +14,30 @@
 
 .user-profile .user-profile-right {
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: end;
+}
+
+.user-profile .user-profile-right div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+.user-profile .user-profile-right div p:first-child {
+    font-size: 2rem;
+    margin-bottom: -.5rem;
+    font-family: ResistSans-Title;
+}
+
+.user-profile .user-profile-right div p:not(:first-child) {
+    font-size: .8rem;
+}
+
+.user-profile .user-profile-right div p {
+    margin-bottom: 0;
 }
 
 .user-profile .user-profile-image-point {
@@ -106,26 +128,20 @@
     border-top-right-radius: 12px;
 }
 
-.user-profile .user-profile-right button::content(:not(svg)) {
-    border-radius: 6px;
-    width: 180px;
+.user-profile .user-profile-buttons {
+    display: flex;
+    align-items: center;
+
+    margin-top: .5rem;
+    overflow: scroll;
 }
 
-@media(min-width: 1440px) {
-    .user-profile-right button:not(:first-child) {
-        margin-left: .5rem;
-    }
-}
-
-@media(max-width: 1439.98px) {
-    .user-profile-right {
-        flex-direction: column-reverse;
-        align-items: end !important;
-    }
-
-    .user-profile-right button:not(:first-child) {
-        margin-bottom: .5rem;
-    }
+.user-profile .user-profile-buttons button {
+    background-color: var(--user-profile-button);
+    border-radius: 8px;
+    padding: .5rem 1rem;
+    margin-right: .25rem;
+    min-width: fit-content;
 }
 
 @media(max-width: 767.98px) {
@@ -144,10 +160,6 @@
 
     .user-profile .user-profile-right {
         margin-top: 1rem;
-    }
-
-    .user-profile .user-profile-right button {
-        width: 100% !important;
     }
 
     .user-profile .user-profile-text {

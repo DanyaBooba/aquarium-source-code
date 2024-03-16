@@ -41,13 +41,18 @@
     --user-bar-exit: #dd303f;
 
     --user-nav-link-active: #0984e3;
+    --user-nav-background: #fff;
+    --user-nav-border: #edeff2;
 
     --user-profile-image-background: #fff;
     --user-profile-image-background-image: #fff;
     --user-profile-image-border: #d9d9e0;
 
+    --user-profile-button: #fff;
+
     --user-search-border: #ced4db;
     --user-search-button-background: #c9daeb;
+
     --faq-design-button: #123;
 
     --user-alert-text-warning: #ca8726;
