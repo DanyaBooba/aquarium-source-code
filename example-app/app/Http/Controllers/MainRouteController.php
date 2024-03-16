@@ -40,4 +40,9 @@ class MainRouteController extends Controller
     {
         return view('main.download');
     }
+
+    public function brand()
+    {
+        return view('main.brand');
+    }
 }

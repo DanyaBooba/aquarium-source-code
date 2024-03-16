@@ -16,6 +16,7 @@ Route::prefix('/')->group(function () {
         Route::get('oauth', [MainRouteController::class, 'oauth'])->name('main.oauth');
         Route::get('api', [MainRouteController::class, 'api'])->name('main.api');
         Route::get('tech', [MainRouteController::class, 'tech'])->name('main.tech');
+        Route::get('brand', [MainRouteController::class, 'brand'])->name('main.brand');
 
         Route::prefix('user')->group(function () {
 
@@ -26,6 +27,10 @@ Route::prefix('/')->group(function () {
             Route::get('termsofuse', [MainUserController::class, 'termsofuse'])->name('main.user.termsofuse');
 
             Route::get('cookie', [MainUserController::class, 'cookie'])->name('main.user.cookie');
+        });
+
+        Route::get('brandbook', function () {
+            return redirect()->route('main.brand');
         });
     });
 });
