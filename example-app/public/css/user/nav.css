@@ -1,13 +1,15 @@
 .fixed-bottom-nav {
     background-color: var(--user-nav-background);
     border-top: .1rem solid var(--user-nav-border);
-    height: 60px;
+    min-height: 60px;
 
     position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 1030;
+
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 .fixed-bottom-nav .container-fluid.row {
@@ -25,7 +27,7 @@
 }
 
 .fixed-bottom-nav .container-fluid div {
-    max-width: 40px;
+    flex: 1;
 }
 
 .fixed-bottom-nav .container-fluid div a {
