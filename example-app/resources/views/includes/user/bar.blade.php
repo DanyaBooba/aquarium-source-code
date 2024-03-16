@@ -27,9 +27,15 @@
 </div>
 @endif
 
+@if(user_login())
 <a href="{{ route('user.index') }}">
     <x-user.bar-logo />
 </a>
+@else
+<a href="{{ route('main.index') }}">
+    <x-user.bar-logo />
+</a>
+@endif
 
 <ul>
 @if(user_login())
