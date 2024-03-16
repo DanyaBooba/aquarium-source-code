@@ -1,0 +1,30 @@
+code pre {
+    color: var(--text-code);
+    margin-top: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+pre {
+    padding-left: 1rem;
+    border-left: .1rem solid var(--text-code-border);
+}
+
+a.code-copy {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: .5rem;
+    text-decoration: none;
+
+    color: var(--text-color) !important;
+    font-size: 1rem !important;
+
+    max-width: fit-content;
+}
+
+a.code-copy svg {
+    width: 16px;
+    height: 16px;
+    margin-right: .25rem;
+}

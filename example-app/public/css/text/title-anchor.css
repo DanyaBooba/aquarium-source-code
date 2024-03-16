@@ -20,6 +20,13 @@ h6.title-anchor a
     transition: .3s;
 }
 
+h2.title-anchor a svg,
+h3.title-anchor a svg,
+h4.title-anchor a svg,
+h5.title-anchor a svg,
+h6.title-anchor a svg {
+    margin-bottom: .1rem;
+}
 h2.title-anchor a:is(:focus, :focus-visible, :focus-within),
 h3.title-anchor a:is(:focus, :focus-visible, :focus-within),
 h4.title-anchor a:is(:focus, :focus-visible, :focus-within),
@@ -47,4 +54,11 @@ h6.title-anchor:hover a {
         justify-content: start;
         margin-left: 0;
     }
+h2.title-anchor a svg,
+h3.title-anchor a svg,
+h4.title-anchor a svg,
+h5.title-anchor a svg,
+h6.title-anchor a svg {
+    margin-bottom: .25rem;
+}
 }

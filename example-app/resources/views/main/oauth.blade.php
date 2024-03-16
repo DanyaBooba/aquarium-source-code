@@ -79,8 +79,7 @@ $yandex_url = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query(
     'client_id' => TokenYandex()["client_id"],
     'redirect_uri' => TokenYandex()["redirect_uri"],
     'response_type' => 'code'
-]));
-                </pre>
+]));</pre>
             </code>
             <h3>{{ __('Сервер на PHP') }}</h3>
             <code>
@@ -120,8 +119,7 @@ if (!empty($_GET['code'])) {
 
         // ...
     }
-}
-                </pre>
+}</pre>
             </code>
         </div>
     </div>

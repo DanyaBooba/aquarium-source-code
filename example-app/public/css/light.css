@@ -10,6 +10,8 @@
 
     --body-color: #f9f9f9;
     --text-color: #212529;
+    --text-code: #212529;
+        --text-code-border: #0984e3;
     --text-color-hover: #0984e3;
     --text-color-link-underline: #a8a8a8;
 
@@ -45,5 +47,5 @@
 
     --user-search-border: #ced4db;
     --user-search-button-background: #c9daeb;
---faq-design-button: #123;
+    --faq-design-button: #123;
 }
