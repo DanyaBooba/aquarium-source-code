@@ -9,7 +9,13 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view('user.index');
+        $profile = (object) [
+            "username" => "123",
+        ];
+
+        return view('user.index', [
+            "profile" => $profile,
+        ]);
     }
 
     public function search()
@@ -17,10 +23,6 @@ class UserController extends Controller
         return view('user.search');
     }
 
-    public function show()
-    {
-        return view('user.show');
-    }
 
     public function notifications()
     {

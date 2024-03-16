@@ -9,11 +9,23 @@ class ShowController extends Controller
 {
     public function nickname(Request $request)
     {
-        return view('user.show');
+        $profile = (object) [
+            "username" => "123",
+        ];
+
+        return view('user.show', [
+            "profile" => $profile,
+        ]);
     }
 
     public function id(Request $request)
     {
-        return view('user.show');
+        $profile = (object) [
+            "username" => "123",
+        ];
+
+        return view('user.show', [
+            "profile" => $profile,
+        ]);
     }
 }

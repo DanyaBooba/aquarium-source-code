@@ -1,7 +1,3 @@
-@props(['local' => false])
-@props(['name' => null])
-@props(['desc' => null])
-
 <div class="user-profile">
     <img class="user-profile-cap" src="{{ asset('img/user/bg/BG7.jpg') }}">
     <div class="user-profile-content">
@@ -21,20 +17,23 @@
         </div>
         <div class="user-profile-right">
             <div>
-                <p>24</p>
-                <p>{{ use_form_word(24, __('подписчик'), __('подписчика'), __('подписчиков')) }}</p>
+                <p>{{ $subs }}</p>
+                <p>{{ use_form_word($subsCount, __('подписчик'), __('подписчика'), __('подписчиков')) }}</p>
             </div>
             <div>
-                <p>12</p>
-                <p>{{ use_form_word(12, __('подписка'), __('подписки'), __('подписок')) }}</p>
+                <p>{{ $sub }}</p>
+                <p>{{ use_form_word($subCount, __('подписка'), __('подписки'), __('подписок')) }}</p>
             </div>
             <div>
-                <p>3</p>
-                <p>{{ use_form_word(3, __('достижение'), __('достижения'), __('достижений')) }}</p>
+                <p>{{ $achivs }}</p>
+                <p>{{ use_form_word($achivsCount, __('достижение'), __('достижения'), __('достижений')) }}</p>
             </div>
         </div>
     </div>
     <div class="user-profile-buttons">
+        <button class="btn btn-light" onClick="buttonOpenURL('')">
+            Поделиться
+        </button>
         <button class="btn btn-light" onClick="buttonOpenURL('{{ route('user.add-post') }}')">
             Добавить пост
         </button>
