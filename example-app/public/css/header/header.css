@@ -30,6 +30,10 @@ header .header-content-logo svg {
     fill: var(--svg-icon);
 }
 
+header .header-content-links a.link-download:is(:focus, :focus-within, :focus-visible) {
+    color: var(--text-color) !important;
+}
+
 header .header-content-links a.link-download {
     display: flex;
     justify-content: center;
@@ -146,6 +150,11 @@ header .header-content button.navbar-toggler {
 
     header .header-content button.navbar-toggler:active svg {
         stroke: var(--text-color-hover);
+    }
+
+    header .header-content-links a.link-download:active {
+        color: var(--text-color) !important;
+        background-color: var(--header-link-download-background-hover);
     }
 }
 
