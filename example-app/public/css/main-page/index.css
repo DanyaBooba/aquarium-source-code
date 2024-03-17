@@ -2,10 +2,6 @@
     display: flex;
     flex-direction: column;
 
-    /* background-image: url('/img/stickers/sticker1-2.png');
-    background-repeat: no-repeat;
-    background-position: right bottom; */
-
     background-color: var(--main-dark-block);
     color: var(--blog-text-on-dark);
 
@@ -105,8 +101,27 @@
     margin-top: 1rem;
 }
 
-.row-third .col.p-4 {
+.row-third .col {
     text-align: center;
+    padding: 1.5rem;
+}
+
+.row-third .col p {
+    margin-bottom: 0;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    max-width: 222px;
+}
+
+.row-third .col h3 {
+    margin-bottom: .5rem;
+}
+
+.row-third .col img {
+    width: 80px;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    height: auto;
 }
 
 @media(hover: hover) {
@@ -163,5 +178,10 @@
 
     .row-first .col-md-4 div.p-3 {
         min-height: auto;
+    }
+
+    .row-third .col {
+        width: 100%;
+        flex: 1 0 100%;
     }
 }

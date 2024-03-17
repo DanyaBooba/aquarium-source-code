@@ -16,16 +16,24 @@
                     <li><a href="{{ route('main.oauth') }}" class="nav-link {{ active_link('main.oauth') }}">{{ __('OAuth') }}</a></li>
                 </ul>
                 @if(user_login())
-                <a href="{{ route('user.index') }}" class="link-body-emphasis header-content-profile">
-                    <img src="https://github.com/mdo.png" alt="Профиль">
-                    <p>
-                        Профиль
-                    </p>
-                </a>
+                <ul class="nav col-12 col-lg-auto ms-lg-auto mb-md-0 header-content-links">
+                    <li>
+                        <a href="{{ route('user.index') }}" class="link-body-emphasis header-content-profile">
+                            <span>
+                                <img src="{{ asset('img/user/logo/MAN1.png') }}" alt="Профиль">
+                            </span>
+                            <p>
+                                Профиль
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('main.download') }}" class="nav-link link-download">{{ __('Скачать') }}</a>
+                    </li>
+                </ul>
                 @else
                 <ul class="nav col-12 col-lg-auto ms-lg-auto mb-md-0 header-content-links">
                     <li><a href="{{ route('auth.signin') }}" class="nav-link link-secondary">{{ __('Вход') }}</a></li>
-                    {{-- <li><a href="{{ route('auth.signup') }}" class="nav-link link-secondary">{{ __('Регистрация') }}</a></li> --}}
                     <li><a href="{{ route('main.download') }}" class="nav-link link-download">{{ __('Скачать') }}</a></li>
                 </ul>
                 @endif

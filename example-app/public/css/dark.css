@@ -1,8 +1,13 @@
 :root {
     --header-background-color: #17152b;
+    --header-border-bottom: #433e6d;
+    --header-link-download-background: #262342;
+    --header-link-download-background-border: #433e6d;
+    --header-link-download-background-hover: #433e6d;
+
     --footer-background-color: #17152b;
-    --header-border-bottom: #343b42;
-    --footer-border-top: #343b42;
+    --footer-border-top: #433e6d;
+
     --svg-icon: #fff;
     --svg-github: #fff;
 
@@ -12,7 +17,7 @@
 
     --text-code-border: #0984e3;
     --text-color-hover: #0984e3;
-    --text-color-link-underline: #565656;
+    --text-color-link-underline: #5c569d;
 
     --signin-choose-background-color: #34305e;
     --signin-choose-background-color-hover: #48437b;
@@ -22,7 +27,7 @@
 
     --authentication-back: #262443;
 
-    --list-marker-color: #787878;
+    --list-marker-color: #615f74;
 
     --blog-text-on-dark: #212529;
     --blog-dark-post: #d3cfff;

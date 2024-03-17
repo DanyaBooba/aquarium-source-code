@@ -1,8 +1,13 @@
 :root {
     --header-background-color: #fff;
-    --footer-background-color: #fff;
     --header-border-bottom: #dee2e6;
+    --header-link-download-background: #fff;
+    --header-link-download-background-border: #dee2e6;
+    --header-link-download-background-hover: #dee2e6;
+
+    --footer-background-color: #fff;
     --footer-border-top: #dee2e6;
+
     --svg-icon: #000;
     --svg-github: #24292f;
 

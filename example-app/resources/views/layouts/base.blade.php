@@ -11,22 +11,21 @@
     <meta property="og:title" content="{{ env("APP_TITLE_SHORT") }}">
     <meta property="og:site_name" content="{{ env("APP_TITLE_SHORT") }}">
     <meta property="og:description" content="{{ env("APP_DESC") }}">
-    <meta property="og:url" content="https://aquarium.org.ru/">
+    <meta property="og:url" content="{{ env("APP_URL") }}">
     <meta property="og:image" content="https://aquarium.org.ru/app/img/logo/cap.jpg">
     <meta property="og:image:width" content="1456">
     <meta property="og:image:height" content="816">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ env("APP_TITLE_SHORT") }}">
     <meta name="twitter:description" content="{{ env("APP_DESC") }}">
-    <meta name="twitter:site" content="https://aquarium.org.ru/">
-    <meta name="twitter:image" content="https://aquarium.org.ru/app/img/logo/favicon.ico">
+    <meta name="twitter:site" content="{{ env("APP_URL") }}">
+    <meta name="twitter:image" content="{{ env("APP_URL") }}/img/logo/favicon.ico">
     <meta name="Author" content="{{ env("APP_AUTHOR") }}">
 
     <meta name="view-transition" content="same-origin">
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="google" content="nositelinkssearchbox">
-    <meta name="google" content="notranslate">
     <meta name="format-detection" content="phone=no">
 
     <title>@yield('page.title', config('app.name')) – Аквариум</title>
