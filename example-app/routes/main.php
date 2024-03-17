@@ -17,6 +17,7 @@ Route::prefix('/')->group(function () {
         Route::get('api', [MainRouteController::class, 'api'])->name('main.api');
         Route::get('tech', [MainRouteController::class, 'tech'])->name('main.tech');
         Route::get('brand', [MainRouteController::class, 'brand'])->name('main.brand');
+        Route::get('accessibility', [MainRouteController::class, 'accessibility'])->name('main.accessibility');
 
         Route::prefix('user')->group(function () {
 
