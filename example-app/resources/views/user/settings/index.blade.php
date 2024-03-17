@@ -4,6 +4,7 @@
 
 @section('settings.left')
 <div class="container-settings-main">
+    <h1>{{ __('Настройки') }}</h1>
     <ul class="list-group">
         <li class="fs-5 list-group-item">
             <a href="{{ route('user.settings.profile') }}" class="settings-profile">

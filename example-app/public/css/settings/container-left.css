@@ -1,0 +1,38 @@
+.container-settings .container-settings-left h2 {
+    margin-bottom: 1rem;
+}
+
+.container-settings .container-settings-left form {
+    max-width: 500px;
+}
+
+.container-settings .container-settings-left form div:has(input) {
+    margin-bottom: 1rem;
+}
+
+.container-settings .container-settings-left form div input {
+    border-radius: 8px;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    margin-bottom: .25rem;
+}
+
+.container-settings .container-settings-left form div p {
+    margin-bottom: 0;
+    font-size: .875rem;
+    color: var(--text-muted);
+}
+
+.container-settings .container-settings-left form button[type="submit"] {
+    border-radius: 8px;
+    padding: .8rem 2rem;
+    margin-top: .5rem;
+}
+
+@media(max-width: 1023.98px) {
+    .container-settings .container-settings-left form button[type="submit"] {
+        display: none !important;
+    }
+}

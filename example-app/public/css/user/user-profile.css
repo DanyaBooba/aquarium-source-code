@@ -190,6 +190,10 @@
     .user-profile .user-profile-text p.user-profile-desc {
         margin-left: 0 !important;
     }
+
+    .user-profile img.user-profile-cap {
+        height: 200px;
+    }
 }
 
 @media(min-width: 768px) {

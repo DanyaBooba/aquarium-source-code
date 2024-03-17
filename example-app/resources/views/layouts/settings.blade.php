@@ -16,3 +16,7 @@
     </div>
 </div>
 @endsection
+
+@push('js')
+<script src="{{ asset('js/settings/settings-back.js') }}"></script>
+@endpush
