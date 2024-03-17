@@ -109,6 +109,8 @@
     display: flex;
     position: relative;
 
+    flex-wrap: wrap;
+
     min-height: 116px;
     background: var(--user-profile-image-background);
 
@@ -134,6 +136,8 @@
 
     margin-top: .5rem;
     overflow: scroll;
+
+    padding-bottom: .5rem;
 }
 
 .user-profile .user-profile-buttons button {
@@ -152,6 +156,20 @@
         padding-left: 1rem !important;
     }
 
+    .user-profile .user-profile-right {
+        justify-content: center !important;
+        flex-wrap: wrap;
+    }
+
+    .user-profile .user-profile-right div p:first-child {
+        font-size: calc(1.3rem + .6vw);
+    }
+
+    .user-profile .user-profile-right div {
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+    }
+
     .user-profile .user-profile-left {
         flex-direction: column;
         align-items: center !important;
@@ -166,5 +184,17 @@
 
     .user-profile .user-profile-text {
         min-height: min-content !important;
+    }
+
+    .user-profile .user-profile-text p.user-profile-name,
+    .user-profile .user-profile-text p.user-profile-desc {
+        margin-left: 0 !important;
+    }
+}
+
+@media(min-width: 768px) {
+    .user-profile .user-profile-left {
+        min-width: 380px !important;
+        min-height: 156px !important;
     }
 }
