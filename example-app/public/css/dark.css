@@ -1,4 +1,6 @@
 :root {
+    --accent: #575FCF;
+
     --header-background-color: #17152b;
     --header-border-bottom: #433e6d;
     --header-link-download-background: #262342;

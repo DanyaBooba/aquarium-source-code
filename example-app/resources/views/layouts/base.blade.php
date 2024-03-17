@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel="icon" href="{{ env("APP_URL") }}/img/logo/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#575FCF" />
     <meta name="description" content="{{ env("APP_DESC") }}">
     <meta name="keywords" content="{{ env("APP_KEYWORDS") }}">
     <meta property="og:type" content="website">
@@ -22,7 +24,6 @@
     <meta name="twitter:image" content="{{ env("APP_URL") }}/img/logo/favicon.ico">
     <meta name="Author" content="{{ env("APP_AUTHOR") }}">
 
-    <meta name="view-transition" content="same-origin">
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="google" content="nositelinkssearchbox">
