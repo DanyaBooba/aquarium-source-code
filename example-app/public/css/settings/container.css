@@ -1,0 +1,122 @@
+.container-settings .container-settings-left {
+    width: 70%;
+}
+
+.container-settings .container-settings-right {
+    width: 30%;
+}
+
+.container-settings .container-settings-main {
+    padding: 1.5rem;
+}
+
+.container-settings .container-settings-main ul {
+    background-color: var(--settings-main-background);
+    border-radius: 12px;
+
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+
+    padding: .5rem 1rem;
+}
+
+.container-settings .container-settings-main ul li:last-child {
+    padding-bottom: 1.5rem !important;
+    border-bottom-width: 0 !important;
+}
+
+.container-settings .container-settings-main ul li:first-child {
+    padding-top: 1.5rem !important;
+    border-top-width: 0 !important;
+}
+
+.container-settings .container-settings-main ul li {
+    background-color: transparent !important;
+    border-color: var(--settings-main-border) !important;
+
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+
+    border-left-width: 0 !important;
+    border-right-width: 0 !important;
+
+    border-radius: 0 !important;
+}
+
+.container-settings .container-settings-main ul li a {
+    text-decoration: none !important;
+    color: var(--text-color) !important;
+
+    display: block;
+    min-height: 42px;
+    max-width: 300px;
+}
+
+.container-settings .container-settings-main ul li a svg {
+    stroke: var(--settings-main-svg) !important;
+    padding: .5rem;
+
+    border-radius: 8px;
+    margin-right: .5rem;
+
+    width: 42px;
+    height: 42px;
+}
+
+.container-settings .container-settings-main ul li a.settings-profile svg {
+    background-color: var(--settings-background-profile);
+}
+
+.container-settings .container-settings-main ul li a.settings-notifications svg {
+    background-color: var(--settings-background-notifications);
+}
+
+.container-settings .container-settings-main ul li a.settings-privacy svg {
+    background-color: var(--settings-background-privacy);
+}
+
+.container-settings .container-settings-main ul li a.settings-data svg {
+    background-color: var(--settings-background-data);
+}
+
+.container-settings .container-settings-main ul li a.settings-devices svg {
+    background-color: var(--settings-background-devices);
+}
+
+.container-settings .container-settings-main ul li a.settings-personalization svg {
+    background-color: var(--settings-background-personalization);
+}
+
+@media(hover: hover) {
+    .container-settings .container-settings-main ul li a:hover svg {
+        stroke: var(--svg-icon-invert);
+    }
+
+    .container-settings .container-settings-main ul li a:hover {
+        color: var(--text-color-hover) !important;
+    }
+}
+
+@media(hover: none) {
+    .container-settings .container-settings-main ul li a:active svg {
+        stroke: var(--svg-icon-invert);
+    }
+
+    .container-settings .container-settings-main ul li a:active {
+        color: var(--text-color-hover) !important;
+    }
+}
+
+@media(max-width: 1023.98px) {
+    .container-settings .container-settings-left {
+        width: 100%;
+    }
+
+    .container-settings .container-settings-right {
+        width: 100%;
+    }
+}

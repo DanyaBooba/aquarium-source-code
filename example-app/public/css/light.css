@@ -11,6 +11,7 @@
     --footer-border-top: #dee2e6;
 
     --svg-icon: #000;
+    --svg-icon-invert: #fff;
     --svg-github: #24292f;
 
     --body-color-alpha: #f9f9f999;
@@ -65,4 +66,15 @@
 
     --user-alert-text-warning: #ca8726;
     --user-alert-border: #dee2e6;
+
+    --settings-main-background: #fff;
+    --settings-main-border: #dedeeb;
+    --settings-main-svg: #fff;
+
+    --settings-background-profile: #718093;
+    --settings-background-notifications: #e84118;
+    --settings-background-privacy: #0097e6;
+    --settings-background-data: #0be881;
+    --settings-background-devices: #ffa801;
+    --settings-background-personalization: #cd84f1;
 }
