@@ -10,3 +10,20 @@
         {{ __('Готово') }}
     </a>
 </div>
+
+<div class="modal fade" id="exitModal" tabindex="-1" aria-labelledby="exitModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Выйти без сохранения?</h3>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body">
+                <div class="d-flex flex-column">
+                    <button type="button" class="btn btn-success py-2 mb-2 w-100">Сохранить</button>
+                    <button type="button" class="btn btn-outline-dark w-100">Выйти без сохранения</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,14 @@
+let elementModal = document.querySelector("#exitModal");
+let modal;
+
+if (elementModal) {
+    modal = new bootstrap.Modal(elementModal);
+}
+
+if (modal) {
+    modal.show();
+}
+
 let changeForm = false;
 
 function settingsSetChangeFormTrue() {
@@ -8,15 +19,12 @@ function settingsLinkBack(route) {
     if (!changeForm) {
         window.open(route, "_self");
     } else {
-        alert("no!");
+        if (modal) {
+            modal.show();
+        }
     }
 }
 
 function settingsConfirmForm() {
     console.log("confirm form");
 }
-
-const elementModal = document.querySelector("#exitModal");
-const modal = new bootstrap.Modal(elementModal);
-
-modal.show();
