@@ -25,6 +25,13 @@
     transition: .3s opacity;
 }
 
+.button-top a svg {
+    background-color: var(--button-top-background);
+    border-radius: 50%;
+    padding: .25rem;
+    padding-bottom: .4rem;
+}
+
 @media(max-width: 991.98px) {
     .button-top {
         bottom: 40px;
