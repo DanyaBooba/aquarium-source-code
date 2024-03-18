@@ -6,6 +6,6 @@
                 {{ env('APP_TITLE_SHORT') }}
             </a>
         </p>
-        <a href="{{ route('main.user.privacy') }}" class="small">политика конфиденциальности</a>
+        <a href="{{ route('main.user.privacy') }}" class="small">Политика конфиденциальности</a>
     </div>
 </footer>

@@ -10,6 +10,10 @@
     margin-bottom: 1rem;
 }
 
+.container-settings .container-settings-left form div input:not(:checked)[role="switch"] {
+    background-color: var(--form-input-background);
+}
+
 .container-settings .container-settings-left form div input[type="text"] {
     border-radius: 8px;
 
