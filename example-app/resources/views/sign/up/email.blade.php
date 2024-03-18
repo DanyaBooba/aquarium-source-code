@@ -4,7 +4,7 @@
 
 @section('auth.content')
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
-    <main class="form-signup row gx-5 w-100 m-auto">
+    <main class="form-signup row gx-5 w-100 m-auto align-items-center">
         <div class="col-md-8 form-signup-display">
             <x-sign.logo-signup />
             <div style="margin-top: 1rem">

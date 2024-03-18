@@ -24,9 +24,11 @@ function checkFormInput() {
 function checkOnInput() {
     let check = checkFormInput();
 
-    check
-        ? button.removeAttribute("disabled")
-        : button.setAttribute("disabled", true);
+    if (button) {
+        check
+            ? button.removeAttribute("disabled")
+            : button.setAttribute("disabled", true);
+    }
 }
 
 checkOnInput();

@@ -7,3 +7,8 @@
 @section('body')
 @yield('auth.content')
 @endsection
+
+@push('js')
+<script src="{{ asset('js/auth/button-password.js') }}"></script>
+<script src="{{ asset('js/auth/button-disabled.js') }}"></script>
+@endpush

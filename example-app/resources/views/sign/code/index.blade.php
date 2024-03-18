@@ -103,7 +103,6 @@
         </div>
     </main>
 
-
     <script src="{{ asset('js/auth/button-password.js') }}"></script>
     <script src="{{ asset('js/auth/button-disabled.js') }}"></script>
 </body>
