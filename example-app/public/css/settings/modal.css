@@ -17,8 +17,16 @@
 }
 
 .modal .modal-dialog .modal-content button.btn-close {
-    position: absolute;
     filter: var(--collapse-filter) !important;
-
+    position: absolute;
     margin-left: 105%;
+}
+
+@media(max-width: 499.98px) {
+    .modal .modal-dialog .modal-content button.btn-close {
+        filter: var(--collapse-filter) !important;
+        position: absolute;
+        margin-left: 90%;
+        margin-top: -15%;
+    }
 }

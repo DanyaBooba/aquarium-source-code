@@ -6,7 +6,7 @@
     <div class="header-title">
         <p class="h3">{{ __('Настройки') }}</p>
     </div>
-    <a href="#" onClick="settingsConfirmForm()" class="header-confirm">
+    <a href="#" onClick="settingsConfirmForm('{{ route('user.settings.index') }}')" class="header-confirm">
         {{ __('Готово') }}
     </a>
 </div>
