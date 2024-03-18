@@ -9,11 +9,6 @@
 <x-form.error />
 <form action="" method="post">
     @csrf
-    {{-- <div>
-        <label for="username" class="form-label">Имя пользователя</label>
-        <input type="text" name="username" class="form-control" id="username" placeholder="К примеру, superman" onInput="data()" value="user10">
-        <p>Может содержать только латинские буквы в нижнем регистре.</p>
-    </div> --}}
     <div class="form-check form-switch">
         <input class="form-check-input" name="authorization" type="checkbox" role="switch" id="check1" value="1" onInput="data()">
         <label class="form-check-label" for="check1">Вход в аккаунт</label>

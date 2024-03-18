@@ -18,7 +18,7 @@
                 Уведомления
             </a>
         </li>
-        <li class="fs-5 list-group-item">
+        {{-- <li class="fs-5 list-group-item">
             <a href="{{ route('user.settings.privacy') }}" class="settings-privacy">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                 Приватность
@@ -35,7 +35,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-laptop-minimal"><rect width="18" height="12" x="3" y="4" rx="2" ry="2"/><line x1="2" x2="22" y1="20" y2="20"/></svg>
                 Устройства
             </a>
-        </li>
+        </li> --}}
         <li class="fs-5 list-group-item">
             <a href="{{ route('user.settings.appearance') }}" class="settings-personalization">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paintbrush-2"><path d="M14 19.9V16h3a2 2 0 0 0 2-2v-2H5v2c0 1.1.9 2 2 2h3v3.9a2 2 0 1 0 4 0Z"/><path d="M6 12V2h12v10"/><path d="M14 2v4"/><path d="M10 2v2"/></svg>
