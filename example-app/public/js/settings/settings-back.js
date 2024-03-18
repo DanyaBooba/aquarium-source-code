@@ -1,6 +1,7 @@
 let changeForm = false;
 
 let elementModal = document.querySelector("#exitModal");
+let form = document.querySelector("form");
 let modal;
 
 if (elementModal) {
@@ -21,12 +22,20 @@ function settingsLinkBack(route) {
     }
 }
 
-function settingsConfirmForm(route) {
-    if (!changeForm) {
-        window.open(route, "_self");
-    } else {
-        if (modal) {
-            modal.show();
-        }
-    }
+// function settingsConfirmForm(route) {
+//     if (!changeForm) {
+//         window.open(route, "_self");
+//     } else {
+//         if (modal) {
+//             modal.show();
+//         }
+//     }
+// }
+
+function sendForm() {
+    form.submit();
+}
+
+function sendDiscardForm(route) {
+    window.open(route, "_self");
 }

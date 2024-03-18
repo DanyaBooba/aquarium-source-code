@@ -1,6 +1,6 @@
 @extends('layouts.settings')
 
-@section('page.title', 'Настройки')
+@section('page.title', 'Настройки профиля')
 
 @section('settings.left')
 <x-settings.header />
@@ -11,18 +11,16 @@
     @csrf
     <div>
         <label for="username" class="form-label">Имя пользователя</label>
-        <input type="text" class="form-control" id="username" placeholder="К примеру, daniil_dybka" onInput="settingsSetChangeFormTrue()">
+        <input type="text" name="username" class="form-control" id="username" placeholder="К примеру, superman" onInput="settingsSetChangeFormTrue()" value="user10">
         <p>Может содержать только латинские буквы в нижнем регистре.</p>
     </div>
-
     <div>
-        <label for="username" class="form-label">Фамилия</label>
-        <input type="text" class="form-control" id="username" placeholder="Имя пользователя" onInput="settingsSetChangeFormTrue()">
+        <label for="first_name" class="form-label">Имя</label>
+        <input type="text" name="first_name" class="form-control" id="first_name" placeholder="Даниил" onInput="settingsSetChangeFormTrue()">
     </div>
-
     <div>
-        <label for="username" class="form-label">Email address</label>
-        <input type="text" class="form-control" id="username" placeholder="Имя пользователя" onInput="settingsSetChangeFormTrue()">
+        <label for="last_name" class="form-label">Фамилия</label>
+        <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Иванов" onInput="settingsSetChangeFormTrue()">
     </div>
 
     <button class="btn btn-success" type="submit">{{ __('Сохранить') }}</button>

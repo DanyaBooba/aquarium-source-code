@@ -6,7 +6,7 @@
     <div class="header-title">
         <p class="h3">{{ __('Настройки') }}</p>
     </div>
-    <a href="#" onClick="settingsConfirmForm('{{ route('user.settings.index') }}')" class="header-confirm">
+    <a href="#" onClick="sendForm()" class="header-confirm">
         {{ __('Готово') }}
     </a>
 </div>
@@ -20,8 +20,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <div class="modal-body">
                 <div class="d-flex flex-column">
-                    <button type="button" class="btn btn-success py-2 mb-2 w-100">Сохранить</button>
-                    <button type="button" class="btn btn-outline-dark w-100">Выйти без сохранения</button>
+                    <button type="button" class="btn btn-success py-2 mb-2 w-100" onClick="sendForm()">Сохранить</button>
+                    <button type="button" class="btn btn-outline-dark w-100" onClick="sendDiscardForm('{{ route('user.settings.index') }}')">Выйти без сохранения</button>
                 </div>
             </div>
         </div>
