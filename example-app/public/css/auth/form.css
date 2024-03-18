@@ -31,6 +31,18 @@
     margin-bottom: 1rem;
 }
 
+.authentication input:is(
+    [type="text"],
+    [type="email"],
+    [type="password"],
+) {
+    background-color: var(--form-input-background) !important;
+}
+
+.authentication input:not(:checked)[type="checkbox"] {
+    background-color: var(--form-input-background) !important;
+}
+
 .authentication input {
     border-radius: var(--border-radius-default);
     margin-bottom: .5rem;

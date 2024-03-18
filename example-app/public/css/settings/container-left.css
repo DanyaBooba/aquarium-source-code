@@ -17,6 +17,7 @@
     padding-bottom: 1rem;
 
     margin-bottom: .25rem;
+    background-color: var(--form-input-background) !important;
 }
 
 .container-settings .container-settings-left form div p {

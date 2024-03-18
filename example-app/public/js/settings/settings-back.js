@@ -10,6 +10,11 @@ if (elementModal) {
 
 function data() {
     changeForm = true;
+
+    window.addEventListener("beforeunload", (e) => {
+        e.preventDefault();
+        e.returnValue = true;
+    });
 }
 
 function settingsLinkBack(route) {
@@ -21,16 +26,6 @@ function settingsLinkBack(route) {
         }
     }
 }
-
-// function settingsConfirmForm(route) {
-//     if (!changeForm) {
-//         window.open(route, "_self");
-//     } else {
-//         if (modal) {
-//             modal.show();
-//         }
-//     }
-// }
 
 function sendForm() {
     form.submit();

@@ -38,9 +38,9 @@ class SettingsController extends Controller
     public function notifications_store(Request $request)
     {
         $validated = $request->validate([
-            'authorization' => ['required', 'string', 'max:300', 'min: 3'],
-            'data_change' => ['nullable', 'string', 'min:2', 'max:300'],
-            'password_change' => ['nullable', 'string', 'min:2', 'max:300'],
+            'authorization' => ['nullable', 'boolean'],
+            'data_change' => ['boolean'],
+            'password_change' => ['boolean'],
         ]);
 
         dd($validated);

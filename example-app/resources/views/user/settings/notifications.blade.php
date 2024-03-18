@@ -15,15 +15,15 @@
         <p>Может содержать только латинские буквы в нижнем регистре.</p>
     </div> --}}
     <div class="form-check form-switch">
-        <input class="form-check-input" name="authorization" type="checkbox" role="switch" id="check1" onInput="data()">
+        <input class="form-check-input" name="authorization" type="checkbox" role="switch" id="check1" value="1" onInput="data()">
         <label class="form-check-label" for="check1">Вход в аккаунт</label>
     </div>
     <div class="form-check form-switch">
-        <input class="form-check-input" name="data_change" type="checkbox" role="switch" id="check2" onInput="data()">
+        <input class="form-check-input" name="data_change" type="checkbox" role="switch" id="check2" value="1" onInput="data()">
         <label class="form-check-label" for="check2">Изменение личных данных</label>
     </div>
     <div class="form-check form-switch">
-        <input class="form-check-input" name="password_change" type="checkbox" role="switch" id="check3" onInput="data()">
+        <input class="form-check-input" name="password_change" type="checkbox" role="switch" id="check3" value="1" onInput="data()">
         <label class="form-check-label" for="check3">Смена пароля</label>
     </div>
 

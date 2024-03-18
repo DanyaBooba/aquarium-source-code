@@ -40,6 +40,6 @@
         </div>
     </main>
 
-    <script src="{{ asset('js/auth/signin.js') }}"></script>
+
 </body>
 @endsection
