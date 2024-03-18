@@ -4,15 +4,12 @@ function settingsSetChangeFormTrue() {
     changeForm = true;
 }
 
-function settingsCheckChangeForm() {
-    changeForm = !changeForm;
-}
-
 function settingsLinkBack(route) {
-    settingsCheckChangeForm();
-    console.log("go back: " + !changeForm);
-
-    // window.open(route, "_self");
+    if (!changeForm) {
+        window.open(route, "_self");
+    } else {
+        alert("no!");
+    }
 }
 
 function settingsConfirmForm() {
