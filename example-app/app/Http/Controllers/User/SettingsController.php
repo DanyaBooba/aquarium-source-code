@@ -35,6 +35,19 @@ class SettingsController extends Controller
         return view('user.settings.notifications');
     }
 
+    public function notifications_store(Request $request)
+    {
+        $validated = $request->validate([
+            'authorization' => ['required', 'string', 'max:300', 'min: 3'],
+            'data_change' => ['nullable', 'string', 'min:2', 'max:300'],
+            'password_change' => ['nullable', 'string', 'min:2', 'max:300'],
+        ]);
+
+        dd($validated);
+
+        return redirect()->route('user.settings.index');
+    }
+
     public function privacy()
     {
         return view('user.settings.privacy');

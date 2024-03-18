@@ -8,7 +8,7 @@ if (elementModal) {
     modal = new bootstrap.Modal(elementModal);
 }
 
-function settingsSetChangeFormTrue() {
+function data() {
     changeForm = true;
 }
 

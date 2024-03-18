@@ -32,6 +32,7 @@ Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
         Route::post('profile', [SettingsController::class, 'profile_store'])->name('user.settings.profile.store');
 
         Route::get('notifications', [SettingsController::class, 'notifications'])->name('user.settings.notifications');
+        Route::post('notifications', [SettingsController::class, 'notifications_store'])->name('user.settings.notifications.store');
 
         Route::get('privacy', [SettingsController::class, 'privacy'])->name('user.settings.privacy');
 

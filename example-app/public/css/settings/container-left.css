@@ -10,7 +10,7 @@
     margin-bottom: 1rem;
 }
 
-.container-settings .container-settings-left form div input {
+.container-settings .container-settings-left form div input[type="text"] {
     border-radius: 8px;
 
     padding-top: 1rem;

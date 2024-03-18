@@ -6,7 +6,15 @@
 
 <div class="row gx-3 user-search">
     <form action="?" method="get" class="col-md-8">
-        <input type="search" name="search" oninput="searchOnInput()" class="form-control" placeholder="Найти" />
+        {{-- <input type="search" name="search" oninput="searchOnInput()" class="form-control" placeholder="Найти" /> --}}
+        <input class="form-control" type="search" name="search" list="searchList" placeholder="Найти..." onInput="searchOnInput()">
+        <datalist id="searchList">
+            <option value="San Francisco">
+            <option value="New York">
+            <option value="Seattle">
+            <option value="Los Angeles">
+            <option value="Chicago">
+        </datalist>
     </form>
 </div>
 
