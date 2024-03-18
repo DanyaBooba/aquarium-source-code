@@ -17,6 +17,11 @@ class SettingsController extends Controller
         return view('user.settings.profile');
     }
 
+    public function profile_store()
+    {
+        return redirect()->route('user.settings.index');
+    }
+
     public function notifications()
     {
         return view('user.settings.notifications');
