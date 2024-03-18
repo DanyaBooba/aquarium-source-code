@@ -54,11 +54,9 @@
                             {{ __('Почта') }}
                         </a>
                     </div>
-                    <div>
-                        <a href="{{ route('auth.signup') }}">
-                            Не зарегистрированы?
-                        </a>
-                    </div>
+                    <a href="{{ route('auth.signup') }}" class="simple">
+                        Не зарегистрированы?
+                    </a>
                 </div>
             </div>
 

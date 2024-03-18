@@ -57,6 +57,22 @@
     margin-bottom: .5rem;
 }
 
+.authentication #signin-choose .d-flex a.simple {
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    color: var(--text-color);
+    background-color: var(--body-color);
+    border: none !important;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 .authentication #signin-choose .d-flex div a {
     display: flex;
     width: 100%;
