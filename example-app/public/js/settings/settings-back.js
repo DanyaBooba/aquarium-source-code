@@ -15,3 +15,8 @@ function settingsLinkBack(route) {
 function settingsConfirmForm() {
     console.log("confirm form");
 }
+
+const elementModal = document.querySelector("#exitModal");
+const modal = new bootstrap.Modal(elementModal);
+
+modal.show();
