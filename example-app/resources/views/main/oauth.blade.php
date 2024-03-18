@@ -10,7 +10,7 @@
 @section('main.content')
     <div class="row gx-3">
         <div class="col-3 p-3">
-            <ul id="left-bar-anchors"></ul>
+            <x-page.title-anchor />
         </div>
         <div class="col-7 p-3">
             <h1>{{ __('OAuth') }}</h1>

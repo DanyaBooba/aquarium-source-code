@@ -1,5 +1,18 @@
+let changeForm = false;
+
+function settingsSetChangeFormTrue() {
+    changeForm = true;
+}
+
+function settingsCheckChangeForm() {
+    changeForm = !changeForm;
+}
+
 function settingsLinkBack(route) {
-    window.open(route, "_self");
+    settingsCheckChangeForm();
+    console.log("go back: " + !changeForm);
+
+    // window.open(route, "_self");
 }
 
 function settingsConfirmForm() {

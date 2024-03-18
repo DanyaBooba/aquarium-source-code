@@ -25,5 +25,4 @@
 
     <button class="btn btn-success" type="submit">{{ __('Сохранить') }}</button>
 </form>
-{{-- <x-settings.button-confirm /> --}}
 @endsection
