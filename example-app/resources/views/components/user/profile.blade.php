@@ -34,10 +34,7 @@
         <button class="" onClick="buttonOpenURL('')">
             Поделиться
         </button>
-        <button onClick="buttonOpenURL('{{ route('user.add-post') }}')">
-            Добавить пост
-        </button>
-        <button onClick="buttonOpenURL('')">
+        <button onClick="buttonOpenURL('{{ route('user.settings.profile') }}')">
             Изменить профиль
         </button>
         <button onClick="buttonOpenURL('{{ route('user.settings.index') }}')">
