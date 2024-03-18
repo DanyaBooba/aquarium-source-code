@@ -80,4 +80,8 @@
     --settings-background-personalization: #cd84f1;
 
     --button-top-background: #fff;
+
+    --collapse-button-background: #fff;
+    --collapse-body-background: #fff;
+    --collapse-border: #dfdfdf;
 }

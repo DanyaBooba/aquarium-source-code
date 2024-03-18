@@ -34,12 +34,7 @@
 
 @media(max-width: 991.98px) {
     .button-top {
-        bottom: 40px;
+        bottom: 30px;
         right: 30px;
-    }
-
-    .button-top a svg {
-        width: 24px;
-        height: 24px;
     }
 }

@@ -77,4 +77,9 @@
     --settings-background-personalization: #cd84f1;
 
     --button-top-background: #1f1d3a;
+
+    --collapse-button-background: #302d57;
+    --collapse-body-background: #17152c;
+    --collapse-border: #433e6d;
+    --collapse-filter: invert(1) grayscale(100%) brightness(200%);
 }
