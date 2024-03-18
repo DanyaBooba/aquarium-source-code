@@ -213,7 +213,7 @@
                 </li>
                 <li>
                     Дарья Уткина – художник, помощь в консультации UI,
-                    <a href="//renkort.t.me">@@CarpetAladdin</a>
+                    <a href="//CarpetAladdin.t.me">@@CarpetAladdin</a>
                 </li>
             </ul>
             <h2>Ссылки</h2>

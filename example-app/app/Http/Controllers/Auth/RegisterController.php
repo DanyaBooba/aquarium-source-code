@@ -16,4 +16,13 @@ class RegisterController extends Controller
     {
         return view('sign.up.email');
     }
+
+    public function store()
+    {
+        session(['login' => 'login']);
+        session(['email' => 'danil.dybko@gmail.com']);
+        session(['avatar' => 'MAN1']);
+
+        return redirect()->route('user.index');
+    }
 }

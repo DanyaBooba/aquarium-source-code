@@ -47,17 +47,7 @@
             <h1 class="h3">{{ __('Регистрация') }}</h1>
 
             <div id="signin-email">
-                @if($errors->any())
-                    <div class="alert alert-danger small p-2">
-                        <ul class="mb-0">
-                            @foreach($errors->all() as $message)
-                                <li>
-                                    {{ $message }}
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
+                <x-form.error />
                 <form action={{ route('auth.signup.email.store') }} method="post">
                     @csrf
                     <div class="form-floating">

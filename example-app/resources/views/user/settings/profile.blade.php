@@ -6,6 +6,7 @@
 <x-settings.header />
 
 <h2>Профиль</h2>
+<x-form.error />
 <form action="" method="post">
     @csrf
     <div>

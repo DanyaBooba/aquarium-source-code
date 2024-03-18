@@ -17,8 +17,16 @@ class SettingsController extends Controller
         return view('user.settings.profile');
     }
 
-    public function profile_store()
+    public function profile_store(Request $request)
     {
+        $validated = $request->validate([
+            'username' => ['required', 'string', 'max:300', 'min: 3'],
+            'first_name' => ['', 'string', 'min:3', 'max:300'],
+            'last_name' => ['', 'string', 'min:3', 'max:300'],
+        ]);
+
+        dd($validated);
+
         return redirect()->route('user.settings.index');
     }
 
