@@ -5,15 +5,17 @@
 @section('user.content')
 
 <x-user.profile
-    name="Даниил Дыбка"
+    name="Даниил Иванов"
     username="ddybka"
-    desc="Описание профиля."
-    subs=">100М"
-    :subs-count=1000000
-    :sub=2
-    :sub-count=2
-    :achivs=1
-    :achivs-count=1
+    :avatar-default=true
+    avatar="MAN2"
+    desc="Я щоколадный заяц."
+    subs="30"
+    :subs-count=30
+    :sub=15
+    :sub-count=15
+    :achivs=2
+    :achivs-count=2
     :local=false />
 
 @endsection

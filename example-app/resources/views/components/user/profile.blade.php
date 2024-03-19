@@ -6,7 +6,10 @@
                 <span class="user-profile-image-point">
                     <span class="point-red"></span>
                 </span>
-                <img src="{{ asset('img/user/logo/MAN1.png') }}">
+                <x-user.profile-image
+                    :avatar-default=$avatarDefault
+                    :avatar=$avatar
+                />
             </div>
             <div class="user-profile-text">
                 <p class="user-profile-name">{{ $name ?? "<безымянный>" }}</p>
@@ -31,6 +34,7 @@
         </div>
     </div>
     <div class="user-profile-buttons">
+        @if($local)
         <button class="" onClick="buttonOpenURL('')">
             Поделиться
         </button>
@@ -40,5 +44,13 @@
         <button onClick="buttonOpenURL('{{ route('user.settings.index') }}')">
             Настройки
         </button>
+        @else
+        <button class="" onClick="buttonOpenURL('')">
+            Поделиться
+        </button>
+        <button class="" onClick="buttonOpenURL('')">
+            Подписаться
+        </button>
+        @endif
     </div>
 </div>

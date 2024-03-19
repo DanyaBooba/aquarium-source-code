@@ -38,3 +38,14 @@ if (!function_exists('use_form_word')) {
         return $form3;
     }
 }
+
+if (!function_exists('user_image_exist')) {
+    function user_image_exist(string $path): string
+    {
+        if (file_exists(public_path() . $path)) {
+            return $path;
+        } else {
+            return "/img/user/logo/MAN1.png";
+        }
+    }
+}

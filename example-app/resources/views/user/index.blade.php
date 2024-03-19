@@ -11,6 +11,8 @@
 <x-user.profile
     name="Даниил Дыбка"
     username="ddybka"
+    :avatar-default=true
+    avatar="MAN0"
     desc="Описание профиля."
     subs=">100М"
     :subs-count=1000000
