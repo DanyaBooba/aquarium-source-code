@@ -1,7 +1,7 @@
 <header class="header navbar-expand-lg bg-body-tertiary">
     <div class="container">
         <div class="header-content justify-content-lg-start">
-            <a href="{{ route('main.index') }}" aria-label="Главная страница" class="header-content-logo link-body-emphasis">
+            <a href="{{ route('main.index') }}" aria-label="{{ __('Главная страница') }}" class="header-content-logo link-body-emphasis">
                 <x-header-logo />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,11 +20,9 @@
                     <li>
                         <a href="{{ route('user.index') }}" class="link-body-emphasis header-content-profile">
                             <span>
-                                <img src="{{ asset('img/user/logo/MAN1.png') }}" alt="Профиль">
+                                <img src="{{ asset('img/user/logo/MAN1.png') }}" alt="{{ __('Профиль') }}">
                             </span>
-                            <p>
-                                Профиль
-                            </p>
+                            <p>{{ __('Профиль') }}</p>
                         </a>
                     </li>
                     <li>
@@ -33,7 +31,7 @@
                 </ul>
                 @else
                 <ul class="nav col-12 col-lg-auto ms-lg-auto mb-md-0 header-content-links">
-                    <li><a href="{{ route('auth.signin') }}" class="nav-link link-secondary">{{ __('Вход') }}</a></li>
+                    <li><a href="{{ route('auth.signin') }}" class="nav-link link-secondary">{{ __('Войти') }}</a></li>
                     <li><a href="{{ route('main.download') }}" class="nav-link link-download">{{ __('Скачать') }}</a></li>
                 </ul>
                 @endif
