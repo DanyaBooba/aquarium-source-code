@@ -29,7 +29,7 @@
     <meta name="google" content="nositelinkssearchbox">
     <meta name="format-detection" content="phone=no">
 
-    <title>@yield('page.title', config('app.name')) – Аквариум</title>
+    <title>@yield('page.title', config('app.name')) – {{ __('Аквариум') }}</title>
 
     <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script><script>
         if (matchMedia("(prefers-color-scheme: dark)").media === "not all") {

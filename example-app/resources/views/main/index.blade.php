@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('page.title', 'Социальная сеть')
+@section('page.title', __('Социальная сеть'))
 
 @push('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/main-page/index.css') }}" />
@@ -11,11 +11,11 @@
         <div class="col-sm-8 col-md-8 col-lg-8">
             <div class="p-3">
                 <div class="d-flex justify-content-center pb-2 mt-auto" style="margin-top: -10px">
-                    <a href="#" aria-label="Скачать для Android" style="margin-right: -30px; margin-top: 10px;">
-                        <img src="{{ asset('img/main/android.png') }}" class="img-fluid" width="200">
+                    <a href="#" aria-label="{{ __('Скачать для Android') }}" style="margin-right: -30px; margin-top: 10px;">
+                        <img src="{{ asset('img/main/android-' . (App::isLocale('ru') ? "ru" : "en") . '.png') }}" class="img-fluid" width="200">
                     </a>
-                    <a href="#" aria-label="Скачать для iOS">
-                        <img src="{{ asset('img/main/iphone.png') }}" class="img-fluid" width="210">
+                    <a href="#" aria-label="{{ __('Скачать для iOS') }}">
+                        <img src="{{ asset('img/main/iphone-' . (App::isLocale('ru') ? "ru" : "en") . '.png') }}" class="img-fluid" width="210">
                     </a>
                 </div>
             </div>
@@ -23,16 +23,14 @@
         <div class="col-sm-4 col-md-4 col-lg-4 mb-3">
             <div class="p-3">
                 <div class="py-3 p-2">
-                    <h1 class="mb-4">Аквариум</h1>
+                    <h1 class="mb-4">{{ __('Аквариум') }}</h1>
                     <p class="fs-5">
-                        Социальная сеть для каждого: поддержка пользователей,
-                        уютное общение <nobr>и удобный</nobr> сервис.
+                        {!! __('Социальная сеть для каждого: поддержка пользователей, уютное общение <nobr>и удобный</nobr> сервис.') !!}
                     </p>
                 </div>
                 <div class="row-first-button">
-                    <button class="btn btn-light col-md-6" onClick="buttonOpenURL('{{ route('auth.signin') }}')">Войти</button>
+                    <button class="btn btn-light col-md-6" onClick="buttonOpenURL('{{ route('auth.signin') }}')">{{ __('Войти') }}</button>
                 </div>
-                {{-- <img src="{{ asset('img/stickers/sticker1-2.png') }}" alt="Морская звезда"> --}}
             </div>
         </div>
     </div>
@@ -40,32 +38,32 @@
     <div class="row row-second g-3">
         <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="p-4">
-                <h2>Стикеры за регистрацию</h2>
+                <h2>{{ __('Стикеры за регистрацию') }}</h2>
                 <div class="row-second-content row-second-stickers">
                     <a href="{{ route('auth.signup') }}">
-                        <img src="{{ asset('img/stickers/sticker1.png') }}" alt="Стикер аквариума">
+                        <img src="{{ asset('img/stickers/sticker1.png') }}" alt="{{ __('Стикер аквариума') }}">
                     </a>
                     <a href="{{ route('auth.signup') }}">
-                        <img src="{{ asset('img/stickers/sticker2.png') }}" alt="Стикер аквариума">
+                        <img src="{{ asset('img/stickers/sticker2.png') }}" alt="{{ __('Стикер аквариума') }}">
                     </a>
                     <a href="{{ route('auth.signup') }}">
-                        <img src="{{ asset('img/stickers/sticker3.png') }}" alt="Стикер аквариума">
+                        <img src="{{ asset('img/stickers/sticker3.png') }}" alt="{{ __('Стикер аквариума') }}">
                     </a>
                 </div>
             </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="p-4">
-                <h2>Удобная авторизация через соцсети</h2>
+                <h2>{{ __('Удобная авторизация через соцсети') }}</h2>
                 <div class="row-second-content row-second-social">
                     <a href="{{ route('auth.signin') }}">
-                        <img src="{{ asset('img/social/yandex.svg') }}" alt="Яндекс">
+                        <img src="{{ asset('img/social/yandex.svg') }}" alt="{{ __('Яндекс') }}">
                     </a>
                     <a href="{{ route('auth.signin') }}">
-                        <img src="{{ asset('img/social/vk.svg') }}" alt="Вконтакте">
+                        <img src="{{ asset('img/social/vk.svg') }}" alt="{{ __('Вконтакте') }}">
                     </a>
                     <a href="{{ route('auth.signin') }}">
-                        <img src="{{ asset('img/social/mail_text.svg') }}" class="row-second-social-mailru" alt="Меил ру">
+                        <img src="{{ asset('img/social/mail_text.svg') }}" class="row-second-social-mailru" alt="{{ __('Меил ру') }}">
                     </a>
                 </div>
             </div>
@@ -74,12 +72,12 @@
             <div class="p-4 row-second-telegram">
                 <h2>
                     <a href="{{ route('blog.index') }}">
-                        Новости проекта
+                        {{ __('Новости проекта') }}
                     </a>
-                    <nobr>и телеграм</nobr> канал
+                    {!! __('<nobr>и телеграм</nobr> канал') !!}
                 </h2>
                 <a href="//aquariumsocial.t.me" target="_blank">
-                    <img src="{{ asset('img/social/telegram.svg') }}" alt="Телеграм">
+                    <img src="{{ asset('img/social/telegram.svg') }}" alt="{{ __('Телеграм') }}">
                 </a>
             </div>
         </div>
@@ -90,22 +88,22 @@
             <div class="col">
                 <img src="{{ asset('img/emoji/partying-face.png') }}" alt="Белый голубь">
                 <h3>{{ __('Удобство') }}</h3>
-                <p>Для мобильных <nobr>и десктопных</nobr> версий.</p>
+                <p>{!! __('Для мобильных <nobr>и десктопных</nobr> версий.') !!}</p>
             </div>
             <div class="col">
                 <img src="{{ asset('img/emoji/robot.png') }}" alt="Робот">
                 <h3>{{ __('Безопасность') }}</h3>
-                <p>Шифрование <nobr>и конфиденциальность</nobr>.</p>
+                <p>{!! __('Шифрование <nobr>и конфиденциальность</nobr>.') !!}</p>
             </div>
             <div class="col">
                 <img src="{{ asset('img/emoji/rocket.png') }}" alt="Ракета">
                 <h3>{{ __('Скорость') }}</h3>
-                <p>Быстрая загрузка даже при слабой сети.</p>
+                <p>{{ __('Быстрая загрузка даже при слабой сети.') }}</p>
             </div>
             <div class="col">
                 <img src="{{ asset('img/emoji/fish.png') }}" alt="Рыбка">
                 <h3>{{ __('Тематика') }}</h3>
-                <p>Социальная платформа понравится каждому.</p>
+                <p>{{ __('Социальная платформа понравится каждому.') }}</p>
             </div>
             <div class="col">
                 <img src="{{ asset('img/emoji/friends.png') }}" alt="Друзья">
