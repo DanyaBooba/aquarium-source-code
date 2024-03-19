@@ -12,7 +12,9 @@
     name="Даниил Дыбка"
     username="ddybka"
     :avatar-default=true
-    avatar="MAN0"
+    avatar="MAN7"
+    :cap-default=true
+    cap="BG4"
     desc="Описание профиля."
     subs=">100М"
     :subs-count=1000000

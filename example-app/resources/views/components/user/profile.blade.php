@@ -1,5 +1,8 @@
 <div class="user-profile">
-    <img class="user-profile-cap" src="{{ asset('img/user/bg/BG7.jpg') }}">
+    <x-user.profile-cap-image
+        :cap-default=$capDefault
+        :cap=$cap
+    />
     <div class="user-profile-content">
         <div class="user-profile-left">
             <div class="user-profile-image">

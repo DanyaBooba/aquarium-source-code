@@ -9,6 +9,8 @@
     username="ddybka"
     :avatar-default=true
     avatar="MAN2"
+    :cap-default=true
+    cap="BG2"
     desc="Я щоколадный заяц."
     subs="30"
     :subs-count=30

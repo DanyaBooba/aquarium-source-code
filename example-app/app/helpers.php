@@ -49,3 +49,14 @@ if (!function_exists('user_image_exist')) {
         }
     }
 }
+
+if (!function_exists('user_cap_image_exist')) {
+    function user_cap_image_exist(string $path): string
+    {
+        if (file_exists(public_path() . $path)) {
+            return $path;
+        } else {
+            return "/img/user/bg/BG1.jpg";
+        }
+    }
+}
