@@ -11,6 +11,10 @@ div .col-7 p {
     padding-left: 1rem;
 }
 
+div .col-7 li {
+    margin-bottom: 0.5rem;
+}
+
 .accordion .accordion-item {
     background-color: var(--collapse-body-background) !important;
     border-color: var(--collapse-border) !important;
