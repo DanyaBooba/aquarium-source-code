@@ -3,6 +3,10 @@ div.row ul#left-bar-anchors li {
     list-style-type: lower-greek;
 }
 
+div.row ol#left-bar-anchors li {
+    margin-bottom: .5rem;
+}
+
 div .col-7 p {
     padding-left: 1rem;
 }

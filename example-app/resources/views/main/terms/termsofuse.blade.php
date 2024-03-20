@@ -9,7 +9,7 @@
 @section('main.content')
     <div class="row gx-3">
         <div class="col-3 p-3">
-            <x-page.title-anchor />
+            <x-page.title-anchor :list-number=true />
         </div>
         <div class="col-7 p-3">
             <h1>
