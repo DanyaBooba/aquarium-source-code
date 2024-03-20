@@ -11,12 +11,12 @@
                 <ul class="nav col-12 ms-lg-3 col-lg-auto me-lg-auto mb-md-0 header-content-links">
                     <li><a href="{{ route('main.about') }}" class="nav-link {{ active_link('main.about') }}">{{ __('Информация') }}</a></li>
                     <li><a href="{{ route('main.faq') }}" class="nav-link {{ active_link('main.faq') }}">{{ __('FAQ') }}</a></li>
-                    <li><a href="{{ route('blog.index') }}" class="nav-link {{ active_link('blog.index') }}">{{ __('Новости') }}</a></li>
-                    <li><a href="{{ route('main.api') }}" class="nav-link {{ active_link('main.api') }}">{{ __('API') }}</a></li>
-                    <li><a href="{{ route('main.oauth') }}" class="nav-link {{ active_link('main.oauth') }}">{{ __('OAuth') }}</a></li>
+                    <li><a href="{{ route('blog.index') }}" class="nav-link {{ active_link('blog.index') }}" style="pointer-events: none">{{ __('Новости') }}</a></li>
+                    <li><a href="{{ route('main.api') }}" class="nav-link {{ active_link('main.api') }}" style="pointer-events: none">{{ __('API') }}</a></li>
+                    <li><a href="{{ route('main.oauth') }}" class="nav-link {{ active_link('main.oauth') }}" style="pointer-events: none">{{ __('OAuth') }}</a></li>
                 </ul>
-                @if(user_login())
                 <ul class="nav col-12 col-lg-auto ms-lg-auto mb-md-0 header-content-links">
+                    @if(user_login())
                     <li>
                         <a href="{{ route('user.index') }}" class="link-body-emphasis header-content-profile">
                             <span>
@@ -25,16 +25,11 @@
                             <p>{{ __('Профиль') }}</p>
                         </a>
                     </li>
-                    <li>
-                        <a href="{{ route('main.download') }}" class="nav-link link-download">{{ __('Скачать') }}</a>
-                    </li>
-                </ul>
-                @else
-                <ul class="nav col-12 col-lg-auto ms-lg-auto mb-md-0 header-content-links">
+                    @else
                     <li><a href="{{ route('auth.signin') }}" class="nav-link link-secondary">{{ __('Войти') }}</a></li>
-                    <li><a href="{{ route('main.download') }}" class="nav-link link-download">{{ __('Скачать') }}</a></li>
+                    @endif
+                    <li><a href="{{ route('main.download') }}" class="nav-link link-download" style="pointer-events: none">{{ __('Скачать') }}</a></li>
                 </ul>
-                @endif
             </div>
         </div>
     </div>
