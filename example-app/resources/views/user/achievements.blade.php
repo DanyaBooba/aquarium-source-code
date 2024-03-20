@@ -7,7 +7,7 @@
 <h1>{{ __('Достижения') }}</h1>
 <div class="list-achievements row row-cols-md-3">
     @for($i = 1; $i < 15; $i++)
-    <div>
+    <div class="col">
         <span>
             <img src="{{ asset("/img/user/achivs/achiv-$i.jpg") }}" alt="">
         </span>
