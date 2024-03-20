@@ -10,15 +10,34 @@
     padding: .5rem !important;
     border: none !important;
 
-    border-radius: 50%;
-    background-color: var(--form-input-background);
+    border-radius: 0;
+    background-color: transparent;
 }
 
-.container-settings .container-settings-left form.form-settings-image .col label img {
+.container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col label {
+    border-radius: 50% !important;
+    background-color: var(--form-input-background) !important;
+}
+
+.container-settings .container-settings-left form.form-settings-image .row.row-settings-cap .col label {
+    border-radius: 16px !important;
+}
+
+.container-settings .container-settings-left form.form-settings-image .row.row-settings-cap .col {
+    margin-bottom: .5rem;
+}
+
+.container-settings .container-settings-left form.form-settings-image .row .col label img {
     width: 100%;
     height: auto;
+}
 
+.container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col label img {
     border-radius: 50%;
+}
+
+.container-settings .container-settings-left form.form-settings-image .row.row-settings-cap .col label img {
+    border-radius: 8px;
 }
 
 .container-settings .container-settings-left form.form-settings-image .col input:is(:checked, :focus, :focus-within, :focus-visible) + label {
@@ -29,13 +48,27 @@
     margin-top: 1.5rem !important;
 }
 
-.container-settings .container-settings-left form.form-settings-image .row {
+.container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar {
+    margin-bottom: 1rem;
+
     --bs-gutter-y: 0.5rem;
     --bs-gutter-x: 0.5rem;
 }
 
-.container-settings .container-settings-left form.form-settings-image .row .col {
+.container-settings .container-settings-left form.form-settings-image .row.row-settings-cap {
+    margin-bottom: 1rem;
+
+    --bs-gutter-y: 0.5rem;
+    --bs-gutter-x: 0.5rem;
+}
+
+.container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col {
     max-width: 135px !important;
+    flex: 1 0 100%;
+}
+
+.container-settings .container-settings-left form.form-settings-image .row.row-settings-cap .col {
+    max-width: 360px !important;
     flex: 1 0 100%;
 }
 
@@ -76,7 +109,7 @@
 }
 
 @media(max-width: 767.98px) {
-    .container-settings .container-settings-left form.form-settings-image .row {
+    .container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar {
         justify-content: center;
     }
 }
