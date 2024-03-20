@@ -7,7 +7,7 @@
 
 <h2>Персонализация</h2>
 <x-form.error />
-<form action="" method="post">
+{{-- <form action="" method="post">
     @csrf
     <div>
         <label for="username" class="form-label">Фотография</label>
@@ -24,31 +24,25 @@
     </div>
 
     <button class="btn btn-success" type="submit">{{ __('Сохранить') }}</button>
-</form>
+</form> --}}
 
-<form class="needs-validation person-settings-form-image w-100" action="/api/php/person/edit/edit-icon.php" method="post" novalidate>
-    <div class="row row-cols-2 row-cols-lg-4 g-2">
+<form action="" method="post" class="form-settings-image" novalidate>
+    <h2 class="h3">Аватарка</h2>
+    <div class="row">
+        @for($i = 1; $i <= 7; $i++)
         <div class="col">
-            <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon1" value="1">
-            <label class="list-group-item" for="icon1">
-                <img src="/app/img/users/icons/1.png" id="imgicon1">
+            <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon{{ $i }}" value="{{ $i }}" {{ $i == 1 ? "checked" : "" }}>
+            <label class="list-group-item" for="icon{{ $i }}">
+                <img src="{{ asset("/img/user/logo/MAN$i.png") }}">
             </label>
         </div>
-        <div class="col">
-            <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon2" value="2">
-            <label class="list-group-item" for="icon2">
-                <img src="/app/img/users/icons/2.png" id="imgicon2">
-            </label>
-        </div>
-
+        @endfor
     </div>
-    <button class="btn btn-primary col-md-6 mt-2" type="submit">
-        Сохранить изменения
-    </button>
+    <button class="btn btn-success" type="submit">{{ __('Сохранить') }}</button>
 </form>
 
 
-<div class="row row-cols-1 row-cols-lg-2 g-2">
+{{-- <div class="row row-cols-1 row-cols-lg-2 g-2">
     <div class="col">
         <input class="form-check-input visually-hidden" type="radio" name="bg" id="bg1" value="1">
         <label class="list-group-item" for="bg1">
@@ -67,7 +61,7 @@
             <img src="/app/img/users/bg/BG3.jpg">
         </label>
     </div>
-</div>
+</div> --}}
 
 
 @endsection

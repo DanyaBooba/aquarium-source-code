@@ -2,11 +2,44 @@
     margin-bottom: 1rem;
 }
 
-.container-settings .container-settings-left form {
+.container-settings .container-settings-left form:not(.form-settings-image) {
     max-width: 500px;
 }
 
-.container-settings .container-settings-left form div:has(input) {
+.container-settings .container-settings-left form.form-settings-image .col label {
+    padding: .5rem !important;
+    border: none !important;
+
+    border-radius: 50%;
+    background-color: var(--form-input-background);
+}
+
+.container-settings .container-settings-left form.form-settings-image .col label img {
+    width: 100%;
+    height: auto;
+
+    border-radius: 50%;
+}
+
+.container-settings .container-settings-left form.form-settings-image .col input:is(:checked, :focus, :focus-within, :focus-visible) + label {
+    outline: 3px solid var(--settings-image-active);
+}
+
+.container-settings .container-settings-left form.form-settings-image button[type="submit"] {
+    margin-top: 1.5rem !important;
+}
+
+.container-settings .container-settings-left form.form-settings-image .row {
+    --bs-gutter-y: 0.5rem;
+    --bs-gutter-x: 0.5rem;
+}
+
+.container-settings .container-settings-left form.form-settings-image .row .col {
+    max-width: 135px !important;
+    flex: 1 0 100%;
+}
+
+.container-settings .container-settings-left form:not(.form-settings-image) div:has(input) {
     margin-bottom: 1rem;
 }
 
@@ -39,5 +72,11 @@
 @media(max-width: 1023.98px) {
     .container-settings .container-settings-left form button[type="submit"] {
         display: none !important;
+    }
+}
+
+@media(max-width: 767.98px) {
+    .container-settings .container-settings-left form.form-settings-image .row {
+        justify-content: center;
     }
 }

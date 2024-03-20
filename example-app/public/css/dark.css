@@ -87,4 +87,6 @@
     --collapse-filter: invert(1) grayscale(100%) brightness(200%);
 
     --modal-background: #1f1c38;
+
+    --settings-image-active: #0984e3;
 }
