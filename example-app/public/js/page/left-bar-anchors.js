@@ -26,7 +26,7 @@ function anchors() {
                     `<li class='left-bar-anchors-${title.tagName.toLowerCase()}'><a href='#${
                         title.id
                     }'>${listTextContext(
-                        list.tagName,
+                        list.tagName.toLowerCase(),
                         title.textContent
                     )}</a></li>`
                 );
@@ -40,10 +40,11 @@ function anchors() {
 }
 
 function listTextContext(tag, text) {
-    if (tag == "ul") {
+    if (tag === "ul") {
         return text;
     } else {
-        let split = text.split(" ");
+        let split = text;
+        split = split.split(" ");
         split.shift();
         let str = "";
         split.forEach((item) => {
