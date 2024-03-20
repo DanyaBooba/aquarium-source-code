@@ -17,8 +17,8 @@
     --body-color-alpha: #f9f9f999;
 
     --body-color: #f9f9f9;
-    --text-color: #212529;
-    --text-code: #212529;
+    --text-color: #000;
+    --text-code: #000;
     --text-muted: #6c757d;
 
     --text-code-border: #0984e3;
@@ -89,4 +89,6 @@
     --modal-background: #fff;
 
     --settings-image-active: #0984e3;
+
+    --achivs-background: #fff;
 }
