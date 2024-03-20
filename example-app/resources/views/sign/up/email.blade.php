@@ -68,7 +68,7 @@
                         <input class="form-check-input" name="agreement" type="checkbox" value="privacy" id="check" onInput="checkOnInput()">
                         <label class="form-check-label small" for="check">
                             {{ __('Подтверждаете') }}
-                            <a href="{{ route('main.user.privacy') }}">
+                            <a href="{{ route('main.terms.privacy') }}">
                                 {{ __('политику конфиденциальности') }}
                             </a>
                         </label>

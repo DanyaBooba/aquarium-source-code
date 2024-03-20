@@ -8,21 +8,21 @@ class MainUserController extends Controller
 {
     public function index()
     {
-        return "";
+        return view('main.terms.index');
     }
 
     public function privacy()
     {
-        return "";
+        return view('main.terms.privacy');
     }
 
     public function termsofuse()
     {
-        return "";
+        return view('main.terms.termsofuse');
     }
 
     public function cookie()
     {
-        return "";
+        return view('main.terms.cookie');
     }
 }

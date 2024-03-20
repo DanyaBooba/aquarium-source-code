@@ -19,15 +19,12 @@ Route::prefix('/')->group(function () {
         Route::get('brand', [MainRouteController::class, 'brand'])->name('main.brand');
         Route::get('accessibility', [MainRouteController::class, 'accessibility'])->name('main.accessibility');
 
-        Route::prefix('user')->group(function () {
+        Route::prefix('terms')->group(function () {
 
-            Route::get('/', [MainUserController::class, 'index'])->name('main.user.index');
-
-            Route::get('privacy', [MainUserController::class, 'privacy'])->name('main.user.privacy');
-
-            Route::get('termsofuse', [MainUserController::class, 'termsofuse'])->name('main.user.termsofuse');
-
-            Route::get('cookie', [MainUserController::class, 'cookie'])->name('main.user.cookie');
+            Route::get('/', [MainUserController::class, 'index'])->name('main.terms.index');
+            Route::get('privacy', [MainUserController::class, 'privacy'])->name('main.terms.privacy');
+            Route::get('termsofuse', [MainUserController::class, 'termsofuse'])->name('main.terms.termsofuse');
+            Route::get('cookie', [MainUserController::class, 'cookie'])->name('main.terms.cookie');
         });
 
         Route::get('brandbook', function () {

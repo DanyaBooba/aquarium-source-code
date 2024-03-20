@@ -4,6 +4,7 @@ h4.title-anchor,
 h5.title-anchor,
 h6.title-anchor
 {
+    display: flex;
     margin-left: -2.5rem;
 }
 

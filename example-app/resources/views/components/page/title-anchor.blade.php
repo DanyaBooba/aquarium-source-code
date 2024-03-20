@@ -1,3 +1,5 @@
+@props(['listNumber' => false])
+
 <div class="accordion" id="more">
     <div class="accordion-item">
         <h2 class="accordion-header header-totitle">
@@ -7,7 +9,11 @@
         </h2>
         <div id="more1" class="accordion-collapse collapse" data-bs-parent="#more">
             <div class="accordion-body">
+                @if($listNumber)
+                <ol id="left-bar-anchors"></ol>
+                @else
                 <ul id="left-bar-anchors"></ul>
+                @endif
             </div>
         </div>
     </div>

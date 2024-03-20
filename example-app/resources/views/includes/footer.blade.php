@@ -6,6 +6,6 @@
                 {{ __('Аквариум') }}
             </a>
         </p>
-        <a href="{{ route('main.user.privacy') }}" class="small">{{ __('Политика конфиденциальности') }}</a>
+        <a href="{{ route('main.terms.privacy') }}" class="small">{{ __('Политика конфиденциальности') }}</a>
     </div>
 </footer>

@@ -213,5 +213,8 @@
     "После настройки приложения, следует отправить его на модерацию. После успешного прохождения модерации, у вас появится возможность использовать OAuth Аквариума для авторизации через сервисы. В противном случае вам потребуется внести изменения в приложение и повторно отправить на проверку модератором.": "After setting up the application, you should send it for moderation. After successful moderation, you will be able to use Aquarium OAuth for authorization through services. Otherwise, you will need to make changes to the application and resubmit for moderation.",
     "Пример приложения": "Example of an application",
     "Клиент на PHP": "PHP client",
-    "Сервер на PHP": "PHP server"
+    "Сервер на PHP": "PHP server",
+
+    "Условия использования": "Terms of use",
+    "Политика обработки файлов cookie": "Cookie Policy"
 }
