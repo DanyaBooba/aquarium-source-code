@@ -41,6 +41,9 @@ Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
         Route::get('devices', [SettingsController::class, 'devices'])->name('user.settings.devices');
 
         Route::get('appearance', [SettingsController::class, 'appearance'])->name('user.settings.appearance');
+        Route::post('appearance', [SettingsController::class, 'appearance_store'])->name('user.settings.appearance.store');
+
+        Route::get('language', [SettingsController::class, 'language'])->name('user.settings.language');
     });
 
 });

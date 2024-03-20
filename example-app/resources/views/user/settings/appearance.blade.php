@@ -1,6 +1,6 @@
 @extends('layouts.settings')
 
-@section('page.title', 'Настройки персонализации')
+@section('page.title', __('Настройки персонализации'))
 
 @section('settings.left')
 <x-settings.header />
@@ -9,7 +9,7 @@
 <x-form.error />
 
 <form action="" onsubmit="sendForm()" method="post" class="form-settings-image">
-    <h2 class="h3">Аватарка</h2>
+    <h2 class="h3">{{ __('Аватарка') }}</h2>
     <div class="row row-settings-avatar">
         @for($i = 1; $i <= 7; $i++)
         <div class="col">
@@ -20,7 +20,7 @@
         </div>
         @endfor
     </div>
-    <h2 class="h3">Шапка</h2>
+    <h2 class="h3">{{ __('Шапка') }}</h2>
     <div class="row row-settings-cap">
         @for($i = 1; $i <= 11; $i++)
         <div class="col">

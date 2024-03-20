@@ -67,4 +67,22 @@ class SettingsController extends Controller
     {
         return view('user.settings.appearance');
     }
+
+    public function appearance_store(Request $request)
+    {
+        $validated = $request->validate([
+            'username' => ['required', 'string', 'max:300', 'min: 3'],
+            'first_name' => ['nullable', 'string', 'min:2', 'max:300'],
+            'last_name' => ['nullable', 'string', 'min:2', 'max:300'],
+        ]);
+
+        dd($validated);
+
+        return redirect()->route('user.settings.index');
+    }
+
+    public function language()
+    {
+        return view('user.settings.language');
+    }
 }
