@@ -4,6 +4,7 @@
 }
 
 .user-search form input[type="search"] {
+    background-color: var(--form-input) !important;
     border-radius: 8px;
     padding: 1rem 1.5rem;
 }
