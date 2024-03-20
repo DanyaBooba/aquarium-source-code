@@ -11,10 +11,10 @@ if (elementModal) {
 function data() {
     changeForm = true;
 
-    window.addEventListener("beforeunload", (e) => {
-        e.preventDefault();
-        e.returnValue = true;
-    });
+    // window.addEventListener("beforeunload", (e) => {
+    //     e.preventDefault();
+    //     e.returnValue = true;
+    // });
 }
 
 function settingsLinkBack(route) {
@@ -28,6 +28,11 @@ function settingsLinkBack(route) {
 }
 
 function sendForm() {
+    // window.removeEventListener("beforeunload", (e) => {
+    //     e.preventDefault();
+    //     e.returnValue = true;
+    // });
+
     form.submit();
 }
 
