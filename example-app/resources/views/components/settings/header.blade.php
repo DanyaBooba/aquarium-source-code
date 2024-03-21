@@ -1,12 +1,16 @@
+@props(['route' => route('user.settings.index')])
+
 <div class="container container-settings-header">
-    <a href="#" onClick="settingsLinkBack('{{ route('user.settings.index') }}')" class="header-back">
+    <a href="#" onClick="settingsLinkBack('{{ $route }}')" class="header-back">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
         {{ __('Назад') }}
     </a>
     <div class="header-title">
-        <p class="h3">{{ __('Настройки') }}</p>
+        <p class="h3">
+            {{ $slot }}
+        </p>
     </div>
-    <a href="#" onClick="sendForm()" class="header-confirm">
+    <a href="#" onClick="sendForm('{{ $route }}')" class="header-confirm">
         {{ __('Готово') }}
     </a>
 </div>
@@ -20,8 +24,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <div class="modal-body">
                 <div class="d-flex flex-column">
-                    <button type="button" class="btn btn-success py-2 mb-2 w-100" onClick="sendForm()">Сохранить</button>
-                    <button type="button" class="btn btn-outline-dark w-100" onClick="sendDiscardForm('{{ route('user.settings.index') }}')">Выйти без сохранения</button>
+                    <button type="button" class="btn btn-success py-2 mb-2 w-100" onClick="sendForm('{{ $route }}')">Сохранить</button>
+                    <button type="button" class="btn btn-outline-dark w-100" onClick="sendDiscardForm('{{ $route }}')">Выйти без сохранения</button>
                 </div>
             </div>
         </div>

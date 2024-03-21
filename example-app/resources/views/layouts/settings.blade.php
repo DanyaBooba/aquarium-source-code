@@ -10,9 +10,6 @@
         <div class="container-settings-left">
             @yield('settings.left')
         </div>
-        <div class="container-settings-right">
-            @yield('settings.right')
-        </div>
     </div>
 </div>
 @endsection

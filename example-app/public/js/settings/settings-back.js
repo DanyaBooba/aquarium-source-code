@@ -27,13 +27,12 @@ function settingsLinkBack(route) {
     }
 }
 
-function sendForm() {
-    // window.removeEventListener("beforeunload", (e) => {
-    //     e.preventDefault();
-    //     e.returnValue = true;
-    // });
-
-    form.submit();
+function sendForm(routeBack) {
+    if (form) {
+        form.submit();
+    } else {
+        window.open(routeBack, "_self");
+    }
 }
 
 function sendDiscardForm(route) {

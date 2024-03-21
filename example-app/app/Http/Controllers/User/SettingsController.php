@@ -30,6 +30,11 @@ class SettingsController extends Controller
         return redirect()->route('user.settings.index');
     }
 
+    public function password()
+    {
+        return view('user.settings.profile.password');
+    }
+
     public function notifications()
     {
         return view('user.settings.notifications');

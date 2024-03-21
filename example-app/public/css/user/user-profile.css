@@ -212,11 +212,39 @@
     .user-profile .user-profile-buttons button.user-button-mobile {
         display: block;
     }
+
+    .user-profile .user-profile-text p.user-profile-name
+    {
+        word-wrap: break-word;
+    }
+
+    .user-profile .user-profile-text p.user-profile-desc
+    {
+        word-wrap: break-word;
+    }
 }
 
 @media(min-width: 768px) {
     .user-profile .user-profile-left {
         min-width: 380px !important;
         min-height: 156px !important;
+    }
+
+    .user-profile .user-profile-text p.user-profile-name
+    {
+        max-width: 300px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .user-profile .user-profile-text p.user-profile-desc
+    {
+        max-width: 300px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }

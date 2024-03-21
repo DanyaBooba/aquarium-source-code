@@ -6,9 +6,9 @@
     width: 30%;
 }
 
-.container-settings .container-settings-main {
+/* .container-settings .container-settings-main {
     padding: 1.5rem;
-}
+} */
 
 .container-settings .container-settings-main ul {
     background-color: var(--settings-main-background);

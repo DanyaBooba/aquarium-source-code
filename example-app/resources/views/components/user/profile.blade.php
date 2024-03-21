@@ -6,7 +6,7 @@
     <div class="user-profile-content">
         <div class="user-profile-left">
             <div class="user-profile-image">
-                <span class="user-profile-image-point">
+                <span class="user-profile-image-point" title="Активен">
                     <span class="point-red"></span>
                 </span>
                 <x-user.profile-image
@@ -15,22 +15,22 @@
                 />
             </div>
             <div class="user-profile-text">
-                <p class="user-profile-name">{{ $name ?? "<безымянный>" }}</p>
+                <p class="user-profile-name" title="{{ $name }}">{{ $name ?? "<безымянный>" }}</p>
                 @isset($desc)
-                <p class="user-profile-desc">{{ $desc }}</p>
+                <p class="user-profile-desc" title="{{ $desc }}">{{ $desc }}</p>
                 @endisset
             </div>
         </div>
         <div class="user-profile-right">
-            <div>
+            <div title="{{ $subsCount }}">
                 <p>{{ $subs }}</p>
                 <p>{{ use_form_word($subsCount, __('подписчик'), __('подписчика'), __('подписчиков')) }}</p>
             </div>
-            <div>
+            <div title="{{ $subCount }}">
                 <p>{{ $sub }}</p>
                 <p>{{ use_form_word($subCount, __('подписка'), __('подписки'), __('подписок')) }}</p>
             </div>
-            <div>
+            <div title="{{ $achivsCount }}">
                 <p>{{ $achivs }}</p>
                 <p>{{ use_form_word($achivsCount, __('достижение'), __('достижения'), __('достижений')) }}</p>
             </div>

@@ -29,6 +29,8 @@ Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
         Route::get('profile', [SettingsController::class, 'profile'])->name('user.settings.profile');
         Route::post('profile', [SettingsController::class, 'profile_store'])->name('user.settings.profile.store');
 
+        Route::get('profile/password', [SettingsController::class, 'password'])->name('user.settings.profile.password');
+
         Route::get('notifications', [SettingsController::class, 'notifications'])->name('user.settings.notifications');
         Route::post('notifications', [SettingsController::class, 'notifications_store'])->name('user.settings.notifications.store');
 

@@ -3,12 +3,14 @@
 @section('page.title', __('Настройки персонализации'))
 
 @section('settings.left')
-<x-settings.header />
+<x-settings.header>
+    {{ __('Персонализация') }}
+</x-settings.header>
 
-<h2>Персонализация</h2>
 <x-form.error />
 
-<form action="" onsubmit="sendForm()" method="post" class="form-settings-image">
+<form action="" onsubmit="sendForm('{{ route('user.settings.index') }}')" method="post" class="form-settings-image">
+    @csrf
     <h2 class="h3">{{ __('Аватарка') }}</h2>
     <div class="row row-settings-avatar">
         @for($i = 1; $i <= 7; $i++)
@@ -31,7 +33,7 @@
         </div>
         @endfor
     </div>
-    <button class="btn btn-success" type="submit">{{ __('Сохранить') }}</button>
+    {{-- <button class="btn btn-success" type="submit">{{ __('Сохранить') }}</button> --}}
 </form>
 
 @endsection

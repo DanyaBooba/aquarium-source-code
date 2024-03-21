@@ -2,6 +2,25 @@
     margin-bottom: 1rem;
 }
 
+.container-settings .container-settings-left .text-title {
+    margin-bottom: .75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.container-settings .container-settings-left form .input-password div label {
+    margin-bottom: .5rem;
+}
+
+.container-settings .container-settings-left form .input-password a {
+    top: 32px;
+    margin-left: 88% !important;
+}
+
+.container-settings .container-settings-left form .input-password div {
+    width: 100%;
+}
+
 .container-settings .container-settings-left form:not(.form-settings-image) {
     max-width: 500px;
 }
@@ -72,7 +91,7 @@
     flex: 1 0 100%;
 }
 
-.container-settings .container-settings-left form:not(.form-settings-image) div:has(input) {
+.container-settings .container-settings-left form:not(.form-settings-image) div:has(input):not(.input-password) {
     margin-bottom: 1rem;
 }
 
@@ -80,7 +99,8 @@
     background-color: var(--form-input-background);
 }
 
-.container-settings .container-settings-left form div input[type="text"] {
+.container-settings .container-settings-left form div input[type="text"],
+.container-settings .container-settings-left form div input[type="password"] {
     border-radius: 8px;
 
     padding-top: 1rem;
@@ -111,5 +131,11 @@
 @media(max-width: 767.98px) {
     .container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar {
         justify-content: center;
+    }
+}
+
+@media(max-width: 424.98px) {
+    .container-settings .container-settings-left form .input-password a {
+        margin-left: 85% !important;
     }
 }

@@ -8,7 +8,7 @@
 
 @section('main.content')
     <div class="row row-first mb-2 gx-3">
-        <div class="col-sm-8 col-md-8 col-lg-8">
+        <div class="row-first-left">
             <div class="p-3">
                 <div class="d-flex justify-content-center pb-2 mt-auto" style="margin-top: -10px">
                     <a href="#" aria-label="{{ __('Скачать для Android') }}" style="margin-right: -30px; margin-top: 10px;">
@@ -20,16 +20,16 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4 col-md-4 col-lg-4 mb-3">
+        <div class="row-first-right">
             <div class="p-3">
                 <div class="py-3 p-2">
-                    <h1 class="mb-4">{{ __('Аквариум') }}</h1>
-                    <p class="fs-5">
-                        {!! __('Социальная сеть для каждого: поддержка пользователей, уютное общение <nobr>и удобный</nobr> сервис.') !!}
-                    </p>
+                    <h1 class="mb-4">{!! __('Аквариум —<br> это <i>удобная</i><br> <nobr>социальная сеть</nobr>') !!}</h1>
                 </div>
                 <div class="row-first-button">
-                    <button class="btn btn-light col-md-6" onClick="buttonOpenURL('{{ route('auth.signin') }}')">{{ __('Войти') }}</button>
+                    <button class="btn btn-light" onClick="buttonOpenURL('{{ route('auth.signin') }}')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
+                        {{ __('Войти') }}
+                    </button>
                 </div>
             </div>
         </div>

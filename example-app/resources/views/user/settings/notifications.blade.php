@@ -3,11 +3,13 @@
 @section('page.title', 'Настройки уведомлений')
 
 @section('settings.left')
-<x-settings.header />
+<x-settings.header>
+    {{ __('Уведомления') }}
+</x-settings.header>
 
-<h2>Уведомления</h2>
 <x-form.error />
-<form action="" method="post">
+
+<form action="" onsubmit="sendForm('{{ route('user.settings.index') }}')" method="post">
     @csrf
     <div class="form-check form-switch">
         <input class="form-check-input" name="authorization" type="checkbox" role="switch" id="check1" value="1" onInput="data()">
@@ -22,6 +24,6 @@
         <label class="form-check-label" for="check3">Смена пароля</label>
     </div>
 
-    <button class="btn btn-success" type="submit">{{ __('Сохранить') }}</button>
+    {{-- <button class="btn btn-success" type="submit">{{ __('Сохранить') }}</button> --}}
 </form>
 @endsection
