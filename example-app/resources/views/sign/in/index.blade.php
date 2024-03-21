@@ -21,7 +21,7 @@
                             <x-sign.yandex />
                         </button>
                     </div>
-                    <div class="row row-cols-2 gx-2 mb-0">
+                    {{-- <div class="row row-cols-2 gx-2 mb-0">
                         <div id="signin-choose-vk">
                             <button class="btn fs-5" onClick="buttonOpenURL('{{ route('auth.vk') }}')">
                                 <x-sign.vk />
@@ -32,8 +32,8 @@
                                 <x-sign.mailru />
                             </button>
                         </div>
-                    </div>
-                    <div class="row row-cols-2 gx-2">
+                    </div> --}}
+                    {{-- <div class="row row-cols-2 gx-2">
                         <div id="signin-choose-google">
                             <button class="btn fs-5" onClick="buttonOpenURL('{{ route('auth.google') }}')">
                                 <x-sign.google />
@@ -44,7 +44,7 @@
                                 <x-sign.github />
                             </button>
                         </div>
-                    </div>
+                    </div> --}}
                     <x-sign.choose-or />
                     <div id="signin-choose-email">
                         <a href="{{ route('auth.signin.email') }}">
