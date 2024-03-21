@@ -6,6 +6,19 @@ let searchInput = document.querySelector("input[type='search']");
 let searchEmptyField = document.getElementById("search-empty-field");
 let selectInput = document.querySelector(".user-search select");
 
+const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+
+const selectClearInput = async () => {
+    while (searchInput.value !== "") {
+        let temp = searchInput.value;
+        searchInput.value = temp.substring(0, temp.length - 1);
+        await delay(30);
+    }
+
+    searchInput.value = null;
+    search();
+};
+
 function searchCorrectUser(user, search, select) {
     let name = user.getAttribute("name");
     let username = user.getAttribute("username");
@@ -45,10 +58,8 @@ function search() {
 }
 
 function searchDropFilter() {
-    searchInput.value = null;
     selectInput.value = "any";
-
-    search();
+    selectClearInput();
 }
 
 function searchOnInput() {
