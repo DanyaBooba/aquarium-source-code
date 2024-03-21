@@ -19,6 +19,10 @@ class RegisterController extends Controller
 
     public function store()
     {
+        // $begin = microtime(true);
+        // $arf = App\Roles::where('description', 'test')->get();
+        // $end = microtime(true) - $begin;
+
         session(['login' => 'login']);
         session(['email' => 'danil.dybko@gmail.com']);
         session(['avatar' => 'MAN1']);
