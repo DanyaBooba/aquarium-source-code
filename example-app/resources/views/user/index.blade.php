@@ -1,6 +1,6 @@
 @extends('layouts.user')
 
-@section('page.title', 'Профиль')
+@section('page.title', __('Профиль'))
 
 @section('user.alert')
 <x-user.alert-email />
@@ -16,8 +16,8 @@
     :cap-default=true
     cap="BG4"
     desc="Описание профиля."
-    subs=">100М"
-    :subs-count=1000000
+    subs="300"
+    :subs-count=300
     :sub=2
     :sub-count=2
     :achivs=1

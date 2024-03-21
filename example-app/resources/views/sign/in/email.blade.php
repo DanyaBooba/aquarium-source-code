@@ -37,14 +37,7 @@
                         </a>
                     </div>
 
-                    {{-- <div class="form-check text-start mb-3 mt-2">
-                        <input class="form-check-input" type="checkbox" value="remember-me" id="check">
-                        <label class="form-check-label" for="check">
-                            {{ __('Запомнить меня') }}
-                        </label>
-                    </div> --}}
-
-                    <button class="btn btn-primary py-3" type="submit">{{ __('Войти') }}</button>
+                    <button class="btn btn-primary py-3 mt-3" type="submit">{{ __('Войти') }}</button>
                 </form>
 
                 <a href="{{ route('auth.help') }}" class="d-flex justify-content-center mt-3 mb-5 text-decoration-none">

@@ -5,7 +5,7 @@
           a 40,40 0 1,1 80,0
           a 40,40 0 1,1 -80,0
         " />
-    <text id="text" font-family="monospace" font-size="12" font-weight="bold" fill="var(--text-color)">
+    <text id="text" font-size="10" fill="var(--text-color)">
       <textPath id="textPath" href="#circlePath">
         {{ $slot }}
       </textPath>

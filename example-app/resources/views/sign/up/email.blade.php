@@ -32,7 +32,7 @@
                 </h4>
             </div>
         </div>
-        <div class="authentication col-md-4">
+        <div class="authentication px-0 col-md-4">
             <div class="authentication-back mb-5">
                 <a href="{{ route('auth.signup') }}" class="authentication-back-back">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
@@ -65,7 +65,7 @@
                     </div>
 
                     <div class="form-check text-start mb-3 mt-2">
-                        <input class="form-check-input" name="agreement" type="checkbox" value="privacy" id="check" onInput="checkOnInput()">
+                        <input class="form-check-input" name="agreement" type="checkbox" value="privacy" id="check" onInput="checkOnInput()" checked>
                         <label class="form-check-label small" for="check">
                             {{ __('Подтверждаете') }}
                             <a href="{{ route('main.terms.privacy') }}">
