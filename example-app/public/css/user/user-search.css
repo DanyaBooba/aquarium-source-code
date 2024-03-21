@@ -125,7 +125,6 @@
 
 @media(max-width: 767.98px) {
     .user-search-users div.col {
-        display: flex !important;
         justify-content: center;
     }
 
