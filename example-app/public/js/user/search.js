@@ -38,6 +38,12 @@ function searchSeeAll() {
     });
 }
 
+function searchDropFilter() {
+    searchSeeAll();
+    searchInput.value = null;
+    searchEmptyField.classList.add("d-none");
+}
+
 function searchOnInput() {
     if (searchGetInput() !== null) {
         let count = searchUsersActive();

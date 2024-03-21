@@ -87,6 +87,10 @@
     background-color: transparent;
 }
 
+.user-search-filters button {
+    color: var(--text-color);
+}
+
 @media(hover: hover) {
     .user-search-users a.user-search-users-content:hover {
         color: var(--text-color) !important;
@@ -96,6 +100,10 @@
     .user-search-users .user-search-users-content button:hover {
         border: .1rem solid var(--user-search-button-background);
         background-color: transparent;
+    }
+
+    .user-search-filters button:hover {
+        color: var(--text-color-hover);
     }
 }
 
@@ -108,6 +116,10 @@
     .user-search-users .user-search-users-content button:active {
         border: .1rem solid var(--user-search-button-background);
         background-color: transparent;
+    }
+
+    .user-search-filters button:active {
+        color: var(--text-color-hover);
     }
 }
 
