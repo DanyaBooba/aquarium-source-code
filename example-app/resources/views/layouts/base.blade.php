@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="icon" href="{{ env("APP_URL") }}/img/logo/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="{{ env("APP_URL") }}/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="{{ env("APP_URL") }}/favicon.svg">
+    <link rel="apple-touch-icon" href="{{ env("APP_URL") }}/favicon.svg">
+    <link rel="manifest" href="{{ env("APP_URL") }}/manifest.webmanifest">
+    <link rel="manifest" href="{{ env("APP_URL") }}/manifest.json">
+
     <meta name="theme-color" content="#575FCF" />
     <meta name="description" content="{{ env("APP_DESC") }}">
     <meta name="keywords" content="{{ env("APP_KEYWORDS") }}">
@@ -14,14 +19,14 @@
     <meta property="og:site_name" content="{{ env("APP_TITLE_SHORT") }}">
     <meta property="og:description" content="{{ env("APP_DESC") }}">
     <meta property="og:url" content="{{ env("APP_URL") }}">
-    <meta property="og:image" content="https://aquarium.org.ru/app/img/logo/cap.jpg">
-    <meta property="og:image:width" content="1456">
-    <meta property="og:image:height" content="816">
+    {{-- <meta property="og:image" content="{{ env("APP_URL") }}//app/img/logo/cap.jpg"> --}}
+    {{-- <meta property="og:image:width" content="1456"> --}}
+    {{-- <meta property="og:image:height" content="816"> --}}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ env("APP_TITLE_SHORT") }}">
     <meta name="twitter:description" content="{{ env("APP_DESC") }}">
     <meta name="twitter:site" content="{{ env("APP_URL") }}">
-    <meta name="twitter:image" content="{{ env("APP_URL") }}/img/logo/favicon.ico">
+    <meta name="twitter:image" content="{{ env("APP_URL") }}/favicon.ico">
     <meta name="Author" content="{{ env("APP_AUTHOR") }}">
 
     <meta name="robots" content="index,follow">
