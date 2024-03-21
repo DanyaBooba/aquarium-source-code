@@ -45,6 +45,10 @@ function search() {
     }
 }
 
+function test() {
+    alert("test");
+}
+
 function searchDropFilter() {
     searchInput.value = null;
     selectInput.value = "any";

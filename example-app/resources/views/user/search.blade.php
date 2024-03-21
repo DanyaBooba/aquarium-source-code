@@ -6,7 +6,7 @@
 
 <div class="row gx-3 user-search">
     <div class="col-md-8 user-search-input">
-        <input class="form-control" type="search" name="search" placeholder="Найти..." onChange="searchOnInput()">
+        <input class="form-control" type="search" name="search" placeholder="Найти..." onInput="searchOnInput()">
     </div>
     <div class="col-md-4 user-search-select">
         <select class="form-select" aria-label="Пол" onChange="selectOnInput()">
@@ -16,6 +16,8 @@
         </select>
     </div>
 </div>
+
+{{-- <input class="form-control" type="search" name="search" placeholder="Найти..." onKeyDown="test()"> --}}
 
 <div class="user-search-filters">
     <button class="btn" onClick="searchDropFilter()">
