@@ -41,7 +41,7 @@
 }
 
 .container.container-blog nav ul.pagination .page-link.active {
-    border: 1px solid var(--pagination-active);
+    border: .1rem solid var(--pagination-active);
 }
 
 .container.container-blog .row-blog .blog-post .blog-post-content {

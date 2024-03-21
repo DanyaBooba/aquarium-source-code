@@ -34,5 +34,5 @@ nav ul.pagination .page-link.page-link-prev svg {
 }
 
 nav ul.pagination .page-link.active {
-    border: 1px solid var(--pagination-active);
+    border: .1rem solid var(--pagination-active);
 }

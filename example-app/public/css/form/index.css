@@ -11,12 +11,12 @@ form textarea {
 
 form input.form-check-input {
     /* background-color: var(--form-input-background); */
-    border: 1px solid var(--form-input-border);
+    border: .1rem solid var(--form-input-border);
 }
 
 form textarea {
     background: var(--body-color);
-    border: 1px solid var(--form-input-border);
+    border: .1rem solid var(--form-input-border);
 }
 
 form .input-password .form-floating {
