@@ -1,13 +1,20 @@
 @extends('layouts.user')
 
-@section('page.title', 'Поиск')
+@section('page.title', __('Поиск'))
 
 @section('user.content')
 
 <div class="row gx-3 user-search">
     <div class="col-md-8 user-search-input">
         <input class="form-control" type="search" name="search" placeholder="Найти..." onInput="searchOnInput()">
-    </form>
+    </div>
+    <div class="col-md-4 user-search-select">
+        <select class="form-select" aria-label="Пол">
+            <option selected>Пол: Любой</option>
+            <option value="male">Мужской</option>
+            <option value="female">Женский</option>
+        </select>
+    </div>
 </div>
 
 <div class="user-search-filters">

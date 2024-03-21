@@ -62,8 +62,8 @@
     --user-profile-button: #fff;
 
     --user-search-border: #ced4db;
-    --user-serach-background: #18162d;
-    --user-serach-background-hover: #35315c;
+    --user-serach-background: #f9f9f9;
+    --user-serach-background-hover: #f1f1f4;
     --user-search-button-background: #c9daeb;
 
     --faq-design-button: #123;
@@ -93,4 +93,6 @@
     --settings-image-active: #0984e3;
 
     --achivs-background: #fff;
+
+    --form-select-cursor: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
 }
