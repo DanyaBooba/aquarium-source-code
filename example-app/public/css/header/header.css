@@ -1,9 +1,26 @@
 header {
     background-color: var(--header-background-color);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+}
+
+.header {
+    min-height: 74px;
+    z-index: 500;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: transform .1s linear;
+}
+
+.header.hide {
+    transform: translateY(-75px);
 }
 
 header.header {
     border-bottom: .1rem solid var(--header-border-bottom);
+
     padding: 1rem;
     margin-bottom: 1rem;
 }
@@ -183,6 +200,10 @@ header .header-content button.navbar-toggler {
 
     header .header-content-profile {
         margin-bottom: .5rem;
+    }
+
+    .header.hide {
+        transform: translateY(-225px);
     }
 }
 

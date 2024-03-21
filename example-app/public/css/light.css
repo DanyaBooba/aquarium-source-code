@@ -1,7 +1,7 @@
 :root {
     --accent: #575FCF;
 
-    --header-background-color: #fff;
+    --header-background-color: rgba(255, 255, 255, .84);
     --header-border-bottom: #dee2e6;
     --header-link-download-background: #fff;
     --header-link-download-background-border: #dee2e6;

@@ -6,7 +6,7 @@
         @include('includes.alert')
         @include('includes.header')
 
-        <main class="flex-grow-1 py-1">
+        <main class="flex-grow-1 pb-1" style="padding-top: 6rem">
             <section>
                 <div class="container">
                     @yield('main.content')
@@ -18,6 +18,7 @@
     </div>
 
     <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/page/header.js') }}"></script>
     @stack('js')
 </body>
 @endsection
