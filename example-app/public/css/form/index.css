@@ -6,7 +6,7 @@ form input[type="search"],
 form textarea {
     background: var(--body-color);
     color: var(--text-color) !important;
-    border: 1px solid var(--form-input-border) !important;
+    border: .1rem solid var(--form-input-border) !important;
 }
 
 form input.form-check-input {

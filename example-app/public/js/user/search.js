@@ -10,15 +10,17 @@ function searchGetInput() {
     return searchInput.value ? searchInput.value.toLowerCase() : null;
 }
 
+function searchCheckInclude(data) {
+    return data.toLowerCase().includes(searchGetInput());
+}
+
 function searchUsersActive() {
     let count = 0;
     users.forEach((data) => {
         if (
-            data
-                .getAttribute("name")
-                .toLowerCase()
-                .includes(searchGetInput()) ||
-            data.getAttribute("desc").toLowerCase().includes(searchGetInput())
+            searchCheckInclude(data.getAttribute("name")) ||
+            searchCheckInclude(data.getAttribute("desc")) ||
+            searchCheckInclude(data.getAttribute("username"))
         ) {
             data.classList.remove("d-none");
             count += 1;
@@ -30,6 +32,12 @@ function searchUsersActive() {
     return count;
 }
 
+function searchSeeAll() {
+    users.forEach((data) => {
+        data.classList.remove("d-none");
+    });
+}
+
 function searchOnInput() {
     if (searchGetInput() !== null) {
         let count = searchUsersActive();
@@ -37,5 +45,8 @@ function searchOnInput() {
         count
             ? searchEmptyField.classList.add("d-none")
             : searchEmptyField.classList.remove("d-none");
+    } else {
+        searchSeeAll();
+        searchEmptyField.classList.add("d-none");
     }
 }

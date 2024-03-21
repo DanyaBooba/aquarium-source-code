@@ -5,16 +5,8 @@
 @section('user.content')
 
 <div class="row gx-3 user-search">
-    <form action="?" method="get" class="col-md-8">
-        {{-- <input type="search" name="search" oninput="searchOnInput()" class="form-control" placeholder="Найти" /> --}}
-        <input class="form-control" type="search" name="search" list="searchList" placeholder="Найти..." onInput="searchOnInput()">
-        <datalist id="searchList">
-            <option value="San Francisco">
-            <option value="New York">
-            <option value="Seattle">
-            <option value="Los Angeles">
-            <option value="Chicago">
-        </datalist>
+    <div class="col-md-8 user-search-input">
+        <input class="form-control" type="search" name="search" placeholder="Найти..." onInput="searchOnInput()">
     </form>
 </div>
 
@@ -25,10 +17,10 @@
     </button>
 </div>
 
-<div class="row row-cols-5 g-3 user-search-users">
-    @for($i = 0; $i < 30; $i++)
-        <x-user.search-profile />
-    @endfor
+<div class="row g-3 user-search-users">
+    @foreach($users as $user)
+        <x-user.search-profile :user="$user" />
+    @endforeach
 </div>
 
 <p class="text-center mt-2 d-none" id="search-empty-field">

@@ -20,7 +20,21 @@ class UserController extends Controller
 
     public function search()
     {
-        return view('user.search');
+        $user = (object) [
+            "id" => 1,
+            "name" => "Даниил Дыбка",
+            "username" => "ddybka",
+            "desc" => "Описание",
+            "avatar" => "MAN2",
+            "avatarDefault" => true,
+            "sub" => true,
+        ];
+
+        $users = array_fill(0, 30, $user);
+
+        return view('user.search', [
+            "users" => $users
+        ]);
     }
 
 

@@ -23,8 +23,6 @@ Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
 
     Route::get('delete', [DeleteController::class, 'delete'])->name('user.delete');
 
-
-
     Route::prefix('settings')->group(function () {
         Route::get('', [SettingsController::class, 'index'])->name('user.settings.index');
 
