@@ -133,7 +133,7 @@
         </div>
     </div>
 
-    <div class="container container-blog" style="margin-top: 60px">
+    {{-- <div class="container container-blog" style="margin-top: 60px">
         <h2 class="display-4 mb-3 text-center">{{ __('Новости проекта') }}</h2>
         <div class="row row-blog row-cols-sm-1 row-cols-sm-2 row-cols-lg-3 g-2">
             @for($i = 0; $i < 3; $i++)
@@ -145,5 +145,5 @@
                 {{ __('Читать ещё') }}
             </a>
         </div>
-    </div>
+    </div> --}}
 @endsection
