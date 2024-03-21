@@ -5,8 +5,8 @@
 }
 
 .button-top a svg {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     stroke: var(--text-color);
     transition: .3s;
 }
@@ -27,6 +27,7 @@
 
 .button-top a svg {
     background-color: var(--button-top-background);
+    border: .1rem solid var(--button-top-border);
     border-radius: 50%;
     padding: .25rem;
     padding-bottom: .4rem;
