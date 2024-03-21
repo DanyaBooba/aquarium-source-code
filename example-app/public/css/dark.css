@@ -18,6 +18,7 @@
 
     --body-color: #17152b;
     --text-color: #fff;
+    --text-invert: #000;
     --text-code: #fff;
     --text-muted: #6c757d;
 
@@ -97,4 +98,11 @@
     --achivs-background: #17152b;
 
     --form-select-cursor: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23dee2e6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+
+    --cookie-accept-background: #1c1a36;
+    --cookie-accept-border: #2f2b5a;
+    --cookie-accept-shadow: rgb(50, 46, 91, .07);
+
+    --cookie-accept-button-background: #e2efff;
+    --cookie-accept-button-hover: #b9cee7;
 }
