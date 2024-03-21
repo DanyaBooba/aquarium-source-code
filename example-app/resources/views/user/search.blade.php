@@ -32,7 +32,7 @@
     @endforeach
 </div>
 
-<p class="text-center mt-2 d-none" id="search-empty-field">
+<p class="text-center mt-2 display-none" id="search-empty-field">
     Не найдено ни одного пользователя.
 </p>
 

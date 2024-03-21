@@ -5,7 +5,7 @@ function checkClosedAlerts() {
         alerts.forEach((item) => {
             let find = document.getElementById(item);
 
-            find?.classList.add("d-none");
+            find?.classList.add("display-none");
         });
     }
 }

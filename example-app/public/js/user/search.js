@@ -31,27 +31,23 @@ function search() {
     users.forEach((user) => {
         if (searchCorrectUser(user, search, select)) {
             count += 1;
-            user.classList.remove("d-none");
+            user.classList.remove("display-none");
         } else {
-            console.log("not");
-            user.classList.add("d-none");
+            user.classList.add("display-none");
         }
     });
 
     if (count === 0) {
-        searchEmptyField.classList.remove("d-none");
+        searchEmptyField.classList.remove("display-none");
     } else {
-        searchEmptyField.classList.add("d-none");
+        searchEmptyField.classList.add("display-none");
     }
-}
-
-function test() {
-    alert("test");
 }
 
 function searchDropFilter() {
     searchInput.value = null;
     selectInput.value = "any";
+
     search();
 }
 
