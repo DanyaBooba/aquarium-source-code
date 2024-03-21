@@ -3,56 +3,58 @@ let users = document.querySelectorAll(
 );
 
 let searchInput = document.querySelector("input[type='search']");
-
 let searchEmptyField = document.getElementById("search-empty-field");
+let selectInput = document.querySelector(".user-search select");
 
-function searchGetInput() {
-    return searchInput.value ? searchInput.value.toLowerCase() : null;
+function searchCorrectUser(user, search, select) {
+    let name = user.getAttribute("name");
+    let username = user.getAttribute("username");
+    let desc = user.getAttribute("desc");
+    let sex = user.getAttribute("sex");
+
+    let checkSearch =
+        search === null
+            ? true
+            : name.toLowerCase().includes(search) ||
+              username.toLowerCase().includes(search) ||
+              desc.toLowerCase().includes(search);
+    let checkSelect = select === true ? true : sex === select;
+
+    return checkSearch && checkSelect;
 }
 
-function searchCheckInclude(data) {
-    return data.toLowerCase().includes(searchGetInput());
-}
+function search() {
+    let search = searchInput.value ? searchInput.value.toLowerCase() : null;
+    let select = selectInput.value === "any" ? true : selectInput.value;
 
-function searchUsersActive() {
     let count = 0;
-    users.forEach((data) => {
-        if (
-            searchCheckInclude(data.getAttribute("name")) ||
-            searchCheckInclude(data.getAttribute("desc")) ||
-            searchCheckInclude(data.getAttribute("username"))
-        ) {
-            data.classList.remove("d-none");
+    users.forEach((user) => {
+        if (searchCorrectUser(user, search, select)) {
             count += 1;
+            user.classList.remove("d-none");
         } else {
-            data.classList.add("d-none");
+            console.log("not");
+            user.classList.add("d-none");
         }
     });
 
-    return count;
-}
-
-function searchSeeAll() {
-    users.forEach((data) => {
-        data.classList.remove("d-none");
-    });
+    if (count === 0) {
+        searchEmptyField.classList.remove("d-none");
+    } else {
+        searchEmptyField.classList.add("d-none");
+    }
 }
 
 function searchDropFilter() {
-    searchSeeAll();
     searchInput.value = null;
-    searchEmptyField.classList.add("d-none");
+    selectInput.value = "any";
+    search();
 }
 
 function searchOnInput() {
-    if (searchGetInput() !== null) {
-        let count = searchUsersActive();
+    search();
+}
 
-        count
-            ? searchEmptyField.classList.add("d-none")
-            : searchEmptyField.classList.remove("d-none");
-    } else {
-        searchSeeAll();
-        searchEmptyField.classList.add("d-none");
-    }
+function selectOnInput() {
+    search();
 }

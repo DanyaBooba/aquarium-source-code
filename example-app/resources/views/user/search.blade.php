@@ -9,8 +9,8 @@
         <input class="form-control" type="search" name="search" placeholder="Найти..." onInput="searchOnInput()">
     </div>
     <div class="col-md-4 user-search-select">
-        <select class="form-select" aria-label="Пол">
-            <option selected>Пол: Любой</option>
+        <select class="form-select" aria-label="Пол" onInput="selectOnInput()">
+            <option value="any" selected>Пол: Любой</option>
             <option value="male">Мужской</option>
             <option value="female">Женский</option>
         </select>

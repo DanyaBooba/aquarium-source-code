@@ -1,4 +1,4 @@
-<div class="col p-2 mt-0" name="{{ $user->name }}" desc="{{ $user->desc }}" username="{{ $user->username }}">
+<div class="col p-2 mt-0" name="{{ $user->name }}" desc="{{ $user->desc }}" username="{{ $user->username }}" sex="{{ $user->male ? "male" : "female" }}">
     <a href="{{ route('user.show.id', $user->id) }}" class="user-search-users-content">
         <x-user.profile-image
             :avatar-default="$user->avatarDefault"

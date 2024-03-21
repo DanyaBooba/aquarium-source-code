@@ -20,7 +20,7 @@ class UserController extends Controller
 
     public function search()
     {
-        $user = (object) [
+        $user1 = (object) [
             "id" => 1,
             "name" => "Даниил Дыбка",
             "username" => "ddybka",
@@ -28,9 +28,38 @@ class UserController extends Controller
             "avatar" => "MAN2",
             "avatarDefault" => true,
             "sub" => true,
+            "male" => true
         ];
 
-        $users = array_fill(0, 30, $user);
+        $user2 = (object) [
+            "id" => 10,
+            "name" => "Потап Геннадич",
+            "username" => "iyoour",
+            "desc" => "ХА-ХА!",
+            "avatar" => "MAN6",
+            "avatarDefault" => true,
+            "sub" => false,
+            "male" => true
+        ];
+
+        $user3 = (object) [
+            "id" => 1,
+            "name" => "Варнава",
+            "username" => "baby",
+            "desc" => "Малыш",
+            "avatar" => "WOMAN4",
+            "avatarDefault" => true,
+            "sub" => true,
+            "male" => false
+        ];
+
+        $users = [];
+
+        for ($i = 0; $i < 5; $i++) {
+            array_push($users, $user1);
+            array_push($users, $user2);
+            array_push($users, $user3);
+        }
 
         return view('user.search', [
             "users" => $users
