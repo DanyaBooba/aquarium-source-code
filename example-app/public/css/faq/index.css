@@ -11,6 +11,10 @@ div .col-7 p {
     padding-left: 1rem;
 }
 
+div .col-7 ul, ol {
+    padding-left: 2.5rem;
+}
+
 div .col-7 li {
     margin-bottom: 0.5rem;
 }
@@ -40,6 +44,10 @@ div .col-7 li {
 
     div .col-7 p {
         padding-left: 0 !important;
+    }
+
+    div .col-7 ul, ol {
+        padding-left: 2rem;
     }
 
     .accordion .accordion-item,
