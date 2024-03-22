@@ -18,17 +18,15 @@
     padding: 0;
     margin: 0;
 
-    padding: .5rem 1rem;
+    padding: 0 1rem;
     margin-bottom: 1rem;
 }
 
 .container-settings .container-settings-main ul li:last-child {
-    padding-bottom: 1.5rem !important;
     border-bottom-width: 0 !important;
 }
 
 .container-settings .container-settings-main ul li:first-child {
-    padding-top: 1.5rem !important;
     border-top-width: 0 !important;
 }
 
@@ -37,10 +35,9 @@
     border-color: var(--settings-main-border) !important;
 
     padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
+    padding-bottom: .75rem !important;
 
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: .75rem !important;
 
     border-left-width: 0 !important;
     border-right-width: 0 !important;
@@ -48,13 +45,19 @@
     border-radius: 0 !important;
 }
 
+.container-settings .container-settings-main ul li a span {
+    width: 100% !important;
+}
+
 .container-settings .container-settings-main ul li a {
     text-decoration: none !important;
+    /* text-underline-offset: 1.62rem !important; */
     color: var(--text-color) !important;
 
-    display: block;
+    display: flex;
+    align-items: center;
     min-height: 42px;
-    max-width: 300px;
+    width: 100% !important;
 }
 
 .container-settings .container-settings-main ul li a svg {
@@ -62,7 +65,7 @@
     padding: .5rem;
 
     border-radius: 8px;
-    margin-right: .5rem;
+    margin-right: .75rem;
 
     width: 42px;
     height: 42px;
