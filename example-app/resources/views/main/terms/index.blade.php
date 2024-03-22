@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('page.title', 'Информация пользователю')
+@section('page.title', __('Информация пользователю'))
 
 @push('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/faq/index.css') }}" />
