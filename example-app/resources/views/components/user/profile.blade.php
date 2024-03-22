@@ -66,3 +66,29 @@
         @endif
     </div>
 </div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#qrCodeModal">
+  Launch demo modal
+</button>
+
+<div class="modal fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCodeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="qr-code-generator">
+
+                </div>
+                {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ asset('js/user/qrcode.min.js') }}"></script>
+<div id="qrcode"></div>
+<script type="text/javascript">
+    new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
+</script>
