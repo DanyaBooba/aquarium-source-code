@@ -45,4 +45,9 @@ class MainRouteController extends Controller
     {
         return view('main.brand');
     }
+
+    public function accessibility()
+    {
+        return view('main.accessibility');
+    }
 }

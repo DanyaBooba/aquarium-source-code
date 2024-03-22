@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('page.title', 'Ответы на вопросы')
+@section('page.title', __('Брендбук'))
 
 @push('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/faq/index.css') }}" />
@@ -13,33 +13,26 @@
         </div>
         <div class="col-7 p-3">
             <h1>
-                Брендбук
+                {{ __('Брендбук') }}
             </h1>
             <p class="fs-5">
-                Описания позиционирования, концепций Аквариума, логотип и дизайн-система.
+                {{ __('Описания позиционирования, концепций Аквариума, логотип и дизайн-система.') }}
             </p>
-            <h2>Логотип</h2>
-            <p>
-                <a href="#">
-                    Скачать RU
-                </a>
-            </p>
-            <p>
-                <a href="#">
-                    Скачать EN
-                </a>
-            </p>
-            <h2>Логотип Ч/Б</h2>
-            <p>
-                <a href="#">
-                    Скачать RU
-                </a>
-            </p>
-            <p>
-                <a href="#">
-                    Скачать EN
-                </a>
-            </p>
+            <h2>
+                {{ __('Логотип') }}
+            </h2>
+            <ul>
+                <li>
+                    <a href="{{ asset('download/logo_ru.zip') }}" download>
+                        {{ __('Скачать RU') }}
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ asset('download/logo_en.zip') }}" download>
+                        {{ __('Скачать EN') }}
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 
