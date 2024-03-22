@@ -15,12 +15,12 @@
                     <span class="ms-3" style="margin-top: 1.7rem">{{ __('человек зарегистрировано') }}</span>
                 </h4>
             </div>
-            <div style="margin-top: 1rem">
+            <div style="margin-top: 2rem">
                 <h4 class="d-flex">
                     <span class="d-flex align-items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="me-2" fill="none" stroke="#198754" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg> <span class="display-5 text-success" style="margin-top: .5rem">5&#x2009;000</span>
                     </span>
-                    <span class="ms-3" style="margin-top: 1.7rem">{{ __('раз заходили в соцсеть') }}</span>
+                    <span class="ms-3">{!! __('раз<br>заходили в соцсеть') !!}</span>
                 </h4>
             </div>
             <div style="margin-top: 2rem">
