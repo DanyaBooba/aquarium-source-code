@@ -43,7 +43,9 @@
     "Счастливое лицо": "Happy face",
     "Читать ещё": "Read more",
 
-    "Аквариум —<br> это <i>удобная</i><br> <nobr>социальная сеть</nobr>": "Aquarium —<br>is a <i>convenient</i><br> <nobr>social network</nobr>",
+    "Аквариум — ": "Aquarium is ",
+    "<nobr>социальная сеть</nobr>": "<nobr>social network</nobr>",
+    "удобная": "convenient",
 
     "Политика конфиденциальности": "Privacy Policy",
 

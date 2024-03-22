@@ -23,7 +23,7 @@
         <div class="row-first-right">
             <div class="p-3">
                 <div class="py-3 p-2">
-                    <h1 class="mb-4">{!! __('Аквариум —<br> это <i>удобная</i><br> <nobr>социальная сеть</nobr>') !!}</h1>
+                    <h1 class="mb-4">{!! __('Аквариум — ') !!}<br><i id="js-change">{{ __('удобная') }}</i><br> {!! __('<nobr>социальная сеть</nobr>') !!}</h1>
                 </div>
                 <div class="row-first-button">
                     <button class="btn btn-light" onClick="buttonOpenURL('{{ route('auth.signin') }}')">
@@ -147,3 +147,7 @@
         </div>
     </div> --}}
 @endsection
+
+@push('js')
+<script src="{{ asset('js/main/js-change-text.js') }}"></script>
+@endpush

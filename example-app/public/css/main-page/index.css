@@ -3,6 +3,11 @@
     margin-bottom: 1rem;
 }
 
+.row-first .row-first-right h1 {
+    line-height: 130%;
+    font-size: 2.5rem;
+}
+
 .row-first .row-first-left {
     width: calc(100% - 430px);
 }
@@ -220,5 +225,11 @@
     .row-third .col {
         width: 100%;
         flex: 1 0 100%;
+    }
+}
+
+@media(max-width: 424.98px) {
+    .row-first .row-first-right h1 {
+        font-size: calc(1.25rem + 3vw);;
     }
 }
