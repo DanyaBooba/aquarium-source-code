@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 
-@section('page.title', 'Вход в аккаунт')
+@section('page.title', __('Войти в аккаунт'))
 
 @section('auth.content')
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
@@ -55,12 +55,17 @@
                         </a>
                     </div>
                     <a href="{{ route('auth.signup') }}" class="simple">
-                        Не зарегистрированы?
+                        {{ __('Не зарегистрированы?') }}
                     </a>
                 </div>
             </div>
 
-            <p class="mt-3 mb-3 text-body-secondary small text-center">© 2020–{{ date('Y') }} {{ env('APP_TITLE_SHORT') }}</p>
+            <p class="mt-3 mb-3 text-body-secondary small text-center">
+                © 2020–{{ date('Y') }}
+                <a href="{{ route('main.index') }}" class="text-decoration-none">
+                    {{ __('Аквариум') }}
+                </a>
+            </p>
         </div>
     </main>
 </body>

@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 
-@section('page.title', 'Вход в аккаунт')
+@section('page.title', __('Войти в аккаунт'))
 
 @section('auth.content')
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
@@ -9,7 +9,7 @@
             <div class="authentication-back mb-5">
                 <a href="{{ route('auth.signin') }}" class="authentication-back-back">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
-                    {{ __("Назад") }}
+                    {{ __('Назад') }}
                 </a>
                 <a href="{{ route('main.index') }}" class="authentication-back-close">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
@@ -46,7 +46,12 @@
                 </a>
             </div>
 
-            <p class="mt-3 mb-3 text-body-secondary small text-center">© 2020–{{ date('Y') }} {{ env('APP_TITLE_SHORT') }}</p>
+            <p class="mt-3 mb-3 text-body-secondary small text-center">
+                © 2020–{{ date('Y') }}
+                <a href="{{ route('main.index') }}" class="text-decoration-none">
+                    {{ __('Аквариум') }}
+                </a>
+            </p>
         </div>
     </main>
 

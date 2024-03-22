@@ -411,5 +411,19 @@
     "Логотип": "Logo",
     "Скачать RU": "Download RU",
     "Скачать EN": "Download EN",
-    "Логотип Ч/Б": "B/W logo"
+    "Логотип Ч/Б": "B/W logo",
+
+    "Войти в аккаунт": "Sign in",
+    "или": "or",
+    "Почта": "Email",
+    "Не зарегистрированы?": "Not registered?",
+    "Пароль": "Password",
+    "Проблемы со входом?": "Trouble getting in?",
+    "Назад": "Back",
+
+    "Помощь со входом": "Login assistance",
+    "Восстановить пароль": "Restore password",
+    "Войти по коду": "Login by code",
+    "пользователей<br>подтвердили почту": "users<br>have confirmed mail",
+    "Есть аккаунт?": "Have an account?"
 }

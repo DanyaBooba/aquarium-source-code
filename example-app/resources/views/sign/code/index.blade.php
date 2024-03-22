@@ -99,7 +99,12 @@
                 </div>
             </div>
 
-            <p class="mt-3 mb-3 text-body-secondary small text-center">© 2020–{{ date('Y') }} {{ env('APP_TITLE_SHORT') }}</p>
+            <p class="mt-3 mb-3 text-body-secondary small text-center">
+                © 2020–{{ date('Y') }}
+                <a href="{{ route('main.index') }}" class="text-decoration-none">
+                    {{ __('Аквариум') }}
+                </a>
+            </p>
         </div>
     </main>
 
