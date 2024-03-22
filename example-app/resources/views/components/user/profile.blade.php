@@ -37,7 +37,7 @@
         </div>
     </div>
     <div class="user-profile-buttons">
-        <button class="" onClick="buttonOpenURL('')">
+        <button class="" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#qrCodeModal">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" x2="12" y1="2" y2="15"/></svg>
             {{ __('Поделиться') }}
         </button>
@@ -67,28 +67,4 @@
     </div>
 </div>
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#qrCodeModal">
-  Launch demo modal
-</button>
-
-<div class="modal fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCodeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div id="qr-code-generator">
-
-                </div>
-                <button type="button" class="btn btn-secondary">Скопировать</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="{{ asset('js/user/qrcode.min.js') }}"></script>
-<div id="qrcode"></div>
-<script type="text/javascript">
-    new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
-</script>
+<x-user.profile.qr-code :nickname=$username :id=$id />

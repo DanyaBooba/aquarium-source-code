@@ -10,6 +10,7 @@
 
 <x-user.profile
     name="Даниил Дыбка"
+    :id=123
     username="ddybka"
     :avatar-default=true
     avatar="MAN7"
