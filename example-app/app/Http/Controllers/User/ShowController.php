@@ -11,12 +11,16 @@ class ShowController extends Controller
     public function nickname($nickname)
     {
         // $query = User::first()->email;
-        $query = User::where('username', '=', $nickname)->first();
+        // $query = User::where('username', '=', $nickname)->first();
 
-        dd($query);
+        // dd($query);
+
+        // $profile = (object) [
+        //     "nickname" => "123",
+        // ];
 
         $profile = (object) [
-            "nickname" => "123",
+            "username" => "123",
         ];
 
         return view('user.show', [

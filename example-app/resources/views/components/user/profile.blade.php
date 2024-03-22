@@ -6,7 +6,7 @@
     <div class="user-profile-content">
         <div class="user-profile-left">
             <div class="user-profile-image">
-                <span class="user-profile-image-point" title="Активен">
+                <span class="user-profile-image-point" title="{{ __('Активен') }}">
                     <span class="point-red"></span>
                 </span>
                 <x-user.profile-image
@@ -15,7 +15,7 @@
                 />
             </div>
             <div class="user-profile-text">
-                <p class="user-profile-name" title="{{ $name }}">{{ $name ?? "<безымянный>" }}</p>
+                <p class="user-profile-name" title="{{ $name }}">{{ $name ?? __('<безымянный>') }}</p>
                 @isset($desc)
                 <p class="user-profile-desc" title="{{ $desc }}">{{ $desc }}</p>
                 @endisset

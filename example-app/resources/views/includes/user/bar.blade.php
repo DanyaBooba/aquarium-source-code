@@ -2,24 +2,24 @@
 <div class="social">
     <div class="social-left">
         <div>
-            <a href="{{ route('user.exit') }}" class="social-left-exit">
+            <a href="{{ route('user.exit') }}" class="social-left-exit" title="{{ __('Выйти') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
             </a>
         </div>
         <div>
-            <a href="{{ route('main.index') }}">
+            <a href="{{ route('main.index') }}" title="{{ __('На главную') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             </a>
         </div>
     </div>
     <div class="social-right">
         <div>
-            <a href="{{ route('user.add-post') }}" class="{{ active_link('user.add-post') }}">
+            <a href="{{ route('user.add-post') }}" class="{{ active_link('user.add-post') }}" title="{{ __('Добавить пост') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-circle"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
             </a>
         </div>
         <div>
-            <a href="{{ route('user.search') }}" class="{{ active_link('user.search') }}">
+            <a href="{{ route('user.search') }}" class="{{ active_link('user.search') }}" title="{{ __('Поиск') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
             </a>
         </div>
@@ -27,15 +27,9 @@
 </div>
 @endif
 
-@if(user_login())
-<a href="{{ route('user.index') }}">
+<a href="{{ user_login() ? route('user.index') : route('main.index') }}">
     <x-user.bar-logo />
 </a>
-@else
-<a href="{{ route('main.index') }}">
-    <x-user.bar-logo />
-</a>
-@endif
 
 <ul>
 @if(user_login())
@@ -84,7 +78,7 @@
     </li>
     <li>
         <a href="{{ route('auth.signup') }}">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rectangle-ellipsis"><rect width="20" height="12" x="2" y="6" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-pen"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.375 2.625a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4Z"/></svg>
             {{ __('Создать аккаунт') }}
         </a>
     </li>
