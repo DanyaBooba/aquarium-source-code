@@ -10,12 +10,12 @@
 <div class="container-settings-main">
     <ul class="list-group">
         <li class="fs-5 list-group-item">
-            <a href="#" class="settings-profile">
+            <a href="{{ route('main.setlocale', 'ru') }}" class="settings-profile">
                 {{ __('Русский') }}
             </a>
         </li>
         <li class="fs-5 list-group-item">
-            <a href="#" class="settings-profile">
+            <a href="{{ route('main.setlocale', 'en') }}" class="settings-profile">
                 {{ __('Английский') }}
             </a>
         </li>

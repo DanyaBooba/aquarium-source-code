@@ -81,7 +81,7 @@
                 <div id="qr-code-generator">
 
                 </div>
-                {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
+                <button type="button" class="btn btn-secondary">Скопировать</button>
             </div>
         </div>
     </div>

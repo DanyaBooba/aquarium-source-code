@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LocaleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainRouteController;
 use App\Http\Controllers\MainUserController;
@@ -9,6 +10,8 @@ Route::prefix('/')->group(function () {
     Route::get('/', [MainRouteController::class, 'index'])->name('main.index');
     Route::get('download', [MainRouteController::class, 'download'])->name('main.download');
     Route::get('faq', [MainRouteController::class, 'faq'])->name('main.faq');
+
+    Route::get('setlocale/{locale}', [LocaleController::class, 'store'])->name('main.setlocale');
 
     Route::prefix('about')->group(function () {
 
