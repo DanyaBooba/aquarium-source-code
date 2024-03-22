@@ -6,10 +6,6 @@
     width: 30%;
 }
 
-/* .container-settings .container-settings-main {
-    padding: 1.5rem;
-} */
-
 .container-settings .container-settings-main ul {
     background-color: var(--settings-main-background);
     border-radius: 12px;
@@ -18,41 +14,62 @@
     padding: 0;
     margin: 0;
 
-    padding: 0 1rem;
+    padding-left: 0rem;
     margin-bottom: 1rem;
 }
 
+.container-settings .container-settings-main ul li:last-child span {
+    border-bottom: none !important;
+}
+
+.container-settings .container-settings-main ul li:last-child a {
+    padding-bottom: .25rem !important;
+}
+
 .container-settings .container-settings-main ul li:last-child {
+    border-bottom-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
     border-bottom-width: 0 !important;
 }
 
+.container-settings .container-settings-main ul li:first-child a {
+    padding-top: .25rem !important;
+}
+
 .container-settings .container-settings-main ul li:first-child {
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
     border-top-width: 0 !important;
 }
 
 .container-settings .container-settings-main ul li {
     background-color: transparent !important;
-    border-color: var(--settings-main-border) !important;
+    border-bottom: none !important;
 
-    padding-top: 1rem !important;
-    padding-bottom: .75rem !important;
-
-    padding-left: .75rem !important;
+    padding: 0 !important;
 
     border-left-width: 0 !important;
     border-right-width: 0 !important;
 
     border-radius: 0 !important;
+    transition: .15s;
 }
 
 .container-settings .container-settings-main ul li a span {
     width: 100% !important;
+    padding-bottom: .9rem;
+    margin-top: 1rem;
+    border-bottom: .1rem solid var(--settings-main-border);
+}
+
+.container-settings .container-settings-main ul li:hover a span {
+    color: var(--text-color) !important;
 }
 
 .container-settings .container-settings-main ul li a {
     text-decoration: none !important;
-    /* text-underline-offset: 1.62rem !important; */
     color: var(--text-color) !important;
+    padding-left: 1.5rem;
 
     display: flex;
     align-items: center;
@@ -62,10 +79,10 @@
 
 .container-settings .container-settings-main ul li a svg {
     stroke: var(--settings-main-svg) !important;
-    padding: .5rem;
+    padding: .4rem;
 
     border-radius: 8px;
-    margin-right: .75rem;
+    margin-right: 1rem;
 
     width: 42px;
     height: 42px;
@@ -102,6 +119,10 @@
 
     .container-settings .container-settings-main ul li a:hover {
         color: var(--text-color-hover) !important;
+    }
+
+    .container-settings .container-settings-main ul li:hover {
+        background-color: var(--setting-background-hover) !important;
     }
 }
 

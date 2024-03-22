@@ -12,7 +12,7 @@
             <img src="{{ asset("/img/user/achivs/achiv-$i.jpg") }}" alt="">
         </span>
         <x-circle-text-simple>
-            подписан на телеграм
+            {{ __('подписан на телеграм') }}
         </x-circle-text-simple>
     </div>
     @endfor

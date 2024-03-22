@@ -454,5 +454,33 @@
     "На главную": "Home",
     "Выйти": "Exit",
     "Создать аккаунт": "Create an account",
-    "Актуальное": "Topical"
+    "Актуальное": "Topical",
+
+    "Готово": "Done",
+    "Язык": "Language",
+    "Русский": "Russian",
+    "Английский": "English",
+
+    "Персонализация": "Appearance",
+    "Аватарка": "Avatar",
+    "Шапка": "Cap",
+
+    "Сведение": "Information",
+    "Имя пользователя": "Username",
+    "Может содержать только латинские буквы в нижнем регистре.": "Can only contain lower case Latin letters.",
+    "К примеру,": "For example,",
+    "Имя": "First name",
+    "Фамилия": "Last name",
+    "Даниил": "William",
+    "Иванов": "Smit",
+    "Доступ": "Access",
+    "Удалить аккаунт": "Delete account",
+
+    "Вход в аккаунт": "Sign in",
+    "Смена пароля": "Password change",
+
+    "Текущий пароль": "Current password",
+    "Новый пароль": "New password",
+
+    "подписан на телеграм": "subs to Telegram"
 }
