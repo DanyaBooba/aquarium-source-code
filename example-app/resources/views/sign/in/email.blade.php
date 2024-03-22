@@ -40,13 +40,13 @@
                     <button class="btn btn-primary py-3 mt-3" type="submit">{{ __('Войти') }}</button>
                 </form>
 
-                <a href="{{ route('auth.help') }}" class="d-flex justify-content-center mt-3 mb-5 text-decoration-none">
+                <a href="{{ route('auth.help') }}" class="d-flex justify-content-center mt-4 mb-5 text-decoration-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-question"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
                     {{ __('Проблемы со входом?') }}
                 </a>
             </div>
 
-            <p class="mt-3 mb-3 text-body-secondary small text-center">
+            <p class="authentication-text-more">
                 © 2020–{{ date('Y') }}
                 <a href="{{ route('main.index') }}" class="text-decoration-none">
                     {{ __('Аквариум') }}

@@ -1,5 +1,5 @@
 .row-first .row-first-right {
-    width: 430px;
+    width: 440px;
     margin-bottom: 1rem;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .row-first .row-first-left {
-    width: calc(100% - 430px);
+    width: calc(100% - 440px);
 }
 
 .row-first .row-first-right div.p-3 {

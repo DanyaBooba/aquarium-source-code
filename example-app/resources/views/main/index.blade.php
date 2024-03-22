@@ -7,7 +7,7 @@
 @endpush
 
 @section('main.content')
-    <div class="row row-first mb-2 gx-3">
+    <div class="row row-first mb-2 gx-4">
         <div class="row-first-left">
             <div class="p-3">
                 <div class="d-flex justify-content-center pb-2 mt-auto" style="margin-top: -10px">
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="row row-second g-3">
+    <div class="row row-second g-4">
         <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="p-4">
                 <h2>{{ __('Стикеры за регистрацию') }}</h2>

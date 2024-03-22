@@ -7,10 +7,26 @@
     align-items: center;
 }
 
+.authentication.col-md-4 {
+    padding: 1rem !important;
+}
+
 .authentication .authentication-back a.authentication-back-back {
     display: flex;
     align-items: center;
     text-decoration: none;
+
+    color: var(--text-muted) !important;
+}
+
+.authentication .authentication-text-more {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    font-size: .875rem;
+    text-align: center;
+
+    color: var(--text-muted);
 }
 
 .authentication .authentication-back a.authentication-back-close {
@@ -69,6 +85,8 @@
     background-color: var(--body-color);
     border: none !important;
 
+    border-radius: 8px;
+
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
@@ -88,6 +106,13 @@
     border-radius: 8px;
     padding-top: 1rem;
     padding-bottom: 1rem;
+
+    transition: .15s !important;
+}
+
+.authentication #signin-choose .d-flex div a:is(:focus, :focus-within, :focus-visible) {
+    color: var(--text-color) !important;
+    background-color: var(--signin-choose-background-color-hover) !important;
 }
 
 .authentication #signin-choose .d-flex div button {
@@ -104,6 +129,8 @@
     border-radius: 8px;
     padding-top: 1rem;
     padding-bottom: 1rem;
+
+    transition: .15s !important;
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-yandex button svg {
@@ -194,5 +221,35 @@
 @media(hover: hover) {
     .authentication #signin-choose .d-flex div button:hover {
         background-color: var(--signin-choose-background-color-hover);
+    }
+
+    .authentication #signin-choose .d-flex div a:hover {
+        color: var(--text-color) !important;
+        background-color: var(--signin-choose-background-color-hover) !important;
+    }
+
+    .authentication .authentication-back a.authentication-back-back:hover {
+        color: var(--text-color) !important;
+    }
+}
+
+@media(hover: none) {
+    .authentication #signin-choose .d-flex div button:active {
+        background-color: var(--signin-choose-background-color-hover);
+    }
+
+    .authentication #signin-choose .d-flex div a:active {
+        color: var(--text-color) !important;
+        background-color: var(--signin-choose-background-color-hover) !important;
+    }
+
+    .authentication .authentication-back a.authentication-back-back:active {
+        color: var(--text-color) !important;
+    }
+}
+
+@media(max-width: 767.98px) {
+    .authentication.col-md-4 {
+        padding: 0rem !important;
     }
 }

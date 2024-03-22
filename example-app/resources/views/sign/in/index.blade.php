@@ -60,7 +60,7 @@
                 </div>
             </div>
 
-            <p class="mt-3 mb-3 text-body-secondary small text-center">
+            <p class="authentication-text-more">
                 © 2020–{{ date('Y') }}
                 <a href="{{ route('main.index') }}" class="text-decoration-none">
                     {{ __('Аквариум') }}
