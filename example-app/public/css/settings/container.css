@@ -112,6 +112,14 @@
     background-color: var(--settings-background-personalization);
 }
 
+.container-settings .container-settings-main ul li a.settings-current-locale svg {
+    background-color: var(--settings-background-privacy);
+}
+
+.container-settings .container-settings-main ul li a.settings-locale svg {
+    background-color: var(--settings-background-profile);
+}
+
 @media(hover: hover) {
     .container-settings .container-settings-main ul li a:hover svg {
         stroke: var(--svg-icon-invert);

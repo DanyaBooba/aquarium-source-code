@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 if (!function_exists('active_link')) {
@@ -58,5 +59,12 @@ if (!function_exists('user_cap_image_exist')) {
         } else {
             return "/img/user/bg/BG1.jpg";
         }
+    }
+}
+
+if (!function_exists('settings_language_locale')) {
+    function settings_language_locale(string $locale): string
+    {
+        return App::currentLocale() === $locale ? "settings-current-locale" : "settings-locale";
     }
 }

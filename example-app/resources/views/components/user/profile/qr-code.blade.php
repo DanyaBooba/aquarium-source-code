@@ -14,7 +14,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" onClick="buttonCopyURL('{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}')">
-                    Скопировать
+                    {{ __('Скопировать') }}
                 </button>
             </div>
         </div>
