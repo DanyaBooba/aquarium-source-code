@@ -103,8 +103,8 @@
     --cookie-accept-border: #2f2b5a;
     --cookie-accept-shadow: rgb(50, 46, 91, .07);
 
-    --cookie-accept-button-background: #e2efff;
-    --cookie-accept-button-hover: #b9cee7;
+    --cookie-accept-button-background: #fff;
+    --cookie-accept-button-hover: #d2d2d2;
 
     --setting-background-hover: #323060;
 }
