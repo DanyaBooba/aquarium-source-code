@@ -31,10 +31,9 @@
 
 .modal.modal-qrcode .modal-dialog .modal-content .modal-body .qr-code-generator {
     padding: .5rem;
-    background-color: #fff;
 }
 
-.modal.modal-qrcode .modal-dialog .modal-content .modal-body .qr-code-generator img {
+.modal.modal-qrcode .modal-dialog .modal-content .modal-body .qr-code-generator svg {
     max-width: 100%;
     height: auto;
 

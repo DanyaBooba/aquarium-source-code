@@ -1,5 +1,6 @@
 :root {
     --accent: #575FCF;
+    --accent-highlight: #ffffff;
 
     --header-background-color: rgb(24, 22, 42, .84);
     --header-border-bottom: #433e6d;

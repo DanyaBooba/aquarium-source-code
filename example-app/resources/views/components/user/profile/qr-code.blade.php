@@ -1,4 +1,4 @@
-<div class="modal show modal-qrcode fade" style="display: block; padding-left: 0px;" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCodeModalLabel" aria-hidden="true">
+<div class="modal modal-qrcode fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCodeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -10,7 +10,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div id="qr-code-generator" class="qr-code-generator"></div>
+                <div id="qr-code-generator" class="qr-code-generator" title="{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}"></div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" onClick="buttonCopyURL('{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}')">
@@ -22,38 +22,37 @@
 </div>
 
 <script src="{{ asset('js/user/qrcode.min.js') }}"></script>
-<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
 <script>
-    const qrCode = new QRCodeStyling({
-        width: 300,
-        height: 300,
+    let qrcodeBlock = document.getElementById("qr-code-generator");
+    let data = "{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}";
+
+    let qrcode = new QRCodeStyling({
+        width: 512,
+        height: 512,
         type: "svg",
-        data: "https://dev.to/luckynkosi/",
-        image: "https://d2fltix0v2e0sb.cloudfront.net/dev-rainbow.svg",
+        data: data,
+        image: "{{ asset('img/logo/favicon-2.svg') }}",
         dotsOptions: {
-            color: "#4267b2",
+            color: "var(--accent-highlight)",
             type: "rounded"
         },
+        cornersSquareOptions: {
+            type: "extra-rounded"
+        },
         backgroundOptions: {
-            color: "#e9ebee",
+            color: "var(--modal-background)",
         },
         imageOptions: {
             crossOrigin: "anonymous",
+            imageSize: 0.4,
             margin: 20
         }
     });
 
-    qrCode.append(document.getElementById("qr-code-generator"));
+    qrcode.append(qrcodeBlock);
 
-    // qrCode.download({ name: "qr", extension: "svg" });
+    let qrcodeHtml = document.querySelector("#qr-code-generator svg");
+
+    qrcodeHtml.setAttribute("viewBox", "0 0 512 512");
+
 </script>
-{{-- <script type="text/javascript">
-    new QRCode(document.getElementById("qr-code-generator"), {
-            text: "{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}",
-            width: 1024,
-            height: 1024,
-            colorDark: "#323791",
-            colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.Q,
-        });
-</script> --}}
