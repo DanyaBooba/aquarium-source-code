@@ -25,10 +25,11 @@
 <script>
     let qrcodeBlock = document.getElementById("qr-code-generator");
     let data = "{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}";
+    let size = 512;
 
     let qrcode = new QRCodeStyling({
-        width: 512,
-        height: 512,
+        width: size,
+        height: size,
         type: "svg",
         data: data,
         image: "{{ asset('img/logo/favicon-2.svg') }}",
@@ -53,6 +54,6 @@
 
     let qrcodeHtml = document.querySelector("#qr-code-generator svg");
 
-    qrcodeHtml.setAttribute("viewBox", "0 0 512 512");
+    qrcodeHtml.setAttribute("viewBox", `0 0 ${size} ${size}`);
 
 </script>

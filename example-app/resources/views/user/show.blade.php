@@ -7,7 +7,7 @@
 <x-user.profile
     name="Даниил Иванов"
     :id=123
-    username="ddybka"
+    username="newusername"
     :avatar-default=true
     avatar="MAN2"
     :cap-default=true

@@ -74,3 +74,10 @@
         border-color: var(--cookie-accept-button-hover);
     }
 }
+
+@media(max-width: 424.98px) {
+    .modal.modal-qrcode .modal-dialog .modal-content .modal-body .qr-code-generator svg,
+    .modal.modal-qrcode .modal-dialog .modal-content .modal-body .qr-code-generator {
+        padding: 0;
+    }
+}
