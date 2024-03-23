@@ -60,7 +60,7 @@
                         <img src="{{ asset('img/social/yandex.svg') }}" alt="{{ __('Яндекс') }}">
                     </a>
                     <a href="{{ route('auth.signin') }}">
-                        <img src="{{ asset('img/social/vk.svg') }}" alt="{{ __('Вконтакте') }}">
+                        <img src="{{ asset('img/social/vk.svg') }}" alt="{{ __('ВКонтакте') }}">
                     </a>
                     <a href="{{ route('auth.signin') }}">
                         <img src="{{ asset('img/social/mail_text.svg') }}" class="row-second-social-mailru" alt="{{ __('Меил ру') }}">

@@ -18,27 +18,31 @@ function anchors() {
     let list = document.getElementById("left-bar-anchors");
 
     let idNumber = 1000;
-    document.querySelectorAll("h2, h3, h4, h5, h6").forEach((title) => {
-        if (!title.classList.contains("header-totitle")) {
-            let id = `anchor${idNumber}`;
-            title.id = id;
-            if (list) {
-                list.insertAdjacentHTML(
-                    "beforeend",
-                    `<li class='left-bar-anchors-${title.tagName.toLowerCase()}'><a href='#${id}'>${listTextContext(
-                        list.tagName.toLowerCase(),
-                        title.textContent
-                    )}</a></li>`
-                );
-            }
-            title.classList.add("title-anchor");
-            title.innerHTML = `<a href='#${id}'
+    document
+        .querySelectorAll(
+            ".col-7 h2, .col-7 h3, .col-7 h4, .col-7 h5, .col-7 h6"
+        )
+        .forEach((title) => {
+            if (!title.classList.contains("header-totitle")) {
+                let id = `anchor${idNumber}`;
+                title.id = id;
+                if (list) {
+                    list.insertAdjacentHTML(
+                        "beforeend",
+                        `<li class='left-bar-anchors-${title.tagName.toLowerCase()}'><a href='#${id}'>${listTextContext(
+                            list.tagName.toLowerCase(),
+                            title.textContent
+                        )}</a></li>`
+                    );
+                }
+                title.classList.add("title-anchor");
+                title.innerHTML = `<a href='#${id}'
             onClick='copyLink("${window.location.href}#${id}")'>
             ${svgAnchor}</a>${title.innerHTML}`;
 
-            idNumber += 1;
-        }
-    });
+                idNumber += 1;
+            }
+        });
 }
 
 function listTextContext(tag, text) {

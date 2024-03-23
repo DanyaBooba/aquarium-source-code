@@ -71,9 +71,28 @@ header .header-content-links {
 }
 
 header .header-content-profile {
+    color: var(--accent) !important;
     display: flex;
     text-decoration: none;
     align-items: center;
+}
+
+header .header-content-sign {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+header .header-content-sign svg {
+    width: 20px;
+    height: 20px;
+    margin-right: .25rem;
+}
+
+header .header-content-profile svg {
+    width: 20px;
+    height: 20px;
+    margin-right: .25rem;
 }
 
 header .header-content-profile span:has(img) {
@@ -82,7 +101,6 @@ header .header-content-profile span:has(img) {
 }
 
 header .header-content-profile img {
-    background-color: var(--header-background-color);
     width: 36px;
     height: 36px;
     padding: .1rem;
@@ -140,7 +158,7 @@ header .header-content button.navbar-toggler {
 
     header .header-content-links li a:hover {
         color: var(--text-color-hover);
-        text-decoration: underline !important;
+        text-decoration: underline;
     }
 
     header .header-content button.navbar-toggler:active svg {

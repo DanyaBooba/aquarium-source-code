@@ -9,7 +9,6 @@
     "Стикер аквариума": "Aquarium sticker",
     "Удобная авторизация через соцсети": "Convenient authorization via social networks",
     "Яндекс": "Yandex",
-    "Вконтакте": "VKontakte",
     "Меил ру": "Mail ru",
     "Новости проекта": "Project News",
     "<nobr>и телеграм</nobr> канал": "<nobr>and the Telegram</nobr> channel",
@@ -483,5 +482,9 @@
     "Новый пароль": "New password",
 
     "подписан на телеграм": "subs to Telegram",
-    "Скопировать": "Copy"
+    "Скопировать": "Copy",
+
+    "Исследуй": "Explore",
+    "ВКонтакте": "VKontakte",
+    "Аквариум — это социальная сеть,<br> где вы можете создать свой мир.": "Aquarium is a social network, where<br>you can create your own world."
 }

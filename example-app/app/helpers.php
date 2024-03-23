@@ -68,3 +68,10 @@ if (!function_exists('settings_language_locale')) {
         return App::currentLocale() === $locale ? "settings-current-locale" : "settings-locale";
     }
 }
+
+if (!function_exists('footer_language_locale')) {
+    function footer_language_locale(string $locale): string
+    {
+        return App::currentLocale() === $locale ? "active" : "";
+    }
+}

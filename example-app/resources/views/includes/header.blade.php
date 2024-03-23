@@ -19,14 +19,17 @@
                     @if(user_login())
                     <li>
                         <a href="{{ route('user.index') }}" class="link-body-emphasis header-content-profile">
-                            <span>
-                                <img src="{{ asset('img/user/logo/MAN1.png') }}" alt="{{ __('Профиль') }}">
-                            </span>
-                            <p>{{ __('Профиль') }}</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            {{ __('Профиль') }}
                         </a>
                     </li>
                     @else
-                    <li><a href="{{ route('auth.signin') }}" class="nav-link link-secondary">{{ __('Войти') }}</a></li>
+                    <li>
+                        <a href="{{ route('auth.signin') }}" class="nav-link link-secondary header-content-sign">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
+                            {{ __('Войти') }}
+                        </a>
+                    </li>
                     @endif
                     {{-- <li><a href="{{ route('main.download') }}" class="nav-link link-download" style="pointer-events: none">{{ __('Скачать') }}</a></li> --}}
                 </ul>
