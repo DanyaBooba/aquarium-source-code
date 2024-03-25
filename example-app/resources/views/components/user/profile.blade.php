@@ -7,7 +7,7 @@
         <div class="user-profile-left">
             <div class="user-profile-image">
                 <span class="user-profile-image-point" title="{{ __('Активен') }}">
-                    <span class="point-red"></span>
+                    <span class="point-green"></span>
                 </span>
                 <x-user.profile-image
                     :avatar-default=$avatarDefault

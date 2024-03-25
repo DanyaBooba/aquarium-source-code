@@ -2,8 +2,7 @@ h2.title-anchor,
 h3.title-anchor,
 h4.title-anchor,
 h5.title-anchor,
-h6.title-anchor
-{
+h6.title-anchor {
     display: flex;
     margin-left: -2.5rem;
 }
@@ -12,8 +11,7 @@ h2.title-anchor a,
 h3.title-anchor a,
 h4.title-anchor a,
 h5.title-anchor a,
-h6.title-anchor a
-{
+h6.title-anchor a {
     opacity: 0;
     margin-right: .5rem;
     margin-left: .5rem;
@@ -28,6 +26,7 @@ h5.title-anchor a svg,
 h6.title-anchor a svg {
     margin-bottom: .1rem;
 }
+
 h2.title-anchor a:is(:focus, :focus-visible, :focus-within),
 h3.title-anchor a:is(:focus, :focus-visible, :focus-within),
 h4.title-anchor a:is(:focus, :focus-visible, :focus-within),
@@ -44,6 +43,8 @@ h6.title-anchor:hover a {
     opacity: 1;
 }
 
+/* media */
+
 @media(max-width: 767.98px) {
     h2.title-anchor,
     h3.title-anchor,
@@ -53,13 +54,15 @@ h6.title-anchor:hover a {
         display: flex;
         flex-direction: row-reverse;
         justify-content: start;
+
         margin-left: 0;
     }
-h2.title-anchor a svg,
-h3.title-anchor a svg,
-h4.title-anchor a svg,
-h5.title-anchor a svg,
-h6.title-anchor a svg {
-    margin-bottom: .25rem;
-}
+
+    h2.title-anchor a svg,
+    h3.title-anchor a svg,
+    h4.title-anchor a svg,
+    h5.title-anchor a svg,
+    h6.title-anchor a svg {
+        margin-bottom: .25rem;
+    }
 }

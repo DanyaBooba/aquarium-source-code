@@ -4,12 +4,12 @@
     padding-right: 1rem;
 }
 
-.container-simple svg.logo {
-    fill: var(--svg-icon);
-}
-
 .container-simple .logo {
     margin-top: 5rem;
+}
+
+.container-simple svg.logo {
+    fill: var(--svg-icon);
 }
 
 .container-simple .row .col {
@@ -20,14 +20,16 @@
     margin-top: 2rem;
 }
 
+.container-simple-numbers {
+    margin-right: 1rem;
+}
+
 .container-simple-numbers svg {
     width: calc(1.525rem + 3.3vw);
     height: calc(1.525rem + 3.3vw);
 }
 
-.container-simple-numbers {
-    margin-right: 1rem;
-}
+/* media */
 
 @media(max-width: 991.98px) {
     .container-simple .row .col {

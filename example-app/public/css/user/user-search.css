@@ -18,14 +18,13 @@
     color: var(--text-color) !important;
     border: .1rem solid var(--form-input-border) !important;
 
+    background-image: var(--form-select-cursor) !important;
+
     border-radius: 8px;
     padding: 1rem 1.5rem;
-
-    background-image: var(--form-select-cursor) !important;
 }
 
-.user-search-users
-{
+.user-search-users {
     margin-top: 1rem;
 }
 
@@ -33,21 +32,22 @@
     display: flex;
 }
 
-.user-search-users a.user-search-users-content
-{
+.user-search-users a.user-search-users-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    padding: 1rem;
+    min-width: 192px;
+
     border: .1rem solid var(--user-search-border);
     border-radius: 8px;
 
-    min-width: 192px;
-
     background-color: var(--user-serach-background);
     text-decoration: none !important;
+
+    padding: 1rem;
+
     transition: .15s;
 }
 
@@ -58,6 +58,7 @@
 
 .user-search-users .user-search-users-content img {
     width: 80px;
+
     margin-bottom: .5rem;
     border-radius: 100px;
 }
@@ -91,6 +92,23 @@
     color: var(--text-color);
 }
 
+/* media */
+
+@media(max-width: 767.98px) {
+    .user-search-users div.col {
+        justify-content: center;
+    }
+
+    .user-search-users {
+        width: 100% !important;
+        flex-wrap: wrap;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
 @media(hover: hover) {
     .user-search-users a.user-search-users-content:hover {
         color: var(--text-color) !important;
@@ -120,20 +138,5 @@
 
     .user-search-filters button:active {
         color: var(--text-color-hover);
-    }
-}
-
-@media(max-width: 767.98px) {
-    .user-search-users div.col {
-        justify-content: center;
-    }
-
-    .user-search-users {
-        width: 100% !important;
-        flex-wrap: wrap;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
     }
 }

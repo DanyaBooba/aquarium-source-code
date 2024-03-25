@@ -1,5 +1,4 @@
-.user-profile
-{
+.user-profile {
     background-color: var(--body-color);
 }
 
@@ -8,7 +7,6 @@
     align-items: end;
 
     margin-right: auto;
-
     margin-top: -4.5rem;
 }
 
@@ -22,14 +20,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     margin-right: 2rem;
     margin-bottom: 1rem;
 }
 
 .user-profile .user-profile-right div p:first-child {
     font-size: 2rem;
-    margin-bottom: -.5rem;
     font-family: ResistSans;
+
+    margin-bottom: -.5rem;
 }
 
 .user-profile .user-profile-right div p:not(:first-child) {
@@ -46,11 +46,11 @@
     align-items: center;
 
     position: absolute;
-    margin-left: 112px;
-    margin-top: 112px;
-
     width: 26px;
     height: 26px;
+
+    margin-left: 112px;
+    margin-top: 112px;
 
     border-radius: 50%;
     background: var(--user-profile-image-background);
@@ -58,7 +58,6 @@
 
 .user-profile .user-profile-image-point span {
     position: absolute;
-
     width: 16px;
     height: 16px;
 
@@ -66,7 +65,15 @@
 }
 
 .user-profile .user-profile-image-point span.point-red {
+    background-color: #eb2f06;
+}
+
+.user-profile .user-profile-image-point span.point-green {
     background-color: #1dd51d;
+}
+
+.user-profile .user-profile-image-point span.point-gray {
+    background-color: #969696;
 }
 
 .user-profile .user-profile-image {
@@ -99,8 +106,7 @@
     margin-bottom: 0;
 }
 
-.user-profile .user-profile-text p.user-profile-name
-{
+.user-profile .user-profile-text p.user-profile-name {
     font-size: 30px;
     font-family: ResistSans;
 }
@@ -108,10 +114,10 @@
 .user-profile .user-profile-content {
     display: flex;
     position: relative;
+    min-height: 116px;
 
     flex-wrap: wrap;
 
-    min-height: 116px;
     background: var(--user-profile-image-background);
 
     padding: 1rem;
@@ -134,9 +140,9 @@
     display: flex;
     align-items: center;
 
-    margin-top: .5rem;
     overflow: scroll;
 
+    margin-top: .5rem;
     padding-bottom: .5rem;
 }
 
@@ -147,14 +153,15 @@
 .user-profile .user-profile-buttons button {
     display: flex;
     align-items: center;
+    min-width: fit-content;
 
+    color: var(--user-profile-button-text);
     background-color: var(--user-profile-button);
     border: none;
     border-radius: 8px;
+
     padding: .5rem 1rem;
     margin-right: .25rem;
-    min-width: fit-content;
-    color: var(--user-profile-button-text);
 }
 
 .user-profile .user-profile-buttons button svg {
@@ -163,6 +170,8 @@
 
     margin-right: .5rem;
 }
+
+/* media */
 
 @media(max-width: 767.98px) {
     .user-profile-content {
@@ -213,13 +222,11 @@
         display: block;
     }
 
-    .user-profile .user-profile-text p.user-profile-name
-    {
+    .user-profile .user-profile-text p.user-profile-name {
         word-wrap: break-word;
     }
 
-    .user-profile .user-profile-text p.user-profile-desc
-    {
+    .user-profile .user-profile-text p.user-profile-desc {
         word-wrap: break-word;
     }
 }
@@ -230,8 +237,7 @@
         min-height: 156px !important;
     }
 
-    .user-profile .user-profile-text p.user-profile-name
-    {
+    .user-profile .user-profile-text p.user-profile-name {
         max-width: 300px;
 
         overflow: hidden;
@@ -239,8 +245,7 @@
         white-space: nowrap;
     }
 
-    .user-profile .user-profile-text p.user-profile-desc
-    {
+    .user-profile .user-profile-text p.user-profile-desc {
         max-width: 300px;
 
         overflow: hidden;

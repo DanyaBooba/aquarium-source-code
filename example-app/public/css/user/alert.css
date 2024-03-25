@@ -1,16 +1,17 @@
 .alert {
+    display: flex;
+    align-items: center;
+
+    color: var(--text-color);
+
     border-radius: 0 !important;
     background: var(--body-color) !important;
     border-color: var(--body-color);
     border-bottom-color: var(--user-alert-border) !important;
-    color: var(--text-color);
-    margin-bottom: .25rem;
 
+    margin-bottom: .25rem;
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
-
-    display: flex;
-    align-items: center;
 }
 
 .alert span {
@@ -24,18 +25,21 @@
 }
 
 .alert button {
-    margin-left: auto;
-    background-color: var(--body-color) !important;
-    border-color: var(--body-color) !important;
-    border: 0;
-    box-sizing: border-box;
     position: relative !important;
-    padding: 0 !important;
-    top: 0 !important;
-    right: 0 !important;
+    box-sizing: border-box;
+
     width: fit-content !important;
     height: fit-content !important;
+
+    border: 0;
+    top: 0 !important;
+    right: 0 !important;
+
+    margin-left: auto;
+    padding: 0 !important;
     background: transparent !important;
+    background-color: var(--body-color) !important;
+    border-color: var(--body-color) !important;
 }
 
 .alert button svg {

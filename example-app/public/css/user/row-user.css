@@ -1,9 +1,9 @@
 .row-user-bar {
-    background: var(--user-bar);
-    padding: 3rem 2rem;
-
     position: sticky;
     top: 1rem;
+
+    background: var(--user-bar);
+    padding: 3rem 2rem;
 }
 
 .row-user-content h1 {
@@ -76,6 +76,8 @@
 .row-user-bar .social a.active svg {
     stroke: var(--text-color-hover);
 }
+
+/* media */
 
 @media(max-width: 767.98px) {
     .row-user-bar {

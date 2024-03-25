@@ -1,0 +1,109 @@
+:root {
+    --accent: #575FCF;
+    --accent-highlight: #363b8b;
+
+    --body-color: #f9f9f9;
+    --body-color-alpha: #f9f9f999;
+
+    --text-color: #000;
+    --text-invert: #fff;
+    --text-code: #000;
+    --text-muted: #6c757d;
+
+    --text-color-hover: #0984e3;
+    --text-color-link-underline: #a8a8a8;
+    --text-code-border: #0984e3;
+
+    --svg-icon: #000;
+    --svg-icon-invert: #fff;
+    --svg-github: #24292f;
+
+    --header-background: rgba(255, 255, 255, .84);
+    --header-border: #dee2e6;
+    --header-link-download-background: #fff;
+    --header-link-download-border: #dee2e6;
+
+    --footer-background: #fff;
+    --footer-border: #dee2e6;
+
+    --signin-choose-background-color: #d9d9d9;
+    --signin-choose-background-color-hover: #d9d9d9;
+
+    --signin-choose-or-border-bottom: #e2e2e2;
+    --signin-choose-or-text-color: #acacac;
+
+    --authentication-back: #efefef;
+
+    --list-marker-color: #bababa;
+
+    --blog-text-on-dark: #fff;
+    --blog-dark-post: #212529;
+    --blog-white-post: #fff;
+
+    --pagination-active: #000;
+
+    --form-input-border: #ced4db;
+    --form-input-background: #fff;
+
+    --main-dark-block: #0984e3;
+    --main-dark-block-button: rgb(19, 102, 166, .9);
+
+    --user-bar: #f1f1f4;
+    --user-bar-exit: #dd303f;
+
+    --user-nav-link-active: #0984e3;
+    --user-nav-background: #fff;
+    --user-nav-border: #edeff2;
+    --user-nav-border-text: #000;
+
+    --user-profile-image-background: #fff;
+    --user-profile-image-background-image: #fff;
+    --user-profile-image-border: #d9d9e0;
+    --user-profile-button: #fff;
+
+    --user-search-border: #ced4db;
+    --user-serach-background: #f9f9f9;
+    --user-serach-background-hover: #f1f1f4;
+    --user-search-button-background: #c9daeb;
+
+    --faq-design-button: #123;
+
+    --user-alert-text-warning: #ca8726;
+    --user-alert-border: #dee2e6;
+
+    --settings-main-background: #fff;
+    --settings-main-border: #dedeeb;
+    --settings-main-svg: #fff;
+
+    --settings-background-profile: #718093;
+    --settings-background-notifications: #e84118;
+    --settings-background-privacy: #0097e6;
+    --settings-background-data: #0be881;
+    --settings-background-devices: #ffa801;
+    --settings-background-personalization: #cd84f1;
+
+    --button-top-background: #fff;
+    --button-top-border: #e6e6e6;
+
+    --collapse-button-background: #fff;
+    --collapse-body-background: #fff;
+    --collapse-border: #dfdfdf;
+    --collapse-filter: ;
+
+    --modal-background: #fff;
+
+    --settings-image-active: #0984e3;
+
+    --achivs-background: #fff;
+
+    --form-select-cursor: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+
+    --cookie-accept-background: #fff;
+    --cookie-accept-border: #ecf1f6;
+    --cookie-accept-shadow: rgb(151, 149, 194, .07);
+
+    --cookie-accept-button-background: #1d2228;
+    --cookie-accept-button-hover: #121417;
+
+    --setting-background-hover: #dedeeb;
+}

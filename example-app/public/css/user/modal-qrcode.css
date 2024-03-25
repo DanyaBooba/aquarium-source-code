@@ -10,17 +10,18 @@
     display: flex;
     width: 100%;
     justify-content: center;
+
     margin-bottom: 0;
     padding-left: 32px;
 }
 
 .modal.modal-qrcode .modal-dialog .modal-content {
+    max-width: 400px;
     background-color: var(--modal-background);
 
     border: none !important;
     border-radius: 12px;
 
-    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -42,6 +43,7 @@
 
 .modal.modal-qrcode .modal-dialog .modal-content .modal-footer {
     display: flex;
+
     border-top: none !important;
     padding-top: 0 !important;
     padding-left: 2rem;
@@ -59,6 +61,15 @@
     border-color: var(--cookie-accept-button-background);
 }
 
+/* media */
+
+@media(max-width: 424.98px) {
+    .modal.modal-qrcode .modal-dialog .modal-content .modal-body .qr-code-generator svg,
+    .modal.modal-qrcode .modal-dialog .modal-content .modal-body .qr-code-generator {
+        padding: 0;
+    }
+}
+
 @media(hover: hover) {
     .modal.modal-qrcode .modal-dialog .modal-content .modal-footer button:hover {
         color: var(--text-invert);
@@ -72,12 +83,5 @@
         color: var(--text-invert);
         background-color: var(--cookie-accept-button-hover);
         border-color: var(--cookie-accept-button-hover);
-    }
-}
-
-@media(max-width: 424.98px) {
-    .modal.modal-qrcode .modal-dialog .modal-content .modal-body .qr-code-generator svg,
-    .modal.modal-qrcode .modal-dialog .modal-content .modal-body .qr-code-generator {
-        padding: 0;
     }
 }
