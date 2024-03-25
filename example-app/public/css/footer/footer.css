@@ -1,6 +1,6 @@
 footer.footer {
-    border-top: .1rem solid var(--footer-border-top);
-    background: var(--footer-background-color);
+    border-top: .1rem solid var(--footer-border);
+    background: var(--footer-background);
 
     margin-top: 2rem;
     padding-top: 2rem;

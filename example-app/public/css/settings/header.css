@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
 
-    border-bottom: .1rem solid var(--header-border-bottom);
+    border-bottom: .1rem solid var(--header-border);
     background-color: var(--body-color);
 
     margin-bottom: 2rem;

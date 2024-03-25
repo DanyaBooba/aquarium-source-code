@@ -2,30 +2,29 @@
     --accent: #8e95ff;
     --accent-highlight: #ffffff;
 
-    --header-background-color: rgb(24, 22, 42, .84);
-    --header-border-bottom: #433e6d;
-    --header-link-download-background: #262342;
-    --header-link-download-background-border: #433e6d;
-    --header-link-download-background-hover: #433e6d;
-
-    --footer-background-color: #17152b;
-    --footer-border-top: #433e6d;
-
-    --svg-icon: #fff;
-    --svg-icon-invert: #000;
-    --svg-github: #fff;
-
+    --body-color: #17152b;
     --body-color-alpha: #17152b99;
 
-    --body-color: #17152b;
     --text-color: #fff;
     --text-invert: #000;
     --text-code: #fff;
     --text-muted: #6c757d;
 
-    --text-code-border: #0984e3;
     --text-color-hover: #0984e3;
     --text-color-link-underline: #5c569d;
+    --text-code-border: #0984e3;
+
+    --svg-icon: #fff;
+    --svg-icon-invert: #000;
+    --svg-github: #fff;
+
+    --header-background: rgb(24, 22, 42, .84);
+    --header-border: #433e6d;
+    --header-link-download-background: #262342;
+    --header-link-download-border: #433e6d;
+
+    --footer-background: #17152b;
+    --footer-border: #433e6d;
 
     --signin-choose-background-color: #34305e;
     --signin-choose-background-color-hover: #34305e;
@@ -42,13 +41,12 @@
     --blog-white-post: #1c1935;
 
     --pagination-active: #fff;
+
     --form-input-border: #34305e;
     --form-input-background: #2a274e;
 
     --main-dark-block: #D980FA;
     --main-dark-block-button: rgb(158, 86, 185, .9);
-    --main-button-register: #27ae60;
-    --main-button-register-hover: #259354;
 
     --user-bar: #1f1d3a;
     --user-bar-exit: #dd303f;

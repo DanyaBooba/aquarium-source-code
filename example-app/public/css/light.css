@@ -2,30 +2,29 @@
     --accent: #575FCF;
     --accent-highlight: #363b8b;
 
-    --header-background-color: rgba(255, 255, 255, .84);
-    --header-border-bottom: #dee2e6;
-    --header-link-download-background: #fff;
-    --header-link-download-background-border: #dee2e6;
-    --header-link-download-background-hover: #dee2e6;
-
-    --footer-background-color: #fff;
-    --footer-border-top: #dee2e6;
-
-    --svg-icon: #000;
-    --svg-icon-invert: #fff;
-    --svg-github: #24292f;
-
+    --body-color: #f9f9f9;
     --body-color-alpha: #f9f9f999;
 
-    --body-color: #f9f9f9;
     --text-color: #000;
     --text-invert: #fff;
     --text-code: #000;
     --text-muted: #6c757d;
 
-    --text-code-border: #0984e3;
     --text-color-hover: #0984e3;
     --text-color-link-underline: #a8a8a8;
+    --text-code-border: #0984e3;
+
+    --svg-icon: #000;
+    --svg-icon-invert: #fff;
+    --svg-github: #24292f;
+
+    --header-background: rgba(255, 255, 255, .84);
+    --header-border: #dee2e6;
+    --header-link-download-background: #fff;
+    --header-link-download-border: #dee2e6;
+
+    --footer-background: #fff;
+    --footer-border: #dee2e6;
 
     --signin-choose-background-color: #d9d9d9;
     --signin-choose-background-color-hover: #d9d9d9;
@@ -42,13 +41,12 @@
     --blog-white-post: #fff;
 
     --pagination-active: #000;
+
     --form-input-border: #ced4db;
     --form-input-background: #fff;
 
     --main-dark-block: #0984e3;
     --main-dark-block-button: rgb(19, 102, 166, .9);
-    --main-button-register: #27ae60;
-    --main-button-register-hover: #259354;
 
     --user-bar: #f1f1f4;
     --user-bar-exit: #dd303f;
@@ -61,7 +59,6 @@
     --user-profile-image-background: #fff;
     --user-profile-image-background-image: #fff;
     --user-profile-image-border: #d9d9e0;
-
     --user-profile-button: #fff;
 
     --user-search-border: #ced4db;
@@ -91,6 +88,7 @@
     --collapse-button-background: #fff;
     --collapse-body-background: #fff;
     --collapse-border: #dfdfdf;
+    --collapse-filter: ;
 
     --modal-background: #fff;
 

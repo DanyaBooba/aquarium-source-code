@@ -1,5 +1,5 @@
 header {
-    background-color: var(--header-background-color);
+    background-color: var(--header-background);
     -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px);
 }
@@ -19,7 +19,7 @@ header.header.hide {
 }
 
 header.header {
-    border-bottom: .1rem solid var(--header-border-bottom);
+    border-bottom: .1rem solid var(--header-border);
 
     padding: 1rem;
     margin-bottom: 1rem;
@@ -55,7 +55,7 @@ header.header .header-content-links a.link-download {
     width: 124px !important;
 
     background-color: var(--header-link-download-background);
-    border: .1rem solid var(--header-link-download-background-border);
+    border: .1rem solid var(--header-link-download-border);
     border-radius: 8px;
 
     text-decoration: none !important;
@@ -96,7 +96,7 @@ header.header .header-content-profile svg {
 }
 
 header.header .header-content-profile span:has(img) {
-    border: .1rem solid var(--header-border-bottom);
+    border: .1rem solid var(--header-border);
     border-radius: 50%;
 }
 
@@ -167,7 +167,7 @@ header.header .header-content button.navbar-toggler {
 
     header.header .header-content-links a.link-download:hover {
         color: var(--text-color) !important;
-        background-color: var(--header-link-download-background-hover);
+        background-color: var(--header-link-download-border);
     }
 }
 
@@ -188,7 +188,7 @@ header.header .header-content button.navbar-toggler {
 
     header.header .header-content-links a.link-download:active {
         color: var(--text-color) !important;
-        background-color: var(--header-link-download-background-hover);
+        background-color: var(--header-link-download-border);
     }
 }
 
