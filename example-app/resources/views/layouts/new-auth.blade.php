@@ -7,7 +7,9 @@
 @section('body')
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
     <main class="form-signin w-100 m-auto">
-        <div class="authentication">
+        @yield('auth.root')
+
+        {{-- <div class="authentication">
             @yield('auth.header')
             @yield('auth.content')
 
@@ -17,7 +19,7 @@
                     {{ __('Аквариум') }}
                 </a>
             </p>
-        </div>
+        </div> --}}
     </main>
 </body>
 @endsection
