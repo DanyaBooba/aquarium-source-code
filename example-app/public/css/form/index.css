@@ -10,7 +10,6 @@ form textarea {
 }
 
 form input.form-check-input {
-    /* background-color: var(--form-input-background); */
     border: .1rem solid var(--form-input-border);
 }
 
@@ -26,15 +25,24 @@ form .input-password .form-floating {
 form .input-password a.input-group-text {
     position: absolute;
 
-    margin-left: 80% !important;
-    margin-top: 10px;
-
     border: none !important;
     background: transparent !important;
+
+    margin-left: 80% !important;
+    margin-top: 10px;
 }
+
+/* media */
 
 @media(hover: hover) {
     form .input-password a.input-group-text:hover {
+        stroke: var(--text-color-hover);
+        cursor: pointer;
+    }
+}
+
+@media(hover: none) {
+    form .input-password a.input-group-text:active {
         stroke: var(--text-color-hover);
         cursor: pointer;
     }

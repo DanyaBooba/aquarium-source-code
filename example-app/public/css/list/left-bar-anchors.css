@@ -1,3 +1,7 @@
+ul li {
+    padding-left: .25rem;
+}
+
 ul li.left-bar-anchors-h3 {
     padding-left: 1rem;
 }

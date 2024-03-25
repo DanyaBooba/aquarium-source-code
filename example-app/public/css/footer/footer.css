@@ -47,6 +47,8 @@ footer.footer .container div.footer__social a:not(.footer__social_active):is(:fo
     color: var(--text-color-hover) !important;
 }
 
+/* media */
+
 @media(hover: hover) {
     footer.footer .container div.footer__social a:not(.footer__social_active):hover {
         color: var(--text-color-hover) !important;

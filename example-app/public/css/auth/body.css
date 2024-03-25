@@ -8,14 +8,14 @@ body {
     padding: 1rem;
 }
 
-.form-signup {
-    max-width: 1000px;
-    padding: 1rem;
-}
-
 .form-signin .form-floating:focus-within,
 .form-signup .form-floating:focus-within {
     z-index: 2;
+}
+
+.form-signup {
+    max-width: 1000px;
+    padding: 1rem;
 }
 
 .form-signup-display {
@@ -30,6 +30,8 @@ body {
     fill: var(--svg-icon);
     max-width: 300px;
 }
+
+/* media */
 
 @media(max-width: 767.98px) {
     .form-signup {

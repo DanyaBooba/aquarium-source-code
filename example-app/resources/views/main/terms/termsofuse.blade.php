@@ -3,7 +3,7 @@
 @section('page.title', __('Условия использования'))
 
 @push('css')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/faq/index.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
 @endpush
 
 @section('main.content')

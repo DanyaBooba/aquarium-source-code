@@ -24,14 +24,16 @@ div .col-7 li {
     border-color: var(--collapse-border) !important;
 }
 
-.accordion .accordion-item .accordion-header button::after {
-    filter: var(--collapse-filter) !important;
-}
-
 .accordion .accordion-item .accordion-header button {
     background-color: var(--collapse-button-background) !important;
     color: var(--text-color) !important;
 }
+
+.accordion .accordion-item .accordion-header button::after {
+    filter: var(--collapse-filter) !important;
+}
+
+/* media */
 
 @media(max-width: 991.98px) {
     div.row .col-3 {

@@ -150,47 +150,7 @@ header.header .header-content button.navbar-toggler {
     border: none !important;
 }
 
-@media(hover: hover) {
-    header.header a.header-content-profile:hover p {
-        color: var(--text-color-hover);
-        text-decoration: underline;
-    }
-
-    header.header .header-content-links li a:hover {
-        color: var(--text-color-hover);
-        text-decoration: underline;
-    }
-
-    header.header .header-content button.navbar-toggler:active svg {
-        stroke: var(--text-color-hover);
-    }
-
-    header.header .header-content-links a.link-download:hover {
-        color: var(--text-color) !important;
-        background-color: var(--header-link-download-border);
-    }
-}
-
-@media(hover: none) {
-    header.header a.header-content-profile:active p {
-        color: var(--text-color-hover);
-        text-decoration: underline;
-    }
-
-    header.header .header-content-links li a:active {
-        color: var(--text-color-hover);
-        text-decoration: underline;
-    }
-
-    header.header .header-content button.navbar-toggler:active svg {
-        stroke: var(--text-color-hover);
-    }
-
-    header.header .header-content-links a.link-download:active {
-        color: var(--text-color) !important;
-        background-color: var(--header-link-download-border);
-    }
-}
+/* media */
 
 @media(max-width: 991.98px) {
     .header-content-links {
@@ -240,5 +200,47 @@ header.header .header-content button.navbar-toggler {
 @media(max-width: 321.98px) {
     header.header .header-content-logo svg {
         width: 160px;
+    }
+}
+
+@media(hover: hover) {
+    header.header a.header-content-profile:hover p {
+        color: var(--text-color-hover);
+        text-decoration: underline;
+    }
+
+    header.header .header-content-links li a:hover {
+        color: var(--text-color-hover);
+        text-decoration: underline;
+    }
+
+    header.header .header-content button.navbar-toggler:active svg {
+        stroke: var(--text-color-hover);
+    }
+
+    header.header .header-content-links a.link-download:hover {
+        color: var(--text-color) !important;
+        background-color: var(--header-link-download-border);
+    }
+}
+
+@media(hover: none) {
+    header.header a.header-content-profile:active p {
+        color: var(--text-color-hover);
+        text-decoration: underline;
+    }
+
+    header.header .header-content-links li a:active {
+        color: var(--text-color-hover);
+        text-decoration: underline;
+    }
+
+    header.header .header-content button.navbar-toggler:active svg {
+        stroke: var(--text-color-hover);
+    }
+
+    header.header .header-content-links a.link-download:active {
+        color: var(--text-color) !important;
+        background-color: var(--header-link-download-border);
     }
 }

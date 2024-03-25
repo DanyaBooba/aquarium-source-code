@@ -3,8 +3,8 @@
 @section('page.title', __('OAuth'))
 
 @push('css')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/faq/index.css') }}" />
-<link rel="stylesheet" type="text/css" href="{{ asset('css/oauth/index.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('css/oauth/include.css') }}" />
 @endpush
 
 @section('main.content')

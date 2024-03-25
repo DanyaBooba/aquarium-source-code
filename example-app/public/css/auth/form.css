@@ -2,22 +2,8 @@
     fill: var(--svg-icon);
 }
 
-.authentication .authentication-back {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
 .authentication.col-md-4 {
     padding: 1rem !important;
-}
-
-.authentication .authentication-back a.authentication-back-back {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-
-    color: var(--text-muted) !important;
 }
 
 .authentication .authentication-text-more {
@@ -28,6 +14,20 @@
     text-align: center;
 
     color: var(--text-muted);
+}
+
+.authentication .authentication-back {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.authentication .authentication-back a.authentication-back-back {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    color: var(--text-muted) !important;
 }
 
 .authentication .authentication-back a.authentication-back-close {
@@ -69,6 +69,8 @@
     border-radius: var(--border-radius-default);
     width: 100%;
 }
+
+/* signin choose */
 
 .authentication #signin-choose .d-flex div {
     margin-bottom: .5rem;
@@ -158,24 +160,6 @@
         height: 30px;
 }
 
-.authentication #signin-email .buttons {
-    margin-top: 1rem;
-}
-
-
-.authentication #signin-email .buttons button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-top: .25rem;
-    border-radius: 8px;
-}
-
-.authentication #signin-email .buttons button svg {
-    margin-right: .25rem;
-}
-
 .authentication #signin-choose .d-flex div#signin-choose-email button svg {
     width: 32px;
     height: 32px;
@@ -219,6 +203,33 @@
     background: var(--body-color);
 }
 
+.authentication #signin-email .buttons {
+    margin-top: 1rem;
+}
+
+/* signin email */
+
+.authentication #signin-email .buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: .25rem;
+    border-radius: 8px;
+}
+
+.authentication #signin-email .buttons button svg {
+    margin-right: .25rem;
+}
+
+/* media */
+
+@media(max-width: 767.98px) {
+    .authentication.col-md-4 {
+        padding: 0rem !important;
+    }
+}
+
 @media(hover: hover) {
     .authentication #signin-choose .d-flex div button:hover {
         background-color: var(--signin-choose-background-color-hover);
@@ -246,11 +257,5 @@
 
     .authentication .authentication-back a.authentication-back-back:active {
         color: var(--text-color) !important;
-    }
-}
-
-@media(max-width: 767.98px) {
-    .authentication.col-md-4 {
-        padding: 0rem !important;
     }
 }

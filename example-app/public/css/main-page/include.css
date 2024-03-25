@@ -1,3 +1,5 @@
+/* row first */
+
 .row-first .row-first-right {
     width: 440px;
     margin-bottom: 1rem;
@@ -76,6 +78,8 @@
     z-index: 10;
 }
 
+/* row second */
+
 .row-second .col-lg-4 .p-4 {
     background-color: var(--blog-white-post);
     color: var(--text-color);
@@ -128,6 +132,8 @@
     margin-top: 1rem;
 }
 
+/* row third */
+
 .row-third .col {
     text-align: center;
     padding: 1.5rem;
@@ -151,27 +157,7 @@
     height: auto;
 }
 
-@media(hover: hover) {
-    .row-first .row-first-right button.btn-success:hover {
-        background-color: var(--main-button-register-hover);
-        border-color: var(--main-button-register-hover);
-    }
-
-    .row-first .row-first-right div.p-3 button:hover {
-        box-shadow: 0 0.125rem 0.25rem var(--main-dark-block-button) !important;
-    }
-}
-
-@media(hover: none) {
-    .row-first .row-first-right button.btn-success:active {
-        background-color: var(--main-button-register-hover);
-        border-color: var(--main-button-register-hover);
-    }
-
-    .row-first .row-first-right div.p-3 button:active {
-        box-shadow: 0 0.125rem 0.25rem var(--main-dark-block-button) !important;
-    }
-}
+/* media */
 
 @media(max-width: 991.98px) {
     .row-first {
@@ -231,5 +217,27 @@
 @media(max-width: 424.98px) {
     .row-first .row-first-right h1 {
         font-size: calc(1.25rem + 3vw);;
+    }
+}
+
+@media(hover: hover) {
+    .row-first .row-first-right button.btn-success:hover {
+        background-color: var(--main-button-register-hover);
+        border-color: var(--main-button-register-hover);
+    }
+
+    .row-first .row-first-right div.p-3 button:hover {
+        box-shadow: 0 0.125rem 0.25rem var(--main-dark-block-button) !important;
+    }
+}
+
+@media(hover: none) {
+    .row-first .row-first-right button.btn-success:active {
+        background-color: var(--main-button-register-hover);
+        border-color: var(--main-button-register-hover);
+    }
+
+    .row-first .row-first-right div.p-3 button:active {
+        box-shadow: 0 0.125rem 0.25rem var(--main-dark-block-button) !important;
     }
 }
