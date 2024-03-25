@@ -1,7 +1,7 @@
 @extends('layouts.user')
 
 @push('css')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/settings/index.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('css/settings/include.css') }}" />
 @endpush
 
 @section('user.content')

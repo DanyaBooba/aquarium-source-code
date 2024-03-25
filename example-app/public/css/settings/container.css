@@ -11,6 +11,7 @@
     border-radius: 12px;
 
     list-style: none !important;
+
     padding: 0;
     margin: 0;
 
@@ -27,9 +28,9 @@
 }
 
 .container-settings .container-settings-main ul li:last-child {
+    border-bottom-width: 0 !important;
     border-bottom-left-radius: 12px !important;
     border-bottom-right-radius: 12px !important;
-    border-bottom-width: 0 !important;
 }
 
 .container-settings .container-settings-main ul li:first-child a {
@@ -37,9 +38,9 @@
 }
 
 .container-settings .container-settings-main ul li:first-child {
+    border-top-width: 0 !important;
     border-top-left-radius: 12px !important;
     border-top-right-radius: 12px !important;
-    border-top-width: 0 !important;
 }
 
 .container-settings .container-settings-main ul li {
@@ -67,25 +68,25 @@
 }
 
 .container-settings .container-settings-main ul li a {
-    text-decoration: none !important;
-    color: var(--text-color) !important;
-    padding-left: 1.5rem;
-
     display: flex;
     align-items: center;
     min-height: 42px;
+
     width: 100% !important;
+    text-decoration: none !important;
+    color: var(--text-color) !important;
+    padding-left: 1.5rem;
 }
 
 .container-settings .container-settings-main ul li a svg {
+    width: 42px;
+    height: 42px;
+
     stroke: var(--settings-main-svg) !important;
     padding: .4rem;
 
     border-radius: 8px;
     margin-right: 1rem;
-
-    width: 42px;
-    height: 42px;
 }
 
 .container-settings .container-settings-main ul li a.settings-profile svg {
@@ -120,6 +121,25 @@
     background-color: var(--settings-background-profile);
 }
 
+/* media */
+
+@media(max-width: 1023.98px) {
+    .container-settings .container-settings-left {
+        width: 100%;
+    }
+
+    .container-settings .container-settings-right {
+        width: 100%;
+    }
+}
+
+@media(max-width: 767.98px) {
+    .container-settings .container-settings-main {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
 @media(hover: hover) {
     .container-settings .container-settings-main ul li a:hover svg {
         stroke: var(--svg-icon-invert);
@@ -142,21 +162,8 @@
     .container-settings .container-settings-main ul li a:active {
         color: var(--text-color-hover) !important;
     }
-}
 
-@media(max-width: 1023.98px) {
-    .container-settings .container-settings-left {
-        width: 100%;
-    }
-
-    .container-settings .container-settings-right {
-        width: 100%;
-    }
-}
-
-@media(max-width: 767.98px) {
-    .container-settings .container-settings-main {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+    .container-settings .container-settings-main ul li:active {
+        background-color: var(--setting-background-hover) !important;
     }
 }

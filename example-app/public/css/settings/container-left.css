@@ -3,9 +3,9 @@
 }
 
 .container-settings .container-settings-left .text-title {
-    margin-bottom: .75rem;
-    color: var(--text-muted);
     text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: .75rem;
 }
 
 .container-settings .container-settings-left form .input-password div label {
@@ -26,16 +26,16 @@
 }
 
 .container-settings .container-settings-left form.form-settings-image .col label {
-    padding: .5rem !important;
-    border: none !important;
-
-    border-radius: 0;
     background-color: transparent;
+    border-radius: 0;
+
+    border: none !important;
+    padding: .5rem !important;
 }
 
 .container-settings .container-settings-left form.form-settings-image .row.row-settings-avatar .col label {
-    border-radius: 50% !important;
     background-color: var(--form-input-background) !important;
+    border-radius: 50% !important;
 }
 
 .container-settings .container-settings-left form.form-settings-image .row.row-settings-cap .col label {
@@ -101,19 +101,19 @@
 
 .container-settings .container-settings-left form div input[type="text"],
 .container-settings .container-settings-left form div input[type="password"] {
+    background-color: var(--form-input-background) !important;
     border-radius: 8px;
 
     padding-top: 1rem;
     padding-bottom: 1rem;
 
     margin-bottom: .25rem;
-    background-color: var(--form-input-background) !important;
 }
 
 .container-settings .container-settings-left form div p {
-    margin-bottom: 0;
-    font-size: .875rem;
     color: var(--text-muted);
+    font-size: .875rem;
+    margin-bottom: 0;
 }
 
 .container-settings .container-settings-left form button[type="submit"] {
@@ -121,6 +121,8 @@
     padding: .8rem 3rem;
     margin-top: .5rem;
 }
+
+/* media */
 
 @media(max-width: 1023.98px) {
     .container-settings .container-settings-left form button[type="submit"] {

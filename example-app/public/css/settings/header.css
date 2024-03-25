@@ -44,8 +44,10 @@
 }
 
 .container-settings-header .header-title {
-        margin-right: auto;
-    }
+    margin-right: auto;
+}
+
+/* media */
 
 @media(max-width: 1023.98px) {
     .container-settings-header {
@@ -55,9 +57,3 @@
         z-index: 1020;
     }
 }
-
-/* @media(min-width: 1024px) {
-    .container-settings-header a.header-confirm {
-        display: none !important;
-    }
-} */

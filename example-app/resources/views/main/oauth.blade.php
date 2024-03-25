@@ -129,8 +129,6 @@ if (!empty($_GET["code"])) {
     <x-button-top />
 @endsection
 
-@once
-    @push('js')
-        <script src="{{ asset('js/page/left-bar-anchors.js') }}"></script>
-    @endpush
-@endonce
+@push('js')
+    <script src="{{ asset('js/page/left-bar-anchors.js') }}"></script>
+@endpush

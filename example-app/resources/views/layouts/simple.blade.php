@@ -1,10 +1,8 @@
 @extends('layouts.base')
 
-@once
-    @push('css')
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/simple/index.css') }}" />
-    @endpush
-@endonce
+@push('css')
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/simple/include.css') }}" />
+@endpush
 
 @section('body')
 <body>
