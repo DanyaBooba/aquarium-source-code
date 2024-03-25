@@ -2,7 +2,7 @@
     --accent: #575FCF;
     --accent-highlight: #363b8b;
 
-    --body-color: #f9f9f9;
+    --body-color: #f5f7fa;
     --body-color-alpha: #f9f9f999;
 
     --text-color: #000;
@@ -10,21 +10,21 @@
     --text-code: #000;
     --text-muted: #6c757d;
 
-    --text-color-hover: #0984e3;
-    --text-color-link-underline: #a8a8a8;
-    --text-code-border: #0984e3;
+    --text-color-hover: #091ee3;
+    --text-color-link-underline: #a5bcde;
+    --text-code-border: #091ee3;
 
     --svg-icon: #000;
     --svg-icon-invert: #fff;
     --svg-github: #24292f;
 
-    --header-background: rgba(255, 255, 255, .84);
-    --header-border: #dee2e6;
+    --header-background: rgba(241, 244, 250, .84);
+    --header-border: #d7e1f1;
     --header-link-download-background: #fff;
-    --header-link-download-border: #dee2e6;
+    --header-link-download-border: #d7e1f1;
 
-    --footer-background: #fff;
-    --footer-border: #dee2e6;
+    --footer-background: #f5f7fa;
+    --footer-border: #d7e1f1;
 
     --signin-choose-background-color: #d9d9d9;
     --signin-choose-background-color-hover: #d9d9d9;
