@@ -11,7 +11,9 @@
 
 <form action="" onsubmit="sendForm('{{ route('settings') }}')" method="post" class="form-settings-image">
     @csrf
-    <h2 class="h3">{{ __('Аватарка') }}</h2>
+    <p class="text-title">
+        {{ __('Аватарка') }}
+    </p>
     <div class="row row-settings-avatar">
         @for($i = 1; $i <= 7; $i++)
         <div class="col">
@@ -22,7 +24,9 @@
         </div>
         @endfor
     </div>
-    <h2 class="h3">{{ __('Шапка') }}</h2>
+    <p class="text-title">
+        {{ __('Шапка') }}
+    </p>
     <div class="row row-settings-cap">
         @for($i = 1; $i <= 11; $i++)
         <div class="col">

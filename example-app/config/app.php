@@ -86,6 +86,9 @@ return [
     'locale' => 'ru',
     'locales' => ['ru', 'en'],
 
+    'theme' => 'default',
+    'themes' => ['default', '1', '2', '3'],
+
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale

@@ -41,6 +41,8 @@ Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
 
         Route::get('devices', [SettingsController::class, 'devices'])->name('settings.devices');
 
+        Route::get('themes', [SettingsController::class, 'themes'])->name('settings.themes');
+
         Route::get('appearance', [SettingsController::class, 'appearance'])->name('settings.appearance');
         Route::post('appearance', [SettingsController::class, 'appearance_store'])->name('settings.appearance.store');
 

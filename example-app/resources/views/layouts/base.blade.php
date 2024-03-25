@@ -49,7 +49,11 @@
     </script>
 
     <meta name="color-scheme" content="light dark">
+
+    <link rel="stylesheet" id="css.light" href="{{ asset('css/@@light/theme-' . session('theme') . '.css') }}" media="(prefers-color-scheme: light)">
     <link rel="stylesheet" id="css.light" href="{{ asset('css/@@light/light.css') }}" media="(prefers-color-scheme: light)">
+
+    <link rel="stylesheet" id="css.dark" href="{{ asset('css/@@dark/theme-' . session('theme_dark') . '.css') }}" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" id="css.dark" href="{{ asset('css/@@dark/dark.css') }}" media="(prefers-color-scheme: dark)">
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}" />

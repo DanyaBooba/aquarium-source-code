@@ -90,4 +90,9 @@ class SettingsController extends Controller
     {
         return view('user.settings.language');
     }
+
+    public function themes()
+    {
+        return view('user.settings.themes');
+    }
 }

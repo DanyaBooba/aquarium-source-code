@@ -4,6 +4,7 @@ use App\Http\Controllers\LocaleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainRouteController;
 use App\Http\Controllers\MainUserController;
+use App\Http\Controllers\ThemeController;
 
 Route::prefix('/')->group(function () {
     Route::get('/', [MainRouteController::class, 'index'])->name('main');
@@ -12,6 +13,9 @@ Route::prefix('/')->group(function () {
     Route::get('faq', [MainRouteController::class, 'faq'])->name('main.faq');
 
     Route::get('setlocale/{locale}', [LocaleController::class, 'store'])->name('main.setlocale');
+
+    Route::get('setlighttheme/{theme}', [ThemeController::class, 'light'])->name('main.settheme.light');
+    Route::get('setdarktheme/{theme}', [ThemeController::class, 'dark'])->name('main.settheme.dark');
 
     Route::prefix('about')->group(function () {
         Route::get('/', [MainRouteController::class, 'about'])->name('main.about');
