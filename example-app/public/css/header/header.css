@@ -4,7 +4,7 @@ header {
     backdrop-filter: blur(25px);
 }
 
-.header {
+header.header {
     min-height: 74px;
     z-index: 500;
     position: fixed;
@@ -14,7 +14,7 @@ header {
     transition: transform .1s linear;
 }
 
-.header.hide {
+header.header.hide {
     transform: translateY(-75px);
 }
 
@@ -25,14 +25,14 @@ header.header {
     margin-bottom: 1rem;
 }
 
-header .header-content {
+header.header .header-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
 
-header .header-content-logo {
+header.header .header-content-logo {
     display: flex;
     align-items: center;
     margin-bottom: .75rem;
@@ -40,16 +40,16 @@ header .header-content-logo {
     margin-bottom: 0;
 }
 
-header .header-content-logo svg {
+header.header .header-content-logo svg {
     width: 200px;
     fill: var(--svg-icon);
 }
 
-header .header-content-links a.link-download:is(:focus, :focus-within, :focus-visible) {
+header.header .header-content-links a.link-download:is(:focus, :focus-within, :focus-visible) {
     color: var(--text-color) !important;
 }
 
-header .header-content-links a.link-download {
+header.header .header-content-links a.link-download {
     display: flex;
     justify-content: center;
     width: 124px !important;
@@ -65,128 +65,128 @@ header .header-content-links a.link-download {
     margin-left: 1rem;
 }
 
-header .header-content-links {
+header.header .header-content-links {
     justify-content: center;
     align-items: end;
 }
 
-header .header-content-profile {
+header.header .header-content-profile {
     color: var(--accent) !important;
     display: flex;
     text-decoration: none;
     align-items: center;
 }
 
-header .header-content-sign {
+header.header .header-content-sign {
     display: flex;
     text-decoration: none;
     align-items: center;
 }
 
-header .header-content-sign svg {
+header.header .header-content-sign svg {
     width: 20px;
     height: 20px;
     margin-right: .25rem;
 }
 
-header .header-content-profile svg {
+header.header .header-content-profile svg {
     width: 20px;
     height: 20px;
     margin-right: .25rem;
 }
 
-header .header-content-profile span:has(img) {
+header.header .header-content-profile span:has(img) {
     border: .1rem solid var(--header-border-bottom);
     border-radius: 50%;
 }
 
-header .header-content-profile img {
+header.header .header-content-profile img {
     width: 36px;
     height: 36px;
     padding: .1rem;
     border-radius: 50%;
 }
 
-header .header-content-profile p {
+header.header .header-content-profile p {
     color: var(--text-color);
     margin-bottom: 0;
     margin-left: .5rem;
 }
 
-header .header-content-links li a {
+header.header .header-content-links li a {
     padding-left: .5rem;
     padding-right: .5rem;
     color: var(--text-color);
 }
 
-header .header-content button.navbar-toggler svg {
+header.header .header-content button.navbar-toggler svg {
     stroke: var(--svg-icon);
 }
 
-header .header-content button.navbar-toggler {
+header.header .header-content button.navbar-toggler {
     margin-left: 1rem;
     box-shadow: none !important;
 }
 
-header .header-content-profile {
+header.header .header-content-profile {
     justify-content: end;
 }
 
-header .header-content-links li a:focus {
+header.header .header-content-links li a:focus {
     color: var(--text-color-hover);
     text-decoration: none;
 }
 
-header a.header-content-profile:focus p {
+header.header a.header-content-profile:focus p {
     color: var(--text-color-hover);
     text-decoration: none;
 }
 
-header .header-content-links li a.active {
+header.header .header-content-links li a.active {
     text-decoration: underline;
 }
 
-header .header-content button.navbar-toggler {
+header.header .header-content button.navbar-toggler {
     border: none !important;
 }
 
 @media(hover: hover) {
-    header a.header-content-profile:hover p {
+    header.header a.header-content-profile:hover p {
         color: var(--text-color-hover);
         text-decoration: underline;
     }
 
-    header .header-content-links li a:hover {
+    header.header .header-content-links li a:hover {
         color: var(--text-color-hover);
         text-decoration: underline;
     }
 
-    header .header-content button.navbar-toggler:active svg {
+    header.header .header-content button.navbar-toggler:active svg {
         stroke: var(--text-color-hover);
     }
 
-    header .header-content-links a.link-download:hover {
+    header.header .header-content-links a.link-download:hover {
         color: var(--text-color) !important;
         background-color: var(--header-link-download-background-hover);
     }
 }
 
 @media(hover: none) {
-    header a.header-content-profile:active p {
+    header.header a.header-content-profile:active p {
         color: var(--text-color-hover);
         text-decoration: underline;
     }
 
-    header .header-content-links li a:active {
+    header.header .header-content-links li a:active {
         color: var(--text-color-hover);
         text-decoration: underline;
     }
 
-    header .header-content button.navbar-toggler:active svg {
+    header.header .header-content button.navbar-toggler:active svg {
         stroke: var(--text-color-hover);
     }
 
-    header .header-content-links a.link-download:active {
+    header.header .header-content-links a.link-download:active {
         color: var(--text-color) !important;
         background-color: var(--header-link-download-background-hover);
     }
@@ -205,19 +205,19 @@ header .header-content button.navbar-toggler {
         margin-right: auto;
     }
 
-    header .header-content-links {
+    header.header .header-content-links {
         flex-direction: column;
     }
 
-    header .header-content-links li {
+    header.header .header-content-links li {
         text-align: end;
     }
 
-    header .header-content-links a.link-download {
+    header.header .header-content-links a.link-download {
         margin-left: auto;
     }
 
-    header .header-content-profile {
+    header.header .header-content-profile {
         margin-bottom: .5rem;
     }
 
@@ -227,18 +227,18 @@ header .header-content button.navbar-toggler {
 }
 
 @media(min-width: 992px) {
-    header .header-content-links li a {
+    header.header .header-content-links li a {
         text-underline-offset: 1.9rem !important;
         text-decoration-thickness: 0.15rem !important;
     }
 
-    header .header-content-links {
+    header.header .header-content-links {
         align-items: center;
     }
 }
 
 @media(max-width: 321.98px) {
-    header .header-content-logo svg {
+    header.header .header-content-logo svg {
         width: 160px;
     }
 }
