@@ -45,9 +45,3 @@ body {
         display: none;
     }
 }
-
-@media(min-width: 768px) {
-    .form-signup-logo.form-signup-logo-mobile {
-        display: none;
-    }
-}
