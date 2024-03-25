@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 
-@section('page.title', 'Регистрация')
+@section('page.title', __('Регистрация'))
 
 @section('auth.content')
 <body class="d-flex align-items-center py-4 bg-body-tertiary">

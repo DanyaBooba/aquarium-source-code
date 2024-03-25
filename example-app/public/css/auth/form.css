@@ -5,6 +5,7 @@
 .authentication .authentication-back {
     display: flex;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .authentication.col-md-4 {
