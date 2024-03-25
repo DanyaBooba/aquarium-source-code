@@ -2,7 +2,7 @@
     <div class="container">
         <div class="footer__main">
             <span>© 2020-{{ date('Y') }}</span>
-            <a href="{{ route('main.index') }}">
+            <a href="{{ route('main') }}">
                 {{ __('Аквариум') }}
             </a>
         </div>

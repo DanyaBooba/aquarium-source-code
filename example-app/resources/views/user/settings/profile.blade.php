@@ -13,7 +13,7 @@
 
 <x-form.error />
 
-<form action="" onsubmit="sendForm('{{ route('user.settings.index') }}')" method="post">
+<form action="" onsubmit="sendForm('{{ route('settings') }}')" method="post">
     @csrf
     <div>
         <label for="username" class="form-label">{{ __('Имя пользователя') }}</label>
@@ -40,7 +40,7 @@
 
 <ul class="list-links">
     <li>
-        <a href="{{ route('user.settings.profile.password') }}">
+        <a href="{{ route('settings.profile.password') }}">
             {{ __('Восстановить пароль') }}
         </a>
     </li>

@@ -22,7 +22,7 @@ class AuthController extends Controller
     //     session(['email' => $validated['email']]);
     //     session(['avatar' => 'MAN1']);
 
-    //     return redirect()->route('user.index');
+    //     return redirect()->route('user');
     // }
 
     // public function signup()
@@ -44,7 +44,7 @@ class AuthController extends Controller
 
     //     dd($validated);
 
-    //     return redirect()->route('user.index');
+    //     return redirect()->route('user');
     // }
 
     public function help()

@@ -9,7 +9,7 @@
 
 <x-form.error />
 
-<form action="" onsubmit="sendForm('{{ route('user.settings.index') }}')" method="post">
+<form action="" onsubmit="sendForm('{{ route('settings') }}')" method="post">
     @csrf
     <div class="form-check form-switch">
         <input class="form-check-input" name="authorization" type="checkbox" role="switch" id="check1" value="1" onInput="data()">

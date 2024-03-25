@@ -28,6 +28,6 @@ class LoginController extends Controller
         session(['email' => $validated['email']]);
         session(['avatar' => 'MAN1']);
 
-        return redirect()->route('user.index');
+        return redirect()->route('user');
     }
 }

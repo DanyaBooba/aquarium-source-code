@@ -16,6 +16,6 @@ class ExitController extends Controller
     {
         exit_account();
 
-        return redirect()->route('main.index');
+        return redirect()->route('main');
     }
 }

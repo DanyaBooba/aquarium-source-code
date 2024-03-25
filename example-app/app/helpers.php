@@ -65,6 +65,13 @@ if (!function_exists('user_login')) {
     }
 }
 
+if (!function_exists('user_admin')) {
+    function user_admin(): bool
+    {
+        return session()->has('admin');
+    }
+}
+
 if (!function_exists('user_image_exist')) {
     function user_image_exist(string $path): string
     {

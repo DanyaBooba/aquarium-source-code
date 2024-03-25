@@ -27,7 +27,7 @@ class SettingsController extends Controller
 
         dd($validated);
 
-        return redirect()->route('user.settings.index');
+        return redirect()->route('settings');
     }
 
     public function password()
@@ -50,7 +50,7 @@ class SettingsController extends Controller
 
         dd($validated);
 
-        return redirect()->route('user.settings.index');
+        return redirect()->route('settings');
     }
 
     public function privacy()
@@ -83,7 +83,7 @@ class SettingsController extends Controller
 
         dd($validated);
 
-        return redirect()->route('user.settings.index');
+        return redirect()->route('settings');
     }
 
     public function language()

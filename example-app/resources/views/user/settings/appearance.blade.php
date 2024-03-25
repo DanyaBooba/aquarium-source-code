@@ -9,7 +9,7 @@
 
 <x-form.error />
 
-<form action="" onsubmit="sendForm('{{ route('user.settings.index') }}')" method="post" class="form-settings-image">
+<form action="" onsubmit="sendForm('{{ route('settings') }}')" method="post" class="form-settings-image">
     @csrf
     <h2 class="h3">{{ __('Аватарка') }}</h2>
     <div class="row row-settings-avatar">

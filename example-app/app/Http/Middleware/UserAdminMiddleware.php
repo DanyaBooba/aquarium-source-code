@@ -15,6 +15,10 @@ class UserAdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
+        if (!user_admin()) {
+            return redirect()->route('user');
+        }
+
         return $next($request);
     }
 }

@@ -1,7 +1,7 @@
 <header class="header navbar-expand-lg bg-body-tertiary">
     <div class="container">
         <div class="header-content justify-content-lg-start">
-            <a href="{{ route('main.index') }}" aria-label="{{ __('Главная страница') }}" class="header-content-logo link-body-emphasis">
+            <a href="{{ route('main') }}" aria-label="{{ __('Главная страница') }}" class="header-content-logo link-body-emphasis">
                 <x-header-logo />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +18,7 @@
                 <ul class="nav col-12 col-lg-auto ms-lg-auto mb-md-0 header-content-links">
                     @if(user_login())
                     <li>
-                        <a href="{{ route('user.index') }}" class="link-body-emphasis header-content-profile">
+                        <a href="{{ route('user') }}" class="link-body-emphasis header-content-profile">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                             {{ __('Профиль') }}
                         </a>

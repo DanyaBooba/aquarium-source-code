@@ -36,7 +36,7 @@
 
         <p class="authentication-text-more">
             © 2020–{{ date('Y') }}
-            <a href="{{ route('main.index') }}" class="text-decoration-none">
+            <a href="{{ route('main') }}" class="text-decoration-none">
                 {{ __('Аквариум') }}
             </a>
         </p>

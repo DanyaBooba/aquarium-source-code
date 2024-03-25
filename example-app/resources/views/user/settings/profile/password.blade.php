@@ -3,13 +3,13 @@
 @section('page.title', __('Восстановить пароль'))
 
 @section('settings.left')
-<x-settings.header route="{{ route('user.settings.profile') }}">
+<x-settings.header route="{{ route('settings.profile') }}">
     {{ __('Восстановить пароль') }}
 </x-settings.header>
 
 <x-form.error />
 
-<form action="" onsubmit="sendForm('{{ route('user.settings.index') }}')" method="post">
+<form action="" onsubmit="sendForm('{{ route('settings') }}')" method="post">
     @csrf
     <div class="input-group input-password" id="password-form1">
         <div>

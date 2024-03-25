@@ -27,6 +27,6 @@ class RegisterController extends Controller
         session(['email' => 'danil.dybko@gmail.com']);
         session(['avatar' => 'MAN1']);
 
-        return redirect()->route('user.index');
+        return redirect()->route('user');
     }
 }

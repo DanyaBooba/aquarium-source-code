@@ -9,7 +9,8 @@ use App\Http\Controllers\User\ShowController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
-    Route::get('', [UserController::class, 'index'])->name('user.index');
+    Route::get('/', [UserController::class, 'index'])->name('user');
+
     Route::get('search', [UserController::class, 'search'])->name('user.search');
     Route::get('notifications', [UserController::class, 'notifications'])->name('user.notifications');
     Route::get('achievements', [UserController::class, 'achievements'])->name('user.achievements');
@@ -21,29 +22,29 @@ Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
 
     Route::get('post/add', [PostsController::class, 'index'])->name('user.add-post');
 
-    Route::get('delete', [DeleteController::class, 'delete'])->name('user.delete');
+    Route::get('delete', [DeleteController::class, 'index'])->name('user.delete');
 
     Route::prefix('settings')->group(function () {
-        Route::get('', [SettingsController::class, 'index'])->name('user.settings.index');
+        Route::get('/', [SettingsController::class, 'index'])->name('settings');
 
-        Route::get('profile', [SettingsController::class, 'profile'])->name('user.settings.profile');
-        Route::post('profile', [SettingsController::class, 'profile_store'])->name('user.settings.profile.store');
+        Route::get('profile', [SettingsController::class, 'profile'])->name('settings.profile');
+        Route::post('profile', [SettingsController::class, 'profile_store'])->name('settings.profile.store');
 
-        Route::get('profile/password', [SettingsController::class, 'password'])->name('user.settings.profile.password');
+        Route::get('profile/password', [SettingsController::class, 'password'])->name('settings.profile.password');
 
-        Route::get('notifications', [SettingsController::class, 'notifications'])->name('user.settings.notifications');
-        Route::post('notifications', [SettingsController::class, 'notifications_store'])->name('user.settings.notifications.store');
+        Route::get('notifications', [SettingsController::class, 'notifications'])->name('settings.notifications');
+        Route::post('notifications', [SettingsController::class, 'notifications_store'])->name('settings.notifications.store');
 
-        Route::get('privacy', [SettingsController::class, 'privacy'])->name('user.settings.privacy');
+        Route::get('privacy', [SettingsController::class, 'privacy'])->name('settings.privacy');
 
-        Route::get('storage', [SettingsController::class, 'storage'])->name('user.settings.storage');
+        Route::get('storage', [SettingsController::class, 'storage'])->name('settings.storage');
 
-        Route::get('devices', [SettingsController::class, 'devices'])->name('user.settings.devices');
+        Route::get('devices', [SettingsController::class, 'devices'])->name('settings.devices');
 
-        Route::get('appearance', [SettingsController::class, 'appearance'])->name('user.settings.appearance');
-        Route::post('appearance', [SettingsController::class, 'appearance_store'])->name('user.settings.appearance.store');
+        Route::get('appearance', [SettingsController::class, 'appearance'])->name('settings.appearance');
+        Route::post('appearance', [SettingsController::class, 'appearance_store'])->name('settings.appearance.store');
 
-        Route::get('language', [SettingsController::class, 'language'])->name('user.settings.language');
+        Route::get('language', [SettingsController::class, 'language'])->name('settings.language');
     });
 
 });

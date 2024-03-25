@@ -13,7 +13,7 @@ class SocialController extends Controller
         session(['email' => 'danil.dybko@gmail.com']);
         session(['avatar' => 'MAN1']);
 
-        return redirect()->route('user.index');
+        return redirect()->route('user');
     }
 
     public function yandex()
@@ -22,7 +22,7 @@ class SocialController extends Controller
         session(['email' => 'danil.dybko@gmail.com']);
         session(['avatar' => 'MAN1']);
 
-        return redirect()->route('user.index');
+        return redirect()->route('user');
     }
 
     public function github()
@@ -31,7 +31,7 @@ class SocialController extends Controller
         session(['email' => 'danil.dybko@gmail.com']);
         session(['avatar' => 'MAN1']);
 
-        return redirect()->route('user.index');
+        return redirect()->route('user');
     }
 
     public function mailru()
@@ -40,7 +40,7 @@ class SocialController extends Controller
         session(['email' => 'danil.dybko@gmail.com']);
         session(['avatar' => 'MAN1']);
 
-        return redirect()->route('user.index');
+        return redirect()->route('user');
     }
 
     public function vk()
@@ -49,6 +49,6 @@ class SocialController extends Controller
         session(['email' => 'danil.dybko@gmail.com']);
         session(['avatar' => 'MAN1']);
 
-        return redirect()->route('user.index');
+        return redirect()->route('user');
     }
 }

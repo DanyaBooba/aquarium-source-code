@@ -19,6 +19,7 @@ Route::middleware(['log', 'unlogin'])->group(function () {
     Route::post('signup/email', [RegisterController::class, 'store'])->name('auth.signup.email.store');
 
     Route::get('sign/help', [AuthController::class, 'help'])->name('auth.help');
+
     Route::get('sign/restore', [RestoreController::class, 'index'])->name('auth.restore');
     Route::post('sign/restore', [RestoreController::class, 'store'])->name('auth.restore.store');
 

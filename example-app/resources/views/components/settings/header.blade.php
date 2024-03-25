@@ -1,4 +1,4 @@
-@props(['route' => route('user.settings.index')])
+@props(['route' => route('settings')])
 
 <div class="container container-settings-header">
     <a href="#" onClick="settingsLinkBack('{{ $route }}')" class="header-back">
