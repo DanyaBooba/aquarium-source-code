@@ -1,16 +1,24 @@
-{{-- <footer class="footer py-3 mt-4">
+<footer class="footer py-3 mt-4">
     <div class="container">
-        <p class="small me-auto">
-            © 2020-{{ date('Y') }}
+        <div class="footer__main">
+            <span>© 2020-{{ date('Y') }}</span>
             <a href="{{ route('main.index') }}">
                 {{ __('Аквариум') }}
             </a>
-        </p>
-        <a href="{{ route('main.terms.privacy') }}" class="small">{{ __('Политика конфиденциальности') }}</a>
+        </div>
+        <div class="footer__social">
+            <div class="footer__privacy">
+                <a href="{{ route('main.terms.privacy') }}">{{ __('Политика конфиденциальности') }}</a>
+            </div>
+            <div class="footer__language">
+                <a href="{{ route('main.setlocale', 'ru') }}" class="{{ footer_language_locale('ru') }}">{{ __('RU') }}</a>
+                <a href="{{ route('main.setlocale', 'en') }}" class="{{ footer_language_locale('en') }}">{{ __('EN') }}</a>
+            </div>
+        </div>
     </div>
-</footer> --}}
+</footer>
 
-<footer class="footer">
+{{-- <footer class="footer">
     <div class="container">
         <div class="footer-left">
             <h4>
@@ -67,4 +75,4 @@
             </ul>
         </div>
     </div>
-</footer>
+</footer> --}}

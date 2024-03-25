@@ -72,6 +72,6 @@ if (!function_exists('settings_language_locale')) {
 if (!function_exists('footer_language_locale')) {
     function footer_language_locale(string $locale): string
     {
-        return App::currentLocale() === $locale ? "active" : "";
+        return App::currentLocale() === $locale ? "footer__social_active" : "";
     }
 }

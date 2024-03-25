@@ -12,78 +12,49 @@ footer.footer .container {
     flex-wrap: wrap;
 }
 
-footer.footer .container .footer-left {
-    min-width: 600px;
+footer.footer .container div.footer__main {
+    font-size: .875rem;
+    margin-right: auto;
 }
 
-footer.footer .container .footer-left h4 a {
+footer.footer .container div.footer__main span {
+    color: var(--text-muted);
+}
+
+footer.footer .container div.footer__main a {
     text-decoration: none;
-    font-size: 1.75rem;
 }
 
-footer.footer .container .footer-left ul.nav li {
-    margin-bottom: .5rem;
-}
-
-footer.footer .container .footer-left ul.nav li a {
+footer.footer .container div.footer__social {
     display: flex;
     align-items: center;
+}
+
+footer.footer .container div.footer__social div.footer__privacy {
+    margin-right: 1rem;
+}
+
+footer.footer .container div.footer__social a {
     text-decoration: none;
+    font-size: .875rem;
 }
 
-footer.footer .container .footer-left ul.nav li a svg {
-    margin-left: .25rem;
-    width: 20px;
-    height: 20px;
-}
-
-footer.footer .container .footer-left ul.nav {
-    margin-bottom: 1rem;
-}
-
-footer.footer .container .footer-left ul.list-locales {
-    display: flex;
-
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-footer.footer .container .footer-left ul.list-locales li {
-    margin-right: .5rem;
-}
-
-footer.footer .container .footer-left ul.list-locales li a:not(.active) {
+footer.footer .container div.footer__social a:not(.footer__social_active) {
     color: var(--text-muted) !important;
 }
 
-footer.footer .container .footer-left ul.list-locales li a {
-    font-size: .875rem;
-
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-footer.footer .container .footer-list {
-    flex: 1;
-}
-
-footer.footer .container .footer-list ul li {
-    margin-bottom: .5rem;
-}
-
-footer.footer .container .footer-list ul li a {
-    padding: 0;
+footer.footer .container div.footer__social a:not(.footer__social_active):is(:focus, :focus-visible, :focus-within) {
+    color: var(--text-color-hover) !important;
 }
 
 @media(hover: hover) {
-    footer.footer .container .footer-left ul.list-locales li a:hover {
-        color: var(--text-color) !important;
+    footer.footer .container div.footer__social a:not(.footer__social_active):hover {
+        color: var(--text-color-hover) !important;
     }
 }
 
 @media(hover: none) {
-    footer.footer .container .footer-left ul.list-locales li a:active {
-        color: var(--text-color) !important;
+    footer.footer .container div.footer__social a:not(.footer__social_active):active {
+        color: var(--text-color-hover) !important;
     }
 }
