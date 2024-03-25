@@ -30,24 +30,28 @@
         <label for="last_name" class="form-label">{{ __('Фамилия') }}</label>
         <input type="text" name="last_name" class="form-control" id="last_name" placeholder="{{ __('Иванов') }}" onInput="data()">
     </div>
-
-    {{-- <button class="btn btn-success" type="submit">{{ __('Сохранить') }}</button> --}}
 </form>
 
 <p class="text-title">
 {{ __('Доступ') }}
 </p>
 
-<ul class="list-links">
-    <li>
-        <a href="{{ route('settings.profile.password') }}">
-            {{ __('Восстановить пароль') }}
-        </a>
-    </li>
-    <li>
-        <a href="#" class="text-danger">
-            {{ __('Удалить аккаунт') }}
-        </a>
-    </li>
-</ul>
+<div class="container-settings-main">
+    <ul class="list-group">
+        <li class="fs-5 list-group-item">
+            <a href="{{ route('settings.profile.password') }}">
+                <span>
+                    {{ __('Восстановить пароль') }}
+                </span>
+            </a>
+        </li>
+        <li class="fs-5 list-group-item">
+            <a href="#">
+                <span class="text-danger">
+                    {{ __('Удалить аккаунт') }}
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
 @endsection
