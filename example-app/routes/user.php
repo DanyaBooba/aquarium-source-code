@@ -46,7 +46,6 @@ Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
 
         Route::get('language', [SettingsController::class, 'language'])->name('settings.language');
     });
-
 });
 
 Route::get('user/{nickname}', [ShowController::class, 'nickname'])->middleware(['log'])->name('user.show.nickname');

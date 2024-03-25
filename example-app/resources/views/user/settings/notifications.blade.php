@@ -2,7 +2,7 @@
 
 @section('page.title', 'Настройки уведомлений')
 
-@section('settings.left')
+@section('settings.content')
 <x-settings.header>
     {{ __('Уведомления') }}
 </x-settings.header>

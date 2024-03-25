@@ -2,7 +2,7 @@
 
 @section('page.title', __('Настройки языка'))
 
-@section('settings.left')
+@section('settings.content')
 <x-settings.header>
     {{ __('Язык') }}
 </x-settings.header>

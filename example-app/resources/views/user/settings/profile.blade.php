@@ -2,7 +2,7 @@
 
 @section('page.title', 'Настройки профиля')
 
-@section('settings.left')
+@section('settings.content')
 <x-settings.header>
     {{ __('Профиль') }}
 </x-settings.header>

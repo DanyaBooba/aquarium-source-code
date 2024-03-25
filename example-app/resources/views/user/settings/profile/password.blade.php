@@ -2,7 +2,7 @@
 
 @section('page.title', __('Восстановить пароль'))
 
-@section('settings.left')
+@section('settings.content')
 <x-settings.header route="{{ route('settings.profile') }}">
     {{ __('Восстановить пароль') }}
 </x-settings.header>

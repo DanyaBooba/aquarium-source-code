@@ -8,7 +8,7 @@
 <div class="container-settings">
     <div class="row g-2">
         <div class="container-settings-left">
-            @yield('settings.left')
+            @yield('settings.content')
         </div>
     </div>
 </div>

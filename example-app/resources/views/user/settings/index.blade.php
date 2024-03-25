@@ -2,7 +2,7 @@
 
 @section('page.title', 'Настройки')
 
-@section('settings.left')
+@section('settings.content')
 <div class="container-settings-main">
     <h1>{{ __('Настройки') }}</h1>
     <ul class="list-group">
