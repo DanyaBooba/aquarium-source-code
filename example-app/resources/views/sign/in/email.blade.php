@@ -9,6 +9,7 @@
 @endsection
 
 @section('auth.signin')
+<x-form.error />
 <form action={{ route('auth.signin.email.store') }} method="post">
     @csrf
     <div class="form-floating">
