@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
-@section('auth.title', 'Удалить аккаунт')
+@section('auth.title', __('Удалить аккаунт'))
 
 @section('user.content')
-Форма удаления аккаунта
+Delete account
 @endsection

@@ -1,6 +1,6 @@
 @extends('layouts.user')
 
-@section('page.title', 'Ваш профиль')
+@section('page.title', __('Ваш профиль'))
 
 @section('user.content')
 

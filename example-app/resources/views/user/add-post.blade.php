@@ -1,9 +1,7 @@
 @extends('layouts.user')
 
-@section('page.title', 'Добавить пост')
+@section('page.title', __('Добавить пост'))
 
 @section('user.content')
-
-add post
-
+Add post
 @endsection

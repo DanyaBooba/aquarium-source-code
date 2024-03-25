@@ -1,7 +1,7 @@
 @extends('layouts.user')
 
-@section('page.title', 'Ваш профиль')
+@section('page.title', __('Актуальное'))
 
 @section('user.content')
-trends
+Trends
 @endsection

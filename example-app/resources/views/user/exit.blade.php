@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 
-@section('page.title', 'Выход из аккаунта')
+@section('page.title', __('Выход из аккаунта'))
 
 @section('auth.content')
 <body class="d-flex align-items-center py-4 bg-body-tertiary">

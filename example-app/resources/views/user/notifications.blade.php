@@ -1,7 +1,7 @@
 @extends('layouts.user')
 
-@section('page.title', 'Ваш профиль')
+@section('page.title', __('Уведомления'))
 
 @section('user.content')
-noti
+Notifications
 @endsection

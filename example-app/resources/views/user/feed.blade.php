@@ -1,7 +1,7 @@
 @extends('layouts.user')
 
-@section('page.title', 'Ваш профиль')
+@section('page.title', __('Лента'))
 
 @section('user.content')
-feed
+Feed
 @endsection
