@@ -47,6 +47,8 @@ Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
         Route::post('appearance', [SettingsController::class, 'appearance_store'])->name('settings.appearance.store');
 
         Route::get('language', [SettingsController::class, 'language'])->name('settings.language');
+
+        Route::get('jquery', [SettingsController::class, 'test']);
     });
 });
 

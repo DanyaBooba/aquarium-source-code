@@ -95,4 +95,9 @@ class SettingsController extends Controller
     {
         return view('user.settings.themes');
     }
+
+    public function test()
+    {
+        return view('user.settings.test');
+    }
 }

@@ -23,6 +23,5 @@
 
     <script src="{{ asset('js/user/alert.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
-    @stack('js')
 </body>
 @endsection
