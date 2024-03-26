@@ -100,6 +100,21 @@ if (!function_exists('image_exist')) {
     }
 }
 
+if (!function_exists('profile_text_info')) {
+    function profile_text_info(int $number): string
+    {
+        $text = $number;
+
+        if ($number > 9_999 && $number < 1_000_000) {
+            $text = intdiv($number, 1_000) . "K";
+        } else if ($number > 999_999) {
+            $text = intdiv($number, 1_000_000) . "M";
+        }
+
+        return $text;
+    }
+}
+
 // Words
 
 if (!function_exists('use_form_word')) {

@@ -18,7 +18,7 @@ class UserController extends Controller
             "avatar" => "MAN7",
             "capDefault" => true,
             "cap" => "BG4",
-            "subs" => 300,
+            "subs" => 3_123_000,
             "sub" => 2,
             "achivs" => 5,
             "local" => true
