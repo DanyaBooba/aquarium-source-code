@@ -32,6 +32,18 @@
 
 <script src="{{ asset('js/user/jquery.js') }}"></script>
 <script>
-    console.log($(this));
+$("form").on("submit", function(){
+	// $.ajax({
+	// 	url: '/handler.php',
+	// 	method: 'post',
+	// 	dataType: 'html',
+	// 	data: $(this).serialize(),
+	// 	success: function(data){
+	// 		$('#message').html(data);
+	// 	}
+    // });
+    alert('submit');
+	return false;
+});
 </script>
 @endsection
