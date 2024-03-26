@@ -10,7 +10,18 @@ class UserController extends Controller
     public function index()
     {
         $profile = (object) [
-            "username" => "123",
+            "id" => 123,
+            "username" => "ddybka",
+            "name" => "Даниил Дыбка",
+            "desc" => "Описание профиля.",
+            "avatarDefault" => true,
+            "avatar" => "MAN7",
+            "capDefault" => true,
+            "cap" => "BG4",
+            "subs" => 300,
+            "sub" => 2,
+            "achivs" => 5,
+            "local" => true
         ];
 
         return view('user.index', [

@@ -38,7 +38,7 @@
     <div class="row row-second g-4">
         <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="p-4">
-                <h2>{{ __('Стикеры за регистрацию') }}</h2>
+                <h3>{{ __('Стикеры за регистрацию') }}</h3>
                 <div class="row-second-content row-second-stickers">
                     <a href="{{ route('auth.signup') }}">
                         <img src="{{ asset('img/stickers/sticker1.png') }}" alt="{{ __('Стикер аквариума') }}">
@@ -54,7 +54,7 @@
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="p-4">
-                <h2>{{ __('Удобная авторизация через соцсети') }}</h2>
+                <h3>{{ __('Удобная авторизация через соцсети') }}</h3>
                 <div class="row-second-content row-second-social">
                     <a href="{{ route('auth.signin') }}">
                         <img src="{{ asset('img/social/yandex.svg') }}" alt="{{ __('Яндекс') }}">
@@ -70,12 +70,12 @@
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="p-4 row-second-telegram">
-                <h2>
+                <h3>
                     <a href="{{ route('blog.index') }}">
                         {{ __('Новости проекта') }}
                     </a>
                     {!! __('<nobr>и телеграм</nobr> канал') !!}
-                </h2>
+                </h3>
                 <a href="//aquariumsocial.t.me" target="_blank">
                     <img src="{{ asset('img/social/telegram.svg') }}" alt="{{ __('Телеграм') }}">
                 </a>

@@ -20,7 +20,18 @@ class ShowController extends Controller
         // ];
 
         $profile = (object) [
-            "username" => "123",
+            "id" => 123,
+            "username" => "ddybka",
+            "name" => "Даниил Дыбка",
+            "desc" => "Описание профиля.",
+            "avatarDefault" => true,
+            "avatar" => "MAN7",
+            "capDefault" => true,
+            "cap" => "BG4",
+            "subs" => 300,
+            "sub" => 2,
+            "achivs" => 5,
+            "local" => true
         ];
 
         return view('user.show', [
@@ -31,7 +42,18 @@ class ShowController extends Controller
     public function id(Request $request)
     {
         $profile = (object) [
-            "username" => "123",
+            "id" => 123,
+            "username" => "ddybka",
+            "name" => "Даниил Дыбка",
+            "desc" => "Описание профиля.",
+            "avatarDefault" => true,
+            "avatar" => "MAN7",
+            "capDefault" => true,
+            "cap" => "BG4",
+            "subs" => 300,
+            "sub" => 2,
+            "achivs" => 5,
+            "local" => true
         ];
 
         return view('user.show', [

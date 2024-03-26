@@ -8,21 +8,6 @@
 
 @section('user.content')
 
-<x-user.profile
-    name="Даниил Дыбка"
-    :id=123
-    username="ddybka"
-    :avatar-default=true
-    avatar="MAN7"
-    :cap-default=true
-    cap="BG4"
-    desc="Описание профиля."
-    subs="300"
-    :subs-count=300
-    :sub=2
-    :sub-count=2
-    :achivs=1
-    :achivs-count=1
-    :local=true />
+<x-user.profile :profile="$profile" />
 
 @endsection

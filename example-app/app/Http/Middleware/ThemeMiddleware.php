@@ -17,6 +17,7 @@ class ThemeMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         $raw_theme = session('theme');
+        $raw_theme_dark = session('theme_dark');
 
         if (in_array($raw_theme, Config::get('app.themes'))) {
             $theme = $raw_theme;
@@ -26,7 +27,13 @@ class ThemeMiddleware
 
         session(['theme' => $theme]);
 
-        // dd(session('theme'));
+        if (in_array($raw_theme_dark, Config::get('app.themes'))) {
+            $theme = $raw_theme_dark;
+        } else {
+            $theme = Config::get('app.theme');
+        }
+
+        session(['theme_dark' => $theme]);
 
         return $next($request);
     }
