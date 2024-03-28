@@ -15,7 +15,6 @@ class UserLoginMiddleware
             return redirect()->route('auth.signin');
         }
 
-        exit_account();
         return $next($request);
     }
 }

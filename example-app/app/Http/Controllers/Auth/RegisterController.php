@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules\Password;
 
 class RegisterController extends Controller
 {
@@ -21,8 +22,8 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'password' => ['required', 'string', 'min:3', 'max:300'],
             'email' => ['required', 'string', 'max:300', 'min: 3', 'email', 'unique:users,email'],
+            'password' => ['required', 'string', 'min:8', 'max:300', Password::min(8)->letters()->numbers()],
         ]);
 
         $avatar = 'MAN' . random_int(1, 10);

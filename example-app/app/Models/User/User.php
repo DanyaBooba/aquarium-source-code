@@ -13,5 +13,7 @@ class User extends Model
         'username',
         'email',
         'password',
+        'avatar',
+        'avatarDefault',
     ];
 }

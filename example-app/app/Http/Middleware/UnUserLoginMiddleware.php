@@ -10,8 +10,10 @@ class UnUserLoginMiddleware
 {
     public function handle(Request $request, Closure $next): Response
     {
-        return user_login()
-            ? redirect()->route('user')
-            : $next($request);
+        if (user_login()) {
+            return redirect()->route('user');
+        }
+
+        return $next($request);
     }
 }

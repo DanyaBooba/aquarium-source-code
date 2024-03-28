@@ -439,5 +439,7 @@
     "Аквариум — это социальная сеть,<br> где вы можете создать свой мир.": "Aquarium is a social network, where<br>you can create your own world.",
     "Выйти из аккаунта": "Log off",
     "Больше информации в ": "More information in ",
-    "документации": "documentation"
+    "документации": "documentation",
+    "Некорректный пароль.": "Incorrect password.",
+    "Вход": "Sign in"
 }

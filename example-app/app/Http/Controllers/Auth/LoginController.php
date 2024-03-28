@@ -20,21 +20,36 @@ class LoginController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request->old());
-
-        $validated = $request->validate([
+        $validated = $request->validate(['email' => ['required', 'string', 'max:300', 'min: 3', 'email'],
             'password' => ['required', 'string', 'min:3', 'max:300'],
-            'email' => ['required', 'string', 'max:300', 'min: 3', 'email', 'exists:users,email'],
         ]);
 
-        dd($validated);
-        // dd($find);
+        $findUser = User::where(
+            'email',
+            $validated['email']
+        )->first();
 
-        // session(['login' => 'login']);
-        // session(['email' => $validated['email']]);
-        // session(['avatar' => 'MAN1']);
+        if (
+            $findUser === null
+        ) {
+            return redirect()->back()->withInput($validated)->withErrors([
+                'user' => __('Пользователь не найден.')
+            ]);
+        }
 
-        // return redirect()->back()->withInput($validated);
-        // return redirect()->route('user');
+        $passwordConfirm = app('hash')->check($validated['password'], $findUser->password);
+        if ($passwordConfirm === false) {
+            return redirect()->back()->withInput($validated)->withErrors([
+                'password' => __('Некорректный пароль.')
+            ]);
+        }
+
+        dd($findUser->avatar);
+
+        session(['login' => 'first_login']);
+        session(['email' => $validated['email']]);
+        session(['avatar' => $findUser->avatar ?? 'MAN1']);
+
+        return redirect()->route('user');
     }
 }

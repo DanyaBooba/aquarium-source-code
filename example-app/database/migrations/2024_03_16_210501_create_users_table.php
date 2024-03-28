@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->boolean('verified')->default(true);
+            $table->boolean('verified')->default(false);
             $table->boolean('blocked')->default(false);
 
             $table->string('username')->nullable();
@@ -23,6 +23,9 @@ return new class extends Migration
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('avatar')->nullable();
+
+            $table->boolean('avatarDefault')->default(true);
+            $table->boolean('capDefault')->default(true);
 
             $table->json('settings_notifications')->nullable();
 
