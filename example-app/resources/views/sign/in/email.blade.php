@@ -10,7 +10,7 @@
 
 @section('auth.signin')
 
-<x-form.error />
+<x-form.error-first />
 
 <form action={{ route('auth.signin.email.store') }} method="post">
     @csrf

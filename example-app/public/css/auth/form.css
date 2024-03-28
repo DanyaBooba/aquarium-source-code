@@ -222,6 +222,10 @@
     margin-right: .25rem;
 }
 
+.authentication .alert-error p {
+    text-align: center;
+}
+
 .authentication .alert-error {
     background-color: transparent !important;
     border: none !important;
