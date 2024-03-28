@@ -158,5 +158,6 @@ return [
         'username' => 'имя пользователя',
         'first_name' => 'имя',
         'last_name' => 'фамилия',
+        'email' => 'почта',
     ],
 ];

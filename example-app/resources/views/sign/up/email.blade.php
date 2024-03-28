@@ -14,12 +14,12 @@
     <form action={{ route('auth.signup.email.store') }} method="post">
         @csrf
         <div class="form-floating">
-            <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" onInput="checkOnInput()" autofocus>
+            <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" onInput="checkOnInput()" value="{{ old('email') }}" required autofocus>
             <label for="email">{{ __('Почта') }}</label>
         </div>
         <div class="input-group input-password" id="password-form1">
             <div class="form-floating">
-                <input type="password" name="password" class="form-control" id="password" placeholder="Пароль" onInput="checkOnInput()" required>
+                <input type="password" name="password" class="form-control" id="password" placeholder="Пароль" onInput="checkOnInput()" value="{{ old('password') }}" required>
                 <label for="password">{{ __('Пароль') }}</label>
             </div>
             <a class="input-group-text" onClick="changeShowPassword('password-form1')">

@@ -24,7 +24,7 @@ class LoginController extends Controller
 
         $validated = $request->validate([
             'password' => ['required', 'string', 'min:3', 'max:300'],
-            'email' => ['required', 'string', 'max:300', 'min: 3', 'email', 'unique:users,email'],
+            'email' => ['required', 'string', 'max:300', 'min: 3', 'email', 'exists:users,email'],
         ]);
 
         $find = User::where('email', '=', $validated['email']);
