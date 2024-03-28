@@ -22,7 +22,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
-            $table->string('avatar')->nullable();
+            $table->string('avatar');
+            $table->string('cap');
 
             $table->boolean('avatarDefault')->default(true);
             $table->boolean('capDefault')->default(true);

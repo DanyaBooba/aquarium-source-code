@@ -1,19 +1,19 @@
 <div class="user-profile">
     <x-user.profile-cap-image
-        :cap-default="$profile->capDefault"
         :cap="$profile->cap"
+        :cap-default="$profile->capDefault"
     />
     <div class="user-profile-content">
         <div class="user-profile-left">
             <div class="user-profile-image">
                 <x-user.profile-dot />
                 <x-user.profile-image
-                    :avatar-default="$profile->avatarDefault"
                     :avatar="$profile->avatar"
+                    :avatar-default="$profile->avatarDefault"
                 />
             </div>
             <div class="user-profile-text">
-                <p class="user-profile-name" title="{{ $profile->name }}">{{ $profile->name ?? __('<безымянный>') }}</p>
+                <p class="user-profile-name" title="{{ $profile->name }}">{{ $profile->name }}</p>
                 @isset($profile->desc)
                 <p class="user-profile-desc" title="{{ $profile->desc }}">{{ $profile->desc }}</p>
                 @endisset

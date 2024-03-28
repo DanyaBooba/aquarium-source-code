@@ -3,24 +3,27 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\User\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     public function index()
     {
+        $user = User::where('email', session('email'))->where('id', session('id'))->first();
+
         $profile = (object) [
-            "id" => 123,
-            "username" => "ddybka",
-            "name" => "Даниил Дыбка",
-            "desc" => "Описание профиля.",
-            "avatarDefault" => true,
-            "avatar" => "MAN7",
-            "capDefault" => true,
-            "cap" => "BG4",
-            "subs" => 3_123_000,
-            "sub" => 2,
-            "achivs" => 5,
+            "id" => $user->id,
+            "username" => $user->username,
+            "name" => profile_display_name($user->firstName, $user->lastName),
+            "desc" => $user->desc,
+            "avatarDefault" => $user->avatarDefault,
+            "avatar" => $user->avatar,
+            "capDefault" => $user->capDefault,
+            "cap" => $user->cap,
+            "subs" => isset_value($user->subs, 0),
+            "sub" => isset_value($user->sub, 0),
+            "achivs" => isset_value($user->achivs, 0),
             "local" => true
         ];
 

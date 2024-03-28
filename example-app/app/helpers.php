@@ -69,7 +69,7 @@ if (!function_exists('exit_account')) {
 if (!function_exists('user_login')) {
     function user_login(): bool
     {
-        $sessions = session()->has('login') && session()->has('email') && session()->has('avatar');
+        $sessions = session()->has('login') && session()->has('email') && session()->has('avatar') && session()->has('id');
         $findUser = User::where('email', session('email'))->first() !== null;
 
         return $sessions && $findUser;
@@ -97,6 +97,13 @@ if (!function_exists('user_cap_image_exist')) {
     }
 }
 
+if (!function_exists('isset_value')) {
+    function isset_value($value, $default)
+    {
+        return !empty($value) ? $value : $default;
+    }
+}
+
 if (!function_exists('image_exist')) {
     function image_exist(string $path, string $default): string
     {
@@ -116,6 +123,17 @@ if (!function_exists('profile_text_info')) {
         }
 
         return $text;
+    }
+}
+
+if (!function_exists('profile_display_name')) {
+    function profile_display_name($firstName = "", $lastName = ""): string
+    {
+        if (empty($firstName) && empty($lastName)) {
+            return "<безымянный>";
+        } else {
+            return $firstName . " " . $lastName;
+        }
     }
 }
 

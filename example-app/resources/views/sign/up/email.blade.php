@@ -10,7 +10,9 @@
 
 @section('auth.signup')
 <div id="signin-email">
-    <x-form.error />
+
+    <x-form.error-first />
+
     <form action={{ route('auth.signup.email.store') }} method="post">
         @csrf
         <div class="form-floating">

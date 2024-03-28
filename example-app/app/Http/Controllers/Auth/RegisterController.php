@@ -21,15 +21,25 @@ class RegisterController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'email' => ['required', 'string', 'max:300', 'min: 3', 'email', 'unique:users,email'],
+        $validated = $request->validate(['email' => ['required', 'string', 'max:300', 'min: 3', 'email'],
             'password' => ['required', 'string', 'min:3', 'max:300', Password::min(3)->letters()->numbers()],
         ]);
 
-        $avatar = 'MAN' . random_int(1, 10);
+        $findUser = User::where(
+            'email',
+            $validated['email']
+        )->first();
+
+        if ($findUser !== null) {
+            return redirect()->back()->withInput($validated)->withErrors([
+                'user' => __('Пользователь уже существует.')
+            ]);
+        }
+
+        $avatar = 'MAN' . random_int(1, 7);
         $bg = 'BG' . random_int(1, 11);
 
-        User::query()->create([
+        $query = User::query()->create([
             'email' => $validated['email'],
             'password' => bcrypt($validated['password']),
             'avatar' => $avatar,
@@ -37,6 +47,7 @@ class RegisterController extends Controller
         ]);
 
         session(['login' => 'firstLogin']);
+        session(['id' => $query->id]);
         session(['email' => $validated['email']]);
         session(['avatar' => $avatar]);
 
