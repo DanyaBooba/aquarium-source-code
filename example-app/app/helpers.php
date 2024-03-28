@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User\User;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
@@ -68,7 +69,10 @@ if (!function_exists('exit_account')) {
 if (!function_exists('user_login')) {
     function user_login(): bool
     {
-        return session()->has('login') && session()->has('email') && session()->has('avatar');
+        $sessions = session()->has('login') && session()->has('email') && session()->has('avatar');
+        $findUser = User::where('email', session('email'))->first() !== null;
+
+        return $sessions && $findUser;
     }
 }
 

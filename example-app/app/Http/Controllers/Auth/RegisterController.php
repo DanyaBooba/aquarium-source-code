@@ -25,18 +25,20 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'max:300', 'min: 3', 'email', 'unique:users,email'],
         ]);
 
+        $avatar = 'MAN' . random_int(1, 10);
+        $bg = 'BG' . random_int(1, 11);
+
         User::query()->create([
-            'username' => 'user123',
             'email' => $validated['email'],
             'password' => bcrypt($validated['password']),
+            'avatar' => $avatar,
+            'cap' => $bg,
         ]);
 
-        dd('complete');
+        session(['login' => 'firstLogin']);
+        session(['email' => $validated['email']]);
+        session(['avatar' => $avatar]);
 
-        // session(['login' => 'login']);
-        // session(['email' => 'danil.dybko@gmail.com']);
-        // session(['avatar' => 'MAN1']);
-
-        // return redirect()->route('user');
+        return redirect()->route('user');
     }
 }
