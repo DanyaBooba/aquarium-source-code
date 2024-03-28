@@ -23,10 +23,14 @@ class RegisterController extends Controller
         // $arf = App\Roles::where('description', 'test')->get();
         // $end = microtime(true) - $begin;
 
-        session(['login' => 'login']);
-        session(['email' => 'danil.dybko@gmail.com']);
-        session(['avatar' => 'MAN1']);
+        // session(['login' => 'login']);
+        // session(['email' => 'danil.dybko@gmail.com']);
+        // session(['avatar' => 'MAN1']);
 
-        return redirect()->route('user');
+        dd('123');
+
+        return '123';
+
+        // return redirect()->route('user');
     }
 }

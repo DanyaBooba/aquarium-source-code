@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\User\User;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -19,15 +20,23 @@ class LoginController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->old());
+
         $validated = $request->validate([
-            'email' => ['required', 'string', 'max:300', 'min: 3', 'email'],
             'password' => ['required', 'string', 'min:3', 'max:300'],
+            'email' => ['required', 'string', 'max:300', 'min: 3', 'email', 'unique:users,email'],
         ]);
 
-        session(['login' => 'login']);
-        session(['email' => $validated['email']]);
-        session(['avatar' => 'MAN1']);
+        $find = User::where('email', '=', $validated['email']);
 
-        return redirect()->route('user');
+        dd($validated);
+        // dd($find);
+
+        // session(['login' => 'login']);
+        // session(['email' => $validated['email']]);
+        // session(['avatar' => 'MAN1']);
+
+        // return redirect()->back()->withInput($validated);
+        // return redirect()->route('user');
     }
 }

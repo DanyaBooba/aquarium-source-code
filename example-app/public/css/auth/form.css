@@ -222,6 +222,22 @@
     margin-right: .25rem;
 }
 
+.authentication .alert-error {
+    background-color: transparent !important;
+    border: none !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.authentication .alert-error ul {
+    padding-left: 1rem !important;
+}
+
+.authentication .alert-error ul li:not(:last-child) {
+    padding-bottom: .5rem;
+}
+
 /* media */
 
 @media(max-width: 767.98px) {
