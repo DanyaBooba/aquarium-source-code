@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\User\User;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
@@ -17,19 +18,24 @@ class RegisterController extends Controller
         return view('sign.up.email');
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        // $begin = microtime(true);
-        // $arf = App\Roles::where('description', 'test')->get();
-        // $end = microtime(true) - $begin;
+        $validated = $request->validate([
+            'password' => ['required', 'string', 'min:3', 'max:300'],
+            'email' => ['required', 'string', 'max:300', 'min: 3', 'email', 'unique:users,email'],
+        ]);
+
+        User::query()->create([
+            'username' => 'user123',
+            'email' => $validated['email'],
+            'password' => bcrypt($validated['password']),
+        ]);
+
+        dd('complete');
 
         // session(['login' => 'login']);
         // session(['email' => 'danil.dybko@gmail.com']);
         // session(['avatar' => 'MAN1']);
-
-        dd('123');
-
-        return '123';
 
         // return redirect()->route('user');
     }
