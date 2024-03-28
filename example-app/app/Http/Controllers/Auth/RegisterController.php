@@ -23,7 +23,7 @@ class RegisterController extends Controller
     {
         $validated = $request->validate([
             'email' => ['required', 'string', 'max:300', 'min: 3', 'email', 'unique:users,email'],
-            'password' => ['required', 'string', 'min:8', 'max:300', Password::min(8)->letters()->numbers()],
+            'password' => ['required', 'string', 'min:3', 'max:300', Password::min(3)->letters()->numbers()],
         ]);
 
         $avatar = 'MAN' . random_int(1, 10);

@@ -71,7 +71,6 @@ header.header .header-content-links {
 }
 
 header.header .header-content-profile {
-    color: var(--accent) !important;
     display: flex;
     text-decoration: none;
     align-items: center;

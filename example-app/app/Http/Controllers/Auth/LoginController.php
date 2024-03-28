@@ -44,8 +44,6 @@ class LoginController extends Controller
             ]);
         }
 
-        dd($findUser->avatar);
-
         session(['login' => 'first_login']);
         session(['email' => $validated['email']]);
         session(['avatar' => $findUser->avatar ?? 'MAN1']);
