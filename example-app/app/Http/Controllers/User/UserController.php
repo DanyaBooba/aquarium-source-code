@@ -24,7 +24,8 @@ class UserController extends Controller
             "subs" => isset_value($user->subs, 0),
             "sub" => isset_value($user->sub, 0),
             "achivs" => isset_value($user->achivs, 0),
-            "local" => true
+            "local" => true,
+            "status" => $user->verified ? "active" : "needConfirm",
         ];
 
         return view('user.index', [

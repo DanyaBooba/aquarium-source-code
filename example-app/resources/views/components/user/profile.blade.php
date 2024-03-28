@@ -6,7 +6,7 @@
     <div class="user-profile-content">
         <div class="user-profile-left">
             <div class="user-profile-image">
-                <x-user.profile-dot />
+                <x-user.profile-dot :status="$profile->status" />
                 <x-user.profile-image
                     :avatar="$profile->avatar"
                     :avatar-default="$profile->avatarDefault"

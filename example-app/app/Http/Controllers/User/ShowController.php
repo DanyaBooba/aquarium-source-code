@@ -31,7 +31,8 @@ class ShowController extends Controller
             "subs" => 300,
             "sub" => 2,
             "achivs" => 5,
-            "local" => true
+            "local" => true,
+            "status" => "active",
         ];
 
         return view('user.show', [
