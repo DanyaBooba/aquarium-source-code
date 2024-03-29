@@ -1,5 +1,6 @@
 function findCode() {
     let code = document.querySelectorAll("code");
+    // let pre = document.querySelectorAll("code pre");
 
     if (code.length <= 0) return;
 
@@ -16,6 +17,16 @@ function findCode() {
 
         index += 1;
     });
+
+    // pre.forEach((item) => {
+    //     item.setAttribute("contenteditable", "true");
+    //     item.setAttribute("oncut", "return false");
+    //     item.setAttribute("onpaste", "return false");
+    //     item.setAttribute(
+    //         "onkeydown",
+    //         "if(event.metaKey) return true; return false;"
+    //     );
+    // });
 }
 
 function codeCopy(id) {

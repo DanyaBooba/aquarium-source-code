@@ -76,7 +76,7 @@
             <h2>{{ __('Пример приложения') }}</h2>
             <h3>{{ __('Клиент на PHP') }}</h3>
             <code>
-                <pre>
+                <pre class="prettyprint">
 $yandex_url = "https://oauth.yandex.ru/authorize?" . urldecode(http_build_query([
     "client_id"     => "client_id",
     "redirect_uri"  => "redirect_uri",
@@ -85,7 +85,7 @@ $yandex_url = "https://oauth.yandex.ru/authorize?" . urldecode(http_build_query(
             </code>
             <h3>{{ __('Сервер на PHP') }}</h3>
             <code>
-                <pre>
+                <pre class="prettyprint linenums:1">
 if (!empty($_GET["code"])) {
 
     $params = array(

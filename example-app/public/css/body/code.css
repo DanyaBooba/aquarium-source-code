@@ -5,6 +5,10 @@ code pre {
     padding-bottom: .5rem;
 }
 
+/* code pre:focus-visible {
+    border: .1rem solid var(--text-code-border) !important;
+} */
+
 pre {
     padding-left: 1rem;
     border-left: .1rem solid var(--text-code-border);

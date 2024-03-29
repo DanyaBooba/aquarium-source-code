@@ -1,7 +1,12 @@
 @extends('layouts.base')
 
+@push('css')
+<link href="{{ asset('css/prettify.css') }}" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="{{ asset('js/prettify.js') }}"></script>
+@endpush
+
 @section('body')
-<body>
+<body onload="prettyPrint()">
     <div class="d-flex flex-column justify-content-between min-vh-100">
         @include('includes.alert')
         @include('includes.header')
