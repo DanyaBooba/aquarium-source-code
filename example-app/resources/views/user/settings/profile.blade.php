@@ -60,7 +60,7 @@
             </a>
         </li>
         <li class="fs-5 list-group-item">
-            <a href="#">
+            <a href="{{ route('user.delete') }}">
                 <span class="text-danger">
                     {{ __('Удалить аккаунт') }}
                 </span>
