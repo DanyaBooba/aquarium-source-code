@@ -160,6 +160,24 @@ if (!function_exists('get_user')) {
     }
 }
 
+if (!function_exists('get_user_search')) {
+    function get_user_search($user)
+    {
+        $profile = (object) [
+            'id' => $user->id,
+            'name' => profile_display_name($user->firstName, $user->lastName),
+            'username' => $user->username,
+            'desc' => $user->desc,
+            'avatar' => $user->avatar,
+            'avatarDefault' => $user->avatarDefault,
+            'sub' => random_int(0, 1),
+            'male' => true,
+        ];
+
+        return $profile;
+    }
+}
+
 // Words
 
 if (!function_exists('use_form_word')) {
