@@ -4,6 +4,7 @@ use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\User\ExitController;
 use App\Http\Controllers\User\DeleteController;
 use App\Http\Controllers\User\PostsController;
+use App\Http\Controllers\User\Settings\AppearanceController;
 use App\Http\Controllers\User\Settings\NotificationsController;
 use App\Http\Controllers\User\Settings\ProfileController;
 use App\Http\Controllers\User\Settings\ProfilePasswordController;
@@ -40,8 +41,8 @@ Route::prefix('user')->middleware(['login.session'])->group(function () {
             Route::get('notifications', [NotificationsController::class, 'notifications'])->name('settings.notifications');
             Route::post('notifications', [NotificationsController::class, 'notifications_store'])->name('settings.notifications.store');
 
-            Route::get('appearance', [SettingsController::class, 'appearance'])->name('settings.appearance');
-            Route::post('appearance', [SettingsController::class, 'appearance_store'])->name('settings.appearance.store');
+            Route::get('appearance', [AppearanceController::class, 'appearance'])->name('settings.appearance');
+            Route::post('appearance', [AppearanceController::class, 'appearance_store'])->name('settings.appearance.store');
         });
 
         Route::get('privacy', [SettingsController::class, 'privacy'])->name('settings.privacy');
