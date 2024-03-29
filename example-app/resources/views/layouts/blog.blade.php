@@ -2,7 +2,7 @@
 
 @section('body')
 <body>
-    <div class="d-flex flex-column justify-content-between min-vh-100">
+    <div class="d-flex flex-column justify-content-between min-vh-100" style="padding-top: 6rem">
         @include('includes.alert')
         @include('includes.header')
 
@@ -18,6 +18,8 @@
     </div>
 
     <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/page/header.js') }}"></script>
+    <script src="{{ asset('js/page/cookie-accept.js') }}"></script>
     @stack('js')
 </body>
 @endsection
