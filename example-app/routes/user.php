@@ -8,7 +8,7 @@ use App\Http\Controllers\User\SettingsController;
 use App\Http\Controllers\User\ShowController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
+Route::prefix('user')->middleware(['login.session'])->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('user');
 
     Route::get('search', [UserController::class, 'search'])->name('user.search');
@@ -27,13 +27,18 @@ Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
     Route::prefix('settings')->group(function () {
         Route::get('/', [SettingsController::class, 'index'])->name('settings');
 
-        Route::get('profile', [SettingsController::class, 'profile'])->name('settings.profile');
-        Route::post('profile', [SettingsController::class, 'profile_store'])->name('settings.profile.store');
+        Route::middleware(['user.verified'])->group(function () {
+            Route::get('profile', [SettingsController::class, 'profile'])->name('settings.profile');
+            Route::post('profile', [SettingsController::class, 'profile_store'])->name('settings.profile.store');
 
-        Route::get('profile/password', [SettingsController::class, 'password'])->name('settings.profile.password');
+            Route::get('profile/password', [SettingsController::class, 'password'])->name('settings.profile.password');
 
-        Route::get('notifications', [SettingsController::class, 'notifications'])->name('settings.notifications');
-        Route::post('notifications', [SettingsController::class, 'notifications_store'])->name('settings.notifications.store');
+            Route::get('notifications', [SettingsController::class, 'notifications'])->name('settings.notifications');
+            Route::post('notifications', [SettingsController::class, 'notifications_store'])->name('settings.notifications.store');
+
+            Route::get('appearance', [SettingsController::class, 'appearance'])->name('settings.appearance');
+            Route::post('appearance', [SettingsController::class, 'appearance_store'])->name('settings.appearance.store');
+        });
 
         Route::get('privacy', [SettingsController::class, 'privacy'])->name('settings.privacy');
 
@@ -43,14 +48,11 @@ Route::prefix('user')->middleware(['log', 'login.session'])->group(function () {
 
         Route::get('themes', [SettingsController::class, 'themes'])->name('settings.themes');
 
-        Route::get('appearance', [SettingsController::class, 'appearance'])->name('settings.appearance');
-        Route::post('appearance', [SettingsController::class, 'appearance_store'])->name('settings.appearance.store');
-
         Route::get('language', [SettingsController::class, 'language'])->name('settings.language');
 
-        Route::get('jquery', [SettingsController::class, 'test']);
+        // Route::get('jquery', [SettingsController::class, 'test']);
     });
 });
 
-Route::get('user/{nickname}', [ShowController::class, 'nickname'])->middleware(['log'])->name('user.show.nickname');
-Route::get('user/id/{id}', [ShowController::class, 'id'])->middleware(['log'])->name('user.show.id');
+Route::get('user/{nickname}', [ShowController::class, 'nickname'])->name('user.show.nickname');
+Route::get('user/id/{id}', [ShowController::class, 'id'])->name('user.show.id');

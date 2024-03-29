@@ -1,12 +1,14 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace App\Http\Middleware\App;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Config;
 use Symfony\Component\HttpFoundation\Response;
 
-class UserAdminMiddleware
+class LocaleMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,9 +17,15 @@ class UserAdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!user_admin()) {
-            return redirect()->route('user');
+        $raw_locale = session('locale');
+
+        if (in_array($raw_locale, Config::get('app.locales'))) {
+            $locale = $raw_locale;
+        } else {
+            $locale = Config::get('app.locale');
         }
+
+        App::setLocale($locale);
 
         return $next($request);
     }

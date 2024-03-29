@@ -33,11 +33,11 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
-            \App\Http\Middleware\LocaleMiddleware::class,
-            \App\Http\Middleware\ThemeMiddleware::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \App\Http\Middleware\App\LocaleMiddleware::class,
+            \App\Http\Middleware\App\ThemeMiddleware::class,
         ],
 
         'api' => [
@@ -67,9 +67,10 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
 
-        'login.session' => \App\Http\Middleware\UserLoginMiddleware::class,
-        'login.admin' => \App\Http\Middleware\UserAdminMiddleware::class,
-        'unlogin' => \App\Http\Middleware\UnUserLoginMiddleware::class,
-        'log' => \App\Http\Middleware\LogMiddleware::class,
+        'log' => \App\Http\Middleware\App\LogMiddleware::class,
+        'login.session' => \App\Http\Middleware\Auth\LoginMiddleware::class,
+        'login.admin' => \App\Http\Middleware\User\AdminMiddleware::class,
+        'unlogin' => \App\Http\Middleware\Auth\GuestMiddleware::class,
+        'user.verified' => \App\Http\Middleware\User\VerifiedMiddleware::class,
     ];
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace App\Http\Middleware\Auth;
 
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class LogMiddleware
+class GuestMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,7 +15,9 @@ class LogMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        info($request->url(), $request->all());
+        if (user_login()) {
+            return redirect()->route('user');
+        }
 
         return $next($request);
     }
