@@ -144,6 +144,7 @@
 
     margin-top: .25rem;
     padding: .2rem;
+    padding-bottom: .5rem;
 }
 
 .user-profile .user-profile-buttons button.user-button-mobile {
@@ -164,6 +165,10 @@
     margin-right: .5rem;
 
     transition: .15s;
+}
+
+.user-profile .user-profile-buttons button:last-of-type {
+    margin-right: 0;
 }
 
 .user-profile .user-profile-buttons button svg {

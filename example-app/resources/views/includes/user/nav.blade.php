@@ -13,7 +13,7 @@
             </a>
         </div>
         <div>
-            <a href="{{ route('main') }}" class="{{ header_route_active_link('main.index') }}">
+            <a href="{{ route('main') }}" class="{{ header_route_active_link('main') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
                 {{ __('Написать') }}
             </a>
@@ -25,7 +25,7 @@
             </a>
         </div>
         <div>
-            <a href="{{ route('user') }}" class="{{ header_route_active_link('user.index') }}">
+            <a href="{{ route('user') }}" class="{{ header_route_active_link('user') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                 {{ __('Профиль') }}
             </a>
