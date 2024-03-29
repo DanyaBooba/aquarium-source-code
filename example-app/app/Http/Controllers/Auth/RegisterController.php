@@ -21,8 +21,9 @@ class RegisterController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate(['email' => ['required', 'string', 'max:300', 'min: 3', 'email'],
-            'password' => ['required', 'string', 'min:3', 'max:300', Password::min(3)->letters()->numbers()],
+        $validated = $request->validate([
+            'email' => ['required', 'string', 'max:254', 'min: 3', 'email'],
+            'password' => ['required', 'string', 'min:3', 'max:254', Password::min(3)->letters()->numbers()],
         ]);
 
         $findUser = User::where(

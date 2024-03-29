@@ -140,22 +140,31 @@ if (!function_exists('profile_display_name')) {
 if (!function_exists('get_user')) {
     function get_user($user, $local = false)
     {
-        $profile = (object) [
-            "id" => $user->id,
-            "username" => $user->username,
-            "name" => profile_display_name($user->firstName, $user->lastName),
-            "desc" => $user->desc,
-            "avatarDefault" => $user->avatarDefault,
-            "avatar" => $user->avatar,
-            "capDefault" => $user->capDefault,
-            "cap" => $user->cap,
-            "subs" => isset_value($user->subs, 0),
-            "sub" => isset_value($user->sub, 0),
-            "achivs" => isset_value($user->achivs, 0),
-            "local" => $local,
-            "verified" => $user->verified,
-            "status" => $user->verified ? "active" : "needConfirm",
-        ];
+        $profile = $user;
+
+        $profile->name = profile_display_name($user->firstName, $user->lastName);
+        $profile->subs = isset_value($user->subs, 0);
+        $profile->sub = isset_value($user->sub, 0);
+        $profile->achivs = isset_value($user->achivs, 0);
+        $profile->local = $local;
+        $profile->status = $user->verified ? "active" : "needConfirm";
+
+        // $profile = (object) [
+        //     "id" => $user->id,
+        //     "username" => $user->username,
+        //     "name" => profile_display_name($user->firstName, $user->lastName),
+        //     "desc" => $user->desc,
+        //     "avatarDefault" => $user->avatarDefault,
+        //     "avatar" => $user->avatar,
+        //     "capDefault" => $user->capDefault,
+        //     "cap" => $user->cap,
+        //     "subs" => isset_value($user->subs, 0),
+        //     "sub" => isset_value($user->sub, 0),
+        //     "achivs" => isset_value($user->achivs, 0),
+        //     "local" => $local,
+        //     "verified" => $user->verified,
+        //     "status" => $user->verified ? "active" : "needConfirm",
+        // ];
 
         return $profile;
     }

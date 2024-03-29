@@ -19,20 +19,44 @@ class SettingsController extends Controller
 
     public function profile()
     {
-        return view('user.settings.profile');
+        $user = User::where('email', '=', session('email'))->first();
+
+        $profile = get_user($user);
+
+        return view('user.settings.profile', [
+            'profile' => $profile
+        ]);
     }
 
     public function profile_store(Request $request)
     {
         $validated = $request->validate([
-            'username' => ['required', 'string', 'max:300', 'min: 3'],
-            'first_name' => ['nullable', 'string', 'min:2', 'max:300'],
-            'last_name' => ['nullable', 'string', 'min:2', 'max:300'],
+            'username' => ['nullable', 'string', 'max:254', 'min: 3'],
+            'first_name' => ['nullable', 'string', 'min:2', 'max:254'],
+            'last_name' => ['nullable', 'string', 'min:2', 'max:254'],
         ]);
 
-        dd($validated);
+        if (!ctype_alnum($validated['username'])) {
+            return redirect()->route('settings.profile')->withErrors([
+                'username' => __('Имя пользователя может содержать только латинские буквы в нижнем регистре и цифры.')
+            ]);
+        }
 
-        return redirect()->route('settings');
+        $username = strtolower($validated['username']);
+
+        $findUser = User::where('email', '=', $username)->first();
+
+        if ($findUser !== null) {
+            return redirect()->route('settings.profile')->withErrors([
+                'username.exist' => __('Данное имя пользователя уже занято.')
+            ]);
+        }
+
+        $find = User::where('email', '=', session('email'))->first();
+
+        dd($find);
+
+        return redirect()->route('settings.profile');
     }
 
     public function password()
@@ -80,10 +104,9 @@ class SettingsController extends Controller
 
     public function appearance_store(Request $request)
     {
-        $validated = $request->validate([
-            'username' => ['required', 'string', 'max:300', 'min: 3'],
-            'first_name' => ['nullable', 'string', 'min:2', 'max:300'],
-            'last_name' => ['nullable', 'string', 'min:2', 'max:300'],
+        $validated = $request->validate(['username' => ['required', 'string', 'max:254', 'min: 3'],
+            'first_name' => ['nullable', 'string', 'min:2', 'max:254'],
+            'last_name' => ['nullable', 'string', 'min:2', 'max:254'],
         ]);
 
         dd($validated);

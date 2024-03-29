@@ -3,6 +3,7 @@
 @section('page.title', 'Настройки профиля')
 
 @section('settings.content')
+
 <x-settings.header>
     {{ __('Профиль') }}
 </x-settings.header>
@@ -17,18 +18,22 @@
     @csrf
     <div>
         <label for="username" class="form-label">{{ __('Имя пользователя') }}</label>
-        <input type="text" name="username" class="form-control" id="username" placeholder="{{ __('К примеру,') }} superman" onInput="data()" value="user10" required>
+        <input type="text" name="username" class="form-control" id="username" placeholder="{{ __('К примеру,') }} superman" onInput="data()" value="{{ $profile->username }}" required>
         <p>
-            {{ __('Может содержать только латинские буквы в нижнем регистре.') }}
+            {{ __('Может содержать только латинские буквы в нижнем регистре и цифры.') }}
         </p>
     </div>
     <div>
         <label for="first_name" class="form-label">{{ __('Имя') }}</label>
-        <input type="text" name="first_name" class="form-control" id="first_name" placeholder="{{ __('Даниил') }}" onInput="data()">
+        <input type="text" name="first_name" class="form-control" id="first_name" value="{{ $profile->firstName }}" placeholder="{{ __('Даниил') }}" onInput="data()">
     </div>
     <div>
         <label for="last_name" class="form-label">{{ __('Фамилия') }}</label>
-        <input type="text" name="last_name" class="form-control" id="last_name" placeholder="{{ __('Иванов') }}" onInput="data()">
+        <input type="text" name="last_name" class="form-control" id="last_name" {{ $profile->lastName }} placeholder="{{ __('Иванов') }}" onInput="data()">
+    </div>
+
+    <div class="visually-hidden">
+        <button type="submit">confirm</button>
     </div>
 </form>
 
