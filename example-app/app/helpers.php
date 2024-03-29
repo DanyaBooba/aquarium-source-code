@@ -137,6 +137,29 @@ if (!function_exists('profile_display_name')) {
     }
 }
 
+if (!function_exists('get_user')) {
+    function get_user($user)
+    {
+        $profile = (object) [
+            "id" => $user->id,
+            "username" => $user->username,
+            "name" => profile_display_name($user->firstName, $user->lastName),
+            "desc" => $user->desc,
+            "avatarDefault" => $user->avatarDefault,
+            "avatar" => $user->avatar,
+            "capDefault" => $user->capDefault,
+            "cap" => $user->cap,
+            "subs" => isset_value($user->subs, 0),
+            "sub" => isset_value($user->sub, 0),
+            "achivs" => isset_value($user->achivs, 0),
+            "local" => false,
+            "status" => $user->verified ? "active" : "needConfirm",
+        ];
+
+        return $profile;
+    }
+}
+
 // Words
 
 if (!function_exists('use_form_word')) {

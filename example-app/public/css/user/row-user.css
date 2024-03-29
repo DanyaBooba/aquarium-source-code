@@ -29,6 +29,7 @@
     align-items: center;
 
     text-decoration: none;
+    transition: .15s;
 }
 
 .row-user-bar ul li a svg {

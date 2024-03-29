@@ -142,8 +142,8 @@
 
     overflow: scroll;
 
-    margin-top: .5rem;
-    padding-bottom: .5rem;
+    margin-top: .25rem;
+    padding: .2rem;
 }
 
 .user-profile .user-profile-buttons button.user-button-mobile {
@@ -161,7 +161,9 @@
     border-radius: 8px;
 
     padding: .5rem 1rem;
-    margin-right: .25rem;
+    margin-right: .5rem;
+
+    transition: .15s;
 }
 
 .user-profile .user-profile-buttons button svg {
@@ -251,5 +253,19 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+    }
+}
+
+/* media */
+
+@media(hover: hover) {
+    .user-profile .user-profile-buttons button:hover {
+        background-color: var(--user-profile-button-hover);
+    }
+}
+
+@media(hover: none) {
+    .user-profile .user-profile-buttons button:active {
+        background-color: var(--user-profile-button-hover);
     }
 }

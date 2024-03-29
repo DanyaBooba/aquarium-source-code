@@ -10,55 +10,24 @@ class ShowController extends Controller
 {
     public function nickname($nickname)
     {
-        // $query = User::first()->email;
-        // $query = User::where('username', '=', $nickname)->first();
+        $user = User::where('username', '=', $nickname)->first();
 
-        // dd($query);
-
-        // $profile = (object) [
-        //     "nickname" => "123",
-        // ];
-
-        $profile = (object) [
-            "id" => 123,
-            "username" => "ddybka",
-            "name" => "Даниил Дыбка",
-            "desc" => "Описание профиля.",
-            "avatarDefault" => true,
-            "avatar" => "MAN7",
-            "capDefault" => true,
-            "cap" => "BG4",
-            "subs" => 300,
-            "sub" => 2,
-            "achivs" => 5,
-            "local" => true,
-            "status" => "active",
-        ];
+        $profile = get_user($user);
 
         return view('user.show', [
             "profile" => $profile,
         ]);
     }
 
-    public function id(Request $request)
+    public function id($id)
     {
-        $profile = (object) [
-            "id" => 123,
-            "username" => "ddybka",
-            "name" => "Даниил Дыбка",
-            "desc" => "Описание профиля.",
-            "avatarDefault" => true,
-            "avatar" => "MAN7",
-            "capDefault" => true,
-            "cap" => "BG4",
-            "subs" => 300,
-            "sub" => 2,
-            "achivs" => 5,
-            "local" => true
-        ];
+        $user = User::where('id', '=', $id)->firstOrFail();
+
+        $profile = get_user($user);
 
         return view('user.show', [
             "profile" => $profile,
+            "itsme" => true,
         ]);
     }
 }

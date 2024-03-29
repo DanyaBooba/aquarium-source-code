@@ -46,7 +46,7 @@ class UserController extends Controller
                 'desc' => $user->desc,
                 'avatar' => $user->avatar,
                 'avatarDefault' => $user->avatarDefault,
-                'sub' => false,
+                'sub' => random_int(0, 1),
                 'male' => true,
             ];
 
@@ -54,48 +54,6 @@ class UserController extends Controller
         }
 
         $users = (object) $users;
-        // dd($users);
-
-        // $user1 = (object) [
-        //     "id" => 1,
-        //     "name" => "Даниил Дыбка",
-        //     "username" => "ddybka",
-        //     "desc" => "Описание",
-        //     "avatar" => "MAN2",
-        //     "avatarDefault" => true,
-        //     "sub" => true,
-        //     "male" => true
-        // ];
-
-        // $user2 = (object) [
-        //     "id" => 10,
-        //     "name" => "Потап Геннадич",
-        //     "username" => "iyoour",
-        //     "desc" => "ХА-ХА!",
-        //     "avatar" => "MAN6",
-        //     "avatarDefault" => true,
-        //     "sub" => false,
-        //     "male" => true
-        // ];
-
-        // $user3 = (object) [
-        //     "id" => 1,
-        //     "name" => "Варнава",
-        //     "username" => "baby",
-        //     "desc" => "Малыш",
-        //     "avatar" => "WOMAN4",
-        //     "avatarDefault" => true,
-        //     "sub" => true,
-        //     "male" => false
-        // ];
-
-        // $users = [];
-
-        // for ($i = 0; $i < 5; $i++) {
-        //     array_push($users, $user1);
-        //     array_push($users, $user2);
-        //     array_push($users, $user3);
-        // }
 
         return view('user.search', [
             "users" => $users
