@@ -35,46 +35,67 @@ class UserController extends Controller
 
     public function search()
     {
-        $user1 = (object) [
-            "id" => 1,
-            "name" => "Даниил Дыбка",
-            "username" => "ddybka",
-            "desc" => "Описание",
-            "avatar" => "MAN2",
-            "avatarDefault" => true,
-            "sub" => true,
-            "male" => true
-        ];
-
-        $user2 = (object) [
-            "id" => 10,
-            "name" => "Потап Геннадич",
-            "username" => "iyoour",
-            "desc" => "ХА-ХА!",
-            "avatar" => "MAN6",
-            "avatarDefault" => true,
-            "sub" => false,
-            "male" => true
-        ];
-
-        $user3 = (object) [
-            "id" => 1,
-            "name" => "Варнава",
-            "username" => "baby",
-            "desc" => "Малыш",
-            "avatar" => "WOMAN4",
-            "avatarDefault" => true,
-            "sub" => true,
-            "male" => false
-        ];
-
+        $usersRow = User::orderByDesc('created_at')->get();
         $users = [];
 
-        for ($i = 0; $i < 5; $i++) {
-            array_push($users, $user1);
-            array_push($users, $user2);
-            array_push($users, $user3);
+        foreach ($usersRow as $user) {
+            $userRow = (object) [
+                'id' => $user->id,
+                'name' => profile_display_name($user->firstName, $user->lastName),
+                'username' => $user->username,
+                'desc' => $user->desc,
+                'avatar' => $user->avatar,
+                'avatarDefault' => $user->avatarDefault,
+                'sub' => false,
+                'male' => true,
+            ];
+
+            array_push($users, $userRow);
         }
+
+        $users = (object) $users;
+        // dd($users);
+
+        // $user1 = (object) [
+        //     "id" => 1,
+        //     "name" => "Даниил Дыбка",
+        //     "username" => "ddybka",
+        //     "desc" => "Описание",
+        //     "avatar" => "MAN2",
+        //     "avatarDefault" => true,
+        //     "sub" => true,
+        //     "male" => true
+        // ];
+
+        // $user2 = (object) [
+        //     "id" => 10,
+        //     "name" => "Потап Геннадич",
+        //     "username" => "iyoour",
+        //     "desc" => "ХА-ХА!",
+        //     "avatar" => "MAN6",
+        //     "avatarDefault" => true,
+        //     "sub" => false,
+        //     "male" => true
+        // ];
+
+        // $user3 = (object) [
+        //     "id" => 1,
+        //     "name" => "Варнава",
+        //     "username" => "baby",
+        //     "desc" => "Малыш",
+        //     "avatar" => "WOMAN4",
+        //     "avatarDefault" => true,
+        //     "sub" => true,
+        //     "male" => false
+        // ];
+
+        // $users = [];
+
+        // for ($i = 0; $i < 5; $i++) {
+        //     array_push($users, $user1);
+        //     array_push($users, $user2);
+        //     array_push($users, $user3);
+        // }
 
         return view('user.search', [
             "users" => $users
