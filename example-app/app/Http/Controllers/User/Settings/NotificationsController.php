@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 
 class NotificationsController extends Controller
 {
-    public function notifications()
+    public function index()
     {
         return view('user.settings.notifications');
     }
 
-    public function notifications_store(Request $request)
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'authorization' => ['nullable', 'boolean'],

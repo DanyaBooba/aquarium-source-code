@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    public function profile()
+    public function index()
     {
         $user = User::where('email', '=', session('email'))->first();
 
@@ -19,7 +19,7 @@ class ProfileController extends Controller
         ]);
     }
 
-    public function profile_store(Request $request)
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'username' => ['nullable', 'string', 'max:254', 'min: 3'],

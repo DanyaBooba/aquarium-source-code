@@ -7,7 +7,12 @@ use Illuminate\Http\Request;
 
 class ProfilePasswordController extends Controller
 {
-    public function password()
+    public function index()
+    {
+        return view('user.settings.profile.password');
+    }
+
+    public function store()
     {
         return view('user.settings.profile.password');
     }

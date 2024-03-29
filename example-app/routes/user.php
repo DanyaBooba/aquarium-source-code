@@ -32,17 +32,17 @@ Route::prefix('user')->middleware(['login.session'])->group(function () {
         Route::get('/', [SettingsController::class, 'index'])->name('settings');
 
         Route::middleware(['user.verified'])->group(function () {
-            Route::get('profile', [ProfileController::class, 'profile'])->name('settings.profile');
-            Route::post('profile', [ProfileController::class, 'profile_store'])->name('settings.profile.store');
+            Route::get('profile', [ProfileController::class, 'index'])->name('settings.profile');
+            Route::post('profile', [ProfileController::class, 'store'])->name('settings.profile.store');
 
-            Route::get('profile/password', [ProfilePasswordController::class, 'password'])->name('settings.profile.password');
-            Route::post('profile/password', [ProfilePasswordController::class, 'password_store'])->name('settings.profile.password.store');
+            Route::get('profile/password', [ProfilePasswordController::class, 'index'])->name('settings.profile.password');
+            Route::post('profile/password', [ProfilePasswordController::class, 'store'])->name('settings.profile.password.store');
 
-            Route::get('notifications', [NotificationsController::class, 'notifications'])->name('settings.notifications');
-            Route::post('notifications', [NotificationsController::class, 'notifications_store'])->name('settings.notifications.store');
+            Route::get('notifications', [NotificationsController::class, 'index'])->name('settings.notifications');
+            Route::post('notifications', [NotificationsController::class, 'store'])->name('settings.notifications.store');
 
-            Route::get('appearance', [AppearanceController::class, 'appearance'])->name('settings.appearance');
-            Route::post('appearance', [AppearanceController::class, 'appearance_store'])->name('settings.appearance.store');
+            Route::get('appearance', [AppearanceController::class, 'index'])->name('settings.appearance');
+            Route::post('appearance', [AppearanceController::class, 'store'])->name('settings.appearance.store');
         });
 
         Route::get('privacy', [SettingsController::class, 'privacy'])->name('settings.privacy');

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class AppearanceController extends Controller
 {
-    public function appearance()
+    public function index()
     {
         $user = User::where('email', '=', session('email'))->first();
 
@@ -19,7 +19,7 @@ class AppearanceController extends Controller
         ]);
     }
 
-    public function appearance_store(Request $request)
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'icon' => ['required', 'integer', 'min: 1', 'max: 7'],
