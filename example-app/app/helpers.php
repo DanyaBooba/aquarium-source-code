@@ -149,23 +149,6 @@ if (!function_exists('get_user')) {
         $profile->local = $local;
         $profile->status = $user->verified ? "active" : "needConfirm";
 
-        // $profile = (object) [
-        //     "id" => $user->id,
-        //     "username" => $user->username,
-        //     "name" => profile_display_name($user->firstName, $user->lastName),
-        //     "desc" => $user->desc,
-        //     "avatarDefault" => $user->avatarDefault,
-        //     "avatar" => $user->avatar,
-        //     "capDefault" => $user->capDefault,
-        //     "cap" => $user->cap,
-        //     "subs" => isset_value($user->subs, 0),
-        //     "sub" => isset_value($user->sub, 0),
-        //     "achivs" => isset_value($user->achivs, 0),
-        //     "local" => $local,
-        //     "verified" => $user->verified,
-        //     "status" => $user->verified ? "active" : "needConfirm",
-        // ];
-
         return $profile;
     }
 }

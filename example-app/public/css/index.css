@@ -5,9 +5,10 @@
 @import "body/body.css";
 @import "body/button-top.css";
 @import "body/code.css";
-@import "body/top-info-bar.css";
+/* @import "body/top-info-bar.css"; */
 @import "body/display-none.css";
 @import "body/cookie-accept.css";
+@import "body/img.css";
 
 @import "text/text.css";
 
