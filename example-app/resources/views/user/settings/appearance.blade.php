@@ -7,7 +7,7 @@
     {{ __('Персонализация') }}
 </x-settings.header>
 
-<x-form.error />
+<x-form.error-first />
 
 <form action="" onsubmit="sendForm('{{ route('settings') }}')" method="post" class="form-settings-image">
     @csrf

@@ -12,7 +12,7 @@
     {{ __('Сведение') }}
 </p>
 
-<x-form.error />
+<x-form.error-first />
 
 <form action="" onsubmit="sendForm('{{ route('settings') }}')" method="post">
     @csrf

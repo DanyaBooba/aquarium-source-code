@@ -7,7 +7,7 @@
     {{ __('Уведомления') }}
 </x-settings.header>
 
-<x-form.error />
+<x-form.error-first />
 
 <form action="" onsubmit="sendForm('{{ route('settings') }}')" method="post">
     @csrf

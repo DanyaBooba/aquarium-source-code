@@ -188,5 +188,7 @@ return [
         'last_name' => 'фамилия',
         'email' => 'почта',
         'password' => 'пароль',
+        'currentPassword' => 'текущий пароль',
+        'newPassword' => 'новый пароль'
     ],
 ];
