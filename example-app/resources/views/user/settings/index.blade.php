@@ -6,6 +6,11 @@
 
 <div class="container-settings-main">
     <h1>{{ __('Настройки') }}</h1>
+
+    @unless($verified)
+    <x-user.settings.verified />
+    @endunless
+
     <ul class="list-group">
         @if($verified)
         <li class="fs-5 list-group-item">
