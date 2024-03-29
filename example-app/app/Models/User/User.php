@@ -17,5 +17,7 @@ class User extends Model
         'avatarDefault',
         'cap',
         'capDefault',
+        'firstName',
+        'lastName',
     ];
 }

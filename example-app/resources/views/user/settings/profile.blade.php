@@ -18,22 +18,31 @@
     @csrf
     <div>
         <label for="username" class="form-label">{{ __('Имя пользователя') }}</label>
-        <input type="text" name="username" class="form-control" id="username" placeholder="{{ __('К примеру,') }} superman" onInput="data()" value="{{ $profile->username }}" required>
+        <input type="text" name="username" class="form-control" id="username" placeholder="{{ __('К примеру,') }} superman" onInput="data()" value="{{ $profile->username }}">
         <p>
             {{ __('Может содержать только латинские буквы в нижнем регистре и цифры.') }}
         </p>
     </div>
     <div>
-        <label for="first_name" class="form-label">{{ __('Имя') }}</label>
-        <input type="text" name="first_name" class="form-control" id="first_name" value="{{ $profile->firstName }}" placeholder="{{ __('Даниил') }}" onInput="data()">
+        <label for="desc" class="form-label">{{ __('Описание') }}</label>
+        <input type="text" name="desc" class="form-control" id="desc" value="{{ $profile->desc }}" placeholder="{{ __('Пару слов о вас') }}" onInput="data()">
+        <p>
+            {{ __('Краткая информация о вас, к примеру возраст, город проживания, сфера деятельности.') }}
+        </p>
     </div>
     <div>
-        <label for="last_name" class="form-label">{{ __('Фамилия') }}</label>
-        <input type="text" name="last_name" class="form-control" id="last_name" {{ $profile->lastName }} placeholder="{{ __('Иванов') }}" onInput="data()">
+        <label for="firstName" class="form-label">{{ __('Имя') }}</label>
+        <input type="text" name="firstName" class="form-control" id="firstName" value="{{ $profile->firstName }}" placeholder="{{ __('Даниил') }}" onInput="data()">
+    </div>
+    <div>
+        <label for="lastName" class="form-label">{{ __('Фамилия') }}</label>
+        <input type="text" name="lastName" class="form-control" id="lastName" value="{{ $profile->lastName }}" placeholder="{{ __('Иванов') }}" onInput="data()">
     </div>
 
     <div class="visually-hidden">
-        <button type="submit">confirm</button>
+        <button type="submit">
+            {{ __('Сохранить') }}
+        </button>
     </div>
 </form>
 

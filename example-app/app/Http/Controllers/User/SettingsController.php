@@ -32,11 +32,12 @@ class SettingsController extends Controller
     {
         $validated = $request->validate([
             'username' => ['nullable', 'string', 'max:254', 'min: 3'],
-            'first_name' => ['nullable', 'string', 'min:2', 'max:254'],
-            'last_name' => ['nullable', 'string', 'min:2', 'max:254'],
+            'firstName' => ['nullable', 'string', 'min:2', 'max:254'],
+            'lastName' => ['nullable', 'string', 'min:2', 'max:254'],
+            'desc' => ['nullable', 'string', 'min:2', 'max:254'],
         ]);
 
-        if (!ctype_alnum($validated['username'])) {
+        if (!empty($validated['username']) && !ctype_alnum($validated['username'])) {
             return redirect()->route('settings.profile')->withErrors([
                 'username' => __('Имя пользователя может содержать только латинские буквы в нижнем регистре и цифры.')
             ]);
@@ -44,7 +45,7 @@ class SettingsController extends Controller
 
         $username = strtolower($validated['username']);
 
-        $findUser = User::where('email', '=', $username)->first();
+        $findUser = User::where('username', '=', $username)->where('email', '<>', session('email'))->first();
 
         if ($findUser !== null) {
             return redirect()->route('settings.profile')->withErrors([
@@ -54,7 +55,12 @@ class SettingsController extends Controller
 
         $find = User::where('email', '=', session('email'))->first();
 
-        dd($find);
+        $find->username = $username;
+        $find->firstName = $validated['firstName'];
+        $find->lastName = $validated['lastName'];
+        $find->desc = $validated['desc'];
+
+        $find->save();
 
         return redirect()->route('settings.profile');
     }
@@ -99,19 +105,33 @@ class SettingsController extends Controller
 
     public function appearance()
     {
-        return view('user.settings.appearance');
+        $user = User::where('email', '=', session('email'))->first();
+
+        $profile = get_user($user);
+
+        return view('user.settings.appearance', [
+            'profile' => $profile
+        ]);
     }
 
     public function appearance_store(Request $request)
     {
-        $validated = $request->validate(['username' => ['required', 'string', 'max:254', 'min: 3'],
-            'first_name' => ['nullable', 'string', 'min:2', 'max:254'],
-            'last_name' => ['nullable', 'string', 'min:2', 'max:254'],
+        $validated = $request->validate([
+            'icon' => ['required', 'integer', 'min: 1', 'max: 7'],
+            'bg' => ['required', 'integer', 'min:1', 'max:11'],
         ]);
 
-        dd($validated);
+        $user = User::where('email', '=', session('email'))->first();
 
-        return redirect()->route('settings');
+        $user->avatarDefault = true;
+        $user->capDefault = true;
+
+        $user->avatar = 'MAN' . $validated['icon'];
+        $user->cap = 'BG' . $validated['bg'];
+
+        $user->save();
+
+        return redirect()->route('settings.appearance');
     }
 
     public function language()

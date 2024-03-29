@@ -17,7 +17,7 @@
     <div class="row row-settings-avatar">
         @for($i = 1; $i <= 7; $i++)
         <div class="col">
-            <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon{{ $i }}" value="{{ $i }}" onInput="data()" {{ $i == 1 ? "checked" : "" }}>
+            <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon{{ $i }}" value="{{ $i }}" onInput="data()" {{ user_settings_active_image_avatar($i, $profile->avatar) }}>
             <label class="list-group-item" for="icon{{ $i }}">
                 <img src="{{ asset("/img/user/logo/MAN$i.png") }}">
             </label>
@@ -30,14 +30,19 @@
     <div class="row row-settings-cap">
         @for($i = 1; $i <= 11; $i++)
         <div class="col">
-            <input class="form-check-input visually-hidden" type="radio" name="bg" id="bg{{ $i }}" value="{{ $i }}" onInput="data()" {{ $i == 1 ? "checked" : "" }}>
+            <input class="form-check-input visually-hidden" type="radio" name="bg" id="bg{{ $i }}" value="{{ $i }}" onInput="data()" {{ user_settings_active_image_cap($i, $profile->cap) }}>
             <label class="list-group-item" for="bg{{ $i }}">
                 <img src="{{ asset("/img/user/bg/BG$i.jpg") }}">
             </label>
         </div>
         @endfor
     </div>
-    {{-- <button class="btn btn-success" type="submit">{{ __('Сохранить') }}</button> --}}
+
+    <div class="visually-hidden">
+        <button type="submit">
+            {{ __('Сохранить') }}
+        </button>
+    </div>
 </form>
 
 @endsection
