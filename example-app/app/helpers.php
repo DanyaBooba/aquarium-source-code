@@ -138,7 +138,7 @@ if (!function_exists('profile_display_name')) {
 }
 
 if (!function_exists('get_user')) {
-    function get_user($user)
+    function get_user($user, $local = false)
     {
         $profile = (object) [
             "id" => $user->id,
@@ -152,7 +152,8 @@ if (!function_exists('get_user')) {
             "subs" => isset_value($user->subs, 0),
             "sub" => isset_value($user->sub, 0),
             "achivs" => isset_value($user->achivs, 0),
-            "local" => false,
+            "local" => $local,
+            "verified" => $user->verified,
             "status" => $user->verified ? "active" : "needConfirm",
         ];
 

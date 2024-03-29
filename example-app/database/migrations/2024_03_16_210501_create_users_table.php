@@ -20,13 +20,22 @@ return new class extends Migration
 
             $table->string('username')->nullable();
             $table->string('email')->unique();
-            $table->string('first_name')->nullable();
-            $table->string('last_name')->nullable();
+            $table->string('firstName')->nullable();
+            $table->string('lastName')->nullable();
             $table->string('avatar');
             $table->string('cap');
+            $table->string('desc');
 
             $table->boolean('avatarDefault')->default(true);
             $table->boolean('capDefault')->default(true);
+
+            $table->integer('sub')->default(0);
+            $table->integer('subs')->default(0);
+            $table->integer('achivs')->default(0);
+
+            $table->json('subJson')->nullable();
+            $table->json('subsJson')->nullable();
+            $table->json('achivsJson')->nullable();
 
             $table->json('settings_notifications')->nullable();
 

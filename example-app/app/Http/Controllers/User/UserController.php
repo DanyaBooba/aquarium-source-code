@@ -10,9 +10,9 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user = User::where('email', session('email'))->where('id', session('id'))->first();
+        $user = User::where('email', session('email'))->first();
 
-        $profile = get_user($user);
+        $profile = get_user($user, true);
 
         return view('user.index', [
             "profile" => $profile,

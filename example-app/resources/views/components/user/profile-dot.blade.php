@@ -6,10 +6,10 @@
 </span>
 @elseif($status === "needConfirm")
 <span class="user-profile-image-point" title="{{ __('Требуется подтверждение') }}">
-    <span class="point-red"></span>
+    <span class="point-gray"></span>
 </span>
 @else
 <span class="user-profile-image-point" title="{{ __('Неактивен') }}">
-    <span class="point-gray"></span>
+    <span class="point-red"></span>
 </span>
 @endif
