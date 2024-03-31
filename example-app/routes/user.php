@@ -7,6 +7,7 @@ use App\Http\Controllers\User\PostsController;
 use App\Http\Controllers\User\Settings\AppearanceController;
 use App\Http\Controllers\User\Settings\NotificationsController;
 use App\Http\Controllers\User\Settings\ProfileController;
+use App\Http\Controllers\User\Settings\ProfileEmailController;
 use App\Http\Controllers\User\Settings\ProfilePasswordController;
 use App\Http\Controllers\User\SettingsController;
 use App\Http\Controllers\User\ShowController;
@@ -32,11 +33,16 @@ Route::prefix('user')->middleware(['login.session'])->group(function () {
         Route::get('/', [SettingsController::class, 'index'])->name('settings');
 
         Route::middleware(['user.verified'])->group(function () {
-            Route::get('profile', [ProfileController::class, 'index'])->name('settings.profile');
-            Route::post('profile', [ProfileController::class, 'store'])->name('settings.profile.store');
+            Route::prefix('profile')->group(function () {
+                Route::get('', [ProfileController::class, 'index'])->name('settings.profile');
+                Route::post('', [ProfileController::class, 'store'])->name('settings.profile.store');
 
-            Route::get('profile/password', [ProfilePasswordController::class, 'index'])->name('settings.profile.password');
-            Route::post('profile/password', [ProfilePasswordController::class, 'store'])->name('settings.profile.password.store');
+                Route::get('password', [ProfilePasswordController::class, 'index'])->name('settings.profile.password');
+                Route::post('password', [ProfilePasswordController::class, 'store'])->name('settings.profile.password.store');
+
+                Route::get('email', [ProfileEmailController::class, 'index'])->name('settings.profile.email');
+                Route::post('email', [ProfileEmailController::class, 'store'])->name('settings.profile.email.store');
+            });
 
             Route::get('notifications', [NotificationsController::class, 'index'])->name('settings.notifications');
             Route::post('notifications', [NotificationsController::class, 'store'])->name('settings.notifications.store');

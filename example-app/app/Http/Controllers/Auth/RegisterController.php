@@ -47,10 +47,10 @@ class RegisterController extends Controller
             'cap' => $bg,
         ]);
 
-        session(['login' => 'firstLogin']);
         session(['id' => $query->id]);
         session(['email' => $validated['email']]);
         session(['avatar' => $avatar]);
+        session(['avatarDefault' => 1]);
 
         return redirect()->route('user');
     }

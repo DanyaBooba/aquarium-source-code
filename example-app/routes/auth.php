@@ -6,31 +6,44 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\SocialController;
 use App\Http\Controllers\Auth\RestoreController;
+use App\Http\Controllers\Auth\SocialRegisterController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['log', 'unlogin'])->group(function () {
 
-    Route::get('signin', [LoginController::class, 'index'])->name('auth.signin');
-    Route::get('signin/email', [LoginController::class, 'email'])->name('auth.signin.email');
-    Route::post('signin/email', [LoginController::class, 'store'])->name('auth.signin.email.store');
+    Route::prefix('sign')->group(function () {
+        Route::get('help', [AuthController::class, 'help'])->name('auth.help');
 
-    Route::get('signup', [RegisterController::class, 'index'])->name('auth.signup');
-    Route::get('signup/email', [RegisterController::class, 'email'])->name('auth.signup.email');
-    Route::post('signup/email', [RegisterController::class, 'store'])->name('auth.signup.email.store');
+        Route::get('restore', [RestoreController::class, 'index'])->name('auth.restore');
+        Route::post('restore', [RestoreController::class, 'store'])->name('auth.restore.store');
 
-    Route::get('sign/help', [AuthController::class, 'help'])->name('auth.help');
+        Route::get('code', [CodeController::class, 'index'])->name('auth.code');
+        Route::post('code', [CodeController::class, 'store'])->name('auth.code.store');
+    });
 
-    Route::get('sign/restore', [RestoreController::class, 'index'])->name('auth.restore');
-    Route::post('sign/restore', [RestoreController::class, 'store'])->name('auth.restore.store');
+    Route::prefix('signin')->group(function () {
+        Route::get('', [LoginController::class, 'index'])->name('auth.signin');
+        Route::get('email', [LoginController::class, 'email'])->name('auth.signin.email');
+        Route::post('email', [LoginController::class, 'store'])->name('auth.signin.email.store');
 
-    Route::get('sign/code', [CodeController::class, 'index'])->name('auth.code');
-    Route::post('sign/code', [CodeController::class, 'store'])->name('auth.code.store');
+        Route::get('google', [SocialController::class, 'google'])->name('auth.signin.google');
+        Route::get('github', [SocialController::class, 'github'])->name('auth.signin.github');
+        Route::get('mailru', [SocialController::class, 'mailru'])->name('auth.signin.mailru');
+        Route::get('yandex', [SocialController::class, 'yandex'])->name('auth.signin.yandex');
+        Route::get('vk', [SocialController::class, 'vk'])->name('auth.signin.vk');
+    });
 
-    Route::get('sign/google', [SocialController::class, 'google'])->name('auth.google');
-    Route::get('sign/github', [SocialController::class, 'github'])->name('auth.github');
-    Route::get('sign/mailru', [SocialController::class, 'mailru'])->name('auth.mailru');
-    Route::get('sign/yandex', [SocialController::class, 'yandex'])->name('auth.yandex');
-    Route::get('sign/vk', [SocialController::class, 'vk'])->name('auth.vk');
+    Route::prefix('signup')->group(function () {
+        Route::get('', [RegisterController::class, 'index'])->name('auth.signup');
+        Route::get('email', [RegisterController::class, 'email'])->name('auth.signup.email');
+        Route::post('email', [RegisterController::class, 'store'])->name('auth.signup.email.store');
+
+        Route::get('google', [SocialRegisterController::class, 'google'])->name('auth.signup.google');
+        Route::get('github', [SocialRegisterController::class, 'github'])->name('auth.signup.github');
+        Route::get('mailru', [SocialRegisterController::class, 'mailru'])->name('auth.signup.mailru');
+        Route::get('yandex', [SocialRegisterController::class, 'yandex'])->name('auth.signup.yandex');
+        Route::get('vk', [SocialRegisterController::class, 'vk'])->name('auth.signup.vk');
+    });
 
     Route::get('login', function () {
         return redirect()->route('auth.signin');

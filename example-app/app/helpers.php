@@ -60,17 +60,18 @@ if (!function_exists('locale_active_link')) {
 if (!function_exists('exit_account')) {
     function exit_account()
     {
-        session()->forget('login');
+        session()->forget('id');
         session()->forget('email');
         session()->forget('avatar');
+        session()->forget('avatarDefault');
     }
 }
 
 if (!function_exists('user_login')) {
     function user_login(): bool
     {
-        $sessions = session()->has('login') && session()->has('email') && session()->has('avatar') && session()->has('id');
-        $findUser = User::where('email', session('email'))->first() !== null;
+        $sessions = session()->has('email') && session()->has('id') && session()->has('avatar') && session()->has('avatarDefault');
+        $findUser = User::where('email', session('email'))->where('id', session('id'))->first() !== null;
 
         return $sessions && $findUser;
     }
@@ -79,7 +80,9 @@ if (!function_exists('user_login')) {
 if (!function_exists('user_admin')) {
     function user_admin(): bool
     {
-        return session()->has('admin');
+        $findUser = User::where('email', session('email'))->first()->admin;
+
+        return $findUser;
     }
 }
 
@@ -195,8 +198,6 @@ if (!function_exists('user_settings_active_image')) {
         }
     }
 }
-
-
 
 // Words
 

@@ -100,6 +100,7 @@
 }
 
 .container-settings .container-settings-left form div input[type="text"],
+.container-settings .container-settings-left form div input[type="email"],
 .container-settings .container-settings-left form div input[type="password"] {
     background-color: var(--form-input-background) !important;
     border-radius: 8px;

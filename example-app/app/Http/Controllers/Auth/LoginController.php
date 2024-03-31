@@ -45,10 +45,10 @@ class LoginController extends Controller
             ]);
         }
 
-        session(['login' => 'firstLogin']);
         session(['id' => $findUser->id]);
         session(['email' => $validated['email']]);
         session(['avatar' => $findUser->avatar ?? 'MAN1']);
+        session(['avatarDefault' => $findUser->avatarDefault]);
 
         return redirect()->route('user');
     }

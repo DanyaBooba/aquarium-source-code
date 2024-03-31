@@ -60,6 +60,13 @@
             </a>
         </li>
         <li class="fs-5 list-group-item">
+            <a href="{{ route('settings.profile.email') }}">
+                <span>
+                    {{ __('Сменить почту') }}
+                </span>
+            </a>
+        </li>
+        <li class="fs-5 list-group-item">
             <a href="{{ route('user.delete') }}">
                 <span class="text-danger">
                     {{ __('Удалить аккаунт') }}
