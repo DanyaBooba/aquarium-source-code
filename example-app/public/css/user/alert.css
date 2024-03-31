@@ -9,7 +9,7 @@
     border-color: var(--body-color);
     border-bottom-color: var(--user-alert-border) !important;
 
-    margin-bottom: .25rem;
+    margin-bottom: 0rem;
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
 }
@@ -48,4 +48,9 @@
 
 .alert.alert-warning {
     color: var(--user-alert-text-warning) !important;
+}
+
+.alert.alert-success {
+    background-color: var(--user-alert-background-success) !important;
+    justify-content: center;
 }

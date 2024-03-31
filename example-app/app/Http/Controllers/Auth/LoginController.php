@@ -50,6 +50,6 @@ class LoginController extends Controller
         session(['avatar' => $findUser->avatar ?? 'MAN1']);
         session(['avatarDefault' => $findUser->avatarDefault]);
 
-        return redirect()->route('user');
+        return redirect()->route('user')->with('alert.success', 'С возвращением!');
     }
 }

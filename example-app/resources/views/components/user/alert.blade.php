@@ -1,6 +1,7 @@
 @props([
     'close' => true,
-    'name' => ''
+    'name' => '',
+    'type' => '',
 ])
 
 <div class="alert alert-dismissible fade show {{ $type ?? null }}" role="alert" id="{{ $name }}">
