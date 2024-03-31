@@ -1,3 +1,19 @@
+const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+
+const checkSuccessAlerts = async () => {
+    let alert = document.querySelector("#alert-success");
+
+    if (!alert) return;
+
+    delay(10000);
+
+    alert.classList.add("closed");
+
+    delay(1000);
+
+    alert.classList.add("display-none");
+};
+
 function checkClosedAlerts() {
     let alerts = JSON.parse(localStorage.getItem("alerts_closed") ?? "[]");
 
@@ -23,3 +39,4 @@ function alertClose(id) {
 }
 
 checkClosedAlerts();
+// checkSuccessAlerts();

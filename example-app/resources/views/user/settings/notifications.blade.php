@@ -24,6 +24,8 @@
         <label class="form-check-label" for="check3">{{ __('Смена пароля') }}</label>
     </div>
 
-    {{-- <button class="btn btn-success" type="submit">{{ __('Сохранить') }}</button> --}}
+    <div class="visually-hidden">
+        <button class="btn btn-success" type="submit">{{ __('Сохранить') }}</button>
+    </div>
 </form>
 @endsection

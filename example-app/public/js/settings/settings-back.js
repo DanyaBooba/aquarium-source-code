@@ -6,15 +6,11 @@ let modal;
 
 if (elementModal) {
     modal = new bootstrap.Modal(elementModal);
+    modal.show();
 }
 
 function data() {
     changeForm = true;
-
-    // window.addEventListener("beforeunload", (e) => {
-    //     e.preventDefault();
-    //     e.returnValue = true;
-    // });
 }
 
 function settingsLinkBack(route) {

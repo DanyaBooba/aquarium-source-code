@@ -10,24 +10,42 @@ class ShowController extends Controller
 {
     public function nickname($nickname)
     {
-        $user = User::where('username', '=', $nickname)->first();
+        $itsme = false;
 
+        $user = User::where('username', '=', $nickname)->first();
         $profile = get_user($user);
+
+        $userSession = User::where('email', session('email'))->first();
+        if ($userSession !== null) {
+            if ($userSession->email === $profile->email) {
+                $itsme = true;
+            }
+        }
 
         return view('user.show', [
             "profile" => $profile,
+            "itsme" => $itsme,
         ]);
     }
 
     public function id($id)
     {
-        $user = User::where('id', '=', $id)->firstOrFail();
+        $itsme = false;
 
+        $user = User::where('id', '=', $id)->firstOrFail();
         $profile = get_user($user);
+
+        $userSession = User::where('email', session('email'))->first();
+
+        if ($userSession !== null) {
+            if ($userSession->id === $profile->id) {
+                $itsme = true;
+            }
+        }
 
         return view('user.show', [
             "profile" => $profile,
-            "itsme" => true,
+            "itsme" => $itsme,
         ]);
     }
 }

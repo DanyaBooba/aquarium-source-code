@@ -52,6 +52,6 @@ class RegisterController extends Controller
         session(['avatar' => $avatar]);
         session(['avatarDefault' => 1]);
 
-        return redirect()->route('user')->with('alert.success', 'Добро пожаловать!');
+        return redirect()->route('user')->with('alert.success', __('Добро пожаловать!'));
     }
 }

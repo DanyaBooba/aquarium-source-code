@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('lastName')->nullable();
             $table->string('avatar');
             $table->string('cap');
-            $table->string('desc');
+            $table->string('desc')->nullable();
 
             $table->boolean('avatarDefault')->default(true);
             $table->boolean('capDefault')->default(true);

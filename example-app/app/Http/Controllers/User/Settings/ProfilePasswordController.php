@@ -39,6 +39,6 @@ class ProfilePasswordController extends Controller
         $user->password = bcrypt($validated['newPassword']);
         $user->save();
 
-        return redirect()->route('settings.profile.password');
+        return redirect()->route('user')->with('alert.success', __('Пароль был успешно сменен.'));
     }
 }

@@ -53,4 +53,10 @@
 .alert.alert-success {
     background-color: var(--user-alert-background-success) !important;
     justify-content: center;
+
+    transition: 1s;
+}
+
+.alert.alert-success.closed {
+    transform: scaleY(0);
 }

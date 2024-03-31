@@ -51,6 +51,6 @@ class ProfileEmailController extends Controller
 
         session(['email' => $validated['newEmail']]);
 
-        return redirect()->route('user')->with('alert.success', 'Почта была успешно сменена');
+        return redirect()->route('user')->with('alert.success', __('Почта была успешно сменена.'));
     }
 }
