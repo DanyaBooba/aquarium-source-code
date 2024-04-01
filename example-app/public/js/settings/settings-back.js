@@ -6,7 +6,6 @@ let modal;
 
 if (elementModal) {
     modal = new bootstrap.Modal(elementModal);
-    modal.show();
 }
 
 function data() {

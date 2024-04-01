@@ -1,15 +1,18 @@
 .container-settings .modal .modal-dialog .modal-content {
     max-width: 350px;
+    border: none !important;
 }
 
 .container-settings .modal .modal-dialog .modal-content .modal-header {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .container-settings .modal .modal-dialog .modal-content .modal-body button {
-    max-width: 300px;
     border-radius: 6px;
+}
 
-    margin-left: auto;
-    margin-right: auto;
+.container-settings .modal .modal-dialog .modal-content .modal-body button.btn-success {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    margin-bottom: .5rem;
 }

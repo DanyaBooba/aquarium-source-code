@@ -24,8 +24,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <div class="modal-body">
                 <div class="d-flex flex-column">
-                    <button type="button" class="btn btn-success py-2 mb-2 w-100" onClick="sendForm('{{ $route }}')">Сохранить</button>
-                    <button type="button" class="btn btn-outline-dark w-100" onClick="sendDiscardForm('{{ $route }}')">Выйти без сохранения</button>
+                    <button type="button" class="btn btn-success w-100" onClick="sendForm('{{ $route }}')">Сохранить</button>
+                    <button type="button" class="btn btn-outline-secondary w-100" onClick="sendDiscardForm('{{ $route }}')">Выйти без сохранения</button>
                 </div>
             </div>
         </div>
