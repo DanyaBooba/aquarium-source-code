@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->boolean('active');
+
+            $table->integer('iduser');
+            $table->string('title');
+            $table->text('message');
         });
     }
 

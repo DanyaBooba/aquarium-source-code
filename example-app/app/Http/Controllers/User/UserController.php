@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\User\Notifications;
 use App\Models\User\User;
 use Illuminate\Http\Request;
 
@@ -40,24 +41,28 @@ class UserController extends Controller
 
     public function notifications()
     {
-        $notifications = (object) [
-            [
-                'title' => 'page',
-                'desc' => 'info'
-            ],
-            [
-                'title' => 'page',
-                'desc' => 'info'
-            ],
-            [
-                'title' => 'page',
-                'desc' => 'info'
-            ],
-            [
-                'title' => 'page',
-                'desc' => 'info'
-            ],
-        ];
+        $findUser = User::where('email', session('email'))->first();
+
+        $notifications = Notifications::where('iduser', $findUser->id)->get();
+
+        // $notifications = (object) [
+        //     [
+        //         'title' => 'page',
+        //         'desc' => 'info'
+        //     ],
+        //     [
+        //         'title' => 'page',
+        //         'desc' => 'info'
+        //     ],
+        //     [
+        //         'title' => 'page',
+        //         'desc' => 'info'
+        //     ],
+        //     [
+        //         'title' => 'page',
+        //         'desc' => 'info'
+        //     ],
+        // ];
 
         return view('user.notifications', [
             'notifications' => $notifications

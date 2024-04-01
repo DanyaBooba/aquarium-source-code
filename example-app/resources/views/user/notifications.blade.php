@@ -9,7 +9,7 @@
 </h1>
 <div class="user-notifications">
     @foreach($notifications as $item)
-    <x-user.notifications.item :i="$loop->iteration" :header="$item['title']" :text="$item['desc']" />
+    <x-user.notifications.item :i="$loop->iteration" :header="$item->title" :text="$item->message" />
     @endforeach
 </div>
 @endsection
