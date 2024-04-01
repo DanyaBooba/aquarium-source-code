@@ -199,6 +199,13 @@ if (!function_exists('user_settings_active_image')) {
     }
 }
 
+if (!function_exists('user_settings_notifications')) {
+    function user_settings_notifications(bool $value): string
+    {
+        return $value ? "checked" : "";
+    }
+}
+
 // Words
 
 if (!function_exists('use_form_word')) {

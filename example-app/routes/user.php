@@ -60,8 +60,6 @@ Route::prefix('user')->middleware(['login.session'])->group(function () {
         Route::get('themes', [SettingsController::class, 'themes'])->name('settings.themes');
 
         Route::get('language', [SettingsController::class, 'language'])->name('settings.language');
-
-        // Route::get('jquery', [SettingsController::class, 'test']);
     });
 });
 

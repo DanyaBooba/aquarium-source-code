@@ -12,15 +12,15 @@
 <form action="" onsubmit="sendForm('{{ route('settings') }}')" method="post">
     @csrf
     <div class="form-check form-switch">
-        <input class="form-check-input" name="authorization" type="checkbox" role="switch" id="check1" value="1" onInput="data()">
+        <input class="form-check-input" name="authorization" type="checkbox" role="switch" id="check1" value="1" {{ user_settings_notifications($notification->authorization) }} onInput="data()">
         <label class="form-check-label" for="check1">{{ __('Вход в аккаунт') }}</label>
     </div>
     <div class="form-check form-switch">
-        <input class="form-check-input" name="data_change" type="checkbox" role="switch" id="check2" value="1" onInput="data()">
+        <input class="form-check-input" name="dataChange" type="checkbox" role="switch" id="check2" value="1" {{ user_settings_notifications($notification->dataChange) }} onInput="data()">
         <label class="form-check-label" for="check2">{{ __('Изменение личных данных') }}</label>
     </div>
     <div class="form-check form-switch">
-        <input class="form-check-input" name="password_change" type="checkbox" role="switch" id="check3" value="1" onInput="data()">
+        <input class="form-check-input" name="passwordChange" type="checkbox" role="switch" id="check3" value="1" {{ user_settings_notifications($notification->passwordChange) }} onInput="data()">
         <label class="form-check-label" for="check3">{{ __('Смена пароля') }}</label>
     </div>
 

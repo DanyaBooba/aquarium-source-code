@@ -24,8 +24,7 @@ class ProfileEmailController extends Controller
         $findUserSession = User::where('email', session('email'))->first();
 
         if ($validated['currentEmail'] !== $findUserSession->email) {
-            return redirect()->back()->withInput($validated)->withErrors([
-                'email' => __('Некорректная почта.')
+            return redirect()->back()->withInput($validated)->withErrors(['email' => __('Некорректная текущая почта.')
             ]);
         }
 

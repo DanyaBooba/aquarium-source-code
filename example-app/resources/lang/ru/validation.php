@@ -189,6 +189,8 @@ return [
         'email' => 'почта',
         'password' => 'пароль',
         'currentPassword' => 'текущий пароль',
-        'newPassword' => 'новый пароль'
+        'newPassword' => 'новый пароль',
+        'currentEmail' => 'текущая почта',
+        'newEmail' => 'новая почта'
     ],
 ];
