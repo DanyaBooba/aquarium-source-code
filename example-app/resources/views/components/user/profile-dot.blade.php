@@ -1,7 +1,7 @@
 @props(['status' => false])
 
 @if($status === "active")
-<span class="user-profile-image-point" title="{{ __('Активен') }}">
+<span class="user-profile-image-point">
     <span class="point-green"></span>
 </span>
 @elseif($status === "needConfirm")

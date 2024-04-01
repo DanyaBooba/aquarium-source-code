@@ -1,6 +1,4 @@
-let users = document.querySelectorAll(
-    "div.container div.user-search-users div"
-);
+let users = document.querySelectorAll("div.container div.search-users div");
 
 let searchInput = document.querySelector("input[type='search']");
 let searchEmptyField = document.getElementById("search-empty-field");

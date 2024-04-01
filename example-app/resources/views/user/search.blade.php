@@ -6,7 +6,7 @@
 
 <x-user.search.input />
 
-<div class="row g-3 user-search-users">
+<div class="d-flex flex-wrap g-3 search-users">
     @foreach($users as $user)
         <x-user.search-profile :user="$user" />
     @endforeach
@@ -16,9 +16,5 @@
     Не найдено ни одного пользователя.
 </p>
 
-{{-- <x-blog.pagination /> --}}
-@endsection
-
-@push('js')
 <script src="{{ asset('js/user/search.js') }}"></script>
-@endpush
+@endsection

@@ -8,12 +8,14 @@
 
     margin-right: auto;
     margin-top: -4.5rem;
+    max-width: 100%;
 }
 
 .user-profile .user-profile-right {
     display: flex;
     align-items: center;
     justify-content: end;
+    max-width: 100%;
 }
 
 .user-profile .user-profile-right div {
@@ -77,6 +79,7 @@
 }
 
 .user-profile .user-profile-image {
+    min-width: 150px;
     width: 150px;
     height: 150px;
 
@@ -230,11 +233,19 @@
     }
 
     .user-profile .user-profile-text p.user-profile-name {
-        word-wrap: break-word;
+        max-width: 300px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .user-profile .user-profile-text p.user-profile-desc {
-        word-wrap: break-word;
+        max-width: 300px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 
@@ -260,8 +271,6 @@
         white-space: nowrap;
     }
 }
-
-/* media */
 
 @media(hover: hover) {
     .user-profile .user-profile-buttons button:hover {
