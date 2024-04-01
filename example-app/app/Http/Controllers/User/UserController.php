@@ -40,12 +40,58 @@ class UserController extends Controller
 
     public function notifications()
     {
-        return view('user.notifications');
+        $notifications = (object) [
+            [
+                'title' => 'page',
+                'desc' => 'info'
+            ],
+            [
+                'title' => 'page',
+                'desc' => 'info'
+            ],
+            [
+                'title' => 'page',
+                'desc' => 'info'
+            ],
+            [
+                'title' => 'page',
+                'desc' => 'info'
+            ],
+        ];
+
+        return view('user.notifications', [
+            'notifications' => $notifications
+        ]);
     }
 
     public function achievements()
     {
-        return view('user.achievements');
+        $findUser = User::where('email', session('email'))->first();
+
+        $achievements = json_decode($findUser->achivsJson);
+
+        $achievements = $achievements ?? (object) [
+            [
+                'title' => __('телеграм подписчик'),
+                'img' => 'achiv-1'
+            ],
+            [
+                'title' => __('поддержка соцсети!'),
+                'img' => 'achiv-2'
+            ],
+            [
+                'title' => __('основатель'),
+                'img' => 'achiv-3'
+            ],
+            [
+                'title' => __('яркая личность'),
+                'img' => 'achiv-4'
+            ],
+        ];
+
+        return view('user.achievements', [
+            'achievements' => $achievements
+        ]);
     }
 
     public function feed()
