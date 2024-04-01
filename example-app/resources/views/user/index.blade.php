@@ -18,4 +18,6 @@
 
 <x-user.profile :profile="$profile" />
 
+<x-user.profile-me-info :profile="$profile" />
+
 @endsection
