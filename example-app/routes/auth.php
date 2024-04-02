@@ -49,6 +49,10 @@ Route::middleware(['log', 'unlogin'])->group(function () {
         return redirect()->route('auth.signin');
     });
 
+    Route::get('sign', function () {
+        return redirect()->route('auth.signin');
+    });
+
     Route::get('sign/in', function () {
         return redirect()->route('auth.signin');
     });
