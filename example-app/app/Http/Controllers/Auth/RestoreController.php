@@ -14,6 +14,6 @@ class RestoreController extends Controller
 
     public function store()
     {
-        dd('123');
+        return view('sign.restore.success');
     }
 }

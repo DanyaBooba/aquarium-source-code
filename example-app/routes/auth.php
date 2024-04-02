@@ -15,10 +15,10 @@ Route::middleware(['log', 'unlogin'])->group(function () {
         Route::get('help', [AuthController::class, 'help'])->name('auth.help');
 
         Route::get('restore', [RestoreController::class, 'index'])->name('auth.restore');
-        Route::post('restore', [RestoreController::class, 'store'])->name('auth.restore.store');
+        Route::post('restore/success', [RestoreController::class, 'store'])->name('auth.restore.store');
 
         Route::get('code', [CodeController::class, 'index'])->name('auth.code');
-        Route::post('code', [CodeController::class, 'store'])->name('auth.code.store');
+        Route::post('code/success', [CodeController::class, 'store'])->name('auth.code.store');
     });
 
     Route::prefix('signin')->group(function () {
