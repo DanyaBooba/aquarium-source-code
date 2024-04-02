@@ -1,0 +1,30 @@
+.profile-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.profile-info__item {
+    border: .1rem solid var(--settings-main-border);
+    padding: .5rem;
+    border-radius: 16px;
+    width: 330px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.profile-info__container {
+    display: flex;
+    flex-direction: column;
+    background: var(--settings-main-background);
+    padding: .75rem;
+    border-radius: 8px;
+}
+
+.profile-info__container svg {
+    margin-bottom: 1rem;
+}
+
+.profile-info__container span {
+    margin-bottom: .3rem;
+}

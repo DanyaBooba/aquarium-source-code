@@ -45,27 +45,9 @@ class UserController extends Controller
 
         $notifications = Notifications::where('iduser', $findUser->id)->get();
 
-        // $notifications = (object) [
-        //     [
-        //         'title' => 'page',
-        //         'desc' => 'info'
-        //     ],
-        //     [
-        //         'title' => 'page',
-        //         'desc' => 'info'
-        //     ],
-        //     [
-        //         'title' => 'page',
-        //         'desc' => 'info'
-        //     ],
-        //     [
-        //         'title' => 'page',
-        //         'desc' => 'info'
-        //     ],
-        // ];
-
         return view('user.notifications', [
-            'notifications' => $notifications
+            'notifications' => $notifications,
+            'count' => count($notifications)
         ]);
     }
 
@@ -73,29 +55,11 @@ class UserController extends Controller
     {
         $findUser = User::where('email', session('email'))->first();
 
-        $achievements = json_decode($findUser->achivsJson);
-
-        $achievements = $achievements ?? (object) [
-            [
-                'title' => __('телеграм подписчик'),
-                'img' => 'achiv-1'
-            ],
-            [
-                'title' => __('поддержка соцсети!'),
-                'img' => 'achiv-2'
-            ],
-            [
-                'title' => __('основатель'),
-                'img' => 'achiv-3'
-            ],
-            [
-                'title' => __('яркая личность'),
-                'img' => 'achiv-4'
-            ],
-        ];
+        $achievements = json_decode($findUser->achivsJson) ?? [];
 
         return view('user.achievements', [
-            'achievements' => $achievements
+            'achievements' => $achievements,
+            'count' => count($achievements)
         ]);
     }
 

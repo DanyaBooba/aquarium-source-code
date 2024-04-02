@@ -5,7 +5,7 @@
 @section('user.content')
 
 <h1>{{ __('Достижения') }}</h1>
-@unless($achievements)
+@if($count == 0)
 <p>
     {{ __('Участвуйте в жизни социальной сети и получайте за это достижения!') }}
 </p>
@@ -20,14 +20,14 @@
     @foreach($achievements as $item)
     <div class="col">
         <span>
-            <img src="{{ asset("/img/user/achivs/" . $item['img'] . ".jpg") }}" alt="{{ $item['title'] }}">
+            <img src="{{ asset("/img/user/achivs/" . $item->img . ".jpg") }}" alt="{{ $item->title }}">
         </span>
         <x-circle-text-simple>
-            {{ $item['title'] }}
+            {{ $item->title }}
         </x-circle-text-simple>
     </div>
     @endforeach
 </div>
-@endunless
+@endif
 
 @endsection
