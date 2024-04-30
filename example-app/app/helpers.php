@@ -80,8 +80,7 @@ if (!function_exists('user_login')) {
 if (!function_exists('user_admin')) {
     function user_admin(): bool
     {
-        $findUser = User::where('email', session('email'))->first()->admin;
-
+        $findUser = User::where('email', session('email'))->first()->usertype == 100;
         return $findUser;
     }
 }

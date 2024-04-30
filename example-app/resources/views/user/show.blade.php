@@ -8,10 +8,13 @@
     {{ __('Вы просматриваете свой профиль со стороны') }}
 </x-user.alert>
 @endif
+@if($alert = session()->pull('alert.success'))
+    <x-user.alert-success :title="$alert" />
+@endif
 @endsection
 
 @section('user.content')
 
-<x-user.profile :profile="$profile" :issub=$issub />
+<x-user.profile :profile="$profile" :issub=$issub :itsme=$itsme />
 
 @endsection

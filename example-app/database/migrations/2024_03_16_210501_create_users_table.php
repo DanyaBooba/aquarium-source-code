@@ -39,6 +39,7 @@ return new class extends Migration
 
             $table->json('settings_notifications')->nullable();
 
+            $table->integer('usertype')->default(0);
             $table->string('password');
             $table->rememberToken();
         });

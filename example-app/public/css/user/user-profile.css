@@ -170,6 +170,16 @@
     transition: .15s;
 }
 
+.user-profile .user-profile-buttons button:disabled {
+    background-color: var(--body-color);
+    outline: .2rem var(--user-profile-button) dashed;
+    margin-right: .75rem;
+}
+
+.user-profile .user-profile-buttons button.button__accent {
+    background-color: var(--user-profile-button-accent);
+}
+
 .user-profile .user-profile-buttons button:last-of-type {
     margin-right: 0;
 }
@@ -273,13 +283,13 @@
 }
 
 @media(hover: hover) {
-    .user-profile .user-profile-buttons button:hover {
+    .user-profile .user-profile-buttons button:not(:disabled):hover {
         background-color: var(--user-profile-button-hover);
     }
 }
 
 @media(hover: none) {
-    .user-profile .user-profile-buttons button:active {
+    .user-profile .user-profile-buttons button:not(:disabled):active {
         background-color: var(--user-profile-button-hover);
     }
 }

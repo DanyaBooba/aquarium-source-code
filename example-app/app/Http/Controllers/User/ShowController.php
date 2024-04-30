@@ -23,16 +23,15 @@ class ShowController extends Controller
     private function getUser(User $user)
     {
         $itsme = false;
+        $issub = false;
 
         $profile = get_user($user);
-
         $userSession = User::where('email', session('email'))->first();
 
-        if ($userSession !== null && $userSession->id === $profile->id) {
-            $itsme = true;
+        if ($userSession !== null) {
+            if ($userSession->id === $profile->id) $itsme = true;
+            $issub = in_array($userSession->id, (array) json_decode($profile->subsJson));
         }
-
-        $issub = in_array($userSession->id, (array) json_decode($profile->subsJson));
 
         return view('user.show', [
             "profile" => $profile,

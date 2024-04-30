@@ -1,6 +1,7 @@
 @props([
     'profile' => (object) [],
     'issub' => false,
+    'itsme' => false
     ])
 
 <div class="user-profile">
@@ -37,6 +38,10 @@
             {{ __('Поделиться') }}
         </button>
         @if($profile->local)
+        <button onClick="buttonOpenURL('{{ route('user.show.id', $profile->id) }}')" class="button__accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+            {{ __('Создать пост') }}
+        </button>
         <button class="user-button-mobile" onClick="buttonOpenURL('{{ route('settings') }}')">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
             {{ __('Настройки') }}
@@ -54,7 +59,7 @@
             {{ __('Достижения') }}
         </button>
         @else
-        <button onClick="buttonOpenURL('{{ route('user.sub', $profile->id) }}')">
+        <button onClick="buttonOpenURL('{{ route('user.sub', $profile->id) }}')" {{ $itsme ? "disabled" : "" }}>
             @if($issub)
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
             {{ __('Подписан') }}
@@ -63,7 +68,7 @@
             {{ __('Подписаться') }}
             @endif
         </button>
-        <button onClick="buttonOpenURL('{{ route('user.sub', $profile->id) }}')">
+        <button onClick="buttonOpenURL('{{ route('user.complain', $profile->id) }}')"  {{ $itsme ? "disabled" : "" }}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
             {{ __('Пожаловаться') }}
         </button>

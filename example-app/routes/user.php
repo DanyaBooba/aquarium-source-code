@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\User\ComplainController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\User\ExitController;
 use App\Http\Controllers\User\DeleteController;
@@ -18,6 +19,7 @@ Route::prefix('user')->middleware(['login.session'])->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('user');
 
     Route::get('sub/{id}', [SubscribeController::class, 'index'])->name('user.sub');
+    Route::get('complain/{id}', [ComplainController::class, 'index'])->name('user.complain');
 
     Route::get('search', [UserController::class, 'search'])->name('user.search');
     Route::get('notifications', [UserController::class, 'notifications'])->name('user.notifications');
