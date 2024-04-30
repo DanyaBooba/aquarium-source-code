@@ -11,38 +11,44 @@ class SubscribeController extends Controller
     public function index($id)
     {
         $findUserSession = User::where('email', session('email'))->first();
-
         $findUser = User::where('id', $id)->where('email', '<>', session('email'))->first();
 
         if ($findUser === null) {
             return redirect()->back();
         }
 
-        $subs = (array) json_decode($findUserSession->subsJson);
+        $countSub = $findUserSession->sub;
+        $countSubs = $findUser->subs;
+        $sub = (array) json_decode($findUserSession->subJson);
+        $subs = (array) json_decode($findUser->subsJson);
 
-        $issub = in_array($id, $subs);
+        $issub = in_array($id, $sub);
 
-        if (!$issub) {
-            // dd('sub');
-            array_push($subs, intval($id));
+        if ($issub) {
+            // dd("need to sub");
 
-            $findUserSession->subsJson = $subs;
-            $temp = $findUserSession->subs;
-            $findUserSession->subs = $temp + 1;
+            array_splice($sub, array_search(intval($id), $sub), 1);
+            array_splice($subs, array_search(intval($findUserSession->id), $subs), 1);
 
-            $findUserSession->save();
+            $tempCountSub = math_min_zero($countSub - 1);
+            $tempCountSubs = math_min_zero($countSubs - 1);;
         } else {
-            // dd('unsub');
-            dd(array_diff([312, 401, 15, 401, 3], [401]));
+            // dd("unsub");
 
-            $findUserSession->subsJson = $subs;
-            $temp = $findUserSession->subs;
-            $findUserSession->subs = math_min_zero($temp - 1);
+            array_push($sub, intval($id));
+            array_push($subs, intval($findUserSession->id));
 
-            $findUserSession->save();
+            $tempCountSub = $countSub + 1;
+            $tempCountSubs = $countSubs + 1;
         }
 
-        // dd($subs);
+        $findUserSession->subJson = json_encode($sub);
+        $findUserSession->sub = $tempCountSub;
+        $findUserSession->save();
+
+        $findUser->subsJson = json_encode($subs);
+        $findUser->subs = $tempCountSubs;
+        $findUser->save();
 
         return redirect()->back();
     }

@@ -12,6 +12,6 @@
 
 @section('user.content')
 
-<x-user.profile :profile="$profile" />
+<x-user.profile :profile="$profile" :issub=$issub />
 
 @endsection
