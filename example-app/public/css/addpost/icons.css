@@ -1,5 +1,22 @@
+trix-toolbar button.trix-button--icon-quote {
+    display: none !important;
+}
+
+trix-toolbar button.trix-button--icon-code {
+    display: none !important;
+}
+
+trix-toolbar button.trix-button--icon-attach {
+    display: none !important;
+}
+
 trix-toolbar .trix-button-group {
     border: none !important;
+}
+
+trix-toolbar .trix-button.trix-active {
+    background-color: var(--trix-button-accent) !important;
+    border-radius: 4px;
 }
 
 trix-toolbar .trix-button-group button {
