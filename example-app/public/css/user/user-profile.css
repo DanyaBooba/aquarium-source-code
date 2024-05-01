@@ -178,6 +178,7 @@
 
 .user-profile .user-profile-buttons button.button__accent {
     background-color: var(--user-profile-button-accent);
+    color: var(--user-profile-button-accent-text) !important;
 }
 
 .user-profile .user-profile-buttons button:last-of-type {
@@ -286,10 +287,18 @@
     .user-profile .user-profile-buttons button:not(:disabled):hover {
         background-color: var(--user-profile-button-hover);
     }
+
+    .user-profile .user-profile-buttons button.button__accent:hover {
+        background-color: var(--user-profile-button-accent-hover) !important;
+    }
 }
 
 @media(hover: none) {
     .user-profile .user-profile-buttons button:not(:disabled):active {
         background-color: var(--user-profile-button-hover);
+    }
+
+    .user-profile .user-profile-buttons button.button__accent:active {
+        background-color: var(--user-profile-button-accent-hover) !important;
     }
 }

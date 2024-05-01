@@ -59,7 +59,9 @@
     --user-profile-image-background-image: #221f40;
     --user-profile-image-border: #302d57;
     --user-profile-button: #221f40;
-    --user-profile-button-accent: #123;
+    --user-profile-button-accent: #3a7075;
+    --user-profile-button-accent-hover: #4e8d93;
+    --user-profile-button-accent-text: #fff;
     --user-profile-button-hover: #342f5e;
     --user-profile-button-text: #fff;
 
