@@ -1,0 +1,17 @@
+trix-toolbar .trix-button-group {
+    border: none !important;
+}
+
+trix-toolbar .trix-button-group button {
+    outline: none !important;
+    border: none !important;
+}
+
+trix-toolbar .trix-button-group button::before {
+    opacity: 1 !important;
+}
+
+trix-editor {
+    border-radius: 8px !important;
+    min-height: 15rem !important;
+}

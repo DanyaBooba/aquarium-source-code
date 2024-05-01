@@ -6,7 +6,7 @@
 
 .profile-info__item {
     border: .1rem solid var(--settings-main-border);
-    padding: .5rem;
+    padding: .25rem;
     border-radius: 16px;
     width: 330px;
     margin-right: 1rem;
