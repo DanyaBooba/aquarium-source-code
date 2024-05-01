@@ -30,9 +30,10 @@ Route::prefix('user')->middleware(['login.session'])->group(function () {
     Route::get('exit', [ExitController::class, 'index'])->name('user.exit');
     Route::get('exit/exactly', [ExitController::class, 'exit'])->name('user.exit.exactly');
 
-    Route::get('post/add', [PostsController::class, 'index'])->name('user.add-post');
+    Route::get('post/add', [PostsController::class, 'index'])->name('user.addpost');
 
     Route::get('delete', [DeleteController::class, 'index'])->name('user.delete');
+    Route::post('delete', [DeleteController::class, 'post'])->name('user.delete.post');
 
     Route::prefix('settings')->group(function () {
         Route::get('/', [SettingsController::class, 'index'])->name('settings');

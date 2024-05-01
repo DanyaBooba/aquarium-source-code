@@ -3,8 +3,8 @@
 @section('page.title', __('Удалить аккаунт'))
 
 @section('auth.header')
-<x-sign.header route-back="{{ route('auth.signin') }}">
-    {{ __('Войти в аккаунт') }}
+<x-sign.header routeClose="{{ route('user') }}" class='text-danger'>
+    {{ __('Удалить аккаунт') }}
 </x-sign.header>
 @endsection
 
@@ -12,7 +12,7 @@
 
 <x-form.error-first />
 
-<form action={{ route('auth.signin.email.store') }} method="post">
+<form action={{ route('user.delete.post') }} method="post">
     @csrf
     <div class="form-floating">
         <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" onInput="checkOnInput()" value="{{ old('email') }}" required autofocus>
@@ -29,11 +29,14 @@
         </a>
     </div>
 
-    <button class="btn btn-primary py-3 mt-3" type="submit">{{ __('Войти') }}</button>
-</form>
+    <div class="form-floating">
+        <input type="text" name="confirmDelete" class="form-control" id="confirmDelete" placeholder="Подтвердите удаление аккаунта" onInput="checkOnInput()" value="{{ old('confirmDelete') }}" required>
+        <label for="confirmDelete">{{ __('Подтвердите удаление') }}</label>
+        <p style="color: var(--text-muted); font-size: .875rem; margin-bottom: 0; user-select: none;">
+            Введите: <span style="color: var(--text-color) !important">Подтверждаю удаление аккаунта</span>
+        </p>
+    </div>
 
-<a href="{{ route('auth.help') }}" class="d-flex justify-content-center mt-4 mb-5 text-decoration-none">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-question"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-    {{ __('Проблемы со входом?') }}
-</a>
+    <button class="btn btn-danger py-3 mt-3" type="submit">{{ __('Удалить') }}</button>
+</form>
 @endsection

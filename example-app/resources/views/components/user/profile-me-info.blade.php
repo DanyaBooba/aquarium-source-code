@@ -11,6 +11,16 @@
             </span>
         </x-user.profile.info-block>
     @else
+        <x-user.profile.info-block svg="<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='18' cy='5' r='3'/><circle cx='6' cy='12' r='3'/><circle cx='18' cy='19' r='3'/><line x1='8.59' x2='15.42' y1='13.51' y2='17.49'/><line x1='15.41' x2='8.59' y1='6.51' y2='10.49'/></svg>">
+            <span>
+                {{ __('Поделитесь вашей ссылкой для регистрации.') }}
+            </span>
+            <span>
+                <a href="#" onClick="buttonCopyURL('{{ $profile->share }}')">
+                    {{ __('Скопировать') }}
+                </a>
+            </span>
+        </x-user.profile.info-block>
         @if($profile->sub == 0)
             <x-user.profile.info-block svg="<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-users'><path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M22 21v-2a4 4 0 0 0-3-3.87'/><path d='M16 3.13a4 4 0 0 1 0 7.75'/></svg>">
                 <span>
