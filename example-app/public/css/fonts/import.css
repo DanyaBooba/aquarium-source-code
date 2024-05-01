@@ -26,6 +26,6 @@
     font-display: swap;
     src: local("Inter-Medium"),
         local("Inter Medium"),
-        url("/fonts/Inter/Inter-Medium.woff") format("woff"),
-        url("/fonts/Inter/Inter-Medium.woff2") format("woff2");
+        url("/fonts/Inter/Inter-Bold.woff") format("woff"),
+        url("/fonts/Inter/Inter-Bold.woff2") format("woff2");
 }

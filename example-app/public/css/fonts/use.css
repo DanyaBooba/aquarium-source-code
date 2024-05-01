@@ -10,6 +10,7 @@ footer {
 }
 
 b,
+strong,
 .fw-bold {
     font-family: Inter-Bold;
 }
