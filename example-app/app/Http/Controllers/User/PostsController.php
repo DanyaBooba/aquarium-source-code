@@ -11,4 +11,9 @@ class PostsController extends Controller
     {
         return view('user.addpost');
     }
+
+    public function post()
+    {
+        dd('post');
+    }
 }

@@ -3,7 +3,7 @@
 @push('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/addpost/include.css') }}" />
 <link rel="stylesheet" type="text/css" href="{{ asset('css/trix.css') }}">
-  <script type="text/javascript" src="{{ asset('js/trix.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/trix.js') }}"></script>
 @endpush
 
 @section('user.content')

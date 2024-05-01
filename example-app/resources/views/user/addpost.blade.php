@@ -6,7 +6,8 @@
 <div class="container-settings-main">
     <h1>{{ __('Добавить пост') }}</h1>
     <div class="addpost-container">
-        <form action="{{ route('user') }}" method="post">
+        <form action="{{ route('user.addpost.post') }}" method="post">
+            @csrf
             <div class="mb-3">
                 <input type="text" class="form-control" id="inp" placeholder="Название">
             </div>
