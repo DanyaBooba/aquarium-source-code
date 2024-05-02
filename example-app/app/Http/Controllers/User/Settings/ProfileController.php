@@ -38,13 +38,14 @@ class ProfileController extends Controller
 
         $findUser = User::where('username', '=', $username)->where('email', '<>', session('email'))->first();
 
-        if ($findUser !== null) {
+        if ($findUser !== null && $username != "") {
             return redirect()->route('settings.profile')->withErrors([
                 'username.exist' => __('Данное имя пользователя уже занято.')
             ]);
         }
 
         $find = User::where('email', '=', session('email'))->first();
+        if ($find->usertype == -1) return redirect()->back();
 
         $find->username = $username;
         $find->firstName = $validated['firstName'];

@@ -4,18 +4,30 @@
             <span>
                 {{ __('Для взаимодействия с пользователями, подтвердите почту.') }}
             </span>
-            <span>
+            <span class="mt-auto">
                 <a href="#">
                     {{ __('Отправить ссылку') }}
                 </a>
             </span>
         </x-user.profile.info-block>
     @else
+        @if($profile->usertype === -1)
+        <x-user.profile.info-block svg="<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z'/><path d='M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z'/><path d='M6 8h2'/><path d='M6 12h2'/><path d='M16 8h2'/><path d='M16 12h2'/></svg>">
+            <span>
+                {{ __('Вы пользуетесь тестовым аккаунтом. Чтобы получить полный функционал, зарегистрируйтесь.') }}
+            </span>
+            <span class="mt-auto">
+                <a href="{{ route('auth.sign.test.exit') }}">
+                    {{ __('Зарегистрироваться') }}
+                </a>
+            </span>
+        </x-user.profile.info-block>
+        @endif
         <x-user.profile.info-block svg="<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='18' cy='5' r='3'/><circle cx='6' cy='12' r='3'/><circle cx='18' cy='19' r='3'/><line x1='8.59' x2='15.42' y1='13.51' y2='17.49'/><line x1='15.41' x2='8.59' y1='6.51' y2='10.49'/></svg>">
             <span>
                 {{ __('Поделитесь вашей ссылкой для регистрации.') }}
             </span>
-            <span>
+            <span class="mt-auto">
                 <a href="#" onClick="buttonCopyURL('{{ $profile->share }}')">
                     {{ __('Скопировать') }}
                 </a>
@@ -26,7 +38,7 @@
                 <span>
                     {{ __('Давайте подпишемся на кого-нибудь!') }}
                 </span>
-                <span>
+                <span class="mt-auto">
                     <a href="{{ route('user.search') }}">
                         {{ __('Смотреть пользователей') }}
                     </a>
@@ -39,7 +51,7 @@
                 <span>
                     {{ __('Получите ваше первое достижение за подписку на телеграм канал.') }}
                 </span>
-                <span>
+                <span class="mt-auto">
                     <a href="//aquariumsocial.t.me" target="_blank">
                         {{ __('Подписаться на телеграм') }}
                     </a>

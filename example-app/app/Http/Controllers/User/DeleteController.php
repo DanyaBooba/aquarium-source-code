@@ -35,6 +35,11 @@ class DeleteController extends Controller
             ]);
         }
 
+        if ($findUser->usertype === -1) {
+            exit_account();
+            return redirect()->route('main');
+        }
+
         $passwordConfirm = app('hash')->check($validated['password'], $findUser->password);
         if ($passwordConfirm === false) {
             return redirect()->back()->withInput($validated)->withErrors([

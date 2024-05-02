@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\SocialController;
 use App\Http\Controllers\Auth\RestoreController;
 use App\Http\Controllers\Auth\SocialRegisterController;
+use App\Http\Controllers\Auth\TestAccountController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['log', 'unlogin'])->group(function () {
@@ -45,6 +46,8 @@ Route::middleware(['log', 'unlogin'])->group(function () {
         Route::get('vk', [SocialRegisterController::class, 'vk'])->name('auth.signup.vk');
     });
 
+    Route::get('sign/test', [TestAccountController::class, 'index'])->name('auth.sign.test');
+
     Route::get('login', function () {
         return redirect()->route('auth.signin');
     });
@@ -69,3 +72,5 @@ Route::middleware(['log', 'unlogin'])->group(function () {
         return redirect()->route('auth.signup');
     });
 });
+
+Route::get('sign/fromtest', [TestAccountController::class, 'exit'])->name('auth.sign.test.exit');

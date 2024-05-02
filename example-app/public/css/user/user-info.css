@@ -1,6 +1,6 @@
 .profile-info {
     display: flex;
-    flex-wrap: wrap;
+    overflow: scroll;
     margin-top: 1rem;
 }
 
@@ -8,7 +8,7 @@
     border: .1rem solid var(--settings-main-border);
     padding: .25rem;
     border-radius: 16px;
-    width: 330px;
+    min-width: 330px;
     margin-right: 1rem;
     margin-bottom: 1rem;
 }
@@ -19,6 +19,7 @@
     background: var(--settings-main-background);
     padding: .75rem;
     border-radius: 12px;
+    height: 100%;
 }
 
 .profile-info__container svg {

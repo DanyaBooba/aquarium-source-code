@@ -63,15 +63,13 @@ if (!function_exists('exit_account')) {
     {
         session()->forget('id');
         session()->forget('email');
-        session()->forget('avatar');
-        session()->forget('avatarDefault');
     }
 }
 
 if (!function_exists('user_login')) {
     function user_login(): bool
     {
-        $sessions = session()->has('email') && session()->has('id') && session()->has('avatar') && session()->has('avatarDefault');
+        $sessions = session()->has('email') && session()->has('id');
         $findUser = User::where('email', session('email'))->where('id', session('id'))->first() !== null;
 
         return $sessions && $findUser;
@@ -298,5 +296,31 @@ if (!function_exists('random_string')) {
         }
 
         return $random_string;
+    }
+}
+
+if (!function_exists('login_for_test_account')) {
+    function login_for_test_account()
+    {
+        $findTest = User::where('email', 'testaccount')->first();
+
+        if ($findTest === null) {
+            $findTest = User::query()->create([
+                'verified' => 1,
+                'email' => 'testaccount',
+                'password' => '',
+                'avatar' => 'MAN6',
+                'cap' => 'BG3',
+                'usertype' => -1,
+                'firstName' => 'Даниил',
+                'lastName' => 'Иванов',
+                'desc' => 'Описание профиля.',
+            ]);
+
+            //
+        }
+
+        session(['id' => $findTest->id]);
+        session(['email' => 'testaccount']);
     }
 }

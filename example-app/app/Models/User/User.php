@@ -10,6 +10,7 @@ class User extends Model
     use HasFactory;
 
     protected $fillable = [
+        'verified',
         'username',
         'email',
         'password',
@@ -19,5 +20,7 @@ class User extends Model
         'capDefault',
         'firstName',
         'lastName',
+        'usertype',
+        'desc',
     ];
 }
