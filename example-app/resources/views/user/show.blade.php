@@ -7,6 +7,10 @@
 <x-user.alert :close=false>
     {{ __('Вы просматриваете свой профиль со стороны') }}
 </x-user.alert>
+@elseif($profile->usertype === -1)
+<x-user.alert :close=false>
+    {{ __('Тестовый аккаунт, используется в качестве демонстрации возможностей') }}
+</x-user.alert>
 @endif
 @if($alert = session()->pull('alert.success'))
     <x-user.alert-success :title="$alert" />
