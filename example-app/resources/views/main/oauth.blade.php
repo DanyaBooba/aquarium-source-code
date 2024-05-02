@@ -85,7 +85,7 @@ $yandex_url = "https://oauth.yandex.ru/authorize?" . urldecode(http_build_query(
             </code>
             <h3>{{ __('Сервер на PHP') }}</h3>
             <code>
-                <pre class="prettyprint linenums:1">
+                <pre class="prettyprint">
 if (!empty($_GET["code"])) {
 
     $params = array(
