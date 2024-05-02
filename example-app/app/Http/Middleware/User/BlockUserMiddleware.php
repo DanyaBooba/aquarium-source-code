@@ -5,6 +5,7 @@ namespace App\Http\Middleware\User;
 use App\Models\User\User;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 class BlockUserMiddleware
@@ -19,7 +20,9 @@ class BlockUserMiddleware
         $findUser = User::where('email', session('email'))->first();
 
         if ($findUser->blocked) {
-            return redirect()->route('user.blocked');
+            if (!Route::is('user.blocked')) return redirect()->route('user.blocked');
+        } else {
+            if (Route::is('user.blocked')) return redirect()->route('user');
         }
 
         return $next($request);
