@@ -22,7 +22,7 @@ class UserController extends Controller
 
     public function search()
     {
-        $usersRow = User::orderByDesc('created_at')->where('verified', 1)->get();
+        $usersRow = User::orderByDesc('created_at')->where('verified', 1)->where('usertype', '<>', -1)->get();
 
         $users = [];
         foreach ($usersRow as $user) {

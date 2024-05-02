@@ -21,6 +21,8 @@ class ComplainController extends Controller
 
         if ($findUser->id == $findUserSession->id) return redirect()->back();
 
+        if ($findUser->usertype === -1 || $findUserSession->usertype === -1) return redirect()->back();
+
         Complain::query()->create([
             'idUser' => $findUser->id,
             'idUserFrom' => $findUserSession->id,

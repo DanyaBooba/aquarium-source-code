@@ -13,6 +13,8 @@ class SubscribeController extends Controller
         $findUserSession = User::where('email', session('email'))->first();
         $findUser = User::where('id', $id)->where('email', '<>', session('email'))->first();
 
+        if ($findUserSession->usertype === -1 || $findUser->usertype === -1) return redirect()->back();
+
         if ($findUser === null) {
             return redirect()->back();
         }
