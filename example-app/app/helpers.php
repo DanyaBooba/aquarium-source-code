@@ -77,6 +77,15 @@ if (!function_exists('user_login')) {
     }
 }
 
+if (!function_exists('user_verify')) {
+    function user_verify(): bool
+    {
+        $findUser = User::where('email', session('email'))->where('id', session('id'))->first();
+
+        return $findUser->verified;
+    }
+}
+
 if (!function_exists('user_admin')) {
     function user_admin(): bool
     {

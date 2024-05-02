@@ -13,10 +13,12 @@ use App\Http\Controllers\User\Settings\ProfilePasswordController;
 use App\Http\Controllers\User\SettingsController;
 use App\Http\Controllers\User\ShowController;
 use App\Http\Controllers\User\SubscribeController;
+use App\Http\Controllers\User\VerifyController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('user')->middleware(['login.session'])->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('user');
+    Route::get('/verify', [VerifyController::class, 'viewverify'])->name('user.viewverify');
 
     Route::get('sub/{id}', [SubscribeController::class, 'index'])->name('user.sub');
     Route::get('complain/{id}', [ComplainController::class, 'index'])->name('user.complain');
@@ -28,7 +30,6 @@ Route::prefix('user')->middleware(['login.session'])->group(function () {
     Route::get('trends', [UserController::class, 'trends'])->name('user.trends');
 
     Route::get('exit', [ExitController::class, 'index'])->name('user.exit');
-    Route::get('exit/exactly', [ExitController::class, 'exit'])->name('user.exit.exactly');
 
     Route::get('post/add', [PostsController::class, 'index'])->name('user.addpost');
     Route::post('post/add', [PostsController::class, 'post'])->name('user.addpost.post');
@@ -69,6 +70,8 @@ Route::prefix('user')->middleware(['login.session'])->group(function () {
         Route::get('language', [SettingsController::class, 'language'])->name('settings.language');
     });
 });
+
+Route::get('user/exit/exactly', [ExitController::class, 'exit'])->name('user.exit.exactly');
 
 Route::get('user/{nickname}', [ShowController::class, 'nickname'])->name('user.show.nickname');
 Route::get('user/id/{id}', [ShowController::class, 'id'])->name('user.show.id');

@@ -4,6 +4,7 @@ namespace App\Http\Middleware\Auth;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Response;
 
 class LoginMiddleware
@@ -17,6 +18,10 @@ class LoginMiddleware
     {
         if (!user_login()) {
             return redirect()->route('auth.signin');
+        }
+
+        if (!user_verify() && !Route::is('user.viewverify')) {
+            return redirect()->route('user.viewverify');
         }
 
         return $next($request);
