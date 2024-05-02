@@ -72,5 +72,6 @@ class Kernel extends HttpKernel
         'login.admin' => \App\Http\Middleware\User\AdminMiddleware::class,
         'unlogin' => \App\Http\Middleware\Auth\GuestMiddleware::class,
         'user.verified' => \App\Http\Middleware\User\VerifiedMiddleware::class,
+        'user.blocked' => \App\Http\Middleware\User\BlockUserMiddleware::class,
     ];
 }

@@ -52,6 +52,8 @@ class RegisterController extends Controller
         session(['avatar' => $avatar]);
         session(['avatarDefault' => 1]);
 
-        return redirect()->route('user')->with('alert.success', __('Добро пожаловать!'));
+        set_new_verify();
+
+        return redirect()->route('user');
     }
 }

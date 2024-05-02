@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\User\BlockUserController;
 use App\Http\Controllers\User\ComplainController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\User\ExitController;
@@ -16,7 +17,7 @@ use App\Http\Controllers\User\SubscribeController;
 use App\Http\Controllers\User\VerifyController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('user')->middleware(['login.session'])->group(function () {
+Route::prefix('user')->middleware(['login.session', 'user.blocked'])->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('user');
     Route::get('/verify', [VerifyController::class, 'viewverify'])->name('user.viewverify');
 
@@ -71,6 +72,7 @@ Route::prefix('user')->middleware(['login.session'])->group(function () {
     });
 });
 
+Route::get('user/blocked', [BlockUserController::class, 'index'])->name('user.blocked');
 Route::get('user/exit/exactly', [ExitController::class, 'exit'])->name('user.exit.exactly');
 
 Route::get('user/{nickname}', [ShowController::class, 'nickname'])->name('user.show.nickname');

@@ -50,6 +50,10 @@ class LoginController extends Controller
         session(['avatar' => $findUser->avatar ?? 'MAN1']);
         session(['avatarDefault' => $findUser->avatarDefault]);
 
+        if (!$findUser->verified) {
+            set_new_verify();
+        }
+
         return redirect()->route('user')->with('alert.success', __('С возвращением!'));
     }
 }

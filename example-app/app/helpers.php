@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\User\User;
+use App\Models\User\Verify;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
@@ -262,6 +263,40 @@ if (!function_exists('set_new_verify')) {
 
         if ($findUser === null) return;
 
-        dd("ok");
+        $findCode = Verify::where('email', session('email'))->where('iduser', session('id'))->first();
+
+        $unixtime = time();
+        $code = $unixtime . random_string(100) . session('id');
+
+        if ($findCode === null) {
+            Verify::query()->create([
+                'iduser' => session('id'),
+                'email' => session('email'),
+                'code' => $code,
+                'unixtime' => $unixtime,
+            ]);
+        } else {
+            $findCode->unixtime = $unixtime;
+            $findCode->code = $code;
+            $findCode->save();
+        }
+    }
+}
+
+if (!function_exists('random_string')) {
+    function random_string(int $length): string
+    {
+        if ($length <= 0) return "";
+
+        $permitted = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        $input_length = strlen($permitted);
+        $random_string = '';
+        for ($i = 0; $i < $length; $i++) {
+            $random_character = $permitted[mt_rand(0, $input_length - 1)];
+            $random_string .= $random_character;
+        }
+
+        return $random_string;
     }
 }
