@@ -18,7 +18,7 @@
     flex-direction: column;
     background: var(--settings-main-background);
     padding: .75rem;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .profile-info__container svg {
