@@ -11,4 +11,11 @@ class VerifyController extends Controller
     {
         return view('user.viewverify');
     }
+
+    public function setverify()
+    {
+        set_new_verify();
+
+        return redirect()->back();
+    }
 }

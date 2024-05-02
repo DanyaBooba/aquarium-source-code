@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('verifies', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+
+            $table->integer('iduser')->unique();
+            $table->string('email')->unique();
+            $table->string('code')->unique();
+            $table->integer('unixtime');
         });
     }
 

@@ -252,3 +252,16 @@ if (!function_exists('math_min_zero')) {
         return $value > 0 ? $value : 0;
     }
 }
+
+// VERIFY
+
+if (!function_exists('set_new_verify')) {
+    function set_new_verify()
+    {
+        $findUser = User::where('email', session('email'))->first();
+
+        if ($findUser === null) return;
+
+        dd("ok");
+    }
+}
