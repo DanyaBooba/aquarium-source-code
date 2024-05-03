@@ -52,21 +52,21 @@
 
 <div class="container-settings-main">
     <ul class="list-group">
-        <li class="fs-5 list-group-item">
+        <li class="list-group-item">
             <a href="{{ route('settings.profile.password') }}">
                 <span>
                     {{ __('Восстановить пароль') }}
                 </span>
             </a>
         </li>
-        <li class="fs-5 list-group-item">
+        <li class="list-group-item">
             <a href="{{ route('settings.profile.email') }}">
                 <span>
                     {{ __('Сменить почту') }}
                 </span>
             </a>
         </li>
-        <li class="fs-5 list-group-item">
+        <li class="list-group-item">
             <a href="{{ route('user.delete') }}">
                 <span class="text-danger">
                     {{ __('Удалить аккаунт') }}
