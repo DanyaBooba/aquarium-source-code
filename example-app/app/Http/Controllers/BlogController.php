@@ -16,8 +16,12 @@ class BlogController extends Controller
         ]);
     }
 
-    public function show()
+    public function show($id)
     {
-        return view('blog.show');
+        $post = Blog::where('active', 1)->where('id', $id)->firstOrFail();
+
+        return view('blog.show', [
+            'post' => $post
+        ]);
     }
 }
