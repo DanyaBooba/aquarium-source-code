@@ -14,6 +14,16 @@ return new class extends Migration
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+
+            $table->boolean('active')->default(false);
+
+            $table->string('title');
+            $table->text('content');
+
+            $table->string('imagecap')->nullable();
+
+            $table->integer('likes')->default(0);
+            $table->json('likesJson')->nullable();
         });
     }
 
