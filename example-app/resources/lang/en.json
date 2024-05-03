@@ -7,7 +7,7 @@
     "Войти": "Sign in",
     "Стикеры за регистрацию": "Stickers for registration",
     "Стикер аквариума": "Aquarium sticker",
-    "Удобная авторизация через соцсети": "Convenient authorization via social networks",
+    "Авторизация через соцсети": "Authorization via social",
     "Яндекс": "Yandex",
     "Меил ру": "Mail ru",
     "Новости проекта": "Project News",
@@ -441,5 +441,6 @@
     "Больше информации в ": "More information in ",
     "документации": "documentation",
     "Некорректный пароль.": "Incorrect password.",
-    "Вход": "Sign in"
+    "Вход": "Sign in",
+    "Телеграм-канал проекта": "Telegram-channel of project"
 }

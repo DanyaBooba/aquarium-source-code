@@ -45,8 +45,9 @@
     --form-input-border: #ced4db;
     --form-input-background: #fff;
 
-    --main-dark-block: #0984e3;
-    --main-dark-block-button: rgb(19, 102, 166, .9);
+    --main-dark-block: #0277ff;
+    --main-dark-block-image: url('/img/main/main_cap@light.jpg');
+    --main-dark-block-button: rgb(2, 95, 204, .9);
 
     --user-bar: #f1f1f4;
     --user-bar-exit: #dd303f;

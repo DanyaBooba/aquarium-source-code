@@ -37,48 +37,27 @@
 
     <div class="row row-second g-4">
         <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="p-4">
-                <h3>{{ __('Стикеры за регистрацию') }}</h3>
-                <div class="row-second-content row-second-stickers">
-                    <a href="{{ route('auth.signup') }}">
-                        <img src="{{ asset('img/stickers/sticker1.png') }}" alt="{{ __('Стикер аквариума') }}">
-                    </a>
-                    <a href="{{ route('auth.signup') }}">
-                        <img src="{{ asset('img/stickers/sticker2.png') }}" alt="{{ __('Стикер аквариума') }}">
-                    </a>
-                    <a href="{{ route('auth.signup') }}">
-                        <img src="{{ asset('img/stickers/sticker3.png') }}" alt="{{ __('Стикер аквариума') }}">
-                    </a>
-                </div>
+            <div class="p-4 row-second__content row-second-stickers">
+                <a href="{{ route('auth.signup') }}">
+                    <img src="{{ asset('img/stickers/sticker1.png') }}" alt="{{ __('Стикер аквариума') }}">
+                </a>
+                <h3 class="fs-3">{!! __('Стикеры <nobr>за регистрацию</nobr>') !!}</h3>
             </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="p-4">
-                <h3>{{ __('Удобная авторизация через соцсети') }}</h3>
-                <div class="row-second-content row-second-social">
-                    <a href="{{ route('auth.signin') }}">
-                        <img src="{{ asset('img/social/yandex.svg') }}" alt="{{ __('Яндекс') }}">
-                    </a>
-                    <a href="{{ route('auth.signin') }}">
-                        <img src="{{ asset('img/social/vk.svg') }}" alt="{{ __('ВКонтакте') }}">
-                    </a>
-                    <a href="{{ route('auth.signin') }}">
-                        <img src="{{ asset('img/social/mail_text.svg') }}" class="row-second-social-mailru" alt="{{ __('Меил ру') }}">
-                    </a>
-                </div>
+            <div class="p-4 row-second__content row-second-social">
+                <a href="{{ route('auth.signin') }}">
+                    <img src="{{ asset('img/social/yandex.svg') }}" alt="{{ __('Яндекс') }}">
+                </a>
+                <h3 class="fs-3">{!! __('Авторизация <nobr>через соцсети</nobr>') !!}</h3>
             </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="p-4 row-second-telegram">
-                <h3>
-                    <a href="{{ route('blog.index') }}">
-                        {{ __('Новости проекта') }}
-                    </a>
-                    {!! __('<nobr>и телеграм</nobr> канал') !!}
-                </h3>
+            <div class="p-4 row-second__content row-second-telegram">
                 <a href="//aquariumsocial.t.me" target="_blank">
                     <img src="{{ asset('img/social/telegram.svg') }}" alt="{{ __('Телеграм') }}">
                 </a>
+                <h3 class="fs-3">{!! __('Телеграм-канал проекта') !!}</h3>
             </div>
         </div>
     </div>
