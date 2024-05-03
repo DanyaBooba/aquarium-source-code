@@ -442,5 +442,13 @@
     "документации": "documentation",
     "Некорректный пароль.": "Incorrect password.",
     "Вход": "Sign in",
-    "Телеграм-канал проекта": "Telegram-channel of project"
+    "Телеграм-канал проекта": "Telegram-channel of project",
+    "Не найдено": "Not found",
+    "Запрещенный": "Forbidden",
+    "Требуется оплата": "Payment required",
+    "Неавторизованный": "Unauthorized",
+    "Сервис недоступен": "Service unavailable",
+    "Ошибка сервера": "Server error",
+    "Слишком много запросов": "Too many requests",
+    "Cрок действия сессии истек": "The session has expired"
 }

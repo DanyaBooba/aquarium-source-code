@@ -9,7 +9,7 @@ use App\Http\Controllers\ThemeController;
 Route::prefix('/')->group(function () {
     Route::get('/', [MainRouteController::class, 'index'])->name('main');
 
-    Route::get('download', [MainRouteController::class, 'download'])->name('main.download');
+    Route::get('get', [MainRouteController::class, 'download'])->name('main.download');
     Route::get('faq', [MainRouteController::class, 'faq'])->name('main.faq');
 
     Route::get('setlocale/{locale}', [LocaleController::class, 'store'])->name('main.setlocale');

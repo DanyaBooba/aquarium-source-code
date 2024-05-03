@@ -7,5 +7,7 @@
 @endpush
 
 @section('main.content')
-123
+
+download page
+
 @endsection
