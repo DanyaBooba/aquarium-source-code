@@ -40,7 +40,7 @@
     <div style="margin-top: 1rem">
         <h3 class="d-flex flex-wrap">
             <span class="d-flex align-items-center container-simple-numbers">
-                <svg xmlns="http://www.w3.org/2000/svg"  class="me-2" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <span class="display-3 text-success" style="margin-top: .5rem">60</span>
+                <svg xmlns="http://www.w3.org/2000/svg"  class="me-2" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <span class="display-3 text-success" style="margin-top: .5rem">70</span>
             </span>
             <span class="container-simple-numbers-text">{{ __('человек зарегистрировано') }}</span>
         </h3>
