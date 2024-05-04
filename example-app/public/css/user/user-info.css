@@ -1,7 +1,12 @@
 .profile-info {
     display: flex;
     overflow: scroll;
-    margin-top: 1rem;
+    margin-top: .5rem;
+}
+
+.profile-info::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 .profile-info__item {

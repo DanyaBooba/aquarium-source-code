@@ -20,4 +20,6 @@
 
 <x-user.profile-me-info :profile="$profile" />
 
+<x-user.profile-posts />
+
 @endsection

@@ -139,6 +139,11 @@
     border-top-right-radius: 12px;
 }
 
+.user-profile .user-profile-buttons::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 .user-profile .user-profile-buttons {
     display: flex;
     align-items: center;
