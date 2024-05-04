@@ -450,5 +450,11 @@
     "Сервис недоступен": "Service unavailable",
     "Ошибка сервера": "Server error",
     "Слишком много запросов": "Too many requests",
-    "Cрок действия сессии истек": "The session has expired"
+    "Cрок действия сессии истек": "The session has expired",
+    "Написать": "New post",
+    "Создать пост": "New post",
+    "Вы пользуетесь тестовым аккаунтом. Чтобы получить полный функционал, зарегистрируйтесь.": "You are using a test account. To get the full functionality, register.",
+    "Поделитесь вашей ссылкой для регистрации.": "Share your link to sign up.",
+    "Давайте подпишемся на кого-нибудь!": "Let's sign up for someone!",
+    "Смотреть пользователей": "View Users"
 }
