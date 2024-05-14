@@ -1,4 +1,4 @@
-@extends('layouts.addpost')
+@extends('layouts.user.addpost')
 
 @section('page.title', 'Настройки')
 

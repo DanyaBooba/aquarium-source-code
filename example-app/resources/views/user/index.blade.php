@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.user.user')
 
 @section('page.title', __('Профиль'))
 
@@ -20,6 +20,6 @@
 
 <x-user.profile-me-info :profile="$profile" />
 
-<x-user.profile-posts />
+<x-user.profile-posts :posts="$posts" />
 
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\User\Notifications;
+use App\Models\User\Post;
 use App\Models\User\User;
 use Illuminate\Http\Request;
 
@@ -15,8 +16,11 @@ class UserController extends Controller
 
         $profile = get_user($user, true);
 
+        $posts = Post::where('idUser', $user->id)->get();
+
         return view('user.index', [
             "profile" => $profile,
+            "posts" => $posts
         ]);
     }
 

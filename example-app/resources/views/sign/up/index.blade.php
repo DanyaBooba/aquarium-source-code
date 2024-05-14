@@ -1,4 +1,4 @@
-@extends('layouts.auth-signup')
+@extends('layouts.auth.signup')
 
 @section('page.title', __('Регистрация'))
 

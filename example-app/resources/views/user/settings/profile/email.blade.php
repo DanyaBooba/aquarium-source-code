@@ -1,4 +1,4 @@
-@extends('layouts.settings')
+@extends('layouts.user.settings')
 
 @section('page.title', __('Сменить почту'))
 

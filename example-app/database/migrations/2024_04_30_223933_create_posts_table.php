@@ -16,6 +16,13 @@ return new class extends Migration
             $table->timestamps();
 
             $table->boolean('active')->default(false);
+            $table->integer('idPost');
+            $table->integer('idUser');
+
+            $table->boolean('haveimage')->default(false);
+            $table->string('imagename')->nullable();
+            $table->text('message');
+            $table->string('desc')->max(254);
         });
     }
 

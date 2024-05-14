@@ -1,4 +1,4 @@
-@extends('layouts.auth-sign')
+@extends('layouts.auth.sign')
 
 @section('page.title', __('Вход'))
 

@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main.main')
 
 @section('page.title', __('Ответы на вопросы'))
 

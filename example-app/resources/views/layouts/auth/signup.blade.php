@@ -1,4 +1,4 @@
-@extends('layouts.new-auth')
+@extends('layouts.auth.base')
 
 @section('auth.root')
 <main class="form-signup row gx-5 w-100 m-auto align-items-center">

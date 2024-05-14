@@ -1,4 +1,4 @@
-@extends('layouts.new-auth')
+@extends('layouts.auth.base')
 
 @section('auth.root')
 <main class="form-signin w-100 m-auto">

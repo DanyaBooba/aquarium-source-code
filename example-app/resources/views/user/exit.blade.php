@@ -1,22 +1,13 @@
-@extends('layouts.auth')
+@extends('layouts.auth.sign')
 
 @section('page.title', __('Выход из аккаунта'))
 
-@section('auth.content')
-<body class="d-flex align-items-center py-4 bg-body-tertiary">
-    <main class="form-signin w-100 m-auto">
-        <div class="authentication">
-            <div class="authentication-back mb-5">
-                <a href="{{ route('user') }}" class="authentication-back-close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                </a>
-            </div>
-            <x-sign.logo />
-            <h1 class="visually-hidden">{{ __('Выйти из аккаунта') }}</h1>
+@section('auth.header')
+<x-sign.header routeClose="{{ route('user') }}">
+    {{ __('Выход из аккаунта') }}
+</x-sign.header>
+@endsection
 
-            <button class="btn btn-danger mb-2 py-3" type="submit" onClick="buttonOpenURL('{{ route('user.exit.exactly') }}')">{{ __('Выйти из аккаунта') }}</button>
-
-        </div>
-    </main>
-</body>
+@section('auth.sign')
+<button class="btn btn-danger mb-2 fs-6 py-3" type="submit" onClick="buttonOpenURL('{{ route('user.exit.exactly') }}')">{{ __('Выйти из аккаунта') }}</button>
 @endsection

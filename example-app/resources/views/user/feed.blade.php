@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.user.user')
 
 @section('page.title', __('Лента'))
 

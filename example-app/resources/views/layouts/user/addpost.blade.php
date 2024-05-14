@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.user.user')
 
 @push('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/addpost/include.css') }}" />

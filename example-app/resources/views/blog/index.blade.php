@@ -1,4 +1,4 @@
-@extends('layouts.blog')
+@extends('layouts.main.blog')
 
 @section('page.title', __('Блог'))
 
