@@ -5,16 +5,19 @@ code pre {
     padding-bottom: .5rem;
 }
 
-/* code pre:focus-visible {
-    border: .1rem solid var(--text-code-border) !important;
-} */
-
 pre {
     padding-left: 1rem;
     border-left: .1rem solid var(--text-code-border);
 }
 
-a.code-copy {
+button.code-copy {
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: Inter !important;
+
     display: flex;
     align-items: center;
 
@@ -27,8 +30,27 @@ a.code-copy {
     max-width: fit-content;
 }
 
-a.code-copy svg {
+button.code-copy svg {
     width: 16px;
     height: 16px;
     margin-right: .25rem;
+}
+
+button.code-copy:is(:focus, :focus-within, :focus-visible) {
+    color: var(--text-color-hover) !important;
+    text-decoration: none;
+}
+
+@media(hover: hover) {
+    button.code-copy:hover {
+        color: var(--text-color-hover) !important;
+        text-decoration-color: var(--text-color-hover) !important;
+    }
+}
+
+@media(hover: none) {
+    button.code-copy:active {
+        color: var(--text-color-hover) !important;
+        text-decoration-color: var(--text-color-hover) !important;
+    }
 }

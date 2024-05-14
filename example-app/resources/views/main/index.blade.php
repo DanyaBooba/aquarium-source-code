@@ -120,7 +120,7 @@
                 {{ __('Показываем фотографии дизайна, рассказываем про важные обновления и планы, актуальные новости и обновления проекта.') }}
             </p>
             <div class="d-inline-flex gap-2">
-                <button onClick="buttonOpenURL('#')" class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+                <button onClick="buttonOpenURL('https://aquariumsocial.t.me')" class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
                     {{ __('Открыть') }}
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="ms-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
                 </button>
@@ -129,7 +129,7 @@
     </div>
 
     <div class="container container-lightdark">
-        <div class="row row-cols-1 row-cols-lg-2">
+        <div class="row row-cols-1 row-cols-lg-2 py-5">
             <div class="col text-center container-lightdark__light">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
                 <h2>
@@ -137,7 +137,7 @@
                 </h2>
                 <div class="container px-0" style="max-width: 250px">
                     <p class="text-center text-muted fs-5">
-                        Ну красота!
+                        {{ __('Приятные цвета, красивые сочетания и переливы.') }}
                     </p>
                 </div>
             </div>
@@ -148,23 +148,9 @@
                 </h2>
                 <div class="container px-0" style="max-width: 250px">
                     <p class="text-center text-muted fs-5">
-                        Ну красота!
+                        {{ __('Расчитано для ваших глазок, красивые оттенки цветов.') }}
                     </p>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container col-md-10 px-4">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-12 col-lg-6">
-                <img src="{{ asset('img/main/img/main-world.jpg') }}" class="d-block img-fluid" alt="{{ __('Воксельный подводный мир') }}" width="700" style="border-radius: 12px">
-            </div>
-            <div class="col-lg-6">
-                <h2 class="display-5 lh-1 mb-3">{!! __('Адаптивный <nobr>веб-дизайн</nobr>') !!}</h2>
-                <p class="fs-5 text-muted">
-                    {{ __('Сайт адаптирован к возможностям устройств и браузеров, качественный подход в разработке помогает уверенно масштабировать проект и добавлять новые возможности.') }}
-                </p>
             </div>
         </div>
     </div>
@@ -211,6 +197,81 @@
                             {{ __('Смотрите профили других людей, выбирай их в подписку, получайте достижения в профиль и следите за обновлениями.') }}
                         </p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container col-md-10 px-4">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-12 col-lg-6">
+                <img src="{{ asset('img/main/img/main-world.jpg') }}" class="d-block img-fluid" alt="{{ __('Воксельный подводный мир') }}" width="700" style="border-radius: 12px">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="display-5 lh-1 mb-3">{!! __('Адаптивный <nobr>веб-дизайн</nobr>') !!}</h2>
+                <p class="fs-5 text-muted">
+                    {{ __('Сайт адаптирован к возможностям устройств и браузеров, качественный подход в разработке помогает уверенно масштабировать проект и добавлять новые возможности.') }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-4 py-5 my-5 text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"/><path d="m9 20 3-6 3 6"/><path d="m6 8 6 2 6-2"/><path d="M12 10v4"/></svg>
+        <h1 class="display-5">
+            {{ __('Цифровая доступность') }}
+        </h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="fs-5 text-muted mb-4">
+                Содержимое сайта доступно для всех людей, даже для тех, у кого наблюдается нарушение работы слуха, зрения, двигательных функций или когнитивных функций.
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button onClick="buttonOpenURL('{{ route('main.accessibility') }}')" class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+                    {{ __('Как это достигается') }}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="ms-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-lg-2 py-5">
+            <div class="col text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><path d="M17 21v-2a1 1 0 0 1-1-1v-1a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1"/><path d="M19 15V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V9"/><path d="M21 21v-2h-4"/><path d="M3 5h4V3"/><path d="M7 5a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1V3"/></svg>
+                <h2>
+                    {{ __('Доступ по API') }}
+                </h2>
+                <div class="container px-0" style="max-width: 300px">
+                    <p class="text-center text-muted fs-5">
+                        {{ __('Удобное взаимодействие для обмена информацией.') }}
+                    </p>
+                    <p class="fs-5">
+                        <a href="{{ route('main.api') }}" class="d-flex align-items-center justify-content-center">
+                            <span>
+                                Читать
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="col text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+                <h2>
+                    {{ __('OAuth авторизация') }}
+                </h2>
+                <div class="container px-0" style="max-width: 250px">
+                    <p class="text-center text-muted fs-5">
+                        {{ __('Открытый протокол авторизации.') }}
+                    </p>
+                    <p class="fs-5">
+                        <a href="{{ route('main.oauth') }}" class="d-flex align-items-center justify-content-center">
+                            <span>
+                                Читать
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
