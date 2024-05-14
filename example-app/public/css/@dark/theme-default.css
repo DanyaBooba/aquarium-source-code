@@ -4,6 +4,7 @@
 
     --body-color: #17152b;
     --body-color-alpha: #17152b99;
+    --bg-white: #1b1935;
 
     --text-color: #fff;
     --text-invert: #000;
@@ -48,6 +49,9 @@
     --main-dark-block: #c57aff;
     --main-dark-block-image: url('/img/main/main_cap@dark.jpg');
     --main-dark-block-button: rgb(158, 86, 185, .9);
+    --main-list-item-1: #747238;
+    --main-list-item-2: #386a74;
+    --main-list-item-3: #403874;
 
     --user-bar: #1f1d3a;
     --user-bar-exit: #dd303f;

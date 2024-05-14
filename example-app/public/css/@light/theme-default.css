@@ -4,6 +4,7 @@
 
     --body-color: #f9f9f9;
     --body-color-alpha: #f9f9f999;
+    --bg-white: #fff;
 
     --text-color: #000;
     --text-invert: #fff;
@@ -48,6 +49,9 @@
     --main-dark-block: #0277ff;
     --main-dark-block-image: url('/img/main/main_cap@light.jpg');
     --main-dark-block-button: rgb(2, 95, 204, .9);
+    --main-list-item-1: #c1d8ff;
+    --main-list-item-2: #c9f9b3;
+    --main-list-item-3: #dac1ff;
 
     --user-bar: #f1f1f4;
     --user-bar-exit: #dd303f;
@@ -137,4 +141,5 @@
     --user-alert-background-success: #50eb92;
 
     --trix-button-accent: #4e96ff;
+
 }

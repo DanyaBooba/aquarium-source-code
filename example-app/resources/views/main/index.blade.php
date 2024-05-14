@@ -11,11 +11,11 @@
         <div class="row-first-left">
             <div class="p-3">
                 <div class="d-flex justify-content-center pb-2 mt-auto" style="margin-top: -10px">
-                    <a href="#" aria-label="{{ __('Скачать для Android') }}" style="margin-right: -30px; margin-top: 10px;">
-                        <img src="{{ asset('img/main/android-' . (App::isLocale('ru') ? "ru" : "en") . '.png') }}" class="img-fluid" width="200">
+                    <a href="{{ route('main.download') }}" aria-label="{{ __('Скачать для Android') }}" style="margin-right: -30px; margin-top: 10px;">
+                        <img src="{{ asset('img/main/android-' . (App::isLocale('ru') ? "ru" : "en") . '.png') }}" class="img-fluid" width="200" aria-label="{{ __('Телефон со страницей сайта') }}">
                     </a>
-                    <a href="#" aria-label="{{ __('Скачать для iOS') }}">
-                        <img src="{{ asset('img/main/iphone-' . (App::isLocale('ru') ? "ru" : "en") . '.png') }}" class="img-fluid" width="210">
+                    <a href="{{ route('main.download') }}" aria-label="{{ __('Скачать для iOS') }}">
+                        <img src="{{ asset('img/main/iphone-' . (App::isLocale('ru') ? "ru" : "en") . '.png') }}" class="img-fluid" width="210" aria-label="{{ __('Телефон со страницей сайта') }}">
                     </a>
                 </div>
             </div>
@@ -112,19 +112,82 @@
         </div>
     </div>
 
-    {{-- <div class="container container-blog" style="margin-top: 60px">
-        <h2 class="display-4 mb-3 text-center">{{ __('Новости проекта') }}</h2>
-        <div class="row row-blog row-cols-sm-1 row-cols-sm-2 row-cols-lg-3 g-2">
-            @for($i = 0; $i < 3; $i++)
-            <x-blog.card />
-            @endfor
+    <div class="container container-telegram col-md-10 py-5 my-5" style="border-radius: 24px">
+        <div class="text-center">
+            <img src="{{ asset('img/social/telegram.svg') }}" alt="{{ __('Телеграм') }}" style="max-width: 100px" class="mb-3">
+            <h2>{{ __('Телеграм-канал проекта') }}</h2>
+            <p class="col-lg-6 mx-auto fs-5 text-muted">
+                {{ __('Показываем фотографии дизайна, рассказываем про важные обновления и планы, актуальные новости и обновления проекта.') }}
+            </p>
+            <div class="d-inline-flex gap-2">
+                <button onClick="buttonOpenURL('#')" class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+                    {{ __('Открыть') }}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="ms-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
         </div>
-        <div class="text-center mt-3">
-            <a href="{{ route('blog.index') }}">
-                {{ __('Читать ещё') }}
-            </a>
+    </div>
+
+    <div class="container col-md-10 px-4">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-12 col-lg-6">
+                <img src="{{ asset('img/main/img/main-world.jpg') }}" class="d-block img-fluid" alt="{{ __('Воксельный подводный мир') }}" width="700" style="border-radius: 12px">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="display-5 lh-1 mb-3">{!! __('Адаптивный <nobr>веб-дизайн</nobr>') !!}</h2>
+                <p class="fs-5 text-muted">
+                    {{ __('Сайт адаптирован к возможностям устройств и браузеров, качественный подход в разработке помогает уверенно масштабировать проект и добавлять новые возможности.') }}
+                </p>
+            </div>
         </div>
-    </div> --}}
+    </div>
+
+    <div class="container my-5">
+        <div style="width: 100%; height: 300px; border-radius: 12px 12px 4px 4px; background-image: url('{{ asset('img/main/img/main-aquarium.jpg') }}'); background-size: cover; background-position: center;"></div>
+        <div class="container px-0">
+            <div class="row row-cols-1 row-cols-lg-3 g-2 g-lg-3">
+                <div class="col">
+                    <div class="p-3">
+                        <h3 class="d-flex align-items-center">
+                            <span class="me-2 px-2 pt-1" style="border-radius: 4px; background-color: var(--main-list-item-1)">1.</span>
+                            <span>
+                                {{ __('Создать аккаунт') }}
+                            </span>
+                        </h3>
+                        <p class="text-muted">
+                            {!! __('Быстрая авторизация через сервисы, <nobr>либо удобный</nobr> вход через e-mail и пароль.') !!}
+                        </p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3">
+                        <h3 class="d-flex align-items-center">
+                            <span class="me-2 px-2 pt-1" style="border-radius: 4px; background-color: var(--main-list-item-2)">2.</span>
+                            <span>
+                                {{ __('Настроить профиль') }}
+                            </span>
+                        </h3>
+                        <p class="text-muted">
+                            {{ __('Выбери псевдноним, никнейм, фото профиля, шапку. Меняй профиль по своему желанию.') }}
+                        </p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3">
+                        <h3 class="d-flex align-items-center">
+                            <span class="me-2 px-2 pt-1" style="border-radius: 4px; background-color: var(--main-list-item-3)">3.</span>
+                            <span>
+                                {{ __('Можно общаться!') }}
+                            </span>
+                        </h3>
+                        <p class="text-muted">
+                            {{ __('Смотрите профили других людей, выбирай их в подписку, получайте достижения в профиль и следите за обновлениями.') }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @push('js')

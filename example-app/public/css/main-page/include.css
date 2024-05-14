@@ -187,6 +187,12 @@
     height: auto;
 }
 
+/* container telegram */
+
+.container-telegram {
+    background-color: var(--bg-white);
+}
+
 /* media */
 
 @media(max-width: 991.98px) {
