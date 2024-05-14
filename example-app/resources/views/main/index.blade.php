@@ -128,6 +128,33 @@
         </div>
     </div>
 
+    <div class="container container-lightdark">
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col text-center container-lightdark__light">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                <h2>
+                    {{ __('Светлая тема') }}
+                </h2>
+                <div class="container px-0" style="max-width: 250px">
+                    <p class="text-center text-muted fs-5">
+                        Ну красота!
+                    </p>
+                </div>
+            </div>
+            <div class="col text-center container-lightdark__dark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                <h2>
+                    {{ __('Темная тема') }}
+                </h2>
+                <div class="container px-0" style="max-width: 250px">
+                    <p class="text-center text-muted fs-5">
+                        Ну красота!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container col-md-10 px-4">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-12 col-lg-6">
@@ -188,6 +215,7 @@
             </div>
         </div>
     </div>
+
 @endsection
 
 @push('js')
