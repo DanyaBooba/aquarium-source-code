@@ -40,6 +40,10 @@ return new class extends Migration
             $table->json('settings_notifications')->nullable();
 
             $table->integer('usertype')->default(0);
+
+            $table->boolean('md5use')->nullable();
+            $table->string('md5salt')->nullable()->max(100);
+
             $table->string('password');
             $table->rememberToken();
         });

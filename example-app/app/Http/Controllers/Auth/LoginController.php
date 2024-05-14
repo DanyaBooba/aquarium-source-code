@@ -38,11 +38,30 @@ class LoginController extends Controller
             ]);
         }
 
-        $passwordConfirm = app('hash')->check($validated['password'], $findUser->password);
-        if ($passwordConfirm === false) {
-            return redirect()->back()->withInput($validated)->withErrors([
-                'password' => __('Некорректный пароль.')
-            ]);
+        $isPasswordMD5 = $findUser->md5use;
+
+        if (!$isPasswordMD5) {
+            $passwordConfirm = app('hash')->check($validated['password'], $findUser->password);
+            if ($passwordConfirm === false) {
+                return redirect()->back()->withInput($validated)->withErrors([
+                    'password' => __('Некорректный пароль.')
+                ]);
+            }
+        } else {
+            $passwordUser = $findUser->password;
+            $passwordSalt = $findUser->md5salt;
+            $passwordConfirm = password_verify($passwordSalt . $validated['password'] . $passwordSalt, $passwordUser);
+
+            if ($passwordConfirm === false) {
+                return redirect()->back()->withInput($validated)->withErrors([
+                    'password' => __('Некорректный пароль.')
+                ]);
+            }
+
+            $findUser->password = bcrypt($validated['password']);
+            $findUser->md5salt = "";
+            $findUser->md5use = false;
+            $findUser->save();
         }
 
         session(['id' => $findUser->id]);
