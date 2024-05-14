@@ -10,7 +10,7 @@ class ShowController extends Controller
 {
     public function nickname($nickname)
     {
-        $user = User::where('username', '=', $nickname)->first();
+        $user = User::where('username', '=', $nickname)->firstOrFail();
         return $this->getUser($user);
     }
 

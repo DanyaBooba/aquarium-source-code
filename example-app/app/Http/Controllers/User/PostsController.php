@@ -14,11 +14,11 @@ class PostsController extends Controller
 
     public function post(Request $request)
     {
-        $validated = $request->validate([
-            'email' => ['required', 'string', 'max:254', 'min: 3', 'email'],
-            'password' => ['required', 'string', 'min:3', 'max:254'],
-        ]);
+        $validated = $request->validate(['message' => ['required', 'string', 'min:1', 'max: 30000']]);
 
-        dd('post');
+        $post = $validated['message'];
+        $shortPost = strip_tags($post);
+
+        dd('ready to load');
     }
 }
