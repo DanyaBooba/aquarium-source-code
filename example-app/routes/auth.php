@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Auth\CodeController;
+use App\Http\Controllers\Auth\EnterRestoreController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\SocialController;
@@ -16,7 +17,11 @@ Route::middleware(['log', 'unlogin'])->group(function () {
         Route::get('help', [AuthController::class, 'help'])->name('auth.help');
 
         Route::get('restore', [RestoreController::class, 'index'])->name('auth.restore');
-        Route::post('restore/success', [RestoreController::class, 'store'])->name('auth.restore.store');
+        Route::post('restore', [RestoreController::class, 'store'])->name('auth.restore.store');
+        Route::get('restore/success', [RestoreController::class, 'success'])->name('auth.restore.success');
+
+        Route::get('restore/code/{code}', [EnterRestoreController::class, 'index'])->name('auth.restore.enter');
+        Route::post('restore/code/{code}', [EnterRestoreController::class, 'store'])->name('auth.restore.enter.store');
 
         Route::get('code', [CodeController::class, 'index'])->name('auth.code');
         Route::post('code/success', [CodeController::class, 'store'])->name('auth.code.store');

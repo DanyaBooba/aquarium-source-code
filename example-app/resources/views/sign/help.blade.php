@@ -3,7 +3,7 @@
 @section('page.title', __('Помощь со входом'))
 
 @section('auth.header')
-<x-sign.header route-back="{{ route('auth.signin.email') }}">
+<x-sign.header routeBack="{{ route('auth.signin.email') }}">
     {{ __('Помощь со входом') }}
 </x-sign.header>
 @endsection
