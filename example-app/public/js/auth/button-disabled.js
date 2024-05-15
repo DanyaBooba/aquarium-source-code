@@ -5,7 +5,11 @@ function checkFormInput() {
     let status = true;
 
     inputs.forEach((input) => {
-        if (input.type === "email" || input.type === "password") {
+        if (
+            input.type === "email" ||
+            input.type === "password" ||
+            input.type === "text"
+        ) {
             if (input.value.length <= 2) {
                 status = false;
             }
