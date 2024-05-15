@@ -1,4 +1,4 @@
-let text = document.getElementById("js-change");
+let textToChange = document.getElementById("js-change");
 let locale = document.querySelector("html").lang.toLowerCase();
 
 let index = -1;
@@ -31,25 +31,25 @@ const changeText = async () => {
     let d = random(50, 70);
     while (true) {
         await delay(4500);
-        while (text.textContent != "") {
-            let temp = text.textContent;
-            text.textContent = temp.substring(0, temp.length - 1);
+        while (textToChange.textContent != "") {
+            let temp = textToChange.textContent;
+            textToChange.textContent = temp.substring(0, temp.length - 1);
             await delay(d);
         }
 
         let chooseText = textValue();
         let num = 1;
 
-        while (text.textContent != chooseText) {
-            text.textContent = chooseText.substring(0, num);
+        while (textToChange.textContent != chooseText) {
+            textToChange.textContent = chooseText.substring(0, num);
             num += 1;
             await delay(d);
         }
     }
 };
 
-if (text) {
-    text.textContent = textValue();
+if (textToChange) {
+    textToChange.textContent = textValue();
 
     changeText();
 }

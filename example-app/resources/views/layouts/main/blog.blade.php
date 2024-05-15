@@ -20,6 +20,5 @@
     <script src="{{ asset('js/bootstrap.js') }}"></script>
     <script src="{{ asset('js/page/header.js') }}"></script>
     <script src="{{ asset('js/page/cookie-accept.js') }}"></script>
-    @stack('js')
 </body>
 @endsection
