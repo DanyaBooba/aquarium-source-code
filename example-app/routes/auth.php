@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Auth\CodeController;
+use App\Http\Controllers\Auth\EnterCodeController;
 use App\Http\Controllers\Auth\EnterRestoreController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -24,7 +25,10 @@ Route::middleware(['log', 'unlogin'])->group(function () {
         Route::post('restore/code/{code}', [EnterRestoreController::class, 'store'])->name('auth.restore.enter.store');
 
         Route::get('code', [CodeController::class, 'index'])->name('auth.code');
-        Route::post('code/success', [CodeController::class, 'store'])->name('auth.code.store');
+        Route::post('code', [CodeController::class, 'store'])->name('auth.code.store');
+
+        Route::get('code/enter', [EnterCodeController::class, 'index'])->name('auth.code.enter');
+        Route::post('code/enter', [EnterCodeController::class, 'store'])->name('auth.code.enter.store');
     });
 
     Route::prefix('signin')->group(function () {

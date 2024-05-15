@@ -59,8 +59,8 @@ class LoginController extends Controller
             }
 
             $findUser->password = bcrypt($validated['password']);
-            $findUser->md5salt = "";
-            $findUser->md5use = false;
+            $findUser->md5salt = null;
+            $findUser->md5use = null;
             $findUser->save();
         }
 

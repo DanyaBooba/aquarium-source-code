@@ -264,7 +264,7 @@ if (!function_exists('set_new_verify')) {
         $findCode = Verify::where('email', session('email'))->where('iduser', session('id'))->first();
 
         $unixtime = time();
-        $code = $unixtime . random_string(100) . session('id');
+        $code = random_string(20) . $unixtime . random_string(20) . session('id');
 
         if ($findCode === null) {
             Verify::query()->create([
@@ -296,6 +296,17 @@ if (!function_exists('random_string')) {
         }
 
         return $random_string;
+    }
+}
+
+if (!function_exists('random_code')) {
+    function random_code(int $length): int
+    {
+        if ($length <= 0) return 0;
+
+        $code = rand(pow(10, $length - 1), pow(10, $length) - 1);
+
+        return $code;
     }
 }
 

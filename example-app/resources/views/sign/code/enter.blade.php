@@ -1,10 +1,10 @@
 @extends('layouts.auth.signin')
 
-@section('page.title', __('Войти по коду'))
+@section('page.title', __('Введите код'))
 
 @section('auth.header')
 <x-sign.header routeBack="{{ route('auth.signin.email') }}">
-    {{ __('Войти по коду') }}
+    {{ __('Введите код') }}
 </x-sign.header>
 @endsection
 
