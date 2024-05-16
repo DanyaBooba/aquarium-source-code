@@ -1,10 +1,10 @@
 @extends('layouts.user.settings')
 
-@section('page.title', __('Восстановить пароль'))
+@section('page.title', __('Сменить пароль'))
 
 @section('settings.content')
 <x-settings.header route="{{ route('settings.profile') }}">
-    {{ __('Восстановить пароль') }}
+    {{ __('Сменить пароль') }}
 </x-settings.header>
 
 <x-form.error-first />

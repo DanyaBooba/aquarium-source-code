@@ -75,14 +75,7 @@ class LoginController extends Controller
             set_new_verify();
         }
 
-        // Mail::to('danil.dybko@gmail.com')->send(new DemoEmail());
-
-        // $mailSubject = 'Авторизация или первое письмо | Аквариум';
-        // $mailText = 'Сообщение письма, произошла авторизация в аккаунт.';
-        // $mailHeaders = 'Content-type: text/html';
-        // mail('danil.dybko@gmail.com', $mailSubject, $mailText, $mailHeaders);
-
-        send_mail('danil.dybko@gmail.com', 'Тема письма', 'Сообщение письма');
+        send_mail_login('danil.dybko@gmail.com');
 
         return redirect()->route('user')->with('alert.success', __('С возвращением!'));
     }

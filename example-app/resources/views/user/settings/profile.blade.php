@@ -55,7 +55,7 @@
         <li class="list-group-item">
             <a href="{{ route('settings.profile.password') }}">
                 <span>
-                    {{ __('Восстановить пароль') }}
+                    {{ __('Сменить пароль') }}
                 </span>
             </a>
         </li>
