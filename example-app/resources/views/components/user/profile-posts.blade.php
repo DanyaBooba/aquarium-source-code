@@ -1,4 +1,4 @@
-<div class="profile-posts container">
+{{-- <div class="profile-posts container">
     @if(count($posts) == 0)
     <p>
         У пользователя нет постов.
@@ -27,4 +27,4 @@
         </div>
         @endfor
     </div>
-</div>
+</div> --}}

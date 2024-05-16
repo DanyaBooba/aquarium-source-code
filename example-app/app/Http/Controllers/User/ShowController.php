@@ -31,6 +31,13 @@ class ShowController extends Controller
         if ($userSession !== null) {
             if ($userSession->id === $profile->id) $itsme = true;
             $issub = in_array($userSession->id, (array) json_decode($profile->subsJson));
+            if ($userSession->usertype != 100 && $profile->verified != 1) {
+                return view('errors.418');
+            }
+        } else {
+            if ($profile->verified != 1) {
+                return view('errors.418');
+            }
         }
 
         return view('user.show', [

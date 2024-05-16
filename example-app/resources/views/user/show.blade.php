@@ -11,6 +11,10 @@
 <x-user.alert :close=false>
     {{ __('Тестовый аккаунт, используется в качестве демонстрации возможностей') }}
 </x-user.alert>
+@elseif($profile->verified != 1)
+<x-user.alert name="verifiedAdmin">
+    {{ __('Почта человека не подтверждена, профиль виден из-за того, что вы администратор') }}
+</x-user.alert>
 @endif
 @if($alert = session()->pull('alert.success'))
     <x-user.alert-success :title="$alert" />

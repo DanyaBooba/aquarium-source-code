@@ -30,7 +30,6 @@
     {{-- <meta property="og:image:width" content="1456">
     <meta property="og:image:height" content="816"> --}}
 
-    <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="google" content="nositelinkssearchbox">
     {{-- <meta name="format-detection" content="phone=no, address=no"> --}}
@@ -49,6 +48,7 @@
     </script>
 
     <meta name="color-scheme" content="light dark">
+    @stack('meta')
 
     <link rel="stylesheet" id="css.light" href="{{ asset('css/@@light/theme-' . (session('theme') ? session('theme') : 'default') . '.css') }}" media="(prefers-color-scheme: light)">
     <link rel="stylesheet" id="css.light" href="{{ asset('css/@@light/light.css') }}" media="(prefers-color-scheme: light)">

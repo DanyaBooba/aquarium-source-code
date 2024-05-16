@@ -15,6 +15,8 @@ class SubscribeController extends Controller
 
         if ($findUserSession->usertype === -1 || $findUser->usertype === -1) return redirect()->back();
 
+        if ($findUserSession->verified != 1 || $findUser->verified != 1) return redirect()->back();
+
         if ($findUser === null) {
             return redirect()->back();
         }
