@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\Test\DemoEmail;
 use App\Models\User\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class LoginController extends Controller
 {
@@ -72,6 +74,15 @@ class LoginController extends Controller
         if (!$findUser->verified) {
             set_new_verify();
         }
+
+        // Mail::to('danil.dybko@gmail.com')->send(new DemoEmail());
+
+        // $mailSubject = 'Авторизация или первое письмо | Аквариум';
+        // $mailText = 'Сообщение письма, произошла авторизация в аккаунт.';
+        // $mailHeaders = 'Content-type: text/html';
+        // mail('danil.dybko@gmail.com', $mailSubject, $mailText, $mailHeaders);
+
+        send_mail('danil.dybko@gmail.com', 'Тема письма', 'Сообщение письма');
 
         return redirect()->route('user')->with('alert.success', __('С возвращением!'));
     }

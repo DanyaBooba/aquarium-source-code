@@ -335,3 +335,17 @@ if (!function_exists('login_for_test_account')) {
         session(['email' => 'testaccount']);
     }
 }
+
+// mails
+
+if (!function_exists('send_mail')) {
+    function send_mail(string $email, string $subject, string $message): bool
+    {
+        $subject .= ' | Аквариум';
+        $headers = 'Content-type: text/html';
+
+        mail($email, $subject, $message, $headers);
+
+        return true;
+    }
+}
