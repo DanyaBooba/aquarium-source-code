@@ -12,7 +12,15 @@ class LoginController extends Controller
 {
     public function index()
     {
-        return view('sign.in.index');
+        $yandexUri = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query([
+            'client_id' => env('YANDEX_CLIENT_ID'),
+            'redirect_uri' => env('YANDEX_REDIRECT_URI_LOGIN'),
+            'response_type' => 'code'
+        ]));
+
+        return view('sign.in.index', [
+            'yandexUri' => $yandexUri
+        ]);
     }
 
     public function email()

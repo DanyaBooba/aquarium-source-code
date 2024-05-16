@@ -36,10 +36,10 @@ Route::middleware(['log', 'unlogin'])->group(function () {
         Route::get('email', [LoginController::class, 'email'])->name('auth.signin.email');
         Route::post('email', [LoginController::class, 'store'])->name('auth.signin.email.store');
 
+        Route::get('yandex', [SocialController::class, 'yandex'])->name('auth.signin.yandex');
         Route::get('google', [SocialController::class, 'google'])->name('auth.signin.google');
         Route::get('github', [SocialController::class, 'github'])->name('auth.signin.github');
         Route::get('mailru', [SocialController::class, 'mailru'])->name('auth.signin.mailru');
-        Route::get('yandex', [SocialController::class, 'yandex'])->name('auth.signin.yandex');
         Route::get('vk', [SocialController::class, 'vk'])->name('auth.signin.vk');
     });
 
