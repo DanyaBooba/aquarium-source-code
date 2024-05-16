@@ -359,7 +359,7 @@ if (!function_exists('send_mail_login')) {
 
         $subject = 'Регистрация аккаунта';
 
-        $message = '<b>Добро пожаловать в Аквариум</b>. Мы рады приветствовать вас среди пользователей<br><br>';
+        $message = '<b>Добро пожаловать в Аквариум</b>.<br><br> Мы рады приветствовать вас среди пользователей<br><br>';
         if ($nameService) {
             $message .= 'Для регистрации вы использовали сервис «' . $nameService . '»';
         }
@@ -395,10 +395,11 @@ if (!function_exists('send_mail_verify')) {
     function send_mail_verify(string $email, string $link): bool
     {
         $subject = 'Подтверждение аккаунта';
+        $routeLink = route('user.tryverify', $link);
 
-        $message = '<b>Требуется подтвердить почту аккаунта</b>. Сейчас другие пользователи не видят ваш профиль<br><br>';
+        $message = '<b>Требуется подтвердить почту аккаунта</b>.<br><br> Сейчас другие пользователи не видят ваш профиль<br><br>';
         $message .= 'Ссылка для подтверждение почты аккаунта: <br><br>';
-        $message .= $link;
+        $message .= $routeLink;
 
         $sendMail = send_mail($email, $subject, $message);
 
@@ -410,9 +411,10 @@ if (!function_exists('send_mail_restore_password')) {
     function send_mail_restore_password(string $email, string $link): bool
     {
         $subject = 'Восстановление пароля';
+        $routeLink = route('auth.restore.enter', $link);
 
         $message = '<b>Была запрошена ссылка на восстановление пароля</b><br><br>';
-        $message .= $link . '<br><br>';
+        $message .= $routeLink . '<br><br>';
         $message .= 'Проигнорируйте данное сообщение, если вы не запрашивали ссылку на восстановление пароля <br><br>';
 
         $sendMail = send_mail($email, $subject, $message);
@@ -441,9 +443,10 @@ if (!function_exists('send_mail_new_password')) {
     function send_mail_new_password(string $email, string $link): bool
     {
         $subject = 'Ввод нового пароля';
+        $routeLink = $link;
 
         $message = '<b>Была запрошена ссылка на ввод нового пароля: </b><br><br>';
-        $message .= $link . '<br><br>';
+        $message .= $routeLink . '<br><br>';
         $message .= 'Проигнорируйте данное сообщение, если вы не запрашивали ссылку на ввод нового пароля <br><br>';
 
         $sendMail = send_mail($email, $subject, $message);
@@ -473,7 +476,7 @@ if (!function_exists('send_mail_after_new_password')) {
     }
 }
 
-if (!function_exists('send_mail_login')) {
+if (!function_exists('send_mail_delete')) {
     function send_mail_delete(string $email): bool
     {
         date_default_timezone_set('Europe/Moscow');
