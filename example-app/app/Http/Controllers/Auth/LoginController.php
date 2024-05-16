@@ -75,7 +75,7 @@ class LoginController extends Controller
             set_new_verify();
         }
 
-        send_mail_login('danil.dybko@gmail.com');
+        send_mail_login($validated['email']);
 
         return redirect()->route('user')->with('alert.success', __('С возвращением!'));
     }

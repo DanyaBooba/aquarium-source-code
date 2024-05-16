@@ -351,6 +351,24 @@ if (!function_exists('send_mail')) {
 }
 
 if (!function_exists('send_mail_login')) {
+    function send_mail_register(string $email, string $nameService = ''): bool
+    {
+        date_default_timezone_set('Europe/Moscow');
+
+        $subject = 'Регистрация аккаунта';
+
+        $message = '<b>Добро пожаловать в Аквариум</b>. Мы рады приветствовать вас среди пользователей<br><br>';
+        if ($nameService) {
+            $message .= 'Для регистрации вы использовали сервис «' . $nameService . '»';
+        }
+
+        $sendMail = send_mail($email, $subject, $message);
+
+        return $sendMail;
+    }
+}
+
+if (!function_exists('send_mail_login')) {
     function send_mail_login(string $email): bool
     {
         date_default_timezone_set('Europe/Moscow');
@@ -370,6 +388,126 @@ if (!function_exists('send_mail_login')) {
         return $sendMail;
     }
 }
+
+if (!function_exists('send_mail_verify')) {
+    function send_mail_verify(string $email, string $link): bool
+    {
+        $subject = 'Подтверждение аккаунта';
+
+        $message = '<b>Требуется подтвердить почту аккаунта</b>. Сейчас другие пользователи не видят ваш профиль<br><br>';
+        $message .= 'Ссылка для подтверждение почты аккаунта: <br><br>';
+        $message .= $link;
+
+        $sendMail = send_mail($email, $subject, $message);
+
+        return $sendMail;
+    }
+}
+
+if (!function_exists('send_mail_restore_password')) {
+    function send_mail_restore_password(string $email, string $link): bool
+    {
+        $subject = 'Восстановление пароля';
+
+        $message = '<b>Была запрошена ссылка на восстановление пароля</b><br><br>';
+        $message .= $link . '<br><br>';
+        $message .= 'Проигнорируйте данное сообщение, если вы не запрашивали ссылку на восстановление пароля <br><br>';
+
+        $sendMail = send_mail($email, $subject, $message);
+
+        return $sendMail;
+    }
+}
+
+if (!function_exists('send_mail_login_by_code')) {
+    function send_mail_login_by_code(string $email, string $code): bool
+    {
+        $subject = 'Вход по коду';
+
+        $message = '<b>Код для входа в аккаунт: </b><br><br>';
+        $message .= $code . '<br><br>';
+        $message .= 'Введите данный код в поле для входа в аккаунт<br><br>';
+        $message .= 'Проигнорируйте данное сообщение, если вы не запрашивали код для входа в аккаунт <br><br>';
+
+        $sendMail = send_mail($email, $subject, $message);
+
+        return $sendMail;
+    }
+}
+
+if (!function_exists('send_mail_new_password')) {
+    function send_mail_new_password(string $email, string $link): bool
+    {
+        $subject = 'Ввод нового пароля';
+
+        $message = '<b>Была запрошена ссылка на ввод нового пароля: </b><br><br>';
+        $message .= $link . '<br><br>';
+        $message .= 'Проигнорируйте данное сообщение, если вы не запрашивали ссылку на ввод нового пароля <br><br>';
+
+        $sendMail = send_mail($email, $subject, $message);
+
+        return $sendMail;
+    }
+}
+
+if (!function_exists('send_mail_after_new_password')) {
+    function send_mail_after_new_password(string $email): bool
+    {
+        date_default_timezone_set('Europe/Moscow');
+        $date = date("d/m/Y") . ' в ' . date("H:i:s") . ' UTC';
+        $device = info_device_send_mail();
+        $place = info_place_send_mail();
+
+        $subject = 'Изменен пароль';
+
+        $message = '<b>Изменен пароль</b>. Мы обнаружили измение пароля ' . $date . '<br><br>';
+        $message .= 'Устройство: ' . $device . '<br><br>';
+        $message .= 'Место: ' . $place . '<br><br>';
+        $message .= '<b>Если это были не вы</b>, смените пароль аккаунта (Настройки > Профиль > Сменить пароль)';
+
+        $sendMail = send_mail($email, $subject, $message);
+
+        return $sendMail;
+    }
+}
+
+if (!function_exists('send_mail_login')) {
+    function send_mail_delete(string $email): bool
+    {
+        date_default_timezone_set('Europe/Moscow');
+        $date = date("d/m/Y") . ' в ' . date("H:i:s") . ' UTC';
+        $device = info_device_send_mail();
+        $place = info_place_send_mail();
+
+        $subject = 'Удаление аккаунта';
+
+        $message = '<b>Удаление аккаунта Аквариум</b>. Мы обнаружили запрос на удаление аккаунта Аквариум ' . $date . '<br><br>';
+        $message .= 'Устройство: ' . $device . '<br><br>';
+        $message .= 'Место: ' . $place . '<br><br>';
+        $message .= '<b>Нам жаль прощаться с вами</b>, мы всегда рады видеть вас снова';
+
+        $sendMail = send_mail($email, $subject, $message);
+
+        return $sendMail;
+    }
+}
+
+if (!function_exists('send_mail_change_email')) {
+    function send_mail_change_email(string $email, string $link): bool
+    {
+        $subject = 'Изменение почты';
+
+        $message = '<b>Была запрошена ссылка на изменение почты: </b><br><br>';
+        $message .= $link . '<br><br>';
+        $message .= 'Проигнорируйте данное сообщение, если вы не запрашивали ссылку на изменение почты <br><br>';
+
+        $sendMail = send_mail($email, $subject, $message);
+
+        return $sendMail;
+    }
+}
+
+// mails helpers
 
 if (!function_exists('info_device_send_mail')) {
     function info_device_send_mail(): string
