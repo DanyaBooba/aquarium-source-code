@@ -192,6 +192,12 @@ header.header .header-content button.navbar-toggler {
     .header.hide {
         transform: translateY(-225px);
     }
+
+    header.header .header-content-links li a.active {
+        text-decoration: none !important;
+        background-color: var(--text-color-link-underline);
+        border-radius: 8px;
+    }
 }
 
 @media(max-width: 575.98px) {
@@ -206,8 +212,8 @@ header.header .header-content button.navbar-toggler {
 
 @media(min-width: 992px) {
     header.header .header-content-links li a {
-        text-underline-offset: 1.9rem !important;
-        text-decoration-thickness: 0.15rem !important;
+        text-underline-offset: 1.74rem !important;
+        text-decoration-thickness: 0.2rem !important;
     }
 
     header.header .header-content-links {
