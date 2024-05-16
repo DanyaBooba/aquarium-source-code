@@ -40,11 +40,20 @@ class RegisterController extends Controller
         $avatar = 'MAN' . random_int(1, 7);
         $bg = 'BG' . random_int(1, 11);
 
+        $settings = json_encode(
+            [
+                'dataChange' => true,
+                'authorization' => true,
+                'passwordChange' => true,
+            ]
+        );
+
         $query = User::query()->create([
             'email' => $validated['email'],
             'password' => bcrypt($validated['password']),
             'avatar' => $avatar,
             'cap' => $bg,
+            'settings_notifications' => $settings,
         ]);
 
         session(['id' => $query->id]);

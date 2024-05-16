@@ -22,5 +22,6 @@ class User extends Model
         'lastName',
         'usertype',
         'desc',
+        'settings_notifications',
     ];
 }

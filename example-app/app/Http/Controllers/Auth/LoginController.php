@@ -72,10 +72,15 @@ class LoginController extends Controller
         session(['avatarDefault' => $findUser->avatarDefault]);
 
         if (!$findUser->verified) {
-            set_new_verify();
+            $code = set_new_verify();
+            send_mail_verify($validated['email'], $code);
         }
 
-        send_mail_login($validated['email']);
+        $settingsData = (object) json_decode($findUser->settings_notifications);
+
+        if ($settingsData->authorization) {
+            send_mail_login($validated['email']);
+        }
 
         return redirect()->route('user')->with('alert.success', __('С возвращением!'));
     }

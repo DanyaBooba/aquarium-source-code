@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Auth\Code;
+use App\Models\Auth\Restore;
+use App\Models\User\Post;
 use App\Models\User\User;
+use App\Models\User\Verify;
 use Illuminate\Http\Request;
+use App\Models\User\Notification;
 
 class DeleteController extends Controller
 {
@@ -55,6 +60,44 @@ class DeleteController extends Controller
 
         $findUser->delete();
         exit_account();
+
+        $checkVerifies = Verify::where('email', $validated['email'])->get();
+        if (count($checkVerifies) > 0) {
+            foreach ($checkVerifies as $verify) {
+                $verify->delete();
+            }
+        }
+
+        $checkPosts = Post::where('idUser', $findUser->id)->get();
+
+        if (count($checkPosts) > 0) {
+            foreach ($checkPosts as $post) {
+                $post->active = false;
+                $post->save();
+            }
+        }
+
+        $checkRestore = Restore::where('idUser', $findUser->id)->get();
+        if (count($checkRestore) > 0) {
+            foreach ($checkRestore as $restore) {
+                $restore->delete();
+            }
+        }
+
+        $checkNotify = Notification::where('iduser', $findUser->id)->get();
+        if (count($checkNotify) > 0) {
+            foreach ($checkNotify as $notify) {
+                $notify->active = false;
+                $notify->save();
+            }
+        }
+
+        $checkCodes = Code::where('idUser', $findUser->id)->get();
+        if (count($checkCodes) > 0) {
+            foreach ($checkCodes as $code) {
+                $code->delete();
+            }
+        }
 
         return redirect()->route('main');
     }

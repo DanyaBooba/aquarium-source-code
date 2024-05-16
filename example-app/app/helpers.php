@@ -255,11 +255,11 @@ if (!function_exists('math_min_zero')) {
 // VERIFY
 
 if (!function_exists('set_new_verify')) {
-    function set_new_verify()
+    function set_new_verify(): string
     {
         $findUser = User::where('email', session('email'))->first();
 
-        if ($findUser === null) return;
+        if ($findUser === null) return '';
 
         $findCode = Verify::where('email', session('email'))->where('iduser', session('id'))->first();
 
@@ -278,6 +278,8 @@ if (!function_exists('set_new_verify')) {
             $findCode->code = $code;
             $findCode->save();
         }
+
+        return $code;
     }
 }
 
