@@ -11,6 +11,8 @@ class VerifyController extends Controller
 {
     public function viewverify()
     {
+        // fix
+
         return view('user.viewverify');
     }
 

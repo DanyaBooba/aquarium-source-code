@@ -92,8 +92,11 @@
     height: auto;
 
     border-radius: 50%;
-    padding: .5rem;
     background: var(--user-profile-image-background-image);
+}
+
+.user-profile .user-profile-image img:not(.user-profile-image-service) {
+    padding: .5rem;
 }
 
 .user-profile .user-profile-text {

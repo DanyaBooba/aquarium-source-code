@@ -37,6 +37,9 @@ return new class extends Migration
             $table->json('subsJson')->nullable();
             $table->json('achivsJson')->nullable();
 
+            $table->string('shareToken')->nullable();
+            $table->string('serviceLogin')->nullable();
+
             $table->json('settings_notifications')->nullable();
 
             $table->integer('usertype')->default(0);

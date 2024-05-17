@@ -2,7 +2,7 @@
     'profile' => (object) [],
     'issub' => false,
     'itsme' => false
-    ])
+])
 
 <div class="user-profile">
     <x-user.profile-cap-image :cap="$profile->cap" :cap-default="$profile->capDefault" />

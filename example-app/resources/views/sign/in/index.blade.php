@@ -33,6 +33,7 @@
         </button>
     </div>
 </div> --}}
+{{-- discord --}}
 <div id="signin-choose-yandex">
     <button class="btn fs-5" onClick="buttonOpenURL('{{ $yandexUri }}')">
         <x-sign.yandex />

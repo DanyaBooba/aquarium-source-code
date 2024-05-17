@@ -61,8 +61,11 @@ class RegisterController extends Controller
         session(['avatar' => $avatar]);
         session(['avatarDefault' => 1]);
 
-        set_new_verify();
+        $code = set_new_verify();
 
-        return redirect()->route('user');
+        send_mail_verify($validated['email'], $code);
+        send_mail_register($validated['email']);
+
+        return redirect()->route('user')->with('alert.success', __('Добро пожаловать!'));
     }
 }

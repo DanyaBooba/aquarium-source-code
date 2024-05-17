@@ -48,11 +48,11 @@ Route::middleware(['log', 'unlogin'])->group(function () {
         Route::get('email', [RegisterController::class, 'email'])->name('auth.signup.email');
         Route::post('email', [RegisterController::class, 'store'])->name('auth.signup.email.store');
 
-        Route::get('google', [SocialRegisterController::class, 'google'])->name('auth.signup.google');
-        Route::get('github', [SocialRegisterController::class, 'github'])->name('auth.signup.github');
-        Route::get('mailru', [SocialRegisterController::class, 'mailru'])->name('auth.signup.mailru');
-        Route::get('yandex', [SocialRegisterController::class, 'yandex'])->name('auth.signup.yandex');
-        Route::get('vk', [SocialRegisterController::class, 'vk'])->name('auth.signup.vk');
+        Route::get('yandex', [SocialController::class, 'yandex'])->name('auth.signup.yandex');
+        Route::get('google', [SocialController::class, 'google'])->name('auth.signup.google');
+        Route::get('github', [SocialController::class, 'github'])->name('auth.signup.github');
+        Route::get('mailru', [SocialController::class, 'mailru'])->name('auth.signup.mailru');
+        Route::get('vk', [SocialController::class, 'vk'])->name('auth.signup.vk');
     });
 
     Route::get('sign/test', [TestAccountController::class, 'index'])->name('auth.sign.test');

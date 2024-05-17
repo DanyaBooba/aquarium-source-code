@@ -23,5 +23,7 @@ class User extends Model
         'usertype',
         'desc',
         'settings_notifications',
+        'serviceLogin',
+        'shareToken',
     ];
 }
