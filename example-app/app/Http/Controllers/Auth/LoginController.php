@@ -84,7 +84,13 @@ class LoginController extends Controller
             send_mail_verify($validated['email'], $code);
         }
 
-        $settingsData = (object) json_decode($findUser->settings_notifications);
+        $settingsDefault = (object) [
+            'dataChange' => true,
+            'authorization' => true,
+            'passwordChange' => true,
+        ];
+
+        $settingsData = $findUser->settings_notifications ? (object) json_decode($findUser->settings_notifications) : $settingsDefault;
 
         if ($settingsData->authorization) {
             send_mail_login($validated['email']);

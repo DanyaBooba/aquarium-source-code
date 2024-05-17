@@ -52,11 +52,6 @@ class SocialController extends Controller
                         'avatarDefault' => $findUser->avatarDefault
                     ]);
 
-                    if (!$findUser->verified) {
-                        $code = set_new_verify();
-                        send_mail_verify($findUser->email, $code);
-                    }
-
                     $settingsData = (object) json_decode($findUser->settings_notifications);
 
                     if ($settingsData->authorization) {
@@ -102,6 +97,7 @@ class SocialController extends Controller
                     'lastName' => $info->last_name,
                     'serviceLogin' => 'ya',
                     'shareToken' => random_string(20),
+                    'verified' => true,
                 ]);
 
                 session(['id' => $query->id]);
