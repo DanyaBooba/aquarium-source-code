@@ -359,6 +359,12 @@ if (!function_exists('send_mail')) {
     }
 }
 
+// php artisan queue:work
+// Queue::push('SendEmail', array('message' => $message));
+
+// $date = Carbon::now()->addMinutes(10);
+// Queue::later($date, 'SendEmail@send', array('message' => $message));
+
 if (!function_exists('send_mail_register')) {
     function send_mail_register(string $email, string $nameService = '', string $password = ''): bool
     {
