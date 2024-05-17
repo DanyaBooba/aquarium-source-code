@@ -191,6 +191,8 @@ return [
         'currentPassword' => 'текущий пароль',
         'newPassword' => 'новый пароль',
         'currentEmail' => 'текущая почта',
-        'newEmail' => 'новая почта'
+        'newEmail' => 'новая почта',
+        'icon' => 'иконка',
+        'cap' => 'шапка'
     ],
 ];

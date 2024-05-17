@@ -22,17 +22,17 @@ class AppearanceController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'icon' => ['required', 'integer', 'min: 1', 'max: 7'],
             'bg' => ['required', 'integer', 'min:1', 'max:11'],
+            'icon' => ['required', 'integer', 'min: 0', 'max: 7'],
         ]);
 
         $user = User::where('email', '=', session('email'))->first();
 
-        $user->avatarDefault = true;
-        $user->capDefault = true;
+        $user->avatarDefault = $validated['icon'] != 0;
+        $user->capDefault = $validated['bg'] != 0;
 
-        $user->avatar = 'MAN' . $validated['icon'];
-        $user->cap = 'BG' . $validated['bg'];
+        if ($validated['icon'] != 0) $user->avatar = 'MAN' . $validated['icon'];
+        if ($validated['bg'] != 0) $user->cap = 'BG' . $validated['bg'];
 
         $user->save();
 
