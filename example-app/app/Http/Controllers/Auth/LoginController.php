@@ -76,8 +76,6 @@ class LoginController extends Controller
 
         session(['id' => $findUser->id]);
         session(['email' => $validated['email']]);
-        session(['avatar' => $findUser->avatar]);
-        session(['avatarDefault' => $findUser->avatarDefault]);
 
         if (!$findUser->verified) {
             $code = set_new_verify();
