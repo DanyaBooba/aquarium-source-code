@@ -15,6 +15,7 @@
     <p class="text-title">
         Загрузка изображения
     </p>
+
     <input type="file" name="image">
 
     <button type="submit" class="btn btn-primary">
