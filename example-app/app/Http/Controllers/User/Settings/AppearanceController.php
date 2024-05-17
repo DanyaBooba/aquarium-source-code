@@ -38,4 +38,11 @@ class AppearanceController extends Controller
 
         return redirect()->route('settings.appearance');
     }
+
+    public function loadfile(Request $request)
+    {
+        dd('load file');
+
+        return "123";
+    }
 }

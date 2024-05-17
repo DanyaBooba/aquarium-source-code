@@ -9,6 +9,19 @@
 
 <x-form.error-first />
 
+<form action="{{ route('settings.appearance.loadfile') }}" method="post" enctype="multipart/form-data" class="mb-4">
+    @csrf
+
+    <p class="text-title">
+        Загрузка изображения
+    </p>
+    <input type="file" name="image">
+
+    <button type="submit" class="btn btn-primary">
+        Отправить форму
+    </button>
+</form>
+
 <form action="" onsubmit="sendForm('{{ route('settings') }}')" method="post" class="form-settings-image">
     @csrf
     <p class="text-title">
