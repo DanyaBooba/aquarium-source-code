@@ -36,3 +36,27 @@ if (!function_exists('user_admin')) {
         return $findUser;
     }
 }
+
+if (!function_exists('login_for_test_account')) {
+    function login_for_test_account()
+    {
+        $findTest = User::where('email', 'testaccount')->first();
+
+        if ($findTest === null) {
+            $findTest = User::query()->create([
+                'verified' => 1,
+                'email' => 'testaccount',
+                'password' => '',
+                'avatar' => 'MAN6',
+                'cap' => 'BG3',
+                'usertype' => -1,
+                'firstName' => 'Даниил',
+                'lastName' => 'Иванов',
+                'desc' => 'Описание профиля.',
+            ]);
+        }
+
+        session(['id' => $findTest->id]);
+        session(['email' => 'testaccount']);
+    }
+}
