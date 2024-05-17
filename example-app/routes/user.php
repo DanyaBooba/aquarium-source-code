@@ -33,8 +33,8 @@ Route::prefix('user')->middleware(['login.session', 'user.blocked'])->group(func
 
     Route::get('exit', [ExitController::class, 'index'])->name('user.exit');
 
-    Route::get('post/add', [PostsController::class, 'index'])->name('user.addpost');
-    Route::post('post/add', [PostsController::class, 'post'])->name('user.addpost.post');
+    Route::get('addpost', [PostsController::class, 'index'])->name('user.addpost');
+    Route::post('addpost', [PostsController::class, 'post'])->name('user.addpost.post');
 
     Route::get('delete', [DeleteController::class, 'index'])->name('user.delete');
     Route::post('delete', [DeleteController::class, 'post'])->name('user.delete.post');

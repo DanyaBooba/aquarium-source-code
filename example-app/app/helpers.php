@@ -14,6 +14,13 @@ if (!function_exists('header_route_active_link')) {
     }
 }
 
+if (!function_exists('profile_route_active_link')) {
+    function profile_route_active_link(string $name): string
+    {
+        return route_active_link($name, "#", route($name));
+    }
+}
+
 if (!function_exists('header_route_visible_link')) {
     function header_route_visible_link(string $name): string
     {
