@@ -58,8 +58,6 @@ class RegisterController extends Controller
 
         session(['id' => $query->id]);
         session(['email' => $validated['email']]);
-        session(['avatar' => $avatar]);
-        session(['avatarDefault' => 1]);
 
         $code = set_new_verify();
 
