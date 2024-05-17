@@ -4,7 +4,7 @@
     'type' => '',
 ])
 
-<div class="alert alert-dismissible fade show {{ $type ?? null }}" role="alert" id="{{ $name }}">
+<div class="alert alert-dismissible fade show {{ !$close ? "p-0" : "" }} {{ $type ?? null }}" role="alert" id="{{ $name }}">
     <span>{{ $slot }}</span>
     @if($close)
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onClick="alertClose('{{ $name }}')">

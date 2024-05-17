@@ -6,10 +6,6 @@
     width: 30%;
 }
 
-.container-settings .container-settings-main {
-    max-width: 90%;
-}
-
 .container-settings .container-settings-main ul {
     background-color: var(--settings-main-background);
     border-radius: 12px;
@@ -126,6 +122,12 @@
 }
 
 /* media */
+
+@media(min-width: 575.98px) {
+    .container-settings .container-settings-main {
+        max-width: 90%;
+    }
+}
 
 @media(max-width: 1023.98px) {
     .container-settings .container-settings-left {
