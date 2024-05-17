@@ -58,6 +58,8 @@ class DeleteController extends Controller
             ]);
         }
 
+        send_mail_delete($findUser->email);
+
         $findUser->delete();
         exit_account();
 
