@@ -11,7 +11,15 @@ class VerifyController extends Controller
 {
     public function viewverify()
     {
-        // fix
+        $findUser = User::where('email', session('email'))->first();
+
+        if ($findUser == null) {
+            return redirect()->route('main');
+        }
+
+        if ($findUser->verified) {
+            return redirect()->route('user');
+        }
 
         return view('user.viewverify');
     }
