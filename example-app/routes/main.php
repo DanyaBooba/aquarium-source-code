@@ -37,5 +37,9 @@ Route::prefix('/')->group(function () {
         Route::get('brandbook', function () {
             return redirect()->route('main.brand');
         });
+
+        Route::get('download', function () {
+            return redirect()->route('main.get');
+        });
     });
 });

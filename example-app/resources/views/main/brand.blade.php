@@ -23,12 +23,12 @@
             </h2>
             <ul>
                 <li>
-                    <a href="{{ asset('download/logo_ru.zip') }}" download>
+                    <a href="{{ asset('file-download/logo_ru.zip') }}" download>
                         {{ __('Скачать RU') }}
                     </a>
                 </li>
                 <li>
-                    <a href="{{ asset('download/logo_en.zip') }}" download>
+                    <a href="{{ asset('file-download/logo_en.zip') }}" download>
                         {{ __('Скачать EN') }}
                     </a>
                 </li>

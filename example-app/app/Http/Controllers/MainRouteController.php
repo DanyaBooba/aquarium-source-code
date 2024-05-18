@@ -38,8 +38,6 @@ class MainRouteController extends Controller
 
     public function download()
     {
-        return redirect()->back();
-
         return view('main.download');
     }
 
@@ -50,8 +48,6 @@ class MainRouteController extends Controller
 
     public function accessibility()
     {
-        return redirect()->route('main');
-
         return view('main.accessibility');
     }
 }
