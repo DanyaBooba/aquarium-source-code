@@ -18,8 +18,16 @@ class LoginController extends Controller
             'response_type' => 'code'
         ]));
 
+        $googleUri = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build_query([
+            'client_id' => env('GOOGLE_CLIENT_ID'),
+            'redirect_uri' => env('GOOGLE_REDIRECT_URI_LOGIN'),
+            'response_type' => 'code',
+            'scope' => 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
+        ]));
+
         return view('sign.in.index', [
-            'yandexUri' => $yandexUri
+            'yandexUri' => $yandexUri,
+            'googleUri' => $googleUri,
         ]);
     }
 

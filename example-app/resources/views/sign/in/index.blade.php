@@ -40,7 +40,7 @@
     </button>
 </div>
 <div id="signin-choose-google">
-    <button class="btn fs-5" onClick="buttonOpenURL('{{ route('auth.signin.google') }}')">
+    <button class="btn fs-5" onClick="buttonOpenURL('{{ $googleUri }}')">
         <x-sign.google />
     </button>
 </div>
