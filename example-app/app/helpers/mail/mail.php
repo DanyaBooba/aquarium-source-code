@@ -12,6 +12,8 @@ if (!function_exists('send_mail')) {
     }
 }
 
+// Text
+
 require "text/login.php";
 require "text/verify.php";
 require "text/delete.php";
