@@ -155,6 +155,15 @@ class SocialController extends Controller
         return redirect()->route('user');
     }
 
+    public function test()
+    {
+        $info = (object) [
+            "email" => "exampl@email.com",
+        ];
+
+        dd($info);
+    }
+
     private function profile($email, $nickname = '', $firstName = '', $lastName = '', $avatar = '', $service = 'ya')
     {
         $findNickname = User::where('nickname', $nickname);
@@ -173,6 +182,8 @@ class SocialController extends Controller
     private function auth($profile)
     {
         $findUser = User::where('email', $profile->email)->first();
+
+        dd($findUser);
 
         if ($findUser) {
             session([
