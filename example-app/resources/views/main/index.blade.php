@@ -202,20 +202,6 @@
         </div>
     </div>
 
-    <div class="container col-md-10 px-4">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-12 col-lg-6">
-                <img src="{{ asset('img/main/img/main-world.jpg') }}" class="d-block img-fluid" alt="{{ __('Воксельный подводный мир') }}" width="700" style="border-radius: 12px">
-            </div>
-            <div class="col-lg-6">
-                <h2 class="display-5 lh-1 mb-3">{!! __('Адаптивный <nobr>веб-дизайн</nobr>') !!}</h2>
-                <p class="fs-5 text-muted">
-                    {{ __('Сайт адаптирован к возможностям устройств и браузеров, качественный подход в разработке помогает уверенно масштабировать проект и добавлять новые возможности.') }}
-                </p>
-            </div>
-        </div>
-    </div>
-
     <div class="px-4 py-5 my-5 text-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"/><path d="m9 20 3-6 3 6"/><path d="m6 8 6 2 6-2"/><path d="M12 10v4"/></svg>
         <h1 class="display-5">
@@ -230,6 +216,20 @@
                     {{ __('Как это достигается') }}
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="ms-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container col-md-10 px-4">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-12 col-lg-6">
+                <img src="{{ asset('img/main/img/main-world.jpg') }}" class="d-block img-fluid" alt="{{ __('Воксельный подводный мир') }}" width="700" style="border-radius: 12px">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="display-5 lh-1 mb-3">{!! __('Адаптивный <nobr>веб-дизайн</nobr>') !!}</h2>
+                <p class="fs-5 text-muted">
+                    {{ __('Сайт адаптирован к возможностям устройств и браузеров, качественный подход в разработке помогает уверенно масштабировать проект и добавлять новые возможности.') }}
+                </p>
             </div>
         </div>
     </div>
