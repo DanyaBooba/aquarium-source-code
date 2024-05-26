@@ -50,4 +50,9 @@ class MainRouteController extends Controller
     {
         return view('main.accessibility');
     }
+
+    public function history()
+    {
+        return view('main.history');
+    }
 }
