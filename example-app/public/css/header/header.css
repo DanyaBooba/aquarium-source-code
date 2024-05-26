@@ -65,7 +65,7 @@ header.header .header-content-links a.link-download {
 
     background-color: var(--header-link-download-background);
     border: .1rem solid var(--header-link-download-border);
-    border-radius: 8px;
+    border-radius: 22px;
 
     text-decoration: none !important;
 
