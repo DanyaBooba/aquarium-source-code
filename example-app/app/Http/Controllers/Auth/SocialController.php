@@ -51,67 +51,69 @@ class SocialController extends Controller
 
         $this->auth($profile);
 
-        $findUser = User::where('email', $info->default_email)->first();
+        dd('stop!');
 
-        if ($findUser) {
-            session([
-                'id' => $findUser->id,
-                'email' => $findUser->email
-            ]);
+        // $findUser = User::where('email', $info->default_email)->first();
 
-            $settingsData = (object) json_decode($findUser->settings_notifications);
-            if ($settingsData->authorization) {
-                send_mail_login($findUser->email);
-            }
+        // if ($findUser) {
+        //     session([
+        //         'id' => $findUser->id,
+        //         'email' => $findUser->email
+        //     ]);
 
-            return redirect()->route('user')->with('alert.success', __('С возвращением!'));
-        }
+        //     $settingsData = (object) json_decode($findUser->settings_notifications);
+        //     if ($settingsData->authorization) {
+        //         send_mail_login($findUser->email);
+        //     }
 
-        $username = $info->login;
-        $avatar = 'MAN' . random_int(1, 7);
-        $avatarDefault = true;
-        $bg = 'BG' . random_int(1, 11);
-        $password = random_string(50);
+        //     return redirect()->route('user')->with('alert.success', __('С возвращением!'));
+        // }
 
-        $findNickname = User::where('username', $info->login)->first();
-        if ($findNickname) $username = '';
+        // $username = $info->login;
+        // $avatar = 'MAN' . random_int(1, 7);
+        // $avatarDefault = true;
+        // $bg = 'BG' . random_int(1, 11);
+        // $password = random_string(50);
 
-        if (!$info->is_avatar_empty) {
-            $avatar = "https://avatars.yandex.net/get-yapic/" . $info->default_avatar_id . "/islands-200";
-            $avatarDefault = false;
-        }
+        // $findNickname = User::where('username', $info->login)->first();
+        // if ($findNickname) $username = '';
 
-        $settings = json_encode([
-            'dataChange' => true,
-            'authorization' => true,
-            'passwordChange' => true,
-        ]);
+        // if (!$info->is_avatar_empty) {
+        //     $avatar = "https://avatars.yandex.net/get-yapic/" . $info->default_avatar_id . "/islands-200";
+        //     $avatarDefault = false;
+        // }
 
-        $query = User::query()->create([
-            'email' => $info->default_email,
-            'username' => $username,
-            'password' => bcrypt($password),
-            'avatar' => $avatar,
-            'avatarDefault' => $avatarDefault,
-            'cap' => $bg,
-            'settings_notifications' => $settings,
-            'firstName' => $info->first_name,
-            'lastName' => $info->last_name,
-            'serviceLogin' => 'ya',
-            'shareToken' => random_string(20),
-            'verified' => true,
-        ]);
+        // $settings = json_encode([
+        //     'dataChange' => true,
+        //     'authorization' => true,
+        //     'passwordChange' => true,
+        // ]);
 
-        session([
-            'id' => $query->id,
-            'email' => $query->default_email,
-        ]);
+        // $query = User::query()->create([
+        //     'email' => $info->default_email,
+        //     'username' => $username,
+        //     'password' => bcrypt($password),
+        //     'avatar' => $avatar,
+        //     'avatarDefault' => $avatarDefault,
+        //     'cap' => $bg,
+        //     'settings_notifications' => $settings,
+        //     'firstName' => $info->first_name,
+        //     'lastName' => $info->last_name,
+        //     'serviceLogin' => 'ya',
+        //     'shareToken' => random_string(20),
+        //     'verified' => true,
+        // ]);
 
-        $code = set_new_verify();
-        send_mail_verify($info->default_email, $code);
-        send_mail_register($info->default_email, 'Яндекс', $password);
+        // session([
+        //     'id' => $query->id,
+        //     'email' => $query->default_email,
+        // ]);
 
-        return redirect()->route('user')->with('alert.success', __('Добро пожаловать!'));
+        // $code = set_new_verify();
+        // send_mail_verify($info->default_email, $code);
+        // send_mail_register($info->default_email, 'Яндекс', $password);
+
+        // return redirect()->route('user')->with('alert.success', __('Добро пожаловать!'));
     }
 
     public function google()
@@ -152,7 +154,7 @@ class SocialController extends Controller
 
         $this->auth($profile);
 
-        return redirect()->route('user');
+        dd('stop');
     }
 
     public function test()
