@@ -109,19 +109,9 @@ class DeleteController extends Controller
 
     public function service(Request $request)
     {
-        dd('delete service');
-
         $validated = $request->validate([
-            'email' => ['required', 'string', 'max:254', 'min: 3', 'email'],
-            'password' => ['required', 'string', 'min:3', 'max:254'],
             'confirmDelete' => ['required', 'string', 'max:50']
         ]);
-
-        if (session('email') !== $validated['email']) {
-            return redirect()->back()->withInput($validated)->withErrors([
-                'email' => __('Неверная почта.')
-            ]);
-        }
 
         $findUser = User::where('email', session('email'))->first();
 
@@ -136,13 +126,6 @@ class DeleteController extends Controller
             return redirect()->route('main');
         }
 
-        $passwordConfirm = app('hash')->check($validated['password'], $findUser->password);
-        if ($passwordConfirm === false) {
-            return redirect()->back()->withInput($validated)->withErrors([
-                'password' => __('Некорректный пароль.')
-            ]);
-        }
-
         if ($validated['confirmDelete'] !== 'Подтверждаю удаление аккаунта') {
             return redirect()->back()->withInput($validated)->withErrors([
                 'confirmDelete' => __('Подтвердите удаление аккаунта.')
@@ -151,17 +134,19 @@ class DeleteController extends Controller
 
         send_mail_delete($findUser->email);
 
+        $emailAccount = session('email');
+        $idAccount = $findUser->id;
         $findUser->delete();
         exit_account();
 
-        $checkVerifies = Verify::where('email', $validated['email'])->get();
+        $checkVerifies = Verify::where('email', $emailAccount)->get();
         if (count($checkVerifies) > 0) {
             foreach ($checkVerifies as $verify) {
                 $verify->delete();
             }
         }
 
-        $checkPosts = Post::where('idUser', $findUser->id)->get();
+        $checkPosts = Post::where('idUser', $idAccount)->get();
 
         if (count($checkPosts) > 0) {
             foreach ($checkPosts as $post) {
@@ -170,14 +155,14 @@ class DeleteController extends Controller
             }
         }
 
-        $checkRestore = Restore::where('idUser', $findUser->id)->get();
+        $checkRestore = Restore::where('idUser', $idAccount)->get();
         if (count($checkRestore) > 0) {
             foreach ($checkRestore as $restore) {
                 $restore->delete();
             }
         }
 
-        $checkNotify = Notification::where('iduser', $findUser->id)->get();
+        $checkNotify = Notification::where('iduser', $idAccount)->get();
         if (count($checkNotify) > 0) {
             foreach ($checkNotify as $notify) {
                 $notify->active = false;
@@ -185,7 +170,7 @@ class DeleteController extends Controller
             }
         }
 
-        $checkCodes = Code::where('idUser', $findUser->id)->get();
+        $checkCodes = Code::where('idUser', $idAccount)->get();
         if (count($checkCodes) > 0) {
             foreach ($checkCodes as $code) {
                 $code->delete();
