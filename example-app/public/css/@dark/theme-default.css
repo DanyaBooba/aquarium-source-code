@@ -3,6 +3,7 @@
     --accent-highlight: #8e95ff;
 
     --body-color: #17152b;
+    --body-color-rgb: 23, 21, 43;
     --body-color-alpha: #17152b99;
     --bg-white: #1b1935;
 
@@ -10,6 +11,7 @@
     --text-invert: #000;
     --text-code: #fff;
     --text-muted: #6c757d;
+    --text-success: #2ed573;
 
     --text-color-hover: #0984e3;
     --text-color-link-underline: #5c569d;

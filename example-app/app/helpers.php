@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Route;
 // $date = Carbon::now()->addMinutes(10);
 // Queue::later($date, 'SendEmail@send', array('message' => $message));
 
+// Secret
+
+require_once "helpers/secret/tokens.php";
+
 // User
 
 require_once "helpers/user/get-user.php";

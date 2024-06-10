@@ -17,8 +17,8 @@ class SocialController extends Controller
         $params = array(
             'grant_type'    => 'authorization_code',
             'code'          => $_GET['code'],
-            'client_id'     => env('YANDEX_CLIENT_ID'),
-            'client_secret' => env('YANDEX_CLIENT_SECRET'),
+            'client_id'     => YANDEX_CLIENT_ID,
+            'client_secret' => YANDEX_CLIENT_SECRET,
         );
 
         $ch = curl_init('https://oauth.yandex.ru/token');
@@ -64,9 +64,9 @@ class SocialController extends Controller
         if (empty($_GET['code'])) return redirect()->back();
 
         $params = [
-            'client_id'     => env('GOOGLE_CLIENT_ID'),
-            'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-            'redirect_uri'  => env('GOOGLE_REDIRECT_URI_LOGIN'),
+            'client_id'     => GOOGLE_CLIENT_ID,
+            'client_secret' => GOOGLE_CLIENT_SECRET,
+            'redirect_uri'  => GOOGLE_REDIRECT_URI_LOGIN,
             'grant_type'    => 'authorization_code',
             'code'          => $_GET['code']
         ];

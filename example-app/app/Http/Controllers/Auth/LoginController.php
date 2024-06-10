@@ -13,14 +13,14 @@ class LoginController extends Controller
     public function index()
     {
         $yandexUri = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query([
-            'client_id' => env('YANDEX_CLIENT_ID'),
-            'redirect_uri' => env('YANDEX_REDIRECT_URI_LOGIN'),
+            'client_id' => YANDEX_CLIENT_ID,
+            'redirect_uri' => YANDEX_REDIRECT_URI_LOGIN,
             'response_type' => 'code'
         ]));
 
         $googleUri = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build_query([
-            'client_id' => env('GOOGLE_CLIENT_ID'),
-            'redirect_uri' => env('GOOGLE_REDIRECT_URI_LOGIN'),
+            'client_id' => GOOGLE_CLIENT_ID,
+            'redirect_uri' => GOOGLE_REDIRECT_URI_LOGIN,
             'response_type' => 'code',
             'scope' => 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
         ]));

@@ -3,10 +3,17 @@
 @section('page.title', __('О проекте Аквариум'))
 
 @section('simple.content')
-<x-lending.logo />
-<p class="text-center mt-4 fs-3">
-    {{ __('Социальная сеть с открытым кодом') }}
-</p>
+<style>
+    main {
+        background-image: linear-gradient(180deg,rgba(var(--body-color-rgb),.01),rgba(var(--body-color-rgb),1) 85%),radial-gradient(ellipse at top left,rgba(255,228,132,.2),transparent 50%),radial-gradient(ellipse at top right,rgba(13,110,253,.2),transparent 50%),radial-gradient(ellipse at center right,rgba(214,51,132,.2),transparent 50%),radial-gradient(ellipse at center left,rgba(112,44,249,.2),transparent 50%);
+    }
+</style>
+<div class="main-lending">
+    <x-lending.logo />
+    <p class="text-center mt-4 fs-3">
+        {{ __('Социальная сеть с открытым кодом') }}
+    </p>
+</div>
 <div class="row" style="margin-top: 6rem;">
     <div class="col">
         <p class="display-1">🐠</p>
