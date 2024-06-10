@@ -38,6 +38,7 @@ Route::prefix('user')->middleware(['login.session', 'user.blocked'])->group(func
 
     Route::get('delete', [DeleteController::class, 'index'])->name('user.delete');
     Route::post('delete', [DeleteController::class, 'post'])->name('user.delete.post');
+    Route::post('delete/service', [DeleteController::class, 'service'])->name('user.delete.service.post');
 
     Route::prefix('settings')->group(function () {
         Route::get('/', [SettingsController::class, 'index'])->name('settings');

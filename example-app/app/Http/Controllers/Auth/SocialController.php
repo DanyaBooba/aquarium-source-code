@@ -47,73 +47,16 @@ class SocialController extends Controller
         curl_close($ch);
 
         $info = (object) json_decode($info, true);
-        $profile = $this->profile($info->default_email, $info->login, $info->first_name, $info->last_name, "https://avatars.yandex.net/get-yapic/" . $info->default_avatar_id . "/islands-200");
+        $profile = $this->profile((object)[
+            'email' => $info->default_email ?? "",
+            'nickname' => $info->login ?? "",
+            'firstName' => $info->first_name ?? "",
+            'lastName' => $info->last_name ?? "",
+            'avatar' => $info->default_avatar_id ? "https://avatars.yandex.net/get-yapic/" . ($info->default_avatar_id) . "/islands-200" : "",
+            'service' => "ya"
+        ]);
 
-        $this->auth($profile);
-
-        dd('stop!');
-
-        // $findUser = User::where('email', $info->default_email)->first();
-
-        // if ($findUser) {
-        //     session([
-        //         'id' => $findUser->id,
-        //         'email' => $findUser->email
-        //     ]);
-
-        //     $settingsData = (object) json_decode($findUser->settings_notifications);
-        //     if ($settingsData->authorization) {
-        //         send_mail_login($findUser->email);
-        //     }
-
-        //     return redirect()->route('user')->with('alert.success', __('С возвращением!'));
-        // }
-
-        // $username = $info->login;
-        // $avatar = 'MAN' . random_int(1, 7);
-        // $avatarDefault = true;
-        // $bg = 'BG' . random_int(1, 11);
-        // $password = random_string(50);
-
-        // $findNickname = User::where('username', $info->login)->first();
-        // if ($findNickname) $username = '';
-
-        // if (!$info->is_avatar_empty) {
-        //     $avatar = "https://avatars.yandex.net/get-yapic/" . $info->default_avatar_id . "/islands-200";
-        //     $avatarDefault = false;
-        // }
-
-        // $settings = json_encode([
-        //     'dataChange' => true,
-        //     'authorization' => true,
-        //     'passwordChange' => true,
-        // ]);
-
-        // $query = User::query()->create([
-        //     'email' => $info->default_email,
-        //     'username' => $username,
-        //     'password' => bcrypt($password),
-        //     'avatar' => $avatar,
-        //     'avatarDefault' => $avatarDefault,
-        //     'cap' => $bg,
-        //     'settings_notifications' => $settings,
-        //     'firstName' => $info->first_name,
-        //     'lastName' => $info->last_name,
-        //     'serviceLogin' => 'ya',
-        //     'shareToken' => random_string(20),
-        //     'verified' => true,
-        // ]);
-
-        // session([
-        //     'id' => $query->id,
-        //     'email' => $query->default_email,
-        // ]);
-
-        // $code = set_new_verify();
-        // send_mail_verify($info->default_email, $code);
-        // send_mail_register($info->default_email, 'Яндекс', $password);
-
-        // return redirect()->route('user')->with('alert.success', __('Добро пожаловать!'));
+        return $this->auth($profile);
     }
 
     public function google()
@@ -150,34 +93,48 @@ class SocialController extends Controller
         $info = file_get_contents('https://www.googleapis.com/oauth2/v1/userinfo?' . urldecode(http_build_query($params)));
 
         $info = (object) json_decode($info, true);
-        $profile = $this->profile($info->email, $firstName = $info->given_name, $lastName = $info->family_name, $avatar = $info->picture, $service = 'go');
+        $profile = $this->profile((object)[
+            'email' => $info->email ?? "",
+            'nickname' => '',
+            'firstName' => $info->given_name ?? "",
+            'lastName' => $info->family_name ?? "",
+            'avatar' => $info->picture ?? "",
+            'service' => 'go'
+        ]);
 
-        $this->auth($profile);
-
-        dd('stop');
+        return $this->auth($profile);
     }
 
     public function test()
     {
-        $info = (object) [
-            "email" => "exampl@email.com",
-        ];
+        $profile = $this->profile((object)[
+            'email' => "123danil.dybko@gmail.com",
+            'nickname' => '',
+            'firstName' => "firsrt",
+            'lastName' => "last",
+            'avatar' => "",
+            'service' => "sm"
+        ]);
 
-        dd($info);
+        return $this->auth($profile);
     }
 
-    private function profile($email, $nickname = '', $firstName = '', $lastName = '', $avatar = '', $service = 'ya')
+    private function profile($profileObject)
     {
-        $findNickname = User::where('nickname', $nickname);
-        if ($findNickname) $nickname = '';
+        $findNickname = User::where('username', $profileObject->nickname)->first();
+        if ($findNickname) $profileObject->nickname = '';
+
+        $avatarDefault = empty($profileObject->avatar);
+        if(empty($profileObject->avatar)) $profileObject->avatar = user_image_random($profileObject->sex ?? '');
 
         return (object) [
-            'email' => $email,
-            'nickname' => $nickname,
-            'firstName' => $firstName,
-            'lastName' => $lastName,
-            'avatar' => $avatar,
-            'service' => $service
+            'email' => $profileObject->email,
+            'nickname' => $profileObject->nickname,
+            'firstName' => $profileObject->firstName,
+            'lastName' => $profileObject->lastName,
+            'avatarDefault' => $avatarDefault,
+            'avatar' => $profileObject->avatar,
+            'service' => $profileObject->service,
         ];
     }
 
@@ -185,15 +142,13 @@ class SocialController extends Controller
     {
         $findUser = User::where('email', $profile->email)->first();
 
-        dd($findUser);
-
         if ($findUser) {
             session([
                 'id' => $findUser->id,
                 'email' => $findUser->email
             ]);
 
-            $settingsData = (object) json_decode($findUser->settings_notifications);
+            $settingsData = (object) json_decode($findUser->settings_notifications ?? '{"dataChange": true, "authorization": true, "passwordChange": false}');
             if ($settingsData->authorization) {
                 send_mail_login($findUser->email);
             }
@@ -201,10 +156,8 @@ class SocialController extends Controller
             return redirect()->route('user')->with('alert.success', __('С возвращением!'));
         }
 
-        $avatarDefault = $profile->avatar == '';
-        if ($profile->avatar == '') $profile->avatar = 'MAN' . random_int(1, 7);
-        $bg = 'BG' . random_int(1, 11);
-        $password = random_string(50);
+        $bg = user_cap_random();
+        $password = random_password();
 
         $settings = json_encode([
             'dataChange' => true,
@@ -217,12 +170,12 @@ class SocialController extends Controller
             'username' => $profile->nickname,
             'password' => bcrypt($password),
             'avatar' => $profile->avatar,
-            'avatarDefault' => $avatarDefault,
+            'avatarDefault' => $profile->avatarDefault,
             'cap' => $bg,
             'settings_notifications' => $settings,
             'firstName' => $profile->firstName,
             'lastName' => $profile->lastName,
-            'serviceLogin' => 'ya',
+            'serviceLogin' => $profile->service,
             'shareToken' => random_string(20),
             'verified' => true,
         ]);
@@ -232,9 +185,19 @@ class SocialController extends Controller
             'email' => $query->email,
         ]);
 
+        $serviceName = '';
+        switch($profile->service) {
+            case 'ya':
+                $serviceName = 'Яндекс';
+                break;
+            case 'go':
+                $serviceName = 'Google';
+                break;
+        }
+
         $code = set_new_verify();
         send_mail_verify($profile->email, $code);
-        send_mail_register($profile->email, 'Яндекс', $password);
+        send_mail_register($profile->email, $serviceName, $password);
 
         return redirect()->route('user')->with('alert.success', __('Добро пожаловать!'));
     }

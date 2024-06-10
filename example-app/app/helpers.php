@@ -17,6 +17,7 @@ require_once "helpers/user/get-user.php";
 require_once "helpers/user/auth.php";
 require_once "helpers/user/verify.php";
 require_once "helpers/user/image.php";
+require_once "helpers/user/random-data.php";
 
 // Another
 

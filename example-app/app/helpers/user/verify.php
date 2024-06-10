@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\User\User;
+use \App\Models\User\Verify;
+
 if (!function_exists('set_new_verify')) {
     function set_new_verify(): string
     {

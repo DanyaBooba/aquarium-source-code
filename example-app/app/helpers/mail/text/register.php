@@ -10,7 +10,8 @@ if (!function_exists('send_mail_register')) {
         $message = '<b>Добро пожаловать в Аквариум</b>.<br><br> Мы рады приветствовать вас среди пользователей<br><br>';
         if ($nameService) {
             $message .= 'Для регистрации вы использовали сервис «' . $nameService . '»<br><br>';
-            $message .= 'Ваш пароль: <b>' . $password . '</b>';
+            $message .= 'Ваш пароль: <b>' . $password . '</b><br><br>';
+            $message .= 'Для сохранности пароля рекомендуем его сменить (Настройки > Профиль > Сменить пароль)';
         }
 
         $sendMail = send_mail($email, $subject, $message);

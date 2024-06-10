@@ -26,10 +26,7 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:3', 'max:254', Password::min(3)->letters()->numbers()],
         ]);
 
-        $findUser = User::where(
-            'email',
-            $validated['email']
-        )->first();
+        $findUser = User::where('email', $validated['email'])->first();
 
         if ($findUser !== null) {
             return redirect()->back()->withInput($validated)->withErrors([
@@ -37,16 +34,14 @@ class RegisterController extends Controller
             ]);
         }
 
-        $avatar = 'MAN' . random_int(1, 7);
-        $bg = 'BG' . random_int(1, 11);
+        $avatar = user_image_random();
+        $bg = user_cap_random();
 
-        $settings = json_encode(
-            [
-                'dataChange' => true,
-                'authorization' => true,
-                'passwordChange' => true,
-            ]
-        );
+        $settings = json_encode([
+            'dataChange' => true,
+            'authorization' => true,
+            'passwordChange' => true,
+        ]);
 
         $query = User::query()->create([
             'email' => $validated['email'],
