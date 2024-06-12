@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Achiv;
 use App\Models\User\Notification;
 use App\Models\User\Post;
 use App\Models\User\User;
@@ -56,9 +57,12 @@ class UserController extends Controller
     public function achievements()
     {
         $findUser = User::where('email', session('email'))->first();
-
-        $achievements = json_decode($findUser->achivsJson) ?? [];
-        dd($achievements);
+        $achievementsJson = json_decode($findUser->achivsJson) ?? [];
+        $achievements = [];
+        foreach ($achievementsJson as $idAchiv) {
+            $achiv = Achiv::where('id', $idAchiv)->first();
+            if ($achiv != null) array_push($achievements, $achiv);
+        }
 
         return view('user.achievements', [
             'achievements' => $achievements,

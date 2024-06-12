@@ -17,16 +17,16 @@
 </p>
 @else
 <div class="list-achievements row row-cols-md-3">
-    {{-- @foreach($achievements as $item)
+    @foreach($achievements as $item)
     <div class="col">
         <span>
-            <img src="{{ asset("/img/user/achivs/" . $item->img . ".jpg") }}" alt="{{ $item->title }}">
+            <img src="{{ asset("/img/user/achivs/achiv-" . $item->id . ".jpg") }}" alt="{{ $item->name }}">
         </span>
         <x-circle-text-simple>
-            {{ $item->title }}
+            {{ $item->name }}
         </x-circle-text-simple>
     </div>
-    @endforeach --}}
+    @endforeach
 </div>
 @endif
 

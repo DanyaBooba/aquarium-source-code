@@ -14,7 +14,7 @@
             <input id="x" type="hidden" name="message">
             <trix-editor input="x" placeholder="Сообщение"></trix-editor>
             <button type="submit" class="btn btn-primary mt-3">
-                Сохранить
+                {{ __('Опубликовать') }}
             </button>
         </form>
     </div>
