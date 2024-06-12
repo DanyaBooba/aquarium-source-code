@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostsViewController;
 use App\Http\Controllers\User\BlockUserController;
 use App\Http\Controllers\User\ComplainController;
 use App\Http\Controllers\User\UserController;
@@ -79,3 +80,6 @@ Route::get('user/exit/exactly', [ExitController::class, 'exit'])->name('user.exi
 
 Route::get('user/{nickname}', [ShowController::class, 'nickname'])->name('user.show.nickname');
 Route::get('user/id/{id}', [ShowController::class, 'id'])->name('user.show.id');
+
+Route::get('user/{nickname}/{idPost}', [PostsViewController::class, 'nickname'])->name('user.post.show.nickname');
+Route::get('user/id/{id}/{idPost}', [PostsViewController::class, 'id'])->name('user.post.show.id');

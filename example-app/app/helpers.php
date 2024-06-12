@@ -23,6 +23,8 @@ require_once "helpers/user/verify.php";
 require_once "helpers/user/image.php";
 require_once "helpers/user/random-data.php";
 
+require_once "helpers/user/lists/white-id-posts.php";
+
 // Another
 
 require_once "helpers/links.php";

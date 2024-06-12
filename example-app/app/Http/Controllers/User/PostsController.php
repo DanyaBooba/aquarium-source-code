@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\User\Post;
+use App\Models\User\User;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -19,6 +21,31 @@ class PostsController extends Controller
         $post = $validated['message'];
         $shortPost = strip_tags($post);
 
-        dd('ready to load');
+        $findUser = User::where('email', session('email'))->first();
+
+        if ($findUser === null) {
+            return redirect()->back()->withInput($validated)->withErrors([
+                'user' => __('Пользователь не найден.')
+            ]);
+        }
+
+        if ($findUser->usertype == -1) {
+            return redirect()->back()->withInput($validated)->withErrors([
+                'user' => __('Для публикации постов требуется авторизоваться в аккаунт.')
+            ]);
+        }
+
+        $idPost = (Post::where('idUser', $findUser->id)->max('idPost') ?? 0) + 1;
+        $activePost = in_array($findUser->id, white_id_posts());
+
+        Post::query()->create([
+            'idPost' => $idPost,
+            'idUser' => $findUser->id,
+            'message' => $post,
+            'desc' => $shortPost,
+            'active' => $activePost
+        ]);
+
+        return redirect()->route('user.post.show.id', [$findUser->id, $idPost]);
     }
 }

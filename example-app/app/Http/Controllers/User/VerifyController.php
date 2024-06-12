@@ -26,7 +26,7 @@ class VerifyController extends Controller
 
     public function setverify()
     {
-        dd('123');
+        // dd('123');
 
         $code = set_new_verify();
         send_mail_verify(session('email'), $code);
