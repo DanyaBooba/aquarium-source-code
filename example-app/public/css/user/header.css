@@ -1,0 +1,26 @@
+main.row-user-content header {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+main.row-user-content header .header__logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}
+
+main.row-user-content header .header__meta {
+    margin-left: auto;
+}
+
+main.row-user-content header .header__meta a.active svg {
+    stroke: var(--user-nav-link-active) !important;
+}
+
+@media(min-width: 767.98px) {
+    main.row-user-content header {
+        display: none !important;
+    }
+}
