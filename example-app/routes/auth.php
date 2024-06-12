@@ -31,8 +31,6 @@ Route::middleware(['log', 'unlogin'])->group(function () {
     });
 
     Route::prefix('signin')->group(function () {
-//        Route::get('test', [SocialController::class, 'test']);
-
         Route::get('', [LoginController::class, 'index'])->name('auth.signin');
         Route::get('email', [LoginController::class, 'email'])->name('auth.signin.email');
         Route::post('email', [LoginController::class, 'store'])->name('auth.signin.email.store');

@@ -79,8 +79,8 @@ class SocialController extends Controller
         curl_setopt($ch, CURLOPT_HEADER, false);
         $data = curl_exec($ch);
         curl_close($ch);
-        $data = json_decode($data, true);
 
+        $data = json_decode($data, true);
         if (empty($data['access_token'])) return redirect()->back();
 
         $params = [
@@ -100,20 +100,6 @@ class SocialController extends Controller
             'lastName' => $info->family_name ?? "",
             'avatar' => $info->picture ?? "",
             'service' => 'go'
-        ]);
-
-        return $this->auth($profile);
-    }
-
-    public function test()
-    {
-        $profile = $this->profile((object)[
-            'email' => "123danil.dybko@gmail.com",
-            'nickname' => '',
-            'firstName' => "firsrt",
-            'lastName' => "last",
-            'avatar' => "",
-            'service' => "sm"
         ]);
 
         return $this->auth($profile);
