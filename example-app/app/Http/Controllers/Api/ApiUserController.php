@@ -10,28 +10,26 @@ class ApiUserController extends Controller
 {
     public function all()
     {
-
-
-        return "all";
+        $users = User::select($this->selectFields())->where('verified', true)->where('usertype', '<>', 100)->get();
+        return $users;
     }
 
     public function id($id)
     {
-        // User::query()->create([
-        //     'name' => $validated['name'],
-        //     'email' => $validated['email'],
-        //     'password' => bcrypt($validated['password']),
-        // ]);
-
-        $user = User::findOrFail($id);
-
-        dd($user);
-
-        return "id: " . $id;
+        $user = User::select($this->selectFields())->where('id', $id)->where('verified', true)->where('usertype', '<>', 100)->first();
+        if ($user == null) return "{}";
+        return $user;
     }
 
     public function nickname($nickname)
     {
-        return "nickname: " . $nickname;
+        $user = User::select($this->selectFields())->where('username', $nickname)->where('verified', true)->where('usertype', '<>', 100)->first();
+        if ($user == null) return "{}";
+        return $user;
+    }
+
+    private function selectFields()
+    {
+        return ['id', 'username', 'firstName', 'lastName', 'avatar', 'cap', 'desc', 'sub', 'subs', 'achivs'];
     }
 }
