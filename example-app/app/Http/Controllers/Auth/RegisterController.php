@@ -11,7 +11,13 @@ class RegisterController extends Controller
 {
     public function index()
     {
-        return view('sign.up.index');
+        $yandexUri = oauth_yandex_link();
+        $googleUri = oauth_google_link();
+
+        return view('sign.up.index', [
+            'yandexUri' => $yandexUri,
+            'googleUri' => $googleUri,
+        ]);
     }
 
     public function email()

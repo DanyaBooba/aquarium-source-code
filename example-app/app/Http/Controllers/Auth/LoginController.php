@@ -12,18 +12,8 @@ class LoginController extends Controller
 {
     public function index()
     {
-        $yandexUri = 'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query([
-            'client_id' => YANDEX_CLIENT_ID,
-            'redirect_uri' => YANDEX_REDIRECT_URI_LOGIN,
-            'response_type' => 'code'
-        ]));
-
-        $googleUri = 'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build_query([
-            'client_id' => GOOGLE_CLIENT_ID,
-            'redirect_uri' => GOOGLE_REDIRECT_URI_LOGIN,
-            'response_type' => 'code',
-            'scope' => 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
-        ]));
+        $yandexUri = oauth_yandex_link();
+        $googleUri = oauth_google_link();
 
         return view('sign.in.index', [
             'yandexUri' => $yandexUri,

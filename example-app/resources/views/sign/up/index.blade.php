@@ -40,6 +40,17 @@
                 </button>
             </div>
         </div> --}}
+        <div id="signin-choose-yandex">
+            <button class="btn fs-5" onClick="buttonOpenURL('{{ $yandexUri }}')">
+                <x-sign.yandex />
+            </button>
+        </div>
+        <div id="signin-choose-google">
+            <button class="btn fs-5" onClick="buttonOpenURL('{{ $googleUri }}')">
+                <x-sign.google />
+            </button>
+        </div>
+        <x-sign.choose-or />
         <div id="signin-choose-email">
             <a href="{{ route('auth.signup.email') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="me-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -48,7 +59,6 @@
                 {{ __('Почта') }}
             </a>
         </div>
-        <x-sign.choose-or />
         <div>
             <a href="{{ route('auth.sign.test') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="me-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/><path d="M6 8h2"/><path d="M6 12h2"/><path d="M16 8h2"/><path d="M16 12h2"/></svg>
