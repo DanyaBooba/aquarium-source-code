@@ -1,6 +1,10 @@
-@extends('layouts.user.user')
+@extends('layouts.user.settings')
 
-@section('page.title', __('Профиль'))
+@push('css')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/posts/include.css') }}" />
+@endpush
+
+@section('page.title', __('Пост'))
 
 @section('user.alert')
 @if($active == 0)
@@ -14,6 +18,14 @@
 @endif
 @endsection
 
-@section('user.content')
+@section('settings.content')
+
+<div class="profile-posts">
+
+</div>
+
+<div>
+    {!! $post->message !!}
+</div>
 
 @endsection

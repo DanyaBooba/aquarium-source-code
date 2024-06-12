@@ -17,7 +17,7 @@
 </p>
 @else
 <div class="list-achievements row row-cols-md-3">
-    @foreach($achievements as $item)
+    {{-- @foreach($achievements as $item)
     <div class="col">
         <span>
             <img src="{{ asset("/img/user/achivs/" . $item->img . ".jpg") }}" alt="{{ $item->title }}">
@@ -26,7 +26,7 @@
             {{ $item->title }}
         </x-circle-text-simple>
     </div>
-    @endforeach
+    @endforeach --}}
 </div>
 @endif
 

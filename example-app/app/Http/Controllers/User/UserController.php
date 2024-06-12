@@ -58,6 +58,7 @@ class UserController extends Controller
         $findUser = User::where('email', session('email'))->first();
 
         $achievements = json_decode($findUser->achivsJson) ?? [];
+        dd($achievements);
 
         return view('user.achievements', [
             'achievements' => $achievements,
