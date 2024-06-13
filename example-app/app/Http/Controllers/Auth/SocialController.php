@@ -153,15 +153,33 @@ class SocialController extends Controller
         ];
     }
 
-    private function auth($profile)
+    private function auth($profile, $loginAtSecondAccount = false)
     {
         $findUser = User::where('email', $profile->email)->first();
 
         if ($findUser) {
-            session([
-                'id' => $findUser->id,
-                'email' => $findUser->email
-            ]);
+            if ($loginAtSecondAccount) {
+                if ($profile->email == session('email')) {
+                    return redirect()->route('second.auth.signin')->withErrors([
+                        'user' => __('Уже авторизованы.')
+                    ]);
+                }
+
+                $oldEmail = session('email');
+                $oldId = session('id');
+
+                session([
+                    'id' => $findUser->id,
+                    'email' => $findUser->email,
+                    'prev_email' => $oldEmail,
+                    'prev_id' => $oldId
+                ]);
+            } else {
+                session([
+                    'id' => $findUser->id,
+                    'email' => $findUser->email
+                ]);
+            }
 
             $settingsData = (object) json_decode($findUser->settings_notifications ?? '{"dataChange": true, "authorization": true, "passwordChange": false}');
             if ($settingsData->authorization) {
@@ -195,10 +213,22 @@ class SocialController extends Controller
             'verified' => true,
         ]);
 
-        session([
-            'id' => $query->id,
-            'email' => $query->email,
-        ]);
+        if ($loginAtSecondAccount) {
+            $oldEmail = session('email');
+            $oldId = session('id');
+
+            session([
+                'id' => $query->id,
+                'email' => $query->email,
+                'prev_id' => $oldId,
+                'prev_email' => $oldEmail
+            ]);
+        } else {
+            session([
+                'id' => $query->id,
+                'email' => $query->email,
+            ]);
+        }
 
         $serviceName = '';
         switch($profile->service) {
