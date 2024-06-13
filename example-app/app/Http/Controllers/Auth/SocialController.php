@@ -19,7 +19,7 @@ class SocialController extends Controller
         $profile = $this->yandexData();
         dd('second login');
 
-        return $this->auth($profile);
+        return $this->auth($profile, true);
     }
 
     public function google()
@@ -34,7 +34,7 @@ class SocialController extends Controller
         $profile = $this->googleData();
         dd('second login');
 
-        return $this->auth($profile);
+        return $this->auth($profile, true);
     }
 
     private function yandexData()
