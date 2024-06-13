@@ -34,6 +34,12 @@ class ProfileController extends Controller
             ]);
         }
 
+        if (in_array($validated['username'], black_usernames())) {
+            return redirect()->route('settings.profile')->withErrors([
+                'username' => __('Данное имя пользователя запрещено.')
+            ]);
+        }
+
         $username = strtolower($validated['username']);
 
         $findUser = User::where('username', '=', $username)->where('email', '<>', session('email'))->first();

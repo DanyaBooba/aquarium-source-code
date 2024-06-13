@@ -10,11 +10,29 @@ if (!function_exists('exit_account')) {
     }
 }
 
+if (!function_exists('exit_second_account')) {
+    function exit_second_account()
+    {
+        session()->forget('prev_id');
+        session()->forget('prev_email');
+    }
+}
+
 if (!function_exists('user_login')) {
     function user_login(): bool
     {
         $sessions = session()->has('email') && session()->has('id');
         $findUser = User::where('email', session('email'))->where('id', session('id'))->first() !== null;
+
+        return $sessions && $findUser;
+    }
+}
+
+if (!function_exists('have_second_account')) {
+    function have_second_account(): bool
+    {
+        $sessions = session()->has('prev_email') && session()->has('prev_id');
+        $findUser = User::where('email', session('prev_email'))->where('id', session('prev_id'))->first() !== null;
 
         return $sessions && $findUser;
     }

@@ -11,6 +11,38 @@
     <x-user.settings.verified />
     @endunless
 
+    @if($verified && have_second_account() == false)
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="{{ route('second.auth.signin') }}" class="settings-devices">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+                <span>
+                    {{ __('Добавить аккаунт') }}
+                </span>
+            </a>
+        </li>
+    </ul>
+    @elseif(have_second_account())
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="{{ route('user.change-account') }}" class="settings-devices">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-cog"><circle cx="18" cy="15" r="3"/><circle cx="9" cy="7" r="4"/><path d="M10 15H6a4 4 0 0 0-4 4v2"/><path d="m21.7 16.4-.9-.3"/><path d="m15.2 13.9-.9-.3"/><path d="m16.6 18.7.3-.9"/><path d="m19.1 12.2.3-.9"/><path d="m19.6 18.7-.4-1"/><path d="m16.8 12.3-.4-1"/><path d="m14.3 16.6 1-.4"/><path d="m20.7 13.8 1-.4"/></svg>
+                <span>
+                    {{ __('Переключить аккаунт') }}
+                </span>
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="{{ route('user.remove-second-account') }}" class="settings-notifications">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-minus"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+                <span>
+                    {{ __('Убрать второй аккаунт') }}
+                </span>
+            </a>
+        </li>
+    </ul>
+    @endif
+
     <ul class="list-group">
         @if($verified)
         <li class="list-group-item">

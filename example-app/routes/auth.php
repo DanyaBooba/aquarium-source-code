@@ -11,7 +11,7 @@ use App\Http\Controllers\Auth\RestoreController;
 use App\Http\Controllers\Auth\TestAccountController;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware(['log', 'unlogin'])->group(function () {
+Route::middleware(['unlogin'])->group(function () {
 
     Route::prefix('sign')->group(function () {
         Route::get('help', [AuthController::class, 'help'])->name('auth.help');

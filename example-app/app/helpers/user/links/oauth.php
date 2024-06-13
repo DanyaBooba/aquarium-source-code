@@ -24,3 +24,27 @@ if (!function_exists('oauth_google_link')) {
             ]));
     }
 }
+if (!function_exists('oauth_yandex_link_second')) {
+    function oauth_yandex_link_second(): string
+    {
+        return
+            'https://oauth.yandex.ru/authorize?' . urldecode(http_build_query([
+                'client_id' => YANDEX_CLIENT_ID,
+                'redirect_uri' => YANDEX_REDIRECT_URI_SECOND,
+                'response_type' => 'code'
+            ]));
+    }
+}
+
+if (!function_exists('oauth_google_link_second')) {
+    function oauth_google_link_second(): string
+    {
+        return
+            'https://accounts.google.com/o/oauth2/auth?' . urldecode(http_build_query([
+                'client_id' => GOOGLE_CLIENT_ID,
+                'redirect_uri' => GOOGLE_REDIRECT_URI_SECOND,
+                'response_type' => 'code',
+                'scope' => 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
+            ]));
+    }
+}

@@ -22,6 +22,8 @@ Route::prefix('user')->middleware(['login.session', 'user.blocked'])->group(func
     Route::get('/', [UserController::class, 'index'])->name('user');
     Route::get('verify', [VerifyController::class, 'viewverify'])->name('user.viewverify');
     Route::get('blocked', [BlockUserController::class, 'index'])->name('user.blocked');
+    Route::get('second/change', [UserController::class, 'changeToSecondAccount'])->name('user.change-account');
+    Route::get('second/remove', [UserController::class, 'removeSecondAccount'])->name('user.remove-second-account');
 
     Route::get('sub/{id}', [SubscribeController::class, 'index'])->name('user.sub');
     Route::get('complain/{id}', [ComplainController::class, 'index'])->name('user.complain');

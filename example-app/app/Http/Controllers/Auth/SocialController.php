@@ -10,6 +10,35 @@ class SocialController extends Controller
 {
     public function yandex()
     {
+        $profile = $this->yandexData();
+        return $this->auth($profile);
+    }
+
+    public function second_yandex()
+    {
+        $profile = $this->yandexData();
+        dd('second login');
+
+        return $this->auth($profile);
+    }
+
+    public function google()
+    {
+        $profile = $this->googleData();
+
+        return $this->auth($profile);
+    }
+
+    public function second_google()
+    {
+        $profile = $this->googleData();
+        dd('second login');
+
+        return $this->auth($profile);
+    }
+
+    private function yandexData()
+    {
         if (empty($_GET['code'])) {
             return redirect()->back();
         }
@@ -56,10 +85,10 @@ class SocialController extends Controller
             'service' => "ya"
         ]);
 
-        return $this->auth($profile);
+        return $profile;
     }
 
-    public function google()
+    private function googleData()
     {
         if (empty($_GET['code'])) return redirect()->back();
 
@@ -102,7 +131,7 @@ class SocialController extends Controller
             'service' => 'go'
         ]);
 
-        return $this->auth($profile);
+        return $profile;
     }
 
     private function profile($profileObject)
