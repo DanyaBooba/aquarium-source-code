@@ -53,6 +53,6 @@ class NotificationsController extends Controller
 
         $findUser->save();
 
-        return redirect()->route('settings.notifications');
+        return redirect()->route('settings.notifications')->with('alert.success', __('Сохранено!'));
     }
 }

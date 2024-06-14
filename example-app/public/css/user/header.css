@@ -1,5 +1,6 @@
 main.row-user-content header {
-    margin-top: 1.5rem;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
     display: flex;
     align-items: center;
 }
@@ -9,6 +10,10 @@ main.row-user-content header .header__logo {
     width: 100%;
     height: auto;
     max-width: 200px;
+}
+
+main.row-user-content header .header__logo svg {
+    fill: var(--text-color) !important;
 }
 
 main.row-user-content header .header__meta {

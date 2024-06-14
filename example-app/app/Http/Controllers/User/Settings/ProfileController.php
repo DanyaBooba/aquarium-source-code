@@ -60,6 +60,6 @@ class ProfileController extends Controller
 
         $find->save();
 
-        return redirect()->route('settings.profile');
+        return redirect()->route('settings.profile')->with('alert.success', __('Сохранено!'));
     }
 }

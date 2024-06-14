@@ -6,10 +6,6 @@
     padding: 3rem 2rem;
 }
 
-.row-user-content h1 {
-    margin-top: 1.5rem;
-}
-
 .row-user-bar svg.logo {
     margin-bottom: 3rem;
     fill: var(--svg-icon);
@@ -93,6 +89,12 @@
 @media(hover: none) {
     .row-user-bar ul li a:active {
         transform: scale(0.98) translateX(-1px);
+    }
+}
+
+@media(min-width: 768px) {
+    .row-user-content h1 {
+        margin-top: 1.5rem;
     }
 }
 

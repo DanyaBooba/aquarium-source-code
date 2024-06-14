@@ -4,6 +4,12 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/settings/include.css') }}" />
 @endpush
 
+@section('user.alert')
+@if($alert = session()->pull('alert.success'))
+    <x-user.alert-success :title="$alert" />
+@endif
+@endsection
+
 @section('user.content')
 <div class="container-settings">
     <div class="row g-2">

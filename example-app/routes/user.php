@@ -66,14 +66,13 @@ Route::prefix('user')->middleware(['login.session', 'user.blocked'])->group(func
             Route::post('appearance', [AppearanceController::class, 'loadfile'])->name('settings.appearance.loadfile');
         });
 
-        Route::get('privacy', [SettingsController::class, 'privacy'])->name('settings.privacy');
+        // Route::get('privacy', [SettingsController::class, 'privacy'])->name('settings.privacy');
 
-        Route::get('storage', [SettingsController::class, 'storage'])->name('settings.storage');
+        // Route::get('storage', [SettingsController::class, 'storage'])->name('settings.storage');
 
-        Route::get('devices', [SettingsController::class, 'devices'])->name('settings.devices');
+        // Route::get('devices', [SettingsController::class, 'devices'])->name('settings.devices');
 
         Route::get('themes', [SettingsController::class, 'themes'])->name('settings.themes');
-
         Route::get('language', [SettingsController::class, 'language'])->name('settings.language');
     });
 });

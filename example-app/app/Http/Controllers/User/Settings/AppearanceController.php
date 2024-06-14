@@ -36,7 +36,7 @@ class AppearanceController extends Controller
 
         $user->save();
 
-        return redirect()->route('settings.appearance');
+        return redirect()->route('settings.appearance')->with('alert.success', __('Сохранено!'));
     }
 
     public function loadfile(Request $request)
