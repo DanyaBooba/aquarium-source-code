@@ -14,7 +14,6 @@ class UserController extends Controller
     public function index()
     {
         $user = User::where('email', session('email'))->first();
-
         $profile = get_user($user, true);
 
         $posts = Post::where('idUser', $user->id)->get();
