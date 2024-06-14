@@ -23,13 +23,12 @@ class SocialController extends Controller
     public function google()
     {
         $profile = $this->googleData();
-
         return $this->auth($profile);
     }
 
     public function second_google()
     {
-        $profile = $this->googleData();
+        $profile = $this->googleData(GOOGLE_REDIRECT_URI_SECOND);
         return $this->auth($profile, true);
     }
 
@@ -84,14 +83,14 @@ class SocialController extends Controller
         return $profile;
     }
 
-    private function googleData()
+    private function googleData($redirectUri = GOOGLE_REDIRECT_URI_LOGIN)
     {
         if (empty($_GET['code'])) return redirect()->back();
 
         $params = [
             'client_id'     => GOOGLE_CLIENT_ID,
             'client_secret' => GOOGLE_CLIENT_SECRET,
-            'redirect_uri'  => GOOGLE_REDIRECT_URI_LOGIN,
+            'redirect_uri'  => $redirectUri,
             'grant_type'    => 'authorization_code',
             'code'          => $_GET['code']
         ];
