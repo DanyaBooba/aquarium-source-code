@@ -19,12 +19,15 @@
 }
 
 .user-profile .user-profile-right div {
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+.user-profile .user-profile-right div a {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    margin-right: 2rem;
-    margin-bottom: 1rem;
+    text-decoration: none !important;
 }
 
 .user-profile .user-profile-right div p:first-child {

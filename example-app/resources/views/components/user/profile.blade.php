@@ -19,16 +19,22 @@
         </div>
         <div class="user-profile-right">
             <div title="{{ number_format($profile->subs) }}">
-                <p>{{ profile_text_info($profile->subs) }}</p>
-                <p>{{ use_form_word($profile->subs, __('подписчик'), __('подписчика'), __('подписчиков')) }}</p>
+                <a href="#">
+                    <p>{{ profile_text_info($profile->subs) }}</p>
+                    <p>{{ use_form_word($profile->subs, __('подписчик'), __('подписчика'), __('подписчиков')) }}</p>
+                </a>
             </div>
             <div title="{{ number_format($profile->sub) }}">
-                <p>{{ profile_text_info($profile->sub) }}</p>
-                <p>{{ use_form_word($profile->sub, __('подписка'), __('подписки'), __('подписок')) }}</p>
+                <a href="#">
+                    <p>{{ profile_text_info($profile->sub) }}</p>
+                    <p>{{ use_form_word($profile->sub, __('подписка'), __('подписки'), __('подписок')) }}</p>
+                </a>
             </div>
             <div title="{{ number_format($profile->achivs) }}">
-                <p>{{ profile_text_info($profile->achivs) }}</p>
-                <p>{{ use_form_word($profile->achivs, __('достижение'), __('достижения'), __('достижений')) }}</p>
+                <a href="#">
+                    <p>{{ profile_text_info($profile->achivs) }}</p>
+                    <p>{{ use_form_word($profile->achivs, __('достижение'), __('достижения'), __('достижений')) }}</p>
+                </a>
             </div>
         </div>
     </div>
