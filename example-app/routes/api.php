@@ -37,6 +37,10 @@ Route::prefix('app')->group(function () {
 
 // Fallback
 
+Route::get('/', function () {
+    return "{}";
+});
+
 Route::fallback(function () {
     return "{}";
 });
