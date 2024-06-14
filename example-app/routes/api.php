@@ -31,9 +31,9 @@ Route::prefix('/')->group(function () {
 
 // App
 
-Route::prefix('app')->group(function () {
-    Route::get('', [ApiAppController::class, 'index']);
-});
+// Route::prefix('app')->group(function () {
+
+// });
 
 // Fallback
 

@@ -9,6 +9,6 @@ class ApiAppController extends Controller
 {
     public function index()
     {
-        return "app";
+        return "{}";
     }
 }

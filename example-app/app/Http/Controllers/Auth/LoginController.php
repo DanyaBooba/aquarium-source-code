@@ -52,8 +52,7 @@ class LoginController extends Controller
         $findUser = User::where('email', $validated['email'])->first();
 
         if ($findUser === null) {
-            return redirect()->back()->withInput($validated)->withErrors([
-                'user' => __('Пользователь не найден.')
+            return redirect()->back()->withInput($validated)->withErrors(['user' => __('Неверно заполнены поля.')
             ]);
         }
 
@@ -76,7 +75,7 @@ class LoginController extends Controller
 
         if ($passwordConfirm === false) {
             return redirect()->back()->withInput($validated)->withErrors([
-                'password' => __('Некорректный пароль.')
+                'password' => __('Неверно заполнены поля.')
             ]);
         }
 
@@ -113,7 +112,7 @@ class LoginController extends Controller
         $findUser = User::where('email', $validated['email'])->first();
         if ($findUser === null) {
             return redirect()->back()->withInput($validated)->withErrors([
-                'user' => __('Пользователь не найден.')
+                'user' => __('Неверно заполнены поля.')
             ]);
         }
 
@@ -141,8 +140,7 @@ class LoginController extends Controller
         }
 
         if ($passwordConfirm === false) {
-            return redirect()->back()->withInput($validated)->withErrors([
-                'password' => __('Некорректный пароль.')
+            return redirect()->back()->withInput($validated)->withErrors(['password' => __('Неверно заполнены поля.')
             ]);
         }
 
