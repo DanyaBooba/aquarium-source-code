@@ -1,4 +1,3 @@
-<div class="container">
-    лайк
-    и тд
+<div class="post-show-bottom">
+
 </div>
