@@ -3,5 +3,7 @@
 @section('page.title', __('Лента'))
 
 @section('user.content')
-Feed
+    <div class="posts container">
+        <x-post.show :posts="$posts" />
+    </div>
 @endsection

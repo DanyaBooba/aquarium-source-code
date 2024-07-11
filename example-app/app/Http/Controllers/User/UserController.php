@@ -71,7 +71,11 @@ class UserController extends Controller
 
     public function feed()
     {
-        return view('user.feed');
+        $posts = Post::where('active', 1)->get();
+
+        return view('user.feed', [
+            'posts' => $posts
+        ]);
     }
 
     public function trends()

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\User\User;
+use App\Models\User\Post;
 use Illuminate\Http\Request;
 
 class ShowController extends Controller
@@ -28,6 +29,8 @@ class ShowController extends Controller
         $profile = get_user($user);
         $userSession = User::where('email', session('email'))->first();
 
+        $posts = Post::where('active', 1)->where('idUser', $profile->id)->get();
+
         if ($userSession !== null) {
             if ($userSession->id === $profile->id) $itsme = true;
             $issub = in_array($userSession->id, (array) json_decode($profile->subsJson));
@@ -41,9 +44,10 @@ class ShowController extends Controller
         }
 
         return view('user.show', [
-            "profile" => $profile,
-            "itsme" => $itsme,
-            "issub" => $issub
+            'profile' => $profile,
+            'itsme' => $itsme,
+            'issub' => $issub,
+            'posts' => $posts
         ]);
     }
 }
