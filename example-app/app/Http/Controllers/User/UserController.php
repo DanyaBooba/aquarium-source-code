@@ -73,6 +73,13 @@ class UserController extends Controller
     {
         $posts = Post::where('active', 1)->get();
 
+        foreach($posts as $post) {
+            $user = User::where('id', $post->idUser)->first();
+            $post->userAvatar = $user->avatar;
+            $post->userAvatarDefault = $user->avatarDefault;
+            $post->userName = profile_display_name($user->firstName, $user->lastName);
+        }
+
         return view('user.feed', [
             'posts' => $posts
         ]);

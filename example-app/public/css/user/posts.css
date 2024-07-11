@@ -7,6 +7,37 @@
     padding-bottom: 1.4rem;
 }
 
+.posts .row a.card-overflow {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    padding-top: .3rem;
+    padding-left: .3rem;
+    height: auto !important;
+    background: transparent !important;
+    border-radius: 0px !important;
+    text-decoration-color: var(--text-default) !important;
+    transition: .3s !important;
+}
+
+.posts .row a.card-overflow .card-overflow__profile {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    margin-right: auto;
+}
+
+.posts .row a.card-overflow .card-overflow__profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transform: scale(1.0) !important;
+}
+
 .posts .row .col-img a {
     display: flex;
     align-items: center;
@@ -54,9 +85,26 @@
     padding-bottom: 1.4rem;
 }
 
+.posts .row .col-text a.card-overflow {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    padding-top: .3rem;
+    padding-left: .3rem;
+    height: auto !important;
+    background: transparent !important;
+    border-radius: 0px !important;
+    transition: .3s !important;
+}
+
 .posts .row .col-text a {
     height: 100%;
-    background-color: transparent !important;
+    background-color: var(--post-bg) !important;
+    border-color: var(--post-border) !important;
     border-radius: 12px;
     padding: 1rem;
     text-decoration: none !important;
@@ -94,6 +142,16 @@
         transform: scale(1.05);
         transition: .7s;
     }
+
+    .posts .row .col-text:hover a {
+        border-color: var(--text-color-hover) !important;
+    }
+
+    .posts .row .col-img:hover a.card-overflow {
+        color: var(--text-default) !important;
+        text-decoration: underline;
+        text-decoration-color: var(--text-default) !important;
+    }
 }
 
 @media(hover: none) {
@@ -105,5 +163,15 @@
     .posts .row .col-img:active img {
         transform: scale(1.05);
         transition: .7s;
+    }
+
+    .posts .row .col-text:active a {
+        border-color: var(--text-color-hover) !important;
+    }
+
+    .posts .row .col-img:active a.card-overflow {
+        color: var(--text-default) !important;
+        text-decoration: underline;
+        text-decoration-color: var(--text-default) !important;
     }
 }

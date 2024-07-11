@@ -1,30 +1,33 @@
 :root {
     --accent: #575FCF;
-    --accent-highlight: #363b8b;
+    --accent-highlight: #575FCF;
 
-    --body-color: #f5f7fa;
+    --body-color: #f9f9f9;
+    --body-color-rgb: 249, 249, 249;
     --body-color-alpha: #f9f9f999;
+    --bg-white: #fff;
 
     --text-color: #000;
     --text-invert: #fff;
     --text-code: #000;
     --text-muted: #6c757d;
+    --text-success: #198754;
 
-    --text-color-hover: #091ee3;
-    --text-color-link-underline: #a5bcde;
-    --text-code-border: #091ee3;
+    --text-color-hover: #0984e3;
+    --text-color-link-underline: #a8a8a8;
+    --text-code-border: #0984e3;
 
     --svg-icon: #000;
     --svg-icon-invert: #fff;
     --svg-github: #24292f;
 
-    --header-background: rgba(241, 244, 250, .84);
-    --header-border: #d7e1f1;
+    --header-background: rgba(255, 255, 255, .84);
+    --header-border: #ebeff2;
     --header-link-download-background: #fff;
-    --header-link-download-border: #d7e1f1;
+    --header-link-download-border: #dee2e6;
 
-    --footer-background: #f5f7fa;
-    --footer-border: #d7e1f1;
+    --footer-background: #fff;
+    --footer-border: #dee2e6;
 
     --signin-choose-background-color: #d9d9d9;
     --signin-choose-background-color-hover: #d9d9d9;
@@ -37,7 +40,7 @@
     --list-marker-color: #bababa;
 
     --blog-text-on-dark: #fff;
-    --blog-dark-post: #212529;
+    --blog-dark-post: #575FCF;
     --blog-white-post: #fff;
 
     --pagination-active: #000;
@@ -45,8 +48,13 @@
     --form-input-border: #ced4db;
     --form-input-background: #fff;
 
-    --main-dark-block: #0984e3;
-    --main-dark-block-button: rgb(19, 102, 166, .9);
+    --main-dark-block: #0277ff;
+    --main-dark-block-image: url('/img/main/main_cap@light.jpg');
+    --main-dark-block-button: rgb(2, 95, 204, .9);
+    --main-list-item-1: #c1d8ff;
+    --main-list-item-2: #c9f9b3;
+    --main-list-item-3: #dac1ff;
+    --main-darklight-icon: #f1c40f;
 
     --user-bar: #f1f1f4;
     --user-bar-exit: #dd303f;
@@ -60,7 +68,10 @@
     --user-profile-image-background-image: #fff;
     --user-profile-image-border: #d9d9e0;
     --user-profile-button: #fff;
-    --user-profile-button-hover: #fff;
+    --user-profile-button-accent: #0984e3;
+    --user-profile-button-accent-hover: #3caaff;
+    --user-profile-button-accent-text: #fff;
+    --user-profile-button-hover: #ebebeb;
 
     --user-search-border: #ced4db;
     --user-serach-background: #f9f9f9;
@@ -129,4 +140,15 @@
     --code-screen-projection-atv: #060;
 
     --code-L: #eee;
+
+    --user-alert-background-success: #2ecc71;
+
+    --trix-button-accent: #4e96ff;
+    --table-border: #dde1e8;
+    --table-tr-hover: #dde1e8;
+
+    --mark-background: #faf2cd;
+
+    --post-bg: #fff;
+    --post-border: #d6dae0;
 }
