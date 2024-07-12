@@ -84,6 +84,7 @@
 .posts .row .col-text {
     padding-bottom: 1.4rem;
     transition: .3s !important;
+    min-height: 150px;
 }
 
 .posts .row .col-img a.card-overflow {

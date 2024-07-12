@@ -13,7 +13,9 @@
         </x-user.alert>
     @elseif($active == -1)
         <x-user.alert :close=false>
-            {{ __('Запись не одобрена к публикации') }}
+            <div class="text-danger">
+                {{ __('Запись не одобрена к публикации') }}
+            </div>
         </x-user.alert>
     @endif
 @endsection
