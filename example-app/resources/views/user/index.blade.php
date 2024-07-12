@@ -17,9 +17,8 @@
 @section('user.content')
 
     <x-user.profile :profile="$profile" />
-
+    <x-user.profile-modal />
     <x-user.profile-me-info :profile="$profile" />
-
     <x-user.profile-posts :posts="$posts" />
 
 @endsection
