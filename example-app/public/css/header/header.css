@@ -201,8 +201,11 @@ header.header .header-content button.navbar-toggler {
 }
 
 @media(max-width: 575.98px) {
+    header.header {
+        border-bottom: .1rem solid var(--header-border) !important;
+    }
+
     header.header .container {
-        border-bottom: .1rem solid var(--header-border);
         border: none !important;
         border-radius: 0 !important;
         margin-top: 0 !important;
