@@ -19,22 +19,25 @@
         </div>
         <div class="user-profile-right">
             <div title="{{ number_format($profile->subs) }}">
-                <a href="#">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#modalSubscribers">
                     <p>{{ profile_text_info($profile->subs) }}</p>
                     <p>{{ use_form_word($profile->subs, __('подписчик'), __('подписчика'), __('подписчиков')) }}</p>
-                </a>
+                </button>
             </div>
+            {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{ $modal }}">
+                Открыть
+            </button> --}}
             <div title="{{ number_format($profile->sub) }}">
-                <a href="#">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#modalSubscriptions">
                     <p>{{ profile_text_info($profile->sub) }}</p>
                     <p>{{ use_form_word($profile->sub, __('подписка'), __('подписки'), __('подписок')) }}</p>
-                </a>
+                </button>
             </div>
             <div title="{{ number_format($profile->achivs) }}">
-                <a href="#">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#modalAchievements">
                     <p>{{ profile_text_info($profile->achivs) }}</p>
                     <p>{{ use_form_word($profile->achivs, __('достижение'), __('достижения'), __('достижений')) }}</p>
-                </a>
+                </button>
             </div>
         </div>
     </div>

@@ -1,13 +1,9 @@
 @props([
     'listData' => [[], [], []],
-    'listNames' => ['modal1', 'modal2', 'modal3'],
+    'listNames' => ['modalSubscribers', 'modalSubscriptions', 'modalAchievements'],
 ])
 
 @foreach ($listNames as $modal)
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{ $modal }}">
-        Открыть
-    </button>
-
     <div class="modal fade" id="{{ $modal }}" tabindex="-1" aria-labelledby="{{ $modal }}Label"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
