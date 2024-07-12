@@ -122,7 +122,7 @@
     "Использование сервисов не требует подтверждения почты. Использование сервисов — самый быстрый вариант регистрации аккаунта, потому что требует нажатия 1 кнопки.": "Using services does not require email confirmation. Using services is the fastest way to register an account because it requires pressing 1 button.",
     "Добавить второй аккаунт": "Add a second account",
     "У пользователей есть возможность добавить второй аккаунт и удобно переключаться между ними в один клик.": "Users have the option to add a second account and conveniently switch between them in one click.",
-    "Выход из аккаунта": "Logging out of the account",
+    "Выход из аккаунта": "Logging out",
     "Выход из аккаунта не удаляет сам аккаунт или данные с аккаунта, выход из аккаунта освобождает запись об авторизации в аккаунт. После выхода из аккаунта потребуется заново авторизоваться в него. Выход из аккаунта на одном устройстве не приводит к выходу из аккаунта на другом.": "Logging out of an account does not delete the account or account data; logging out of an account releases the account authorization record. After logging out of an account, you will need to re-authorize to the account. Logging out of an account on one device does not log out of an account on another device.",
     "Изменить аватарку, шапку": "Change avatar, header",
     "Для изменения аватарки или шапки аккаунта следует использовать настройки, вкладку с кастомизацией.": "To change the avatar or account header, you should use the settings, customization tab.",
@@ -522,5 +522,10 @@
     "После отправки формы, потребуется подтвердить почту по ссылке в письме.": "After submitting the form, you will be required to confirm your email via a link in the email.",
     "Участвуйте в жизни социальной сети и получайте за это достижения!": "Participate in the social network and get achievements for it!",
     "Первое достижение вы можете получить за подписку на ": "You can get your first achievement for subscribing to ",
-    "Телеграм-канал": "Telegram channel"
+    "Телеграм-канал": "Telegram channel",
+    "Тестовый аккаунт": "Test account",
+    "У пользователя нет постов.": "The user doesnt have any posts.",
+    "Зарегистрироваться": "Sign up",
+    "Получите ваше первое достижение за подписку на телеграм канал.": "Get your first achievement for subscribing to the telegram channel.",
+    "Подписаться на телеграм": "Subscribe to Telegram"
 }

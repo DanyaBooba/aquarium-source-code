@@ -1,3 +1,3 @@
 <div class="posts container">
-    <x-post.show :posts="$posts" empty="У пользователя нет постов" />
+    <x-post.show :posts="$posts" empty="{{ __('У пользователя нет постов.') }}" />
 </div>
