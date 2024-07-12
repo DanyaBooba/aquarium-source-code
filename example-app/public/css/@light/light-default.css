@@ -74,8 +74,8 @@
     --user-profile-button-hover: #ebebeb;
 
     --user-search-border: #ced4db;
-    --user-serach-background: #f9f9f9;
-    --user-serach-background-hover: #f1f1f4;
+    --user-search-background: #f9f9f9;
+    --user-search-background-hover: #f1f1f4;
     --user-search-button-background: #c9daeb;
 
     --faq-design-button: #123;
@@ -84,7 +84,7 @@
     --user-alert-border: #dee2e6;
 
     --settings-main-background: #fff;
-    --settings-main-border: #dedeeb;
+    --settings-main-border: #efefef;
     --settings-main-svg: #fff;
 
     --settings-background-profile: #718093;
@@ -115,7 +115,7 @@
     --cookie-accept-button-background: #1d2228;
     --cookie-accept-button-hover: #121417;
 
-    --setting-background-hover: #dedeeb;
+    --setting-background-hover: #efefef;
 
     --code-screen-str: #080;
     --code-screen-kwd: #008;

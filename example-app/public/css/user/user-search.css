@@ -53,7 +53,7 @@
     border: .1rem solid var(--user-search-border);
     border-radius: 8px;
 
-    background-color: var(--user-serach-background);
+    background-color: var(--user-search-background);
     text-decoration: none !important;
 
     padding: 1rem;
@@ -63,7 +63,7 @@
 
 .search-users a.search-users-content:is(:focus, :focus-visible, :focus-within) {
     color: var(--text-color) !important;
-    background-color: var(--user-serach-background-hover);
+    background-color: var(--user-search-background-hover);
 }
 
 .search-users .search-users-content img {
@@ -124,7 +124,7 @@
 @media(hover: hover) {
     .search-users a.search-users-content:hover {
         color: var(--text-color) !important;
-        background-color: var(--user-serach-background-hover);
+        background-color: var(--user-search-background-hover);
     }
 
     .search-users .search-users-content button:hover {
@@ -140,7 +140,7 @@
 @media(hover: none) {
     .search-users a.search-users-content:active {
         color: var(--text-color) !important;
-        background-color: var(--user-serach-background-hover);
+        background-color: var(--user-search-background-hover);
     }
 
     .search-users .search-users-content button:active {
