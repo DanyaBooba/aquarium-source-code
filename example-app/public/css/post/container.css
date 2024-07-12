@@ -1,0 +1,12 @@
+/* @media(min-width: 768px) {
+    .container-post {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 90vh;
+    }
+
+    .container-post .container-post__main {
+        flex-grow: 1;
+    }
+} */

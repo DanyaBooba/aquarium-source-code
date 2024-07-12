@@ -4,6 +4,9 @@
 
 @section('user.content')
     <div class="posts container">
+        <h1>
+            {{ __('Записи пользователей') }}
+        </h1>
         <x-post.show :posts="$posts" :showUser="true" />
     </div>
 @endsection

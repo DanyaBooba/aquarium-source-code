@@ -19,13 +19,15 @@
 @endsection
 
 @section('settings.content')
+    <div class="container-post">
+        <div class="container-post__main">
+            <x-post.show.header :userId="$user->id" :avatar="$user->avatar" :avatarDefault="$user->avatarDefault" :name="profile_display_name($user->firstName, $user->lastName)" />
 
-    <x-post.show.header :userId="$user->id" :avatar="$user->avatar" :avatarDefault="$user->avatarDefault" :name="profile_display_name($user->firstName, $user->lastName)" />
-
-    <div>
-        {!! $post->message !!}
+            <div>
+                {!! $post->message !!}
+            </div>
+        </div>
+        <x-post.show.bottom />
+        <x-post.show.comments :comments="$comments" />
     </div>
-
-    <x-post.show.bottom />
-
 @endsection

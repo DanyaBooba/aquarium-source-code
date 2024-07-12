@@ -26,6 +26,7 @@ class PostsViewController extends Controller
     {
         $findUserSession = User::where('email', session('email'))->first();
         $post = Post::where('idPost', $idPost)->where('idUser', $user->id)->firstOrFail();
+        $comments = [];
 
         if ($post->active == false && $findUserSession == null) {
             return view('errors.418');
@@ -39,7 +40,8 @@ class PostsViewController extends Controller
             'active' => $post->active,
             'user' => $user,
             'post' => $post,
-            'itsmypost' => $findUserSession->id != $post->idUser
+            'itsmypost' => $findUserSession->id != $post->idUser,
+            'comments' => $comments,
         ]);
     }
 }
