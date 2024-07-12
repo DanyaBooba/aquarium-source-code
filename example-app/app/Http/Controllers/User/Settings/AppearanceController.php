@@ -23,7 +23,7 @@ class AppearanceController extends Controller
     {
         $validated = $request->validate([
             'bg' => ['required', 'integer', 'min:1', 'max:11'],
-            'icon' => ['required', 'integer', 'min: 0', 'max: 7'],
+            'icon' => ['required', 'string', 'min:4', 'max:12'],
         ]);
 
         $user = User::where('email', '=', session('email'))->first();
@@ -31,7 +31,7 @@ class AppearanceController extends Controller
         $user->avatarDefault = $validated['icon'] != 0;
         $user->capDefault = $validated['bg'] != 0;
 
-        if ($validated['icon'] != 0) $user->avatar = 'MAN' . $validated['icon'];
+        if ($validated['icon'] != 0) $user->avatar = $validated['icon'];
         if ($validated['bg'] != 0) $user->cap = 'BG' . $validated['bg'];
 
         $user->save();

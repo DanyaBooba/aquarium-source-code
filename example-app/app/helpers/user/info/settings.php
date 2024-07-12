@@ -1,26 +1,26 @@
 <?php
 
 if (!function_exists('user_settings_active_image_avatar')) {
-    function user_settings_active_image_avatar($number, $current): string
+    function user_settings_active_image_avatar($currentImage, $current): string
     {
-        return user_settings_active_image(true, $number, $current);
+        return user_settings_active_image(true, $currentImage, $current);
     }
 }
 
 if (!function_exists('user_settings_active_image_cap')) {
-    function user_settings_active_image_cap($number, $current): string
+    function user_settings_active_image_cap($currentImage, $current): string
     {
-        return user_settings_active_image(false, $number, $current);
+        return user_settings_active_image(false, $currentImage, $current);
     }
 }
 
 if (!function_exists('user_settings_active_image')) {
-    function user_settings_active_image(bool $isavatar, int $number, string $current): string
+    function user_settings_active_image(bool $isavatar, string $currentImage, string $current): string
     {
         if ($isavatar) {
-            return $number == substr($current, 3) ? "checked" : "";
+            return $currentImage == $current ? "checked" : "";
         } else {
-            return $number == substr($current, 2) ? "checked" : "";
+            return $currentImage == substr($current, 2) ? "checked" : "";
         }
     }
 }

@@ -63,7 +63,7 @@ Route::prefix('user')->middleware(['login.session', 'user.blocked'])->group(func
 
             Route::get('appearance', [AppearanceController::class, 'index'])->name('settings.appearance');
             Route::post('appearance', [AppearanceController::class, 'store'])->name('settings.appearance.store');
-            Route::post('appearance', [AppearanceController::class, 'loadfile'])->name('settings.appearance.loadfile');
+            // Route::post('appearance', [AppearanceController::class, 'loadfile'])->name('settings.appearance.loadfile');
         });
 
         Route::get('themes', [SettingsController::class, 'themes'])->name('settings.themes');

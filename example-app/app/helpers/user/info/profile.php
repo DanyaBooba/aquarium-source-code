@@ -26,7 +26,7 @@ if (!function_exists('profile_display_name')) {
     function profile_display_name($firstName = "", $lastName = ""): string
     {
         if (empty($firstName) && empty($lastName)) {
-            return "<безымянный>";
+            return __('<безымянный>');
         } else {
             return $firstName . " " . $lastName;
         }
