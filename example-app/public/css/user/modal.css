@@ -1,0 +1,37 @@
+.user-modal .modal-content {
+    background-color: var(--modal-background);
+    border-radius: 8px;
+}
+
+.user-modal .modal-content .modal-body {
+    padding: 1.25rem 1rem;
+}
+
+.user-modal .modal-content .modal-body ul {
+    margin: 0;
+    padding: 0;
+    list-style: none !important;
+}
+
+/* .user-modal .modal-content .modal-body ul li {
+    
+} */
+
+.user-modal .modal-content .modal-body ul li a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+    text-decoration: none;
+}
+
+.user-modal .modal-content .modal-body ul li a img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.user-modal .modal-content .modal-body ul li a span {
+    font-family: ResistSans;
+    font-size: 1.25rem;
+}

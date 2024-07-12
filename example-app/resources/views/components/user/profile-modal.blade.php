@@ -4,12 +4,29 @@
 ])
 
 @foreach ($listNames as $modal)
-    <div class="modal fade" id="{{ $modal }}" tabindex="-1" aria-labelledby="{{ $modal }}Label"
+    <div class="modal user-modal fade" id="{{ $modal }}" tabindex="-1" aria-labelledby="{{ $modal }}Label"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    {{ $modal }}
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="{{ asset('img/user/logo/MAN1.png') }}" alt="">
+                                <span>
+                                    Даниил Дыбка
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="{{ asset('img/user/logo/MAN1.png') }}" alt="">
+                                <span>
+                                    Даниил Дыбка
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

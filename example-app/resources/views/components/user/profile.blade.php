@@ -24,9 +24,6 @@
                     <p>{{ use_form_word($profile->subs, __('подписчик'), __('подписчика'), __('подписчиков')) }}</p>
                 </button>
             </div>
-            {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{ $modal }}">
-                Открыть
-            </button> --}}
             <div title="{{ number_format($profile->sub) }}">
                 <button type="button" data-bs-toggle="modal" data-bs-target="#modalSubscriptions">
                     <p>{{ profile_text_info($profile->sub) }}</p>
