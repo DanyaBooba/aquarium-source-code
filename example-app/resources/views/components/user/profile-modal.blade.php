@@ -9,7 +9,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <ul>
+                    <ul class="user-modal-list-people">
                         <li>
                             <a href="">
                                 <img src="{{ asset('img/user/logo/MAN1.png') }}" alt="">

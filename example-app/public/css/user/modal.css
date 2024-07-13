@@ -1,23 +1,23 @@
 .user-modal .modal-content {
     background-color: var(--modal-background);
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .user-modal .modal-content .modal-body {
     padding: 1.25rem 1rem;
 }
 
-.user-modal .modal-content .modal-body ul {
+.user-modal .modal-content .modal-body ul.user-modal-list-people {
     margin: 0;
     padding: 0;
     list-style: none !important;
 }
 
-/* .user-modal .modal-content .modal-body ul li {
-    
-} */
+.user-modal .modal-content .modal-body ul.user-modal-list-people li {
+    padding: 0;
+}
 
-.user-modal .modal-content .modal-body ul li a {
+.user-modal .modal-content .modal-body ul.user-modal-list-people li a {
     display: flex;
     align-items: center;
     gap: .5rem;
@@ -25,13 +25,27 @@
     text-decoration: none;
 }
 
-.user-modal .modal-content .modal-body ul li a img {
-    width: 64px;
-    height: 64px;
+.user-modal .modal-content .modal-body ul.user-modal-list-people li a img {
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
 }
 
-.user-modal .modal-content .modal-body ul li a span {
+.user-modal .modal-content .modal-body ul.user-modal-list-people li a span {
     font-family: ResistSans;
     font-size: 1.25rem;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    width: 100% !important;
+    padding-bottom: .9rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--settings-main-border);
+}
+
+.user-modal .modal-content .modal-body ul.user-modal-list-people li:last-of-type a span {
+    border-bottom: none !important;
 }
