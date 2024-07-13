@@ -131,7 +131,8 @@
             </p>
             <div class="d-inline-flex gap-2">
                 <button onClick="buttonOpenURL('https://aquariumsocial.t.me')"
-                    class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+                    class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button"
+                    style="padding-left: 40px !important">
                     {{ __('Открыть') }}
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="ms-1"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -198,11 +199,11 @@
                             <span class="me-2 px-2 pt-1"
                                 style="border-radius: 4px; background-color: var(--main-list-item-1)">1.</span>
                             <span>
-                                {{ __('Создать аккаунт') }}
+                                {{ __('Создайте аккаунт') }}
                             </span>
                         </h3>
                         <p class="text-muted">
-                            {!! __('Быстрая авторизация через сервисы, <nobr>либо удобный</nobr> вход через e-mail и пароль.') !!}
+                            {!! __('Быстрая авторизация через сервисы, <nobr>и удобный</nobr> вход через почту и пароль.') !!}
                         </p>
                     </div>
                 </div>
@@ -212,11 +213,11 @@
                             <span class="me-2 px-2 pt-1"
                                 style="border-radius: 4px; background-color: var(--main-list-item-2)">2.</span>
                             <span>
-                                {{ __('Настроить профиль') }}
+                                {{ __('Настройте профиль') }}
                             </span>
                         </h3>
                         <p class="text-muted">
-                            {{ __('Выбери псевдноним, никнейм, фото профиля, шапку. Меняй профиль по своему желанию.') }}
+                            {{ __('Выбери свой имя, описание и фото профиля. Меняй профиль по своему желанию.') }}
                         </p>
                     </div>
                 </div>
@@ -226,11 +227,11 @@
                             <span class="me-2 px-2 pt-1"
                                 style="border-radius: 4px; background-color: var(--main-list-item-3)">3.</span>
                             <span>
-                                {{ __('Можно общаться!') }}
+                                {{ __('Публикации!') }}
                             </span>
                         </h3>
                         <p class="text-muted">
-                            {{ __('Смотрите профили других людей, выбирай их в подписку, получайте достижения в профиль и следите за обновлениями.') }}
+                            {{ __('Смотри профили других людей, подписывайся на них, смотри актуальные публикации и получай достижения за активность.') }}
                         </p>
                     </div>
                 </div>
@@ -255,7 +256,8 @@
             </p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <button onClick="buttonOpenURL('{{ route('main.accessibility') }}')"
-                    class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+                    class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button"
+                    style="padding-left: 40px !important">
                     {{ __('Как это достигается') }}
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="ms-1"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"

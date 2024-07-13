@@ -39,7 +39,7 @@ footer.footer .container div.footer__social a {
     font-size: .875rem;
 }
 
-footer.footer .container div.footer__social a:not(.footer__social_active) {
+footer.footer .container div.footer__social .footer__language a:not(.footer__social_active) {
     color: var(--text-muted) !important;
 }
 
