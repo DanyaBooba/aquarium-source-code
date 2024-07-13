@@ -31,6 +31,12 @@ class ShowController extends Controller
 
         $posts = Post::where('active', 1)->where('idUser', $profile->id)->get();
 
+        $listData = [
+            [1],
+            [1],
+            [1],
+        ];
+
         if ($userSession !== null) {
             if ($userSession->id === $profile->id) $itsme = true;
             $issub = in_array($userSession->id, (array) json_decode($profile->subsJson));
@@ -47,7 +53,8 @@ class ShowController extends Controller
             'profile' => $profile,
             'itsme' => $itsme,
             'issub' => $issub,
-            'posts' => $posts
+            'posts' => $posts,
+            'listData' => $listData
         ]);
     }
 }

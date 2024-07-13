@@ -16,11 +16,18 @@ class UserController extends Controller
         $user = User::where('email', session('email'))->first();
         $profile = get_user($user, true);
 
+        $listData = [
+            [1],
+            [1],
+            [1],
+        ];
+
         $posts = Post::where('idUser', $user->id)->get();
 
         return view('user.index', [
-            "profile" => $profile,
-            "posts" => $posts
+            'profile' => $profile,
+            'posts' => $posts,
+            'listData' => $listData
         ]);
     }
 
