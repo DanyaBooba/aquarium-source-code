@@ -189,14 +189,14 @@
 
     padding: .5rem 1rem;
     margin-right: .5rem;
-    outline: none !important;
+    /* outline: none !important; */
 
     transition: .15s;
 }
 
-.user-profile .user-profile-buttons button:focus {
+/* .user-profile .user-profile-buttons button:focus {
     outline: none !important;
-}
+} */
 
 .user-profile .user-profile-buttons button:disabled {
     background-color: var(--body-color);

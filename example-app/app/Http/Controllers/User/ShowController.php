@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\User\User;
+use App\Models\User\Achiv;
 use App\Models\User\Post;
 use Illuminate\Http\Request;
 
@@ -31,10 +32,17 @@ class ShowController extends Controller
 
         $posts = Post::where('active', 1)->where('idUser', $profile->id)->get();
 
+        $subs = User::select('id', 'firstName', 'lastName', 'avatar', 'avatarDefault')
+            ->whereIn('id', json_decode($user->subsJson))->get();
+        $sub = User::select('id', 'firstName', 'lastName', 'avatar', 'avatarDefault')
+            ->whereIn('id', json_decode($user->subJson))->get();
+        $achivs = Achiv::select('id', 'name')
+            ->whereIn('id', json_decode($user->achivsJson))->get();
+
         $listData = [
-            [1],
-            [1],
-            [1],
+            $subs,
+            $sub,
+            $achivs
         ];
 
         if ($userSession !== null) {

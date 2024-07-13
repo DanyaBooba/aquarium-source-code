@@ -15,11 +15,18 @@ class UserController extends Controller
     {
         $user = User::where('email', session('email'))->first();
         $profile = get_user($user, true);
-
+    
+        $subs = User::select('id', 'firstName', 'lastName', 'avatar', 'avatarDefault')
+            ->whereIn('id', json_decode($user->subsJson))->get();
+        $sub = User::select('id', 'firstName', 'lastName', 'avatar', 'avatarDefault')
+            ->whereIn('id', json_decode($user->subJson))->get();
+        $achivs = Achiv::select('id', 'name')
+            ->whereIn('id', json_decode($user->achivsJson))->get();
+        
         $listData = [
-            [1],
-            [1],
-            [1],
+            $subs,
+            $sub,
+            $achivs,
         ];
 
         $posts = Post::where('idUser', $user->id)->get();
