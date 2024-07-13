@@ -189,8 +189,13 @@
 
     padding: .5rem 1rem;
     margin-right: .5rem;
+    outline: none !important;
 
     transition: .15s;
+}
+
+.user-profile .user-profile-buttons button:focus {
+    outline: none !important;
 }
 
 .user-profile .user-profile-buttons button:disabled {
@@ -218,6 +223,11 @@
 /* media */
 
 @media(max-width: 767.98px) {
+    .container {
+        padding-left: .6rem !important;
+        padding-right: .6rem !important;
+    }
+    
     .user-profile-content {
         flex-direction: column;
         padding-left: 1rem !important;

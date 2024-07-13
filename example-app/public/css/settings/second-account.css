@@ -10,6 +10,7 @@
 .second-account .second-account-profile {
     display: flex;
     align-items: center;
+    max-width: 83%;
 }
 
 .second-account .second-account-profile img {
@@ -20,6 +21,7 @@
 
 .second-account .second-account-profile a {
     display: flex;
+    align-items: center;
     text-decoration: none !important;
     width: 100% !important;
 }
@@ -37,6 +39,13 @@
 .second-account .second-account-profile .second-account-profile-text .fs-5 {
     font-family: ResistSans;
     margin: 0;
+
+    line-height: 100%;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .second-account .second-account-remove {
