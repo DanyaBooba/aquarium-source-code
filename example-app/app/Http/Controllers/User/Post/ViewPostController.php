@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User\Post;
 
+use App\Http\Controllers\Controller;
 use App\Models\User\Post;
 use App\Models\User\User;
 use Illuminate\Http\Request;
 
-class PostsViewController extends Controller
+class ViewPostController extends Controller
 {
     public function id($id, $idPost)
     {

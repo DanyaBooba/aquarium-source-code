@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\User\Post;
 
 use App\Http\Controllers\Controller;
 use App\Models\User\Post;
 use App\Models\User\User;
 use Illuminate\Http\Request;
 
-class PostsController extends Controller
+class AddPostController extends Controller
 {
     public function index()
     {

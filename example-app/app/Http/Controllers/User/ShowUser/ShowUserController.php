@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\User\ShowUser;
 
 use App\Http\Controllers\Controller;
 use App\Models\User\User;
@@ -8,7 +8,7 @@ use App\Models\User\Achiv;
 use App\Models\User\Post;
 use Illuminate\Http\Request;
 
-class ShowController extends Controller
+class ShowUserController extends Controller
 {
     public function nickname($nickname)
     {

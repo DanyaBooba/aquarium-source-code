@@ -1,19 +1,19 @@
 <?php
 
-use App\Http\Controllers\PostsViewController;
+use App\Http\Controllers\User\Post\ViewPostController;
 use App\Http\Controllers\User\BlockUserController;
 use App\Http\Controllers\User\ComplainController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\User\ExitController;
 use App\Http\Controllers\User\DeleteController;
-use App\Http\Controllers\User\PostsController;
+use App\Http\Controllers\User\Post\AddPostController;
 use App\Http\Controllers\User\Settings\AppearanceController;
 use App\Http\Controllers\User\Settings\NotificationsController;
 use App\Http\Controllers\User\Settings\ProfileController;
 use App\Http\Controllers\User\Settings\ProfileEmailController;
 use App\Http\Controllers\User\Settings\ProfilePasswordController;
 use App\Http\Controllers\User\SettingsController;
-use App\Http\Controllers\User\ShowController;
+use App\Http\Controllers\User\ShowUser\ShowUserController;
 use App\Http\Controllers\User\SubscribeController;
 use App\Http\Controllers\User\VerifyController;
 use Illuminate\Support\Facades\Route;
@@ -36,8 +36,8 @@ Route::prefix('user')->middleware(['login.session', 'user.blocked'])->group(func
 
     Route::get('exit', [ExitController::class, 'index'])->name('user.exit');
 
-    Route::get('addpost', [PostsController::class, 'index'])->name('user.addpost');
-    Route::post('addpost', [PostsController::class, 'post'])->name('user.addpost.post');
+    Route::get('addpost', [AddPostController::class, 'index'])->name('user.addpost');
+    Route::post('addpost', [AddPostController::class, 'post'])->name('user.addpost.post');
 
     Route::get('delete', [DeleteController::class, 'index'])->name('user.delete');
     Route::post('delete', [DeleteController::class, 'post'])->name('user.delete.post');
@@ -73,8 +73,8 @@ Route::prefix('user')->middleware(['login.session', 'user.blocked'])->group(func
 
 Route::get('user/exit/exactly', [ExitController::class, 'exit'])->name('user.exit.exactly');
 
-Route::get('user/{nickname}', [ShowController::class, 'nickname'])->name('user.show.nickname');
-Route::get('user/id/{id}', [ShowController::class, 'id'])->name('user.show.id');
+Route::get('user/{nickname}', [ShowUserController::class, 'nickname'])->name('user.show.nickname');
+Route::get('user/id/{id}', [ShowUserController::class, 'id'])->name('user.show.id');
 
-Route::get('user/{nickname}/{idPost}', [PostsViewController::class, 'nickname'])->name('user.post.show.nickname');
-Route::get('user/id/{id}/{idPost}', [PostsViewController::class, 'id'])->name('user.post.show.id');
+Route::get('user/{nickname}/{idPost}', [ViewPostController::class, 'nickname'])->name('user.post.show.nickname');
+Route::get('user/id/{id}/{idPost}', [ViewPostController::class, 'id'])->name('user.post.show.id');
