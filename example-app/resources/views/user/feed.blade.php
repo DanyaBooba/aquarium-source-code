@@ -7,6 +7,9 @@
         <h1>
             {{ __('Записи пользователей') }}
         </h1>
+        <div class="">
+
+        </div>
         <x-post.show :posts="$posts" :showUser="true" />
     </div>
 @endsection
