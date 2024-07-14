@@ -20,7 +20,7 @@
             @foreach ($achievements as $item)
                 <div class="col">
                     <span>
-                        <img src="{{ asset('/img/user/achivs/achiv-' . $item->id . '.jpg') }}" alt="{{ $item->name }}">
+                        <img src="{{ asset('/img/user/achivs/achiv-' . $item->id . '.jpg') }}" alt="{{ __($item->name) }}">
                     </span>
                     <x-circle-text-simple>
                         {{ __($item->name) }}

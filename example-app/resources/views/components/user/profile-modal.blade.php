@@ -24,7 +24,19 @@
                                 @endforeach
                             </ul>
                         @else
-                            @json($data)
+                            <div class="user-modal-list-achivs row row-cols-md-2 gy-3">
+                                @foreach ($listData[$loop->index] as $data)
+                                    <div class="user-modal-list-achivs__item">
+                                        <span>
+                                            <img src="{{ asset('/img/user/achivs/achiv-' . $data->id . '.jpg') }}"
+                                                alt="{{ __($data->name) }}">
+                                        </span>
+                                        <x-circle-text-simple>
+                                            {{ __($data->name) }}
+                                        </x-circle-text-simple>
+                                    </div>
+                                @endforeach
+                            </div>
                         @endif
                     </div>
                 </div>

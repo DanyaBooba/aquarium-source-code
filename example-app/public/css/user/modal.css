@@ -51,3 +51,29 @@
 .user-modal .modal-content .modal-body ul.user-modal-list-people li:last-child a div {
     border-bottom: none !important;
 }
+
+/* .user-modal .modal-content .modal-body ul.user-modal-list-achivs {
+    display: flex;
+} */
+
+.user-modal .modal-content .modal-body .user-modal-list-achivs .user-modal-list-achivs__item {
+    display: flex;
+    justify-content: center;
+}
+
+.user-modal .modal-content .modal-body .user-modal-list-achivs .user-modal-list-achivs__item span {
+    padding: 1.5rem;
+}
+
+.user-modal .modal-content .modal-body .user-modal-list-achivs .user-modal-list-achivs__item img {
+    border-radius: 50%;
+    max-width: 180px;
+    max-height: 180px;
+    box-shadow: 0 .5rem 1rem var(--achiv-shadow) !important;
+}
+
+.user-modal .modal-content .modal-body .user-modal-list-achivs .user-modal-list-achivs__item section {
+    position: absolute;
+    width: 237px;
+    margin-top: -5px;
+}
