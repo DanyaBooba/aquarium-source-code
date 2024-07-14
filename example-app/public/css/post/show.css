@@ -4,14 +4,18 @@
     margin-bottom: 1.5rem;
 }
 
+.post-show-back a.post-show-back__edit {
+    font-size: .875rem;
+}
+
 .post-show-back a.post-show-back__profile {
     margin-right: auto;
+    text-decoration: none;
 }
 
 .post-show-back a {
     display: flex;
     align-items: center;
-    text-decoration: none;
     gap: .5rem;
 }
 

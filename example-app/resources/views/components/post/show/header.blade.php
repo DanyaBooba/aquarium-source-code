@@ -15,4 +15,7 @@
         <x-user.profile-image :avatar="$avatar" :avatar-default="$avatarDefault" />
         <div>{{ $name }}</div>
     </a>
+    <a href="#" class="post-show-back__edit">
+        Редактировать
+    </a>
 </div>
