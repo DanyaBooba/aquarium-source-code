@@ -26,8 +26,8 @@ if (!function_exists('get_user_search')) {
             'desc' => $user->desc,
             'avatar' => $user->avatar,
             'avatarDefault' => $user->avatarDefault,
-            'sub' => random_int(0, 1),
-            'male' => true,
+            'subs' => $user->subs,
+            'sub' => $user->sub
         ];
 
         return $profile;

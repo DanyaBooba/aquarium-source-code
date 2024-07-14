@@ -1,4 +1,4 @@
-const users = document.querySelectorAll("div.container div.search-users div");
+const users = document.querySelectorAll("div.container div.search-users .search-users__profile");
 const searchInput = document.querySelector("input[type='search']");
 let nouser = document.getElementById("search-empty-field");
 
@@ -18,9 +18,9 @@ const selectClearInput = async () => {
 };
 
 function searchCorrectUser(user, search) {
-    let name = user.getAttribute("name");
-    let username = user.getAttribute("username");
-    let desc = user.getAttribute("desc");
+    let name = user.getAttribute("name") ?? '';
+    let username = user.getAttribute("username") ?? '';
+    let desc = user.getAttribute("desc") ?? '';
 
     const checkSearch = search === null ? true : 
         name.toLowerCase().includes(search) ||
