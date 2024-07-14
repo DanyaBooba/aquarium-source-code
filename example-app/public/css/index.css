@@ -1,26 +1,10 @@
-@import "header/header.css";
+@import "module/header/header.css";
+@import "module/footer/footer.css";
+@import "module/body/index.css";
+@import "module/text/index.css";
+@import "module/fonts/index.css";
 
-@import "footer/footer.css";
-
-@import "body/body.css";
-@import "body/img.css";
-@import "body/code.css";
-@import "body/mark.css";
-@import "body/button-top.css";
-@import "body/display-none.css";
-@import "body/cookie-accept.css";
-
-@import "text/text.css";
-
-@import "text/title-anchor.css";
-
-@import "text/links.css";
-
-@import "fonts/index.css";
-
-@import "list/marker.css";
-@import "list/left-bar-anchors.css";
-@import "list/pagination.css";
+@import "module/list/index.css";
 
 @import "form/index.css";
 
