@@ -16,6 +16,14 @@ return new class extends Migration
             $table->timestamps();
 
             $table->boolean('active')->default(false);
+            $table->integer('idMessage');
+            $table->integer('idPost');
+            $table->integer('idUser');
+
+            $table->boolean('reply');
+            $table->integer('idUserReply');
+
+            $table->text('message');
         });
     }
 

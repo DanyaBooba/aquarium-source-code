@@ -26,21 +26,26 @@ class PostsViewController extends Controller
     {
         $findUserSession = User::where('email', session('email'))->first();
         $post = Post::where('idPost', $idPost)->where('idUser', $user->id)->firstOrFail();
+        $itsmypost = false;
         $comments = [];
 
         if ($post->active == false && $findUserSession == null) {
-            return view('errors.418');
+            abort(403);
         }
 
         if ($post->active == false && $findUserSession->id != $post->idUser && $findUserSession->usertype !== 100) {
-            return view('errors.418');
+            abort(403);
+        }
+
+        if($findUserSession) {
+            $itsmypost = $findUserSession->id != $post->idUser;
         }
 
         return view('user.show-post', [
             'active' => $post->active,
             'user' => $user,
             'post' => $post,
-            'itsmypost' => $findUserSession->id != $post->idUser,
+            'itsmypost' => $itsmypost,
             'comments' => $comments,
         ]);
     }

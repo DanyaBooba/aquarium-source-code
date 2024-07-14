@@ -2,4 +2,4 @@
 
 @section('error', '403')
 
-@section('message', __($exception->getMessage() ?: 'Запрещенный'))
+@section('message', __($exception->getMessage() ?: 'Доступ к запрашиваемой странице запрещён'))
