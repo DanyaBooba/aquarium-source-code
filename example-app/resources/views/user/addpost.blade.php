@@ -9,6 +9,7 @@
         <x-form.error-first />
 
         <div class="addpost-container">
+            {{-- <x-addpost.post-import /> --}}
             <form action="{{ route('user.addpost.post') }}" method="post">
                 @csrf
                 <input id="x" type="hidden" name="message">

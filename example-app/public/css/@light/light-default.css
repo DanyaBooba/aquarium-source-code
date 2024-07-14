@@ -1,6 +1,8 @@
 :root {
     --accent: #575FCF;
     --accent-highlight: #575FCF;
+    --accent-light: #989fff;
+    --accent-light-55: #989fff55;
 
     --body-color: #f9f9f9;
     --body-color-rgb: 249, 249, 249;
