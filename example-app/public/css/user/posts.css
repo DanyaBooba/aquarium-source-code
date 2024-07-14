@@ -38,6 +38,14 @@
     transform: scale(1.0) !important;
 }
 
+.posts .row a.card-overflow .card-overflow__profile span {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 300px;
+}
+
 .posts .row .col-img a {
     display: flex;
     align-items: center;
@@ -84,7 +92,7 @@
 .posts .row .col-text {
     padding-bottom: 1.4rem;
     transition: .3s !important;
-    min-height: 150px;
+    min-height: 200px;
 }
 
 .posts .row .col-img a.card-overflow {
