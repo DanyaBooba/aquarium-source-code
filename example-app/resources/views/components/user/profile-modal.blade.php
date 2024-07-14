@@ -24,7 +24,7 @@
                                 @endforeach
                             </ul>
                         @else
-                            achivs
+                            @json($data)
                         @endif
                     </div>
                 </div>
