@@ -1,19 +1,11 @@
-@import "module/header/header.css";
-@import "module/footer/footer.css";
-@import "module/body/index.css";
-@import "module/text/index.css";
-@import "module/fonts/index.css";
-
-@import "module/list/index.css";
-
-@import "form/index.css";
-
-@import "blog/index.css";
-
-@import "modal/modal.css";
-
-@import "table/table.css";
-
-@import "post/show.css";
-@import "post/bottom.css";
-@import "post/container.css";
+@import "_module/header/header.css";
+@import "_module/footer/footer.css";
+@import "_module/body/index.css";
+@import "_module/text/index.css";
+@import "_module/fonts/index.css";
+@import "_module/list/index.css";
+@import "_module/form/index.css";
+@import "_module/blog/index.css";
+@import "_module/modal/modal.css";
+@import "_module/table/table.css";
+@import "_module/post/index.css";
