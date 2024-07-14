@@ -8,7 +8,7 @@
         @if ($showUser)
             <a href="{{ route('user.show.id', $post->idUser) }}" class="card-overflow">
                 <div class="card-overflow__profile">
-                    <x-user.profile-image :avatar="$post->userAvatar" :avatar-default="$post->userAvatarDefault" />
+                    <x-user.profile.image :avatar="$post->userAvatar" :avatar-default="$post->userAvatarDefault" />
                     <span>{{ $post->userName }}</span>
                 </div>
             </a>
@@ -29,7 +29,7 @@
         @if ($showUser)
             <a href="{{ route('user.show.id', $post->idUser) }}" class="card-overflow">
                 <div class="card-overflow__profile">
-                    <x-user.profile-image :avatar="$post->userAvatar" :avatar-default="$post->userAvatarDefault" />
+                    <x-user.profile.image :avatar="$post->userAvatar" :avatar-default="$post->userAvatarDefault" />
                     <span>{{ $post->userName }}</span>
                 </div>
             </a>

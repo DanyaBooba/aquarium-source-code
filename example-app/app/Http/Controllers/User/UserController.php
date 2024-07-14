@@ -17,11 +17,11 @@ class UserController extends Controller
         $profile = get_user($user, true);
     
         $subs = User::select('id', 'firstName', 'lastName', 'avatar', 'avatarDefault')
-            ->whereIn('id', json_decode($user->subsJson))->get();
+            ->whereIn('id', json_decode($user->subsJson ?? "[]"))->get();
         $sub = User::select('id', 'firstName', 'lastName', 'avatar', 'avatarDefault')
-            ->whereIn('id', json_decode($user->subJson))->get();
+            ->whereIn('id', json_decode($user->subJson ?? "[]"))->get();
         $achivs = Achiv::select('id', 'name')
-            ->whereIn('id', json_decode($user->achivsJson))->get();
+            ->whereIn('id', json_decode($user->achivsJson ?? "[]"))->get();
         
         $listData = [
             $subs,

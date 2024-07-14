@@ -10,15 +10,15 @@
 
 @section('user.alert')
     @if ($active == 0)
-        <x-user.alert :close=false>
+        <x-user.alert.alert :close=false>
             {{ __('Запись находится на модерации') }}
-        </x-user.alert>
+        </x-user.alert.alert>
     @elseif($active == -1)
-        <x-user.alert :close=false>
+        <x-user.alert.alert :close=false>
             <div class="text-danger">
                 {{ __('Запись не одобрена к публикации') }}
             </div>
-        </x-user.alert>
+        </x-user.alert.alert>
     @endif
 @endsection
 

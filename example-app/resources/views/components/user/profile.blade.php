@@ -5,12 +5,12 @@
 ])
 
 <div class="user-profile">
-    <x-user.profile-cap-image :cap="$profile->cap" :cap-default="$profile->capDefault" />
+    <x-user.profile.cap-image :cap="$profile->cap" :cap-default="$profile->capDefault" />
     <div class="user-profile-content">
         <div class="user-profile-left">
             <div class="user-profile-image">
-                {{-- <x-user.profile-dot :status="$profile->status" /> --}}
-                <x-user.profile-image :avatar="$profile->avatar" :avatar-default="$profile->avatarDefault" />
+                {{-- <x-user.profile.dot :status="$profile->status" /> --}}
+                <x-user.profile.image :avatar="$profile->avatar" :avatar-default="$profile->avatarDefault" />
             </div>
             <div class="user-profile-text">
                 <p class="user-profile-name" title="{{ $profile->name }}">{{ $profile->name }}</p>

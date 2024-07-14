@@ -12,7 +12,7 @@
             class="lucide lucide-chevron-left">
             <path d="m15 18-6-6 6-6" />
         </svg>
-        <x-user.profile-image :avatar="$avatar" :avatar-default="$avatarDefault" />
+        <x-user.profile.image :avatar="$avatar" :avatar-default="$avatarDefault" />
         <div>{{ $name }}</div>
     </a>
     <a href="#" class="post-show-back__edit">

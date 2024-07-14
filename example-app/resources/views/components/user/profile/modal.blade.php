@@ -15,7 +15,7 @@
                                 @foreach ($listData[$loop->index] as $data)
                                     <li>
                                         <a href="{{ route('user.show.id', $data->id) }}">
-                                            <x-user.profile-image :avatar="$data->avatar" :avatar-default="$data->avatarDefault" />
+                                            <x-user.profile.image :avatar="$data->avatar" :avatar-default="$data->avatarDefault" />
                                             <div>
                                                 <span>{{ profile_display_name($data->firstName, $data->lastName) }}</span>
                                             </div>
@@ -31,9 +31,9 @@
                                             <img src="{{ asset('/img/user/achivs/achiv-' . $data->id . '.jpg') }}"
                                                 alt="{{ __($data->name) }}">
                                         </span>
-                                        <x-circle-text-simple>
+                                        <x-circle-text.circle-text-simple>
                                             {{ __($data->name) }}
-                                        </x-circle-text-simple>
+                                        </x-circle-text.circle-text-simple>
                                     </div>
                                 @endforeach
                             </div>

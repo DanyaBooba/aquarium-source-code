@@ -22,9 +22,9 @@
                     <span>
                         <img src="{{ asset('/img/user/achivs/achiv-' . $item->id . '.jpg') }}" alt="{{ __($item->name) }}">
                     </span>
-                    <x-circle-text-simple>
+                    <x-circle-text.circle-text-simple>
                         {{ __($item->name) }}
-                    </x-circle-text-simple>
+                    </x-circle-text.circle-text-simple>
                 </div>
             @endforeach
         </div>
