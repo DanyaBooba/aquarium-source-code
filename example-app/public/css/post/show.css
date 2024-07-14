@@ -28,6 +28,11 @@
 
 .post-show-back a div {
     font-family: ResistSans;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 300px;
 }
 
 @media (min-width: 768px) {
