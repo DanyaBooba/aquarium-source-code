@@ -191,33 +191,45 @@ class SocialController extends Controller
 
     private function vkData()
     {
-        if (!empty($_GET['code'])) {
-            $params = array(
-                'client_id'     => VK_APP_ID,
-                'client_secret' => VK_CLIENT_SECRET,
-                'redirect_uri'  => VK_REDIRECT_URI_LOGIN,
-                'code'          => $_GET['code']
-            );
-            
-            $data = file_get_contents('https://oauth.vk.com/access_token?' . urldecode(http_build_query($params)));
-            $data = json_decode($data, true);
-            if (!empty($data['access_token'])) {
-                $email = $data['email'];
-        
-                $params = array(
-                    'v'            => '5.81',
-                    'uids'         => $data['user_id'],
-                    'access_token' => $data['access_token'],
-                    'fields'       => 'photo_big',
-                );
-        
-                $info = file_get_contents('https://api.vk.com/method/users.get?' . urldecode(http_build_query($params)));
-                $info = json_decode($info, true);	
+        if(empty($_GET['code'])) return redirect()->back();
 
-                dd($email, $info);
-                // email, photo_big, first_name, last_name
-            }
-        }
+        $params = array(
+            'client_id'     => VK_APP_ID,
+            'client_secret' => VK_CLIENT_SECRET,
+            'redirect_uri'  => VK_REDIRECT_URI_LOGIN,
+            'code'          => $_GET['code']
+        );
+        
+        $data = file_get_contents('https://oauth.vk.com/access_token?' . urldecode(http_build_query($params)));
+        $data = json_decode($data, true);
+
+        if(empty($data['access_token'])) return redirect()->back();
+
+        $email = $data['email'];
+
+        $params = array(
+            'v'            => '5.81',
+            'uids'         => $data['user_id'],
+            'access_token' => $data['access_token'],
+            'fields'       => 'photo_big',
+        );
+
+        $info = file_get_contents('https://api.vk.com/method/users.get?' . urldecode(http_build_query($params)));
+
+        $info = (object) (json_decode($info, true)['response'][0]);
+
+        dd($email, $info);
+
+        $profile = $this->profile((object)[
+            'email' => $email ?? '',
+            'nickname' => '',
+            'firstName' => $info->first_name ?? '',
+            'lastName' => $info->last_name ?? '',
+            'avatar' => $info->photo_big ?? '',
+            'service' => 'vk'
+        ]);
+
+        return $profile;
     }
 
     private function profile($profileObject)
