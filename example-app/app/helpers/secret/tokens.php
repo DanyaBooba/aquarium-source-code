@@ -9,3 +9,15 @@ define('GOOGLE_CLIENT_ID', '386822047573-bg1dqjul0g080t4h2f7atcelregqjepi.apps.g
 define('GOOGLE_CLIENT_SECRET', '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');
 define('GOOGLE_REDIRECT_URI_LOGIN', env('APP_URL') . '/signin/google');
 define('GOOGLE_REDIRECT_URI_SECOND', env('APP_URL') . '/second/signin/google');
+
+define('GITHUB_CLIENT_ID_FIRST', 'Ov23liz5ufPkrZ3cb0kA');
+define('GITHUB_CLIENT_SECRET_FIRST', '7545d150e79fbdb0f4f8b06d519a1ee41f6096dc');
+define('GITHUB_CALLBACK_URL_FIRST', env('APP_URL') . '/signin/github');
+define('GITHUB_CLIENT_ID_SECOND', 'Ov23lis7smO6TjaTsRYv');
+define('GITHUB_CLIENT_SECRET_SECOND', 'fb3ced0d95240b6f9bbc761ca2fadb136829244d');
+
+define('VK_APP_ID', '51805978');
+define('VK_CLIENT_SECRET', 'xUSY9yTOpu6DnuBVA2PV');
+define('VK_REDIRECT_URI_LOGIN', 'https://aquariumsocial.ru/signin/vk');
+// define('VK_REDIRECT_URI_LOGIN', env('APP_URL') . '/signin/vk');
+define('VK_STATE', '/user');
