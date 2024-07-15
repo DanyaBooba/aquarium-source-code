@@ -7,6 +7,8 @@ if (!function_exists('exit_account')) {
     {
         session()->forget('id');
         session()->forget('email');
+        session()->forget('prev_id');
+        session()->forget('prev_email');
     }
 }
 

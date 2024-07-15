@@ -10,7 +10,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
-                        @if (!empty($listData[$loop->index][0]->firstName))
+                        @if ($loop->iteration != 3)
                             <ul class="user-modal-list-people">
                                 @foreach ($listData[$loop->index] as $data)
                                     <li>

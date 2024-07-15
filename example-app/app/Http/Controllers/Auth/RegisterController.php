@@ -13,10 +13,14 @@ class RegisterController extends Controller
     {
         $yandexUri = oauth_yandex_link();
         $googleUri = oauth_google_link();
+        $githubUri = oauth_github_link();
+        $vkUri = oauth_vk_link();
 
         return view('sign.up.index', [
             'yandexUri' => $yandexUri,
             'googleUri' => $googleUri,
+            'githubUri' => $githubUri,
+            'vkUri' => $vkUri,
         ]);
     }
 

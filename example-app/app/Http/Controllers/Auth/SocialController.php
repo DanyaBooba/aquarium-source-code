@@ -38,17 +38,16 @@ class SocialController extends Controller
         return $this->auth($profile);
     }
 
-    public function vk() 
+    public function vk()
     {
         $profile = $this->vkData();
-
-        return "";
+        return $this->auth($profile);
     }
 
     private function yandexData()
     {
         if (empty($_GET['code'])) {
-            return redirect()->back();
+            return "error";
         }
 
         $params = array(
@@ -70,7 +69,7 @@ class SocialController extends Controller
         $data = json_decode($data, true);
 
         if (empty($data['access_token'])) {
-            return redirect()->back();
+            return "error";
         }
 
         $ch = curl_init('https://login.yandex.ru/info');
@@ -98,7 +97,7 @@ class SocialController extends Controller
 
     private function googleData($redirectUri = GOOGLE_REDIRECT_URI_LOGIN)
     {
-        if (empty($_GET['code'])) return redirect()->back();
+        if (empty($_GET['code'])) return "error";
 
         $params = [
             'client_id'     => GOOGLE_CLIENT_ID,
@@ -118,7 +117,7 @@ class SocialController extends Controller
         curl_close($ch);
 
         $data = json_decode($data, true);
-        if (empty($data['access_token'])) return redirect()->back();
+        if (empty($data['access_token'])) return "error";
 
         $params = [
             'access_token' => $data['access_token'],
@@ -144,7 +143,7 @@ class SocialController extends Controller
 
     private function githubData() 
     {
-        if (empty($_GET['code'])) return redirect()->back();
+        if (empty($_GET['code'])) return "error";
 
         $params = array(
             'client_id'     => GITHUB_CLIENT_ID_FIRST,
@@ -163,7 +162,7 @@ class SocialController extends Controller
         curl_close($ch);	
         parse_str($data, $data);
     
-        if (empty($data['access_token'])) return redirect()->back();
+        if (empty($data['access_token'])) return "error";
 
         $ch = curl_init('https://api.github.com/user');
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
@@ -175,7 +174,7 @@ class SocialController extends Controller
         curl_close($ch);
         $info = (object) json_decode($info, true);
 
-        if (empty($info->id)) return redirect()->back();
+        if (empty($info->id)) return "error";
 
         $profile = $this->profile((object)[
             'email' => $info->email ?? '',
@@ -191,7 +190,7 @@ class SocialController extends Controller
 
     private function vkData()
     {
-        if(empty($_GET['code'])) return redirect()->back();
+        if(empty($_GET['code'])) return "error";
 
         $params = array(
             'client_id'     => VK_APP_ID,
@@ -203,7 +202,7 @@ class SocialController extends Controller
         $data = file_get_contents('https://oauth.vk.com/access_token?' . urldecode(http_build_query($params)));
         $data = json_decode($data, true);
 
-        if(empty($data['access_token'])) return redirect()->back();
+        if(empty($data['access_token'])) return "error";
 
         $email = $data['email'];
 
@@ -217,8 +216,6 @@ class SocialController extends Controller
         $info = file_get_contents('https://api.vk.com/method/users.get?' . urldecode(http_build_query($params)));
 
         $info = (object) (json_decode($info, true)['response'][0]);
-
-        dd($email, $info);
 
         $profile = $this->profile((object)[
             'email' => $email ?? '',
@@ -253,6 +250,8 @@ class SocialController extends Controller
 
     private function auth($profile, $loginAtSecondAccount = false)
     {
+        if($profile === 'error') return redirect()->route('auth.signin');
+
         $findUser = User::where('email', $profile->email)->first();
 
         if ($findUser) {
@@ -280,6 +279,7 @@ class SocialController extends Controller
             }
 
             $settingsData = (object) json_decode($findUser->settings_notifications ?? '{"dataChange": true, "authorization": true, "passwordChange": false}');
+
             if ($settingsData->authorization) {
                 send_mail_login($findUser->email);
             }
@@ -336,9 +336,16 @@ class SocialController extends Controller
             case 'go':
                 $serviceName = 'Google';
                 break;
+            case 'gi':
+                $serviceName = 'GitHub';
+                break;
+            case 'vk':
+                $serviceName = 'Вконтакте';
+                break;
         }
 
         $code = set_new_verify();
+
         send_mail_verify($profile->email, $code);
         send_mail_register($profile->email, $serviceName, $password);
 

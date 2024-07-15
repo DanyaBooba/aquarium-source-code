@@ -6,9 +6,9 @@ if (!function_exists('send_mail')) {
         $subject .= ' | Аквариум';
         $headers = 'Content-type: text/html';
 
-        mail($email, $subject, $message, $headers);
+        $mail = mail($email, $subject, $message, $headers);
 
-        return true;
+        return $mail;
     }
 }
 

@@ -11,44 +11,27 @@
 @section('auth.signup')
     <div id="signin-choose">
         <div class="d-flex flex-column">
-            {{-- <div id="signin-choose-yandex">
-            <button class="btn fs-5" onClick="buttonOpenURL('{{ route('auth.signup.yandex') }}')">
-                <x-sign.logo.yandex />
-            </button>
-        </div> --}}
-            {{-- <div class="row row-cols-2 gx-2 mb-0">
-            <div id="signin-choose-vk">
-                <button class="btn fs-5" onClick="buttonOpenURL('{{ route('auth.signup.vk') }}')">
-                    <x-sign.logo.vk />
-                </button>
-            </div>
-            <div id="signin-choose-mailru">
-                <button class="btn fs-5" onClick="buttonOpenURL('{{ route('auth.signup.mailru') }}')">
-                    <x-sign.logo.mailru />
-                </button>
-            </div>
-        </div> --}}
-            {{-- <div class="row row-cols-2 gx-2">
-            <div id="signin-choose-google">
-                <button class="btn fs-5" onClick="buttonOpenURL('{{ route('auth.signup.google') }}')">
-                    <x-sign.logo.google />
-                </button>
-            </div>
-            <div id="signin-choose-github">
-                <button class="btn fs-5" onClick="buttonOpenURL('{{ route('auth.signup.github') }}')">
-                    <x-sign.logo.github />
-                </button>
-            </div>
-        </div> --}}
             <div id="signin-choose-yandex">
                 <button class="btn fs-5" onClick="buttonOpenURL('{{ $yandexUri }}')">
                     <x-sign.logo.yandex />
                 </button>
             </div>
             <div id="signin-choose-google">
-                <button class="btn fs-5" onClick="buttonOpenURL('{{ $googleUri }}')">
-                    <x-sign.logo.google />
+                <button class="btn fs-5" onClick="buttonOpenURL('{{ $vkUri }}')">
+                    <x-sign.logo.vk />
                 </button>
+            </div>
+            <div class="row row-cols-2 gx-2 mb-0">
+                <div id="signin-choose-google">
+                    <button class="btn fs-5" onClick="buttonOpenURL('{{ $googleUri }}')">
+                        <x-sign.logo.google />
+                    </button>
+                </div>
+                <div id="signin-choose-google">
+                    <button class="btn fs-5" onClick="buttonOpenURL('{{ $githubUri }}')">
+                        <x-sign.logo.github />
+                    </button>
+                </div>
             </div>
             <x-sign.choose-or />
             <div id="signin-choose-email">
