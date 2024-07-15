@@ -9,6 +9,7 @@ use App\Http\Controllers\User\DeleteController;
 use App\Http\Controllers\User\Post\AddPostController;
 use App\Http\Controllers\User\Post\DeletePostController;
 use App\Http\Controllers\User\Post\EditPostController;
+use App\Http\Controllers\User\Post\ImportPostController;
 use App\Http\Controllers\User\Post\LikePostController;
 use App\Http\Controllers\User\Settings\AppearanceController;
 use App\Http\Controllers\User\Settings\NotificationsController;
@@ -43,6 +44,9 @@ Route::prefix('user')->middleware(['login.session', 'user.blocked'])->group(func
     Route::post('addpost', [AddPostController::class, 'post'])->name('user.addpost.post');
 
     Route::post('changepost', [EditPostController::class, 'post'])->name('user.changepost.post');
+
+    Route::get('importpost', [ImportPostController::class, 'index'])->name('user.import.post');
+    Route::post('importpost', [ImportPostController::class, 'post'])->name('user.import.post');
 
     Route::get('delete', [DeleteController::class, 'index'])->name('user.delete');
     Route::post('delete', [DeleteController::class, 'post'])->name('user.delete.post');

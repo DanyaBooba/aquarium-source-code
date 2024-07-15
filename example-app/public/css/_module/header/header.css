@@ -29,7 +29,7 @@ header.header .container {
     background-color: var(--header-background);
     -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px);
-    border-radius: 36px;
+    border-radius: 52px;
     margin-top: .4rem;
     padding: 1rem 1.5rem;
 }
