@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class LikePostController extends Controller
 {
-    //
+    public function like($id, $idPost)
+    {
+        return "like " . $id . " " . $idPost;
+    }
 }

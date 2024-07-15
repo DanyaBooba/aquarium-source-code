@@ -9,6 +9,7 @@ use App\Http\Controllers\User\DeleteController;
 use App\Http\Controllers\User\Post\AddPostController;
 use App\Http\Controllers\User\Post\DeletePostController;
 use App\Http\Controllers\User\Post\EditPostController;
+use App\Http\Controllers\User\Post\LikePostController;
 use App\Http\Controllers\User\Settings\AppearanceController;
 use App\Http\Controllers\User\Settings\NotificationsController;
 use App\Http\Controllers\User\Settings\ProfileController;
@@ -79,6 +80,8 @@ Route::get('user/exit/exactly', [ExitController::class, 'exit'])->name('user.exi
 
 Route::get('user/editpost/{idPost}', [EditPostController::class, 'index'])->name('user.post.edit');
 Route::get('user/deletepost/{idPost}', [DeletePostController::class, 'delete'])->name('user.post.delete');
+
+Route::get('user/likepost/{id}/{idPost}', [LikePostController::class, 'like'])->name('user.post.like');
 
 Route::get('user/id/{id}', [ShowUserController::class, 'id'])->name('user.show.id');
 Route::get('user/{nickname}', [ShowUserController::class, 'nickname'])->name('user.show.nickname');

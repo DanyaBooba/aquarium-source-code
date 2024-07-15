@@ -19,7 +19,7 @@ class ViewPostController extends Controller
     public function nickname($nickname, $idPost)
     {
         $user = User::where('username', $nickname)->where('verified', true)->firstOrFail();
-        
+
         return $this->show($user, $idPost);
     }
 
@@ -38,8 +38,8 @@ class ViewPostController extends Controller
             abort(403);
         }
 
-        if($findUserSession) {
-            $itsmypost = $findUserSession->id != $post->idUser;
+        if ($findUserSession) {
+            $itsmypost = $findUserSession->id == $post->idUser;
         }
 
         return view('user.show-post', [
