@@ -25,7 +25,7 @@
 @section('settings.content')
     <div class="container-post">
         <div class="container-post__main">
-            <x-post.show.header :userId="$user->id" :avatar="$user->avatar" :avatarDefault="$user->avatarDefault" :name="profile_display_name($user->firstName, $user->lastName)" />
+            <x-post.show.header :userId="$user->id" :avatar="$user->avatar" :avatarDefault="$user->avatarDefault" :name="profile_display_name($user->firstName, $user->lastName)" :postId="$post->idPost" />
             @if ($post->haveimage)
                 <a data-fancybox="" data-src="{{ asset('img/user/posts/' . $post->idUser . '-' . $post->idPost . '.jpg') }}">
                     <span class="post-image">

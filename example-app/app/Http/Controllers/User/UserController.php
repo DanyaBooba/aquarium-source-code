@@ -15,21 +15,21 @@ class UserController extends Controller
     {
         $user = User::where('email', session('email'))->first();
         $profile = get_user($user, true);
-    
+
         $subs = User::select('id', 'firstName', 'lastName', 'avatar', 'avatarDefault')
             ->whereIn('id', json_decode($user->subsJson ?? "[]"))->get();
         $sub = User::select('id', 'firstName', 'lastName', 'avatar', 'avatarDefault')
             ->whereIn('id', json_decode($user->subJson ?? "[]"))->get();
         $achivs = Achiv::select('id', 'name')
             ->whereIn('id', json_decode($user->achivsJson ?? "[]"))->get();
-        
+
         $listData = [
             $subs,
             $sub,
             $achivs,
         ];
 
-        $posts = Post::where('idUser', $user->id)->get();
+        $posts = Post::where('idUser', $user->id)->orderBy('created_at', 'desc')->get();
 
         return view('user.index', [
             'profile' => $profile,
@@ -85,9 +85,9 @@ class UserController extends Controller
 
     public function feed()
     {
-        $posts = Post::where('active', 1)->get();
+        $posts = Post::where('active', 1)->orderBy('created_at', 'desc')->get();
 
-        foreach($posts as $post) {
+        foreach ($posts as $post) {
             $user = User::where('id', $post->idUser)->first();
             $post->userAvatar = $user->avatar;
             $post->userAvatarDefault = $user->avatarDefault;

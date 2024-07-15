@@ -30,7 +30,7 @@ class ShowUserController extends Controller
         $profile = get_user($user);
         $userSession = User::where('email', session('email'))->first();
 
-        $posts = Post::where('active', 1)->where('idUser', $profile->id)->get();
+        $posts = Post::where('active', 1)->where('idUser', $profile->id)->orderBy('created_at', 'desc')->get();
 
         $subs = User::select('id', 'firstName', 'lastName', 'avatar', 'avatarDefault')
             ->whereIn('id', json_decode($user->subsJson ?? "[]"))->get();

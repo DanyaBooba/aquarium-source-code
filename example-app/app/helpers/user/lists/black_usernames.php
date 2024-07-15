@@ -17,7 +17,8 @@ if (!function_exists('black_usernames')) {
             'exit',
             'addpost',
             'delete',
-            'settings'
+            'settings',
+            'editpost'
         ];
     }
 }

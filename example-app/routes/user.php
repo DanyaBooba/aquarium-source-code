@@ -7,6 +7,8 @@ use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\User\ExitController;
 use App\Http\Controllers\User\DeleteController;
 use App\Http\Controllers\User\Post\AddPostController;
+use App\Http\Controllers\User\Post\DeletePostController;
+use App\Http\Controllers\User\Post\EditPostController;
 use App\Http\Controllers\User\Settings\AppearanceController;
 use App\Http\Controllers\User\Settings\NotificationsController;
 use App\Http\Controllers\User\Settings\ProfileController;
@@ -73,8 +75,10 @@ Route::prefix('user')->middleware(['login.session', 'user.blocked'])->group(func
 
 Route::get('user/exit/exactly', [ExitController::class, 'exit'])->name('user.exit.exactly');
 
-Route::get('user/{nickname}', [ShowUserController::class, 'nickname'])->name('user.show.nickname');
-Route::get('user/id/{id}', [ShowUserController::class, 'id'])->name('user.show.id');
+Route::get('user/editpost/{idPost}', [EditPostController::class, 'index'])->name('user.post.edit');
+Route::get('user/deletepost/{idPost}', [DeletePostController::class, 'delete'])->name('user.post.delete');
 
-Route::get('user/{nickname}/{idPost}', [ViewPostController::class, 'nickname'])->name('user.post.show.nickname');
+Route::get('user/id/{id}', [ShowUserController::class, 'id'])->name('user.show.id');
+Route::get('user/{nickname}', [ShowUserController::class, 'nickname'])->name('user.show.nickname');
+
 Route::get('user/id/{id}/{idPost}', [ViewPostController::class, 'id'])->name('user.post.show.id');
