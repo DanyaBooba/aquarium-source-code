@@ -41,6 +41,8 @@ Route::prefix('user')->middleware(['login.session', 'user.blocked'])->group(func
     Route::get('addpost', [AddPostController::class, 'index'])->name('user.addpost');
     Route::post('addpost', [AddPostController::class, 'post'])->name('user.addpost.post');
 
+    Route::post('changepost', [EditPostController::class, 'post'])->name('user.changepost.post');
+
     Route::get('delete', [DeleteController::class, 'index'])->name('user.delete');
     Route::post('delete', [DeleteController::class, 'post'])->name('user.delete.post');
     Route::post('delete/service', [DeleteController::class, 'service'])->name('user.delete.service.post');

@@ -20,9 +20,10 @@
 
         <div class="addpost-container">
             <x-addpost.post-change />
-            <form action="{{ route('user.addpost.post') }}" method="post">
+            <form action="{{ route('user.changepost.post') }}" method="post">
                 @csrf
                 <input id="x" type="hidden" name="message">
+                <input type="hidden" name="idPost" value="{{ $post->idPost }}">
                 <trix-editor input="x" placeholder="{{ __('Сообщение') }}">{!! $post->message !!}</trix-editor>
                 <button type="submit" class="d-block btn btn-primary mt-3">
                     {{ __('Изменить') }}
