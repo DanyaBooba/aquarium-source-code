@@ -1,6 +1,31 @@
 @extends('layouts.admin.admin')
 
 @section('admin.content')
+    <style>
+        .max-width-300 {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        svg.svg-unactive {
+            stroke: #ccc;
+        }
+
+        svg.svg-unactive:hover {
+            stroke: var(--text-color);
+        }
+
+        .link-block {
+            color: #ccc !important;
+        }
+
+        .link-block:hover {
+            color: var(--text-color) !important;
+        }
+    </style>
+
     <h1>
         Админка
     </h1>
@@ -36,8 +61,8 @@
                         </th>
                         <td>{!! $user->verified ? "<span class='text-success'>yes</span>" : "<span class='text-danger'>no</span>" !!}</td>
                         <td>{!! $user->email !!}</td>
-                        <td>{!! $user->firstName !!}</td>
-                        <td>{!! $user->lastName !!}</td>
+                        <td class="max-width-300">{!! $user->firstName !!}</td>
+                        <td class="max-width-300">{!! $user->lastName !!}</td>
                         <td>{!! $user->username !!}</td>
                         <td>
                             <a href="{{ route('user.show.id', $user->id) }}">
@@ -48,7 +73,7 @@
                             <button type="button" class="btn p-0 m-0" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal{{ $loop->index }}"
                                 style="display: flex; height: 18px; outline: none !important">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="lucide lucide-square-arrow-out-up-right">
                                     <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
@@ -56,6 +81,37 @@
                                     <path d="M15 3h6v6" />
                                 </svg>
                             </button>
+                        </td>
+                        <td>
+                            @if ($user->verified == false)
+                                <a href="{{ route('admin.set-user-active', $user->id) }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+                                        <path d="M20 6 9 17l-5-5" />
+                                    </svg>
+                                </a>
+                            @else
+                                <a href="{{ route('admin.set-user-unactive', $user->id) }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="svg-unactive" width="18"
+                                        height="18" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
+                                        <path d="M18 6 6 18" />
+                                        <path d="m6 6 12 12" />
+                                    </svg>
+                                </a>
+                            @endif
+                        </td>
+                        <td>
+                            @if ($user->blocked == false)
+                                <a href="#" class="link-block">
+                                    block
+                                </a>
+                            @else
+                                <a href="#">
+                                    unblock
+                                </a>
+                            @endif
                         </td>
                     </tr>
                 @endforeach
@@ -71,7 +127,6 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            {{-- @json($user) --}}
                             <div>
                                 ID: {{ $user->id }}
                             </div>
@@ -86,10 +141,14 @@
                             </div>
                             <hr>
                             <div>
-                                User type: {{ $user->usertype }}
+                                User type:
+                                {{ $user->usertype == 0 ? 'пользователь' : '' }}
+                                {{ $user->usertype == 100 ? 'админ' : '' }}
+                                {{ $user->usertype == -1 ? 'тестовый' : '' }}
+                                <span class="text-muted">{{ $user->usertype }}</span>
                             </div>
                             <div>
-                                MD5: {{ $user->md5use ? 'Да' : '_' }}
+                                MD5: {{ $user->md5use ? 'да' : 'нет' }}
                             </div>
                             <div>
                                 Verified:

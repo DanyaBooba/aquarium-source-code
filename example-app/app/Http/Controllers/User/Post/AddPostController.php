@@ -11,7 +11,12 @@ class AddPostController extends Controller
 {
     public function index()
     {
-        return view('user.addpost');
+        $iduser = User::where('email', session('email'))->first()->id;
+        $whiteList = in_array($iduser, white_id_posts());
+
+        return view('user.addpost', [
+            'whiteList' => $whiteList
+        ]);
     }
 
     public function post(Request $request)
