@@ -42,7 +42,7 @@ class SocialController extends Controller
     {
         $profile = $this->vkData();
 
-        return "vk";
+        return "";
     }
 
     private function yandexData()
@@ -213,9 +213,9 @@ class SocialController extends Controller
         
                 $info = file_get_contents('https://api.vk.com/method/users.get?' . urldecode(http_build_query($params)));
                 $info = json_decode($info, true);	
-                
-                echo $email;
-                print_r($info);
+
+                dd($email, $info);
+                // email, photo_big, first_name, last_name
             }
         }
     }
