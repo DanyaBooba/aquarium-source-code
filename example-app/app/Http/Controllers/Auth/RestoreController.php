@@ -51,7 +51,7 @@ class RestoreController extends Controller
             ]);
         }
 
-        // ... send email ...
+        send_mail_restore_password($validated['email'], $code);
 
         return redirect()->route('auth.restore.success');
     }

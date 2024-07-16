@@ -51,7 +51,7 @@ class CodeController extends Controller
             ]);
         }
 
-        // ... send mail ...
+        send_mail_login_by_code($validated['email'], $code);
 
         return redirect()->route('auth.code.enter');
     }

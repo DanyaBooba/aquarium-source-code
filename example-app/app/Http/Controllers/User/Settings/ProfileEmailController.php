@@ -25,7 +25,8 @@ class ProfileEmailController extends Controller
         if ($findUserSession->usertype == -1) return redirect()->back();
 
         if ($validated['currentEmail'] !== $findUserSession->email) {
-            return redirect()->back()->withInput($validated)->withErrors(['email' => __('Некорректная текущая почта.')
+            return redirect()->back()->withInput($validated)->withErrors([
+                'email' => __('Некорректная текущая почта.')
             ]);
         }
 

@@ -28,6 +28,8 @@ require_once "helpers/user/lists/black_usernames.php";
 
 require_once "helpers/user/links/oauth.php";
 
+require_once "helpers/user/default/settings.php";
+
 // Another
 
 require_once "helpers/links.php";

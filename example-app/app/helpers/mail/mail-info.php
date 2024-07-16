@@ -1,5 +1,13 @@
 <?php
 
+if (!function_exists('info_date_send_mail')) {
+    function info_date_send_mail(): string
+    {
+        $date = date("d/m/Y") . __(' в ') . date("H:i:s") . ' UTC';
+        return $date;
+    }
+}
+
 if (!function_exists('info_device_send_mail')) {
     function info_device_send_mail(): string
     {

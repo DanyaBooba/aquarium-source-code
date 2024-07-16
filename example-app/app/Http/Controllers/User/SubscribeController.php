@@ -29,16 +29,12 @@ class SubscribeController extends Controller
         $issub = in_array($id, $sub);
 
         if ($issub) {
-            // dd("need to sub");
-
             array_splice($sub, array_search(intval($id), $sub), 1);
             array_splice($subs, array_search(intval($findUserSession->id), $subs), 1);
 
             $tempCountSub = math_min_zero($countSub - 1);
             $tempCountSubs = math_min_zero($countSubs - 1);;
         } else {
-            // dd("unsub");
-
             array_push($sub, intval($id));
             array_push($subs, intval($findUserSession->id));
 

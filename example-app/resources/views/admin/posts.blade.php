@@ -54,6 +54,30 @@
                                 {{ route('user.post.show.id', [$post->idUser, $post->idPost]) }}
                             </a>
                         </td>
+                        <td>
+                            <a href="{{ route('admin.post.set-status.1', $post->id) }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-check">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ route('admin.post.set-status.-1', $post->id) }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" width="18" height="18"
+                                    viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-x">
+                                    <path d="M18 6 6 18" />
+                                    <path d="m6 6 12 12" />
+                                </svg>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ route('admin.post.set-status.0', $post->id) }}">
+                                0
+                            </a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

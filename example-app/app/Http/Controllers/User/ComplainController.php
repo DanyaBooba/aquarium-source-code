@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\Complain;
+use App\Models\User\Complain as UserComplain;
 use App\Models\User\User;
 use Illuminate\Http\Request;
 
@@ -23,7 +24,7 @@ class ComplainController extends Controller
 
         if ($findUser->usertype === -1 || $findUserSession->usertype === -1) return redirect()->back();
 
-        Complain::query()->create([
+        UserComplain::query()->create([
             'idUser' => $findUser->id,
             'idUserFrom' => $findUserSession->id,
         ]);

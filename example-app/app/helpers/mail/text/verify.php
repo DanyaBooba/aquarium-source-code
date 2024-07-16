@@ -3,11 +3,11 @@
 if (!function_exists('send_mail_verify')) {
     function send_mail_verify(string $email, string $link): bool
     {
-        $subject = 'Подтверждение аккаунта';
+        $subject = __('Подтверждение аккаунта');
         $routeLink = route('user.tryverify', $link);
 
-        $message = '<b>Требуется подтвердить почту аккаунта</b>.<br><br> Сейчас другие пользователи не видят ваш профиль<br><br>';
-        $message .= 'Ссылка для подтверждение почты аккаунта: <br><br>';
+        $message = __('<b>Требуется подтвердить аккаунт</b>.') . '<br><br> ' . __('Сейчас другие пользователи не видят ваш профиль') . '<br><br>';
+        $message .= __('Ссылка для подтверждение аккаунта: ') . '<br><br>';
         $message .= $routeLink;
 
         $sendMail = send_mail($email, $subject, $message);

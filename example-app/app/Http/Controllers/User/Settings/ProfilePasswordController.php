@@ -40,6 +40,18 @@ class ProfilePasswordController extends Controller
         $user->password = bcrypt($validated['newPassword']);
         $user->save();
 
+        $settingsDefault = (object) [
+            'dataChange' => true,
+            'authorization' => true,
+            'passwordChange' => true,
+        ];
+
+        $settingsData = $user->settings_notifications ? (object) json_decode($user->settings_notifications) : $settingsDefault;
+
+        if ($settingsData->passwordChange) {
+            send_mail_after_new_password($validated['email']);
+        }
+
         return redirect()->route('user')->with('alert.success', __('Пароль был успешно сменен.'));
     }
 }
