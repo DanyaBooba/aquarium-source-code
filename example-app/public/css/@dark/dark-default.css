@@ -4,10 +4,10 @@
     --accent-light: #575FCF;
     --accent-light-55: #575FCF55;
 
-    --body-color: #17152b;
-    --body-color-rgb: 23, 21, 43;
-    --body-color-alpha: #17152b99;
-    --bg-white: #1b1935;
+    --body-bg: #17152b;
+    --body-bg-rgb: 23, 21, 43;
+    --body-bg-alpha: #17152b99;
+    --body-bg-white: #1b1935;
 
     --text-color: #fff;
     --text-invert: #000;

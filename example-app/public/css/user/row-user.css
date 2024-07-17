@@ -2,7 +2,7 @@
     position: sticky;
     top: 1rem;
 
-    background: linear-gradient(90deg, var(--user-bar) 0%, var(--user-bar) 93%, var(--body-color) 100%);
+    background: linear-gradient(90deg, var(--user-bar) 0%, var(--user-bar) 93%, var(--body-bg) 100%);
     padding: 3rem 2rem;
 }
 

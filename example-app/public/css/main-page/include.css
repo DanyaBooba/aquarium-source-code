@@ -193,7 +193,7 @@
 /* containers */
 
 .container-telegram {
-    background-color: var(--bg-white);
+    background-color: var(--body-bg-white);
 }
 
 /* .container-lightdark {} */

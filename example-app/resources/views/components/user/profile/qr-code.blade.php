@@ -36,7 +36,7 @@
         data: data,
         image: "{{ asset('img/logo/favicon-2.svg') }}",
         dotsOptions: {
-            color: "var(--accent-highlight)",
+            color: "var(--accent)",
             type: "rounded"
         },
         cornersSquareOptions: {

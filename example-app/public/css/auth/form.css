@@ -85,7 +85,7 @@
     text-decoration: none;
 
     color: var(--text-color);
-    background-color: var(--body-color);
+    background-color: var(--body-bg);
     border: none !important;
 
     border-radius: 8px;
@@ -103,7 +103,7 @@
     text-decoration: none;
 
     color: var(--text-color);
-    background-color: var(--body-color);
+    background-color: var(--body-bg);
     border: .1rem solid var(--signin-choose-background-color);
 
     border-radius: 8px;
@@ -126,7 +126,7 @@
     align-items: center;
 
     color: var(--text-color);
-    background-color: var(--body-color);
+    background-color: var(--body-bg);
     border: .1rem solid var(--signin-choose-background-color);
 
     border-radius: 8px;
@@ -193,14 +193,14 @@
 }
 
 .authentication #signin-choose .signin-choose-or-white span {
-    background-color: var(--body-color) !important;
+    background-color: var(--body-bg) !important;
     margin-top: -22px;
     width: 50px !important;
     height: 20px !important;
 }
 
 .authentication #signin-choose .signin-choose-or span {
-    background: var(--body-color);
+    background: var(--body-bg);
 }
 
 .authentication #signin-email .buttons {

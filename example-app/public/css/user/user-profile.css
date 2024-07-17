@@ -1,5 +1,5 @@
 .user-profile {
-    background-color: var(--body-color);
+    background-color: var(--body-bg);
 }
 
 .user-profile .user-profile-left {
@@ -199,7 +199,7 @@
 } */
 
 .user-profile .user-profile-buttons button:disabled {
-    background-color: var(--body-color);
+    background-color: var(--body-bg);
     outline: .2rem var(--user-profile-button) dashed;
     margin-right: .75rem;
 }
@@ -227,7 +227,7 @@
         padding-left: .6rem !important;
         padding-right: .6rem !important;
     }
-    
+
     .user-profile-content {
         flex-direction: column;
         padding-left: 1rem !important;

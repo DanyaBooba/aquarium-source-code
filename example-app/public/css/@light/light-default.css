@@ -1,13 +1,10 @@
 :root {
-    --accent: #575FCF;
-    --accent-highlight: #575FCF;
-    --accent-light: #989fff;
-    --accent-light-55: #989fff55;
+    --accent: #00BFFF;
+    --accent-55: #00BFFF55;
 
-    --body-color: #f9f9f9;
-    --body-color-rgb: 249, 249, 249;
-    --body-color-alpha: #f9f9f999;
-    --bg-white: #fff;
+    --body-bg: #f9f9f9;
+    --body-bg-alpha: #f9f9f999;
+    --body-bg-white: #fff;
 
     --text-color: #000;
     --text-invert: #fff;
