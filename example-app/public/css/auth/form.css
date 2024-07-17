@@ -1,5 +1,5 @@
 .authentication svg.authentication-logo {
-    fill: var(--svg-icon);
+    fill: var(--svg-color);
 }
 
 .authentication.col-md-4 {

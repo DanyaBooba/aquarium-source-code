@@ -27,7 +27,7 @@
     }
 
     .post-show-bottom button:hover svg {
-        stroke: var(--text-color-hover);
+        stroke: var(--text-link-hover);
     }
 }
 
@@ -37,6 +37,6 @@
     }
 
     .post-show-bottom button:active svg {
-        stroke: var(--text-color-hover);
+        stroke: var(--text-link-hover);
     }
 }

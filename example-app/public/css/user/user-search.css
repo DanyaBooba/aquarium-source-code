@@ -166,7 +166,7 @@
     }
 
     .user-search-filters button:hover {
-        color: var(--text-color-hover);
+        color: var(--text-link-hover);
     }
 }
 
@@ -186,7 +186,7 @@
     }
 
     .user-search-filters button:active {
-        color: var(--text-color-hover);
+        color: var(--text-link-hover);
     }
 }
 

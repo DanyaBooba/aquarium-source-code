@@ -10,17 +10,17 @@
     --text-code: #fff;
     --text-muted: #6c757d;
 
-    --text-color-hover: #0984e3;
-    --text-color-link-underline: #5c569d;
+    --text-link-hover: #0984e3;
+    --text-link-underline: #5c569d;
     --text-code-border: #0984e3;
 
-    --svg-icon: #fff;
-    --svg-icon-invert: #000;
-    --svg-github: #fff;
+    --svg-color: #fff;
+    --svg-color-invert: #000;
+    --svg-color-github: #fff;
 
-    --header-background: rgb(24, 22, 42, .84);
+    --header-bg: rgb(24, 22, 42, .84);
     --header-border: #433e6d;
-    --header-link-download-background: #262342;
+    --header-link-download-bg: #262342;
     --header-link-download-border: #433e6d;
 
     --footer-background: #17152b;

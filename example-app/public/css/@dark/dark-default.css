@@ -15,17 +15,17 @@
     --text-muted: #6c757d;
     --text-success: #2ed573;
 
-    --text-color-hover: #0984e3;
-    --text-color-link-underline: #5c569d;
+    --text-link-hover: #0984e3;
+    --text-link-underline: #5c569d;
     --text-code-border: #0984e3;
 
-    --svg-icon: #fff;
-    --svg-icon-invert: #000;
-    --svg-github: #fff;
+    --svg-color: #fff;
+    --svg-color-invert: #000;
+    --svg-color-github: #fff;
 
-    --header-background: rgb(25, 23, 49, .84);
+    --header-bg: rgb(25, 23, 49, .84);
     --header-border: #211f41;
-    --header-link-download-background: #1f1b3b;
+    --header-link-download-bg: #1f1b3b;
     --header-link-download-border: #221d3f;
 
     --footer-background: #17152b;
@@ -142,7 +142,7 @@
 
     --code-L: #27234b;
 
-    --user-alert-background-success: #1b8145;
+    --user-alert-success-bg: #1b8145;
 
     --trix-button-accent: #366182;
     --table-border: #3e3a68;

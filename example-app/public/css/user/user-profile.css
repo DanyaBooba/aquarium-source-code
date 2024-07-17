@@ -38,7 +38,7 @@
 }
 
 .user-profile .user-profile-right div button:focus {
-    color: var(--text-color-hover);
+    color: var(--text-link-hover);
 }
 
 .user-profile .user-profile-right div p:first-child {
@@ -326,7 +326,7 @@
     }
 
     .user-profile .user-profile-right div button:hover {
-        color: var(--text-color-hover);
+        color: var(--text-link-hover);
     }
 }
 
@@ -340,6 +340,6 @@
     }
 
     .user-profile .user-profile-right div button:active {
-        color: var(--text-color-hover);
+        color: var(--text-link-hover);
     }
 }

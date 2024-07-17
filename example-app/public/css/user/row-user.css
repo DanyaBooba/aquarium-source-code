@@ -8,7 +8,7 @@
 
 .row-user-bar svg.logo {
     margin-bottom: 3rem;
-    fill: var(--svg-icon);
+    fill: var(--svg-color);
 }
 
 .row-user-bar ul {
@@ -41,11 +41,11 @@
 }
 
 .row-user-bar ul li a.active {
-    color: var(--text-color-hover) !important;
+    color: var(--text-link-hover) !important;
 }
 
 .row-user-bar ul li a.active svg {
-    stroke: var(--text-color-hover);
+    stroke: var(--text-link-hover);
 }
 
 .row-user-bar .social {
@@ -75,7 +75,7 @@
 }
 
 .row-user-bar .social a.active svg {
-    stroke: var(--text-color-hover);
+    stroke: var(--text-link-hover);
 }
 
 /* media */

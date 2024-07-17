@@ -140,11 +140,11 @@
 
 @media(hover: hover) {
     .container-settings .container-settings-main ul li a:hover svg {
-        stroke: var(--svg-icon-invert);
+        stroke: var(--svg-color-invert);
     }
 
     .container-settings .container-settings-main ul li a:hover {
-        color: var(--text-color-hover) !important;
+        color: var(--text-link-hover) !important;
     }
 
     .container-settings .container-settings-main ul li:hover {
@@ -154,11 +154,11 @@
 
 @media(hover: none) {
     .container-settings .container-settings-main ul li a:active svg {
-        stroke: var(--svg-icon-invert);
+        stroke: var(--svg-color-invert);
     }
 
     .container-settings .container-settings-main ul li a:active {
-        color: var(--text-color-hover) !important;
+        color: var(--text-link-hover) !important;
     }
 
     .container-settings .container-settings-main ul li:active {

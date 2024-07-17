@@ -44,7 +44,7 @@
 }
 
 .alert button svg {
-    stroke: var(--svg-icon) !important;
+    stroke: var(--svg-color) !important;
 }
 
 .alert.alert-warning {
@@ -52,7 +52,7 @@
 }
 
 .alert.alert-success {
-    background-color: var(--user-alert-background-success) !important;
+    background-color: var(--user-alert-success-bg) !important;
     justify-content: center;
 
     transition: 1s;

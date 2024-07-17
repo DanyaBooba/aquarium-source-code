@@ -74,7 +74,7 @@
     flex-direction: column;
     margin-left: 10px;
     margin-right: 10px;
-}   
+}
 
 .posts .row .col-img .card-img-overlay .post p {
     font-family: ResistSans;
@@ -152,7 +152,7 @@
         box-shadow: 0 20px 40px 0 rgba(0, 0, 0, .2);
         transition: .3s;
     }
-    
+
     .posts .row .col-img:hover img {
         transform: scale(1.05);
         transition: .3s;
@@ -160,7 +160,7 @@
 
     .posts .row .col-text:hover a {
         box-shadow: 0 20px 40px 0 rgba(0, 0, 0, .1);
-        border-color: var(--text-color-hover) !important;
+        border-color: var(--text-link-hover) !important;
     }
 
     .posts .row .col-img:hover a.card-overflow {
@@ -182,7 +182,7 @@
     }
 
     .posts .row .col-text:active a {
-        border-color: var(--text-color-hover) !important;
+        border-color: var(--text-link-hover) !important;
     }
 
     .posts .row .col-img:active a.card-overflow {

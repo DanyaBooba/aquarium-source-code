@@ -49,7 +49,7 @@
 }
 
 .top-info-bar ul li.active a {
-    color: var(--text-color-hover) !important;
+    color: var(--text-link-hover) !important;
 }
 
 .top-info-bar ul li a {

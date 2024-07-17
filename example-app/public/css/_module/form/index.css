@@ -36,14 +36,14 @@ form .input-password a.input-group-text {
 
 @media(hover: hover) {
     form .input-password a.input-group-text:hover {
-        stroke: var(--text-color-hover);
+        stroke: var(--text-link-hover);
         cursor: pointer;
     }
 }
 
 @media(hover: none) {
     form .input-password a.input-group-text:active {
-        stroke: var(--text-color-hover);
+        stroke: var(--text-link-hover);
         cursor: pointer;
     }
 }
