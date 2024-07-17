@@ -32,16 +32,17 @@ return new class extends Migration
             $table->integer('sub')->default(0);
             $table->integer('subs')->default(0);
             $table->integer('achivs')->default(0);
+            $table->integer('likesPosts')->default(0);
 
             $table->json('subJson')->nullable();
             $table->json('subsJson')->nullable();
             $table->json('achivsJson')->nullable();
+            $table->json('likesPostsJson')->nullable();
 
             $table->string('shareToken')->nullable();
             $table->string('serviceLogin')->nullable();
 
             $table->json('settings_notifications')->nullable();
-
             $table->integer('usertype')->default(0);
 
             $table->boolean('md5use')->nullable();

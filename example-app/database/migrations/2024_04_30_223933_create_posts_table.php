@@ -23,6 +23,10 @@ return new class extends Migration
             $table->string('imagename')->nullable();
             $table->text('message');
             $table->string('desc')->max(254);
+
+            $table->integer('likes')->default(0);
+            $table->integer('views')->default(0);
+            $table->json('usersLikes')->nullable();
         });
     }
 
