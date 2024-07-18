@@ -2,7 +2,7 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    background-color: var(--addpost-moderate-background);
+    background-color: var(--addpost-moderate-bg);
     padding: 1rem;
     border-radius: 8px;
     margin-bottom: 1rem;

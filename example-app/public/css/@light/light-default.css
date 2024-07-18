@@ -122,7 +122,9 @@
 
     /* User Add Post */
 
-    --addpost-moderate-background: #ececec;
+    --addpost-moderate-bg: #ececec;
+    --addpost-import-bg: #dbd4ff;
+    --addpost-import-bg-55: #dbd4ff55;
 
     /* Settings */
 

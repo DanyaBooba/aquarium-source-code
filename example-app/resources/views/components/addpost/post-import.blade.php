@@ -1,12 +1,12 @@
 <div class="addpost-import-container">
     <div class="addpost-import">
-        <h2>
+        <h4>
             Импортируйте записи из других соцсетей
-        </h2>
+        </h4>
         <p>
             Для этого достаточно просто поделиться ссылкой на пост.
         </p>
-        <p class="fs-5">
+        <p>
             <a href="{{ route('user.import.post') }}">
                 Импортировать посты
             </a>
