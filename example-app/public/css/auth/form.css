@@ -103,7 +103,7 @@
     text-decoration: none;
 
     color: var(--text-color);
-    background-color: var(--body-bg);
+    background-color: var(--body-bg-white);
     border: .1rem solid var(--auth-choose-bg);
 
     border-radius: 8px;
@@ -136,6 +136,11 @@
     transition: .15s !important;
 }
 
+.authentication #signin-choose .d-flex div#signin-choose-yandex button {
+    border-color: #fc3f1e !important;
+    background-color: var(--body-bg-white);
+}
+
 .authentication #signin-choose .d-flex div#signin-choose-yandex button svg {
     height: 30px;
     margin-top: .5rem;
@@ -150,6 +155,10 @@
     height: 30px;
 }
 
+.authentication #signin-choose .d-flex div#signin-choose-google button {
+    background-color: var(--body-bg-white);
+}
+
 .authentication #signin-choose .d-flex div#signin-choose-google button svg {
     width: 30px;
     height: 30px;
@@ -160,10 +169,8 @@
         height: 30px;
 }
 
-.authentication #signin-choose .d-flex div#signin-choose-email button svg {
-    width: 32px;
-    height: 32px;
-    margin-right: 1rem;
+.authentication #signin-choose .d-flex div#signin-choose-email a {
+    border-color: var(--accent) !important;
 }
 
 .authentication #signin-choose .d-flex div button:is(:focus, :focus-visible, :focus-within) {
@@ -254,7 +261,7 @@
 
 @media(hover: hover) {
     .authentication #signin-choose .d-flex div button:hover {
-        background-color: var(--auth-choose-bg-hover);
+        background-color: var(--auth-choose-bg-hover) !important;
     }
 
     .authentication #signin-choose .d-flex div a:hover {
