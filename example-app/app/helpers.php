@@ -30,6 +30,8 @@ require_once "helpers/user/links/oauth.php";
 
 require_once "helpers/user/default/settings.php";
 
+require_once "helpers/user/routes/route-user.php";
+
 // Another
 
 require_once "helpers/links.php";
