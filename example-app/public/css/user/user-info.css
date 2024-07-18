@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: column;
     background: var(--settings-main-background);
-    padding: .75rem;
+    padding: 1.2rem 1rem;
     border-radius: 12px;
     height: 100%;
 }
@@ -33,5 +33,9 @@
 }
 
 .profile-info__container span {
-    margin-bottom: .3rem;
+    margin-bottom: .5rem;
+}
+
+.profile-info__container span:has(a) {
+    margin-bottom: 0;
 }

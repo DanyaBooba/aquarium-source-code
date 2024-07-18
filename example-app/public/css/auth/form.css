@@ -137,7 +137,7 @@
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-yandex button {
-    border-color: #fc3f1e !important;
+    /* border-color: #fc3f1e !important; */
     background-color: var(--body-bg-white);
 }
 
@@ -170,7 +170,7 @@
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-email a {
-    border-color: var(--accent) !important;
+    /* border-color: var(--accent) !important; */
 }
 
 .authentication #signin-choose .d-flex div button:is(:focus, :focus-visible, :focus-within) {

@@ -6,6 +6,8 @@
     text-transform: uppercase;
     color: var(--text-muted);
     margin-bottom: .75rem;
+    font-size: .875rem;
+    letter-spacing: 1px;
 }
 
 .container-settings .container-settings-left form .input-password div label {
@@ -70,11 +72,12 @@
 }
 
 .container-settings .container-settings-left form.form-settings-image .row.row-settings-cap .col label {
-    border-radius: 16px !important;
+    border-radius: 9px !important;
+    padding: .1rem !important;
 }
 
 .container-settings .container-settings-left form.form-settings-image .row.row-settings-cap .col {
-    margin-bottom: .5rem;
+    /* margin-bottom: .5rem; */
 }
 
 .container-settings .container-settings-left form.form-settings-image .row .col label img {

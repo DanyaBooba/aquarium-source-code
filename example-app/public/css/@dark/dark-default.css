@@ -92,7 +92,7 @@
 
     /* User Profile */
 
-    --user-profile-image-bg: #221f40;
+    --user-profile-image-bg: #221f40cc;
     --user-profile-image-bg-image: #221f40;
     --user-profile-image-border: #302d57;
     --user-profile-button: #221f40;
@@ -138,7 +138,8 @@
     --settings-background-devices: #ffa801;
     --settings-background-personalization: #cd84f1;
     --settings-image-active: #0984e3;
-    --setting-background-hover: #323060;
+    --settings-bg-hover: #323060;
+    --settings-icon-right: #aeadc0;
 
     /* Button Top */
 

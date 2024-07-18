@@ -93,8 +93,8 @@
 
     /* User Profile */
 
-    --user-profile-image-bg: #fff;
-    --user-profile-image-bg-image: #fff;
+    --user-profile-image-bg: #ffffffcc;
+    --user-profile-image-bg-image: #ffffff;
     --user-profile-image-border: #d9d9e0;
     --user-profile-button: #fff;
     --user-profile-button-accent: #0984e3;
@@ -138,7 +138,8 @@
     --settings-background-devices: #ffa801;
     --settings-background-personalization: #cd84f1;
     --settings-image-active: #0984e3;
-    --setting-background-hover: #efefef;
+    --settings-bg-hover: #efefef;
+    --settings-icon-right: #a5a5a5;
 
     /* Button Top */
 
