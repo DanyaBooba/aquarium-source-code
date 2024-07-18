@@ -69,7 +69,7 @@
     margin-top: 112px;
 
     border-radius: 50%;
-    background: var(--user-profile-image-background);
+    background: var(--user-profile-image-bg);
 }
 
 .user-profile .user-profile-image-point span {
@@ -107,7 +107,7 @@
     height: auto;
 
     border-radius: 50%;
-    background: var(--user-profile-image-background-image);
+    background: var(--user-profile-image-bg-image);
 }
 
 .user-profile .user-profile-image img:not(.user-profile-image-service) {
@@ -139,7 +139,7 @@
 
     flex-wrap: wrap;
 
-    background: var(--user-profile-image-background);
+    background: var(--user-profile-image-bg);
 
     padding: 1rem;
     padding-left: 2rem;

@@ -75,7 +75,7 @@
 
 .container.container-blog .row-blog a.blog-post .blog-post-content p {
     text-decoration: underline;
-    text-decoration-thickness: .05rem !important;
+    text-decoration-thickness: .1rem !important;
     text-underline-offset: .3rem;
     text-decoration-color: var(--text-link-underline) !important;
 

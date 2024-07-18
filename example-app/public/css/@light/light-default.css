@@ -2,8 +2,9 @@
 
     /* Accent */
 
-    --accent: #00BFFF;
-    --accent-55: #00BFFF55;
+    --accent: #8D77FE;
+    --accent-55: #575FCF55;
+    --accent-2: #00BFFF;
 
     /* Body */
 
@@ -21,31 +22,6 @@
     --text-link-hover: #0984e3;
     --text-link-underline: #a8a8a8;
 
-    /* Code */
-
-    --code-screen-str: #080;
-    --code-screen-kwd: #008;
-    --code-screen-com: #800;
-    --code-screen-typ: #606;
-    --code-screen-lit: #066;
-    --code-screen-pun: #660;
-    --code-screen-tag: #008;
-    --code-screen-atn: #606;
-    --code-screen-atv: #080;
-    --code-screen-dec: #606;
-    --code-screen-fun: #f00;
-    --code-screen-projection-str: #060;
-    --code-screen-projection-kwd: #006;
-    --code-screen-projection-com: #600;
-    --code-screen-projection-typ: #404;
-    --code-screen-projection-lit: #044;
-    --code-screen-projection-pun: #440;
-    --code-screen-projection-tag: #006;
-    --code-screen-projection-atn: #404;
-    --code-screen-projection-atv: #060;
-    --text-code-border: #0984e3;
-    --code-L: #eee;
-
     /* Svg */
 
     --svg-color: #000;
@@ -58,6 +34,7 @@
     --header-border: #ebeff2;
     --header-link-download-bg: #fff;
     --header-link-download-border: #dee2e6;
+    --header-link-active: #ebeff2;
 
     /* Footer */
 
@@ -66,10 +43,10 @@
 
     /* Auth */
 
-    --signin-choose-background-color: #d9d9d9;
-    --signin-choose-background-color-hover: #d9d9d9;
-    --signin-choose-or-border-bottom: #e2e2e2;
-    --signin-choose-or-text-color: #acacac;
+    --auth-choose-bg: #d9d9d9;
+    --auth-choose-bg-hover: #d9d9d9;
+    --auth-choose-border: #e2e2e2;
+    --auth-choose-color: #acacac;
     --authentication-back: #efefef;
 
     /* List */
@@ -88,15 +65,22 @@
     --form-input-border: #ced4db;
     --form-input-background: #fff;
 
-    /* Block Main */
+    /* Main */
 
-    --main-dark-block: #0277ff;
-    --main-dark-block-image: url('/img/main/main_cap@light.jpg');
-    --main-dark-block-button: rgb(2, 95, 204, .9);
-    --main-list-item-1: #c1d8ff;
-    --main-list-item-2: #c9f9b3;
-    --main-list-item-3: #dac1ff;
+    --main-block-image: url('/img/main/main_cap@light.jpg');
+    --main-block-button-shadow: rgb(70, 76, 180, .9);
+    --main-list-item-1: #81b0ff;
+    --main-list-item-2: #9ff18e;
+    --main-list-item-3: #b5a6ff;
     --main-darklight-icon: #f1c40f;
+
+    /* Cookie */
+
+    --cookie-accept-background: #fff;
+    --cookie-accept-border: #ecf1f6;
+    --cookie-accept-shadow: rgb(151, 149, 194, .07);
+    --cookie-accept-button-background: #1d2228;
+    --cookie-accept-button-hover: #121417;
 
     /* User Nav */
 
@@ -109,8 +93,8 @@
 
     /* User Profile */
 
-    --user-profile-image-background: #fff;
-    --user-profile-image-background-image: #fff;
+    --user-profile-image-bg: #fff;
+    --user-profile-image-bg-image: #fff;
     --user-profile-image-border: #d9d9e0;
     --user-profile-button: #fff;
     --user-profile-button-accent: #0984e3;
@@ -125,13 +109,20 @@
     --user-search-background-hover: #f1f1f4;
     --user-search-button-background: #c9daeb;
 
-    --faq-design-button: #123;
-
     /* User Alert */
 
     --user-alert-text-warning: #ca8726;
     --user-alert-border: #dee2e6;
     --user-alert-success-bg: #2ecc71;
+
+    /* User Post */
+
+    --post-bg: #fff;
+    --post-border: #d6dae0;
+
+    /* User Add Post */
+
+    --addpost-moderate-background: #ececec;
 
     /* Settings */
 
@@ -157,24 +148,15 @@
     --collapse-button-background: #fff;
     --collapse-body-background: #fff;
     --collapse-border: #dfdfdf;
-    --collapse-filter: ;
 
     /* Modal */
 
     --modal-background: #fff;
 
-    /* Achivs */
+    /* User Achivs */
 
     --achivs-background: #fff;
     --achiv-shadow: rgba(0, 0, 0, .15);
-
-    /* Cookie */
-
-    --cookie-accept-background: #fff;
-    --cookie-accept-border: #ecf1f6;
-    --cookie-accept-shadow: rgb(151, 149, 194, .07);
-    --cookie-accept-button-background: #1d2228;
-    --cookie-accept-button-hover: #121417;
 
     /* Trix */
 
@@ -186,12 +168,28 @@
 
     --mark-background: #faf2cd;
 
-    /* User Post */
+    /* Code */
 
-    --post-bg: #fff;
-    --post-border: #d6dae0;
-
-    /* User Add Post */
-
-    --addpost-moderate-background: #ececec;
+    --code-screen-str: #080;
+    --code-screen-kwd: #008;
+    --code-screen-com: #800;
+    --code-screen-typ: #606;
+    --code-screen-lit: #066;
+    --code-screen-pun: #660;
+    --code-screen-tag: #008;
+    --code-screen-atn: #606;
+    --code-screen-atv: #080;
+    --code-screen-dec: #606;
+    --code-screen-fun: #f00;
+    --code-screen-projection-str: #060;
+    --code-screen-projection-kwd: #006;
+    --code-screen-projection-com: #600;
+    --code-screen-projection-typ: #404;
+    --code-screen-projection-lit: #044;
+    --code-screen-projection-pun: #440;
+    --code-screen-projection-tag: #006;
+    --code-screen-projection-atn: #404;
+    --code-screen-projection-atv: #060;
+    --text-code-border: #0984e3;
+    --code-L: #eee;
 }

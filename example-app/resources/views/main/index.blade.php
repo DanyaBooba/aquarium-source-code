@@ -286,7 +286,7 @@
 
     <div class="container">
         <div class="row row-cols-1 row-cols-lg-2 py-5">
-            <div class="col text-center">
+            <div class="col text-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" class="mb-2">
@@ -317,7 +317,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col text-center">
+            <div class="col text-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" class="mb-2">
