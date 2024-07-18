@@ -273,7 +273,8 @@
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-12 col-lg-6">
                 <img src="{{ asset('img/main/img/main-world.jpg') }}" class="d-block img-fluid"
-                    alt="{{ __('Воксельный подводный мир') }}" width="700" style="border-radius: 12px">
+                    alt="{{ __('Воксельный подводный мир') }}" width="700"
+                    style="border-radius: 12px; box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;">
             </div>
             <div class="col-lg-6">
                 <h2 class="display-5 lh-1 mb-3">{!! __('Адаптивный <nobr>веб-дизайн</nobr>') !!}</h2>

@@ -98,6 +98,9 @@
     height: 150px;
 
     border-radius: 50%;
+}
+
+.user-profile .user-profile-image:has(:not(.user-profile-image-service)) {
     border: .1rem solid var(--user-profile-image-border);
 }
 
@@ -140,6 +143,7 @@
     flex-wrap: wrap;
 
     background: var(--user-profile-image-bg);
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
 
     padding: 1rem;
     padding-left: 2rem;
@@ -184,6 +188,7 @@
 
     color: var(--user-profile-button-text);
     background-color: var(--user-profile-button);
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
     border: none;
     border-radius: 8px;
 

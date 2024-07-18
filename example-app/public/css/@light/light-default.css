@@ -160,6 +160,11 @@
     --achivs-background: #fff;
     --achiv-shadow: rgba(0, 0, 0, .15);
 
+    /* User Qr Code */
+
+    --user-qrcode-button-bg: #7765dd;
+    --user-qrcode-button-bg-hover: #6352c1;
+
     /* Trix */
 
     --trix-button-accent: #4e96ff;

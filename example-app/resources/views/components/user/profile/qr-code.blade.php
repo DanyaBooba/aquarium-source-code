@@ -14,7 +14,7 @@
                     title="{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}"></div>
             </div>
             <div class="modal-footer">
-                <button type="button" id="button-qrcode-copy" class="btn btn-dark"
+                <button type="button" id="button-qrcode-copy" class="btn btn-primary"
                     onClick="buttonQrcode('{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}', 'button-qrcode-copy')">
                     {{ __('Скопировать') }}
                 </button>
