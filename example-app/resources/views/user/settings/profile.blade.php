@@ -12,37 +12,35 @@
 
     <form action="" onsubmit="sendForm('{{ route('settings') }}')" method="post">
         @csrf
-        <p class="text-title">
+        <p class="text-title mt-4">
             {{ __('Имя и фамилия') }}
         </p>
-        <div class="settings-form-block">
-            <div>
-                <label for="firstName" class="form-label">{{ __('Имя') }}</label>
-                <input type="text" name="firstName" class="form-control" id="firstName" value="{{ $profile->firstName }}"
-                    placeholder="{{ __('Даниил') }}" onInput="data()">
-            </div>
-            <div>
-                <label for="lastName" class="form-label">{{ __('Фамилия') }}</label>
-                <input type="text" name="lastName" class="form-control" id="lastName" value="{{ $profile->lastName }}"
-                    placeholder="{{ __('Иванов') }}" onInput="data()">
-            </div>
+        <div class="form-floating">
+            <input type="text" name="firstName" class="form-control" id="firstName" value="{{ $profile->firstName }}"
+                placeholder="{{ __('Даниил') }}" onInput="data()">
+            <label for="firstName" class="form-label">{{ __('Имя') }}</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" name="lastName" class="form-control" id="lastName" value="{{ $profile->lastName }}"
+                placeholder="{{ __('Иванов') }}" onInput="data()">
+            <label for="lastName" class="form-label">{{ __('Фамилия') }}</label>
         </div>
 
-        <p class="text-title">
+        <p class="text-title mt-4">
             {{ __('Сведения') }}
         </p>
-        <div>
-            <label for="username" class="form-label">{{ __('Имя пользователя') }}</label>
+        <div class="form-floating">
             <input type="text" name="username" class="form-control" id="username"
                 placeholder="{{ __('К примеру,') }} superman" onInput="data()" value="{{ $profile->username }}">
+            <label for="username" class="form-label">{{ __('Имя пользователя') }}</label>
             <p>
-                {{ __('Может содержать только латинские буквы в нижнем регистре и цифры.') }}
+                {!! __('Может содержать только латинские буквы в нижнем регистре <nobr>и цифры</nobr>.') !!}
             </p>
         </div>
-        <div>
-            <label for="desc" class="form-label">{{ __('Описание') }}</label>
+        <div class="form-floating">
             <input type="text" name="desc" class="form-control" id="desc" value="{{ $profile->desc }}"
                 placeholder="{{ __('Пару слов о вас') }}" onInput="data()">
+            <label for="desc" class="form-label">{{ __('Описание') }}</label>
             <p>
                 {{ __('Краткая информация о вас, к примеру возраст, город проживания, сфера деятельности.') }}
             </p>
@@ -55,7 +53,7 @@
         </div>
     </form>
 
-    <p class="text-title">
+    <p class="text-title mt-5">
         {{ __('Восстановить доступ') }}
     </p>
 

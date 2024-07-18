@@ -508,7 +508,7 @@
     "Добро пожаловать!": "Welcome!",
     "Переключить аккаунт": "Switch account",
     "Сведения": "Information",
-    "Может содержать только латинские буквы в нижнем регистре и цифры.": "Can only contain lower case Latin letters and numbers.",
+    "Может содержать только латинские буквы в нижнем регистре <nobr>и цифры</nobr>.": "Can only contain lower case Latin letters <nobr>and numbers</nobr>.",
     "Описание": "Description",
     "Пару слов о вас": "A few words about you",
     "Краткая информация о вас, к примеру возраст, город проживания, сфера деятельности.": "Brief information about you, e.g. age, city of residence, field of activity.",
@@ -554,5 +554,9 @@
     "Аквариума": "Aquarium",
     "Реализовали за всё время": "Realized for the whole time",
     "Обновленный": "Updated",
-    "переход": "update"
+    "переход": "update",
+    "Всегда темная": "Always dark",
+    "Всегда светлая": "Always light",
+    "Системная": "System",
+    "Настройки темы": "Theme Settings"
 }
