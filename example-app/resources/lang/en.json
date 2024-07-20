@@ -558,5 +558,14 @@
     "Всегда темная": "Always dark",
     "Всегда светлая": "Always light",
     "Системная": "System",
-    "Настройки темы": "Theme Settings"
+    "Настройки темы": "Theme Settings",
+    "Ваш профиль не видят другие, подтвердите аккаунт через письмо.": "Your profile is not being seen by others, confirm your account via email.",
+    "Отправить письмо повторно": "Resend the letter",
+    "Если зарегистрироваться, можно получить больше возможностей.": "If you register, you can get more opportunities.",
+    "Импортируйте записи из других соцсетей": "Import records from other social networks",
+    "Для этого достаточно просто поделиться ссылкой на пост.": "All you have to do is simply share the link to the post.",
+    "Импортировать посты": "Import posts",
+    "Имя и фамилия": "First and last name",
+    "Изменение данных": "Data change",
+    "По умолчанию": "Default"
 }
