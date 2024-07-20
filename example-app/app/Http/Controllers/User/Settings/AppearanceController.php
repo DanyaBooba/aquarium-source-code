@@ -39,6 +39,12 @@ class AppearanceController extends Controller
         return redirect()->route('settings.appearance')->with('alert.success', __('Сохранено!'));
     }
 
+    public function test()
+    {
+        // http://localhost/user/settings/test
+        return view('user.settings.test');
+    }
+
     public function loadfile(Request $request)
     {
         dd('load file');
