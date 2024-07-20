@@ -5,7 +5,7 @@
         {{ __('Тест!') }}
     </x-settings.header>
 
-    <form action="{{ route('settings.appearance.loadfile') }}" method="post" enctype="multipart/form-data">
+    <form action="" method="post" enctype="multipart/form-data">
         @csrf
 
         <p class="text-title">

@@ -29,10 +29,14 @@ class LoginController extends Controller
     {
         $yandexUri = oauth_yandex_link_second();
         $googleUri = oauth_google_link_second();
+        $vkUri = oauth_vk_link_second();
+        $githubUri = oauth_github_link_second();
 
         return view('sign.second.in.index', [
             'yandexUri' => $yandexUri,
             'googleUri' => $googleUri,
+            'vkUri' => $vkUri,
+            'githubUri' => $githubUri,
         ]);
     }
 
@@ -56,7 +60,8 @@ class LoginController extends Controller
         $findUser = User::where('email', $validated['email'])->first();
 
         if ($findUser === null) {
-            return redirect()->back()->withInput($validated)->withErrors(['user' => __('Неверно заполнены поля.')
+            return redirect()->back()->withInput($validated)->withErrors([
+                'user' => __('Неверно заполнены поля.')
             ]);
         }
 
@@ -144,7 +149,8 @@ class LoginController extends Controller
         }
 
         if ($passwordConfirm === false) {
-            return redirect()->back()->withInput($validated)->withErrors(['password' => __('Неверно заполнены поля.')
+            return redirect()->back()->withInput($validated)->withErrors([
+                'password' => __('Неверно заполнены поля.')
             ]);
         }
 

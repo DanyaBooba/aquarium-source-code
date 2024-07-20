@@ -69,8 +69,9 @@ class Kernel extends HttpKernel
 
         'log' => \App\Http\Middleware\App\LogMiddleware::class,
         'login.session' => \App\Http\Middleware\Auth\LoginMiddleware::class,
-        'login.admin' => \App\Http\Middleware\User\AdminMiddleware::class,
         'unlogin' => \App\Http\Middleware\Auth\GuestMiddleware::class,
+        'login.no-test' => \App\Http\Middleware\Auth\NoTestMiddleware::class,
+        'login.admin' => \App\Http\Middleware\User\AdminMiddleware::class,
         'user.verified' => \App\Http\Middleware\User\VerifiedMiddleware::class,
         'user.blocked' => \App\Http\Middleware\User\BlockUserMiddleware::class,
     ];

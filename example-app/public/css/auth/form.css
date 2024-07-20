@@ -82,7 +82,7 @@
 
     justify-content: center;
     align-items: center;
-    text-decoration: none;
+    /* text-decoration: none; */
 
     color: var(--text-color);
     background-color: var(--body-bg);
@@ -104,7 +104,8 @@
 
     color: var(--text-color);
     background-color: var(--body-bg-white);
-    border: .1rem solid var(--auth-choose-bg);
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
+    /* border: .1rem solid var(--auth-choose-bg); */
 
     border-radius: 8px;
     padding-top: 1rem;
@@ -127,7 +128,8 @@
 
     color: var(--text-color);
     background-color: var(--body-bg);
-    border: .1rem solid var(--auth-choose-bg);
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
+    /* border: .1rem solid var(--auth-choose-bg); */
 
     border-radius: 8px;
     padding-top: 1rem;
@@ -137,7 +139,6 @@
 }
 
 .authentication #signin-choose .d-flex div#signin-choose-yandex button {
-    /* border-color: #fc3f1e !important; */
     background-color: var(--body-bg-white);
 }
 
@@ -179,9 +180,9 @@
 
 .authentication #signin-choose .signin-choose-or-background {
     margin-left: 1rem;
-        margin-right: 1rem;
+    margin-right: 1rem;
 
-        border-bottom: .1rem solid var(--auth-choose-border);
+    border-bottom: .1rem solid var(--auth-choose-border);
     margin-top: 20px;
     margin-bottom: 16px !important;
 }

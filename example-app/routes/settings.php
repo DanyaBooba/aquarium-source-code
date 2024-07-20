@@ -31,7 +31,6 @@ Route::prefix('user/settings')->middleware(
     Route::get('appearance', [AppearanceController::class, 'index'])->name('settings.appearance');
     Route::post('appearance', [AppearanceController::class, 'store'])->name('settings.appearance.store');
 
-    Route::post('appearance', [AppearanceController::class, 'loadfile'])->name('settings.appearance.loadfile');
-
     Route::get('test', [AppearanceController::class, 'test']);
+    Route::post('test', [AppearanceController::class, 'loadfile']);
 });
