@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\User\Settings\AppearanceController;
+use App\Http\Controllers\User\Settings\AppearanceLoadFileController;
 use App\Http\Controllers\User\Settings\NotificationsController;
 use App\Http\Controllers\User\Settings\ProfileController;
 use App\Http\Controllers\User\Settings\ProfileEmailController;
@@ -31,6 +32,5 @@ Route::prefix('user/settings')->middleware(
     Route::get('appearance', [AppearanceController::class, 'index'])->name('settings.appearance');
     Route::post('appearance', [AppearanceController::class, 'store'])->name('settings.appearance.store');
 
-    Route::get('test', [AppearanceController::class, 'test']);
-    Route::post('test', [AppearanceController::class, 'loadfile']);
+    Route::post('appearance/loadfile', [AppearanceLoadFileController::class, 'store'])->name('settings.appearance.loadfile');
 });

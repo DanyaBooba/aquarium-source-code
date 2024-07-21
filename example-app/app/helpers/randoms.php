@@ -37,6 +37,31 @@ if (!function_exists('random_password')) {
     }
 }
 
+if (!function_exists('random_image_path')) {
+    function random_image_path(int $userid, string $extension): string
+    {
+        $length = 25;
+        $lengthToSeparate = 5;
+        $separate = '-';
+        $permitted = '0123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKMNOPQRSTUVWXYZ';
+
+        $input_length = strlen($permitted);
+        $random_string = '';
+        for ($i = 0; $i < $length; $i++) {
+            $random_character = $permitted[mt_rand(0, $input_length - 1)];
+            $random_string .= $random_character;
+        }
+
+        $code =
+            implode($separate, str_split($random_string, $lengthToSeparate)) .
+            $separate . sprintf("%05d", $userid) .
+            $separate . implode($separate, str_split(time(), $lengthToSeparate)) .
+            '.' . $extension;
+
+        return $code;
+    }
+}
+
 if (!function_exists('random_code')) {
     function random_code(int $length): int
     {

@@ -9,26 +9,46 @@
 
     <x-form.error-first />
 
-    {{-- <form action="{{ route('settings.appearance.loadfile') }}" method="post" enctype="multipart/form-data" class="mb-4">
+    <p class="text-title">
+        {{ __('Загрузить') }}
+    </p>
+
+    <form action="{{ route('settings.appearance.loadfile') }}" method="post" enctype="multipart/form-data"
+        class="form-settings-image">
         @csrf
+        <div class="row row-settings-avatar">
+            <div class="col col-load">
+                <input class="form-control visually-hidden" name="avatar" type="file" id="avatarLoad"
+                    onInput="loadAvatar()">
+                <label for="avatarLoad" class="form-label">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M8 12h8" />
+                        <path d="M12 8v8" />
+                    </svg>
+                    {{ __('Загрузить') }}
+                </label>
+            </div>
+            @if ($profile->avatarDefault == false)
+                <div class="col">
+                    <input class="form-check-input visually-hidden" type="radio" name="icon" id="icon"
+                        value="0" onInput="data()" checked>
+                    <label class="list-group-item list-group-item-another" for="icon">
+                        <img src="{{ $profile->avatar }}">
+                    </label>
+                </div>
+            @endif
+        </div>
+    </form>
 
-        <p class="text-title">
-            Загрузка изображения
-        </p>
-
-        <input type="file" name="image">
-
-        <button type="submit" class="btn btn-primary">
-            Отправить форму
-        </button>
-    </form> --}}
+    <p class="text-title mt-4">
+        {{ __('Аватарка') }}
+    </p>
 
     <form action="{{ route('settings.appearance.store') }}" onsubmit="sendForm('{{ route('settings') }}')" method="post"
         class="form-settings-image">
         @csrf
-        <p class="text-title">
-            {{ __('Аватарка') }}
-        </p>
         <div class="row row-settings-avatar">
             @for ($i = 1; $i <= 7; $i++)
                 <div class="col">
@@ -40,6 +60,8 @@
                     </label>
                 </div>
             @endfor
+        </div>
+        <div class="row row-settings-avatar">
             @for ($i = 1; $i <= 7; $i++)
                 <div class="col">
                     <input class="form-check-input visually-hidden" type="radio" name="icon"
@@ -50,30 +72,8 @@
                     </label>
                 </div>
             @endfor
-            @if ($profile->avatarDefault == false)
-                <div class="col">
-                    <input class="form-check-input visually-hidden" type="radio" name="icon"
-                        id="icon{{ $i + 1 }}" value="0" onInput="data()" checked>
-                    <label class="list-group-item list-group-item-another" for="icon{{ $i + 1 }}">
-                        <img src="{{ $profile->avatar }}">
-                    </label>
-                </div>
-            @endif
-            <div class="col">
-                <button class="form-check-input" onInput="data()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M8 12h8" />
-                        <path d="M12 8v8" />
-                    </svg>
-                    <p>
-                        Загрузить
-                    </p>
-                </button>
-            </div>
         </div>
-        <p class="text-title">
+        <p class="text-title mt-4">
             {{ __('Шапка') }}
         </p>
         <div class="row row-settings-cap">

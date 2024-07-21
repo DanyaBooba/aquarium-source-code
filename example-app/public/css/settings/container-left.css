@@ -27,6 +27,31 @@
     max-width: 500px;
 }
 
+.container-settings form.form-settings-image .col-load {
+    background-color: var(--form-input-background) !important;
+    border-radius: 12px;
+    width: 130px;
+    height: 130px !important;
+}
+
+.container-settings form.form-settings-image .col-load label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 12px !important;
+    font-size: .875rem;
+    height: 100%;
+
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.container-settings form.form-settings-image .col-load label svg {
+    margin-bottom: .5rem;
+    stroke: var(--text-muted);
+}
+
 .container-settings form.form-settings-image .col label {
     background-color: transparent;
     border-radius: 0;
@@ -68,7 +93,7 @@
 
 .container-settings form.form-settings-image .row.row-settings-avatar .col label {
     background-color: var(--form-input-background) !important;
-    border-radius: 50% !important;
+    border-radius: 50%;
 }
 
 .container-settings form.form-settings-image .row.row-settings-cap .col label {
@@ -177,6 +202,14 @@
 
     .container-settings form.form-settings-image .row.row-settings-avatar .col button:hover p {
         color: var(--text-color);
+    }
+
+    .container-settings form.form-settings-image .col-load:hover label {
+        color: var(--text-color) !important;
+    }
+
+    .container-settings form.form-settings-image .col-load:hover label svg {
+        stroke: var(--text-color);
     }
 }
 

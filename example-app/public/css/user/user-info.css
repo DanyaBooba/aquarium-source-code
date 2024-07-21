@@ -1,8 +1,8 @@
 .profile-info {
     display: flex;
     overflow: scroll;
-    margin-top: .5rem;
     margin-bottom: 1rem;
+    padding: .2rem 0;
 }
 
 .profile-info::-webkit-scrollbar {
