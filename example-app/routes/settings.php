@@ -6,6 +6,7 @@ use App\Http\Controllers\User\Settings\NotificationsController;
 use App\Http\Controllers\User\Settings\ProfileController;
 use App\Http\Controllers\User\Settings\ProfileEmailController;
 use App\Http\Controllers\User\Settings\ProfilePasswordController;
+use App\Http\Controllers\User\Settings\SessionController;
 use App\Http\Controllers\User\SettingsController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,4 +34,7 @@ Route::prefix('user/settings')->middleware(
     Route::post('appearance', [AppearanceController::class, 'store'])->name('settings.appearance.store');
 
     Route::post('appearance/loadfile', [AppearanceLoadFileController::class, 'store'])->name('settings.appearance.loadfile');
+
+    Route::get('session', [SessionController::class, 'index'])->name('settings.session');
+    Route::post('session', [SessionController::class, 'store'])->name('settings.session.store');
 });

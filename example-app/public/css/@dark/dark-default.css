@@ -130,6 +130,9 @@
     --settings-main-border: #333060;
     --settings-main-svg: #fff;
     --settings-background-profile: #718093;
+    --settings-background-home: #576574;
+    --settings-background-exit: #e84118;
+    --settings-background-session: #10ac84;
     --settings-background-notifications: #e84118;
     --settings-background-privacy: #0097e6;
     --settings-background-data: #0be881;

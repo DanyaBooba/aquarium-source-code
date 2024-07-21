@@ -123,6 +123,18 @@
     background-color: var(--settings-background-profile);
 }
 
+.container-settings .container-settings-main ul li a.settings-home > svg {
+    background-color: var(--settings-background-home);
+}
+
+.container-settings .container-settings-main ul li a.settings-exit > svg {
+    background-color: var(--settings-background-exit);
+}
+
+.container-settings .container-settings-main ul li a.settings-session > svg {
+    background-color: var(--settings-background-session);
+}
+
 /* media */
 
 @media(min-width: 575.98px) {
