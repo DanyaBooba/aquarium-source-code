@@ -42,13 +42,17 @@ class AppearanceController extends Controller
     public function test()
     {
         // http://localhost/user/settings/test
+
         return view('user.settings.test');
     }
 
     public function loadfile(Request $request)
     {
-        dd('load file');
+        $image = $request->file('image');
+        $path = $image->store('loads', 'image_load');
 
-        return "123";
+        return view('user.settings.test', [
+            'path' => $path
+        ]);
     }
 }

@@ -18,4 +18,8 @@
             Отправить форму
         </button>
     </form>
+
+    @isset($path)
+        <img src="{{ asset($path) }}" alt="">
+    @endisset
 @endsection
