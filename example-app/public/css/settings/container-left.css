@@ -30,7 +30,6 @@
 .container-settings form.form-settings-image .col-load {
     background-color: var(--form-input-background) !important;
     border-radius: 12px;
-    width: 130px;
     height: 130px !important;
 }
 
