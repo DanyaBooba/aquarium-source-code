@@ -1,5 +1,5 @@
-@extends('layouts.error')
+@extends('errors::minimal')
 
-@section('error', '403')
-
-@section('message', __($exception->getMessage() ?: 'Доступ к запрашиваемой странице запрещён'))
+@section('title', __('Forbidden'))
+@section('code', '403')
+@section('message', __($exception->getMessage() ?: 'Forbidden'))

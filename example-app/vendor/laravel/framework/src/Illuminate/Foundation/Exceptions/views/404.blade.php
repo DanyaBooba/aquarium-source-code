@@ -1,5 +1,5 @@
-@extends('layouts.error')
+@extends('errors::minimal')
 
-@section('error', '404')
-
-@section('message', __('Не найдено'))
+@section('title', __('Not Found'))
+@section('code', '404')
+@section('message', __('Not Found'))
