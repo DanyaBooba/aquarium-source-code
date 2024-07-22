@@ -38,7 +38,7 @@ Route::prefix('user/settings')->middleware(
     Route::get('session', [SessionController::class, 'index'])->name('settings.session');
     Route::post('session', [SessionController::class, 'store'])->name('settings.session.store');
 
-    Route::get('test', [App\Http\Controllers\TestController::class, 'index']);
-    Route::post('test', [App\Http\Controllers\TestController::class, 'store']);
-    Route::post('test/2', [App\Http\Controllers\TestController::class, 'test2']);
+    Route::get('test', [App\Http\Controllers\TestController::class, 'test']);
+    // Route::post('test', [App\Http\Controllers\TestController::class, 'store']);
+    // Route::post('test/2', [App\Http\Controllers\TestController::class, 'test2']);
 });

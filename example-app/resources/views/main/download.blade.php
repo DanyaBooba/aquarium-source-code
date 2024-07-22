@@ -11,7 +11,7 @@
 
     <div class="container page-download">
         <div class="row row-cols-1 g-3">
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="p-3 page-download__container">
                     <div class="d-flex align-items-end justify-content-center pb-2 mt-auto">
                         <a href="{{ route('main') }}" aria-label="{{ __('Перейти в веб-интерфейс') }}"
@@ -25,7 +25,7 @@
                     </h2>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="p-3 page-download__container">
                     <div class="d-flex h-100 align-items-end justify-content-center pb-2 mt-auto">
                         <a href="{{ route('main') }}" aria-label="{{ __('Перейти в веб-интерфейс') }}">
@@ -34,7 +34,20 @@
                         </a>
                     </div>
                     <h2>
-                        {{ __('iOS приложение') }}
+                        {{ __('iOS') }}
+                    </h2>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3 page-download__container">
+                    <div class="d-flex h-100 align-items-end justify-content-center pb-2 mt-auto">
+                        <a href="{{ route('main') }}" aria-label="{{ __('Перейти в веб-интерфейс') }}">
+                            <img src="{{ asset('img/main/android-' . (App::isLocale('ru') ? 'ru' : 'en') . '.png') }}"
+                                class="img-fluid" width="210" aria-label="{{ __('Телефон со страницей сайта') }}">
+                        </a>
+                    </div>
+                    <h2>
+                        {{ __('Android') }}
                     </h2>
                 </div>
             </div>

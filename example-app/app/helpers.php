@@ -22,6 +22,7 @@ require_once "helpers/user/auth.php";
 require_once "helpers/user/verify.php";
 require_once "helpers/user/image.php";
 require_once "helpers/user/random-data.php";
+require_once "helpers/user/image-size.php";
 
 require_once "helpers/user/lists/white-id-posts.php";
 require_once "helpers/user/lists/black_usernames.php";
@@ -29,6 +30,7 @@ require_once "helpers/user/lists/black_usernames.php";
 require_once "helpers/user/links/oauth.php";
 
 require_once "helpers/user/default/settings.php";
+require_once "helpers/user/default/image.php";
 
 require_once "helpers/user/routes/route-user.php";
 

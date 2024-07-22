@@ -22,17 +22,23 @@ class AppearanceController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'bg' => ['required', 'integer', 'min:1', 'max:11'],
-            'icon' => ['required', 'string', 'min:4', 'max:12'],
+            'bg' => ['nullable', 'integer', 'min:1', 'max:11'],
+            'icon' => ['nullable', 'string', 'min:4', 'max:12'],
         ]);
 
         $user = User::where('email', '=', session('email'))->first();
 
-        $user->avatarDefault = $validated['icon'] != 0;
-        $user->capDefault = $validated['bg'] != 0;
+        $hasAvatar = !empty($validated['icon']);
+        if ($hasAvatar) {
+            $user->avatarDefault = $validated['icon'] != 0;
+            if ($validated['icon'] != 0) $user->avatar = $validated['icon'];
+        }
 
-        if ($validated['icon'] != 0) $user->avatar = $validated['icon'];
-        if ($validated['bg'] != 0) $user->cap = 'BG' . $validated['bg'];
+        $hasCap = !empty($validated['bg']);
+        if ($hasCap) {
+            $user->capDefault = $validated['bg'] != 0;
+            if ($validated['bg'] != 0) $user->cap = 'BG' . $validated['bg'];
+        }
 
         $user->save();
 

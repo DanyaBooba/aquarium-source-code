@@ -58,6 +58,6 @@ class MainRouteController extends Controller
 
     public function smi()
     {
-        return view('main.history');
+        return view('main.smi');
     }
 }

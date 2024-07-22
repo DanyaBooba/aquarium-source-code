@@ -38,13 +38,13 @@ $(document).ready(function() {
             size: 'viewport'
         }).then(function(resp) {
             $.ajax({
-                url: "/user/settings/test/2",
+                url: "/user/settings/appearance/loadfile",
                 type: "POST",
                 data: {
                     "image": resp
                 },
-                success: function(data) {
-                    hideAvatar()
+                success: function (data) {
+                    window.open('/user/settings', '_self')
                 }
             });
         });

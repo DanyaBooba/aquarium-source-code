@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function index()
+    public function test()
     {
         return view('user.settings.test');
     }
@@ -44,6 +44,10 @@ class TestController extends Controller
     {
         $data = $request->image;
 
+        if (get_image_size_from_base64($request->image) > user_max_image_size()) {
+            abort(403);
+        }
+
         list($type, $data) = explode(';', $data);
         list(, $data) = explode(',', $data);
 
@@ -70,10 +74,9 @@ class TestController extends Controller
 
         return response()->json([
             'success' => 'done',
-            'path' => $path,
-            'imageName' => $imageName,
-            'fullPath' => strval($fullPath),
-            'type' => $type
+            'data' => $request->image,
+            'size' => get_image_size_from_base64($request->image),
+            'max' => get_image_size_from_base64($request->image) > user_max_image_size(),
         ]);
     }
 }
