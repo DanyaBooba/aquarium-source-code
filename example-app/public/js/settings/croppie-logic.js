@@ -5,14 +5,14 @@ $(document).ready(function() {
         }
     })
 
-    $uploadCrop = $('#upload-demo').croppie({
+    $uploadCrop = $('#upload-avatar').croppie({
         viewport: {
             width: 200,
             height: 200,
             type: 'circle'
         },
         boundary: {
-            width: 300,
+            width: 'auto',
             height: 300
         }
     })
@@ -29,7 +29,7 @@ $(document).ready(function() {
         reader.readAsDataURL(this.files[0])
     })
 
-    $(document).on('click', '.upload-result', function (ev) {
+    $(document).on('click', '#upload-avatar-button', function (ev) {
         $uploadCrop.croppie('result', {
             type: 'canvas',
             size: 'viewport'
