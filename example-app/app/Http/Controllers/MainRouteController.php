@@ -55,4 +55,9 @@ class MainRouteController extends Controller
     {
         return view('main.history');
     }
+
+    public function smi()
+    {
+        return view('main.history');
+    }
 }

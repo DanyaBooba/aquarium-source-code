@@ -25,7 +25,12 @@
                     <li><a href="{{ route('main.history') }}"
                             class="nav-link {{ header_route_active_link('main.history') }}">{{ __('История') }}</a>
                     </li>
-                    {{-- <li><a href="{{ route('blog.index') }}" class="nav-link {{ header_route_visible_link('blog.index') }}">{{ __('Новости') }}</a></li> --}}
+                    <li><a href="{{ route('blog.index') }}"
+                            class="nav-link {{ header_route_visible_link('blog.index') }}">{{ __('Новости') }}</a>
+                    </li>
+                    <li><a href="{{ route('blog.index') }}"
+                            class="nav-link {{ header_route_visible_link('main.smi') }}">{{ __('СМИ') }}</a>
+                    </li>
                     <li><a href="{{ route('main.api') }}"
                             class="nav-link {{ header_route_visible_link('main.api') }}">{{ __('API') }}</a></li>
                     <li><a href="{{ route('main.oauth') }}"
