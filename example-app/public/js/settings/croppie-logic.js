@@ -6,9 +6,6 @@ $(document).ready(function() {
     })
 
     $uploadCrop = $('#upload-demo').croppie({
-        // enableExif: true,
-        // enforceBoundary: false,
-        // mouseWheelZoom: false,
         viewport: {
             width: 200,
             height: 200,
@@ -27,7 +24,7 @@ $(document).ready(function() {
                 url: e.target.result
             }).then(function() {
 
-            });
+            })
         }
         reader.readAsDataURL(this.files[0])
     })
@@ -38,15 +35,15 @@ $(document).ready(function() {
             size: 'viewport'
         }).then(function(resp) {
             $.ajax({
-                url: "/user/settings/appearance/loadfile",
-                type: "POST",
+                url: '/user/settings/appearance/load/avatar',
+                type: 'POST',
                 data: {
-                    "image": resp
+                    'image': resp
                 },
                 success: function (data) {
                     window.open('/user/settings', '_self')
                 }
-            });
-        });
-    });
-});
+            })
+        })
+    })
+})

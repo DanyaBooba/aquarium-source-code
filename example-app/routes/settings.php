@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\User\Settings\AppearanceController;
+use App\Http\Controllers\User\Settings\AppearanceLoadAvatarController;
+use App\Http\Controllers\User\Settings\AppearanceLoadCapController;
 use App\Http\Controllers\User\Settings\AppearanceLoadFileController;
 use App\Http\Controllers\User\Settings\NotificationsController;
 use App\Http\Controllers\User\Settings\ProfileController;
@@ -33,7 +35,8 @@ Route::prefix('user/settings')->middleware(
     Route::get('appearance', [AppearanceController::class, 'index'])->name('settings.appearance');
     Route::post('appearance', [AppearanceController::class, 'store'])->name('settings.appearance.store');
 
-    Route::post('appearance/loadfile', [AppearanceLoadFileController::class, 'store'])->name('settings.appearance.loadfile');
+    Route::post('appearance/load/avatar', [AppearanceLoadAvatarController::class, 'store']);
+    Route::post('appearance/load/cap', [AppearanceLoadCapController::class, 'store']);
 
     Route::get('session', [SessionController::class, 'index'])->name('settings.session');
     Route::post('session', [SessionController::class, 'store'])->name('settings.session.store');
