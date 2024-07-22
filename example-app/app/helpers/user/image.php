@@ -1,5 +1,12 @@
 <?php
 
+if (!function_exists('is_user_image_exist')) {
+    function is_user_image_exist(string $path): bool
+    {
+        return file_exists(public_path() . $path);
+    }
+}
+
 if (!function_exists('user_image_exist')) {
     function user_image_exist(string $path): string
     {

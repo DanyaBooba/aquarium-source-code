@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User\User;
 use Illuminate\Http\Request;
 
 class TestController extends Controller
@@ -46,19 +47,33 @@ class TestController extends Controller
         list($type, $data) = explode(';', $data);
         list(, $data) = explode(',', $data);
 
-        $folder = public_path() . "/upload/";
-        if (!is_dir($folder)) {
-            mkdir($folder, 0777, true);
-        }
+        $folder = public_path() . '/loads/';
+        if (!is_dir($folder)) mkdir($folder, 0777, true);
+
+        $user = User::where('email', session('email'))->first();
+
         $data = base64_decode($data);
-        $image_name = time() . '.jpg';
-        $path = $folder . $image_name;
+        $imageName = random_image_path($user->id, 'jpg');
+        $path = $folder . $imageName;
 
         file_put_contents($path, $data);
 
+        if (env('APP_ENV') == 'production') {
+            $fullPath = env('APP_URL') . '/public/loads/' . $imageName;
+        } else {
+            $fullPath = env('APP_URL') . '/loads/' . $imageName;
+        }
+
+        $user->avatar = $fullPath;
+        $user->avatarDefault = false;
+        $user->save();
+
         return response()->json([
             'success' => 'done',
-            'path' => $path
+            'path' => $path,
+            'imageName' => $imageName,
+            'fullPath' => strval($fullPath),
+            'type' => $type
         ]);
     }
 }

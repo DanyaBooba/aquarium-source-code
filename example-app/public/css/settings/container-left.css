@@ -27,13 +27,14 @@
     max-width: 500px;
 }
 
-.container-settings form.form-settings-image .col-load {
+.col-load {
     background-color: var(--form-input-background) !important;
     border-radius: 12px;
     height: 130px !important;
+    width: 130px;
 }
 
-.container-settings form.form-settings-image .col-load label {
+.col-load label {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +47,7 @@
     cursor: pointer;
 }
 
-.container-settings form.form-settings-image .col-load label svg {
+.col-load label svg {
     margin-bottom: .5rem;
     stroke: var(--text-muted);
 }
@@ -203,11 +204,11 @@
         color: var(--text-color);
     }
 
-    .container-settings form.form-settings-image .col-load:hover label {
+    .col-load:hover label {
         color: var(--text-color) !important;
     }
 
-    .container-settings form.form-settings-image .col-load:hover label svg {
+    .col-load:hover label svg {
         stroke: var(--text-color);
     }
 }
