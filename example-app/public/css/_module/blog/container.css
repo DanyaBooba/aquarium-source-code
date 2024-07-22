@@ -70,7 +70,9 @@
 }
 
 .container.container-blog .row-blog a.blog-post {
+    display: block;
     text-decoration: none;
+    margin-bottom: 1rem;
 }
 
 .container.container-blog .row-blog a.blog-post .blog-post-content p {
@@ -82,7 +84,7 @@
     display: flex;
     align-items: center;
     margin-top: auto;
-    margin-bottom: .5rem;
+    margin-bottom: 0;
 }
 
 .container.container-blog .row-blog a.blog-post:is(:focus, :focus-visible, :focus-within) .blog-post-content p {
