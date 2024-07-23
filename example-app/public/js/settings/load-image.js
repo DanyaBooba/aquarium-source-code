@@ -1,34 +1,29 @@
-function showAvatar() {
-    const upload = document.getElementById('avatar-upload-block')
-    if (upload) upload.classList.remove('d-none')
-
-    const input = document.getElementById('avatar-upload-input')
-    if (input) input.classList.add('d-none')
+function appearanceShow(blockId) {
+    const block = document.getElementById(blockId)
+    if (block) block.classList.remove('d-none')
 }
 
-function hideAvatar() {
-    const upload = document.getElementById('avatar-upload-block')
-    if (upload) upload.classList.add('d-none')
-
-    const input = document.getElementById('avatar-upload-input')
-    if (input) input.classList.remove('d-none')
+function appearanceHide(blockId) {
+    const block = document.getElementById(blockId)
+    if (block) block.classList.add('d-none')
 }
 
-function showCap() {
-    const upload = document.getElementById('cap-upload-block')
-    if (upload) upload.classList.remove('d-none')
+function getAvatar() {
+    console.log('avatar')
+    appearanceShow('avatar-upload-block')
+    appearanceHide('avatar-upload-input')
 
-    const input = document.getElementById('cap-upload-input')
-    if (input) input.classList.add('d-none')
+    appearanceHide('cap-upload-block')
+    appearanceHide('cap-upload-input')
+    appearanceShow('cap-upload-empty')
 }
 
-function hideCap() {
-    const upload = document.getElementById('cap-upload-block')
-    if (upload) upload.classList.add('d-none')
+function getCap() {
+    console.log('cap')
+    appearanceShow('cap-upload-block')
+    appearanceHide('cap-upload-input')
 
-    const input = document.getElementById('cap-upload-input')
-    if (input) input.classList.remove('d-none')
+    appearanceHide('avatar-upload-block')
+    appearanceHide('avatar-upload-input')
+    appearanceShow('avatar-upload-empty')
 }
-
-hideAvatar()
-hideCap()

@@ -28,6 +28,10 @@ class AppearanceController extends Controller
 
         $user = User::where('email', '=', session('email'))->first();
 
+        if ($user->usertype == -1) {
+            return redirect()->route('settings');
+        }
+
         $hasAvatar = !empty($validated['icon']);
         if ($hasAvatar) {
             $user->avatarDefault = $validated['icon'] != 0;

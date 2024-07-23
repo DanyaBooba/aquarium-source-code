@@ -17,15 +17,16 @@
     </p>
 
     <div class="container px-0">
-        <div class="mb-4" id="avatar-upload-block">
+        <div class="mb-4 d-none" id="avatar-upload-block">
             <div id="upload-avatar" style="max-width: 300px"></div>
-            <button class="btn btn-success" id="upload-avatar-button" style="border-radius: 6px; padding: .75rem 3rem;">
+            <button class="btn btn-success" id="upload-avatar-button"
+                style="border-radius: 6px; padding: .75rem 3rem; max-width: 300px; width: 100%">
                 {{ __('Сохранить') }}
             </button>
         </div>
         <div class="mb-4" id="avatar-upload-input">
             <div class="col col-load">
-                <input type="file" id="upload" onInput="showAvatar()" class="visually-hidden">
+                <input type="file" id="upload" onInput="getAvatar()" class="visually-hidden">
                 <label for="upload" class="form-label">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -37,6 +38,11 @@
                 </label>
             </div>
         </div>
+        <p class="d-none" id="avatar-upload-empty">
+            <i>
+                {{ __('Загрузите шапку.') }}
+            </i>
+        </p>
     </div>
 
     <p class="text-title mt-4">
@@ -44,7 +50,7 @@
     </p>
 
     <div class="container px-0">
-        <div class="mb-4" id="cap-upload-block">
+        <div class="mb-4 d-none" id="cap-upload-block">
             <div id="upload-demo" style="width: 350px"></div>
             <button class="btn btn-success upload-result">
                 {{ __('Сохранить') }}
@@ -52,7 +58,7 @@
         </div>
         <div class="mb-4" id="cap-upload-input">
             <div class="col col-load">
-                <input type="file" id="upload" onInput="showAvatar()" class="visually-hidden">
+                <input type="file" id="upload" onInput="getCap()" class="visually-hidden">
                 <label for="upload" class="form-label">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -64,6 +70,11 @@
                 </label>
             </div>
         </div>
+        <p class="text-muted d-none" id="cap-upload-empty">
+            <i>
+                {{ __('Загрузите аватарку.') }}
+            </i>
+        </p>
     </div>
 
     <p class="text-title mt-4">
@@ -75,26 +86,12 @@
         @csrf
         <div class="row row-settings-avatar">
             @for ($i = 1; $i <= 7; $i++)
-                <div class="col">
-                    <input class="form-check-input visually-hidden" type="radio" name="icon"
-                        id="icon_man_{{ $i }}" value="MAN{{ $i }}" onInput="data()"
-                        {{ user_settings_active_image_avatar('MAN' . $i, $profile->avatar) }}>
-                    <label class="list-group-item" for="icon_man_{{ $i }}">
-                        <img src="{{ asset("/img/user/logo/MAN$i.png") }}">
-                    </label>
-                </div>
+                <x-user.settings.appearance.avatar-default sex='MAN' :id="$i" :avatar="$profile->avatar" />
             @endfor
         </div>
         <div class="row row-settings-avatar">
             @for ($i = 1; $i <= 7; $i++)
-                <div class="col">
-                    <input class="form-check-input visually-hidden" type="radio" name="icon"
-                        id="icon_woman_{{ $i }}" value="WOMAN{{ $i }}" onInput="data()"
-                        {{ user_settings_active_image_avatar('WOMAN' . $i, $profile->avatar) }}>
-                    <label class="list-group-item" for="icon_woman_{{ $i }}">
-                        <img src="{{ asset("/img/user/logo/WOMAN$i.png") }}">
-                    </label>
-                </div>
+                <x-user.settings.appearance.avatar-default sex='WOMAN' :id="$i" :avatar="$profile->avatar" />
             @endfor
         </div>
         <p class="text-title mt-4">
@@ -102,14 +99,7 @@
         </p>
         <div class="row row-settings-cap">
             @for ($i = 1; $i <= 11; $i++)
-                <div class="col">
-                    <input class="form-check-input visually-hidden" type="radio" name="bg"
-                        id="bg{{ $i }}" value="{{ $i }}" onInput="data()"
-                        {{ user_settings_active_image_cap($i, $profile->cap) }}>
-                    <label class="list-group-item" for="bg{{ $i }}">
-                        <img src="{{ asset("/img/user/bg/BG$i.jpg") }}">
-                    </label>
-                </div>
+                <x-user.settings.appearance.cap-default :id="$i" :cap="$profile->cap" />
             @endfor
         </div>
 

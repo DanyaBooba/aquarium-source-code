@@ -17,13 +17,17 @@ class AppearanceLoadAvatarController extends Controller
             abort(403);
         }
 
+        $user = User::where('email', session('email'))->first();
+
+        if ($user->usertype == -1) {
+            abort(403);
+        }
+
         list($type, $data) = explode(';', $data);
         list(, $data) = explode(',', $data);
 
         $folder = public_path() . '/loads/';
         if (!is_dir($folder)) mkdir($folder, 0777, true);
-
-        $user = User::where('email', session('email'))->first();
 
         $data = base64_decode($data);
         $imageName = random_image_path($user->id, 'jpg');
