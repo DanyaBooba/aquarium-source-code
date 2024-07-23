@@ -56,7 +56,6 @@ class AppearanceLoadAvatarController extends Controller
 
         return response()->json([
             'success' => 'done',
-            'path' => $folder . $oldAvatar
         ]);
     }
 }

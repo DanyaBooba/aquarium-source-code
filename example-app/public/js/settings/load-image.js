@@ -9,7 +9,6 @@ function appearanceHide(blockId) {
 }
 
 function getAvatar() {
-    console.log('avatar')
     appearanceShow('avatar-upload-block')
     appearanceHide('avatar-upload-input')
 
@@ -19,7 +18,6 @@ function getAvatar() {
 }
 
 function getCap() {
-    console.log('cap')
     appearanceShow('cap-upload-block')
     appearanceHide('cap-upload-input')
 

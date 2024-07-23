@@ -37,13 +37,13 @@ class AppearanceLoadCapController extends Controller
             $fullPath = env('APP_URL') . '/loads/' . $imageName;
         }
 
-        $oldAvatar = explode('/', $user->avatar);
-        $oldAvatar = $oldAvatar[count($oldAvatar) - 1];
+        $oldCap = explode('/', $user->cap);
+        $oldCap = $oldCap[count($oldCap) - 1];
 
-        Storage::disk('image_load')->delete('/loads/' . $oldAvatar);
+        Storage::disk('image_load')->delete('/loads/' . $oldCap);
 
-        $user->avatar = $fullPath;
-        $user->avatarDefault = false;
+        $user->cap = $fullPath;
+        $user->capDefault = false;
         $user->save();
 
         session([
@@ -52,7 +52,6 @@ class AppearanceLoadCapController extends Controller
 
         return response()->json([
             'success' => 'done',
-            'path' => $folder . $oldAvatar
         ]);
     }
 }

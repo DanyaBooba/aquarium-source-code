@@ -45,14 +45,14 @@
         </p>
     </div>
 
-    <p class="text-title mt-4">
+    <p class="d-none text-title mt-4">
         {{ __('Загрузить шапку') }}
     </p>
 
-    <div class="container px-0">
+    <div class="d-none container px-0">
         <div class="mb-4 d-none" id="cap-upload-block">
-            <div id="upload-demo" style="width: 350px"></div>
-            <button class="btn btn-success upload-result"
+            <div id="upload-cap" style="max-width: 600px"></div>
+            <button class="btn btn-success" id="upload-cap-button"
                 style="border-radius: 6px; padding: .75rem 3rem; max-width: 300px; width: 100%">
                 {{ __('Сохранить') }}
             </button>
