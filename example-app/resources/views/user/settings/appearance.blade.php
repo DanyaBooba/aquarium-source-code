@@ -26,8 +26,8 @@
         </div>
         <div class="mb-4" id="avatar-upload-input">
             <div class="col col-load">
-                <input type="file" id="upload" onInput="getAvatar()" class="visually-hidden">
-                <label for="upload" class="form-label">
+                <input type="file" id="upload_avatar" onInput="getAvatar()" class="visually-hidden">
+                <label for="upload_avatar" class="form-label">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="10" />
@@ -38,7 +38,7 @@
                 </label>
             </div>
         </div>
-        <p class="d-none" id="avatar-upload-empty">
+        <p class="text-muted d-none" id="avatar-upload-empty">
             <i>
                 {{ __('Загрузите шапку.') }}
             </i>
@@ -52,14 +52,15 @@
     <div class="container px-0">
         <div class="mb-4 d-none" id="cap-upload-block">
             <div id="upload-demo" style="width: 350px"></div>
-            <button class="btn btn-success upload-result">
+            <button class="btn btn-success upload-result"
+                style="border-radius: 6px; padding: .75rem 3rem; max-width: 300px; width: 100%">
                 {{ __('Сохранить') }}
             </button>
         </div>
         <div class="mb-4" id="cap-upload-input">
             <div class="col col-load">
-                <input type="file" id="upload" onInput="getCap()" class="visually-hidden">
-                <label for="upload" class="form-label">
+                <input type="file" id="upload_cap" onInput="getCap()" class="visually-hidden">
+                <label for="upload_cap" class="form-label">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="10" />

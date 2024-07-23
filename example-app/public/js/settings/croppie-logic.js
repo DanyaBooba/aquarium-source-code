@@ -17,7 +17,7 @@ $(document).ready(function() {
         }
     })
 
-    $(document).on('change', '#upload', function() {
+    $(document).on('change', '#upload_avatar', function() {
         const reader = new FileReader()
         reader.onload = function(e) {
             $uploadCrop.croppie('bind', {
