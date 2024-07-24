@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class VerifyController extends Controller
 {
-    public function viewverify()
+    public function view()
     {
         $findUser = User::where('email', session('email'))->first();
 
@@ -21,20 +21,18 @@ class VerifyController extends Controller
             return redirect()->route('user');
         }
 
-        return view('user.viewverify');
+        return view('verify.view');
     }
 
-    public function setverify()
+    public function set()
     {
-        // dd('123');
-
         $code = set_new_verify();
         send_mail_verify(session('email'), $code);
 
         return redirect()->back();
     }
 
-    public function tryverify($code)
+    public function code($code)
     {
         $findUser = User::where('email', session('email'))->first();
 

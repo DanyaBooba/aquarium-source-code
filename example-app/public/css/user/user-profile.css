@@ -165,8 +165,8 @@
 }
 
 .user-profile .user-profile-buttons::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+    width: 0 !important;
+    height: 0 !important;
 }
 
 .user-profile .user-profile-buttons {
@@ -191,7 +191,6 @@
 
     color: var(--user-profile-button-text);
     background-color: var(--user-profile-button);
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
     border: none;
     border-radius: 8px;
 
@@ -222,6 +221,32 @@
     height: 20px;
 
     margin-right: .5rem;
+}
+
+.user-profile .user-profile-text p.user-profile-name::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.user-profile .user-profile-text p.user-profile-name {
+    max-width: 300px;
+
+    overflow: scroll;
+    white-space: nowrap;
+    /* text-overflow: ellipsis; */
+}
+
+.user-profile .user-profile-text p.user-profile-desc::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.user-profile .user-profile-text p.user-profile-desc {
+    max-width: 300px;
+
+    overflow: scroll;
+    white-space: nowrap;
+    /* text-overflow: ellipsis; */
 }
 
 /* media */
@@ -279,22 +304,6 @@
     .user-profile .user-profile-buttons button.user-button-mobile {
         display: block;
     }
-
-    .user-profile .user-profile-text p.user-profile-name {
-        max-width: 300px;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    .user-profile .user-profile-text p.user-profile-desc {
-        max-width: 300px;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
 }
 
 @media(min-width: 768px) {
@@ -302,22 +311,10 @@
         min-width: 380px !important;
         min-height: 156px !important;
     }
+}
 
-    .user-profile .user-profile-text p.user-profile-name {
-        max-width: 300px;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    .user-profile .user-profile-text p.user-profile-desc {
-        max-width: 300px;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+.user-profile .user-profile-buttons button:not(:disabled) {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
 }
 
 @media(hover: hover) {

@@ -99,11 +99,6 @@ class UserController extends Controller
         ]);
     }
 
-    public function trends()
-    {
-        return view('user.trends');
-    }
-
     public function delete()
     {
         return view('user.delete');

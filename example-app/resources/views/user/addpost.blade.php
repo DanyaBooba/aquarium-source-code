@@ -1,4 +1,4 @@
-@extends('layouts.user.addpost')
+@extends('layouts.user.post.add')
 
 @section('page.title', __('Добавить пост'))
 
@@ -14,7 +14,7 @@
             @else
                 <x-addpost.post-moderate />
             @endif
-            <form action="{{ route('user.addpost.post') }}" method="post">
+            <form action="{{ route('user.post.add.store') }}" method="post">
                 @csrf
                 <input id="x" type="hidden" name="message">
                 <trix-editor input="x" placeholder="{{ __('Сообщение') }}"></trix-editor>

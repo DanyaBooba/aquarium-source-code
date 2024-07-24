@@ -14,7 +14,7 @@ class AddPostController extends Controller
         $iduser = User::where('email', session('email'))->first()->id;
         $whiteList = in_array($iduser, white_id_posts());
 
-        return view('user.addpost', [
+        return view('user.post.add', [
             'whiteList' => $whiteList
         ]);
     }

@@ -20,8 +20,8 @@ class LoginMiddleware
             return redirect()->route('auth.signin');
         }
 
-        if (!user_verify() && !Route::is('user.viewverify')) {
-            return redirect()->route('user.viewverify');
+        if (!user_verify() && !Route::is('verify.view')) {
+            return redirect()->route('verify.view');
         }
 
         return $next($request);

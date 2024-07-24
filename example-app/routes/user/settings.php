@@ -41,5 +41,8 @@ Route::prefix('user/settings')->middleware(
     Route::get('session', [SessionController::class, 'index'])->name('settings.session');
     Route::post('session', [SessionController::class, 'store'])->name('settings.session.store');
 
+    Route::get('themes', [SettingsController::class, 'themes'])->name('settings.themes');
+    Route::get('language', [SettingsController::class, 'language'])->name('settings.language');
+
     // Route::get('test', [App\Http\Controllers\TestController::class, 'test']);
 });

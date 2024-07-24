@@ -1,4 +1,4 @@
-@extends('layouts.user.addpost')
+@extends('layouts.user.post.add')
 
 @section('page.title', __('Изменить пост'))
 
@@ -20,7 +20,7 @@
 
         <div class="addpost-container">
             <x-addpost.post-change />
-            <form action="{{ route('user.changepost.post') }}" method="post">
+            <form action="{{ route('user.post.change') }}" method="post">
                 @csrf
                 <input id="x" type="hidden" name="message">
                 <input type="hidden" name="idPost" value="{{ $post->idPost }}">
