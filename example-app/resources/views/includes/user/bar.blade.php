@@ -146,3 +146,236 @@
         </li>
     @endif
 </ul>
+
+{{-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <style>
+      #sidebar {
+        border-right: 1px solid black;
+        overflow-y: scroll;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="sidebar" class="col-md-2 bg-light">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              omnis doloremque quis repellat quo eum itaque fuga magnam, non
+              ratione eveniet dolor aliquam totam pariatur deleniti nisi nihil
+              fugit error? Quibusdam maiores molestias quidem blanditiis cum
+              odit velit quia ab temporibus nobis voluptatem, nihil ipsum
+              explicabo tempora iusto. Doloremque consectetur tempora ipsum modi
+              culpa atque, aliquid officia eaque blanditiis ea dicta voluptas
+              deleniti provident nobis dolore voluptatem molestias recusandae
+              expedita placeat adipisci! Minus, praesentium maiores. Corporis
+              sed ad magni enim voluptates, nobis, temporibus quibusdam
+              molestias cum quae consectetur nisi facere optio. Repudiandae,
+              nisi accusantium? Tempora in mollitia voluptatum deserunt
+              expedita.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              omnis doloremque quis repellat quo eum itaque fuga magnam, non
+              ratione eveniet dolor aliquam totam pariatur deleniti nisi nihil
+              fugit error? Quibusdam maiores molestias quidem blanditiis cum
+              odit velit quia ab temporibus nobis voluptatem, nihil ipsum
+              explicabo tempora iusto. Doloremque consectetur tempora ipsum modi
+              culpa atque, aliquid officia eaque blanditiis ea dicta voluptas
+              deleniti provident nobis dolore voluptatem molestias recusandae
+              expedita placeat adipisci! Minus, praesentium maiores. Corporis
+              sed ad magni enim voluptates, nobis, temporibus quibusdam
+              molestias cum quae consectetur nisi facere optio. Repudiandae,
+              nisi accusantium? Tempora in mollitia voluptatum deserunt
+              expedita.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              omnis doloremque quis repellat quo eum itaque fuga magnam, non
+              ratione eveniet dolor aliquam totam pariatur deleniti nisi nihil
+              fugit error? Quibusdam maiores molestias quidem blanditiis cum
+              odit velit quia ab temporibus nobis voluptatem, nihil ipsum
+              explicabo tempora iusto. Doloremque consectetur tempora ipsum modi
+              culpa atque, aliquid officia eaque blanditiis ea dicta voluptas
+              deleniti provident nobis dolore voluptatem molestias recusandae
+              expedita placeat adipisci! Minus, praesentium maiores. Corporis
+              sed ad magni enim voluptates, nobis, temporibus quibusdam
+              molestias cum quae consectetur nisi facere optio. Repudiandae,
+              nisi accusantium? Tempora in mollitia voluptatum deserunt
+              expedita.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              omnis doloremque quis repellat quo eum itaque fuga magnam, non
+              ratione eveniet dolor aliquam totam pariatur deleniti nisi nihil
+              fugit error? Quibusdam maiores molestias quidem blanditiis cum
+              odit velit quia ab temporibus nobis voluptatem, nihil ipsum
+              explicabo tempora iusto. Doloremque consectetur tempora ipsum modi
+              culpa atque, aliquid officia eaque blanditiis ea dicta voluptas
+              deleniti provident nobis dolore voluptatem molestias recusandae
+              expedita placeat adipisci! Minus, praesentium maiores. Corporis
+              sed ad magni enim voluptates, nobis, temporibus quibusdam
+              molestias cum quae consectetur nisi facere optio. Repudiandae,
+              nisi accusantium? Tempora in mollitia voluptatum deserunt
+              expedita.
+            </p>
+          </div>
+          <div class="col-md-10 ms-auto" id="map">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              omnis doloremque quis repellat quo eum itaque fuga magnam, non
+              ratione eveniet dolor aliquam totam pariatur deleniti nisi nihil
+              fugit error? Quibusdam maiores molestias quidem blanditiis cum
+              odit velit quia ab temporibus nobis voluptatem, nihil ipsum
+              explicabo tempora iusto. Doloremque consectetur tempora ipsum modi
+              culpa atque, aliquid officia eaque blanditiis ea dicta voluptas
+              deleniti provident nobis dolore voluptatem molestias recusandae
+              expedita placeat adipisci! Minus, praesentium maiores. Corporis
+              sed ad magni enim voluptates, nobis, temporibus quibusdam
+              molestias cum quae consectetur nisi facere optio. Repudiandae,
+              nisi accusantium? Tempora in mollitia voluptatum deserunt
+              expedita.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              omnis doloremque quis repellat quo eum itaque fuga magnam, non
+              ratione eveniet dolor aliquam totam pariatur deleniti nisi nihil
+              fugit error? Quibusdam maiores molestias quidem blanditiis cum
+              odit velit quia ab temporibus nobis voluptatem, nihil ipsum
+              explicabo tempora iusto. Doloremque consectetur tempora ipsum modi
+              culpa atque, aliquid officia eaque blanditiis ea dicta voluptas
+              deleniti provident nobis dolore voluptatem molestias recusandae
+              expedita placeat adipisci! Minus, praesentium maiores. Corporis
+              sed ad magni enim voluptates, nobis, temporibus quibusdam
+              molestias cum quae consectetur nisi facere optio. Repudiandae,
+              nisi accusantium? Tempora in mollitia voluptatum deserunt
+              expedita.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              omnis doloremque quis repellat quo eum itaque fuga magnam, non
+              ratione eveniet dolor aliquam totam pariatur deleniti nisi nihil
+              fugit error? Quibusdam maiores molestias quidem blanditiis cum
+              odit velit quia ab temporibus nobis voluptatem, nihil ipsum
+              explicabo tempora iusto. Doloremque consectetur tempora ipsum modi
+              culpa atque, aliquid officia eaque blanditiis ea dicta voluptas
+              deleniti provident nobis dolore voluptatem molestias recusandae
+              expedita placeat adipisci! Minus, praesentium maiores. Corporis
+              sed ad magni enim voluptates, nobis, temporibus quibusdam
+              molestias cum quae consectetur nisi facere optio. Repudiandae,
+              nisi accusantium? Tempora in mollitia voluptatum deserunt
+              expedita.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              omnis doloremque quis repellat quo eum itaque fuga magnam, non
+              ratione eveniet dolor aliquam totam pariatur deleniti nisi nihil
+              fugit error? Quibusdam maiores molestias quidem blanditiis cum
+              odit velit quia ab temporibus nobis voluptatem, nihil ipsum
+              explicabo tempora iusto. Doloremque consectetur tempora ipsum modi
+              culpa atque, aliquid officia eaque blanditiis ea dicta voluptas
+              deleniti provident nobis dolore voluptatem molestias recusandae
+              expedita placeat adipisci! Minus, praesentium maiores. Corporis
+              sed ad magni enim voluptates, nobis, temporibus quibusdam
+              molestias cum quae consectetur nisi facere optio. Repudiandae,
+              nisi accusantium? Tempora in mollitia voluptatum deserunt
+              expedita.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              omnis doloremque quis repellat quo eum itaque fuga magnam, non
+              ratione eveniet dolor aliquam totam pariatur deleniti nisi nihil
+              fugit error? Quibusdam maiores molestias quidem blanditiis cum
+              odit velit quia ab temporibus nobis voluptatem, nihil ipsum
+              explicabo tempora iusto. Doloremque consectetur tempora ipsum modi
+              culpa atque, aliquid officia eaque blanditiis ea dicta voluptas
+              deleniti provident nobis dolore voluptatem molestias recusandae
+              expedita placeat adipisci! Minus, praesentium maiores. Corporis
+              sed ad magni enim voluptates, nobis, temporibus quibusdam
+              molestias cum quae consectetur nisi facere optio. Repudiandae,
+              nisi accusantium? Tempora in mollitia voluptatum deserunt
+              expedita.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              omnis doloremque quis repellat quo eum itaque fuga magnam, non
+              ratione eveniet dolor aliquam totam pariatur deleniti nisi nihil
+              fugit error? Quibusdam maiores molestias quidem blanditiis cum
+              odit velit quia ab temporibus nobis voluptatem, nihil ipsum
+              explicabo tempora iusto. Doloremque consectetur tempora ipsum modi
+              culpa atque, aliquid officia eaque blanditiis ea dicta voluptas
+              deleniti provident nobis dolore voluptatem molestias recusandae
+              expedita placeat adipisci! Minus, praesentium maiores. Corporis
+              sed ad magni enim voluptates, nobis, temporibus quibusdam
+              molestias cum quae consectetur nisi facere optio. Repudiandae,
+              nisi accusantium? Tempora in mollitia voluptatum deserunt
+              expedita.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              omnis doloremque quis repellat quo eum itaque fuga magnam, non
+              ratione eveniet dolor aliquam totam pariatur deleniti nisi nihil
+              fugit error? Quibusdam maiores molestias quidem blanditiis cum
+              odit velit quia ab temporibus nobis voluptatem, nihil ipsum
+              explicabo tempora iusto. Doloremque consectetur tempora ipsum modi
+              culpa atque, aliquid officia eaque blanditiis ea dicta voluptas
+              deleniti provident nobis dolore voluptatem molestias recusandae
+              expedita placeat adipisci! Minus, praesentium maiores. Corporis
+              sed ad magni enim voluptates, nobis, temporibus quibusdam
+              molestias cum quae consectetur nisi facere optio. Repudiandae,
+              nisi accusantium? Tempora in mollitia voluptatum deserunt
+              expedita.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              omnis doloremque quis repellat quo eum itaque fuga magnam, non
+              ratione eveniet dolor aliquam totam pariatur deleniti nisi nihil
+              fugit error? Quibusdam maiores molestias quidem blanditiis cum
+              odit velit quia ab temporibus nobis voluptatem, nihil ipsum
+              explicabo tempora iusto. Doloremque consectetur tempora ipsum modi
+              culpa atque, aliquid officia eaque blanditiis ea dicta voluptas
+              deleniti provident nobis dolore voluptatem molestias recusandae
+              expedita placeat adipisci! Minus, praesentium maiores. Corporis
+              sed ad magni enim voluptates, nobis, temporibus quibusdam
+              molestias cum quae consectetur nisi facere optio. Repudiandae,
+              nisi accusantium? Tempora in mollitia voluptatum deserunt
+              expedita.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              omnis doloremque quis repellat quo eum itaque fuga magnam, non
+              ratione eveniet dolor aliquam totam pariatur deleniti nisi nihil
+              fugit error? Quibusdam maiores molestias quidem blanditiis cum
+              odit velit quia ab temporibus nobis voluptatem, nihil ipsum
+              explicabo tempora iusto. Doloremque consectetur tempora ipsum modi
+              culpa atque, aliquid officia eaque blanditiis ea dicta voluptas
+              deleniti provident nobis dolore voluptatem molestias recusandae
+              expedita placeat adipisci! Minus, praesentium maiores. Corporis
+              sed ad magni enim voluptates, nobis, temporibus quibusdam
+              molestias cum quae consectetur nisi facere optio. Repudiandae,
+              nisi accusantium? Tempora in mollitia voluptatum deserunt
+              expedita.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> --}}
