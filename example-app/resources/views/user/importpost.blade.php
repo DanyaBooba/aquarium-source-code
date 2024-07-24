@@ -1,4 +1,4 @@
-@extends('layouts.user.post.add')
+@extends('layouts.user.addpost')
 
 @section('page.title', __('Импортировать посты'))
 

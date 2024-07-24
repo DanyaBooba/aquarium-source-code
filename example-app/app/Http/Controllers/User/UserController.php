@@ -103,30 +103,4 @@ class UserController extends Controller
     {
         return view('user.delete');
     }
-
-    public function changeToSecondAccount()
-    {
-        if (have_second_account() == false) return redirect()->back();
-
-        $oldEmail = session('prev_email');
-        $oldId = session('prev_id');
-        $secondEmail = session('email');
-        $secondId = session('id');
-
-        session([
-            'email' => $oldEmail,
-            'id' => $oldId,
-            'prev_email' => $secondEmail,
-            'prev_id' => $secondId,
-        ]);
-
-        return redirect()->route('user');
-    }
-
-    public function removeSecondAccount()
-    {
-        if (have_second_account() == false) return redirect()->back();
-        exit_second_account();
-        return redirect()->route('user');
-    }
 }

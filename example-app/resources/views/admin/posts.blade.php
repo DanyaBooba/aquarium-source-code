@@ -50,8 +50,8 @@
                         <td>{!! $post->haveimage !!}</td>
                         <td>{!! $post->imagename !!}</td>
                         <td>
-                            <a href="{{ route('user.post.show.id', [$post->idUser, $post->idPost]) }}">
-                                {{ route('user.post.show.id', [$post->idUser, $post->idPost]) }}
+                            <a href="{{ route('post.show', [$post->idUser, $post->idPost]) }}">
+                                {{ route('post.show', [$post->idUser, $post->idPost]) }}
                             </a>
                         </td>
                         <td>

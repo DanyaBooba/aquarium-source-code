@@ -14,7 +14,7 @@ class AddPostController extends Controller
         $iduser = User::where('email', session('email'))->first()->id;
         $whiteList = in_array($iduser, white_id_posts());
 
-        return view('user.post.add', [
+        return view('user.addpost', [
             'whiteList' => $whiteList
         ]);
     }
@@ -51,6 +51,6 @@ class AddPostController extends Controller
             'active' => $activePost
         ]);
 
-        return redirect()->route('user.post.show.id', [$findUser->id, $idPost]);
+        return redirect()->route('post.show', [$findUser->id, $idPost]);
     }
 }

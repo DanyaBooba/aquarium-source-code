@@ -47,6 +47,8 @@ class RouteServiceProvider extends ServiceProvider
                     require_once base_path('routes/user/settings.php');
                     require_once base_path('routes/user/show.php');
 
+                    require_once base_path('routes/post/post.php');
+
                     require_once base_path('routes/admin/admin.php');
 
                     require_once base_path('routes/api.php');

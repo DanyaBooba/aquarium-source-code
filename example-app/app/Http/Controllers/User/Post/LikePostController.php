@@ -46,6 +46,6 @@ class LikePostController extends Controller
         $user->likesPostsJson = $postsLikes;
         $user->save();
 
-        return redirect()->route('user.post.show.id', [$id, $idPost]);
+        return redirect()->route('post.show', [$id, $idPost]);
     }
 }

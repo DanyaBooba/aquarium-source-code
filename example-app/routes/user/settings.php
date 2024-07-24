@@ -12,11 +12,8 @@ use App\Http\Controllers\User\Settings\SessionController;
 use App\Http\Controllers\User\SettingsController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('user/settings')->middleware(
-    ['login.session', 'user.blocked', 'user.verified']
-)->group(function () {
-
-    Route::get('/', [SettingsController::class, 'index'])->name('settings');
+Route::prefix('user/settings')->middleware(['login.session', 'user.blocked', 'user.verified'])->group(function () {
+    Route::get('', [SettingsController::class, 'index'])->name('settings');
 
     Route::prefix('profile')->group(function () {
         Route::get('', [ProfileController::class, 'index'])->name('settings.profile');

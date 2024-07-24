@@ -20,7 +20,7 @@ class EditPostController extends Controller
         ]);
     }
 
-    public function post(Request $request)
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'message' => [
@@ -49,6 +49,6 @@ class EditPostController extends Controller
         $post->desc = $desc;
         $post->save();
 
-        return redirect()->route('user.post.show.id', [$user->id, $validated['idPost']]);
+        return redirect()->route('post.show', [$user->id, $validated['idPost']]);
     }
 }

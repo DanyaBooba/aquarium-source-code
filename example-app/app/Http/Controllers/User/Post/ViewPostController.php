@@ -12,14 +12,12 @@ class ViewPostController extends Controller
     public function id($id, $idPost)
     {
         $user = User::where('id', $id)->where('verified', true)->firstOrFail();
-
         return $this->show($user, $idPost);
     }
 
     public function nickname($nickname, $idPost)
     {
         $user = User::where('username', $nickname)->where('verified', true)->firstOrFail();
-
         return $this->show($user, $idPost);
     }
 

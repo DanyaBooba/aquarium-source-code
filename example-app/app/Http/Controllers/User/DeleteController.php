@@ -15,7 +15,11 @@ class DeleteController extends Controller
 {
     public function index()
     {
-        $useService = !!User::where('email', session('email'))->first()->serviceLogin;
+        $user = User::where('email', session('email'))->first();
+        if ($user->usertype == -1) return redirect()->route('settings.profile');
+
+        $useService = (bool) $user->serviceLogin;
+
         return view('user.delete', [
             'useService' => $useService
         ]);
@@ -177,6 +181,11 @@ class DeleteController extends Controller
             }
         }
 
+        return redirect()->route('main');
+    }
+
+    private function deleteAccount($profile)
+    {
         return redirect()->route('main');
     }
 }
