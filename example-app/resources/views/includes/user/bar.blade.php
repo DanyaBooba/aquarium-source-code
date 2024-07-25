@@ -379,3 +379,53 @@
     </div>
   </body>
 </html> --}}
+
+{{-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .toast {
+        border: none !important;
+      }
+
+      .toast-body {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" class="btn btn-primary" id="toastbtn">
+      Show Toast
+    </button>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        class="toast show"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-body">Сообщение было скопировано.</div>
+      </div>
+    </div>
+
+    <script>
+      //   document.getElementById("toastbtn").onclick = function () {
+      //     var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+      //     var toastList = toastElList.map(function (toastEl) {
+      //       return new bootstrap.Toast(toastEl);
+      //     });
+      //     toastList.forEach((toast) => toast.show());
+      //   };
+    </script>
+  </body>
+</html> --}}

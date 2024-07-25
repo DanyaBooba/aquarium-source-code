@@ -200,4 +200,9 @@
     --code-screen-projection-atn: #404;
     --code-screen-projection-atv: #060;
     --code-L: #27234b;
+
+    /* Toast */
+
+    --toast-bg: #1c1935;
+    --toast-border: #211f41;
 }

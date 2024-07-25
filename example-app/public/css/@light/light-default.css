@@ -201,4 +201,9 @@
     --code-screen-projection-atv: #060;
     --text-code-border: #0984e3;
     --code-L: #eee;
+
+    /* Toast */
+
+    --toast-bg: #ffffff;
+    --toast-border: #ebeff2;
 }
