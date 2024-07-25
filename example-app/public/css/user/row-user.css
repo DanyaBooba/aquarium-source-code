@@ -1,3 +1,7 @@
+.row-user {
+    justify-content: center !important;
+}
+
 .row-user-bar {
     position: sticky;
     top: 1rem;
@@ -76,6 +80,11 @@
 
 .row-user-bar .social a.active svg {
     stroke: var(--text-link-hover);
+}
+
+.row-user-content {
+    max-width: 880px !important;
+    padding: 0 !important;
 }
 
 /* media */
