@@ -213,6 +213,7 @@
         width: 100% !important;
         height: auto !important;
         border: none !important;
+        padding-top: 1rem !important;
         flex-direction: row !important;
         gap: 1rem;
     }

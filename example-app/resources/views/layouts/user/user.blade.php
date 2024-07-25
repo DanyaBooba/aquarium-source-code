@@ -27,3 +27,7 @@
         <script src="{{ asset('js/bootstrap.js') }}"></script>
     </body>
 @endsection
+
+@push('js')
+    <script src="{{ asset('js/user/profile/profile-content-wrap.js') }}"></script>
+@endpush
