@@ -42,13 +42,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
-
-/* .user-offcanvas .user-profile-data div {
-    margin-right: 1.5rem;
-    margin-bottom: 1.5rem;
-} */
 
 .user-offcanvas .user-profile-data div button {
     display: flex;
