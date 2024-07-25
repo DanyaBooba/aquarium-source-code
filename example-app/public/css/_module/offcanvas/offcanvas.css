@@ -8,3 +8,9 @@
 .offcanvas-bottom button.btn-close {
     filter: var(--collapse-filter) !important;
 }
+
+/* User */
+
+.user-offcanvas {
+    background-color: #000;
+}

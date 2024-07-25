@@ -83,4 +83,4 @@
 
 <x-user.profile.qr-code :nickname="$profile->username" :id="$profile->id" />
 
-<x-user.profile.offcanvas-info />
+<x-user.profile.offcanvas-info :profile="$profile" />
