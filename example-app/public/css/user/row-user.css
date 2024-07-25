@@ -3,10 +3,12 @@
 }
 
 .row-user-bar {
+    overflow-y: scroll;
     position: sticky;
-    top: 1rem;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
 
-    /* background: linear-gradient(90deg, var(--user-bar) 0%, var(--user-bar) 93%, var(--body-bg) 100%); */
     padding: 3rem 2rem;
 }
 

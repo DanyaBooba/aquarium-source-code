@@ -206,4 +206,8 @@
 
     --toast-bg: #ffffff;
     --toast-border: #ebeff2;
+
+    /* Offcanvas */
+
+    --offcanvas-bg: #ffffff;
 }
