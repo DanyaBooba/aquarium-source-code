@@ -9,7 +9,9 @@
     <body class="container-fluid">
         <div class="row row-user min-vh-100">
             <section class="row-user-bar">
-                @include('includes.user.bar')
+                <div class="row-user-bar-container">
+                    @include('includes.user.bar')
+                </div>
             </section>
             <main class="flex-grow-1 row-user-content">
                 @include('includes.user.header')
