@@ -24,7 +24,7 @@
     </div>
     <div class="user-profile-buttons">
         <x-user.profile.profile.button
-            attr='data-bs-toggle=offcanvas data-bs-target=#canvasInfo aria-controls=canvasInfo'>
+            attr='data-bs-toggle=offcanvas data-bs-target=#canvasInfo aria-controls=canvasInfo id=buttonProfileInfo'>
             <x-user.profile.profile.icon.info />
             {{ __('Информация') }}
         </x-user.profile.profile.button>

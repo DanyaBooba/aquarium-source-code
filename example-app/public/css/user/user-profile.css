@@ -249,7 +249,7 @@
 
 /* media */
 
-@media(max-width: 767.98px) {
+@media(max-width: 860px) {
     .container {
         padding-left: .6rem !important;
         padding-right: .6rem !important;
@@ -298,7 +298,9 @@
     .user-profile img.user-profile-cap {
         height: 300px;
     }
+}
 
+@media(max-width: 767.98px) {
     .user-profile .user-profile-buttons button.user-button-mobile {
         display: block;
     }
