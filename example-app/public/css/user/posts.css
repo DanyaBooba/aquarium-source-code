@@ -197,6 +197,6 @@
 @media(max-width: 767.98px) {
     .posts .row .col-text {
         height: auto !important;
-        min-height: 200px;
+        min-height: 220px;
     }
 }

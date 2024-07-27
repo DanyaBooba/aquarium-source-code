@@ -34,7 +34,7 @@ class EditPostController extends Controller
         $user = User::where('email', session('email'))->first();
         $post = Post::where('idUser', $user->id)->where('idPost', $validated['idPost'])->firstOrFail();
 
-        $message = $validated['message'];
+        $message = strip_tags($validated['message']);
         $desc = strip_tags($message);
         $active = in_array($user->id, white_id_posts());
 
