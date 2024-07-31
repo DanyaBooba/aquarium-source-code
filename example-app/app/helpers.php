@@ -50,3 +50,7 @@ require_once "helpers/user/info/settings.php";
 
 require_once "helpers/mail/mail-info.php";
 require_once "helpers/mail/mail.php";
+
+// Post
+
+require_once "helpers/post/default/tags.php";

@@ -23,7 +23,7 @@ class AddPostController extends Controller
     {
         $validated = $request->validate(['message' => ['required', 'string', 'min:1', 'max: 30000']]);
 
-        $post = $validated['message'];
+        $post = strip_tags($validated['message'], post_free_tags());
         $shortPost = strip_tags($post);
 
         $findUser = User::where('email', session('email'))->first();
