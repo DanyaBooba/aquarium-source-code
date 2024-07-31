@@ -16,7 +16,7 @@
             {{ __('Почта человека не подтверждена, профиль виден из-за того, что вы администратор') }}
         </x-user.alert.alert>
     @endif
-    {{ session(['alert.success' => '123']) }}
+
     @if ($alert = session()->pull('alert.success'))
         <x-user.alert.alert-success :title="$alert" />
     @endif

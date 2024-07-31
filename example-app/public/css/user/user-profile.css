@@ -155,7 +155,8 @@
 
 .user-profile img.user-profile-cap {
     width: 100% !important;
-    height: 400px;
+    aspect-ratio: 2 / 1;
+    /* height: 400px; */
     object-fit: cover;
 
     border-top-left-radius: 12px;
@@ -247,14 +248,14 @@
     /* text-overflow: ellipsis; */
 }
 
+.container {
+    padding-left: .6rem !important;
+    padding-right: .6rem !important;
+}
+
 /* media */
 
 @media(max-width: 860px) {
-    .container {
-        padding-left: .6rem !important;
-        padding-right: .6rem !important;
-    }
-
     .user-profile-content {
         flex-direction: column;
         padding-left: 1rem !important;
@@ -315,6 +316,18 @@
 
 .user-profile .user-profile-buttons button:not(:disabled) {
     box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
+}
+
+@media(min-width: 1200px) {
+    .user-profile .user-profile-buttons button#buttonProfileInfo {
+        display: none !important;
+    }
+}
+
+@media(max-width: 1199.98px) {
+    .user-profile .user-profile-right {
+        display: none !important;
+    }
 }
 
 @media(hover: hover) {
