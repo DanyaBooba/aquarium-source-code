@@ -1,6 +1,6 @@
 @extends('layouts.user.user')
 
-@section('page.title', __('Профиль'))
+@section('page.title', $profile->name)
 
 @section('user.alert')
     @if ($itsme)

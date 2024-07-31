@@ -13,17 +13,22 @@
         <div class="user-offcanvas">
             <div class="user-profile-text">
                 <p class="user-profile-name" title="{{ $profile->name }}">{{ $profile->name }}</p>
-                <p class="user-profile-desc" title="{{ $profile->desc }}">{{ $profile->desc }}</p>
-                <p class="user-profile-desc" title="{{ $profile->username }}">
-                    <a href="{{ route_user_show($profile->id, $profile->username) }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user">
-                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-                            <circle cx="12" cy="7" r="4" />
-                        </svg>
-                        {{ $profile->username }}
-                    </a>
-                </p>
+                @if ($profile->desc)
+                    <p class="user-profile-desc" title="{{ $profile->desc }}">{{ $profile->desc }}</p>
+                @endif
+                @if ($profile->username)
+                    <p class="user-profile-desc" title="{{ $profile->username }}">
+                        <a href="{{ route_user_show($profile->id, $profile->username) }}">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-user">
+                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                            {{ $profile->username }}
+                        </a>
+                    </p>
+                @endif
             </div>
             <div class="user-profile-data">
                 <x-user.profile.profile.right-block :count="$profile->subs" modal="Subscribers" :text="use_form_word($profile->subs, __('подписчик'), __('подписчика'), __('подписчиков'))" />

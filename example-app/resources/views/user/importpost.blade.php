@@ -1,14 +1,14 @@
 @extends('layouts.user.addpost')
 
-@section('page.title', __('Импортировать посты'))
+@section('page.title', __('Импортировать записи'))
 
 @section('addpost.content')
     <div class="container-settings-main">
-        <h1>{{ __('Импортировать посты') }}</h1>
+        <h1>{{ __('Импортировать записи') }}</h1>
 
         <div class="addpost-container">
             <p>
-                {{ __('Импортировать посты.') }}
+                {{ __('Импортировать записи') }}.
             </p>
         </div>
     </div>

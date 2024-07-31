@@ -1,10 +1,10 @@
 @extends('layouts.user.addpost')
 
-@section('page.title', __('Добавить пост'))
+@section('page.title', __('Добавить запись'))
 
 @section('addpost.content')
     <div class="container-settings-main">
-        <h1>{{ __('Добавить пост') }}</h1>
+        <h1>{{ __('Добавить запись') }}</h1>
 
         <x-form.error-first />
 
