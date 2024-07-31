@@ -28,11 +28,11 @@ class ViewPostController extends Controller
         $itsmypost = false;
         $comments = [];
 
-        if ($post->active == false && $findUserSession == null) {
+        if ($post->active != 1 && $findUserSession == null) {
             abort(403);
         }
 
-        if ($post->active == false && $findUserSession->id != $post->idUser && $findUserSession->usertype !== 100) {
+        if ($post->active != 1 && $findUserSession->id != $post->idUser && $findUserSession->usertype !== 100) {
             abort(403);
         }
 

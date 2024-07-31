@@ -14,9 +14,7 @@
             {{ $alert }}
         </x-user.alert.alert>
     @endif
-@endsection
 
-@section('user.alert')
     @if ($active == 0)
         <x-user.alert.alert :close=false>
             {{ __('Запись находится на модерации') }}
