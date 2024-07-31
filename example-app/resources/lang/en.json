@@ -579,5 +579,12 @@
     "автор проекта": "project author",
     "менеджер проекта": "project manager",
     "подписка на телеграм": "Telegram subscription",
-    "яндекс": "yandex"
+    "яндекс": "yandex",
+    "Пожаловаться": "Appeal",
+    "Посты пользователя": "User posts",
+    "Ваши посты": "Your posts",
+    "Спасибо за обращение, мы проверим профиль человека": "Thank you for reaching out, we will check the person's profile",
+    "Вы просматриваете свой профиль со стороны": "You're viewing your profile from the outside",
+    "Тестовый аккаунт, используется в качестве демонстрации возможностей": "Test account, used as a demonstration of features",
+    "Почта человека не подтверждена, профиль виден из-за того, что вы администратор": "The person's email is not confirmed, the profile is visible because you are an admin"
 }

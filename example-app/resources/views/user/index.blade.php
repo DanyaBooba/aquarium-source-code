@@ -19,6 +19,9 @@
     <x-user.profile :profile="$profile" />
     <x-user.profile.modal :listData="$listData" />
     <x-user.profile.me-info :profile="$profile" />
+    <h2>
+        {{ __('Ваши посты') }}
+    </h2>
     <x-user.profile.posts :posts="$posts" />
     <x-user.profile.toasts />
 

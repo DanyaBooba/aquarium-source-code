@@ -16,6 +16,7 @@
             {{ __('Почта человека не подтверждена, профиль виден из-за того, что вы администратор') }}
         </x-user.alert.alert>
     @endif
+    {{ session(['alert.success' => '123']) }}
     @if ($alert = session()->pull('alert.success'))
         <x-user.alert.alert-success :title="$alert" />
     @endif
@@ -25,6 +26,9 @@
 
     <x-user.profile :profile="$profile" :issub=$issub :itsme=$itsme />
     <x-user.profile.modal :listData="$listData" />
+    <h2>
+        {{ __('Посты пользователя') }}
+    </h2>
     <x-user.profile.posts :posts="$posts" />
     <x-user.profile.toasts />
 

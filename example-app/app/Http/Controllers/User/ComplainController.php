@@ -29,6 +29,6 @@ class ComplainController extends Controller
             'idUserFrom' => $findUserSession->id,
         ]);
 
-        return redirect()->back()->with('alert.success', __('Спасибо за запрос. Мы проверим профиль человека.'));;
+        return redirect()->back()->with('alert.success', __('Спасибо за обращение, мы проверим профиль человека'));;
     }
 }
