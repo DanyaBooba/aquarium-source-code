@@ -1,5 +1,8 @@
 <?php
 
+use Carbon\Carbon;
+use Illuminate\Support\Facades\App;
+
 if (!function_exists('get_user')) {
     function get_user($user, $local = false)
     {
@@ -11,6 +14,7 @@ if (!function_exists('get_user')) {
         $profile->achivs = profile_info_isset_value($user->achivs, 0);
         $profile->local = $local;
         $profile->status = $user->verified ? "active" : "needConfirm";
+        $profile->create = Carbon::parse($profile->created_at)->translatedFormat('d F Y');
 
         return $profile;
     }
