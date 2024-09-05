@@ -3,7 +3,7 @@
 if (!function_exists('send_mail_login_by_code')) {
     function send_mail_login_by_code(string $email, string $code): bool
     {
-        $subject = __('Авторизацией через код');
+        $subject = __('Авторизация через код');
 
         $message = '<b>' . __('Был запрошен код для входа в аккаунт') . '</b>.<br><br>';
         $message .= __('Введите данный код в поле для входа в аккаунт:') . '<br><br>';
