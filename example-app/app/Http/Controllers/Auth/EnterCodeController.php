@@ -11,7 +11,15 @@ class EnterCodeController extends Controller
 {
     public function index()
     {
-        return view('sign.code.enter');
+        $email = session('codeEmail');
+        if (empty($email)) {
+            return redirect()->route('auth.code')->withErrors([
+                'code' => __('Введите адрес почты.')
+            ]);
+        }
+        return view('sign.code.enter', [
+            'email' => $email
+        ]);
     }
 
     public function store(Request $request)

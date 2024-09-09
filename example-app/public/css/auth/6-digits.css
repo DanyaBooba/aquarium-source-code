@@ -1,0 +1,7 @@
+form input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+form input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}

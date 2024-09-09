@@ -53,6 +53,10 @@ class CodeController extends Controller
 
         send_mail_login_by_code($validated['email'], $code);
 
+        session([
+            'codeEmail' => $validated['email']
+        ]);
+
         return redirect()->route('auth.code.enter');
     }
 }
