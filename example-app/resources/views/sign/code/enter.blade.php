@@ -17,12 +17,6 @@
         <input type="hidden" class="d-none" name="email" value="{{ $email }}">
         <input type="hidden" class="d-none" name="code" id="6digits_input" value="">
 
-        {{-- <div class="form-floating">
-            <input type="number" min="100000" max="999999" name="code" class="form-control" id="code"
-                placeholder="123456" onInput="checkOnInput()" value="{{ old('code') }}" required>
-            <label for="code">{{ __('6-значный код') }}</label>
-        </div> --}}
-
         <swd-pin-field validate="0123456789" class="digits6" length="6" name="pin" id="6digits"></swd-pin-field>
 
         <button class="btn btn-primary py-3 mt-3 button-submit-code" type="submit">{{ __('Войти по коду') }}</button>
