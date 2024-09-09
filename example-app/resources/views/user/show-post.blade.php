@@ -41,7 +41,7 @@
                     </span>
                 </a>
             @endif
-            <div>
+            <div id="postMain">
                 {!! $post->message !!}
             </div>
         </div>
@@ -51,7 +51,5 @@
 @endsection
 
 @push('js')
-    <script>
-        Fancybox.bind()
-    </script>
+    <script src={{ asset('js/user/post/show.js') }}></script>
 @endpush
