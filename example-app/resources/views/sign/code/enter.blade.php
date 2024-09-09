@@ -23,7 +23,7 @@
             <label for="code">{{ __('6-значный код') }}</label>
         </div> --}}
 
-        <swd-pin-field validate="0123456789" length="6" name="pin" id="6digits"></swd-pin-field>
+        <swd-pin-field validate="0123456789" class="digits6" length="6" name="pin" id="6digits"></swd-pin-field>
 
         <button class="btn btn-primary py-3 mt-3 button-submit-code" type="submit">{{ __('Войти по коду') }}</button>
     </form>

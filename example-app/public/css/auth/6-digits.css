@@ -1,7 +1,15 @@
-form input[type="number"] {
-    -moz-appearance: textfield;
+swd-pin-field {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+    gap: .3rem;
 }
 
-form input[type="number"]::-webkit-inner-spin-button {
-    display: none;
+input.digits6 {
+    flex: 1 !important;
+    width: 100%;
+    margin-bottom: 0;
+    border: .1rem solid var(--form-input-border);
+    height: 50px;
+    text-align: center;
 }
