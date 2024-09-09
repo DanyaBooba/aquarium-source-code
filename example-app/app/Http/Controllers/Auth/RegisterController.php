@@ -54,7 +54,7 @@ class RegisterController extends Controller
         ]);
 
         $query = User::query()->create([
-            'email' => $validated['email'],
+            'email' => strtolower($validated['email']),
             'password' => bcrypt($validated['password']),
             'avatar' => $avatar,
             'cap' => $bg,
