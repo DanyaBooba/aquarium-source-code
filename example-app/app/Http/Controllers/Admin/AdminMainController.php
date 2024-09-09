@@ -36,4 +36,9 @@ class AdminMainController extends Controller
             'complains' => $complains
         ]);
     }
+
+    public function emails()
+    {
+        return view('admin.emails');
+    }
 }

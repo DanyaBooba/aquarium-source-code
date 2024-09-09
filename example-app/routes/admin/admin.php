@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminEmailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminMainController;
 use App\Http\Controllers\Admin\AdminPostsController;
@@ -9,6 +10,7 @@ Route::prefix('admin')->middleware(['login.session', 'login.admin'])->group(func
     Route::get('', [AdminMainController::class, 'index'])->name('admin');
     Route::get('posts', [AdminMainController::class, 'posts'])->name('admin.posts');
     Route::get('complains', [AdminMainController::class, 'complains'])->name('admin.complains');
+    Route::get('emails', [AdminMainController::class, 'emails'])->name('admin.emails');
 
     Route::get('set-user-active/{iduser}', [AdminUsersController::class, 'set_user_active'])->name('admin.set-user-active');
     Route::get('set-user-unactive/{iduser}', [AdminUsersController::class, 'set_user_unactive'])->name('admin.set-user-unactive');
@@ -19,4 +21,6 @@ Route::prefix('admin')->middleware(['login.session', 'login.admin'])->group(func
     Route::get('post-set-status/1/{idpost}', [AdminPostsController::class, 'post_set_status_active'])->name('admin.post.set-status.1');
     Route::get('post-set-status/0/{idpost}', [AdminPostsController::class, 'post_set_status_unactive'])->name('admin.post.set-status.0');
     Route::get('post-set-status/-1/{idpost}', [AdminPostsController::class, 'post_set_status_block'])->name('admin.post.set-status.-1');
+
+    Route::get('emails/google-block-1', [AdminEmailController::class, 'google_block_1'])->name('admin.email.google-block-1');
 });
