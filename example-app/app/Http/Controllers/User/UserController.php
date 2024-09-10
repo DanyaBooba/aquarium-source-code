@@ -29,11 +29,15 @@ class UserController extends Controller
             $achivs,
         ];
 
-        $posts = Post::where('idUser', $user->id)->orderBy('created_at', 'desc')->get();
+        $posts = Post::where('idUser', $user->id)->where('active', 1)->orderBy('created_at', 'desc')->get();
+        $privatePosts = Post::where('idUser', $user->id)->where('active', 0)->orderBy('created_at', 'desc')->get();
+        $nullPosts = Post::where('idUser', $user->id)->where('active', -1)->orderBy('created_at', 'desc')->get();
 
         return view('user.index', [
             'profile' => $profile,
             'posts' => $posts,
+            'privatePosts' => $privatePosts,
+            'nullPosts' => $nullPosts,
             'listData' => $listData
         ]);
     }

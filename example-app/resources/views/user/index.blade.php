@@ -19,10 +19,16 @@
     <x-user.profile :profile="$profile" />
     <x-user.profile.modal :listData="$listData" />
     <x-user.profile.me-info :profile="$profile" />
-    <h2>
-        {{ __('Ваши посты') }}
-    </h2>
+
+    <h2>{{ __('Ваши записи') }}</h2>
     <x-user.profile.posts :posts="$posts" />
+
+    <h2>{{ __('Записи, ожидающие модерацию') }}</h2>
+    <x-user.profile.posts :posts="$privatePosts" empty="{{ __('Нет записей.') }}" />
+
+    <h2>{{ __('Отклоненные записи') }}</h2>
+    <x-user.profile.posts :posts="$nullPosts" empty="{{ __('Нет записей.') }}" />
+
     <x-user.profile.toasts />
 
 @endsection
