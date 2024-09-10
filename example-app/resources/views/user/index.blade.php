@@ -26,3 +26,7 @@
     <x-user.profile.toasts />
 
 @endsection
+
+@push('js')
+    <script src={{ asset('js/user/share-link.js') }}></script>
+@endpush

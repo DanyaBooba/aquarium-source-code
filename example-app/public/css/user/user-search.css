@@ -218,6 +218,7 @@
         padding-top: 1rem !important;
         flex-direction: row !important;
         gap: 1rem;
+        margin-bottom: .5rem;
     }
 
     .search-users .search-users__profile a p {
