@@ -13,10 +13,12 @@ class EditPostController extends Controller
     {
         $userId = User::where('email', session('email'))->first()->id;
         $post = Post::where('idUser', $userId)->where('idPost', $idPost)->firstOrFail();
+        $whiteList = in_array($userId, white_id_posts());
 
         return view('user.editpost', [
             'post' => $post,
-            'userId' => $userId
+            'userId' => $userId,
+            'whiteList' => $whiteList
         ]);
     }
 
@@ -24,10 +26,14 @@ class EditPostController extends Controller
     {
         $validated = $request->validate([
             'message' => [
-                'required', 'string', 'min:1', 'max: 30000'
+                'required',
+                'string',
+                'min:1',
+                'max: 30000'
             ],
             'idPost' => [
-                'required', 'integer'
+                'required',
+                'integer'
             ]
         ]);
 

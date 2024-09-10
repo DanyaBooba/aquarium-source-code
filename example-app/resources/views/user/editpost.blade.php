@@ -15,11 +15,12 @@
             <h1>{{ __('Изменить пост') }} <span class="text-muted">{{ $post->idPost }}</span></h1>
         </div>
 
-
         <x-form.error-first />
 
         <div class="addpost-container">
-            <x-addpost.post-change />
+            @if (!$whiteList)
+                <x-addpost.post-change />
+            @endif
             <form action="{{ route('post.edit.store') }}" method="post">
                 @csrf
                 <input id="x" type="hidden" name="message">
