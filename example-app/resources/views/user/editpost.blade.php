@@ -31,7 +31,7 @@
                 </button>
             </form>
             <button class="btn btn-danger mt-3" onclick="buttonOpenURL('{{ route('post.delete', $post->idPost) }}')">
-                {{ __('Удалить пост') }}
+                {{ __('Удалить запись') }}
             </button>
         </div>
     </div>

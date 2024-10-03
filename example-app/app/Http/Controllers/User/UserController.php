@@ -33,12 +33,15 @@ class UserController extends Controller
         $privatePosts = Post::where('idUser', $user->id)->where('active', 0)->orderBy('created_at', 'desc')->get();
         $nullPosts = Post::where('idUser', $user->id)->where('active', -1)->orderBy('created_at', 'desc')->get();
 
+        $countAllPosts = Post::where('idUser', $user->id)->count();
+
         return view('user.index', [
             'profile' => $profile,
             'posts' => $posts,
             'privatePosts' => $privatePosts,
             'nullPosts' => $nullPosts,
-            'listData' => $listData
+            'listData' => $listData,
+            'countAllPosts' => $countAllPosts
         ]);
     }
 

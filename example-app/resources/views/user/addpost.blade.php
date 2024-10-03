@@ -17,10 +17,12 @@
             <form action="{{ route('post.add.store') }}" method="post">
                 @csrf
                 <input id="x" type="hidden" name="message">
-                <trix-editor input="x" placeholder="{{ __('Сообщение') }}"></trix-editor>
-                <button type="submit" class="btn btn-success mt-3">
-                    {{ __('Опубликовать') }}
-                </button>
+                <trix-editor input="x" placeholder="{{ addpost_placeholder() }}"></trix-editor>
+                <div>
+                    <button type="submit" class="btn btn-success">
+                        {{ __('Опубликовать') }}
+                    </button>
+                </div>
             </form>
         </div>
     </div>

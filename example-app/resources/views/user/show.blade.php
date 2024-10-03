@@ -27,8 +27,7 @@
     <x-user.profile :profile="$profile" :issub=$issub :itsme=$itsme />
     <x-user.profile.modal :listData="$listData" />
 
-    <h2>{{ __('Записи пользователя') }}</h2>
-    <x-user.profile.posts :posts="$posts" />
+    <x-user.profile.posts-show :local="false" :posts="$posts" :count="$countAllPosts" />
 
     <x-user.profile.toasts />
 

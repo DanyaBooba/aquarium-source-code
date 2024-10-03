@@ -1,22 +1,10 @@
-/* .container-addpost .container-addpost-left {
-    width: 70%;
+.addpost-container form div:has(button.btn-success[type="submit"]) {
+    margin-top: 1rem;
+    width: fit-content;
+    border-radius: 12px;
+    border: .1rem solid var(--bs-success);
+    padding: .25rem;
 }
-
-.container-addpost .container-addpost-right {
-    width: 30%;
-} */
-
-/* media */
-
-/* @media(max-width: 1023.98px) {
-    .container-addpost .container-addpost-left {
-        width: 100%;
-    }
-
-    .container-addpost .container-addpost-right {
-        width: 100%;
-    }
-} */
 
 @media(max-width: 767.98px) {
     .container-addpost .container-addpost-main {

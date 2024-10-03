@@ -34,6 +34,8 @@ require_once "helpers/user/default/image.php";
 
 require_once "helpers/user/routes/route-user.php";
 
+require_once "helpers/user/addpost/placeholder.php";
+
 // Another
 
 require_once "helpers/links.php";

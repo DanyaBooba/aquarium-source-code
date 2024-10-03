@@ -39,6 +39,8 @@ class ShowUserController extends Controller
         $achivs = Achiv::select('id', 'name')
             ->whereIn('id', json_decode($user->achivsJson ?? "[]"))->get();
 
+        $countAllPosts = Post::where('idUser', $user->id)->where('active', 1)->count();
+
         $listData = [
             $subs,
             $sub,
@@ -62,7 +64,8 @@ class ShowUserController extends Controller
             'itsme' => $itsme,
             'issub' => $issub,
             'posts' => $posts,
-            'listData' => $listData
+            'listData' => $listData,
+            'countAllPosts' => $countAllPosts
         ]);
     }
 }
