@@ -98,13 +98,14 @@
     --user-profile-image-border: #d9d9e0;
     --user-profile-button: #fff;
     --user-profile-button-accent-text: #fff;
-    --user-profile-button-hover: #ebebeb;
+    --user-profile-button-hover: #f8f8f8;
+    --user-profile-button-disabled: #ffffffaa;
 
     /* User Search */
 
     --user-search-border: #ced4db;
     --user-search-background: #f9f9f9;
-    --user-search-background-hover: #f1f1f4;
+    --user-search-background-hover: #fff;
     --user-search-button-background: #c9daeb;
 
     /* User Alert */

@@ -16,7 +16,7 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if (!user_admin()) {
-            return redirect()->route('user');
+            abort(404);
         }
 
         return $next($request);

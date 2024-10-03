@@ -41,6 +41,7 @@ return new class extends Migration
 
             $table->string('shareToken')->nullable();
             $table->string('serviceLogin')->nullable();
+            $table->string('serviceData')->nullable();
 
             $table->json('settings_notifications')->nullable();
             $table->integer('usertype')->default(0);

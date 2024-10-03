@@ -162,6 +162,7 @@
     .search-users a.search-users-content:hover {
         color: var(--text-color) !important;
         background-color: var(--user-search-background-hover);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
     }
 
     .search-users a.search-users-content:hover .search-users-content-info .search-users-content-info__block {
@@ -182,6 +183,7 @@
     .search-users a.search-users-content:active {
         color: var(--text-color) !important;
         background-color: var(--user-search-background-hover);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
     }
 
     .search-users a.search-users-content:active .search-users-content-info .search-users-content-info__block {

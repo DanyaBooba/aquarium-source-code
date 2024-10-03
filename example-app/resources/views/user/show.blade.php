@@ -26,10 +26,14 @@
 
     <x-user.profile :profile="$profile" :issub=$issub :itsme=$itsme />
     <x-user.profile.modal :listData="$listData" />
-    <h2>
-        {{ __('Записи пользователя') }}
-    </h2>
+
+    <h2>{{ __('Записи пользователя') }}</h2>
     <x-user.profile.posts :posts="$posts" />
+
     <x-user.profile.toasts />
 
 @endsection
+
+@push('js')
+    <script src={{ asset('js/user/share-link.js') }}></script>
+@endpush

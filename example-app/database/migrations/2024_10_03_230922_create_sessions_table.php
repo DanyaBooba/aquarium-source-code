@@ -11,18 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('blocks', function (Blueprint $table) {
+        Schema::create('sessions', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
             $table->integer('idUser');
-            $table->boolean('forever');
-
-            $table->boolean('whyDefault')->default(true);
-            $table->integer('whyDefaultId')->nullable();
-            $table->text('why');
-
-            $table->dateTime('datetime');
+            $table->string('token');
+            $table->string('refreshToken');
         });
     }
 
@@ -31,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('blocks');
+        Schema::dropIfExists('sessions');
     }
 };
