@@ -4,11 +4,11 @@
 
 @section('addpost.content')
     <div class="container-settings-main">
-        <h1>{{ __('Добавить запись') }}</h1>
+        <h1 class="mb-4">{{ __('Добавить запись') }}</h1>
 
         <x-form.error-first />
 
-        <div class="addpost-container">
+        <div class="addpost-container addpost-container-addpost">
             @if ($whiteList)
                 <x-addpost.post-import />
             @else

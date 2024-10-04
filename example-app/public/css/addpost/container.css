@@ -22,9 +22,23 @@
     height: fit-content;
 }
 
+.addpost-container-addpost {
+    display: flex;
+    flex-direction: column;
+}
+
 @media(max-width: 767.98px) {
     .container-addpost .container-addpost-main {
         padding-left: 0 !important;
         padding-right: 0 !important;
+    }
+
+    .addpost-container-addpost {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .addpost-container-addpost form {
+        margin-bottom: 2rem;
     }
 }
