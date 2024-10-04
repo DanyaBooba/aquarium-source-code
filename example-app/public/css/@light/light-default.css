@@ -128,6 +128,10 @@
     --addpost-button-link-bg: #e2e8ec;
     --addpost-dialog-bg: #fff;
 
+    /* Import post */
+
+    --importpost-choose-bg: #e6e9f4;
+
     /* Settings */
 
     --settings-main-background: #fff;

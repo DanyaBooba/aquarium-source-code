@@ -21,8 +21,9 @@
             <h2>
                 {{ __('2. Скопируйте ссылку на пост:') }}
             </h2>
+            <x-form.error-first />
             <div class="import-post__link">
-                <input type="text" class="form-control">
+                <input type="url" id="link" class="form-control input-style">
                 <button class="btn btn-success" onClick="sendLink()">
                     {{ __('Отправить') }}
                 </button>

@@ -20,7 +20,7 @@ Route::prefix('post')->middleware(['login.session', 'user.blocked'])->group(func
 
     Route::get('like/{id}/{idPost}', [LikePostController::class, 'like'])->name('post.like');
 
-    Route::get('import/{socialName}/{link}', [ImportPostController::class, 'import'])->name('post.import');
+    Route::get('import/{platform}/', [ImportPostController::class, 'import'])->name('post.import');
 });
 
 Route::get('post/{id}/{idPost}', [ViewPostController::class, 'id'])->name('post.show');

@@ -12,8 +12,16 @@ class ImportPostController extends Controller
         return view('user.importpost');
     }
 
-    public function import()
+    public function import($platform)
     {
-        return "import";
+        $url = $_GET['url'];
+
+        if (!filter_var($url, FILTER_VALIDATE_URL)) {
+            return redirect()->route('user.importpost')->withErrors([
+                'notlink' => 'Введенный текст не является ссылкой.'
+            ]);
+        }
+
+        return "ok";
     }
 }

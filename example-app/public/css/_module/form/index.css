@@ -9,6 +9,12 @@ form textarea {
     border: .1rem solid var(--form-input-border) !important;
 }
 
+input.input-style {
+    background: var(--form-input-background) !important;
+    color: var(--text-color) !important;
+    border: .1rem solid var(--form-input-border) !important;
+}
+
 form input.form-check-input {
     border: .1rem solid var(--form-input-border);
 }
