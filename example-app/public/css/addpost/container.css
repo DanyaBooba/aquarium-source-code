@@ -6,6 +6,22 @@
     padding: .25rem;
 }
 
+.addpost-container form .d-flex div:has(button.btn-primary[type=submit]) {
+    width: fit-content;
+    border-radius: 12px;
+    border: .1rem solid var(--bs-primary);
+    padding: .25rem;
+}
+
+.addpost-container form .d-flex {
+    align-items: center;
+}
+
+.addpost-container form .d-flex a {
+    color: #fff !important;
+    height: fit-content;
+}
+
 @media(max-width: 767.98px) {
     .container-addpost .container-addpost-main {
         padding-left: 0 !important;

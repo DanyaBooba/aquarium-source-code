@@ -17,7 +17,7 @@
 
         <x-form.error-first />
 
-        <div class="addpost-container">
+        <div class="addpost-container" style="margin-top: 2rem">
             @if (!$whiteList)
                 <x-addpost.post-change />
             @endif
@@ -25,14 +25,19 @@
                 @csrf
                 <input id="x" type="hidden" name="message">
                 <input type="hidden" name="idPost" value="{{ $post->idPost }}">
-                <trix-editor input="x" placeholder="{{ __('Сообщение') }}">{!! $post->message !!}</trix-editor>
-                <button type="submit" class="d-block btn btn-primary mt-3">
-                    {{ __('Изменить') }}
-                </button>
+                <trix-editor input="x" placeholder="{{ __('Сообщение') }}"
+                    autofocus>{!! $post->message !!}</trix-editor>
+                <div class="d-flex gap-3 mt-3">
+                    <div>
+                        <button type="submit" class="d-block btn btn-primary">
+                            {{ __('Изменить') }}
+                        </button>
+                    </div>
+                    <a href="{{ route('post.delete', $post->idPost) }}" class="btn btn-danger">
+                        {{ __('Удалить запись') }}
+                    </a>
+                </div>
             </form>
-            <button class="btn btn-danger mt-3" onclick="buttonOpenURL('{{ route('post.delete', $post->idPost) }}')">
-                {{ __('Удалить запись') }}
-            </button>
         </div>
     </div>
 @endsection

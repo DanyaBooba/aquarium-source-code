@@ -67,15 +67,23 @@ trix-toolbar .trix-dialog--link {
 }
 
 trix-toolbar .trix-dialog {
+    background-color: var(--addpost-dialog-bg) !important;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
     border-radius: 6px !important;
     border-top: none !important;
+    padding: 1rem !important;
 }
 
 trix-toolbar .trix-dialog input[type=button] {
     color: var(--text-color) !important;
     border: none !important;
     font-size: 14px !important;
+    background-color: var(--addpost-button-link-bg) !important;
+    padding: .5rem 1rem !important;
+}
+
+trix-toolbar .trix-dialog input[data-trix-method=removeAttribute] {
+    display: none !important;
 }
 
 trix-toolbar .trix-dialog input[type=url] {
