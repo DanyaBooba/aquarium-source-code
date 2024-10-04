@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User\Post;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use phpQuery;
 
 class ImportPostController extends Controller
 {
@@ -14,8 +15,6 @@ class ImportPostController extends Controller
 
     public function import($platform)
     {
-        require "phpQuery.php";
-
         $url = $_GET['url'];
 
         if (!filter_var($url, FILTER_VALIDATE_URL)) {
@@ -32,9 +31,8 @@ class ImportPostController extends Controller
                     ]);
                 }
 
-                $urlData = file_get_contents($url);
-                $html = htmlspecialchars($urlData);
-                dd($html);
+                $doc = phpQuery::newDocument(file_get_contents('https://t.me/aquariumsocial/202'));
+                dd($doc);
 
                 break;
             case 'vk':
