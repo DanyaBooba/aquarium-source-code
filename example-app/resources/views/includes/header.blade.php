@@ -25,7 +25,7 @@
                     <li><a href="{{ route('main.history') }}"
                             class="nav-link {{ header_route_active_link('main.history') }}">{{ __('История') }}</a>
                     </li>
-                    <li><a href="{{ route('blog.index') }}"
+                    <li><a href="https://t.me/s/aquariumsocial"
                             class="nav-link {{ header_route_active_link('blog.index') }}">{{ __('Новости') }}</a>
                     </li>
                     <li><a href="{{ route('main.smi') }}"
