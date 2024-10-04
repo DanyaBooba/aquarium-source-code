@@ -19,6 +19,7 @@
     <x-user.profile :profile="$profile" />
     <x-user.profile.modal :listData="$listData" />
     <x-user.profile.me-info :profile="$profile" />
+    <x-user.profile.addpost :profile="$profile" />
 
     <x-user.profile.posts-show :posts="$posts" :privatePosts="$privatePosts" :nullPosts="$nullPosts" :count="$countAllPosts" />
 
