@@ -6,17 +6,17 @@
     <div class="container-settings-main">
         <h1>{{ __('Импортировать записи') }}</h1>
 
-        <div class="addpost-container">
+        <div class="addpost-container import-post">
             <h2>
                 {{ __('1. Выберите социальную сеть:') }}
             </h2>
-            <div>
-                <div>
-                    telegram
-                </div>
-                <div>
-                    VK
-                </div>
+            <div class="import-post__choose">
+                <button id="choose-telegram" onClick="chooseChange('telegram')">
+                    <img src="{{ asset('img/social/telegram.svg') }}" alt="{{ __('Телеграм') }}">
+                </button>
+                <button id="choose-vk" onClick="chooseChange('vk')">
+                    <x-sign.logo.vk />
+                </button>
             </div>
             <h2>
                 {{ __('2. Скопируйте ссылку на пост:') }}
