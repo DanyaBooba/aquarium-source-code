@@ -12,7 +12,7 @@ class ImportPostController extends Controller
         return view('user.importpost');
     }
 
-    public function post()
+    public function import()
     {
         return "import";
     }

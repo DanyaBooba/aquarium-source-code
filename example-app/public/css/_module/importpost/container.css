@@ -5,8 +5,9 @@
     gap: 2rem;
     background-color: #e6e9f4;
     border-radius: 16px;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     max-width: 500px;
+    margin-bottom: 2rem;
 }
 
 .import-post .import-post__choose button {
@@ -38,4 +39,31 @@
 .import-post .import-post__choose button svg {
     width: 75px;
     height: 75px;
+}
+
+.import-post .import-post__choose button.active img {
+    border-radius: 50%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.import-post .import-post__choose button.active svg {
+    border-radius: 20px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.import-post .import-post__link {
+    display: flex;
+    gap: .5rem;
+    max-width: 500px;
+}
+
+.import-post .import-post__link input {
+    flex: 1;
+    border-radius: 8px;
+    padding: .5rem 1rem;
+}
+
+.import-post .import-post__link button {
+    border-radius: 8px;
+    padding: .5rem 1rem;
 }

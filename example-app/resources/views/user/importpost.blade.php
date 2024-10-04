@@ -21,12 +21,12 @@
             <h2>
                 {{ __('2. Скопируйте ссылку на пост:') }}
             </h2>
-            <form action="">
-                <input type="text">
-                <button>
-                    submit
+            <div class="import-post__link">
+                <input type="text" class="form-control">
+                <button class="btn btn-success" onClick="sendLink()">
+                    {{ __('Отправить') }}
                 </button>
-            </form>
+            </div>
         </div>
     </div>
 @endsection
