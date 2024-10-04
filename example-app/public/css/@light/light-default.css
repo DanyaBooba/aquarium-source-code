@@ -147,6 +147,10 @@
     --settings-bg-hover: #efefef;
     --settings-icon-right: #a5a5a5;
 
+    /* Notifications */
+
+    --notifications-list-border: #C4C9EA;
+
     /* Button Top */
 
     --button-top-background: #fff;
