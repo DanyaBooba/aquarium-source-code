@@ -135,7 +135,7 @@
 
 .posts .row .col-text a .post p {
     margin-bottom: 0;
-    max-height: 97px;
+    max-height: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
 
