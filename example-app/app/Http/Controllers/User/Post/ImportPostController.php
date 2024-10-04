@@ -32,7 +32,16 @@ class ImportPostController extends Controller
                 }
 
                 $doc = phpQuery::newDocument(file_get_contents('https://t.me/aquariumsocial/202'));
-                dd($doc);
+                // $text = $doc->find('head meta[name="og:description"]');
+                // dd($text);
+
+                $entry = $doc->find('head meta[name="keywords"]');
+                $data['keywords'] = pq($entry)->attr('content');
+                echo $data['keywords'];
+
+                $entry = $doc->find('head meta[name="description"]');
+                $data['description'] = pq($entry)->attr('content');
+                echo $data['description'];
 
                 break;
             case 'vk':
