@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\User\Post;
 
 use App\Http\Controllers\Controller;
-use DOMDocument;
-use Illuminate\Http\Request;
+// use DOMDocument;
+// use Illuminate\Http\Request;
 
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
+// use GuzzleHttp\Client;
+// use GuzzleHttp\Exception\RequestException;
 // use GuzzleHttp\Psr7\Request;
 
 class ImportPostController extends Controller
@@ -19,6 +19,8 @@ class ImportPostController extends Controller
 
     public function import($platform)
     {
+        require "simple_html_dom.php";
+
         $url = $_GET['url'];
 
         if (!filter_var($url, FILTER_VALIDATE_URL)) {
@@ -35,20 +37,25 @@ class ImportPostController extends Controller
                     ]);
                 }
 
-                $client = new \GuzzleHttp\Client();
+                $html = str_get_html('<div id="hello">Hello</div><div id="world">World</div>');
+                $html->find('div', 1)->class = 'tgme_widget_message_text';
+                $html->find('div[id=world]', 0)->innertext = 'foo';
+                echo $html;
+
+                // $client = new \GuzzleHttp\Client();
                 // $response = $client->get("https://aquariumsocial.ru");
                 // $response = $client->get("https://t.me/aquariumsocial/202");
-                $response = $client->get("https://books.toscrape.com/");
+                // $response = $client->get("https://books.toscrape.com/");
 
-                $resp['statusCode'] = $response->getStatusCode();
-                $resp['bodyContents'] = $response->getBody()->getContents();
+                // $resp['statusCode'] = $response->getStatusCode();
+                // $resp['bodyContents'] = $response->getBody()->getContents();
 
-                $html = (string) $response->getBody();
+                // $html = (string) $response->getBody();
 
                 // dd($resp);
 
-                $dom = new DOMDocument();
-                @$dom->loadHTML($html);
+                // $dom = new DOMDocument();
+                // @$dom->loadHTML($html);
 
 
                 break;

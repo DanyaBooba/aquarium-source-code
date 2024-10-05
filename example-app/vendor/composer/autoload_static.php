@@ -550,6 +550,16 @@ class ComposerStaticInit968f73bcf5520ee401d641d0d79555ec
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'S' => 
+        array (
+            'Sunra\\PhpSimple\\HtmlDomParser' => 
+            array (
+                0 => __DIR__ . '/..' . '/sunra/php-simple-html-dom-parser/Src',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -5887,6 +5897,7 @@ class ComposerStaticInit968f73bcf5520ee401d641d0d79555ec
         'Spatie\\LaravelIgnition\\Views\\BladeSourceMapCompiler' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/BladeSourceMapCompiler.php',
         'Spatie\\LaravelIgnition\\Views\\ViewExceptionMapper' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/ViewExceptionMapper.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
+        'Sunra\\PhpSimple\\HtmlDomParser' => __DIR__ . '/..' . '/sunra/php-simple-html-dom-parser/Src/Sunra/PhpSimple/HtmlDomParser.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\Attribute\\AsCommand' => __DIR__ . '/..' . '/symfony/console/Attribute/AsCommand.php',
         'Symfony\\Component\\Console\\CI\\GithubActionReporter' => __DIR__ . '/..' . '/symfony/console/CI/GithubActionReporter.php',
@@ -6942,6 +6953,7 @@ class ComposerStaticInit968f73bcf5520ee401d641d0d79555ec
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit968f73bcf5520ee401d641d0d79555ec::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit968f73bcf5520ee401d641d0d79555ec::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit968f73bcf5520ee401d641d0d79555ec::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit968f73bcf5520ee401d641d0d79555ec::$classMap;
 
         }, null, ClassLoader::class);

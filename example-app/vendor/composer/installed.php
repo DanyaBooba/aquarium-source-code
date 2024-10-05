@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '348dd4a782f96ccbb1e3594bdcea7368918c2ffe',
+        'reference' => 'fe0915d143a0dd8ac3e69f4842b9ef6427a71184',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -400,7 +400,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '348dd4a782f96ccbb1e3594bdcea7368918c2ffe',
+            'reference' => 'fe0915d143a0dd8ac3e69f4842b9ef6427a71184',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -1024,6 +1024,15 @@
             'install_path' => __DIR__ . '/../spatie/laravel-ignition',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'sunra/php-simple-html-dom-parser' => array(
+            'pretty_version' => 'v1.5.2',
+            'version' => '1.5.2.0',
+            'reference' => '75b9b1cb64502d8f8c04dc11b5906b969af247c6',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sunra/php-simple-html-dom-parser',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'symfony/console' => array(
             'pretty_version' => 'v6.4.9',
