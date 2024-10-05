@@ -97,6 +97,11 @@
     background-color: var(--body-bg) !important;
 }
 
+h1.title-has-back {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
 /* media */
 
 @media(hover: hover) {
@@ -112,8 +117,12 @@
 }
 
 @media(min-width: 768px) {
-    .row-user-content h1 {
+    .row-user-content h1:not(.title-has-back) {
         margin-top: 1.5rem;
+    }
+
+    div.div-has-back:has(h1.title-has-back) {
+        margin-top: 1.5rem !important;
     }
 }
 

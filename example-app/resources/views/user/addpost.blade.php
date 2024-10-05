@@ -9,12 +9,10 @@
         <x-form.error-first />
 
         <div class="addpost-container addpost-container-addpost">
-            @if ($whiteList)
-                <x-addpost.post-import />
-            @else
-                <x-addpost.post-moderate />
-            @endif
-            <form action="{{ route('post.add.store') }}" method="post">
+            <form action="{{ route('post.add.store') }}" method="post" class="mb-4">
+                @if (!$whiteList)
+                    <x-addpost.post-moderate />
+                @endif
                 @csrf
                 <input id="x" type="hidden" name="message">
                 <trix-editor input="x" placeholder="{{ addpost_placeholder() }}"></trix-editor>
@@ -24,6 +22,7 @@
                     </button>
                 </div>
             </form>
+            <x-addpost.post-import />
         </div>
     </div>
 @endsection
