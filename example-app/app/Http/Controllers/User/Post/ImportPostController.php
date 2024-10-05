@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User\Post;
 
 use App\Http\Controllers\Controller;
+use DOMDocument;
 use Illuminate\Http\Request;
 
 use GuzzleHttp\Client;
@@ -35,12 +36,20 @@ class ImportPostController extends Controller
                 }
 
                 $client = new \GuzzleHttp\Client();
-                $response = $client->get("https://t.me/aquariumsocial/202");
+                // $response = $client->get("https://aquariumsocial.ru");
+                // $response = $client->get("https://t.me/aquariumsocial/202");
+                $response = $client->get("https://books.toscrape.com/");
 
                 $resp['statusCode'] = $response->getStatusCode();
                 $resp['bodyContents'] = $response->getBody()->getContents();
 
-                dd($resp);
+                $html = (string) $response->getBody();
+
+                // dd($resp);
+
+                $dom = new DOMDocument();
+                @$dom->loadHTML($html);
+
 
                 break;
             case 'vk':
