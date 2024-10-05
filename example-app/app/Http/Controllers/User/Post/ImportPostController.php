@@ -4,7 +4,10 @@ namespace App\Http\Controllers\User\Post;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use phpQuery;
+
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
+// use GuzzleHttp\Psr7\Request;
 
 class ImportPostController extends Controller
 {
@@ -31,15 +34,13 @@ class ImportPostController extends Controller
                     ]);
                 }
 
-                $html = $this->get_content('https://t.me/aquariumsocial/202');
-                // $html = iconv('utf-8//IGNORE', 'windows-1251//IGNORE', $html);
-                $doc = phpQuery::newDocument($html);
+                $client = new \GuzzleHttp\Client();
+                $response = $client->get("https://t.me/aquariumsocial/202");
 
-                $entry = $doc->find('head meta[property="og:description"]');
-                $data['description'] = pq($entry)->attr('content');
-                echo $data['description'];
+                $resp['statusCode'] = $response->getStatusCode();
+                $resp['bodyContents'] = $response->getBody()->getContents();
 
-                // dd([1]);
+                dd($resp);
 
                 break;
             case 'vk':
