@@ -39,15 +39,21 @@ class ImportPostController extends Controller
                     ]);
                 }
 
-                $html = str_get_html('<div id="hello">Hello</div><div id="world">World</div>');
-                $html->find('div', 1)->class = 'tgme_widget_message_text';
-                $html->find('div[id=world]', 0)->innertext = 'foo';
-                echo $html;
+                // $html = str_get_html('<div id="hello">Hello</div><div id="world">World</div>');
+                // $html->find('div', 1)->class = 'tgme_widget_message_text';
+                // $html->find('div[id=world]', 0)->innertext = 'foo';
+                // echo $html;
 
-                // $client = new \GuzzleHttp\Client();
+                $client = new \GuzzleHttp\Client();
                 // $response = $client->get("https://aquariumsocial.ru");
-                // $response = $client->get("https://t.me/aquariumsocial/202");
+                $response = $client->get("https://t.me/aquariumsocial/202");
                 // $response = $client->get("https://books.toscrape.com/");
+
+                // $html = str_get_html('<div id="hello">Hello</div><div id="world">World</div>');
+                $html = str_get_html($response->getBody()->getContents());
+                $html->find('div', 1)->class = 'tgme_widget_message_text';
+                // $html->find('div[id=world]', 0)->innertext = 'foo';
+                echo $html;
 
                 // $resp['statusCode'] = $response->getStatusCode();
                 // $resp['bodyContents'] = $response->getBody()->getContents();
