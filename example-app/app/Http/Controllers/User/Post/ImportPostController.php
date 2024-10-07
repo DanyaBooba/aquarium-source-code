@@ -46,13 +46,14 @@ class ImportPostController extends Controller
 
                 $client = new \GuzzleHttp\Client();
                 // $response = $client->get("https://aquariumsocial.ru");
-                $response = $client->get("https://t.me/aquariumsocial/202");
+                $response = $client->get("https://t.me/aquariumsocial/202?embed=1&mode=tme");
                 // $response = $client->get("https://books.toscrape.com/");
 
                 // $html = str_get_html('<div id="hello">Hello</div><div id="world">World</div>');
                 $html = str_get_html($response->getBody()->getContents());
-                $html->find('div', 1)->class = 'tgme_widget_message_text';
-                // $html->find('div[id=world]', 0)->innertext = 'foo';
+                // $findText = '';
+                // $some = $html->find($findText);
+                // dd($some);
                 echo $html;
 
                 // $resp['statusCode'] = $response->getStatusCode();
