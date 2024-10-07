@@ -63,7 +63,7 @@ class ImportPostController extends Controller
                     ]);
                 }
 
-                echo $text;
+                dd('теперь запись можно записать');
 
                 break;
             case 'vk':

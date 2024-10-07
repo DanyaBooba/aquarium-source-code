@@ -11,7 +11,7 @@
                     <path d="m15 18-6-6 6-6" />
                 </svg>
             </a>
-            <h1 class="title-has-back">{{ __('Импортировать записи') }}</h1>
+            <h1 class="title-has-back">{{ __('Импортировать запись') }}</h1>
         </div>
 
         <div class="addpost-container import-post">
@@ -27,7 +27,7 @@
                 </button>
             </div>
             <h2>
-                {{ __('2. Скопируйте ссылку на пост:') }}
+                {{ __('2. Скопируйте ссылку на запись:') }}
             </h2>
             <x-form.error-first />
             <div class="import-post__link">
