@@ -39,33 +39,22 @@ class ImportPostController extends Controller
                     ]);
                 }
 
-                // $html = str_get_html('<div id="hello">Hello</div><div id="world">World</div>');
-                // $html->find('div', 1)->class = 'tgme_widget_message_text';
-                // $html->find('div[id=world]', 0)->innertext = 'foo';
+                // $client = new \GuzzleHttp\Client();
+                // $response = $client->get("https://t.me/aquariumsocial/202?embed=1&mode=tme");
+
+                // $html = str_get_html($response->getBody()->getContents());
+                // $html = file_get_html("https://t.me/aquariumsocial/202?embed=1&mode=tme");
+
+                // $findText = 'body div.tgme_widget_message_text.js-message_text';
+                // echo $html->find($findText);
+                // $some = $html->find($findText);
+                // $some->save();
+                // dd($some);
+                // dd($some[0]);
                 // echo $html;
 
-                $client = new \GuzzleHttp\Client();
-                // $response = $client->get("https://aquariumsocial.ru");
-                $response = $client->get("https://t.me/aquariumsocial/202?embed=1&mode=tme");
-                // $response = $client->get("https://books.toscrape.com/");
-
-                // $html = str_get_html('<div id="hello">Hello</div><div id="world">World</div>');
-                $html = str_get_html($response->getBody()->getContents());
-                // $findText = '';
-                // $some = $html->find($findText);
-                // dd($some);
-                echo $html;
-
-                // $resp['statusCode'] = $response->getStatusCode();
-                // $resp['bodyContents'] = $response->getBody()->getContents();
-
-                // $html = (string) $response->getBody();
-
-                // dd($resp);
-
-                // $dom = new DOMDocument();
-                // @$dom->loadHTML($html);
-
+                $plain = file_get_html('https://t.me/aquariumsocial/201?embed=1&mode=tme')->plaintext;
+                echo $plain;
 
                 break;
             case 'vk':
@@ -82,7 +71,9 @@ class ImportPostController extends Controller
                 break;
         }
 
-        return "ok";
+        return "200";
+
+        return redirect()->route('main');
     }
 
     private function get_content($url)
