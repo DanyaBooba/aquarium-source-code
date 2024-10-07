@@ -39,22 +39,19 @@ class ImportPostController extends Controller
                     ]);
                 }
 
-                // $client = new \GuzzleHttp\Client();
-                // $response = $client->get("https://t.me/aquariumsocial/202?embed=1&mode=tme");
+                $plainText = file_get_html($url . '?embed=1&mode=tme')->plaintext;
+                $textWithDate = substr($plainText, 281);
 
-                // $html = str_get_html($response->getBody()->getContents());
-                // $html = file_get_html("https://t.me/aquariumsocial/202?embed=1&mode=tme");
+                $listText = explode(' t.me', $textWithDate);
+                $text = $listText[0];
 
-                // $findText = 'body div.tgme_widget_message_text.js-message_text';
-                // echo $html->find($findText);
-                // $some = $html->find($findText);
-                // $some->save();
-                // dd($some);
-                // dd($some[0]);
-                // echo $html;
+                if (strpos($text, "This media is not supported")) {
+                    return redirect()->route('user.importpost')->withErrors([
+                        'notlink' => 'Запись не может быть импортирована.'
+                    ]);
+                }
 
-                $plain = file_get_html('https://t.me/aquariumsocial/201?embed=1&mode=tme')->plaintext;
-                echo $plain;
+                echo $text;
 
                 break;
             case 'vk':
@@ -71,7 +68,7 @@ class ImportPostController extends Controller
                 break;
         }
 
-        return "200";
+        return "";
 
         return redirect()->route('main');
     }
