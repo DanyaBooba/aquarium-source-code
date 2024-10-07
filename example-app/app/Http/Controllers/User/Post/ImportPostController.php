@@ -51,6 +51,18 @@ class ImportPostController extends Controller
                     ]);
                 }
 
+                if (strpos($text, "VIEW IN TELEGRAM")) {
+                    return redirect()->route('user.importpost')->withErrors([
+                        'notlink' => 'Запись содержит ошибку.'
+                    ]);
+                }
+
+                if (mb_strlen($text) < 30) {
+                    return redirect()->route('user.importpost')->withErrors([
+                        'notlink' => 'Запись слишком короткая.'
+                    ]);
+                }
+
                 echo $text;
 
                 break;
