@@ -25,6 +25,9 @@ main.row-user-content header .header__logo svg {
 }
 
 main.row-user-content header .header__meta {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
     margin-left: auto;
 }
 

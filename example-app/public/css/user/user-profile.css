@@ -1,5 +1,5 @@
 .user-profile {
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 .user-profile .user-profile-left {
@@ -177,11 +177,15 @@
 
     margin-top: .5rem;
     padding: .2rem;
-    margin-bottom: .5rem;
+    margin-bottom: .3rem;
 }
 
 .user-profile .user-profile-buttons button.user-button-mobile {
     display: none;
+}
+
+.user-profile .user-profile-buttons button.user-button-pc {
+    display: block;
 }
 
 .user-profile .user-profile-buttons button {
@@ -305,6 +309,10 @@
 @media(max-width: 767.98px) {
     .user-profile .user-profile-buttons button.user-button-mobile {
         display: block;
+    }
+
+    .user-profile .user-profile-buttons button.user-button-pc {
+        display: none;
     }
 }
 
