@@ -21,7 +21,7 @@ class ProfilePasswordController extends Controller
             'newPassword' => ['required', 'string', 'min: 3', 'max:254', Password::min(3)->letters()->numbers()],
         ]);
 
-        $user = User::where('email', session('email'))->first();
+        $user = user_profile();
         if ($user->usertype == -1) return redirect()->back();
 
         $passwordConfirm = app('hash')->check($validated['currentPassword'], $user->password);

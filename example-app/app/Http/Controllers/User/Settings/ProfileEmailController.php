@@ -21,7 +21,7 @@ class ProfileEmailController extends Controller
             'newEmail' => ['required', 'email', 'min: 3', 'max:254'],
         ]);
 
-        $findUserSession = User::where('email', session('email'))->first();
+        $findUserSession = user_profile();
         if ($findUserSession->usertype == -1) return redirect()->back();
 
         if ($validated['currentEmail'] !== $findUserSession->email) {

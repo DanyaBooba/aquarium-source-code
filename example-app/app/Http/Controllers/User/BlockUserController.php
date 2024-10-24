@@ -12,7 +12,7 @@ class BlockUserController extends Controller
 {
     public function index()
     {
-        $userSession = User::where('email', session('email'))->first();
+        $userSession = user_profile();
         $blockInfo = Block::where('idUser', $userSession->id)->first();
 
         $datetime = Carbon::now();

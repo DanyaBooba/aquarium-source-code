@@ -16,7 +16,7 @@ class VerifiedMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $verified = User::where('email', '=', session('email'))->first()->verified;
+        $verified = user_profile()->verified;
 
         if (!$verified) {
             return redirect()->route('settings');

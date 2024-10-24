@@ -17,7 +17,7 @@ class AppearanceLoadAvatarController extends Controller
             abort(403);
         }
 
-        $user = User::where('email', session('email'))->first();
+        $user = user_profile();
 
         if ($user->usertype == -1) {
             abort(403);

@@ -10,7 +10,7 @@ class SubscribeController extends Controller
 {
     public function index($id)
     {
-        $findUserSession = User::where('email', session('email'))->first();
+        $findUserSession = user_profile();
         $findUser = User::where('id', $id)->where('email', '<>', session('email'))->first();
 
         if ($findUserSession->usertype === -1 || $findUser->usertype === -1) return redirect()->back();

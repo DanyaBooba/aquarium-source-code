@@ -10,7 +10,7 @@ class AppearanceController extends Controller
 {
     public function index()
     {
-        $user = User::where('email', '=', session('email'))->first();
+        $user = user_profile();
 
         $profile = get_user($user);
 
@@ -26,7 +26,7 @@ class AppearanceController extends Controller
             'icon' => ['nullable', 'string', 'min:4', 'max:12'],
         ]);
 
-        $user = User::where('email', '=', session('email'))->first();
+        $user = user_profile();
 
         if ($user->usertype == -1) {
             return redirect()->route('settings');

@@ -11,7 +11,7 @@ class AddPostController extends Controller
 {
     public function index()
     {
-        $iduser = User::where('email', session('email'))->first()->id;
+        $iduser = user_profile()->id;
         $whiteList = in_array($iduser, white_id_posts());
 
         return view('user.addpost', [
@@ -26,7 +26,7 @@ class AddPostController extends Controller
         $post = strip_tags($validated['message'], post_free_tags());
         $shortPost = substr(strip_tags($post), 0, 255);
 
-        $findUser = User::where('email', session('email'))->first();
+        $findUser = user_profile();
 
         if ($findUser === null) {
             return redirect()->back()->withInput($validated)->withErrors([

@@ -13,7 +13,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user = User::where('email', session('email'))->first();
+        $user = user_profile();
         $profile = get_user($user, true);
 
         $subs = User::select('id', 'firstName', 'lastName', 'avatar', 'avatarDefault')
@@ -64,7 +64,7 @@ class UserController extends Controller
 
     public function notifications()
     {
-        $findUser = User::where('email', session('email'))->first();
+        $findUser = user_profile();
 
         $notifications = Notification::where('iduser', $findUser->id)->get();
 
@@ -76,7 +76,7 @@ class UserController extends Controller
 
     public function achievements()
     {
-        $findUser = User::where('email', session('email'))->first();
+        $findUser = user_profile();
         $achievementsJson = json_decode($findUser->achivsJson) ?? [];
         $achievements = [];
         foreach ($achievementsJson as $idAchiv) {

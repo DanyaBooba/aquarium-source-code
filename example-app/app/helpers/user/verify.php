@@ -6,7 +6,7 @@ use \App\Models\User\Verify;
 if (!function_exists('set_new_verify')) {
     function set_new_verify(): string
     {
-        $findUser = User::where('email', session('email'))->first();
+        $findUser = user_profile();
 
         if ($findUser === null) return '';
 

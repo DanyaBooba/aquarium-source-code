@@ -11,7 +11,7 @@ class LikePostController extends Controller
 {
     public function like($id, $idPost)
     {
-        $user = User::where('email', session('email'))->first();
+        $user = user_profile();
         if (!$user) return redirect()->route('auth.signin');
 
         $userPost = User::where('verified', 1)->where('id', $id)->firstOrFail();

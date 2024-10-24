@@ -11,7 +11,7 @@ class VerifyController extends Controller
 {
     public function view()
     {
-        $findUser = User::where('email', session('email'))->first();
+        $findUser = user_profile();
 
         if ($findUser == null) {
             return redirect()->route('main');
@@ -34,7 +34,7 @@ class VerifyController extends Controller
 
     public function code($code)
     {
-        $findUser = User::where('email', session('email'))->first();
+        $findUser = user_profile();
 
         if ($findUser === null) return redirect()->route('auth.signin');
 

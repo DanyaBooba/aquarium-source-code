@@ -28,7 +28,7 @@ class ShowUserController extends Controller
         $issub = false;
 
         $profile = get_user($user);
-        $userSession = User::where('email', session('email'))->first();
+        $userSession = user_profile();
 
         $posts = Post::where('active', 1)->where('idUser', $profile->id)->orderBy('created_at', 'desc')->get();
 

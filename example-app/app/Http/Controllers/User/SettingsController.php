@@ -10,7 +10,7 @@ class SettingsController extends Controller
 {
     public function index()
     {
-        $verified = User::where('email', '=', session('email'))->first()->verified;
+        $verified = user_profile()->verified;
         $secondAccount = have_second_account() ? get_user(User::where('email', session('prev_email'))->first()) : (object) [];
 
         return view('user.settings.index', [

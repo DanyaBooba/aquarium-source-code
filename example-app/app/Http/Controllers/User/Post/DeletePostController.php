@@ -11,7 +11,7 @@ class DeletePostController extends Controller
 {
     public function delete($idPost)
     {
-        $userid = User::where('email', session('email'))->first()->id;
+        $userid = user_profile()->id;
         $post = Post::where('idPost', $idPost)->where('idUser', $userid)->firstOrFail();
 
         $post->delete();

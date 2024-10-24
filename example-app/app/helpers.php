@@ -36,6 +36,8 @@ require_once "helpers/user/routes/route-user.php";
 
 require_once "helpers/user/addpost/placeholder.php";
 
+require_once "helpers/user/sign-in/signin.php";
+
 // Another
 
 require_once "helpers/links.php";

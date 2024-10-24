@@ -23,7 +23,7 @@ class AppearanceLoadCapController extends Controller
         $folder = public_path() . '/loads/';
         if (!is_dir($folder)) mkdir($folder, 0777, true);
 
-        $user = User::where('email', session('email'))->first();
+        $user = user_profile();
 
         $data = base64_decode($data);
         $imageName = random_image_path($user->id, 'jpg');

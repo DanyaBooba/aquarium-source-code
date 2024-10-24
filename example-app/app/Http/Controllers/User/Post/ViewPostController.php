@@ -23,7 +23,7 @@ class ViewPostController extends Controller
 
     private function show(User $user, $idPost)
     {
-        $findUserSession = User::where('email', session('email'))->first();
+        $findUserSession = user_profile();
         $post = Post::where('idPost', $idPost)->where('idUser', $user->id)->firstOrFail();
         $itsmypost = false;
         $comments = [];

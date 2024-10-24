@@ -17,7 +17,7 @@ class BlockUserMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $findUser = User::where('email', session('email'))->first();
+        $findUser = user_profile();
 
         if ($findUser->blocked) {
             if (!Route::is('user.blocked')) return redirect()->route('user.blocked');

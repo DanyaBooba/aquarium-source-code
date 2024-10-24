@@ -10,7 +10,7 @@ class NotificationsController extends Controller
 {
     public function index()
     {
-        $user = User::where('email', '=', session('email'))->first();
+        $user = user_profile();
 
         $profile = get_user($user);
 
@@ -35,7 +35,7 @@ class NotificationsController extends Controller
             'passwordChange' => ['nullable', 'boolean'],
         ]);
 
-        $findUser = User::where('email', session('email'))->first();
+        $findUser = user_profile();
 
         $json = $findUser->settings_notifications;
 

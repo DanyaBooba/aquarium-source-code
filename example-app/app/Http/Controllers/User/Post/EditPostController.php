@@ -11,7 +11,7 @@ class EditPostController extends Controller
 {
     public function index($idPost)
     {
-        $userId = User::where('email', session('email'))->first()->id;
+        $userId = user_profile()->id;
         $post = Post::where('idUser', $userId)->where('idPost', $idPost)->firstOrFail();
         $whiteList = in_array($userId, white_id_posts());
 
@@ -37,7 +37,7 @@ class EditPostController extends Controller
             ]
         ]);
 
-        $user = User::where('email', session('email'))->first();
+        $user = user_profile();
         $post = Post::where('idUser', $user->id)->where('idPost', $validated['idPost'])->firstOrFail();
 
         $message = strip_tags($validated['message'], post_free_tags());

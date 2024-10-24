@@ -15,7 +15,7 @@ class DeleteController extends Controller
 {
     public function index()
     {
-        $user = User::where('email', session('email'))->first();
+        $user = user_profile();
         if ($user->usertype == -1) return redirect()->route('settings.profile');
 
         $useService = (bool) $user->serviceLogin;
@@ -39,7 +39,7 @@ class DeleteController extends Controller
             ]);
         }
 
-        $findUser = User::where('email', session('email'))->first();
+        $findUser = user_profile();
 
         if ($findUser === null) {
             return redirect()->back()->withInput($validated)->withErrors([
@@ -117,7 +117,7 @@ class DeleteController extends Controller
             'confirmDelete' => ['required', 'string', 'max:50']
         ]);
 
-        $findUser = User::where('email', session('email'))->first();
+        $findUser = user_profile();
 
         if ($findUser === null) {
             return redirect()->back()->withInput($validated)->withErrors([

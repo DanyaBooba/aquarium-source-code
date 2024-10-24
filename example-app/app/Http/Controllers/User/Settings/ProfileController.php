@@ -10,7 +10,7 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        $user = User::where('email', '=', session('email'))->first();
+        $user = user_profile();
 
         $profile = get_user($user);
 
@@ -50,7 +50,7 @@ class ProfileController extends Controller
             ]);
         }
 
-        $find = User::where('email', '=', session('email'))->first();
+        $find = user_profile();
         if ($find->usertype == -1) return redirect()->back();
 
         $find->username = $username;

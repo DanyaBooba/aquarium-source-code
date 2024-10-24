@@ -16,7 +16,7 @@ class ComplainController extends Controller
 
         if ($findUser === null) return redirect()->back();
 
-        $findUserSession = User::where('email', session('email'))->first();
+        $findUserSession = user_profile();
 
         if ($findUserSession === null) return redirect()->back();
 
