@@ -185,13 +185,14 @@
 }
 
 .user-profile .user-profile-buttons button.user-button-pc {
-    display: block;
+    display: flex;
 }
 
 .user-profile .user-profile-buttons button {
     display: flex;
     align-items: center;
     min-width: fit-content;
+    flex-direction: row-reverse;
 
     color: var(--user-profile-button-text);
     background-color: var(--user-profile-button);
@@ -224,7 +225,7 @@
     width: 20px;
     height: 20px;
 
-    margin-right: .5rem;
+    margin-left: .75rem;
 }
 
 .user-profile .user-profile-text p.user-profile-name::-webkit-scrollbar {
@@ -308,7 +309,7 @@
 
 @media(max-width: 767.98px) {
     .user-profile .user-profile-buttons button.user-button-mobile {
-        display: block;
+        display: flex;
     }
 
     .user-profile .user-profile-buttons button.user-button-pc {

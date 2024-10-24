@@ -12,13 +12,13 @@ class ShowUserController extends Controller
 {
     public function nickname($nickname)
     {
-        $user = User::where('username', '=', $nickname)->firstOrFail();
+        $user = User::where('username', $nickname)->firstOrFail();
         return $this->getUser($user);
     }
 
     public function id($id)
     {
-        $user = User::where('id', '=', $id)->firstOrFail();
+        $user = User::where('id', $id)->firstOrFail();
         return $this->getUser($user);
     }
 
