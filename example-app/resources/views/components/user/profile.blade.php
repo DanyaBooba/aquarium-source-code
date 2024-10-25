@@ -33,13 +33,14 @@
         </x-user.profile.profile.button>
 
         @if ($profile->local)
-            <x-user.profile.profile.button :mobile="true" :url="route('settings')">
+            <x-user.profile.profile.button class='user-button-settings' :mobile="true" :url="route('settings')">
                 <x-user.profile.profile.icon.settings />
                 {{ __('Настройки') }}
             </x-user.profile.profile.button>
         @endif
 
-        <x-user.profile.profile.button attr='data-bs-toggle=modal data-bs-target=#qrCodeModal'>
+        <x-user.profile.profile.button class='user-button-share'
+            attr='data-bs-toggle=modal data-bs-target=#qrCodeModal'>
             <x-user.profile.profile.icon.share />
             {{ __('Поделиться') }}
         </x-user.profile.profile.button>

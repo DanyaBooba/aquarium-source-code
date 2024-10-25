@@ -64,12 +64,6 @@
     margin-bottom: -12px;
 }
 
-/* .user-offcanvas .user-profile-data-mobile div button p:first-child {
-    font-size: 2rem;
-    font-family: ResistSans;
-    margin-bottom: -12px;
-} */
-
 .user-offcanvas .user-profile-data-mobile div button p:not(:first-child) {
     font-size: .7rem;
 }

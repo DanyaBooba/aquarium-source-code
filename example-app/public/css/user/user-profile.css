@@ -207,13 +207,8 @@
     transition: .15s;
 }
 
-/* .user-profile .user-profile-buttons button:focus {
-    outline: none !important;
-} */
-
 .user-profile .user-profile-buttons button:disabled {
     background-color: var(--user-profile-button-disabled);
-    /* outline: .2rem var(--user-profile-button) dashed; */
     margin-right: .75rem;
 }
 
@@ -239,7 +234,6 @@
 
     overflow: scroll;
     white-space: nowrap;
-    /* text-overflow: ellipsis; */
 }
 
 .user-profile .user-profile-text p.user-profile-desc::-webkit-scrollbar {
@@ -252,7 +246,6 @@
 
     overflow: scroll;
     white-space: nowrap;
-    /* text-overflow: ellipsis; */
 }
 
 .container {
@@ -265,6 +258,18 @@
 }
 
 /* media */
+
+@media(max-width: 364px) {
+    .user-profile .user-profile-buttons button.user-button-settings {
+        display: none !important;
+    }
+}
+
+@media(max-width: 495px) {
+    .user-profile .user-profile-buttons button.user-button-share {
+        display: none !important;
+    }
+}
 
 @media(max-width: 860px) {
     .user-profile-content {
@@ -312,8 +317,14 @@
     }
 }
 
+@media(max-width: 767.98px) and (min-width: 365px) {
+    .user-profile .user-profile-buttons button.user-button-mobile.user-button-settings {
+        display: flex !important;
+    }
+}
+
 @media(max-width: 767.98px) {
-    .user-profile .user-profile-buttons button.user-button-mobile {
+    .user-profile .user-profile-buttons button.user-button-mobile:not(.user-button-settings) {
         display: flex !important;
     }
 

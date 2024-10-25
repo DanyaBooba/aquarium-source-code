@@ -4,6 +4,7 @@
     'attr' => '',
     'url' => '',
     'itsme' => false,
+    'class' => '',
 ])
 
 @props([
@@ -13,7 +14,7 @@
     '_onclick' => $url ? 'onclick=buttonOpenURL("' . $url . '")' : '',
 ])
 
-<button type="button" class="{{ $_mobile }} {{ $_pc }}" {{ $attr }} {{ $_onclick }}
-    {{ $_disabled }}>
+<button type="button" class="{{ $_mobile }} {{ $_pc }} {{ $class }}" {{ $attr }}
+    {{ $_onclick }} {{ $_disabled }}>
     {{ $slot }}
 </button>
