@@ -14,7 +14,7 @@
     '_onclick' => $url ? 'onclick=buttonOpenURL("' . $url . '")' : '',
 ])
 
-<button type="button" class="{{ $_mobile }} {{ $_pc }} {{ $class }}" {{ $attr }}
+<button type="button" class="btn {{ $_mobile }} {{ $_pc }} {{ $class }}" {{ $attr }}
     {{ $_onclick }} {{ $_disabled }}>
     {{ $slot }}
 </button>

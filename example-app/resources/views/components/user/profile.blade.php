@@ -51,7 +51,7 @@
                 {{ __('Профиль со стороны') }}
             </x-user.profile.profile.button>
 
-            <x-user.profile.profile.dropdown-local :profile="$profile" />
+            <x-user.profile.profile.dropdown-local :profile="$profile" :itsme="$itsme" />
 
             @if ($profile->verified && have_second_account() == false)
                 <x-user.profile.profile.button :pc="true" :url="route('second.auth.signin')">
@@ -75,7 +75,7 @@
                 {{ __('Пожаловаться') }}
             </x-user.profile.profile.button>
 
-            <x-user.profile.profile.dropdown :profile="$profile" :issub="$issub" />
+            <x-user.profile.profile.dropdown :profile="$profile" :issub="$issub" :itsme="$itsme" />
 
         @endif
     </div>
