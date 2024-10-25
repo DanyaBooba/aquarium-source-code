@@ -45,10 +45,27 @@
         </x-user.profile.profile.button>
 
         @if ($profile->local)
-            <x-user.profile.profile.button :url="route_user_show($profile->id, $profile->username)">
+            <x-user.profile.profile.button :pc="true" :url="route_user_show($profile->id, $profile->username)">
                 <x-user.profile.profile.icon.from-the-side />
                 {{ __('Профиль со стороны') }}
             </x-user.profile.profile.button>
+
+            {{-- <x-user.profile.profile.button :mobile="true" :url="route_user_show($profile->id, $profile->username)">
+                <x-user.profile.profile.icon.more />
+                {{ __('Ещё') }}
+            </x-user.profile.profile.button> --}}
+
+            <div class="dropdown user-button-mobile">
+                <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <x-user.profile.profile.icon.more />
+                    {{ __('Ещё') }}
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
 
             @if ($profile->verified && have_second_account() == false)
                 <x-user.profile.profile.button :pc="true" :url="route('second.auth.signin')">

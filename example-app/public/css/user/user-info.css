@@ -3,6 +3,7 @@
     overflow: scroll;
     margin-bottom: 1rem;
     padding: .2rem;
+    gap: .7rem;
 }
 
 .profile-info::-webkit-scrollbar {
@@ -17,7 +18,7 @@
     border-radius: 16px;
     min-width: 330px;
     max-width: 330px;
-    margin-right: .5rem;
+    /* margin-right: .5rem; */
     /* margin-left: .5rem; */
     /* margin-bottom: 1rem; */
 }

@@ -178,10 +178,11 @@
     margin-top: .5rem;
     padding: .2rem;
     margin-bottom: .3rem;
+    gap: .7rem;
 }
 
 .user-profile .user-profile-buttons button.user-button-mobile {
-    display: none;
+    display: none !important;
 }
 
 .user-profile .user-profile-buttons button.user-button-pc {
@@ -200,7 +201,7 @@
     border-radius: 8px;
 
     padding: .7rem 1.4rem;
-    margin-right: .7rem;
+    /* margin-right: .7rem; */
     /* margin-left: .5rem; */
 
     transition: .15s;
@@ -259,6 +260,10 @@
     padding-right: .6rem !important;
 }
 
+.user-profile .user-profile-buttons button:not(:disabled) {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
+}
+
 /* media */
 
 @media(max-width: 860px) {
@@ -309,11 +314,30 @@
 
 @media(max-width: 767.98px) {
     .user-profile .user-profile-buttons button.user-button-mobile {
-        display: flex;
+        display: flex !important;
     }
 
     .user-profile .user-profile-buttons button.user-button-pc {
-        display: none;
+        display: none !important;
+    }
+
+    .user-profile .user-profile-buttons button {
+        flex-direction: column;
+        font-size: .8rem;
+        flex: 1;
+    }
+
+    .user-profile .user-profile-buttons button svg {
+        margin: 0;
+        margin-bottom: .25rem;
+    }
+
+    .user-profile .user-profile-buttons {
+        overflow: visible !important;
+    }
+
+    .user-profile .user-profile-buttons .dropdown {
+        display: contents;
     }
 }
 
@@ -322,10 +346,10 @@
         min-width: 380px !important;
         min-height: 156px !important;
     }
-}
 
-.user-profile .user-profile-buttons button:not(:disabled) {
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
+    .user-profile .user-profile-buttons .user-button-mobile {
+        display: none !important;
+    }
 }
 
 @media(min-width: 1200px) {
