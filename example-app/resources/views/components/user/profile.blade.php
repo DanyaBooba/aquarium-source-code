@@ -51,29 +51,7 @@
                 {{ __('Профиль со стороны') }}
             </x-user.profile.profile.button>
 
-            <div class="dropdown user-button-mobile">
-                <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <x-user.profile.profile.icon.more />
-                    {{ __('Ещё') }}
-                </button>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            {{ __('Профиль со стороны') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            {{ __('Поделиться') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            {{ __('Настройки') }}
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <x-user.profile.profile.dropdown-local :profile="$profile" />
 
             @if ($profile->verified && have_second_account() == false)
                 <x-user.profile.profile.button :pc="true" :url="route('second.auth.signin')">
@@ -82,7 +60,7 @@
                 </x-user.profile.profile.button>
             @endif
         @else
-            <x-user.profile.profile.button :url="route('user.sub', $profile->id)" :itsme="$itsme">
+            <x-user.profile.profile.button class='user-button-settings' :url="route('user.sub', $profile->id)" :itsme="$itsme">
                 @if ($issub)
                     <x-user.profile.profile.icon.sub-true />
                     {{ __('Подписан') }}
@@ -92,10 +70,12 @@
                 @endif
             </x-user.profile.profile.button>
 
-            <x-user.profile.profile.button :url="route('user.complain', $profile->id)" :itsme="$itsme">
+            <x-user.profile.profile.button class="user-button-complain" :url="route('user.complain', $profile->id)" :itsme="$itsme">
                 <x-user.profile.profile.icon.complain />
                 {{ __('Пожаловаться') }}
             </x-user.profile.profile.button>
+
+            <x-user.profile.profile.dropdown :profile="$profile" :issub="$issub" />
 
         @endif
     </div>
