@@ -625,5 +625,22 @@
     "Есть ли изображение": "Is there an image",
     "Путь к изображению": "Image path",
     "Содержимое записи": "Record content",
-    "Отрывок из записи (описание)": "Excerpt from recording (description)"
+    "Отрывок из записи (описание)": "Excerpt from recording (description)",
+    "Ещё": "More",
+    "Как прошел Ваш день?": "How was your day?",
+    "Заметили что-то интересное сегодня?": "Notice anything interesting today?",
+    "Вам не грустно?": "Aren't you sad?",
+    "Есть чем поделиться?": "Anything to share?",
+    "Что-то произошло?": "Did something happen?",
+    "Хотите сказать что-то важное?": "Do you have something important to say?",
+    "Может скажем им...": "Why don't we tell them...",
+    "Лучше будет поделиться...": "It would be better to share...",
+    "Давайте поделимся со всеми!": "Let's share it with everyone!",
+    "Давайте напишем это!": "Let's write it!",
+    "Давайте скажем это!": "Let's say it!",
+    "Записей не найдено": "No posts found",
+    "После публикации запись будет проверена администрацией.": "Once published, the entry will be verified by the administration.",
+    "У пользователя нет подписчиков.": "The user has no subscribers.",
+    "У пользователя нет подписок.": "The user has no subscriptions.",
+    "У пользователя нет достижений.": "The user has no achievements."
 }

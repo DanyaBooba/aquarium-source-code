@@ -10,12 +10,12 @@
 
         <div class="addpost-container addpost-container-addpost">
             <form action="{{ route('post.add.store') }}" method="post" class="mb-4">
-                @if (!$whiteList)
-                    <x-addpost.post-moderate />
-                @endif
                 @csrf
                 <input id="x" type="hidden" name="message">
                 <trix-editor input="x" placeholder="{{ addpost_placeholder() }}"></trix-editor>
+                @if (!$whiteList)
+                    <x-addpost.post-moderate />
+                @endif
                 <div>
                     <button type="submit" class="btn btn-success">
                         {{ __('Опубликовать') }}

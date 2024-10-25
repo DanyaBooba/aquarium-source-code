@@ -28,6 +28,6 @@
     @endif
 @else
     <h4 class="text-center fs-3" style="margin-top: 2rem; margin-bottom: 5rem">
-        Записей не найдено.
+        {{ __('Записей не найдено') }}.
     </h4>
 @endif
