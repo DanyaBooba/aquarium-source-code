@@ -57,6 +57,15 @@
 
     --list-marker-color: #615f74;
 
+    --collapse-button-bg: #302d57;
+    --collapse-body-bg: #17152c;
+    --collapse-border: #433e6d;
+
+    --table-border: #3e3a68;
+    --table-tr-hover: #3e3a68;
+
+    --mark-bg: #5e5943;
+
     /* Cookie */
 
     --cookie-accept-background: #1c1a36;
@@ -87,6 +96,22 @@
     --post-bg: #1f1d3a;
     --post-border: #312f59;
 
+    --notifications-list-border: #3b3576;
+    --achivs-bg: #17152b;
+
+    --button-top-background: #1f1d3a;
+    --button-top-border: #38355f;
+
+    --modal-bg: #1f1c38;
+
+    --user-qrcode-button-bg: #a292ff;
+    --user-qrcode-button-bg-hover: #8373df;
+
+    --toast-bg: #1c1935;
+    --toast-border: #211f41;
+
+    --offcanvas-bg: #1c1935;
+
     /* User Search */
 
     --user-search-bg: #18162d;
@@ -110,6 +135,8 @@
 
     --importpost-choose-bg: #38355c;
 
+    --trix-button-accent: #366182;
+
     /* Settings */
 
     --settings-main-bg: #1f1d3a;
@@ -130,45 +157,6 @@
     --settings-image-active: #0984e3;
     --settings-bg-hover: #323060;
     --settings-icon-right: #aeadc0;
-
-    /* Notifications */
-
-    --notifications-list-border: #3b3576;
-
-    /* Button Top */
-
-    --button-top-background: #1f1d3a;
-    --button-top-border: #38355f;
-
-    /* Collapse */
-
-    --collapse-button-background: #302d57;
-    --collapse-body-background: #17152c;
-    --collapse-border: #433e6d;
-
-    /* Modal */
-
-    --modal-background: #1f1c38;
-
-    /* User Achivs */
-
-    --achivs-background: #17152b;
-    --achiv-shadow: rgba(0, 0, 0, .15);
-
-    /* User Qr Code */
-
-    --user-qrcode-button-bg: #a292ff;
-    --user-qrcode-button-bg-hover: #8373df;
-
-    /* Trix */
-
-    --trix-button-accent: #366182;
-    --table-border: #3e3a68;
-    --table-tr-hover: #3e3a68;
-
-    /* Mark */
-
-    --mark-background: #5e5943;
 
     /* Code */
 
@@ -193,13 +181,4 @@
     --code-screen-projection-atn: #404;
     --code-screen-projection-atv: #060;
     --code-L: #27234b;
-
-    /* Toast */
-
-    --toast-bg: #1c1935;
-    --toast-border: #211f41;
-
-    /* Offcanvas */
-
-    --offcanvas-bg: #1c1935;
 }

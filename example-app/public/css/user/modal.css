@@ -1,5 +1,5 @@
 .user-modal .modal-content {
-    background-color: var(--modal-background);
+    background-color: var(--modal-bg);
     border-radius: 12px;
 }
 
@@ -73,7 +73,7 @@
     border-radius: 50%;
     max-width: 180px;
     max-height: 180px;
-    box-shadow: 0 .5rem 1rem var(--achiv-shadow) !important;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
 }
 
 .user-modal .modal-content .modal-body .user-modal-list-achivs .user-modal-list-achivs__item section {

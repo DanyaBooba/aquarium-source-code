@@ -145,17 +145,17 @@
 
     /* Collapse */
 
-    --collapse-button-background: #fff;
-    --collapse-body-background: #fff;
+    --collapse-button-bg: #fff;
+    --collapse-body-bg: #fff;
     --collapse-border: #dfdfdf;
 
     /* Modal */
 
-    --modal-background: #fff;
+    --modal-bg: #fff;
 
     /* User Achivs */
 
-    --achivs-background: #fff;
+    --achivs-bg: #fff;
     --achiv-shadow: rgba(0, 0, 0, .15);
 
     /* Trix */
@@ -166,7 +166,7 @@
 
     /* Mark */
 
-    --mark-background: #faf2cd;
+    --mark-bg: #faf2cd;
 
     /* Code */
 

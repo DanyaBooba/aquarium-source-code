@@ -24,12 +24,12 @@ div .col-7 {
 }
 
 .accordion .accordion-item {
-    background-color: var(--collapse-body-background) !important;
+    background-color: var(--collapse-body-bg) !important;
     border-color: var(--collapse-border) !important;
 }
 
 .accordion .accordion-item .accordion-header button {
-    background-color: var(--collapse-button-background) !important;
+    background-color: var(--collapse-button-bg) !important;
     color: var(--text-color) !important;
 }
 
