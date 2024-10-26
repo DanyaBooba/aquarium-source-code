@@ -101,10 +101,6 @@
     border-radius: 50%;
 }
 
-/* .user-profile .user-profile-image:has(:not(.user-profile-image-service)) {
-    border: .1rem solid var(--user-profile-image-border);
-} */
-
 .user-profile .user-profile-image img {
     max-width: 100%;
     width: 100% !important;

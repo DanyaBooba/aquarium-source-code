@@ -183,7 +183,7 @@
 }
 
 .container-settings .settings-form-block {
-    background-color: var(--settings-main-background);
+    background-color: var(--settings-main-bg);
     border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 1rem;

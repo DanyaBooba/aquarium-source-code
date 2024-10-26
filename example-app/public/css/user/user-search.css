@@ -100,7 +100,7 @@
 
 .search-users a.search-users-content:is(:focus, :focus-visible, :focus-within) {
     color: var(--text-color) !important;
-    background-color: var(--user-search-background-hover);
+    background-color: var(--user-search-bg-hover);
 }
 
 .search-users .search-users-content img {
@@ -130,7 +130,7 @@
 }
 
 .search-users .search-users-content button:is(:focus, :focus-visible, :focus-within) {
-    border: .1rem solid var(--user-search-button-background);
+    border: .1rem solid var(--user-search-button-bg);
     color: var(--text-color) !important;
     background-color: transparent;
 }
@@ -161,7 +161,7 @@
 @media(hover: hover) {
     .search-users a.search-users-content:hover {
         color: var(--text-color) !important;
-        background-color: var(--user-search-background-hover);
+        background-color: var(--user-search-bg-hover);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
     }
 
@@ -170,7 +170,7 @@
     }
 
     .search-users .search-users-content button:hover {
-        border: .1rem solid var(--user-search-button-background);
+        border: .1rem solid var(--user-search-button-bg);
         background-color: transparent;
     }
 
@@ -182,7 +182,7 @@
 @media(hover: none) {
     .search-users a.search-users-content:active {
         color: var(--text-color) !important;
-        background-color: var(--user-search-background-hover);
+        background-color: var(--user-search-bg-hover);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
     }
 
@@ -191,7 +191,7 @@
     }
 
     .search-users .search-users-content button:active {
-        border: .1rem solid var(--user-search-button-background);
+        border: .1rem solid var(--user-search-button-bg);
         background-color: transparent;
     }
 

@@ -26,7 +26,7 @@
 .profile-info__container {
     display: flex;
     flex-direction: column;
-    background: var(--settings-main-background);
+    background: var(--settings-main-bg);
     padding: 1.2rem 1rem;
     border-radius: 12px;
     height: 100%;

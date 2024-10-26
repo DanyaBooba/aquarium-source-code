@@ -87,7 +87,7 @@
     --user-bar: #1f1d3a;
     --user-bar-exit: #dd303f;
     --user-nav-link-active: #0984e3;
-    --user-nav-background: #17152c;
+    --user-nav-bg: #17152c;
     --user-nav-border: #232140;
 
     /* User Profile */
@@ -105,9 +105,9 @@
     /* User Search */
 
     --user-search-border: #35315c;
-    --user-search-background: #18162d;
-    --user-search-background-hover: #35315c;
-    --user-search-button-background: #726bc0;
+    --user-search-bg: #18162d;
+    --user-search-bg-hover: #35315c;
+    --user-search-button-bg: #726bc0;
 
     /* User Alert */
 
@@ -126,15 +126,15 @@
 
     /* Settings */
 
-    --settings-main-background: #1f1d3a;
+    --settings-main-bg: #1f1d3a;
     --settings-main-border: #333060;
     --settings-main-svg: #fff;
-    --settings-background-profile: #718093;
-    --settings-background-notifications: #e84118;
-    --settings-background-privacy: #0097e6;
-    --settings-background-data: #0be881;
-    --settings-background-devices: #ffa801;
-    --settings-background-personalization: #cd84f1;
+    --settings-bg-profile: #718093;
+    --settings-bg-notifications: #e84118;
+    --settings-bg-privacy: #0097e6;
+    --settings-bg-data: #0be881;
+    --settings-bg-devices: #ffa801;
+    --settings-bg-personalization: #cd84f1;
     --settings-image-active: #0984e3;
     --settings-bg-hover: #323060;
 

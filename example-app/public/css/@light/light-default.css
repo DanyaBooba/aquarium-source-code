@@ -67,42 +67,36 @@
 
     /* User Nav */
 
-    --user-bar: #f1f1f4;
+    --user-nav-bg: #fff;
     --user-bar-exit: #dd303f;
-    --user-nav-link-active: #0984e3;
-    --user-nav-background: #fff;
     --user-nav-border: #edeff2;
-    --user-nav-border-text: #000;
+    --user-nav-link-active: #0984e3;
 
     /* User Profile */
 
     --user-profile-image-bg: #ffffffee;
     --user-profile-image-bg-image: #ffffff;
-    --user-profile-image-border: #d9d9e0;
     --user-profile-button: #fff;
     --user-profile-button-accent-text: #fff;
     --user-profile-button-hover: #f8f8f8;
     --user-profile-button-disabled: #ffffffaa;
     --user-profile-addpost-bg: #fff;
     --user-profile-dropdown-bg: #ffffffaa;
+    --post-bg: #fff;
+    --post-border: #d6dae0;
 
     /* User Search */
 
+    --user-search-bg: #f9f9f9;
+    --user-search-bg-hover: #fff;
     --user-search-border: #ced4db;
-    --user-search-background: #f9f9f9;
-    --user-search-background-hover: #fff;
-    --user-search-button-background: #c9daeb;
+    --user-search-button-bg: #c9daeb;
 
     /* User Alert */
 
     --user-alert-text-warning: #ca8726;
     --user-alert-border: #dee2e6;
     --user-alert-success-bg: #2ecc71;
-
-    /* User Post */
-
-    --post-bg: #fff;
-    --post-border: #d6dae0;
 
     /* User Add Post */
 
@@ -112,25 +106,25 @@
     --addpost-button-link-bg: #e2e8ec;
     --addpost-dialog-bg: #fff;
 
-    /* Import post */
-
     --importpost-choose-bg: #e6e9f4;
 
     /* Settings */
 
-    --settings-main-background: #fff;
+    --settings-main-bg: #fff;
     --settings-main-border: #efefef;
     --settings-main-svg: #fff;
-    --settings-background-profile: #718093;
-    --settings-background-home: #576574;
-    --settings-background-exit: #e84118;
-    --settings-background-session: #10ac84;
-    --settings-background-services: #5058dd;
-    --settings-background-notifications: #ee5253;
-    --settings-background-privacy: #0097e6;
-    --settings-background-data: #0be881;
-    --settings-background-devices: #ffa801;
-    --settings-background-personalization: #cd84f1;
+
+    --settings-bg-profile: #718093;
+    --settings-bg-home: #576574;
+    --settings-bg-exit: #e84118;
+    --settings-bg-session: #10ac84;
+    --settings-bg-services: #5058dd;
+    --settings-bg-notifications: #ee5253;
+    --settings-bg-privacy: #0097e6;
+    --settings-bg-data: #0be881;
+    --settings-bg-devices: #ffa801;
+    --settings-bg-personalization: #cd84f1;
+
     --settings-image-active: #0984e3;
     --settings-bg-hover: #efefef;
     --settings-icon-right: #a5a5a5;
