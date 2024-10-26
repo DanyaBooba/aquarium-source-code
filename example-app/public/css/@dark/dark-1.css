@@ -55,9 +55,9 @@
 
     /* Blog */
 
-    --blog-text-on-dark: #212529;
+    --main-block-text: #212529;
     --blog-dark-post: #d3cfff;
-    --blog-white-post: #1c1935;
+    --body-block-light: #1c1935;
     --pagination-active: #fff;
 
     /* Form */

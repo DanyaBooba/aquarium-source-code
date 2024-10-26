@@ -5,6 +5,7 @@
 
     --body-bg: #17152b;
     --body-bg-white: #201e3f;
+    --body-block-light: #1c1935;
 
     /* Text */
 
@@ -20,7 +21,6 @@
 
     --svg-color: #fff;
     --svg-color-invert: #000;
-    --svg-color-github: #fff;
 
     /* Header */
 
@@ -37,8 +37,6 @@
 
     /* Auth */
 
-    --auth-choose-bg: #34305e;
-    --auth-choose-bg-hover: #34305e;
     --auth-choose-border: #2f2c52;
     --auth-choose-color: #746eac;
     --authentication-back: #262443;
@@ -46,13 +44,6 @@
     /* List */
 
     --list-marker-color: #615f74;
-
-    /* Blog */
-
-    --blog-text-on-dark: #212529;
-    --blog-dark-post: #d3cfff;
-    --blog-white-post: #1c1935;
-    --pagination-active: #fff;
 
     /* Form */
 
@@ -62,6 +53,7 @@
     /* Main */
 
     --main-block-image: url('/img/main/main_cap@dark.jpg');
+    --main-block-text: #212529;
     --main-block-button-shadow: rgb(70, 76, 180, .9);
     --main-list-item-1: #4c6fa9;
     --main-list-item-2: #58974c;
