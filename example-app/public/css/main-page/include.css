@@ -24,11 +24,11 @@
     border-radius: 24px;
     min-height: 500px;
 
-    background-image: var(--main-block-image) !important;
+    background-image: url('/img/main/main_cap.jpg') !important;
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100% auto;
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, .3) !important;
+    box-shadow: 0 0 .25rem rgba(70, 76, 180, .3) !important;
 }
 
 .row-first .row-first-left div.p-3 {

@@ -41,14 +41,6 @@
     --auth-choose-color: #acacac;
     --authentication-back: #efefef;
 
-    /* List */
-
-    --list-marker-color: #bababa;
-
-    /* Blog */
-
-
-
     /* Form */
 
     --form-input-border: #ced4db;
@@ -56,13 +48,14 @@
 
     /* Main */
 
-    --main-block-image: url('/img/main/main_cap@light.jpg');
     --main-block-text: #fff;
     --main-block-button-shadow: rgb(70, 76, 180, .9);
     --main-list-item-1: #81b0ff;
     --main-list-item-2: #9ff18e;
     --main-list-item-3: #b5a6ff;
     --main-darklight-icon: #f1c40f;
+
+    --list-marker-color: #bababa;
 
     /* Cookie */
 
