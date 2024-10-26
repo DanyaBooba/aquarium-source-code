@@ -1,7 +1,7 @@
 :root {
     --accent: #8D77FE;
 
-    /* Accent */
+    /* Body */
 
     --body-bg: #17152b;
     --body-bg-white: #201e3f;
@@ -171,6 +171,7 @@
     --code-screen-atv: #080;
     --code-screen-dec: #606;
     --code-screen-fun: #f00;
+
     --code-screen-projection-str: #060;
     --code-screen-projection-kwd: #006;
     --code-screen-projection-com: #600;
@@ -180,5 +181,6 @@
     --code-screen-projection-tag: #006;
     --code-screen-projection-atn: #404;
     --code-screen-projection-atv: #060;
+
     --code-L: #27234b;
 }

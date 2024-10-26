@@ -88,6 +88,7 @@
     --user-profile-button: #fff;
     --user-profile-button-accent-text: #fff;
     --user-profile-button-hover: #f8f8f8;
+    --user-profile-button-text: #000;
     --user-profile-button-disabled: #ffffffaa;
     --user-profile-addpost-bg: #fff;
     --user-profile-dropdown-bg: #ffffffaa;
@@ -170,6 +171,7 @@
     --code-screen-atv: #080;
     --code-screen-dec: #606;
     --code-screen-fun: #f00;
+
     --code-screen-projection-str: #060;
     --code-screen-projection-kwd: #006;
     --code-screen-projection-com: #600;
@@ -179,6 +181,6 @@
     --code-screen-projection-tag: #006;
     --code-screen-projection-atn: #404;
     --code-screen-projection-atv: #060;
-    --text-code-border: #0984e3;
+
     --code-L: #eee;
 }

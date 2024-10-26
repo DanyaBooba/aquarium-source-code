@@ -1,16 +1,11 @@
 :root {
-
-    /* Accent */
-
     --accent: #8D77FE;
-    --accent-55: #575FCF55;
-    --accent-2: #00BFFF;
 
     /* Body */
 
-    --body-bg: #f9f9f9;
-    --body-bg-alpha: #f9f9f999;
+    --body-bg: #f7f8fc;
     --body-bg-white: #fff;
+    --body-block-light: #fff;
 
     /* Text */
 
@@ -26,7 +21,6 @@
 
     --svg-color: #000;
     --svg-color-invert: #fff;
-    --svg-color-github: #24292f;
 
     /* Header */
 
@@ -39,26 +33,13 @@
     /* Footer */
 
     --footer-background: #fff;
-    --footer-border: #dee2e6;
+    --footer-border: #ebeff2;
 
     /* Auth */
 
-    --auth-choose-bg: #d9d9d9;
-    --auth-choose-bg-hover: #d9d9d9;
     --auth-choose-border: #e2e2e2;
     --auth-choose-color: #acacac;
     --authentication-back: #efefef;
-
-    /* List */
-
-    --list-marker-color: #bababa;
-
-    /* Blog */
-
-    --main-block-text: #fff;
-    --blog-dark-post: #575FCF;
-    --body-block-light: #fff;
-    --pagination-active: #000;
 
     /* Form */
 
@@ -67,12 +48,23 @@
 
     /* Main */
 
-    --main-block-image: url('/img/main/main_cap@light.jpg');
+    --main-block-text: #fff;
     --main-block-button-shadow: rgb(70, 76, 180, .9);
     --main-list-item-1: #81b0ff;
     --main-list-item-2: #9ff18e;
     --main-list-item-3: #b5a6ff;
     --main-darklight-icon: #f1c40f;
+
+    --list-marker-color: #bababa;
+
+    --collapse-button-bg: #fff;
+    --collapse-body-bg: #fff;
+    --collapse-border: #dfdfdf;
+
+    --table-border: #dde1e8;
+    --table-tr-hover: #dde1e8;
+
+    --mark-bg: #faf2cd;
 
     /* Cookie */
 
@@ -84,29 +76,47 @@
 
     /* User Nav */
 
-    --user-bar: #f1f1f4;
-    --user-bar-exit: #dd303f;
-    --user-nav-link-active: #0984e3;
     --user-nav-bg: #fff;
+    --user-bar-exit: #dd303f;
     --user-nav-border: #edeff2;
-    --user-nav-border-text: #000;
+    --user-nav-link-active: #0984e3;
 
     /* User Profile */
 
-    --user-profile-image-bg: #fff;
-    --user-profile-image-bg-image: #fff;
-    --user-profile-image-border: #d9d9e0;
+    --user-profile-image-bg: #ffffffee;
+    --user-profile-image-bg-image: #ffffff;
     --user-profile-button: #fff;
-    --user-profile-button-accent: #0984e3;
-    --user-profile-button-accent-hover: #3caaff;
     --user-profile-button-accent-text: #fff;
-    --user-profile-button-hover: #ebebeb;
+    --user-profile-button-hover: #f8f8f8;
+    --user-profile-button-text: #000;
+    --user-profile-button-disabled: #ffffffaa;
+    --user-profile-addpost-bg: #fff;
+    --user-profile-dropdown-bg: #ffffffaa;
+
+    --post-bg: #fff;
+    --post-border: #d6dae0;
+
+    --notifications-list-border: #C4C9EA;
+    --achivs-bg: #fff;
+
+    --button-top-background: #fff;
+    --button-top-border: #e6e6e6;
+
+    --modal-bg: #fff;
+
+    --user-qrcode-button-bg: #7765dd;
+    --user-qrcode-button-bg-hover: #6352c1;
+
+    --toast-bg: #ffffff;
+    --toast-border: #ebeff2;
+
+    --offcanvas-bg: #ffffff;
 
     /* User Search */
 
-    --user-search-border: #ced4db;
     --user-search-bg: #f9f9f9;
-    --user-search-bg-hover: #f1f1f4;
+    --user-search-bg-hover: #fff;
+    --user-search-border: #ced4db;
     --user-search-button-bg: #c9daeb;
 
     /* User Alert */
@@ -115,58 +125,38 @@
     --user-alert-border: #dee2e6;
     --user-alert-success-bg: #2ecc71;
 
-    /* User Post */
-
-    --post-bg: #fff;
-    --post-border: #d6dae0;
-
     /* User Add Post */
 
-    --addpost-moderate-bg: #ececec;
+    --addpost-moderate-bg: #edeef2;
+    --addpost-import-bg: #dbd4ff;
+    --addpost-import-bg-55: #dbd4ff55;
+    --addpost-button-link-bg: #e2e8ec;
+    --addpost-dialog-bg: #fff;
+
+    --importpost-choose-bg: #e6e9f4;
+
+    --trix-button-accent: #4e96ff;
 
     /* Settings */
 
     --settings-main-bg: #fff;
     --settings-main-border: #efefef;
     --settings-main-svg: #fff;
+
     --settings-bg-profile: #718093;
-    --settings-bg-notifications: #e84118;
+    --settings-bg-home: #576574;
+    --settings-bg-exit: #e84118;
+    --settings-bg-session: #10ac84;
+    --settings-bg-services: #5058dd;
+    --settings-bg-notifications: #ee5253;
     --settings-bg-privacy: #0097e6;
     --settings-bg-data: #0be881;
     --settings-bg-devices: #ffa801;
     --settings-bg-personalization: #cd84f1;
+
     --settings-image-active: #0984e3;
     --settings-bg-hover: #efefef;
-
-    /* Button Top */
-
-    --button-top-background: #fff;
-    --button-top-border: #e6e6e6;
-
-    /* Collapse */
-
-    --collapse-button-bg: #fff;
-    --collapse-body-bg: #fff;
-    --collapse-border: #dfdfdf;
-
-    /* Modal */
-
-    --modal-bg: #fff;
-
-    /* User Achivs */
-
-    --achivs-bg: #fff;
-    --achiv-shadow: rgba(0, 0, 0, .15);
-
-    /* Trix */
-
-    --trix-button-accent: #4e96ff;
-    --table-border: #dde1e8;
-    --table-tr-hover: #dde1e8;
-
-    /* Mark */
-
-    --mark-bg: #faf2cd;
+    --settings-icon-right: #a5a5a5;
 
     /* Code */
 
@@ -181,6 +171,7 @@
     --code-screen-atv: #080;
     --code-screen-dec: #606;
     --code-screen-fun: #f00;
+
     --code-screen-projection-str: #060;
     --code-screen-projection-kwd: #006;
     --code-screen-projection-com: #600;
@@ -190,6 +181,6 @@
     --code-screen-projection-tag: #006;
     --code-screen-projection-atn: #404;
     --code-screen-projection-atv: #060;
-    --text-code-border: #0984e3;
+
     --code-L: #eee;
 }
