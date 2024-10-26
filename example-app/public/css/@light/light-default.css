@@ -1,15 +1,9 @@
 :root {
-
-    /* Accent */
-
     --accent: #8D77FE;
-    --accent-55: #575FCF55;
-    --accent-2: #00BFFF;
 
     /* Body */
 
     --body-bg: #f7f8fc;
-    --body-bg-alpha: #f7f8fc99;
     --body-bg-white: #fff;
 
     /* Text */
