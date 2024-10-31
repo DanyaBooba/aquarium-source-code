@@ -22,7 +22,6 @@
                     </button>
                 </div>
             </form>
-            <x-addpost.post-import />
         </div>
     </div>
 @endsection

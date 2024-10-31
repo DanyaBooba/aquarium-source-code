@@ -108,11 +108,11 @@ trix-toolbar .trix-button-group button::before {
 }
 
 trix-editor {
-    border-radius: 6px !important;
-    min-height: 15rem !important;
-    background-color: var(--form-input-background) !important;
+    border-radius: 8px !important;
+    min-height: 5rem !important;
+    background-color: var(--body-bg) !important;
     padding: .5rem .75rem !important;
-    border: .1rem solid var(--form-input-border) !important;
+    border: none !important;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 

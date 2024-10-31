@@ -5,6 +5,14 @@
     background-color: var(--toast-bg) !important;
 }
 
+.toast-container:not(:has(.toast.show)) {
+    pointer-events: none !important;
+}
+
+.toast:not(.show) {
+    pointer-events: none !important;
+}
+
 .toast-body {
     font-size: 1rem;
     padding: .75rem 1rem !important;
