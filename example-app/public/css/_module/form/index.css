@@ -30,11 +30,13 @@ form .input-password .form-floating {
 
 form .input-password a.input-group-text {
     position: absolute;
+    display: block !important;
+    z-index: 1000;
 
     border: none !important;
     background: transparent !important;
 
-    margin-left: 80% !important;
+    margin-left: 82% !important;
     margin-top: 10px;
 }
 
