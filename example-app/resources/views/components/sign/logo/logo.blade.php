@@ -1,1 +1,1 @@
-<x-logo class="authentication-logo mb-3" />
+<x-logo class="authentication-logo mb-5" />

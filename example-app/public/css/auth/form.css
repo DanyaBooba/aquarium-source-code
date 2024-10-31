@@ -104,7 +104,7 @@
 
     color: var(--text-color);
     background-color: var(--body-bg-white);
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
+    box-shadow: 0 0 .25rem var(--main-block-shadow) !important;
     /* border: .1rem solid var(--auth-choose-bg); */
 
     border-radius: 8px;
@@ -116,7 +116,7 @@
 
 .authentication #signin-choose .d-flex div a:is(:focus, :focus-within, :focus-visible) {
     color: var(--text-color) !important;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
 }
 
 .authentication #signin-choose .d-flex div button {
@@ -128,7 +128,7 @@
 
     color: var(--text-color);
     background-color: var(--body-bg);
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075) !important;
+    box-shadow: 0 0 .25rem var(--main-block-shadow) !important;
     /* border: .1rem solid var(--auth-choose-bg); */
 
     border-radius: 8px;
@@ -176,7 +176,7 @@
 
 .authentication #signin-choose .d-flex div button:is(:focus, :focus-visible, :focus-within) {
     /* background-color: var(--auth-choose-bg-hover); */
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
 }
 
 .authentication #signin-choose .signin-choose-or-background {
@@ -263,12 +263,12 @@
 
 @media(hover: hover) {
     .authentication #signin-choose .d-flex div button:hover {
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+        box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
     }
 
     .authentication #signin-choose .d-flex div a:hover {
         color: var(--text-color) !important;
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+        box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
     }
 
     .authentication .authentication-back a.authentication-back-back:hover {
@@ -278,12 +278,12 @@
 
 @media(hover: none) {
     .authentication #signin-choose .d-flex div button:active {
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+        box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
     }
 
     .authentication #signin-choose .d-flex div a:active {
         color: var(--text-color) !important;
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+        box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
     }
 
     .authentication .authentication-back a.authentication-back-back:active {

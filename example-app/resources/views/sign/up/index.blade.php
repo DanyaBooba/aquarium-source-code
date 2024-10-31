@@ -3,7 +3,7 @@
 @section('page.title', __('Регистрация'))
 
 @section('auth.header')
-    <x-sign.header>
+    <x-sign.header :routeReg="true">
         {{ __('Регистрация') }}
     </x-sign.header>
 @endsection
@@ -52,9 +52,6 @@
                     {{ __('Тестовый аккаунт') }}
                 </a>
             </div>
-            <a href="{{ route('auth.signin') }}" class="simple">
-                {{ __('Есть аккаунт?') }}
-            </a>
         </div>
     </div>
 @endsection

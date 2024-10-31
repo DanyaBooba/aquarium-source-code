@@ -68,7 +68,7 @@ trix-toolbar .trix-dialog--link {
 
 trix-toolbar .trix-dialog {
     background-color: var(--addpost-dialog-bg) !important;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
     border-radius: 6px !important;
     border-top: none !important;
     padding: 1rem !important;

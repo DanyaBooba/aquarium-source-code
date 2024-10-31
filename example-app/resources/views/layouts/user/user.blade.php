@@ -26,6 +26,6 @@
         </div>
 
         <script src="{{ asset('js/user/alert.js') }}"></script>
-        <script src="{{ asset('js/bootstrap-2.js') }}"></script>
+        <script src="{{ asset('js/module/bootstrap-5.1.1.js') }}"></script>
     </body>
 @endsection

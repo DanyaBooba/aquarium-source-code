@@ -3,7 +3,7 @@
 @push('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/posts/include.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/fancybox.css') }}" />
-    <script src="{{ asset('js/fancybox.js') }}"></script>
+    <script src="{{ asset('js/module/fancybox.js') }}"></script>
 @endpush
 
 @section('page.title', __('Пост'))

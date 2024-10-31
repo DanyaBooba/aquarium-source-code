@@ -2,7 +2,7 @@
 
 @push('css')
     <link href="{{ asset('css/prettify.css') }}" type="text/css" rel="stylesheet" />
-    <script type="text/javascript" src="{{ asset('js/prettify.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/module/prettify.js') }}"></script>
 @endpush
 
 @section('body')
@@ -24,7 +24,7 @@
             @include('includes.footer')
         </div>
 
-        <script src="{{ asset('js/bootstrap.js') }}"></script>
+        <script src="{{ asset('js/module/bootstrap.js') }}"></script>
         <script src="{{ asset('js/page/header.js') }}"></script>
         <script src="{{ asset('js/page/cookie-accept.js') }}"></script>
     </body>

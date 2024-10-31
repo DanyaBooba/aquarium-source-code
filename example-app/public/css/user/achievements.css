@@ -26,7 +26,7 @@
     /* padding: .5rem; */
     border-radius: 50%;
 
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
 }
 
 .list-achievements div p {
