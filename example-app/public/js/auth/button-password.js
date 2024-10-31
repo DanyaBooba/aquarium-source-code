@@ -1,5 +1,3 @@
-// let buttonStatus = false
-
 const svgForButtonActive =
         '<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>'
 
@@ -9,7 +7,7 @@ const svgForButtonActive =
 function changeShowPassword(id) {
     let input = document.querySelector(`#${id} input`)
     let svg = document.querySelector(`#${id} svg`)
-    let status = input.getAttribute('status') == 'false'
+    let status = input.getAttribute('status') === 'false'
 
     svg.innerHTML = status ? svgForButtonActive : svgForButtonDisabled
     input.setAttribute('type', status ? 'text' : 'password')
