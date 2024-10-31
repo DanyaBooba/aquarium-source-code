@@ -24,7 +24,7 @@
 </div>
 
 <script src="{{ asset('js/user/qrcode-copy.js') }}"></script>
-<script src="{{ asset('js/user/qrcode.min.js') }}"></script>
+<script src="{{ asset('js/module/qrcode.js') }}"></script>
 <script>
     const qrcodeBlock = document.getElementById("qr-code-generator");
     const data = "{{ $nickname ? route('user.show.nickname', $nickname) : route('user.show.id', $id) }}";

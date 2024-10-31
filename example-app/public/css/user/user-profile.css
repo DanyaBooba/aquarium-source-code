@@ -258,6 +258,7 @@
     border: none !important;
     background: var(--user-profile-dropdown-bg);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .user-profile .user-profile-buttons .dropdown .dropdown-menu li {

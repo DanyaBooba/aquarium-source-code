@@ -13,7 +13,7 @@ function changeLinks() {
             modalLink.show()
             modalLinkData.innerHTML = `"${tempLink}"`
             buttonModal.onclick = () => {
-                window.location.replace(tempLink)
+                window.open(tempLink, '_blank')
             }
         }
     })

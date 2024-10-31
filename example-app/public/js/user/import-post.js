@@ -16,12 +16,10 @@ function chooseChange(current) {
             platform = 'vk'
             break
     }
-
 }
 
 function sendLink() {
     const url = document.getElementById('link')?.value
-
     window.open(`/post/import/${platform}/?url=${encodeURIComponent(url)}`, '_self')
 }
 
