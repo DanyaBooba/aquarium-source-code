@@ -4,7 +4,7 @@
 
 @section('addpost.content')
     <div class="container-settings-main">
-        <h1 class="mb-4">{{ __('Добавить запись') }}</h1>
+        {{-- <h1 class="mb-4">{{ __('Добавить запись') }}</h1> --}}
 
         <x-form.error-first />
 
@@ -13,14 +13,12 @@
                 @csrf
                 <input id="x" type="hidden" name="message">
                 <trix-editor input="x" placeholder="{{ addpost_placeholder() }}"></trix-editor>
-                @if (!$whiteList)
+                {{-- @if (!$whiteList)
                     <x-addpost.post-moderate />
-                @endif
-                <div>
-                    <button type="submit" class="btn btn-success">
-                        {{ __('Опубликовать') }}
-                    </button>
-                </div>
+                @endif --}}
+                <button type="submit" class="btn btn-success w-100 mt-3 py-3" style="border-radius: 12px;">
+                    {{ __('Опубликовать') }}
+                </button>
             </form>
         </div>
     </div>

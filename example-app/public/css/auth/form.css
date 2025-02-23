@@ -35,12 +35,10 @@
 }
 
 .authentication .authentication-back a.authentication-back-close svg {
-    width: 40px;
-    height: 40px;
-
-    background-color: var(--authentication-back);
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    padding: 10px;
+    color: var(--text-muted);
 }
 
 .authentication h1 {
@@ -274,6 +272,10 @@
     .authentication .authentication-back a.authentication-back-back:hover {
         color: var(--text-color) !important;
     }
+
+    .authentication .authentication-back a.authentication-back-close svg:hover {
+        color: var(--text-color) !important;
+    }
 }
 
 @media(hover: none) {
@@ -287,6 +289,10 @@
     }
 
     .authentication .authentication-back a.authentication-back-back:active {
+        color: var(--text-color) !important;
+    }
+
+    .authentication .authentication-back a.authentication-back-close svg:active {
         color: var(--text-color) !important;
     }
 }

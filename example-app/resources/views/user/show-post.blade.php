@@ -48,7 +48,7 @@
             <x-post.modal-link />
         </div>
         <x-post.show.bottom :like="false" :idPost="$post->idPost" :idUser="$user->id" />
-        <x-post.show.comments :comments="$comments" />
+        {{-- <x-post.show.comments :comments="$comments" /> --}}
     </div>
 @endsection
 

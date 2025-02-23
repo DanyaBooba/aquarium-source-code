@@ -4,10 +4,12 @@
 
 .container-settings .text-title {
     text-transform: uppercase;
+    font-family: Inter-Bold !important;
     color: var(--text-muted);
-    margin-bottom: .75rem;
-    font-size: .875rem;
-    letter-spacing: 1px;
+    margin-bottom: .5rem;
+    padding-left: 12px;
+    font-size: .8rem;
+    letter-spacing: 1.5px;
 }
 
 .container-settings form .input-password div label {
@@ -151,7 +153,7 @@
 }
 
 .container-settings form:not(.form-settings-image) div:has(input):not(.input-password) {
-    margin-bottom: 1rem;
+    margin-bottom: .75rem;
 }
 
 .container-settings form div input:not(:checked)[role="switch"] {
@@ -162,18 +164,16 @@
 .container-settings form div input[type="email"],
 .container-settings form div input[type="password"] {
     background-color: var(--form-input-background) !important;
-    border-radius: 8px;
-
+    border-radius: 12px;
     padding-top: 1rem;
-    padding-bottom: 1rem;
-
-    margin-bottom: .25rem;
+    margin-bottom: .3rem;
 }
 
 .container-settings form div p {
     color: var(--text-muted);
     font-size: .875rem;
     margin-bottom: 0;
+    padding-left: 12px;
 }
 
 .container-settings form button[type="submit"] {

@@ -42,7 +42,7 @@ header.header .header-content-logo {
 }
 
 header.header .header-content-logo svg {
-    width: 200px;
+    width: 180px;
     fill: var(--svg-color);
 }
 
@@ -113,6 +113,10 @@ header.header .header-content-profile p {
     margin-left: .5rem;
 }
 
+header.header .header-content-links li:has(.display-none) {
+    display: none !important;
+}
+
 header.header .header-content-links li a {
     padding-left: .5rem;
     padding-right: .5rem;
@@ -177,6 +181,8 @@ header.header .header-content button.navbar-toggler {
 
     header.header .header-content-links li {
         text-align: end;
+        padding-top: .25rem;
+        padding-bottom: .25rem;
     }
 
     header.header .header-content-links a.link-download {

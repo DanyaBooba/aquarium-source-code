@@ -188,13 +188,13 @@
 .user-profile .user-profile-buttons button {
     display: flex;
     align-items: center;
-    min-width: fit-content;
+    /* min-width: fit-content; */
     flex-direction: row-reverse;
 
     color: var(--user-profile-button-text);
     background-color: var(--user-profile-button);
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
 
     padding: .7rem 1.4rem;
     /* margin-right: .7rem; */
@@ -253,7 +253,7 @@
 }
 
 .user-profile .user-profile-buttons .dropdown .dropdown-menu {
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
     border: none !important;
     background: var(--user-profile-dropdown-bg);
@@ -341,8 +341,13 @@
         flex-direction: column;
         align-items: center !important;
         text-align: center;
+        gap: .5rem;
         margin-right: 0 !important;
         margin-top: -6rem !important;
+    }
+
+    .user-profile .user-profile-text {
+        padding-bottom: .5rem !important;
     }
 
     .user-profile .user-profile-right {

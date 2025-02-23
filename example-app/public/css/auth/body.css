@@ -21,8 +21,6 @@ body {
 .form-signup-display {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
     padding: 3rem;
 }
 

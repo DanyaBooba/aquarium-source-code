@@ -8,7 +8,7 @@ main.row-user-content .container h2 {
 
 main.row-user-content header {
     margin-top: .75rem;
-    margin-bottom: .75rem;
+    /* margin-bottom: .75rem; */
     display: flex;
     align-items: center;
 }

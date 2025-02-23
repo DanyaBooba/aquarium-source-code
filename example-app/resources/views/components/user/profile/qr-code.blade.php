@@ -6,6 +6,10 @@
                     <h4>
                         {{ $nickname }}
                     </h4>
+                @else
+                    <h4>
+                        {{ __('Поделиться') }}
+                    </h4>
                 @endif
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
