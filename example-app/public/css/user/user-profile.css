@@ -188,7 +188,7 @@
 .user-profile .user-profile-buttons button {
     display: flex;
     align-items: center;
-    /* min-width: fit-content; */
+    min-width: fit-content;
     flex-direction: row-reverse;
 
     color: var(--color-body-plane-text);
@@ -256,7 +256,7 @@
     border-radius: 12px;
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
     border: none !important;
-    background: var(--user-profile-dropdown-bg);
+    background: var(--header);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 }

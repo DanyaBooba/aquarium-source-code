@@ -115,7 +115,7 @@
     /* User Search */
 
     --user-search-bg: #f9f9f9;
-    --user-search-bg-hover: #fff;
+    --color-body-plane: #fff;
     --user-search-border: #ced4db;
     --user-search-button-bg: #c9daeb;
 
@@ -140,7 +140,7 @@
     /* Settings */
 
     --color-body-plane: #fff;
-    --settings-main-border: #efefef;
+    --color-body-plane-3: #efefef;
     --settings-main-svg: #fff;
 
     --settings-bg-profile: #718093;

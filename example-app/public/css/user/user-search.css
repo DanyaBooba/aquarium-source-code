@@ -102,7 +102,7 @@
 
 .search-users a.search-users-content:is(:focus, :focus-visible, :focus-within) {
     color: var(--text) !important;
-    background-color: var(--user-search-bg-hover);
+    background-color: var(--color-body-plane);
 }
 
 .search-users .search-users-content img {
@@ -166,7 +166,7 @@
 @media(hover: hover) {
     .search-users a.search-users-content:hover {
         color: var(--text) !important;
-        background-color: var(--user-search-bg-hover);
+        background-color: var(--color-body-plane);
         box-shadow: 0 .5rem 1rem var(--shadow-hover) !important;
     }
 
@@ -187,7 +187,7 @@
 @media(hover: none) {
     .search-users a.search-users-content:active {
         color: var(--text) !important;
-        background-color: var(--user-search-bg-hover);
+        background-color: var(--color-body-plane);
         box-shadow: 0 .5rem 1rem var(--shadow-hover) !important;
     }
 

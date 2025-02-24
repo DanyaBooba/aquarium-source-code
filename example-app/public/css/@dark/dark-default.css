@@ -1,6 +1,8 @@
 :root {
     --color-body-plane: #2e2b51;
     --color-body-plane-2: #312f59;
+    --color-body-plane-3: #333060;
+    --color-body-plane-4: #aeadc0;
 
     --body: #1d1b35;
     --text: #ffffff;
@@ -45,17 +47,6 @@
     --user-nav-border: #232140;
     --user-nav-link-active: #0984e3;
 
-    /* User Profile */
-
-    --user-profile-image-bg: #221f40ee;
-    --user-profile-image-bg-image: #221f40;
-    /* --color-body-plane-accent-text: #fff;
-    --color-body-plane-text: #fff;
-    --header: #22204044; */
-    --user-profile-dropdown-bg: #34305faa;
-
-    --post-bottom-bg: #2e2a58;
-
     --notifications-list-border: #3b3576;
     --achivs-bg: #17152b;
 
@@ -71,13 +62,6 @@
     --toast-border: #211f41;
 
     --offcanvas-bg: #1c1935;
-
-    /* User Search */
-
-    --user-search-bg: #18162d;
-    --user-search-bg-hover: #35315c;
-    --user-search-border: #35315c;
-    --user-search-button-bg: #726bc0;
 
     /* User Alert */
 
@@ -97,23 +81,5 @@
     --trix-button-accent: #366182;
 
     /* Settings */
-
-    /* --color-body-plane: #1f1d3a; */
-    --settings-main-border: #333060;
-    --settings-main-svg: #fff;
-
-    --settings-bg-profile: #718093;
-    --settings-bg-home: #576574;
-    --settings-bg-exit: #e84118;
-    --settings-bg-session: #10ac84;
-    --settings-bg-services: #5058dd;
-    --settings-bg-notifications: #e84118;
-    --settings-bg-privacy: #0097e6;
-    --settings-bg-data: #0be881;
-    --settings-bg-devices: #ffa801;
-    --settings-bg-personalization: #cd84f1;
-
     --settings-image-active: #0984e3;
-    --settings-bg-hover: #323060;
-    --settings-icon-right: #aeadc0;
 }
