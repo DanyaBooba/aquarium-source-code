@@ -80,11 +80,11 @@
 }
 
 .container-settings form.form-settings-image .row.row-settings-avatar .col button:focus {
-    color: var(--text-color);
+    color: var(--text);
 }
 
 .container-settings form.form-settings-image .row.row-settings-avatar .col button:focus p {
-    color: var(--text-color);
+    color: var(--text);
 }
 
 .container-settings form.form-settings-image .row.row-settings-avatar .col button svg {
@@ -197,19 +197,19 @@
     }
 
     .container-settings form.form-settings-image .row.row-settings-avatar .col button:hover {
-        color: var(--text-color);
+        color: var(--text);
     }
 
     .container-settings form.form-settings-image .row.row-settings-avatar .col button:hover p {
-        color: var(--text-color);
+        color: var(--text);
     }
 
     .col-load:hover label {
-        color: var(--text-color) !important;
+        color: var(--text) !important;
     }
 
     .col-load:hover label svg {
-        stroke: var(--text-color);
+        stroke: var(--text);
     }
 }
 
@@ -219,11 +219,11 @@
     }
 
     .container-settings form.form-settings-image .row.row-settings-avatar .col button:active {
-        color: var(--text-color);
+        color: var(--text);
     }
 
     .container-settings form.form-settings-image .row.row-settings-avatar .col button:active p {
-        color: var(--text-color);
+        color: var(--text);
     }
 }
 

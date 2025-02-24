@@ -9,7 +9,7 @@
 }
 
 .container-simple svg.logo {
-    fill: var(--svg-color);
+    fill: var(--text);
 }
 
 .container-simple .row .col {

@@ -60,7 +60,7 @@
 }
 
 .container-settings .container-settings-main ul li:hover a span {
-    color: var(--text-color) !important;
+    color: var(--text) !important;
 }
 
 .container-settings .container-settings-main ul li a {
@@ -70,7 +70,7 @@
 
     width: 100% !important;
     text-decoration: none !important;
-    color: var(--text-color) !important;
+    color: var(--text) !important;
     padding-left: 1.5rem;
 }
 
@@ -164,7 +164,7 @@
 
 @media(hover: hover) {
     .container-settings .container-settings-main ul li a:hover svg {
-        stroke: var(--svg-color-invert);
+        stroke: var(--text-invert);
     }
 
     .container-settings .container-settings-main ul li a:hover {
@@ -178,7 +178,7 @@
 
 @media(hover: none) {
     .container-settings .container-settings-main ul li a:active svg {
-        stroke: var(--svg-color-invert);
+        stroke: var(--text-invert);
     }
 
     .container-settings .container-settings-main ul li a:active {

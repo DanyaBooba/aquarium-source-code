@@ -7,7 +7,7 @@
 .button-top a svg {
     width: 45px;
     height: 45px;
-    stroke: var(--text-color);
+    stroke: var(--text);
 
     background-color: var(--button-top-background);
     border: .1rem solid var(--button-top-border);

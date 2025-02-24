@@ -2,11 +2,11 @@
     display: flex;
     align-items: center;
 
-    color: var(--text-color);
+    color: var(--text);
 
     border-radius: 0 !important;
-    background: var(--body-bg) !important;
-    border-color: var(--body-bg);
+    background: var(--body) !important;
+    border-color: var(--body);
     border-bottom-color: var(--user-alert-border) !important;
 
     margin-bottom: 0rem;
@@ -39,12 +39,12 @@
     margin-left: auto;
     padding: 0 !important;
     background: transparent !important;
-    background-color: var(--body-bg) !important;
-    border-color: var(--body-bg) !important;
+    background-color: var(--body) !important;
+    border-color: var(--body) !important;
 }
 
 .alert button svg {
-    stroke: var(--svg-color) !important;
+    stroke: var(--text) !important;
 }
 
 .alert.alert-warning {

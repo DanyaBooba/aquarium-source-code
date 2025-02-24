@@ -5,7 +5,7 @@
 
 .user-search .user-search-input input[type="search"] {
     background-color: var(--form-input-background);
-    color: var(--text-color) !important;
+    color: var(--text) !important;
     box-shadow: 0 0 .25rem var(--main-block-shadow) !important;
     border: none !important;
 
@@ -15,8 +15,8 @@
 }
 
 .user-search .user-search-select select {
-    background-color: var(--body-bg);
-    color: var(--text-color) !important;
+    background-color: var(--body);
+    color: var(--text) !important;
     border: .1rem solid var(--form-input-border) !important;
 
     background-image: var(--form-select-cursor) !important;
@@ -97,11 +97,11 @@
 }
 
 .search-users a.search-users-content:focus .search-users-content-info .search-users-content-info__block {
-    color: var(--text-color) !important;
+    color: var(--text) !important;
 }
 
 .search-users a.search-users-content:is(:focus, :focus-visible, :focus-within) {
-    color: var(--text-color) !important;
+    color: var(--text) !important;
     background-color: var(--user-search-bg-hover);
 }
 
@@ -112,7 +112,7 @@
 }
 
 .search-users .search-users-content button svg {
-    stroke: var(--text-color);
+    stroke: var(--text);
 }
 
 .search-users .search-users-content button:not(:focus, :focus-visible, :focus-within, :hover, :active) {
@@ -126,18 +126,18 @@
     width: 100%;
 
     border: .1rem solid transparent;
-    color: var(--text-color);
+    color: var(--text);
     transition: .15s;
 }
 
 .search-users .search-users-content button:is(:focus, :focus-visible, :focus-within) {
     border: .1rem solid var(--user-search-button-bg);
-    color: var(--text-color) !important;
+    color: var(--text) !important;
     background-color: transparent;
 }
 
 .user-search-filters button {
-    color: var(--text-color);
+    color: var(--text);
 }
 
 /* media */
@@ -165,13 +165,13 @@
 
 @media(hover: hover) {
     .search-users a.search-users-content:hover {
-        color: var(--text-color) !important;
+        color: var(--text) !important;
         background-color: var(--user-search-bg-hover);
         box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
     }
 
     .search-users a.search-users-content:hover .search-users-content-info .search-users-content-info__block {
-        color: var(--text-color) !important;
+        color: var(--text) !important;
     }
 
     .search-users .search-users-content button:hover {
@@ -186,13 +186,13 @@
 
 @media(hover: none) {
     .search-users a.search-users-content:active {
-        color: var(--text-color) !important;
+        color: var(--text) !important;
         background-color: var(--user-search-bg-hover);
         box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
     }
 
     .search-users a.search-users-content:active .search-users-content-info .search-users-content-info__block {
-        color: var(--text-color) !important;
+        color: var(--text) !important;
     }
 
     .search-users .search-users-content button:active {

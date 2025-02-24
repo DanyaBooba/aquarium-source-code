@@ -4,7 +4,7 @@
 
 .row-user-bar {
     padding: 0;
-    background-color: var(--body-bg) !important;
+    background-color: var(--body) !important;
 }
 
 .row-user-bar-container {
@@ -15,7 +15,7 @@
 
 .row-user-bar svg.logo {
     margin-bottom: 3rem;
-    fill: var(--svg-color);
+    fill: var(--text);
 }
 
 .row-user-bar ul {
@@ -86,7 +86,7 @@
 .row-user-content {
     max-width: 880px !important;
     padding: 0 !important;
-    background-color: var(--body-bg) !important;
+    background-color: var(--body) !important;
 }
 
 h1.title-has-back {

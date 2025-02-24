@@ -21,7 +21,7 @@
                     required>
                 <label for="confirmDelete">{{ __('Подтвердите удаление') }}</label>
                 <p style="color: var(--text-muted); font-size: .875rem; margin-bottom: 0; user-select: none;">
-                    Введите: <span style="color: var(--text-color) !important">Подтверждаю удаление аккаунта</span>
+                    Введите: <span style="color: var(--text) !important">Подтверждаю удаление аккаунта</span>
                 </p>
             </div>
 
@@ -44,7 +44,7 @@
                     required>
                 <label for="confirmDelete">{{ __('Подтвердите удаление') }}</label>
                 <p style="color: var(--text-muted); font-size: .875rem; margin-bottom: 0; user-select: none;">
-                    Введите: <span style="color: var(--text-color) !important">Подтверждаю удаление аккаунта</span>
+                    Введите: <span style="color: var(--text) !important">Подтверждаю удаление аккаунта</span>
                 </p>
             </div>
 

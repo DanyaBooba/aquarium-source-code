@@ -5,13 +5,13 @@ form input[type="number"],
 form input[type="search"],
 form textarea {
     background: var(--form-input-background);
-    color: var(--text-color) !important;
+    color: var(--text) !important;
     border: .1rem solid var(--form-input-border) !important;
 }
 
 input.input-style {
     background: var(--form-input-background) !important;
-    color: var(--text-color) !important;
+    color: var(--text) !important;
     border: .1rem solid var(--form-input-border) !important;
 }
 
@@ -20,7 +20,7 @@ form input.form-check-input {
 }
 
 form textarea {
-    background: var(--body-bg);
+    background: var(--body);
     border: .1rem solid var(--form-input-border);
 }
 

@@ -9,7 +9,7 @@
 
 .user-notifications .accordion .accordion-item .accordion-header button {
     background-color: var(--collapse-button-bg) !important;
-    color: var(--text-color) !important;
+    color: var(--text) !important;
 }
 
 .user-notifications .accordion .accordion-item .accordion-header button::after {
@@ -39,7 +39,7 @@
 
 .user-notifications ul li {
     background-color: transparent !important;
-    color: var(--text-color) !important;
+    color: var(--text) !important;
 }
 
 .list-group-item {

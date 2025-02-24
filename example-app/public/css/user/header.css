@@ -21,7 +21,7 @@ main.row-user-content header .header__logo {
 }
 
 main.row-user-content header .header__logo svg {
-    fill: var(--text-color) !important;
+    fill: var(--text) !important;
 }
 
 main.row-user-content header .header__meta {

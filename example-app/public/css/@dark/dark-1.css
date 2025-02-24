@@ -3,15 +3,15 @@
 
     /* Body */
 
-    --body-bg: #17152b;
-    --body-bg-white: #201e3f;
-    --body-block-light: #1c1935;
+    --body: #17152b;
+    --color-800: #201e3f;
+    --color-800: #1c1935;
 
     /* Text */
 
-    --text-color: #fff;
+    --text: #fff;
     --text-invert: #000;
-    --text-code: #fff;
+    --text: #fff;
     --text-muted: #6c757d;
     --text-success: #2ed573;
     --text-link-hover: #0984e3;
@@ -19,21 +19,21 @@
 
     /* Svg */
 
-    --svg-color: #fff;
-    --svg-color-invert: #000;
+    --text: #fff;
+    --text-invert: #000;
 
     /* Header */
 
-    --header-bg: rgb(25, 23, 49, .84);
+    --header: rgb(25, 23, 49, .84);
     --header-border: #211f41;
     --header-link-download-bg: #2e2856;
     --header-link-download-border: #28234c;
-    --header-link-active: #433e6d;
+    --header-border: #433e6d;
 
     /* Footer */
 
-    --footer-background: #17152b;
-    --footer-border: #211f41;
+    --header: #17152b;
+    --header-border: #211f41;
 
     /* Auth */
 

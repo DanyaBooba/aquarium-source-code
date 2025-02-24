@@ -39,7 +39,7 @@
 }
 
 .post-show-bottom button svg {
-    stroke: var(--text-color) !important;
+    stroke: var(--text) !important;
 }
 
 .post-show-bottom .post-show-bottom__like svg.heart-fill {

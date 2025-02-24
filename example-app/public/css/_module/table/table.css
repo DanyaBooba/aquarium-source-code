@@ -1,5 +1,5 @@
 table tr td, th {
-    color: var(--text-color) !important;
+    color: var(--text) !important;
 }
 
 table.table-hover tbody tr:hover {

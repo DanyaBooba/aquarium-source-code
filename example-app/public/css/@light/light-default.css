@@ -8,43 +8,17 @@
     --color-600: #ffffff;
     --color-700: #ffffff;
     --color-800: #ffffff;
-    --color-900: #1d1b35;
+    --color-900: #eff0f8;
 
     --body: #eff0f8;
-
-    /* Body */
-
-    --body-bg: #eff0f8;
-    --body-bg-white: #fff;
-    --body-block-light: #fff;
-
-    /* Text */
-
-    --text-color: #000;
-    --text-invert: #fff;
-    --text-code: #000;
-    --text-muted: #6c757d;
+    --text: #000000;
+    --text-invert: #ffffff;
     --text-success: #198754;
     --text-link-hover: #0984e3;
     --text-link-underline: #a8a8a8;
 
-    /* Svg */
-
-    --svg-color: #000;
-    --svg-color-invert: #fff;
-
-    /* Header */
-
-    --header-bg: rgba(255, 255, 255, .84);
+    --header: rgba(255, 255, 255, .84);
     --header-border: #ebeff2;
-    --header-link-download-bg: #fff;
-    --header-link-download-border: #dee2e6;
-    --header-link-active: #ebeff2;
-
-    /* Footer */
-
-    --footer-background: #fff;
-    --footer-border: #ebeff2;
 
     /* Auth */
 

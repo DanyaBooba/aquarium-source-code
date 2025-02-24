@@ -14,7 +14,7 @@
         }
 
         svg.svg-unactive:hover {
-            stroke: var(--text-color);
+            stroke: var(--text);
         }
 
         .link-block {
@@ -22,7 +22,7 @@
         }
 
         .link-block:hover {
-            color: var(--text-color) !important;
+            color: var(--text) !important;
         }
     </style>
 
