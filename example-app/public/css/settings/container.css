@@ -5,7 +5,7 @@
 .container-settings .container-settings-main ul {
     background-color: var(--color-body-plane);
     border-radius: 12px;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    box-shadow: 0 .125rem .25rem var(--shadow) !important;
     list-style: none !important;
     padding: 0;
     margin: 0;
@@ -78,7 +78,7 @@
     width: 38px;
     height: 38px;
 
-    stroke: var(--settings-main-svg) !important;
+    stroke: #ffffff !important;
     padding: .4rem;
 
     border-radius: 8px;
