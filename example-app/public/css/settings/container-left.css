@@ -30,7 +30,7 @@
 }
 
 .col-load {
-    background-color: var(--form-input-background) !important;
+    background-color: var(--color-body-plane) !important;
     border-radius: 12px;
     height: 130px !important;
     width: 130px;
@@ -76,7 +76,7 @@
     border-radius: 12px;
 
     color: var(--text-muted);
-    background-color: var(--form-input-background);
+    background-color: var(--color-body-plane);
 }
 
 .container-settings form.form-settings-image .row.row-settings-avatar .col button:focus {
@@ -94,7 +94,7 @@
 }
 
 .container-settings form.form-settings-image .row.row-settings-avatar .col label {
-    background-color: var(--form-input-background) !important;
+    background-color: var(--color-body-plane) !important;
     border-radius: 50%;
 }
 
@@ -157,13 +157,13 @@
 }
 
 .container-settings form div input:not(:checked)[role="switch"] {
-    background-color: var(--form-input-background);
+    background-color: var(--color-body-plane);
 }
 
 .container-settings form div input[type="text"],
 .container-settings form div input[type="email"],
 .container-settings form div input[type="password"] {
-    background-color: var(--form-input-background) !important;
+    background-color: var(--color-body-plane) !important;
     border-radius: 12px;
     padding-top: 1rem;
     margin-bottom: .3rem;

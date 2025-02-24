@@ -7,7 +7,7 @@
     border-radius: 0 !important;
     background: var(--body) !important;
     border-color: var(--body);
-    border-bottom-color: var(--user-alert-border) !important;
+    border-bottom-color: var(--color-body-plane-2) !important;
 
     margin-bottom: 0rem;
     padding-top: 1rem !important;

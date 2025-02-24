@@ -204,7 +204,7 @@
 }
 
 .user-profile .user-profile-buttons button:disabled {
-    background-color: var(--color-body-plane-disabled);
+    background-color: var(--header);
 }
 
 .user-profile .user-profile-buttons button.button__accent {
@@ -432,7 +432,7 @@
 
 @media(hover: hover) {
     .user-profile .user-profile-buttons button:not(:disabled):hover {
-        background-color: var(--color-body-plane-hover);
+        background-color: var(--color-body-plane-2);
     }
 
     .user-profile .user-profile-right div button:hover {
@@ -442,7 +442,7 @@
 
 @media(hover: none) {
     .user-profile .user-profile-buttons button:not(:disabled):active {
-        background-color: var(--color-body-plane-hover);
+        background-color: var(--color-body-plane-2);
     }
 
     .user-profile .user-profile-buttons button.button__accent:active {

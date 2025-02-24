@@ -8,8 +8,8 @@
 
     /* Form */
 
-    --form-input-border: #ced4db;
-    --form-input-background: #fff;
+    --header-border: #ced4db;
+    --color-body-plane: #fff;
 
     /* Main */
 
@@ -26,8 +26,6 @@
     --table-border: #dde1e8;
     --table-tr-hover: #dde1e8;
 
-    --mark-bg: #faf2cd;
-
     /* Cookie */
 
     --cookie-accept-background: #fff;
@@ -39,7 +37,6 @@
     /* User Nav */
 
     --user-nav-bg: #fff;
-    --user-bar-exit: #dd303f;
     --user-nav-border: #edeff2;
     --user-nav-link-active: #0984e3;
 
@@ -49,9 +46,9 @@
     --user-profile-image-bg-image: #ffffff;
     --color-body-plane: #fff;
     --color-body-plane-accent-text: #fff;
-    --color-body-plane-hover: #f8f8f8;
+    --color-body-plane-2: #f8f8f8;
     --color-body-plane-text: #000;
-    --color-body-plane-disabled: #ffffffaa;
+    --header: #ffffffaa;
     --color-body-plane: #fff;
     --user-profile-dropdown-bg: #ffffffaa;
 

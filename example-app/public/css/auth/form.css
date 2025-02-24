@@ -51,11 +51,11 @@
     [type="email"],
     [type="password"],
 ) {
-    background-color: var(--form-input-background) !important;
+    background-color: var(--color-body-plane) !important;
 }
 
 .authentication input:not(:checked)[type="checkbox"] {
-    background-color: var(--form-input-background) !important;
+    background-color: var(--color-body-plane) !important;
 }
 
 .authentication input {

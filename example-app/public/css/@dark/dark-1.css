@@ -43,8 +43,8 @@
 
     /* Form */
 
-    --form-input-border: #34305e;
-    --form-input-background: #2a274e;
+    --header-border: #34305e;
+    --color-body-plane: #2a274e;
 
     /* Main */
 
@@ -87,9 +87,9 @@
     --user-profile-image-bg-image: #221f40;
     --color-body-plane: #222040;
     --color-body-plane-accent-text: #fff;
-    --color-body-plane-hover: #342f5e;
+    --color-body-plane-2: #342f5e;
     --color-body-plane-text: #fff;
-    --color-body-plane-disabled: #22204044;
+    --header: #22204044;
     --color-body-plane: #1f1d3a;
     --user-profile-dropdown-bg: #34305faa;
 

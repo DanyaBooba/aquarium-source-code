@@ -4,7 +4,7 @@
 }
 
 .user-search .user-search-input input[type="search"] {
-    background-color: var(--form-input-background);
+    background-color: var(--color-body-plane);
     color: var(--text) !important;
     box-shadow: 0 0 .25rem var(--shadow) !important;
     border: none !important;
@@ -17,7 +17,7 @@
 .user-search .user-search-select select {
     background-color: var(--body);
     color: var(--text) !important;
-    border: .1rem solid var(--form-input-border) !important;
+    border: .1rem solid var(--header-border) !important;
 
     background-image: var(--form-select-cursor) !important;
 
@@ -89,7 +89,7 @@
     width: 192px;
     height: 230px;
     border-radius: 12px;
-    background-color: var(--form-input-background);
+    background-color: var(--color-body-plane);
     text-decoration: none !important;
     box-shadow: 0 0 .25rem var(--shadow) !important;
     padding: 1rem;

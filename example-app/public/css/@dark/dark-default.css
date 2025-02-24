@@ -42,7 +42,6 @@
     /* User Nav */
 
     --user-nav-bg: #17152c;
-    --user-bar-exit: #dd303f;
     --user-nav-border: #232140;
     --user-nav-link-active: #0984e3;
 
@@ -50,11 +49,9 @@
 
     --user-profile-image-bg: #221f40ee;
     --user-profile-image-bg-image: #221f40;
-    /* --color-body-plane: #222040; */
-    --color-body-plane-accent-text: #fff;
-    --color-body-plane-hover: #342f5e;
+    /* --color-body-plane-accent-text: #fff;
     --color-body-plane-text: #fff;
-    --color-body-plane-disabled: #22204044;
+    --header: #22204044; */
     --user-profile-dropdown-bg: #34305faa;
 
     --post-bottom-bg: #2e2a58;
@@ -85,7 +82,6 @@
     /* User Alert */
 
     --user-alert-text-warning: #ca8726;
-    --user-alert-border: #343b42;
     --user-alert-success-bg: #1b8145;
 
     /* User Add Post */

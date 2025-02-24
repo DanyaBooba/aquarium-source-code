@@ -43,8 +43,8 @@
 
     /* Form */
 
-    --form-input-border: #ced4db;
-    --form-input-background: #fff;
+    --header-border: #ced4db;
+    --color-body-plane: #fff;
 
     /* Main */
 
@@ -87,9 +87,9 @@
     --user-profile-image-bg-image: #ffffff;
     --color-body-plane: #fff;
     --color-body-plane-accent-text: #fff;
-    --color-body-plane-hover: #f8f8f8;
+    --color-body-plane-2: #f8f8f8;
     --color-body-plane-text: #000;
-    --color-body-plane-disabled: #ffffffaa;
+    --header: #ffffffaa;
     --color-body-plane: #fff;
     --user-profile-dropdown-bg: #ffffffaa;
 
