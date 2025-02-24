@@ -89,6 +89,10 @@
     background-color: var(--settings-bg-profile);
 }
 
+.container-settings .container-settings-main ul li a.settings-profile.active > svg {
+    background-color: var(--settings-bg-devices);
+}
+
 .container-settings .container-settings-main ul li a.settings-notifications > svg {
     background-color: var(--settings-bg-notifications);
 }

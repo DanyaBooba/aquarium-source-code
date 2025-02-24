@@ -13,7 +13,8 @@
         </p>
         <ul class="list-group">
             <li class="list-group-item">
-                <a href="{{ route('main.settheme.light', 'default') }}" class="settings-profile">
+                <a href="{{ route('main.settheme.light', 'default') }}" class="settings-profile" id="changethemeauto"
+                    OnClick="ButtonAuto()">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
@@ -29,7 +30,8 @@
                 </a>
             </li>
             <li class="list-group-item">
-                <a href="{{ route('main.settheme.light', 'default') }}" class="settings-profile">
+                <a href="{{ route('main.settheme.light', 'default') }}" class="settings-profile" id="changethemelight"
+                    OnClick="ButtonLight()">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
@@ -45,7 +47,8 @@
                 </a>
             </li>
             <li class="list-group-item">
-                <a href="{{ route('main.settheme.light', 'default') }}" class="settings-profile">
+                <a href="{{ route('main.settheme.light', 'default') }}" class="settings-profile" id="changethemedark"
+                    OnClick="ButtonDark()">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
@@ -139,3 +142,7 @@
         </ul>
     </div>
 @endsection
+
+@push('js')
+    <script src="{{ asset('js/main/change-theme.js') }}"></script>
+@endpush
