@@ -104,8 +104,8 @@
 
     --color-body-plane: #1f1c38;
 
-    --user-qrcode-button-bg: #a292ff;
-    --user-qrcode-button-bg-hover: #8373df;
+    --accent: #a292ff;
+    --accent-2: #8373df;
 
     --toast-bg: #1c1935;
     --toast-border: #211f41;

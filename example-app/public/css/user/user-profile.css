@@ -207,10 +207,10 @@
     background-color: var(--header);
 }
 
-.user-profile .user-profile-buttons button.button__accent {
+/* .user-profile .user-profile-buttons button.button__accent {
     background-color: var(--color-body-plane-accent);
     color: var(--color-body-plane-accent-text) !important;
-}
+} */
 
 .user-profile .user-profile-buttons button svg {
     width: 20px;

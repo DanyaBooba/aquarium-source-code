@@ -22,25 +22,9 @@
 
     /*  */
 
-    --user-qrcode-button-bg: #a292ff;
-    --user-qrcode-button-bg-hover: #8373df;
-
-    /* User Alert */
-
-
-
-    /* User Add Post */
-
     --addpost-moderate-bg: #1e1c3a;
     --addpost-import-bg: #655a9c;
     --addpost-import-bg-55: #655a9c55;
     --addpost-button-link-bg: #29274e;
     --addpost-dialog-bg: #21203f;
-
-    --importpost-choose-bg: #38355c;
-
-    --trix-button-accent: #366182;
-
-    /* Settings */
-    --settings-image-active: #0984e3;
 }

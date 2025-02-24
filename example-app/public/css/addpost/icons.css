@@ -93,7 +93,7 @@ trix-toolbar .trix-dialog input[type=url] {
 }
 
 trix-toolbar .trix-button.trix-active {
-    background-color: var(--trix-button-accent) !important;
+    background-color: var(--text-link-hover) !important;
     border-radius: 4px;
 }
 
