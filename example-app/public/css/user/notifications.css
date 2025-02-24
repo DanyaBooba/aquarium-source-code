@@ -4,11 +4,11 @@
 
 .user-notifications .accordion .accordion-item {
     background-color: var(--collapse-body-bg) !important;
-    border-color: var(--collapse-border) !important;
+    border-color: var(--header-border) !important;
 }
 
 .user-notifications .accordion .accordion-item .accordion-header button {
-    background-color: var(--collapse-button-bg) !important;
+    background-color: var(--color-body-plane) !important;
     color: var(--text) !important;
 }
 
