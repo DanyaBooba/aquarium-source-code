@@ -32,7 +32,7 @@ main.row-user-content header .header__meta {
 }
 
 main.row-user-content header .header__meta a.active svg {
-    stroke: var(--user-nav-link-active) !important;
+    stroke: var(--text-link-hover) !important;
 }
 
 @media(min-width: 767.98px) {

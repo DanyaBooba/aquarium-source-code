@@ -31,8 +31,6 @@
     --table-border: #3e3a68;
     --table-tr-hover: #3e3a68;
 
-    --mark-bg: #5e5943;
-
     /* Cookie */
 
     --cookie-accept-background: #1c1a36;
@@ -45,15 +43,13 @@
 
     --user-nav-bg: #17152c;
     --user-nav-border: #232140;
-    --user-nav-link-active: #0984e3;
+    --text-link-hover: #0984e3;
 
     --notifications-list-border: #3b3576;
     --achivs-bg: #17152b;
 
     --button-top-background: #1f1d3a;
     --button-top-border: #38355f;
-
-    --modal-bg: #1f1c38;
 
     --user-qrcode-button-bg: #a292ff;
     --user-qrcode-button-bg-hover: #8373df;

@@ -10,7 +10,7 @@
     justify-content: center;
     gap: 1.5rem;
 
-    padding: .8rem 1.5rem;
+    padding: .5rem 1.5rem;
     margin-bottom: 2rem;
     margin-left: auto;
     margin-right: auto;
@@ -48,12 +48,12 @@
 
 @media(max-width: 767.98px) {
     .post-show-bottom {
-        margin-bottom: 3.5rem;
+        margin-bottom: 4rem;
     }
 
     .post-show-bottom svg {
-        width: 24px !important;
-        height: 24px !important;
+        width: 20px !important;
+        height: 20px !important;
     }
 }
 

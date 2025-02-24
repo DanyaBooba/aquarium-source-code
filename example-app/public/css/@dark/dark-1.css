@@ -79,7 +79,7 @@
     --user-nav-bg: #17152c;
     --user-bar-exit: #dd303f;
     --user-nav-border: #232140;
-    --user-nav-link-active: #0984e3;
+    --text-link-hover: #0984e3;
 
     /* User Profile */
 
@@ -102,7 +102,7 @@
     --button-top-background: #1f1d3a;
     --button-top-border: #38355f;
 
-    --modal-bg: #1f1c38;
+    --color-body-plane: #1f1c38;
 
     --user-qrcode-button-bg: #a292ff;
     --user-qrcode-button-bg-hover: #8373df;

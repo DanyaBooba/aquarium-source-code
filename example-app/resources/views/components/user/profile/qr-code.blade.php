@@ -48,7 +48,7 @@
             type: "extra-rounded"
         },
         backgroundOptions: {
-            color: "var(--modal-bg)",
+            color: "var(--color-body-plane)",
         },
         imageOptions: {
             crossOrigin: "anonymous",

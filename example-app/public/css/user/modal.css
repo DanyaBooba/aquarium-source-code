@@ -1,5 +1,10 @@
+.user-modal {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
 .user-modal .modal-content {
-    background-color: var(--modal-bg);
+    background-color: var(--color-body-plane);
     border-radius: 12px;
 }
 

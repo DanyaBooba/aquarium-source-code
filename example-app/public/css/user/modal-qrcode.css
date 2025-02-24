@@ -26,7 +26,7 @@
 
 .modal.modal-qrcode .modal-dialog .modal-content {
     max-width: 400px;
-    background-color: var(--modal-bg);
+    background-color: var(--color-body-plane);
 
     border: none !important;
     border-radius: 12px;
