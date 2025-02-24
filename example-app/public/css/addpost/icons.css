@@ -67,7 +67,7 @@ trix-toolbar .trix-dialog--link {
 }
 
 trix-toolbar .trix-dialog {
-    background-color: var(--addpost-dialog-bg) !important;
+    background-color: var(--color-body-plane) !important;
     box-shadow: 0 .5rem 1rem var(--shadow-hover) !important;
     border-radius: 6px !important;
     border-top: none !important;
@@ -78,7 +78,7 @@ trix-toolbar .trix-dialog input[type=button] {
     color: var(--text) !important;
     border: none !important;
     font-size: 14px !important;
-    background-color: var(--addpost-button-link-bg) !important;
+    background-color: var(--color-body-plane-3) !important;
     padding: .5rem 1rem !important;
 }
 
@@ -122,8 +122,9 @@ trix-editor:focus {
 }
 
 form:has(trix-editor) input {
-    border-radius: 6px !important;
+    border-radius: 8px !important;
     background-color: var(--color-body-plane) !important;
+    border-color: var(--header-border) !important;
     padding-top: .5rem !important;
     padding-bottom: .5rem !important;
 }
