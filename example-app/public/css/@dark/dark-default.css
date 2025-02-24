@@ -1,14 +1,5 @@
 :root {
-    --color-50: #ffffff;
-    --color-100: #ffffff;
-    --color-200: #ffffff;
-    --color-300: #ffffff;
-    --color-400: #ffffff;
-    --color-500: #ffffff;
-    --color-600: #ffffff;
-    --color-700: #ffffff;
-    --color-800: #201e3f;
-    --color-900: #1d1b35;
+    --color-body-plane: #201e3f;
 
     --body: #1d1b35;
     --text: #ffffff;
