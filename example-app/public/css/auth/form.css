@@ -162,15 +162,10 @@
 
 .authentication #signin-choose .d-flex div#signin-choose-github button svg {
     width: 30px;
-        height: 30px;
-}
-
-.authentication #signin-choose .d-flex div#signin-choose-email a {
-    /* border-color: var(--accent) !important; */
+    height: 30px;
 }
 
 .authentication #signin-choose .d-flex div button:is(:focus, :focus-visible, :focus-within) {
-    /* background-color: var(--auth-choose-bg-hover); */
     box-shadow: 0 .5rem 1rem var(--shadow-hover) !important;
 }
 
@@ -184,7 +179,7 @@
 }
 
 .authentication #signin-choose .signin-choose-or {
-    color: var(--auth-choose-color);
+    color: var(--text-link-underline);
     margin-top: -37px;
     margin-bottom: 16px !important;
     text-align: center;

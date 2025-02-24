@@ -121,7 +121,7 @@
 }
 
 .container-settings form.form-settings-image .col input:is(:checked, :focus, :focus-within, :focus-visible) + label {
-    outline: 3px solid var(--settings-image-active);
+    outline: 3px solid var(--text-link-hover);
 }
 
 .container-settings form.form-settings-image button[type="submit"] {

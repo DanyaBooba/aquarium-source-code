@@ -22,20 +22,6 @@
 
     /*  */
 
-    /* Cookie */
-
-    --cookie-accept-background: #1c1a36;
-    --cookie-accept-border: #2f2b5a;
-    --cookie-accept-shadow: rgb(50, 46, 91, .07);
-    --cookie-accept-button-background: #fff;
-    --cookie-accept-button-hover: #d2d2d2;
-
-    /* User Nav */
-
-    --user-nav-bg: #17152c;
-    --user-nav-border: #232140;
-    --text-link-hover: #0984e3;
-
     --notifications-list-border: #3b3576;
     --achivs-bg: #17152b;
 
@@ -44,11 +30,6 @@
 
     --user-qrcode-button-bg: #a292ff;
     --user-qrcode-button-bg-hover: #8373df;
-
-    --toast-bg: #1c1935;
-    --toast-border: #211f41;
-
-    --offcanvas-bg: #1c1935;
 
     /* User Alert */
 

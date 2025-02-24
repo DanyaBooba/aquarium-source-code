@@ -68,9 +68,9 @@
 
     /* Cookie */
 
-    --cookie-accept-background: #1c1a36;
-    --cookie-accept-border: #2f2b5a;
-    --cookie-accept-shadow: rgb(50, 46, 91, .07);
+    --color-body-plane: #1c1a36;
+    --header-border: #2f2b5a;
+    --shadow: rgb(50, 46, 91, .07);
     --cookie-accept-button-background: #fff;
     --cookie-accept-button-hover: #d2d2d2;
 

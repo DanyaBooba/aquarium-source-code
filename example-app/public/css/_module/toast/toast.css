@@ -1,8 +1,8 @@
 .toast {
-    border: .1rem solid var(--toast-border) !important;
+    border: none !important;
     box-shadow: 0 0 .25rem var(--shadow) !important;
     border-radius: 8px !important;
-    background-color: var(--toast-bg) !important;
+    background-color: var(--color-body-plane) !important;
 }
 
 .toast-container:not(:has(.toast.show)) {

@@ -1,68 +1,18 @@
 :root {
 
-    /* Auth */
-
-    --auth-choose-border: #e2e2e2;
-    --auth-choose-color: #acacac;
-    --authentication-back: #efefef;
-
-    /* Form */
-
-    --header-border: #ced4db;
-    --color-body-plane: #fff;
-
-    /* Main */
-
-    --shadow: #dee0e7;
-    --shadow-hover: #d3d6e2;
-
-
-    --list-marker-color: #bababa;
-
-    --collapse-button-bg: #fff;
-    --collapse-body-bg: #fff;
-    --header-border: #dfdfdf;
-
-    --table-border: #dde1e8;
-    --table-tr-hover: #dde1e8;
-
-    /* Cookie */
-
-    --cookie-accept-background: #fff;
-    --cookie-accept-border: #ecf1f6;
-    --cookie-accept-shadow: rgb(151, 149, 194, .07);
-    --cookie-accept-button-background: #1d2228;
-    --cookie-accept-button-hover: #121417;
-
-    /* User Nav */
-
-    --user-nav-bg: #fff;
-    --user-nav-border: #edeff2;
-    --text-link-hover: #0984e3;
 
     /* User Profile */
 
-    --user-profile-image-bg: #ffffffee;
-    --user-profile-image-bg-image: #ffffff;
-    --color-body-plane: #fff;
     --color-body-plane-accent-text: #fff;
     --color-body-plane-2: #f8f8f8;
     --color-body-plane-text: #000;
     --header: #ffffffaa;
-    --color-body-plane: #fff;
     --user-profile-dropdown-bg: #ffffffaa;
 
-    /* --color-body-plane: #fff; */
-    --post-bottom-bg: #ffffff;
-    --color-body-plane-2: #d6dae0;
-
-    /* --notifications-list-border: #C4C9EA; */
     --achivs-bg: #fff;
 
     --button-top-background: #fff;
     --button-top-border: #e6e6e6;
-
-    --color-body-plane: #fff;
 
     --user-qrcode-button-bg: #7765dd;
     --user-qrcode-button-bg-hover: #6352c1;
@@ -91,10 +41,6 @@
     --trix-button-accent: #4e96ff;
 
     /* Settings */
-
-    --color-body-plane: #fff;
-    --color-body-plane-3: #efefef;
-    --settings-main-svg: #fff;
 
     --settings-image-active: #0984e3;
     --settings-icon-right: #a5a5a5;
