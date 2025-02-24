@@ -18,17 +18,17 @@
     display: flex;
     flex-direction: column;
 
-    background-color: var(--accent);
+    background-color: var(--page-main-accent);
     color: var(--color-body-plane);
 
     border-radius: 24px;
     min-height: 500px;
 
-    background-image: url('/img/main/main_cap.jpg') !important;
+    background-image: url('/img/main/main_cap.png') !important;
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100% auto;
-    box-shadow: 0 0 .25rem rgba(70, 76, 180, .3) !important;
+    box-shadow: 0 0 .25rem var(--page-main-accent) !important;
 }
 
 .row-first .row-first-left div.p-3 {
