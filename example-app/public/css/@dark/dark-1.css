@@ -8,8 +8,8 @@
     --text: #f0f0ff;
     --text-invert: #000000;
     --text-link-underline: #5c569d;
-    --shadow: rgba(0, 0, 0, .075);
-    --shadow-hover: rgba(0, 0, 0, .15);
+    /* --shadow: rgba(0, 0, 0, .075); */
+    /* --shadow-hover: rgba(0, 0, 0, .15); */
 
     --header: rgb(30, 30, 102, .8);
     --header-border: #1a1a5b;
