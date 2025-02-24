@@ -42,9 +42,9 @@
     color: var(--text) !important;
 }
 
-.list-group-item {
+/* .list-group-item {
     border: 1px solid var(--notifications-list-border);
-}
+} */
 
 /* media */
 

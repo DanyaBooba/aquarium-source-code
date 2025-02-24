@@ -1,32 +1,11 @@
 :root {
-
-
     /* User Profile */
 
     --color-body-plane-accent-text: #fff;
-    --color-body-plane-2: #f8f8f8;
     --color-body-plane-text: #000;
-    --header: #ffffffaa;
-    --user-profile-dropdown-bg: #ffffffaa;
-
-    --achivs-bg: #fff;
-
-    --button-top-background: #fff;
-    --button-top-border: #e6e6e6;
 
     --user-qrcode-button-bg: #7765dd;
     --user-qrcode-button-bg-hover: #6352c1;
-
-    --toast-bg: #ffffff;
-    --toast-border: #ebeff2;
-
-    --offcanvas-bg: #ffffff;
-
-    /* User Alert */
-
-    --user-alert-text-warning: #ca8726;
-    --user-alert-border: #dee2e6;
-    --user-alert-success-bg: #2ecc71;
 
     /* User Add Post */
 
@@ -36,12 +15,6 @@
     --addpost-button-link-bg: #e2e8ec;
     --addpost-dialog-bg: #fff;
 
-    --importpost-choose-bg: #e6e9f4;
-
     --trix-button-accent: #4e96ff;
 
-    /* Settings */
-
-    --settings-image-active: #0984e3;
-    --settings-icon-right: #a5a5a5;
 }
