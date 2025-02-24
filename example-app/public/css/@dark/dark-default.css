@@ -1,5 +1,16 @@
 :root {
-    --accent: #8D77FE;
+    --color-50: #ffffff;
+    --color-100: #ffffff;
+    --color-200: #ffffff;
+    --color-300: #ffffff;
+    --color-400: #ffffff;
+    --color-500: #ffffff;
+    --color-600: #ffffff;
+    --color-700: #ffffff;
+    --color-800: #201e3f;
+    --color-900: #1d1b35;
+
+    --body: #1d1b35;
 
     /* Body */
 
