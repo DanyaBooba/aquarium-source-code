@@ -73,7 +73,7 @@
     border-radius: 50%;
     max-width: 180px;
     max-height: 180px;
-    box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
+    box-shadow: 0 .5rem 1rem var(--shadow-hover) !important;
 }
 
 .user-modal .modal-content .modal-body .user-modal-list-achivs .user-modal-list-achivs__item section {

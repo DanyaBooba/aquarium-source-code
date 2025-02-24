@@ -6,7 +6,7 @@
 .user-search .user-search-input input[type="search"] {
     background-color: var(--form-input-background);
     color: var(--text) !important;
-    box-shadow: 0 0 .25rem var(--main-block-shadow) !important;
+    box-shadow: 0 0 .25rem var(--shadow) !important;
     border: none !important;
 
     border-radius: 12px;
@@ -91,7 +91,7 @@
     border-radius: 12px;
     background-color: var(--form-input-background);
     text-decoration: none !important;
-    box-shadow: 0 0 .25rem var(--main-block-shadow) !important;
+    box-shadow: 0 0 .25rem var(--shadow) !important;
     padding: 1rem;
     transition: .15s;
 }
@@ -167,7 +167,7 @@
     .search-users a.search-users-content:hover {
         color: var(--text) !important;
         background-color: var(--user-search-bg-hover);
-        box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
+        box-shadow: 0 .5rem 1rem var(--shadow-hover) !important;
     }
 
     .search-users a.search-users-content:hover .search-users-content-info .search-users-content-info__block {
@@ -188,7 +188,7 @@
     .search-users a.search-users-content:active {
         color: var(--text) !important;
         background-color: var(--user-search-bg-hover);
-        box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
+        box-shadow: 0 .5rem 1rem var(--shadow-hover) !important;
     }
 
     .search-users a.search-users-content:active .search-users-content-info .search-users-content-info__block {

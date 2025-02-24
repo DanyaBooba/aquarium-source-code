@@ -6,7 +6,7 @@
     <style>
         figure img {
             border-radius: 8px;
-            box-shadow: 0 0 .25rem var(--main-block-shadow) !important;
+            box-shadow: 0 0 .25rem var(--shadow) !important;
         }
 
         figure figcaption {

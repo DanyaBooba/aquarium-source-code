@@ -19,7 +19,7 @@
     flex-direction: column;
 
     background-color: var(--accent);
-    color: var(--main-block-text);
+    color: var(--color-body-plane);
 
     border-radius: 24px;
     min-height: 500px;
@@ -40,7 +40,7 @@
 
     border-radius: 24px;
     min-height: 500px;
-    box-shadow: 0 0 .25rem var(--main-block-shadow) !important;
+    box-shadow: 0 0 .25rem var(--shadow) !important;
 }
 
 .row-first .row-first-right div.p-3 button {
@@ -53,8 +53,8 @@
     font-size: 1.2rem;
     padding-top: 20px;
 
-    /* box-shadow: 0 0.5rem 1rem var(--main-block-button-shadow) !important; */
-    box-shadow: 0 0.125rem 0.25rem var(--main-block-button-shadow) !important;
+    /* box-shadow: 0 0.5rem 1rem var(--page-main-button-shadow) !important; */
+    box-shadow: 0 0.125rem 0.25rem var(--page-main-button-shadow) !important;
     transition: .3s;
 }
 
@@ -96,7 +96,7 @@
     color: var(--text);
     border-radius: 24px;
     min-height: 180px;
-    box-shadow: 0 0 .25rem var(--main-block-shadow) !important;
+    box-shadow: 0 0 .25rem var(--shadow) !important;
 }
 
 .row-second {
@@ -198,7 +198,7 @@
 
 .container-telegram {
     background-color: var(--color-body-plane);
-    box-shadow: 0 0 .25rem var(--main-block-shadow) !important;
+    box-shadow: 0 0 .25rem var(--shadow) !important;
 }
 
 /* .container-lightdark {} */
@@ -209,7 +209,7 @@
     }
 
     .container-lightdark .container-lightdark__light svg {
-        stroke: var(--main-darklight-icon);
+        stroke: var(--page-main-darklight-icon);
     }
 }
 
@@ -219,7 +219,7 @@
     }
 
     .container-lightdark .container-lightdark__dark svg {
-        stroke: var(--main-darklight-icon);
+        stroke: var(--page-main-darklight-icon);
     }
 
     .container-lightdark .row {
@@ -310,8 +310,8 @@
     }
 
     .row-first .row-first-right div.p-3 button:hover {
-        /* box-shadow: 0 0.125rem 0.25rem var(--main-block-button-shadow) !important; */
-        box-shadow: 0 0.5rem 1rem var(--main-block-button-shadow) !important;
+        /* box-shadow: 0 0.125rem 0.25rem var(--page-main-button-shadow) !important; */
+        box-shadow: 0 0.5rem 1rem var(--page-main-button-shadow) !important;
     }
 }
 
@@ -322,7 +322,7 @@
     }
 
     .row-first .row-first-right div.p-3 button:active {
-        /* box-shadow: 0 0.125rem 0.25rem var(--main-block-button-shadow) !important; */
-        box-shadow: 0 0.5rem 1rem var(--main-block-button-shadow) !important;
+        /* box-shadow: 0 0.125rem 0.25rem var(--page-main-button-shadow) !important; */
+        box-shadow: 0 0.5rem 1rem var(--page-main-button-shadow) !important;
     }
 }

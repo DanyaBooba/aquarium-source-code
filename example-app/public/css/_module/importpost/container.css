@@ -43,12 +43,12 @@
 
 .import-post .import-post__choose button.active img {
     border-radius: 50%;
-    box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
+    box-shadow: 0 .5rem 1rem var(--shadow-hover) !important;
 }
 
 .import-post .import-post__choose button.active svg {
     border-radius: 20px;
-    box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
+    box-shadow: 0 .5rem 1rem var(--shadow-hover) !important;
 }
 
 .import-post .import-post__link {

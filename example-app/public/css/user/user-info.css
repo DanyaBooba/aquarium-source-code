@@ -14,7 +14,7 @@
 .profile-info__item {
     /* border: .1rem solid var(--settings-main-border); */
     /* padding: .25rem; */
-    box-shadow: 0 0 .25rem var(--main-block-shadow) !important;
+    box-shadow: 0 0 .25rem var(--shadow) !important;
     border-radius: 16px;
     min-width: 330px;
     max-width: 330px;
@@ -26,7 +26,7 @@
 .profile-info__container {
     display: flex;
     flex-direction: column;
-    background: var(--settings-main-bg);
+    background: var(--color-body-plane);
     padding: 1.2rem 1rem;
     border-radius: 12px;
     height: 100%;

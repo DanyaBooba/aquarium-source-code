@@ -1,7 +1,7 @@
 .profile-addpost {
-    background-color: var(--user-profile-addpost-bg);
+    background-color: var(--color-body-plane);
     border-radius: 12px;
-    box-shadow: 0 0 .25rem var(--main-block-shadow) !important;
+    box-shadow: 0 0 .25rem var(--shadow) !important;
     transition: .3s;
 }
 
@@ -29,7 +29,7 @@
     }
 
     .profile-addpost:hover {
-        box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
+        box-shadow: 0 .5rem 1rem var(--shadow-hover) !important;
     }
 }
 
@@ -39,6 +39,6 @@
     }
 
     .profile-addpost:active {
-        box-shadow: 0 .5rem 1rem var(--main-block-shadow-hover) !important;
+        box-shadow: 0 .5rem 1rem var(--shadow-hover) !important;
     }
 }

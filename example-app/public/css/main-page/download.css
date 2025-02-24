@@ -1,5 +1,5 @@
 .page-download .page-download__container {
-    box-shadow: 0 0 .25rem var(--main-block-shadow) !important;
+    box-shadow: 0 0 .25rem var(--shadow) !important;
     background-color: var(--color-body-plane);
     border-radius: 24px;
 }

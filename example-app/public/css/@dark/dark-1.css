@@ -49,11 +49,11 @@
     /* Main */
 
     --main-block-text: #212529;
-    --main-block-button-shadow: rgb(70, 76, 180, .9);
-    --main-list-item-1: #4c6fa9;
-    --main-list-item-2: #58974c;
-    --main-list-item-3: #594d94;
-    --main-darklight-icon: #575FCF;
+    --page-main-button-shadow: rgb(70, 76, 180, .9);
+    --page-main-list-item-1: #4c6fa9;
+    --page-main-list-item-2: #58974c;
+    --page-main-list-item-3: #594d94;
+    --page-main-darklight-icon: #575FCF;
 
     --list-marker-color: #615f74;
 
@@ -85,16 +85,16 @@
 
     --user-profile-image-bg: #221f40ee;
     --user-profile-image-bg-image: #221f40;
-    --user-profile-button: #222040;
-    --user-profile-button-accent-text: #fff;
-    --user-profile-button-hover: #342f5e;
-    --user-profile-button-text: #fff;
-    --user-profile-button-disabled: #22204044;
-    --user-profile-addpost-bg: #1f1d3a;
+    --color-body-plane: #222040;
+    --color-body-plane-accent-text: #fff;
+    --color-body-plane-hover: #342f5e;
+    --color-body-plane-text: #fff;
+    --color-body-plane-disabled: #22204044;
+    --color-body-plane: #1f1d3a;
     --user-profile-dropdown-bg: #34305faa;
 
-    --post-bg: #1f1d3a;
-    --post-border: #312f59;
+    --color-body-plane: #1f1d3a;
+    --color-body-plane-2: #312f59;
 
     --notifications-list-border: #3b3576;
     --achivs-bg: #17152b;
@@ -139,7 +139,7 @@
 
     /* Settings */
 
-    --settings-main-bg: #1f1d3a;
+    --color-body-plane: #1f1d3a;
     --settings-main-border: #333060;
     --settings-main-svg: #fff;
 

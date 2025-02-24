@@ -7,7 +7,7 @@
 }
 
 .settings-verified div {
-    background-color: var(--settings-main-bg);
+    background-color: var(--color-body-plane);
     border-radius: 12px;
     padding: 1rem;
 }

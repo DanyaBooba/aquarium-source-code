@@ -15,8 +15,8 @@
     margin-left: auto;
     margin-right: auto;
 
-    background-color: var(--post-bottom-bg);
-    box-shadow: 0 0 .25rem var(--main-block-shadow) !important;
+    background-color: var(--color-body-plane);
+    box-shadow: 0 0 .25rem var(--shadow) !important;
     border-radius: 12px;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
