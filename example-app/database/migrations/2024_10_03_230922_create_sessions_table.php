@@ -18,6 +18,9 @@ return new class extends Migration
             $table->integer('idUser');
             $table->string('token');
             $table->string('refreshToken');
+
+            $table->integer('unixtime_start');
+            $table->integer('unixtime_stop');
         });
     }
 

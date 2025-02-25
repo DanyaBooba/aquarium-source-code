@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Mail\Test\DemoEmail;
+use App\Models\User\Session;
 use App\Models\User\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -115,10 +116,40 @@ class LoginController extends Controller
         // и может быть произведен вход в аккаунт.
         //
 
-        dd('На данном этапе готовы работать с сессией.');
+        $tryFindSession = Session::where('idUser', $findUser->id)->first();
+        $sessionToken = '';
+        $needToCreateSession = false;
 
-        session(['id' => $findUser->id]);
-        session(['email' => $validated['email']]);
+        if ($tryFindSession == null) {
+            $needToCreateSession = true;
+        } else {
+            $diff = time() - $tryFindSession->unixtime_stop;
+
+            if ($diff >= 0) {
+                $tryFindSession->delete();
+                $needToCreateSession = true;
+            } else {
+                $sessionToken = $tryFindSession->token;
+            }
+        }
+
+        if ($needToCreateSession) {
+            $createSession = Session::query()->create([
+                'idUser' => $findUser->id,
+                'token' => session_generate($findUser->email, $findUser->id),
+                'refreshToken' => session_generate($findUser->email, $findUser->id),
+                'unixtime_start' => time(),
+                'unixtime_stop' => time() + 604_800, // прибавляем неделю, потом сделать параметром!
+            ]);
+
+            $sessionToken = $createSession->token;
+        }
+
+        session([
+            'id' => $findUser->id,
+            'email' => $validated['email'],
+            'sessionToken' => $sessionToken
+        ]);
 
         //
         // Если пользователь не подтвердил почту, отправляем письмо для подтверждения

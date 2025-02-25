@@ -58,3 +58,7 @@ require_once "helpers/mail/mail.php";
 // Post
 
 require_once "helpers/post/default/tags.php";
+
+// Session
+
+require_once "helpers/user/session/generate.php";
