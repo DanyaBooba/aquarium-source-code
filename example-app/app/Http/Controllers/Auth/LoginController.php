@@ -52,18 +52,35 @@ class LoginController extends Controller
 
     public function store(Request $request)
     {
+        //
+        // Получаем массив введенных данных: email и password
+        //
+
         $validated = $request->validate([
             'email' => ['required', 'string', 'max:254', 'min: 3', 'email'],
             'password' => ['required', 'string', 'min:3', 'max:254'],
         ]);
 
+        //
+        // На данном этапе мы ищем пользователя по введенному email
+        //
+
         $findUser = User::where('email', $validated['email'])->first();
+
+        //
+        // Если пользователя не удалось найти
+        //
 
         if ($findUser === null) {
             return redirect()->back()->withInput($validated)->withErrors([
                 'user' => __('Неверно заполнены поля.')
             ]);
         }
+
+        //
+        // На данном этапе мы учитываем, что пароль пользователя
+        // может все еще быть записан с шифрованием MD5, а не Bcrypt
+        //
 
         $isPasswordMD5 = $findUser->md5use;
         $passwordConfirm = false;
@@ -82,19 +99,39 @@ class LoginController extends Controller
             }
         }
 
+        //
+        // На данном этапе мы проверяем
+        // на корректность введенный пароль
+        //
+
         if ($passwordConfirm === false) {
             return redirect()->back()->withInput($validated)->withErrors([
                 'password' => __('Неверно заполнены поля.')
             ]);
         }
 
+        //
+        // На данном этапе все данные введены корректно
+        // и может быть произведен вход в аккаунт.
+        //
+
+        dd('На данном этапе готовы работать с сессией.');
+
         session(['id' => $findUser->id]);
         session(['email' => $validated['email']]);
+
+        //
+        // Если пользователь не подтвердил почту, отправляем письмо для подтверждения
+        //
 
         if (!$findUser->verified) {
             $code = set_new_verify();
             send_mail_verify($validated['email'], $code);
         }
+
+        //
+        // Формируем стандартный объект настроек
+        //
 
         $settingsDefault = (object) [
             'dataChange' => true,
@@ -102,34 +139,68 @@ class LoginController extends Controller
             'passwordChange' => true,
         ];
 
+        //
+        // Если у пользователя пустое поле настроек
+        //
+
         $settingsData = $findUser->settings_notifications ? (object) json_decode($findUser->settings_notifications) : $settingsDefault;
+
+        //
+        // Если настройки пользователя позволяют – отправляем письмо
+        //
 
         if ($settingsData->authorization) {
             send_mail_login($validated['email']);
         }
+
+        //
+        // Переходим на страницу пользователя и пишем сообщение
+        //
 
         return redirect()->route('user')->with('alert.success', __('С возвращением!'));
     }
 
     public function second_store(Request $request)
     {
+        //
+        // Получаем данные из формы
+        //
+
         $validated = $request->validate([
             'email' => ['required', 'string', 'max:254', 'min: 3', 'email'],
             'password' => ['required', 'string', 'min:3', 'max:254'],
         ]);
 
+        //
+        // Пытаемся найти пользователя по введенным данным
+        //
+
         $findUser = User::where('email', $validated['email'])->first();
+
+        //
+        // Если не удалось найти пользователя
+        //
+
         if ($findUser === null) {
             return redirect()->back()->withInput($validated)->withErrors([
                 'user' => __('Неверно заполнены поля.')
             ]);
         }
 
+        //
+        // Если пытаемся авторизоваться в аккаунт, в который уже вошли
+        //
+
         if ($findUser->email == session('email')) {
             return redirect()->back()->withInput($validated)->withErrors([
                 'user' => __('Уже авторизованы.')
             ]);
         }
+
+        //
+        // Учитываем, что пароль пользователя все еще может
+        // использовать шифрование MD5, а не Bcrypt
+        //
 
         $isPasswordMD5 = $findUser->md5use;
         $passwordConfirm = false;
@@ -148,17 +219,30 @@ class LoginController extends Controller
             }
         }
 
+        //
+        // Если неправильно введен пароль
+        //
+
         if ($passwordConfirm === false) {
             return redirect()->back()->withInput($validated)->withErrors([
                 'password' => __('Неверно заполнены поля.')
             ]);
         }
 
+        //
+        // Если аккаунт не верифицирован
+        //
+
         if (!$findUser->verified) {
             return redirect()->back()->withInput($validated)->withErrors([
                 'password' => __('Аккаунт не верифицирован.')
             ]);
         }
+
+        //
+        // На данном этапе все введенные поля корректные
+        // и мы можем записывать данные в сессии
+        //
 
         $oldEmail = session('email');
         $oldId = session('id');
@@ -169,14 +253,34 @@ class LoginController extends Controller
             'id' => $findUser->id
         ]);
 
+        //
+        // Стандартный объект настроек
+        //
+
         $settingsDefault = (object) [
             'dataChange' => true,
             'authorization' => true,
             'passwordChange' => true,
         ];
 
+        //
+        // Если у пользователя пустое поле настроек
+        //
+
         $settingsData = $findUser->settings_notifications ? (object) json_decode($findUser->settings_notifications) : $settingsDefault;
-        if ($settingsData->authorization) send_mail_login($validated['email']);
+
+        //
+        // Отправляем письмо об авторизации если настройки пользователя позволяют
+        //
+
+        if ($settingsData->authorization) {
+            send_mail_login($validated['email']);
+        }
+
+        //
+        // Переходим на страницу пользователя
+        // и пишем сообщение
+        //
 
         return redirect()->route('user')->with('alert.success', __('С возвращением!'));
     }
