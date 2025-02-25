@@ -45,15 +45,13 @@
 
 .row-first .row-first-right div.p-3 button {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
 
-    border-radius: 8px;
+    border-radius: 12px;
     font-family: ResistSans;
     font-size: 1.2rem;
     padding-top: 20px;
 
-    /* box-shadow: 0 0.5rem 1rem var(--page-main-button-shadow) !important; */
     box-shadow: 0 0.125rem 0.25rem var(--page-main-button-shadow) !important;
     transition: .3s;
 }
