@@ -61,7 +61,12 @@
     }
 
     .list-achievements div {
+        justify-content: center;
         min-width: 246px;
         max-width: 305px;
+    }
+
+    .list-achievements {
+        justify-content: center;
     }
 }
