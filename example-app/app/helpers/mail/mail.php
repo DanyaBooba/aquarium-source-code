@@ -4,11 +4,15 @@ if (!function_exists('send_mail')) {
     function send_mail(string $email, string $subject, string $message): bool
     {
         $subject .= ' | Аквариум';
-        $headers = 'Content-type: text/html';
+        $headers = "From: no-reply@aquariumsocial.ru\r\n";
+        $headers .= "Reply-To: $email\r\n";
+        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-        $mail = mail($email, $subject, $message, $headers);
+        $sendSubject = mb_encode_mimeheader($subject, "UTF-8", "Q");
 
-        return $mail;
+        mail($email, $sendSubject, $message, $headers);
+
+        return true;
     }
 }
 
