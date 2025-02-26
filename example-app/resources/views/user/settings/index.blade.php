@@ -19,9 +19,9 @@
             {{-- <x-settings.lists.item route="{{ route('settings.services') }}" class="services" text="{{ __('Сервисы') }}">
                 <x-settings.lists.icons.services />
             </x-settings.lists.item> --}}
-            <x-settings.lists.item route="{{ route('settings.session') }}" class="session" text="{{ __('Устройства') }}">
+            {{-- <x-settings.lists.item route="{{ route('settings.session') }}" class="session" text="{{ __('Устройства') }}">
                 <x-settings.lists.icons.session />
-            </x-settings.lists.item>
+            </x-settings.lists.item> --}}
             <x-settings.lists.item route="{{ route('settings.notifications') }}" class="notifications"
                 text="{{ __('Уведомления') }}">
                 <x-settings.lists.icons.notifications />
