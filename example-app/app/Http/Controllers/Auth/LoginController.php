@@ -3,11 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Mail\Test\DemoEmail;
-use App\Models\User\Session;
+use App\Models\SessionUser;
 use App\Models\User\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 
 class LoginController extends Controller
 {
@@ -116,7 +114,7 @@ class LoginController extends Controller
         // и может быть произведен вход в аккаунт.
         //
 
-        $tryFindSession = Session::where('idUser', $findUser->id)->first();
+        $tryFindSession = SessionUser::where('idUser', $findUser->id)->first();
         $sessionToken = '';
         $needToCreateSession = false;
 
@@ -134,7 +132,7 @@ class LoginController extends Controller
         }
 
         if ($needToCreateSession) {
-            $createSession = Session::query()->create([
+            $createSession = SessionUser::query()->create([
                 'idUser' => $findUser->id,
                 'token' => session_generate($findUser->email, $findUser->id),
                 'refreshToken' => session_generate($findUser->email, $findUser->id),

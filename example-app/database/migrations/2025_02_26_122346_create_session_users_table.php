@@ -14,6 +14,13 @@ return new class extends Migration
         Schema::create('session_users', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+
+            $table->integer('idUser');
+            $table->string('token');
+            $table->string('refreshToken');
+
+            $table->integer('unixtime_start');
+            $table->integer('unixtime_stop');
         });
     }
 
