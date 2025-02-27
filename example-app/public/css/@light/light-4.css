@@ -8,14 +8,15 @@
     --text: #585181;
     --text-invert: #ffffff;
     --text-link-underline: #cbc3ff;
-    --shadow: #dad5fb;
-    --shadow-hover: #c0bbe3;
+    /* --shadow: #dad5fb55; */
+    --shadow-hover: #c0bbe355;
 
     --header: rgba(255, 255, 255, .84);
     --header-border: #e6e2ff;
 
     --page-main-button-shadow: #61589a;
     --page-main-accent: #9A8FDD;
+    --page-main-accent-block: #9A8FDD55;
     --page-main-list-item-1: #b5a6ff;
     --page-main-list-item-2: #9ff18e;
     --page-main-list-item-3: #81b0ff;

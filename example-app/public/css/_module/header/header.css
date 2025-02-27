@@ -22,7 +22,7 @@ header.header .container {
     -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px);
     border-radius: 40px;
-    margin-top: .4rem;
+    margin-top: .65rem;
     padding: 1rem 1.5rem;
 }
 

@@ -50,7 +50,7 @@
                 <a href="{{ route('auth.signup') }}">
                     <img src="{{ asset('img/stickers/sticker1.png') }}" alt="{{ __('Стикер аквариума') }}">
                 </a>
-                <h3 class="fs-3">{!! __('Стикеры <nobr>за регистрацию</nobr>') !!}</h3>
+                <h2 class="fs-3 mb-0">{!! __('Стикеры <nobr>за регистрацию</nobr>') !!}</h2>
             </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4">
@@ -58,7 +58,7 @@
                 <a href="{{ route('auth.signin') }}">
                     <img src="{{ asset('img/social/yandex.svg') }}" alt="{{ __('Яндекс') }}">
                 </a>
-                <h3 class="fs-3">{!! __('Авторизация <nobr>через соцсети</nobr>') !!}</h3>
+                <h2 class="fs-3 mb-0">{!! __('Авторизация <nobr>через соцсети</nobr>') !!}</h2>
             </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4">
@@ -66,7 +66,7 @@
                 <a href="//aquariumsocial.t.me" target="_blank">
                     <img src="{{ asset('img/social/telegram.svg') }}" alt="{{ __('Телеграм') }}">
                 </a>
-                <h3 class="fs-3">{!! __('Телеграм-канал проекта') !!}</h3>
+                <h2 class="fs-3 mb-0">{!! __('Телеграм-канал проекта') !!}</h2>
             </div>
         </div>
     </div>
