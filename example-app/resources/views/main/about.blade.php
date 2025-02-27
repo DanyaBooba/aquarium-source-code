@@ -40,7 +40,7 @@
         </div>
     </div>
     <div style="margin-top: 5rem">
-        <h2 class="display-2 mb-5">{{ __('Статистика') }}</h2>
+        <h2 class="display-2 mb-4">{{ __('Статистика') }}</h2>
         <div class="py-3">
             <h3 class="d-flex flex-wrap flex-column">
                 <span class="d-flex align-items-center container-simple-numbers">
@@ -88,7 +88,31 @@
         </div>
     </div>
     <div style="margin-top: 5rem">
-        <h2 class="display-2 mb-5">{{ __('Планы на 2025 год') }}</h2>
+        <h2 class="display-2 mb-4">{{ __('Планы на 2026 год') }}</h2>
+        <div class="py-3">
+            <h3 class="d-flex flex-wrap flex-column">
+                <span class="container-simple-numbers-text">{{ __('Автоматическое') }}</span>
+                <span class="d-flex align-items-center container-simple-numbers">
+                    <span class="display-3 text-success">{{ __('Тестирование') }}</span>
+                </span>
+            </h3>
+        </div>
+        <div class="py-3">
+            <h3 class="d-flex flex-wrap flex-column">
+                <span class="d-flex align-items-center container-simple-numbers">
+                    <span class="display-3 text-success">{{ __('Доступность') }}</span>
+                </span>
+                <span class="container-simple-numbers-text">{{ __('для лиц с ОВЗ') }}</span>
+            </h3>
+        </div>
+        <div class="py-3">
+            <h3 class="d-flex flex-wrap flex-column">
+                <span class="d-flex align-items-center container-simple-numbers">
+                    <span class="display-3 text-success">{{ __('Сообщения') }}</span>
+                </span>
+                <span class="container-simple-numbers-text">{{ __('в Аквариуме') }}</span>
+            </h3>
+        </div>
         <div class="py-3">
             <h3 class="d-flex flex-wrap flex-column">
                 <span class="d-flex align-items-center container-simple-numbers">
@@ -107,7 +131,7 @@
         </div>
     </div>
     <div style="margin-top: 5rem">
-        <h2 class="display-2 mb-5">{{ __('Уже реализовано') }}</h2>
+        <h2 class="display-2 mb-4">{{ __('Уже реализовано') }}</h2>
         <div class="py-3">
             <h3 class="d-flex flex-wrap flex-column">
                 <span class="d-flex align-items-center container-simple-numbers">
@@ -118,10 +142,10 @@
         </div>
         <div class="py-3">
             <h3 class="d-flex flex-wrap flex-column">
+                <span class="container-simple-numbers-text">{{ __('переход на архитектуру') }}</span>
                 <span class="d-flex align-items-center container-simple-numbers">
                     <span class="display-3 text-success">{{ __('Laravel') }}</span>
                 </span>
-                <span class="container-simple-numbers-text">{{ __('переход') }}</span>
             </h3>
         </div>
         <div class="py-3">

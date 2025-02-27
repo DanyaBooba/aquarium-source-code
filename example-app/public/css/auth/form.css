@@ -245,6 +245,12 @@
 
 /* media */
 
+@media(min-width: 768px) {
+    .authentication {
+        min-width: 322px
+    }
+}
+
 @media(max-width: 767.98px) {
     .authentication.col-md-4 {
         padding: 0rem !important;

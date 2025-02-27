@@ -10,9 +10,9 @@
     padding-bottom: 1rem;
     padding-top: 1.25rem;
 
-    -webkit-box-shadow: 4px 4px 30px 18px var(--body);
+    /* -webkit-box-shadow: 4px 4px 30px 18px var(--body);
     -moz-box-shadow: 4px 4px 30px 18px var(--body);
-    box-shadow: 4px 4px 30px 18px var(--body);
+    box-shadow: 4px 4px 30px 18px var(--body); */
 }
 
 .container-settings-header a.header-confirm {

@@ -91,9 +91,9 @@
 }
 
 .posts .row .col-text {
-    padding-bottom: 1.4rem;
-    transition: .3s !important;
-    height: 322.4px;
+    padding-bottom: 16px;
+    transition: .15s !important;
+    height: 322px;
 }
 
 .posts .row .col-img a.card-overflow {
@@ -119,8 +119,9 @@
 .posts .row .col-text a {
     height: 100%;
     background-color: var(--color-body-plane) !important;
-    border-color: var(--color-body-plane-2) !important;
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, .075);
+    border: none !important;
+    /* border-color: var(--color-body-plane-2) !important; */
+    box-shadow: 0 0 .25rem var(--shadow);
     border-radius: 12px;
     padding: 1rem;
     text-decoration: none !important;
@@ -142,16 +143,16 @@
     font-family: ResistSans;
     font-size: 1.5rem;
     margin-bottom: .25rem;
-    line-height: 105%;
+    line-height: 110%;
 
-    max-height: 97px;
+    max-height: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 @media(hover: hover) {
     .posts .row .col-img:hover a {
-        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, .2);
+        box-shadow: 0 20px 40px 0 var(--shadow-hover);
         transition: .3s;
     }
 
@@ -161,7 +162,7 @@
     }
 
     .posts .row .col-text:hover a {
-        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, .1);
+        box-shadow: 0 20px 40px 0 var(--shadow-hover);
         border-color: var(--text-link-hover) !important;
     }
 
@@ -174,7 +175,7 @@
 
 @media(hover: none) {
     .posts .row .col-img:active a {
-        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, .2);
+        box-shadow: 0 20px 40px 0 var(--shadow-hover);
         transition: .3s;
     }
 

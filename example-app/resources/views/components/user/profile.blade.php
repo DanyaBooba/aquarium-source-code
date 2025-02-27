@@ -41,38 +41,38 @@
 
         <x-user.profile.profile.button class='user-button-share'
             attr='data-bs-toggle=modal data-bs-target=#qrCodeModal'>
-            <x-user.profile.profile.icon.share />
             {{ __('Поделиться') }}
+            <x-user.profile.profile.icon.share />
         </x-user.profile.profile.button>
 
         @if ($profile->local)
             <x-user.profile.profile.button :pc="true" :url="route_user_show($profile->id, $profile->username)">
-                <x-user.profile.profile.icon.from-the-side />
                 {{ __('Профиль со стороны') }}
+                <x-user.profile.profile.icon.from-the-side />
             </x-user.profile.profile.button>
 
             <x-user.profile.profile.dropdown-local :profile="$profile" :itsme="$itsme" />
 
             @if ($profile->verified && have_second_account() == false)
                 <x-user.profile.profile.button :pc="true" :url="route('second.auth.signin')">
-                    <x-user.profile.profile.icon.add-account />
                     {{ __('Добавить аккаунт') }}
+                    <x-user.profile.profile.icon.add-account />
                 </x-user.profile.profile.button>
             @endif
         @else
             <x-user.profile.profile.button class='user-button-settings' :url="route('user.sub', $profile->id)" :itsme="$itsme">
                 @if ($issub)
-                    <x-user.profile.profile.icon.sub-true />
                     {{ __('Подписан') }}
+                    <x-user.profile.profile.icon.sub-true />
                 @else
-                    <x-user.profile.profile.icon.sub-false />
                     {{ __('Подписаться') }}
+                    <x-user.profile.profile.icon.sub-false />
                 @endif
             </x-user.profile.profile.button>
 
             <x-user.profile.profile.button class="user-button-complain" :url="route('user.complain', $profile->id)" :itsme="$itsme">
-                <x-user.profile.profile.icon.complain />
                 {{ __('Пожаловаться') }}
+                <x-user.profile.profile.icon.complain />
             </x-user.profile.profile.button>
 
             <x-user.profile.profile.dropdown :profile="$profile" :issub="$issub" :itsme="$itsme" />

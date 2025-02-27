@@ -18,11 +18,12 @@
 
 .container-simple-numbers-text {
     margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 
-.container-simple-numbers {
+/* .container-simple-numbers {
     margin-right: 1rem;
-}
+} */
 
 .container-simple-numbers svg {
     width: calc(1.525rem + 3.3vw);

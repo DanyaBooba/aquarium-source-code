@@ -12,9 +12,8 @@
     <form action="{{ route('settings.profile.password.store') }}" onsubmit="sendForm('{{ route('settings') }}')"
         method="post">
         @csrf
-        <x-form.input-password :labelShow="true" labelText="Текущий пароль" name="currentPassword" funcName="data" />
-        <x-form.input-password :labelShow="true" labelText="Новый пароль" name="newPassword" funcName="data"
-            id="password-form2" />
+        <x-form.input-password labelText="Текущий пароль" name="currentPassword" funcName="data" />
+        <x-form.input-password labelText="Новый пароль" name="newPassword" funcName="data" id="password-form2" />
 
         <div class="visually-hidden">
             <button type="submit">

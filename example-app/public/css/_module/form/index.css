@@ -31,13 +31,18 @@ form .input-password .form-floating {
 form .input-password a.input-group-text {
     position: absolute;
     display: block !important;
-    z-index: 1000;
+    z-index: 200;
 
     border: none !important;
     background: transparent !important;
 
-    margin-left: 82% !important;
-    margin-top: 10px;
+    top: 0 !important;
+    left: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    margin-left: 85% !important;
+    transform: translate(0px, 16px);
 }
 
 /* media */

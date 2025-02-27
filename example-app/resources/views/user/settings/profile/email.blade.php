@@ -11,18 +11,25 @@
 
     <form action="{{ route('settings.profile.email.store') }}" onsubmit="sendForm('{{ route('settings') }}')" method="post">
         @csrf
-        <div>
-            <label for="currentEmail" class="form-label">{{ __('Текущая почта') }}</label>
-            <input type="email" name="currentEmail" class="form-control" id="currentEmail" placeholder="{{ __('Почта') }}"
-                onInput="data()" required>
+        <p class="text-title mt-4">
+            {{ __('Текущие данные') }}
+        </p>
+        <div class="form-floating">
+            <input type="email" name="currentEmail" class="form-control" id="currentEmail" placeholder="Текущая почта"
+                onInput="data()" value="{{ old('currentEmail') }}" required>
+            <label for="currentEmail">{{ __('Текущая почта') }}</label>
         </div>
 
-        <x-form.input-password name="currentPassword" funcName="data" :labelShow="true" />
+        <x-form.input-password name="currentPassword" funcName="data" />
 
-        <div>
-            <label for="newEmail" class="form-label">{{ __('Новая почта') }}</label>
-            <input type="email" name="newEmail" class="form-control" id="newEmail" placeholder="{{ __('Почта') }}"
-                onInput="data()" required>
+        <p class="text-title mt-4">
+            {{ __('Новая почта') }}
+        </p>
+
+        <div class="form-floating">
+            <input type="email" name="newEmail" class="form-control" id="newEmail" placeholder="Новая почта"
+                onInput="data()" value="{{ old('newEmail') }}" required>
+            <label for="newEmail">{{ __('Новая почта') }}</label>
             <p>
                 {{ __('После отправки формы, потребуется подтвердить почту по ссылке в письме.') }}
             </p>

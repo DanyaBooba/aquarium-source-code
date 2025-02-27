@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="{{ asset('css/feed/include.css') }}">
 @endpush
 
+@section('user.feed', 'row-user-content-feed')
+
 @section('user.content')
     <div class="posts mt-0 container">
         <div class="feed-title">

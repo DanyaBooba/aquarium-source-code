@@ -89,6 +89,10 @@
     background-color: var(--body) !important;
 }
 
+.row-user-content.row-user-content-feed {
+    max-width: 500px !important;
+}
+
 h1.title-has-back {
     margin-top: 0 !important;
     margin-bottom: 0 !important;

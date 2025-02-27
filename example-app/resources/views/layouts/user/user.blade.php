@@ -13,7 +13,7 @@
                     @include('includes.user.bar')
                 </div>
             </section>
-            <main class="flex-grow-1 row-user-content">
+            <main class="flex-grow-1 row-user-content @yield('user.feed')">
                 @include('includes.user.header')
                 @yield('user.alert')
                 <section class="py-3">

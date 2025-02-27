@@ -1,8 +1,8 @@
 @extends('layouts.auth.base')
 
 @section('auth.root')
-    <main class="form-signup row gx-5 w-100 m-auto align-items-center">
-        <div class="col-md-8 form-signup-display">
+    <main class="form-signup row gx-5 w-100 m-auto align-items-center justify-content-center">
+        <div class="col-md-6 form-signup-display">
             <div style="margin-top: 1rem">
                 <h4 class="d-flex flex-wrap flex-column">
                     <span class="d-flex align-items-center">

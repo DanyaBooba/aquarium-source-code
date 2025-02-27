@@ -14,7 +14,7 @@
                 <img src="/img/illustrations/mail-2.png" alt="Уведомлений нет"
                     style="max-width: 150px; margin-top: 1rem; margin-bottom: .5rem;">
                 <p>
-                    {{ __('Уведомлений нет.') }}
+                    {{ __('Уведомлений нет') }}
                 </p>
             </div>
         @else
