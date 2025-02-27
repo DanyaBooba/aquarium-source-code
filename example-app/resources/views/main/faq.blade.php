@@ -202,19 +202,22 @@
             <ul>
                 <li>
                     {{ __('Даниил Дыбка – разработчик проекта, автор,') }}
-                    <a href="//ddybka.t.me">@@ddybka</a>
+                    <a href="//ddybka.t.me" target="_blank">@@ddybka</a>
                 </li>
                 <li>
                     {{ __('Анастасия Пара – художник, автор стикеров,') }}
-                    <a href="//paraananas.t.me">@@paraananas</a>
+                    <a href="//paraananas.t.me" target="_blank">@@paraananas</a>
                 </li>
                 <li>
-                    {{ __('Роман Казин – художник, автор шапок,') }}
-                    <a href="//renkort.t.me">@@renkort</a>
+                    {{ __('Роман Казин – художник, автор шапок') }}
                 </li>
                 <li>
-                    {{ __('Дарья Уткина – художник, помощь в консультации UI,') }}
-                    <a href="//CarpetAladdin.t.me">@@CarpetAladdin</a>
+                    {{ __('Дарья Уткина – художник, консультация по UI,') }}
+                    <a href="//CarpetAladdin.t.me" target="_blank">@@CarpetAladdin</a>
+                </li>
+                <li>
+                    {{ __('Владимир Вяхирев – дизайнер, автор дизайна постов, консультация по UI,') }}
+                    <a href="//br0k3_b01.t.me" target="_blank">@@br0k3_b01</a>
                 </li>
             </ul>
             <h2>{{ __('Ссылки') }}</h2>

@@ -24,7 +24,9 @@
 }
 
 .row-user-bar ul li {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    padding: .75rem 1rem;
 }
 
 .row-user-bar ul li a {
@@ -35,9 +37,10 @@
     transition: .15s;
 }
 
-.row-user-bar ul li a:active {
+/* .row-user-bar ul li a:active {
+    background-color: var(--page-main-accent) !important;
     transform: scale(0.93) translateX(-5px) !important;
-}
+} */
 
 .row-user-bar ul li a svg {
     margin-right: 1rem;
@@ -45,12 +48,16 @@
     min-height: 24px;
 }
 
+.row-user-bar ul li:has(a.active) {
+    background-color: var(--page-main-accent) !important;
+}
+
 .row-user-bar ul li a.active {
-    color: var(--text-link-hover) !important;
+    color: white !important;
 }
 
 .row-user-bar ul li a.active svg {
-    stroke: var(--text-link-hover);
+    stroke: white;
 }
 
 .row-user-bar .social {
@@ -100,7 +107,7 @@ h1.title-has-back {
 
 /* media */
 
-@media(hover: hover) {
+/* @media(hover: hover) {
     .row-user-bar ul li a:hover {
         transform: scale(0.98) translateX(-1px);
     }
@@ -110,7 +117,7 @@ h1.title-has-back {
     .row-user-bar ul li a:active {
         transform: scale(0.98) translateX(-1px);
     }
-}
+} */
 
 @media(min-width: 768px) {
     .row-user-content h1:not(.title-has-back) {
