@@ -26,10 +26,10 @@
         </div>
     </div>
     <div class="user-profile-buttons">
-        <x-user.profile.profile.button
+        <x-user.profile.profile.button class='user-button-need-rotate-mobile'
             attr='data-bs-toggle=offcanvas data-bs-target=#canvasInfo aria-controls=canvasInfo id=buttonProfileInfo'>
-            <x-user.profile.profile.icon.info />
             {{ __('Информация') }}
+            <x-user.profile.profile.icon.info />
         </x-user.profile.profile.button>
 
         @if ($profile->local)
@@ -39,7 +39,7 @@
             </x-user.profile.profile.button>
         @endif
 
-        <x-user.profile.profile.button class='user-button-share'
+        <x-user.profile.profile.button class='user-button-share user-button-need-rotate-mobile'
             attr='data-bs-toggle=modal data-bs-target=#qrCodeModal'>
             {{ __('Поделиться') }}
             <x-user.profile.profile.icon.share />
@@ -60,7 +60,8 @@
                 </x-user.profile.profile.button>
             @endif
         @else
-            <x-user.profile.profile.button class='user-button-settings' :url="route('user.sub', $profile->id)" :itsme="$itsme">
+            <x-user.profile.profile.button class='user-button-settings user-button-need-rotate-mobile'
+                :url="route('user.sub', $profile->id)" :itsme="$itsme">
                 @if ($issub)
                     {{ __('Подписан') }}
                     <x-user.profile.profile.icon.sub-true />

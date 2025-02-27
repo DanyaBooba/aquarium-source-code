@@ -270,7 +270,7 @@
     align-items: center;
     padding-top: .5rem;
     padding-bottom: .5rem;
-    gap: .5rem;
+    gap: 1rem;
 }
 
 .user-profile .user-profile-buttons .dropdown .dropdown-menu li a svg {
@@ -404,6 +404,10 @@
 
     .user-profile .user-profile-buttons .dropdown {
         display: contents;
+    }
+
+    .user-profile .user-profile-buttons button.user-button-need-rotate-mobile {
+        flex-direction: column-reverse;
     }
 }
 
