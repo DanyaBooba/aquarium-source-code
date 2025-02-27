@@ -19,6 +19,8 @@
     <x-user.profile :profile="$profile" />
     <x-user.profile.modal :listData="$listData" />
     <x-user.profile.me-info :profile="$profile" />
+
+    <h2>{{ __('Добавить запись') }}</h2>
     <x-user.profile.addpost :profile="$profile" />
 
     <x-user.profile.posts-show :posts="$posts" :privatePosts="$privatePosts" :nullPosts="$nullPosts" :count="$countAllPosts" />

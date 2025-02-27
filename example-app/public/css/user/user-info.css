@@ -1,9 +1,13 @@
 .profile-info {
     display: flex;
     overflow: scroll;
-    margin-bottom: 1rem;
-    padding: .2rem;
+    margin-bottom: .6rem;
+    padding: .2rem 0;
     gap: .7rem;
+}
+
+.profile-info:not(:has(.profile-info__item)) {
+    margin-bottom: 0 !important;
 }
 
 .profile-info::-webkit-scrollbar {

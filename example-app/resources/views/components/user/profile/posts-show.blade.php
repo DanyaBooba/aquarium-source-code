@@ -9,21 +9,21 @@
 @if ($count > 0)
     @if ($local)
         @if (count($posts) > 0)
-            <h2>{{ __('Ваши записи') }}</h2>
+            <h2 style="margin-top: 2rem">{{ __('Ваши записи') }}</h2>
             <x-user.profile.posts :posts="$posts" />
         @endif
 
         @if (count($privatePosts) > 0)
-            <h2>{{ __('Записи, ожидающие модерацию') }}</h2>
+            <h2 style="margin-top: 2rem">{{ __('Записи на модерации') }}</h2>
             <x-user.profile.posts :posts="$privatePosts" empty="{{ __('Нет записей.') }}" />
         @endif
 
         @if (count($nullPosts) > 0)
-            <h2>{{ __('Отклоненные записи') }}</h2>
+            <h2 style="margin-top: 2rem">{{ __('Отклоненные записи') }}</h2>
             <x-user.profile.posts :posts="$nullPosts" empty="{{ __('Нет записей.') }}" />
         @endif
     @else
-        <h2>{{ __('Записи пользователя') }}</h2>
+        <h2 style="margin-top: 2rem">{{ __('Записи пользователя') }}</h2>
         <x-user.profile.posts :posts="$posts" />
     @endif
 @else

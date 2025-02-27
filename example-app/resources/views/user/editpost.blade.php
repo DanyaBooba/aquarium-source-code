@@ -26,10 +26,10 @@
                 @csrf
                 <input id="x" type="hidden" name="message">
                 <input type="hidden" name="idPost" value="{{ $post->idPost }}">
-                <trix-editor input="x" placeholder="{{ __('Сообщение') }}" autofocus>
+                <trix-editor input="x" placeholder="{{ __('Сообщение') }}" id="textarea">
                     {!! $post->message !!}
                 </trix-editor>
-                <div class="d-flex flex-wrap gap-3 mt-3">
+                <div class="d-flex flex-wrap gap-3" style="margin-top: 1rem;">
                     <button type="submit" class="d-block btn btn-primary w-100 py-3" style="border-radius: 12px;">
                         {{ __('Изменить') }}
                     </button>
@@ -42,3 +42,7 @@
         </div>
     </div>
 @endsection
+
+@push('js')
+    <script src="{{ asset('js/user/post/textarea-scroll.js') }}"></script>
+@endpush

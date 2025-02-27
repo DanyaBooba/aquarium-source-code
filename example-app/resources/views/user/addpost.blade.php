@@ -20,9 +20,11 @@
                 {{-- @if (!$whiteList)
                     <x-addpost.post-moderate />
                 @endif --}}
-                <button type="submit" class="btn btn-success w-100 mt-3 py-3" style="border-radius: 12px;">
-                    {{ __('Опубликовать') }}
-                </button>
+                <div style="margin-top: 1rem">
+                    <button type="submit" class="btn btn-success w-100 py-3" style="border-radius: 12px;">
+                        {{ __('Опубликовать') }}
+                    </button>
+                </div>
             </form>
         </div>
     </div>
