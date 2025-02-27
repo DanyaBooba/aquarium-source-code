@@ -4,7 +4,11 @@
 
 @section('addpost.content')
     <div class="container-settings-main">
-        {{-- <h1 class="mb-4">{{ __('Добавить запись') }}</h1> --}}
+        <div class="div-has-back">
+            <h1 class="title-has-back">
+                {{ __('Добавить запись') }}
+            </h1>
+        </div>
 
         <x-form.error-first />
 
@@ -12,7 +16,7 @@
             <form action="{{ route('post.add.store') }}" method="post" class="mb-4">
                 @csrf
                 <input id="x" type="hidden" name="message">
-                <trix-editor input="x" placeholder="{{ addpost_placeholder() }}"></trix-editor>
+                <trix-editor input="x" placeholder="{{ addpost_placeholder() }}" id="textarea"></trix-editor>
                 {{-- @if (!$whiteList)
                     <x-addpost.post-moderate />
                 @endif --}}
@@ -23,3 +27,7 @@
         </div>
     </div>
 @endsection
+
+@push('js')
+    <script src="{{ asset('js/user/post/textarea-scroll.js') }}"></script>
+@endpush

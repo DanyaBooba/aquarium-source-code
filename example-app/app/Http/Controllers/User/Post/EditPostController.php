@@ -46,7 +46,7 @@ class EditPostController extends Controller
 
         if ($user->usertype == -1) {
             return redirect()->back()->withInput($validated)->withErrors([
-                'user' => __('Для публикации постов требуется авторизоваться в аккаунт.')
+                'user' => __('Для публикации записей требуется авторизоваться в аккаунт.')
             ]);
         }
 

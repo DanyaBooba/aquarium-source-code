@@ -26,7 +26,7 @@
 .row-user-bar ul li {
     margin-bottom: 1rem;
     border-radius: 12px;
-    padding: .75rem 1rem;
+    padding: 1rem;
 }
 
 .row-user-bar ul li a {
@@ -96,10 +96,6 @@
     background-color: var(--body) !important;
 }
 
-.row-user-content.row-user-content-feed {
-    max-width: 500px !important;
-}
-
 h1.title-has-back {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
@@ -126,6 +122,10 @@ h1.title-has-back {
 
     div.div-has-back:has(h1.title-has-back) {
         margin-top: 1.5rem !important;
+    }
+
+    .row-user-content.row-user-content-feed {
+        max-width: 500px !important;
     }
 }
 

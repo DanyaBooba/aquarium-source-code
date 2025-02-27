@@ -11,7 +11,7 @@
     <div class="user-notifications">
         @if ($count == 0)
             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
-                <img src="/img/illustrations/mail-2.png" alt="Уведомлений нет"
+                <img src="{{ asset('img/illustrations/mail-2.png') }}" alt="Уведомлений нет"
                     style="max-width: 150px; margin-top: 1rem; margin-bottom: .5rem;">
                 <p>
                     {{ __('Уведомлений нет') }}

@@ -21,7 +21,9 @@ return new class extends Migration
 
             $table->boolean('haveimage')->default(false);
             $table->string('imagename')->nullable();
+            $table->string('title')->nullable();
             $table->text('message');
+            $table->text('themeId')->nullable();
             $table->string('desc')->max(254);
 
             $table->integer('likes')->default(0);

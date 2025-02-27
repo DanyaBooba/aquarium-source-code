@@ -7,6 +7,10 @@ trix-editor {
   min-height: 5em;
   outline: none; }
 
+  trix-toolbar {
+    margin-top: 2rem;
+  }
+
 trix-toolbar * {
   box-sizing: border-box; }
 

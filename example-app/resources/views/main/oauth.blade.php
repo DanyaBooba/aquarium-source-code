@@ -3,9 +3,11 @@
 @section('page.title', __('OAuth'))
 
 @push('css')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
-<link rel="stylesheet" type="text/css" href="{{ asset('css/oauth/include.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/oauth/include.css') }}" />
 @endpush
+
+@section('main.body', 'onload=prettyPrint()')
 
 @section('main.content')
     <div class="row gx-3">
@@ -43,11 +45,13 @@
             <h2>{{ __('Подключить OAuth') }}</h2>
             <h3>{{ __('Регистрация') }}</h3>
             <p>
-                {{ __('Вам необходимо зарегистрироваться в панели разработчиков Аквариума по') }} <a href="#">{{ __('ссылке') }}</a>. {{ __('Вы можете использовать аккаунт Аквариума.') }}
+                {{ __('Вам необходимо зарегистрироваться в панели разработчиков Аквариума по') }} <a
+                    href="#">{{ __('ссылке') }}</a>. {{ __('Вы можете использовать аккаунт Аквариума.') }}
             </p>
             <h3>{{ __('Создание приложения') }}</h3>
             <p>
-                {{ __('После регистрации аккаунта потребуется зарегистрировать приложение по') }} <a href="#">{{ __('ссылке') }}</a>.
+                {{ __('После регистрации аккаунта потребуется зарегистрировать приложение по') }} <a
+                    href="#">{{ __('ссылке') }}</a>.
             </p>
             <h3>{{ __('Настройка приложения') }}</h3>
             <p>

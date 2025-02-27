@@ -48,7 +48,7 @@
 
 @media(max-width: 767.98px) {
     .post-show-bottom {
-        margin-bottom: 4rem;
+        margin-bottom: calc(4rem + env(safe-area-inset-bottom));
     }
 
     .post-show-bottom svg {

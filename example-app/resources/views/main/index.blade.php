@@ -30,7 +30,8 @@
                         {!! __('<nobr>социальная сеть</nobr>') !!}</h1>
                 </div>
                 <div class="row-first-button">
-                    <button class="btn btn-light" onClick="buttonOpenURL('{{ route('auth.signin') }}')">
+                    <button class="btn btn-light btn-design-main-login"
+                        onClick="buttonOpenURL('{{ route('auth.signin') }}')">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in">
                             <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
@@ -45,7 +46,7 @@
     </div>
 
     <div class="row row-second g-4">
-        <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="col-sm-12  col-lg-4">
             <div class="p-4 row-second__content row-second-stickers">
                 <a href="{{ route('auth.signup') }}">
                     <img src="{{ asset('img/stickers/sticker1.png') }}" alt="{{ __('Стикер аквариума') }}">
@@ -53,7 +54,7 @@
                 <h2 class="fs-3 mb-0">{!! __('Стикеры <nobr>за регистрацию</nobr>') !!}</h2>
             </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="col-sm-12  col-lg-4">
             <div class="p-4 row-second__content row-second-social">
                 <a href="{{ route('auth.signin') }}">
                     <img src="{{ asset('img/social/yandex.svg') }}" alt="{{ __('Яндекс') }}">
@@ -61,7 +62,7 @@
                 <h2 class="fs-3 mb-0">{!! __('Авторизация <nobr>через соцсети</nobr>') !!}</h2>
             </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="col-sm-12  col-lg-4">
             <div class="p-4 row-second__content row-second-telegram">
                 <a href="//aquariumsocial.t.me" target="_blank">
                     <img src="{{ asset('img/social/telegram.svg') }}" alt="{{ __('Телеграм') }}">
@@ -187,7 +188,7 @@
         </div>
     </div>
 
-    <div class="container my-5">
+    <div class="container px-0 my-5">
         <div
             style="width: 100%; height: 300px; border-radius: 12px 12px 4px 4px; background-image: url('{{ asset('img/main/img/main-aquarium.jpg') }}'); background-size: cover; background-position: center;">
         </div>

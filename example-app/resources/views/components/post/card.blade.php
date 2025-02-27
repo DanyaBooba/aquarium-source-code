@@ -1,9 +1,44 @@
 @props([
     'post' => (object) [],
     'showUser' => false,
+    'status' => 'default',
 ])
 
-@if ($post->haveimage)
+@props([
+    '_status' => in_array($status, ['default', 'image', 'theme']) ? $status : 'default',
+])
+
+@if ($_status == 'image')
+    image
+@elseif($_status == 'theme')
+    theme
+@else
+    <div class="col col-text">
+        @if ($showUser)
+            <a href="{{ route('user.show.id', $post->idUser) }}" class="card-overflow">
+                <div class="card-overflow__profile">
+                    <x-user.profile.image :avatar="$post->userAvatar" :avatar-default="$post->userAvatarDefault" />
+                    <span>{{ $post->userName }}</span>
+                </div>
+            </a>
+        @endif
+        <a href="{{ route('post.show', [$post->idUser, $post->idPost]) }}" class="card">
+            <div class="post">
+                <p>
+                    {{ $post->desc }}
+                </p>
+            </div>
+        </a>
+        user
+        like
+
+        date
+        тематика
+    </div>
+@endif
+
+
+{{-- @if ($post->haveimage)
     <div class="col col-img">
         @if ($showUser)
             <a href="{{ route('user.show.id', $post->idUser) }}" class="card-overflow">
@@ -42,4 +77,4 @@
             </div>
         </a>
     </div>
-@endif
+@endif --}}

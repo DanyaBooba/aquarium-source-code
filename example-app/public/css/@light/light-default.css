@@ -11,7 +11,7 @@
     /* --shadow: #dee0e7; */
     --shadow-hover: #d3d6e299;
 
-    --header: rgba(255, 255, 255, .84);
+    --header: rgba(255, 255, 255, .5);
     --header-border: #dae4ec;
 
     --page-main-button-shadow: rgba(70, 76, 180, .9);

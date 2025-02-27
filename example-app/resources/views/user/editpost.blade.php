@@ -1,6 +1,6 @@
 @extends('layouts.user.addpost')
 
-@section('page.title', __('Изменить пост'))
+@section('page.title', __('Изменить запись'))
 
 @section('addpost.content')
     <div class="container-settings-main">
@@ -12,14 +12,13 @@
                 </svg>
             </a>
             <h1 class="title-has-back">
-                {{ __('Изменить пост') }}
-                <span class="text-muted">{{ $post->idPost }}</span>
+                {{ __('Изменить запись') }}
             </h1>
         </div>
 
         <x-form.error-first />
 
-        <div class="addpost-container" style="margin-top: 2rem">
+        <div class="addpost-container">
             @if (!$whiteList)
                 <x-addpost.post-change />
             @endif
@@ -27,15 +26,15 @@
                 @csrf
                 <input id="x" type="hidden" name="message">
                 <input type="hidden" name="idPost" value="{{ $post->idPost }}">
-                <trix-editor input="x" placeholder="{{ __('Сообщение') }}"
-                    autofocus>{!! $post->message !!}</trix-editor>
-                <div class="d-flex gap-3 mt-3">
-                    <div>
-                        <button type="submit" class="d-block btn btn-primary">
-                            {{ __('Изменить') }}
-                        </button>
-                    </div>
-                    <a href="{{ route('post.delete', $post->idPost) }}" class="btn btn-danger">
+                <trix-editor input="x" placeholder="{{ __('Сообщение') }}" autofocus>
+                    {!! $post->message !!}
+                </trix-editor>
+                <div class="d-flex flex-wrap gap-3 mt-3">
+                    <button type="submit" class="d-block btn btn-primary w-100 py-3" style="border-radius: 12px;">
+                        {{ __('Изменить') }}
+                    </button>
+                    <a href="{{ route('post.delete', $post->idPost) }}" class="btn btn-danger w-100 py-3"
+                        style="border-radius: 12px;">
                         {{ __('Удалить запись') }}
                     </a>
                 </div>

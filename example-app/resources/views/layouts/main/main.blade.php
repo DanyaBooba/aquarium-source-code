@@ -7,7 +7,7 @@
 
 @section('body')
 
-    <body onload="prettyPrint()">
+    <body @yield('main.body')>
         <div class="d-flex flex-column justify-content-between min-vh-100">
             @include('includes.alert')
             @include('includes.header')

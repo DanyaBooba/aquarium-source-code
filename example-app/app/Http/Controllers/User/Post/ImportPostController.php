@@ -40,7 +40,7 @@ class ImportPostController extends Controller
                 }
 
                 $plainText = file_get_html($url . '?embed=1&mode=tme')->plaintext;
-                $textWithDate = substr($plainText, 281);
+                $textWithDate = mb_substr($plainText, 281);
 
                 $listText = explode(' t.me', $textWithDate);
                 $text = $listText[0];

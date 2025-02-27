@@ -8,7 +8,7 @@
     z-index: 1030;
 
     background-color: var(--color-body-plane);
-    border-top: .1rem solid var(--color-body-plane-3);
+    border-top: 1px solid var(--color-body-plane-3);
 
     padding-bottom: env(safe-area-inset-bottom);
 }
@@ -30,7 +30,7 @@
 
 .fixed-bottom-nav .container-fluid div {
     flex: 1;
-    padding-top: 6px;
+    padding-top: 8px;
 }
 
 .fixed-bottom-nav .container-fluid div a {
@@ -60,7 +60,7 @@
 }
 
 .fixed-bottom-nav .container-fluid div a.active {
-    padding-top: 6px;
+    padding-top: 8px;
     padding-bottom: 6px;
     background-color: var(--page-main-accent);
 }

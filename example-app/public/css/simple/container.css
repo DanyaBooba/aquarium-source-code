@@ -1,7 +1,12 @@
 .container-simple {
-    max-width: 800px;
+    max-width: 1200px;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+.container-simple .main-lending {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container-simple .logo {

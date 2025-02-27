@@ -35,6 +35,8 @@ main.row-user-content header .header__meta a.active svg {
     stroke: var(--text-link-hover) !important;
 }
 
+/* media */
+
 @media(min-width: 767.98px) {
     main.row-user-content header {
         display: none !important;

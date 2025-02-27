@@ -2,13 +2,17 @@
 
 @section('page.title', __('О проекте Аквариум'))
 
+@push('css')
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/lending/include.css') }}" />
+@endpush
+
 @section('simple.content')
-    <div class="main-lending">
+    <div class="main-lending" style="max-width: 800px">
         <a href="/" aria-label="Перейти в Аквариум">
             <x-lending.logo />
         </a>
-        <p class="text-center mt-4 fs-3">
-            {{ __('Новая социальная сеть') }}
+        <p class="text-center mt-4 fs-3" id="js-change" style="height: 42px">
+            {{ __('Пространство для творчества') }}
         </p>
     </div>
     <div class="row" style="margin-top: 6rem;">
@@ -134,6 +138,15 @@
         <h2 class="display-2 mb-4">{{ __('Уже реализовано') }}</h2>
         <div class="py-3">
             <h3 class="d-flex flex-wrap flex-column">
+                <span class="container-simple-numbers-text">{{ __('новые') }}</span>
+                <span class="d-flex align-items-center container-simple-numbers">
+                    <span class="display-3 text-success">{{ __('цветовые темы') }}</span>
+                </span>
+                <span class="container-simple-numbers-text">{{ __('в размере 20 штук') }}</span>
+            </h3>
+        </div>
+        <div class="py-3">
+            <h3 class="d-flex flex-wrap flex-column">
                 <span class="d-flex align-items-center container-simple-numbers">
                     <span class="display-3 text-success">{{ __('Обновленный') }}</span>
                 </span>
@@ -174,7 +187,7 @@
         </div>
     </div>
     <div style="margin-top: 6rem; margin-bottom: 4rem">
-        <a href="{{ route('main') }}" class="fs-4 text-decoration-none d-flex justify-content-center align-items-center">
+        {{-- <a href="{{ route('main') }}" class="fs-4 text-decoration-none d-flex justify-content-center align-items-center">
             {{ __('Перейти в Аквариум') }}
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="ms-2" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -183,6 +196,20 @@
                 <path d="M10 14 21 3" />
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
             </svg>
-        </a>
+        </a> --}}
+        <button class="btn btn-light btn-design-lending" onClick="buttonOpenURL('{{ route('auth.signin') }}')">
+            {{ __('Перейти в Аквариум') }}
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="ms-2" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-external-link">
+                <path d="M15 3h6v6" />
+                <path d="M10 14 21 3" />
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            </svg>
+        </button>
     </div>
 @endsection
+
+@push('js')
+    <script src="{{ asset('js/about/change-text.js') }}"></script>
+@endpush

@@ -24,7 +24,7 @@ class AddPostController extends Controller
         $validated = $request->validate(['message' => ['required', 'string', 'min:1', 'max: 30000']]);
 
         $post = strip_tags($validated['message'], post_free_tags());
-        $shortPost = substr(strip_tags($post), 0, 255);
+        $shortPost = mb_substr(strip_tags($post), 0, 255);
 
         $findUser = user_profile();
 
@@ -36,7 +36,7 @@ class AddPostController extends Controller
 
         if ($findUser->usertype == -1) {
             return redirect()->back()->withInput($validated)->withErrors([
-                'user' => __('Для публикации постов требуется авторизоваться в аккаунт.')
+                'user' => __('Для публикации записей требуется авторизоваться в аккаунт.')
             ]);
         }
 

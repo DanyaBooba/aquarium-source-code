@@ -1,26 +1,26 @@
 const listRu = [
-    'красивая',
-    'удобная',
-    'современная',
-    'доступная',
-    'свободная'
+    'Пространство для творчества',
+    'Свободная социальная сеть',
+    'Социальная сеть с открытым исходным кодом',
+    'Красочная социальная сеть',
+    'Пространство с прекрасной тематикой'
 ]
 
 const listEn = [
-    'beautiful',
-    'handy',
-    'modern',
-    'available',
-    'free'
+    'Space for creativity',
+    'Free social network',
+    'Open source social network',
+    'Colorful social network',
+    'A space with a great theme'
 ]
-
-function random(min, max) {
-    return Math.floor(Math.random() * (max - min) + min)
-}
 
 const textToChange = document.getElementById('js-change')
 const locale = document.querySelector('html').lang.toLowerCase()
-let startIndexList = random(-1, listRu.length - 1)
+let startIndexList = -1
+
+function random(min, max) {
+    return Math.random() * (max - min) + min;
+}
 
 function textValue() {
     startIndexList += 1
