@@ -29,11 +29,11 @@ class ViewPostController extends Controller
         $comments = [];
 
         if ($post->active != 1 && $findUserSession == null) {
-            abort(403);
+            return view('errors.418');
         }
 
         if ($post->active != 1 && $findUserSession->id != $post->idUser && $findUserSession->usertype !== 100) {
-            abort(403);
+            return view('errors.418');
         }
 
         if ($findUserSession) {
