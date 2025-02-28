@@ -29,11 +29,11 @@
                 </p>
             </div>
         </a>
-        user
+        {{-- user
         like
 
         date
-        тематика
+        тематика --}}
     </div>
 @endif
 

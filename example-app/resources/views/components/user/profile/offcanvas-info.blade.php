@@ -2,13 +2,45 @@
     'profile' => (object) [],
 ])
 
+{{-- <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+    aria-controls="offcanvasExample">
+    Link with href
+</a>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+    aria-controls="offcanvasExample">
+    Button with data-bs-target
+</button>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div>
+            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
+            etc.
+        </div>
+        <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    </div>
+</div> --}}
+
 <div class="offcanvas offcanvas-bottom" data-bs-toggle="offcanvas" tabindex="-1" id="canvasInfo"
     aria-labelledby="canvasInfoLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="canvasInfoLabel">
             {{ __('Информация о профиле') }}
         </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
     </div>
     <div class="offcanvas-body">
         <div class="user-offcanvas">
@@ -28,21 +60,6 @@
                             </svg>
                             {{ $profile->username }}
                         </a>
-                    </p>
-                @endif
-                @if ($profile->create)
-                    <p class="user-profile-desc" title="{{ $profile->create }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-calendar-plus">
-                            <path d="M8 2v4" />
-                            <path d="M16 2v4" />
-                            <path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8" />
-                            <path d="M3 10h18" />
-                            <path d="M16 19h6" />
-                            <path d="M19 16v6" />
-                        </svg>
-                        {{ $profile->create }}
                     </p>
                 @endif
             </div>

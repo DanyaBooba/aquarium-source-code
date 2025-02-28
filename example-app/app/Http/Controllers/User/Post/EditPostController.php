@@ -41,7 +41,7 @@ class EditPostController extends Controller
         $post = Post::where('idUser', $user->id)->where('idPost', $validated['idPost'])->firstOrFail();
 
         $message = strip_tags($validated['message'], post_free_tags());
-        $desc = strip_tags($message);
+        $desc = mb_substr(strip_tags($message), 0, 255);
         $active = in_array($user->id, white_id_posts());
 
         if ($user->usertype == -1) {

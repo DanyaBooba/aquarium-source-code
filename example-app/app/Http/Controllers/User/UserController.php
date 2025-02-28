@@ -92,7 +92,7 @@ class UserController extends Controller
 
     public function feed()
     {
-        $posts = Post::where('active', 1)->orderBy('created_at', 'desc')->get();
+        $posts = Post::where('active', 1)->orderBy('created_at', 'desc')->take(50)->get();
 
         foreach ($posts as $post) {
             $user = User::where('id', $post->idUser)->first();

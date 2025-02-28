@@ -12,3 +12,9 @@ require_once base_path('routes/user/settings.php');
 require_once base_path('routes/user/show.php');
 
 require_once base_path('routes/post/post.php');
+
+//
+// ADMIN
+//
+
+require_once base_path('routes/admin/admin.php');
