@@ -1,7 +1,6 @@
 <?php
 
 use Carbon\Carbon;
-use Illuminate\Support\Facades\App;
 
 if (!function_exists('get_user')) {
     function get_user($user, $local = false)

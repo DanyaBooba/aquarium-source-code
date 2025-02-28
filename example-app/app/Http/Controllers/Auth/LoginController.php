@@ -114,40 +114,44 @@ class LoginController extends Controller
         // и может быть произведен вход в аккаунт.
         //
 
-        $tryFindSession = SessionUser::where('idUser', $findUser->id)->first();
-        $sessionToken = '';
-        $needToCreateSession = false;
+        // $tryFindSession = SessionUser::where('idUser', $findUser->id)->first();
+        // $sessionToken = '';
+        // $needToCreateSession = false;
 
-        if ($tryFindSession == null) {
-            $needToCreateSession = true;
-        } else {
-            $diff = time() - $tryFindSession->unixtime_stop;
+        // if ($tryFindSession == null) {
+        //     $needToCreateSession = true;
+        // } else {
+        //     $diff = time() - $tryFindSession->unixtime_stop;
 
-            if ($diff >= 0) {
-                $tryFindSession->delete();
-                $needToCreateSession = true;
-            } else {
-                $sessionToken = $tryFindSession->token;
-            }
-        }
+        //     if ($diff >= 0) {
+        //         $tryFindSession->delete();
+        //         $needToCreateSession = true;
+        //     } else {
+        //         $sessionToken = $tryFindSession->token;
+        //     }
+        // }
 
-        if ($needToCreateSession) {
-            $createSession = SessionUser::query()->create([
-                'idUser' => $findUser->id,
-                'token' => session_generate($findUser->email, $findUser->id),
-                'refreshToken' => session_generate($findUser->email, $findUser->id),
-                'unixtime_start' => time(),
-                'unixtime_stop' => time() + 604_800, // прибавляем неделю, потом сделать параметром!
-            ]);
+        // if ($needToCreateSession) {
+        //     $createSession = SessionUser::query()->create([
+        //         'idUser' => $findUser->id,
+        //         'token' => session_generate($findUser->email, $findUser->id, 'token'),
+        //         'refreshToken' => session_generate($findUser->email, $findUser->id, 'refreshToken'),
+        //         'unixtime_start' => time(),
+        //         'unixtime_stop' => time() + 604_800, // прибавляем неделю, потом сделать параметром!
+        //     ]);
 
-            $sessionToken = $createSession->token;
-        }
+        //     $sessionToken = $createSession->token;
+        // }
+
+        // $sessionToken = session_get() != null ? session_get() : session_create($findUser->id, $findUser->email);
 
         session([
             'id' => $findUser->id,
             'email' => $validated['email'],
-            'sessionToken' => $sessionToken
+            // 'sessionToken' => $sessionToken
         ]);
+
+        // dd($sessionToken);
 
         //
         // Если пользователь не подтвердил почту, отправляем письмо для подтверждения

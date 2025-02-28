@@ -10,6 +10,7 @@ if (!function_exists('exit_account')) {
         session()->forget('prev_id');
         session()->forget('prev_email');
         session()->forget('sessionToken');
+        session()->forget('prev_sessionToken');
     }
 }
 
@@ -18,13 +19,14 @@ if (!function_exists('exit_second_account')) {
     {
         session()->forget('prev_id');
         session()->forget('prev_email');
+        session()->forget('prev_sessionToken');
     }
 }
 
 if (!function_exists('user_login')) {
     function user_login(): bool
     {
-        $sessions = session()->has('email') && session()->has('id');
+        $sessions = session()->has('email') && session()->has('id') || session()->has('sessionToken');
         $findUser = user_profile() !== null;
 
         return $sessions && $findUser;

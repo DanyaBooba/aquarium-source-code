@@ -1,10 +1,13 @@
 <?php
 
 if (!function_exists('session_generate')) {
-    function session_generate($email, $idUser)
+    function session_generate($email, $idUser, $appendCode)
     {
-        $length = 10;
+        $length = 3;
         $permitted = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        $email = mb_substr($email, 0, mb_strpos($email, '@'));
+        $email = preg_replace('/[^a-z0-9]/i', '', $email);
 
         $input_length = strlen($permitted);
         $random_string_1 = '';
@@ -24,7 +27,8 @@ if (!function_exists('session_generate')) {
                 $random_string_1 .
                 str_shuffle(strval($idUser)) .
                 $random_string_2 .
-                str_shuffle(strval(time()))
+                str_shuffle(strval(time() % 10_000_000)) .
+                str_shuffle($appendCode)
         );
 
         return $random_string;

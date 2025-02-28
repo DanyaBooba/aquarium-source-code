@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\SessionUser;
 use App\Models\User\User;
 
 if (!function_exists('user_profile')) {
@@ -33,6 +34,20 @@ if (!function_exists('private_user_profile_email')) {
     function private_user_profile_email($email)
     {
         $profileData = User::where('email', $email)->first();
+
+        // $sessionToken = session('sessionToken');
+
+        // if ($sessionToken == null) {
+        //     return null;
+        // }
+
+        // $dataSession = SessionUser::where('token', $sessionToken)->first();
+
+        // if ($dataSession == null) {
+        //     return null;
+        // }
+
+        // $profileData = User::where('id', $dataSession->idUser)->first();
 
         return $profileData;
     }
