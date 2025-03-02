@@ -3,7 +3,7 @@
 ])
 
 <div class="offcanvas offcanvas-bottom" data-bs-toggle="offcanvas" tabindex="-1" id="canvasInfo"
-    aria-labelledby="canvasInfoLabel">
+    aria-labelledby="canvasInfoLabel" style="box-shadow: var(--user-offcanvas-bottom) 0px 0px 100px 52px;">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="canvasInfoLabel">
             {{ __('Информация о профиле') }}
