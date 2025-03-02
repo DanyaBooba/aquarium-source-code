@@ -14,29 +14,22 @@
 
     <meta name="theme-color" content="#8D77FE" />
 
-    <meta name="description" content="{{ env('APP_DESC') }}">
+    <title>@yield('page.title', env('APP_TITLE'))</title>
+    <meta name="description" content="@yield('page.desc', env('APP_DESC'))">
     <meta name="keywords" content="{{ env('APP_KEYWORDS') }}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ env('APP_TITLE_SHORT') }}">
-    <meta name="twitter:description" content="{{ env('APP_DESC') }}">
-    <meta name="twitter:site" content="{{ env('APP_URL') }}">
-    <meta name="twitter:image" content="{{ env('APP_URL') }}/favicon.ico">
-    <meta name="Author" content="{{ env('APP_AUTHOR') }}">
+    <meta name="Author" content="Даниил Дыбка">
 
-    <meta property="og:title" content="{{ env('APP_TITLE_SHORT') }}">
+    <meta property="og:title" content="@yield('page.ogtitle', env('APP_TITLE'))">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{ env('APP_TITLE_SHORT') }}">
-    <meta property="og:description" content="{{ env('APP_DESC') }}">
-    <meta property="og:url" content="{{ env('APP_URL') }}">
-    <meta property="og:image" content="{{ asset('img/logo/cap.jpg') }}">
-    {{-- <meta property="og:image:width" content="1456">
-    <meta property="og:image:height" content="816"> --}}
+    <meta property="og:site_name" content="Аквариум — социальная сеть для самовыражения и общения">
+    <meta property="og:description" content="@yield('page.ogdesc', env('APP_DESC'))">
+    <meta property="og:url" content="https://aquariumsocial.ru">
+    <meta property="og:image" content="@yield('page.ogimage', 'img/logo/cap.jpg')">
+    <link rel="canonical" href="https://aquariumsocial.ru">
 
     <meta name="googlebot" content="index,follow">
     <meta name="google" content="nositelinkssearchbox">
-    {{-- <meta name="format-detection" content="phone=no, address=no"> --}}
-
-    <title>@yield('page.title', config('app.name')) · {{ __('Аквариум') }}</title>
+    <meta name="format-detection" content="phone=no, address=no">
 
     <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
     <script>
@@ -50,6 +43,7 @@
     </script>
 
     <meta name="color-scheme" content="light dark">
+
     @stack('meta')
 
     <link rel="stylesheet"
@@ -67,15 +61,19 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/vars.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
+
     @stack('css')
 
     <x-head.metrix />
 </head>
+
 @yield('body')
+
 <script src="{{ asset('js/main/button.js') }}"></script>
 <script src="{{ asset('js/page/code.js') }}"></script>
 <script src="{{ asset('js/main/get-theme.js') }}"></script>
 <script src="{{ asset('js/main/theme-color-change.js') }}"></script>
+
 @stack('js')
 
 </html>

@@ -219,31 +219,31 @@ header.header .header-content button.navbar-toggler {
 
 @media(min-width: 1400px) {
     header.header .container {
-        max-width: 1296px;
+        max-width: calc(1296px + 10px);
     }
 }
 
-@media(max-width: 1399.98px) {
+@media(max-width: 1399.98px) and (min-width: 1200px) {
     header.header .container {
-        max-width: 1116px;
+        max-width: calc(1116px + 10px);
     }
 }
 
-@media(max-width: 1199.98px) and (min-width: 1400px) {
+@media(max-width: 1199.98px) and (min-width: 992px) {
     header.header .container {
-        max-width: 936px;
+        max-width: calc(936px + 10px);
     }
 }
 
 @media(max-width: 768px) and (min-width: 575.98px) {
     header.header .container {
-        max-width: 516px;
+        max-width: calc(516px + 10px);
     }
 }
 
 @media(max-width: 991.98px) and (min-width: 767.98px) {
     header.header .container {
-        max-width: 696px;
+        max-width: calc(696px + 10px);
     }
 }
 
