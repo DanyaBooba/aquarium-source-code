@@ -46,6 +46,18 @@ class EnterRestoreController extends Controller
 
         $findCode->delete();
 
+        $settingsDefault = (object) [
+            'dataChange' => true,
+            'authorization' => true,
+            'passwordChange' => true,
+        ];
+
+        $settingsData = $findUser->settings_notifications ? (object) json_decode($findUser->settings_notifications) : $settingsDefault;
+
+        if ($settingsData->passwordChange) {
+            send_mail_new_password($findUser->email);
+        }
+
         return redirect()->route('auth.signin.email');
     }
 }

@@ -65,8 +65,8 @@ class RegisterController extends Controller
         session(['email' => $validated['email']]);
 
         $code = set_new_verify();
-
         send_mail_verify($validated['email'], $code);
+
         send_mail_register($validated['email']);
 
         return redirect()->route('user')->with('alert.success', __('Добро пожаловать!'));

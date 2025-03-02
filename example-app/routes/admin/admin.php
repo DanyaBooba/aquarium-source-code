@@ -23,4 +23,5 @@ Route::prefix('admin')->middleware(['login.session', 'login.admin'])->group(func
     Route::get('post-set-status/-1/{idpost}', [AdminPostsController::class, 'post_set_status_block'])->name('admin.post.set-status.-1');
 
     Route::get('emails/google-block-1', [AdminEmailController::class, 'google_block_1'])->name('admin.email.google-block-1');
+    Route::get('emails/all-have-emails', [AdminEmailController::class, 'all_have_emails'])->name('admin.email.all-have-emails');
 });

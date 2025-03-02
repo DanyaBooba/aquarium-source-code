@@ -1,13 +1,15 @@
 <?php
 
 if (!function_exists('send_mail_change_email')) {
-    function send_mail_change_email(string $email, string $link): bool
+    function send_mail_change_email(string $email, string $newEmail): bool
     {
-        $subject = __('Изменение почты');
+        $subject = 'Смена почты аккаунта';
 
-        $message = __('<b>Была запрошена ссылка на изменение почты: </b><br><br>');
-        $message .= $link . '<br><br>';
-        $message .= __('Проигнорируйте данное сообщение, если вы не запрашивали ссылку на изменение почты <br><br>');
+        $message = '<b>Смена почты аккаунта</b>. Мы обнаружили запрос на смену почты.<br><br>';
+        $message .= 'Данная почта более не может быть использована для входа в аккаунт.<br><br>';
+        $message .= 'Новая почта для входа в аккаунт: ' . $newEmail . '<br><br>';
+        $message .= 'Если считаете, что произошла ошибка — свяжитесь с Администрацией Аквариума: ' .
+            '<a href="mailto:daniil@dybka.ru">daniil@dybka.ru</a>' . '<br><br>';
 
         $sendMail = send_mail($email, $subject, $message);
 

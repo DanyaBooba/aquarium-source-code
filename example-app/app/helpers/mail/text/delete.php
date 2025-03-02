@@ -8,12 +8,14 @@ if (!function_exists('send_mail_delete')) {
         $device = info_device_send_mail();
         $place = info_place_send_mail();
 
-        $subject = __('Удаление аккаунта');
+        $subject = 'Удаление аккаунта';
 
-        $message = __('<b>Удаление аккаунта Аквариум</b>. Мы обнаружили запрос на удаление аккаунта Аквариум ') . $date . '<br><br>';
-        $message .= __('Устройство: ') . $device . '<br><br>';
-        $message .= __('Место: ') . $place . '<br><br>';
-        $message .= __('<b>Нам жаль прощаться с вами</b>, мы всегда рады видеть вас снова');
+        $message = '<b>Удаление аккаунта</b>. Мы обнаружили запрос на удаление аккаунта Аквариум.<br><br>';
+        $message .= 'Время запроса: ' . $date . '<br><br>';
+        $message .= 'Устройство: ' . $device . '<br><br>';
+        $message .= 'Место: ' . $place . '<br><br>';
+        $message .= 'Нам искренне жаль прощаться с вами, мы всегда рады видеть вас снова.<br><br>';
+        $message .= 'Спасибо, что были с Аквариумом!';
 
         $sendMail = send_mail($email, $subject, $message);
 

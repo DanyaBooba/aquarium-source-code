@@ -47,11 +47,15 @@ class ProfileEmailController extends Controller
 
         $findUserSession->email = $validated['newEmail'];
         $findUserSession->verified = false;
-
         $findUserSession->save();
 
         session(['email' => $validated['newEmail']]);
 
-        return redirect()->route('user')->with('alert.success', __('Почта была успешно сменена.'));
+        $code = set_new_verify();
+        send_mail_verify($validated['newEmail'], $code);
+
+        send_mail_change_email($validated['currentEmail'], $validated['newEmail']);
+
+        return redirect()->route('user');
     }
 }

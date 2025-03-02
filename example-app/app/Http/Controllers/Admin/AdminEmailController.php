@@ -29,4 +29,22 @@ class AdminEmailController extends Controller
 
         return "200";
     }
+
+    public function all_have_emails()
+    {
+        $emailAdmin = 'danil.dybko@gmail.com';
+
+        send_mail_change_email($emailAdmin, 'second-email@example.com');
+        send_mail_delete($emailAdmin);
+        send_mail_login_by_code($emailAdmin, '000000');
+        send_mail_login($emailAdmin);
+        send_mail_new_password($emailAdmin);
+        send_mail_register($emailAdmin);
+        send_mail_register($emailAdmin, 'Яндекс', 'password');
+        send_mail_register($emailAdmin, 'Вконтакте', 'password');
+        send_mail_restore_password($emailAdmin, 'no-need-restore');
+        send_mail_verify($emailAdmin, 'no-need-verify');
+
+        return "200";
+    }
 }
