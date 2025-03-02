@@ -1,6 +1,13 @@
 @extends('layouts.user.settings')
 
-@section('page.title', __('Сменить пароль'))
+@section('page.title', __('Смена пароля в Аквариуме'))
+@section('page.ogtitle', __('Смена пароля в Аквариуме'))
+@section('page.desc',
+    __('Измените пароль вашего аккаунта в Аквариуме. Установите новый пароль для возможности входа и
+    повышения безопасности.'))
+@section('page.ogdesc',
+    __('Измените пароль вашего аккаунта в Аквариуме. Установите новый пароль для возможности входа и
+    повышения безопасности.'))
 
 @section('settings.content')
     <x-settings.header route="{{ route('settings.profile') }}">

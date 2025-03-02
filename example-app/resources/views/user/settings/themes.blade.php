@@ -1,6 +1,13 @@
 @extends('layouts.user.settings')
 
-@section('page.title', __('Темы'))
+@section('page.title', __('Настройки тем в Аквариуме — 20 цветовых тем, светлый и темный режим'))
+@section('page.ogtitle', __('Настройки тем в Аквариуме — 20 цветовых тем, светлый и темный режим'))
+@section('page.desc',
+    __('Выберите одну из 20 цветовых тем и настройте светлый или темный режим в Аквариуме.
+    Персонализируйте внешний вид платформы.'))
+@section('page.ogdesc',
+    __('Выберите одну из 20 цветовых тем и настройте светлый или темный режим в Аквариуме.
+    Персонализируйте внешний вид платформы.'))
 
 @section('settings.content')
     <x-settings.header>
@@ -9,7 +16,7 @@
 
     <div class="container-settings-main">
         <p class="text-title mt-4">
-            {{ __('Настройки темы') }}
+            {{ __('Выбор режима') }}
         </p>
         <ul class="list-group">
             <li class="list-group-item">

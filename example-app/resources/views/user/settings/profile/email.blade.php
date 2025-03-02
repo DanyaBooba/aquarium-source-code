@@ -1,6 +1,12 @@
 @extends('layouts.user.settings')
 
-@section('page.title', __('Сменить почту'))
+@section('page.title', __('Смена почты в Аквариуме'))
+@section('page.ogtitle', __('Смена почты в Аквариуме'))
+@section('page.desc',
+    __('Измените почту вашего аккаунта в Аквариуме. Обновите email для безопасности и удобства
+    использования платформы.'))
+@section('page.ogdesc', __('Измените почту вашего аккаунта в Аквариуме. Обновите email для безопасности и удобства
+    использования платформы.'))
 
 @section('settings.content')
     <x-settings.header route="{{ route('settings.profile') }}">
