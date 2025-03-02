@@ -110,4 +110,9 @@ class UserController extends Controller
     {
         return view('user.delete');
     }
+
+    public function test()
+    {
+        return view('user.test');
+    }
 }

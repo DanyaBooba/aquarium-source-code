@@ -17,6 +17,7 @@ Route::middleware(['login.session', 'user.blocked'])->group(function () {
         Route::get('notifications', [UserController::class, 'notifications'])->name('user.notifications');
         Route::get('achievements', [UserController::class, 'achievements'])->name('user.achievements');
         Route::get('feed', [UserController::class, 'feed'])->name('user.feed');
+        Route::get('test', [UserController::class, 'test'])->middleware('login.admin');
 
         Route::get('sub/{id}', [SubscribeController::class, 'index'])->name('user.sub');
         Route::get('complain/{id}', [ComplainController::class, 'index'])->name('user.complain');
