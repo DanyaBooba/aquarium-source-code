@@ -1,11 +1,18 @@
 @extends('layouts.main.main')
 
-@section('page.title', __('OAuth'))
+@section('page.title', __('OAuth авторизация через Аквариум — инструкция для разработчиков'))
+@section('page.ogtitle', __('OAuth авторизация через Аквариум — инструкция для разработчиков'))
+@section('page.desc', __('Подключите OAuth авторизацию через Аквариум. Подробная инструкция для разработчиков по
+    интеграции и использованию API.'))
+@section('page.ogdesc', __('Подключите OAuth авторизацию через Аквариум. Подробная инструкция для разработчиков по
+    интеграции и использованию API.'))
 
-@push('css')
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/oauth/include.css') }}" />
-@endpush
+    @push('css')
+        <link href="{{ asset('css/prettify.css') }}" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="{{ asset('js/module/prettify.js') }}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/oauth/include.css') }}" />
+    @endpush
 
 @section('main.body', 'onload=prettyPrint()')
 
@@ -123,7 +130,9 @@ if (!empty($_GET["code"])) {
 
         $info = json_decode($info, true);
 
-        // ...
+        //
+        // В объекте $info будут храниться данные пользователя
+        //
     }
 }</pre>
             </code>
@@ -134,5 +143,6 @@ if (!empty($_GET["code"])) {
 @endsection
 
 @push('js')
+    <script src="{{ asset('js/page/code.js') }}"></script>
     <script src="{{ asset('js/page/left-bar-anchors.js') }}"></script>
 @endpush

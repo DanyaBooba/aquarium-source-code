@@ -1,10 +1,3 @@
-// const btnLight = document.getElementById('changethemelight');
-// const btnDark = document.getElementById('changethemedark');
-// const btnAuto = document.getElementById('changethemeauto');
-
-// let light = document.getElementById('stylesheetlight');
-// let dark = document.getElementById('stylesheetdark');
-
 function ButtonAuto() {
     localStorage.removeItem('color-theme');
 }

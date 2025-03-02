@@ -22,7 +22,7 @@ class LocaleMiddleware
         if (in_array($raw_locale, Config::get('app.locales'))) {
             $locale = $raw_locale;
         } else {
-            $acceptLanguage = substr(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? $_SERVER['HTTP_ACCEPT_LANGUAGE'] : 'en', 0, 2);
+            $acceptLanguage = substr(isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? $_SERVER['HTTP_ACCEPT_LANGUAGE'] : 'ru', 0, 2);
             if (in_array($acceptLanguage, Config::get('app.locales'))) {
                 $locale = $acceptLanguage;
             } else {

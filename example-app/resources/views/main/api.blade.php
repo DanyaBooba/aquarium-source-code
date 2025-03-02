@@ -1,10 +1,15 @@
 @extends('layouts.main.main')
 
-@section('page.title', __('API'))
+@section('page.title', __('Документация API Аквариума — руководство для разработчиков'))
+@section('page.ogtitle', __('Документация API Аквариума — руководство для разработчиков'))
+@section('page.desc', __('Полное руководство по API Аквариума. Узнайте, как интегрироваться с платформой, правила
+    использования и ссылки на справку.'))
+@section('page.ogdesc', __('Полное руководство по API Аквариума. Узнайте, как интегрироваться с платформой, правила
+    использования и ссылки на справку.'))
 
-@push('css')
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
-@endpush
+    @push('css')
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
+    @endpush
 
 @section('main.content')
     <div class="row gx-3">

@@ -1,7 +1,7 @@
 <footer class="footer py-3 mt-4">
     <div class="container">
         <div class="footer__main">
-            <span>© 2020-{{ date('Y') }}</span>
+            <span>© 2019-{{ date('Y') }}</span>
             <a href="{{ route('main') }}">
                 {{ __('Аквариум') }}
             </a>

@@ -1,11 +1,18 @@
 @extends('layouts.main.main')
 
-@section('page.title', 'Скачать приложения')
+@section('page.title', __('Скачать приложения Аквариума для iOS, Android'))
+@section('page.ogtitle', __('Скачать приложения Аквариума для iOS, Android'))
+@section('page.desc',
+    __('Скачайте приложения Аквариума на iOS, Android или используйте веб-версию. Присоединяйтесь к социальной
+    сети для самовыражения и общения.'))
+@section('page.ogdesc',
+    __('Скачайте приложения Аквариума на iOS, Android или используйте веб-версию. Присоединяйтесь к социальной
+    сети для самовыражения и общения.'))
 
-@push('css')
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/main-page/include.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/main-page/download.css') }}" />
-@endpush
+    @push('css')
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/main-page/include.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/main-page/download.css') }}" />
+    @endpush
 
 @section('main.content')
 

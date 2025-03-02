@@ -1,9 +1,12 @@
 @extends('layouts.main.main')
 
-@section('page.title', __('Брендбук'))
+@section('page.title', __('Брендбук Аквариума — скачать логотип, правила интерфейса'))
+@section('page.ogtitle', __('Брендбук Аквариума — скачать логотип, правила интерфейса'))
+@section('page.desc', __('Скачайте логотип Аквариума и ознакомьтесь с правилами формирования интерфейса.'))
+@section('page.ogdesc', __('Скачайте логотип Аквариума и ознакомьтесь с правилами формирования интерфейса.'))
 
 @push('css')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
 @endpush
 
 @section('main.content')

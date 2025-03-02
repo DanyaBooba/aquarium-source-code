@@ -1,10 +1,15 @@
 @extends('layouts.main.main')
 
-@section('page.title', __('API'))
+@section('page.title', __('Аквариум для СМИ — материалы и информация о проекте'))
+@section('page.ogtitle', __('Аквариум для СМИ — материалы и информация о проекте'))
+@section('page.desc', __('Официальная страница Аквариума для СМИ. Основная информация, тексты, материалы и медиа-ресурсы
+    о проекте.'))
+@section('page.ogdesc', __('Официальная страница Аквариума для СМИ. Основная информация, тексты, материалы и
+    медиа-ресурсы о проекте.'))
 
-@push('css')
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
-@endpush
+    @push('css')
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
+    @endpush
 
 @section('main.content')
     <style>

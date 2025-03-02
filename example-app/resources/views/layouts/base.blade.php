@@ -24,11 +24,11 @@
     <meta property="og:site_name" content="Аквариум — социальная сеть для самовыражения и общения">
     <meta property="og:description" content="@yield('page.ogdesc', env('APP_DESC'))">
     <meta property="og:url" content="https://aquariumsocial.ru">
-    <meta property="og:image" content="@yield('page.ogimage', 'img/logo/cap.jpg')">
+    <meta property="og:image" content="https://aquariumsocial.ru/@yield('page.ogimage', 'img/logo/cap.jpg')">
     <link rel="canonical" href="https://aquariumsocial.ru">
 
     <meta name="googlebot" content="index,follow">
-    <meta name="google" content="nositelinkssearchbox">
+    {{-- <meta name="google" content="nositelinkssearchbox"> --}}
     <meta name="format-detection" content="phone=no, address=no">
 
     <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
@@ -49,14 +49,14 @@
     <link rel="stylesheet"
         href="{{ asset('css/@@light/light-' . (session('theme') ? session('theme') : 'default') . '.css') }}"
         media="(prefers-color-scheme: light)" id="stylesheetlight">
-    <link rel="stylesheet" id="css.light" href="{{ asset('css/@@light/light.css') }}"
-        media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="{{ asset('css/@@light/light.css') }}"
+        media="(prefers-color-scheme: light)" id="stylesheetlight_base">
 
     <link rel="stylesheet"
         href="{{ asset('css/@@dark/dark-' . (session('theme_dark') ? session('theme_dark') : 'default') . '.css') }}"
         media="(prefers-color-scheme: dark)" id="stylesheetdark">
-    <link rel="stylesheet" id="css.dark" href="{{ asset('css/@@dark/dark.css') }}"
-        media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="{{ asset('css/@@dark/dark.css') }}"
+        media="(prefers-color-scheme: dark)" id="stylesheetdark_base">
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/vars.css') }}" />
@@ -70,7 +70,6 @@
 @yield('body')
 
 <script src="{{ asset('js/main/button.js') }}"></script>
-<script src="{{ asset('js/page/code.js') }}"></script>
 <script src="{{ asset('js/main/get-theme.js') }}"></script>
 <script src="{{ asset('js/main/theme-color-change.js') }}"></script>
 

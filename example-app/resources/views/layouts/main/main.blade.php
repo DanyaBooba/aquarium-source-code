@@ -1,10 +1,5 @@
 @extends('layouts.base')
 
-@push('css')
-    <link href="{{ asset('css/prettify.css') }}" type="text/css" rel="stylesheet" />
-    <script type="text/javascript" src="{{ asset('js/module/prettify.js') }}"></script>
-@endpush
-
 @section('body')
 
     <body @yield('main.body')>

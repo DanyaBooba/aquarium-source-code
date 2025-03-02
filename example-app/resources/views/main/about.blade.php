@@ -1,10 +1,17 @@
 @extends('layouts.main.simple')
 
-@section('page.title', __('О проекте Аквариум'))
+@section('page.title', __('Аквариум — создай свой профиль и начни общаться'))
+@section('page.ogtitle', __('Аквариум — создай свой профиль и начни общаться'))
+@section('page.desc',
+    __('Присоединяйтесь к Аквариуму, кастомизируйте профиль, выбирайте цветовые темы, делитесь
+    записями и находите друзей. Зарегистрируйтесь сейчас в один клик.'))
+@section('page.ogdesc',
+    __('Присоединяйтесь к Аквариуму, кастомизируйте профиль, выбирайте цветовые темы, делитесь
+    записями и находите друзей. Зарегистрируйтесь сейчас в один клик.'))
 
-@push('css')
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/lending/include.css') }}" />
-@endpush
+    @push('css')
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/lending/include.css') }}" />
+    @endpush
 
 @section('simple.content')
     <div class="main-lending" style="max-width: 800px">

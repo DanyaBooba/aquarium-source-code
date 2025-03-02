@@ -1,12 +1,15 @@
 @extends('layouts.main.main')
 
-@section('page.title', __('Технологии'))
+@section('page.title', __('Технологии Аквариума — стек и инструменты платформы'))
+@section('page.ogtitle', __('Технологии Аквариума — стек и инструменты платформы'))
+@section('page.desc', __('Узнайте, какие технологии используются в Аквариуме. Подробная информация о стеке и
+    инструментах платформы.'))
+@section('page.ogdesc', __('Узнайте, какие технологии используются в Аквариуме. Подробная информация о стеке и
+    инструментах платформы.'))
 
-{{-- open graph --}}
-
-@push('css')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
-@endpush
+    @push('css')
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
+    @endpush
 
 @section('main.content')
     <div class="row gx-3">
