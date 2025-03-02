@@ -8,7 +8,7 @@
         </div>
         <div class="footer__social">
             <div class="footer__privacy">
-                <a href="{{ route('main.terms') }}">{{ __('Правила') }}</a>
+                <a href="{{ route('main.terms') }}">{{ __('Приватность') }}</a>
             </div>
             <div class="footer__language">
                 <a href="{{ route('main.setlocale', 'ru') }}"

@@ -1,10 +1,15 @@
 @extends('layouts.main.main')
 
-@section('page.title', __('Условия использования'))
+@section('page.title', __('Условия использования Аквариума'))
+@section('page.ogtitle', __('Условия использования Аквариума'))
+@section('page.desc', __('Ознакомьтесь с условиями использования Аквариума. Правила и требования для пользователей
+    платформы.'))
+@section('page.ogdesc', __('Ознакомьтесь с условиями использования Аквариума. Правила и требования для пользователей
+    платформы.'))
 
-@push('css')
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
-@endpush
+    @push('css')
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/faq/include.css') }}" />
+    @endpush
 
 @section('main.content')
     <div class="row gx-3">
