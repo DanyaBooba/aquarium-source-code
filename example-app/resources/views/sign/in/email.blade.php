@@ -1,10 +1,17 @@
 @extends('layouts.auth.signin')
 
-@section('page.title', __('Войти в аккаунт'))
+@section('page.title', __('Вход в Аквариум через почту и пароль'))
+@section('page.ogtitle', __('Вход в Аквариум через почту и пароль'))
+@section('page.desc',
+    __('Войдите в аккаунт Аквариума с помощью почты и пароля. Привычный доступ к вашему
+    профилю.'))
+@section('page.ogdesc',
+    __('Войдите в аккаунт Аквариума с помощью почты и пароля. Привычный доступ к вашему
+    профилю.'))
 
 @section('auth.header')
     <x-sign.header routeBack="{{ route('auth.signin') }}">
-        {{ __('Войти в аккаунт') }}
+        {{ __('Вход в аккаунт') }}
     </x-sign.header>
 @endsection
 
@@ -25,15 +32,15 @@
         <button class="btn btn-primary py-3 mt-4" type="submit">{{ __('Войти') }}</button>
     </form>
 
-    <a href="{{ route('auth.help') }}"
-        class="d-flex justify-content-center mt-4 mb-5 align-items-center text-decoration-none">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="me-1" viewBox="0 0 24 24"
+    <a href="{{ route('auth.restore') }}"
+        class="d-flex justify-content-center mt-4 align-items-center text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="me-2" viewBox="0 0 24 24"
             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-message-circle-question">
-            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-            <path d="M12 17h.01" />
+            class="lucide lucide-lock-keyhole-open">
+            <circle cx="12" cy="16" r="1" />
+            <rect width="18" height="12" x="3" y="10" rx="2" />
+            <path d="M7 10V7a5 5 0 0 1 9.33-2.5" />
         </svg>
-        {{ __('Проблемы со входом?') }}
+        {{ __('Восстановить пароль?') }}
     </a>
 @endsection

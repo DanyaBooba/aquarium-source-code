@@ -12,22 +12,22 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('second')->middleware(['login.session', 'login.no-test'])->group(function () {
-    Route::prefix('sign')->group(function () {
-        Route::get('help', [AuthController::class, 'help'])->name('second.auth.help');
+    // Route::prefix('sign')->group(function () {
+    //     Route::get('help', [AuthController::class, 'help'])->name('second.auth.help');
 
-        Route::get('restore', [RestoreController::class, 'index'])->name('second.auth.restore');
-        Route::post('restore', [RestoreController::class, 'store'])->name('second.auth.restore.store');
-        Route::get('restore/success', [RestoreController::class, 'success'])->name('second.auth.restore.success');
+    //     Route::get('restore', [RestoreController::class, 'index'])->name('second.auth.restore');
+    //     Route::post('restore', [RestoreController::class, 'store'])->name('second.auth.restore.store');
+    //     Route::get('restore/success', [RestoreController::class, 'success'])->name('second.auth.restore.success');
 
-        Route::get('restore/code/{code}', [EnterRestoreController::class, 'index'])->name('second.auth.restore.enter');
-        Route::post('restore/code/{code}', [EnterRestoreController::class, 'store'])->name('second.auth.restore.enter.store');
+    //     Route::get('restore/code/{code}', [EnterRestoreController::class, 'index'])->name('second.auth.restore.enter');
+    //     Route::post('restore/code/{code}', [EnterRestoreController::class, 'store'])->name('second.auth.restore.enter.store');
 
-        Route::get('code', [CodeController::class, 'index'])->name('second.auth.code');
-        Route::post('code', [CodeController::class, 'store'])->name('second.auth.code.store');
+    //     Route::get('code', [CodeController::class, 'index'])->name('second.auth.code');
+    //     Route::post('code', [CodeController::class, 'store'])->name('second.auth.code.store');
 
-        Route::get('code/enter', [EnterCodeController::class, 'index'])->name('second.auth.code.enter');
-        Route::post('code/enter', [EnterCodeController::class, 'store'])->name('second.auth.code.enter.store');
-    });
+    //     Route::get('code/enter', [EnterCodeController::class, 'index'])->name('second.auth.code.enter');
+    //     Route::post('code/enter', [EnterCodeController::class, 'store'])->name('second.auth.code.enter.store');
+    // });
 
     Route::prefix('signin')->group(function () {
         Route::get('', [LoginController::class, 'second_index'])->name('second.auth.signin');
@@ -41,15 +41,15 @@ Route::prefix('second')->middleware(['login.session', 'login.no-test'])->group(f
         // Route::get('vk', [SocialController::class, 'vk'])->name('second.auth.signin.vk');
     });
 
-    Route::get('login', function () {
-        return redirect()->route('auth.signin');
-    });
+    // Route::get('login', function () {
+    //     return redirect()->route('auth.signin');
+    // });
 
-    Route::get('sign', function () {
-        return redirect()->route('auth.signin');
-    });
+    // Route::get('sign', function () {
+    //     return redirect()->route('auth.signin');
+    // });
 
-    Route::get('sign/in', function () {
-        return redirect()->route('auth.signin');
-    });
+    // Route::get('sign/in', function () {
+    //     return redirect()->route('auth.signin');
+    // });
 });

@@ -7,7 +7,7 @@
 }
 
 .authentication .authentication-text-more {
-    margin-top: 1rem;
+    margin-top: 3rem;
     margin-bottom: 1rem;
 
     font-size: .875rem;
@@ -19,7 +19,7 @@
 .authentication .authentication-back {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .authentication .authentication-back a.authentication-back-back {
@@ -71,7 +71,7 @@
 /* signin choose */
 
 .authentication #signin-choose .d-flex div {
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 .authentication #signin-choose .d-flex a.simple {
@@ -174,13 +174,13 @@
     margin-right: 1rem;
 
     border-bottom: .1rem solid var(--text-link-underline);
-    margin-top: 20px;
+    margin-top: 2rem;
     margin-bottom: 16px !important;
 }
 
 .authentication #signin-choose .signin-choose-or {
     color: var(--text-link-underline);
-    margin-top: -37px;
+    /* margin-top: -37px; */
     margin-bottom: 16px !important;
     text-align: center;
 }
@@ -199,7 +199,9 @@
 }
 
 .authentication #signin-choose .signin-choose-or span {
-    background: var(--body);
+    background-color: var(--body);
+    position: absolute;
+    transform: translate(-13px, -45px);
 }
 
 .authentication #signin-email .buttons {

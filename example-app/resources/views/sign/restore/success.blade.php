@@ -1,15 +1,22 @@
 @extends('layouts.auth.signin')
 
-@section('page.title', __('Восстановить пароль'))
+@section('page.title', __('На почту была отправлена ссылка для восстановление пароля'))
+@section('page.ogtitle', __('На почту была отправлена ссылка для восстановление пароля'))
+@section('page.desc',
+    __('Ссылка для восстановления пароля отправлена на вашу почту. Продолжите процесс восстановления
+    доступа к аккаунту Аквариума.'))
+@section('page.ogdesc',
+    __('Ссылка для восстановления пароля отправлена на вашу почту. Продолжите процесс восстановления
+    доступа к аккаунту Аквариума.'))
 
 @section('auth.header')
-    <x-sign.header routeBack="{{ route('auth.signin.email') }}">
-        {{ __('Восстановить пароль') }}
+    <x-sign.header routeBack="{{ route('auth.signin') }}">
+        {{ __('Продолжить восстановление пароля') }}
     </x-sign.header>
 @endsection
 
 @section('auth.signin')
-    <p class="text-center">
+    <p class="text-center mb-0">
         {{ __('На указанную почту была выслана ссылка для восстановления пароля.') }}
     </p>
 @endsection

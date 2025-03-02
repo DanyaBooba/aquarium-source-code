@@ -1,9 +1,16 @@
 @extends('layouts.auth.signin')
 
-@section('page.title', __('Восстановить пароль'))
+@section('page.title', __('Восстановление пароля Аквариума — верните доступ к аккаунту'))
+@section('page.ogtitle', __('Восстановление пароля Аквариума — верните доступ к аккаунту'))
+@section('page.desc',
+    __('Забыли пароль? Восстановите доступ к аккаунту Аквариума. Укажите почту, и мы поможем вам
+    вернуть аккаунт.'))
+@section('page.ogdesc',
+    __('Забыли пароль? Восстановите доступ к аккаунту Аквариума. Укажите почту, и мы поможем вам
+    вернуть аккаунт.'))
 
 @section('auth.header')
-    <x-sign.header routeBack="{{ route('auth.help') }}">
+    <x-sign.header routeBack="{{ route('auth.signin') }}">
         {{ __('Восстановить пароль') }}
     </x-sign.header>
 @endsection
@@ -23,7 +30,7 @@
         <button class="btn btn-primary py-3 mt-4" type="submit">{{ __('Восстановить') }}</button>
     </form>
 
-    <a href="{{ route('auth.signin.email') }}" class="d-flex justify-content-center mt-4 mb-5 text-decoration-none">
+    <a href="{{ url()->previous() }}" class="d-flex justify-content-center mt-4 text-decoration-none">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="me-1" viewBox="0 0 24 24"
             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="lucide lucide-log-in">

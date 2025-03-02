@@ -1,6 +1,13 @@
 @extends('layouts.auth.signup')
 
-@section('page.title', __('Регистрация'))
+@section('page.title', __('Регистрация в Аквариуме — создайте аккаунт быстро и удобно'))
+@section('page.ogtitle', __('Регистрация в Аквариуме — создайте аккаунт быстро и удобно'))
+@section('page.desc',
+    __('Зарегистрируйтесь в Аквариуме с помощью почты и пароля или через Яндекс и ВКонтакте. Начните
+    общение и самовыражение уже сегодня!'))
+@section('page.ogdesc',
+    __('Зарегистрируйтесь в Аквариуме с помощью почты и пароля или через Яндекс и ВКонтакте. Начните
+    общение и самовыражение уже сегодня!'))
 
 @section('auth.header')
     <x-sign.header :routeReg="true">
@@ -11,7 +18,7 @@
 @section('auth.signup')
     <div id="signin-choose">
         <div class="d-flex flex-column">
-            <div class="row row-cols-2 flex-wrap gx-2 mb-0">
+            <div class="row row-cols-2 flex-wrap gx-3 mb-0">
                 <div id="signin-choose-yandex" style="flex: 1">
                     <button class="btn fs-5" onClick="buttonOpenURL('{{ $yandexUri }}')">
                         <x-sign.logo.yandex />

@@ -30,7 +30,7 @@ class RestoreController extends Controller
 
         $findCode = Restore::where('idUser', $findUser->id)->first();
         $needToCreateRestore = true;
-        $code = random_string(10) . str_shuffle($findUser->email) . random_string(10) . $findUser->id;
+        $code = str_shuffle(random_string(10) . str_shuffle($findUser->email) . random_string(10) . $findUser->id);
 
         if ($findCode) {
             $diff = $findCode->unixtimeToLife - time();
@@ -45,7 +45,7 @@ class RestoreController extends Controller
         if ($needToCreateRestore) {
             $findCode = Restore::query()->create([
                 'unixtimeCreate' => time(),
-                'unixtimeToLife' => time() + 86_400,
+                'unixtimeToLife' => time() + 3_600,
                 'idUser' => $findUser->id,
                 'code' => $code,
             ]);

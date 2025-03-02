@@ -1,6 +1,11 @@
 @extends('layouts.auth.sign')
 
-@section('page.title', __('Добавить аккаунт'))
+@section('page.title', __('Добавить второй аккаунт в Аквариум — через Яндекс, ВКонтакте, почту или код'))
+@section('page.ogtitle', __('Добавить второй аккаунт в Аквариум — через Яндекс, ВКонтакте, почту или код'))
+@section('page.desc', __('Добавьте второй аккаунт в Аквариум с помощью Яндекс, ВКонтакте, почты или кода. Управляйте
+    несколькими профилями легко и удобно.'))
+@section('page.ogdesc', __('Добавьте второй аккаунт в Аквариум с помощью Яндекс, ВКонтакте, почты или кода. Управляйте
+    несколькими профилями легко и удобно.'))
 
 @section('auth.header')
     <x-sign.header routeClose="{{ route('user') }}">
@@ -12,29 +17,7 @@
 
     <x-form.error-first />
 
-    {{-- <div id="signin-choose-yandex">
-        <button class="btn fs-5" onClick="buttonOpenURL('{{ $yandexUri }}')">
-            <x-sign.logo.yandex />
-        </button>
-    </div>
-    <div class="row row-cols-3 gx-2 mb-0">
-        <div id="signin-choose-google">
-            <button class="btn fs-5" onClick="buttonOpenURL('{{ $vkUri }}')">
-                <x-sign.logo.vk />
-            </button>
-        </div>
-        <div id="signin-choose-google">
-            <button class="btn fs-5" onClick="buttonOpenURL('{{ $googleUri }}')">
-                <x-sign.logo.google />
-            </button>
-        </div>
-        <div id="signin-choose-google">
-            <button class="btn fs-5" onClick="buttonOpenURL('{{ $githubUri }}')">
-                <x-sign.logo.github />
-            </button>
-        </div>
-    </div> --}}
-    <div class="row row-cols-2 flex-wrap gx-2 mb-0">
+    <div class="row row-cols-2 flex-wrap gx-3 mb-0">
         <div id="signin-choose-yandex" style="flex: 1">
             <button class="btn fs-5" onClick="buttonOpenURL('{{ $yandexUri }}')">
                 <x-sign.logo.yandex />
@@ -50,7 +33,7 @@
     </div>
     <x-sign.choose-or />
     <div id="signin-choose-email">
-        <a href="{{ route('second.auth.code') }}">
+        <a href="{{ route('second.auth.signin.email') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="me-2" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect width="20" height="16" x="2" y="4" rx="2" />

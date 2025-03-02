@@ -56,29 +56,29 @@ Route::middleware(['unlogin'])->group(function () {
 
     Route::get('sign/test', [TestAccountController::class, 'index'])->name('auth.sign.test');
 
-    Route::get('login', function () {
-        return redirect()->route('auth.signin');
-    });
+    // Route::get('login', function () {
+    //     return redirect()->route('auth.signin');
+    // });
 
-    Route::get('sign', function () {
-        return redirect()->route('auth.signin');
-    });
+    // Route::get('sign', function () {
+    //     return redirect()->route('auth.signin');
+    // });
 
-    Route::get('sign/in', function () {
-        return redirect()->route('auth.signin');
-    });
+    // Route::get('sign/in', function () {
+    //     return redirect()->route('auth.signin');
+    // });
 
-    Route::get('register', function () {
-        return redirect()->route('auth.signup');
-    });
+    // Route::get('register', function () {
+    //     return redirect()->route('auth.signup');
+    // });
 
-    Route::get('registration', function () {
-        return redirect()->route('auth.signup');
-    });
+    // Route::get('registration', function () {
+    //     return redirect()->route('auth.signup');
+    // });
 
-    Route::get('sign/up', function () {
-        return redirect()->route('auth.signup');
-    });
+    // Route::get('sign/up', function () {
+    //     return redirect()->route('auth.signup');
+    // });
 });
 
 Route::get('sign/fromtest', [TestAccountController::class, 'exit'])->name('auth.sign.test.exit');
