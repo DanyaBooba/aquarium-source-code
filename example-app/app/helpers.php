@@ -64,3 +64,7 @@ require_once "helpers/post/default/tags.php";
 require_once "helpers/user/session/generate.php";
 require_once "helpers/user/session/get.php";
 require_once "helpers/user/session/create.php";
+
+// Truncate Text
+
+require_once "helpers/truncate-text.php";

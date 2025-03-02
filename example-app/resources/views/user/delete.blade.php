@@ -1,10 +1,13 @@
 @extends('layouts.auth.signin')
 
-@section('page.title', __('Удалить аккаунт'))
+@section('page.title', __('Удаление аккаунта Аквариума'))
+@section('page.ogtitle', __('Удаление аккаунта Аквариума'))
+@section('page.desc', __('Удаление аккаунта Аквариума без возможности восстановления.'))
+@section('page.ogdesc', __('Удаление аккаунта Аквариума без возможности восстановления.'))
 
 @section('auth.header')
     <x-sign.header routeClose="{{ route('user') }}" class='text-danger'>
-        {{ __('Удалить аккаунт') }}
+        {{ __('Удаление аккаунта') }}
     </x-sign.header>
 @endsection
 

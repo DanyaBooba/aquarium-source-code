@@ -1,12 +1,15 @@
 @extends('layouts.user.settings')
 
+@section('page.title', truncate_text($post->desc, 60) . ' — Аквариум')
+@section('page.ogtitle', truncate_text($post->desc, 60) . ' — Аквариум')
+@section('page.desc', truncate_text($post->desc, 150, true))
+@section('page.ogdesc', truncate_text($post->desc, 150, true))
+
 @push('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/posts/include.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/fancybox.css') }}" />
     <script src="{{ asset('js/module/fancybox.js') }}"></script>
 @endpush
-
-@section('page.title', __('Пост'))
 
 @section('user.alert')
     @if ($alert = session()->pull('alert.error'))

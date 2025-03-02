@@ -1,10 +1,15 @@
 @extends('layouts.user.user')
 
-@section('page.title', __('Лента'))
+@section('page.title', __('Все публикации в Аквариуме'))
+@section('page.ogtitle', __('Все публикации в Аквариуме'))
+@section('page.desc', __('Читайте все публикации пользователей Аквариума. Будьте в курсе новостей, идей и вдохновения от
+    сообщества.'))
+@section('page.ogdesc', __('Читайте все публикации пользователей Аквариума. Будьте в курсе новостей, идей и вдохновения
+    от сообщества.'))
 
-@push('css')
-    <link rel="stylesheet" href="{{ asset('css/feed/include.css') }}">
-@endpush
+    @push('css')
+        <link rel="stylesheet" href="{{ asset('css/feed/include.css') }}">
+    @endpush
 
 @section('user.feed', 'row-user-content-feed')
 

@@ -1,6 +1,17 @@
 @extends('layouts.user.user')
 
-@section('page.title', $profile->name)
+@section('page.title', __('Профиль пользователя ') . $profile->name . __(' в Аквариуме'))
+@section('page.ogtitle', __('Профиль пользователя ') . $profile->name . __(' в Аквариуме'))
+@section('page.desc',
+    __('Профиль пользователя ') .
+    $profile->name .
+    __(' в Аквариуме. Узнайте больше о его записях,
+    активности и интересах.'))
+@section('page.ogdesc',
+    __('Профиль пользователя ') .
+    $profile->name .
+    __(' в Аквариуме. Узнайте больше о его записях,
+    активности и интересах.'))
 
 @section('user.alert')
     @if ($itsme)

@@ -1,6 +1,11 @@
 @extends('layouts.user.addpost')
 
-@section('page.title', __('Изменить запись'))
+@section('page.title', __('Изменить запись в Аквариуме'))
+@section('page.ogtitle', __('Изменить запись в Аквариуме'))
+@section('page.desc', __('Отредактируйте свою запись в Аквариуме. Внесите изменения в текст, изображения или другие
+    детали публикации.'))
+@section('page.ogdesc', __('Отредактируйте свою запись в Аквариуме. Внесите изменения в текст, изображения или другие
+    детали публикации.'))
 
 @section('addpost.content')
     <div class="container-settings-main">
