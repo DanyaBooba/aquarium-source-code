@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     gap: .25rem;
-    opacity: .7;
+    opacity: .5;
 }
 
 .post-show-footer .post-show-footer__like {

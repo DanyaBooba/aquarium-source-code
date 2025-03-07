@@ -15,7 +15,7 @@ class LikePostController extends Controller
         if (!$user) return redirect()->route('auth.signin');
 
         $userPost = User::where('verified', 1)->where('id', $id)->firstOrFail();
-        $post = Post::where('active', 1)->where('idPost', $idPost)->firstOrFail();
+        $post = Post::where('active', 1)->where('idPost', $idPost)->where('idUser', $id)->firstOrFail();
 
         $countLikes = $post->likes;
         $countLikesPosts = $user->likesPosts;

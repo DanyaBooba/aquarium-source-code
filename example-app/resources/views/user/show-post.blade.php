@@ -56,7 +56,7 @@
             <x-post.show.footer :like="$like" :views="$views" :countLikes="$countLikes" :idPost="$post->idPost"
                 :idUser="$user->id" />
         </div>
-        <x-post.show.comments :comments="$comments" />
+        {{-- <x-post.show.comments :comments="$comments" /> --}}
     </div>
 @endsection
 
