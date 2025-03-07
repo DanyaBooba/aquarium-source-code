@@ -2,10 +2,18 @@
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--header-border);
 }
 
 .post-show-back a.post-show-back__edit {
-    font-size: .875rem;
+    text-decoration: none !important;
+    font-family: ResistSans;
+}
+
+.post-show-back a.post-show-back__edit svg {
+    width: 20px !important;
+    height: 20px !important;
 }
 
 .post-show-back a.post-show-back__profile {
@@ -16,7 +24,7 @@
 .post-show-back a {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: .25rem;
 }
 
 .post-show-back a svg {

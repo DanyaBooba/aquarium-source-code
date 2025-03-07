@@ -24,7 +24,7 @@
     <meta property="og:site_name" content="Аквариум — социальная сеть для самовыражения и общения">
     <meta property="og:description" content="@yield('page.ogdesc', env('APP_DESC'))">
     <meta property="og:url" content="https://aquariumsocial.ru">
-    <meta property="og:image" content="https://aquariumsocial.ru/@yield('page.ogimage', 'img/logo/cap.jpg')">
+    <meta property="og:image" content="https://aquariumsocial.ru/@yield('page.ogimage', 'img/logo/cap.png')">
     <link rel="canonical" href="https://aquariumsocial.ru">
 
     <meta name="googlebot" content="index,follow">

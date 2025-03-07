@@ -25,8 +25,21 @@ class ViewPostController extends Controller
     {
         $findUserSession = user_profile();
         $post = Post::where('idPost', $idPost)->where('idUser', $user->id)->firstOrFail();
+
         $itsmypost = false;
         $comments = [];
+        $like = false;
+        $views = $post->views;
+
+        if (session()->has('numberOfPostSee-' . $post->id) == false) {
+            $views += 1;
+            $post->views = $views;
+            $post->save();
+        }
+
+        session([
+            'numberOfPostSee-' . $post->id => 'true',
+        ]);
 
         if ($post->active != 1 && $findUserSession == null) {
             return view('errors.418');
@@ -38,6 +51,9 @@ class ViewPostController extends Controller
 
         if ($findUserSession) {
             $itsmypost = $findUserSession->id == $post->idUser;
+
+            $allIdsLikeThisPost = json_decode($post->usersLikes) ?? [];
+            $like = in_array($findUserSession->id, $allIdsLikeThisPost);
         }
 
         return view('user.show-post', [
@@ -46,6 +62,9 @@ class ViewPostController extends Controller
             'post' => $post,
             'itsmypost' => $itsmypost,
             'comments' => $comments,
+            'like' => $like,
+            'countLikes' => $post->likes,
+            'views' => $views,
         ]);
     }
 }

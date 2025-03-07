@@ -9,7 +9,7 @@ use App\Http\Controllers\User\Second\SecondAccountController;
 use App\Http\Controllers\User\SubscribeController;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware(['login.session', 'user.blocked'])->group(function () {
+Route::middleware(['login.session', 'user.blocked', 'user.check-email'])->group(function () {
     Route::prefix('user')->group(function () {
         Route::get('', [UserController::class, 'index'])->name('user');
 

@@ -68,7 +68,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--text-muted);
+    /* color: var(--text-muted); */
+    opacity: .5;
 }
 
 .search-users div.search-users__profile .search-users-content-info .search-users-content-info__block div:first-child {
@@ -116,7 +117,8 @@
 }
 
 .search-users .search-users-content button:not(:focus, :focus-visible, :focus-within, :hover, :active) {
-    color: var(--text-muted) !important;
+    /* color: var(--text-muted) !important; */
+    opacity: .5;
 }
 
 .search-users .search-users-content button {

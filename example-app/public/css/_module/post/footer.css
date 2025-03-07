@@ -1,0 +1,116 @@
+.post-show-footer {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--header-border);
+}
+
+.post-show-footer .post-show-footer__left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: auto;
+}
+
+.post-show-footer .post-show-footer__right {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    opacity: .7;
+}
+
+.post-show-footer .post-show-footer__like {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    text-decoration: none !important;
+}
+
+.post-show-footer a.post-show-footer__edit {
+    text-decoration: none !important;
+    font-family: ResistSans;
+}
+
+.post-show-footer a.post-show-footer__edit svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.post-show-footer a.post-show-footer__profile {
+    margin-right: auto;
+    text-decoration: none;
+}
+
+.post-show-footer a {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+}
+
+.post-show-footer a svg {
+    width: 32px;
+    height: 32px;
+    min-width: 32px !important;
+}
+
+.post-show-footer a img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.post-show-footer a div {
+    font-family: ResistSans;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 300px;
+}
+
+.post-show-footer button {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-show-footer svg {
+    height: 28px !important;
+    width: 28px !important;
+}
+
+.post-show-footer button svg {
+    stroke: var(--text) !important;
+}
+
+.post-show-footer svg.heart-fill {
+    fill: var(--user-bar-exit) !important;
+}
+
+.post-show-footer svg.heart-stroke:active {
+    stroke: var(--user-bar-exit) !important;
+}
+
+.post-show-footer button:active svg {
+    stroke: var(--text-link-hover) !important;
+}
+
+@media(hover: hover) {
+    .post-show-footer .post-show-footer__like:hover {
+        color: var(--user-bar-exit) !important;
+    }
+
+    .post-show-footer .post-show-footer__like:hover svg.heart-stroke {
+        stroke: var(--user-bar-exit) !important;
+    }
+
+    .post-show-footer button:hover svg {
+        stroke: var(--text-link-hover) !important;
+    }
+}

@@ -15,7 +15,6 @@
     @endpush
 
 @section('main.content')
-
     <div class="container page-download">
         <div class="row row-cols-1 g-3">
             <div class="col-md-6">

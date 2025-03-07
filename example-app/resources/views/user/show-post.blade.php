@@ -11,6 +11,8 @@
     <script src="{{ asset('js/module/fancybox.js') }}"></script>
 @endpush
 
+@section('user.feed', 'row-user-content-feed')
+
 @section('user.alert')
     @if ($alert = session()->pull('alert.error'))
         <x-user.alert.alert :close=false>
@@ -25,7 +27,7 @@
     @elseif($active == -1)
         <x-user.alert.alert :close=false>
             <div class="text-danger">
-                {{ __('Запись не одобрена к публикации') }}
+                {{ __('Запись не одобрена к публикации. Измените содержимое или напишите новую запись') }}
             </div>
         </x-user.alert.alert>
     @endif
@@ -44,14 +46,17 @@
                     </span>
                 </a>
             @endif
+
             <div id="postMain">
                 {!! $post->message !!}
             </div>
 
             <x-post.modal-link />
+            <x-post.show.bottom :like="false" :idPost="$post->idPost" :idUser="$user->id" />
+            <x-post.show.footer :like="$like" :views="$views" :countLikes="$countLikes" :idPost="$post->idPost"
+                :idUser="$user->id" />
         </div>
-        <x-post.show.bottom :like="false" :idPost="$post->idPost" :idUser="$user->id" />
-        {{-- <x-post.show.comments :comments="$comments" /> --}}
+        <x-post.show.comments :comments="$comments" />
     </div>
 @endsection
 

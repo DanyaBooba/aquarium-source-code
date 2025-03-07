@@ -23,3 +23,7 @@
 ### Создать контроллер
 
 > `php artisan make:controller NameController`
+
+### Создать Middleware
+
+> `php artisan make:middleware NameMiddleware`

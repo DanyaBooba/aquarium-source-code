@@ -1,20 +1,20 @@
 <ul>
-    <li>
+    <li class="py-2">
         <a href="{{ route('admin') }}">
-            главная
+            все пользователи
         </a>
     </li>
-    <li>
+    <li class="py-2">
         <a href="{{ route('admin.posts') }}">
-            посты
+            все записи
         </a>
     </li>
-    <li>
+    <li class="py-2">
         <a href="{{ route('admin.complains') }}">
             жалобы
         </a>
     </li>
-    <li>
+    <li class="py-2">
         <a href="{{ route('admin.emails') }}">
             письма
         </a>

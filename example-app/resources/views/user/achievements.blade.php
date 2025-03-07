@@ -2,14 +2,16 @@
 
 @section('page.title', __('Достижения в Аквариуме — ваша награда за активность в соцсети'))
 @section('page.ogtitle', __('Достижения в Аквариуме — ваша награда за активность в соцсети'))
-@section('page.desc', __('Отслеживайте свои достижения в Аквариуме. Получайте награды за активность в социальной
+@section('page.desc',
+    __('Отслеживайте свои достижения в Аквариуме. Получайте награды за активность в социальной
     сети.'))
-@section('page.ogdesc', __('Отслеживайте свои достижения в Аквариуме. Получайте награды за активность в социальной
+@section('page.ogdesc',
+    __('Отслеживайте свои достижения в Аквариуме. Получайте награды за активность в социальной
     сети.'))
 
 @section('user.content')
 
-    <h1>{{ __('Достижения') }} <span class="text-muted">{{ $count }}</span></h1>
+    <h1>{{ __('Достижения') }} <span style="opacity: .5">{{ $count }}</span></h1>
     @if ($count == 0)
         <div class="user-notifications">
             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">

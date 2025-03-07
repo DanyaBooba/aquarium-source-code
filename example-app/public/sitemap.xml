@@ -26,11 +26,6 @@
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://aquariumsocial.ru/blog</loc>
-	<lastmod>2024-08-01T17:10:30+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
 	<loc>https://aquariumsocial.ru/about/smi</loc>
 	<lastmod>2024-08-01T17:10:30+01:00</lastmod>
 	<priority>0.8</priority>
@@ -86,32 +81,7 @@
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://aquariumsocial.ru/user</loc>
-	<lastmod>2024-08-01T17:10:37+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
 	<loc>https://aquariumsocial.ru/sign/help</loc>
-	<lastmod>2024-08-01T17:10:37+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://aquariumsocial.ru/user/exit</loc>
-	<lastmod>2024-08-01T17:10:37+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://aquariumsocial.ru/user/notifications</loc>
-	<lastmod>2024-08-01T17:10:37+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://aquariumsocial.ru/post/add</loc>
-	<lastmod>2024-08-01T17:10:37+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://aquariumsocial.ru/user/settings</loc>
 	<lastmod>2024-08-01T17:10:37+01:00</lastmod>
 	<priority>0.8</priority>
 </url>

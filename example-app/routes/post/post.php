@@ -8,7 +8,7 @@ use App\Http\Controllers\User\Post\ImportPostController;
 use App\Http\Controllers\User\Post\LikePostController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('post')->middleware(['login.session', 'user.blocked'])->group(function () {
+Route::prefix('post')->middleware(['login.session', 'user.blocked', 'user.verified', 'user.check-email'])->group(function () {
     Route::get('add', [AddPostController::class, 'index'])->name('post.add');
     Route::post('add', [AddPostController::class, 'post'])->name('post.add.store');
 

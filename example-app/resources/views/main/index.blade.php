@@ -2,9 +2,11 @@
 
 @section('page.title', __('Аквариум — социальная сеть для самовыражения и общения'))
 @section('page.ogtitle', __('Аквариум — социальная сеть для самовыражения и общения'))
-@section('page.desc', __('Аквариум — социальная сеть с кастомизацией профиля, записями и цветовыми темами.
+@section('page.desc',
+    __('Аквариум — социальная сеть с кастомизацией профиля, записями и цветовыми темами.
     Присоединяйтесь и создайте свой мир!'))
-@section('page.ogdesc', __('Аквариум — социальная сеть с кастомизацией профиля, записями и цветовыми темами.
+@section('page.ogdesc',
+    __('Аквариум — социальная сеть с кастомизацией профиля, записями и цветовыми темами.
     Присоединяйтесь и создайте свой мир!'))
 
     @push('css')
@@ -15,15 +17,25 @@
     <div class="row row-first mb-2 gx-4">
         <div class="row-first-left">
             <div class="p-3">
-                <div class="d-flex justify-content-center pb-2 mt-auto" style="margin-top: -10px">
-                    <a href="{{ route('main.download') }}" aria-label="{{ __('Скачать для Android') }}"
-                        style="margin-right: -30px; margin-top: 10px;">
-                        <img src="{{ asset('img/main/android-' . (App::isLocale('ru') ? 'ru' : 'en') . '.png') }}"
-                            class="img-fluid" width="200" aria-label="{{ __('Телефон со страницей сайта') }}">
+                <div class="d-flex justify-content-center my-auto">
+                    <a href="https://aquariumsocial.t.me" target="_blank" aria-label="{{ __('Открыть Телеграм канал') }}"
+                        style="margin-right: -30px; margin-top: -4px;">
+                        {{-- <img src="{{ asset('img/main/Nothing Phone.png') }}" class="img-fluid" width="200"
+                            aria-label="{{ __('Телефон со страницей сайта') }}"> --}}
+                        <picture>
+                            <source type="image/webp" srcSet="{{ asset('img/main/Nothing Phone.webp') }}" />
+                            <img src="{{ asset('img/main/Nothing Phone.png') }}" class="img-fluid" width="200"
+                                alt="{{ __('Телефон со страницей сайта') }}" />
+                        </picture>
                     </a>
-                    <a href="{{ route('main.download') }}" aria-label="{{ __('Скачать для iOS') }}">
-                        <img src="{{ asset('img/main/iphone-' . (App::isLocale('ru') ? 'ru' : 'en') . '.png') }}"
-                            class="img-fluid" width="210" aria-label="{{ __('Телефон со страницей сайта') }}">
+                    <a href="https://aquariumsocial.t.me" target="_blank" aria-label="{{ __('Открыть Телеграм канал') }}">
+                        {{-- <img src="{{ asset('img/main/iPhone.png') }}" class="img-fluid" width="210"
+                            aria-label="{{ __('Телефон со страницей сайта') }}"> --}}
+                        <picture>
+                            <source type="image/webp" srcSet="{{ asset('img/main/iPhone.webp') }}" />
+                            <img src="{{ asset('img/main/iPhone.png') }}" class="img-fluid" width="200"
+                                alt="{{ __('Телефон со страницей сайта') }}" />
+                        </picture>
                     </a>
                 </div>
             </div>

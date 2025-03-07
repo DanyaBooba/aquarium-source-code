@@ -26,13 +26,24 @@ main.row-user-content header .header__logo svg {
 
 main.row-user-content header .header__meta {
     display: flex;
-    gap: 2rem;
+    /* gap: 1rem; */
     align-items: center;
     margin-left: auto;
 }
 
+main.row-user-content header .header__meta a {
+    padding: .75rem;
+    border-radius: 8px;
+}
+
+main.row-user-content header .header__meta a.active {
+    background-color: var(--page-main-accent) !important;
+}
+
 main.row-user-content header .header__meta a.active svg {
-    stroke: var(--text-link-hover) !important;
+    stroke: white !important;
+    /* stroke: var(--page-main-accent) !important; */
+    /* stroke: var(--text-link-hover) !important; */
 }
 
 /* media */

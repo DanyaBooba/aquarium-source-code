@@ -2,11 +2,19 @@
 
 @section('admin.content')
     <h1>
-        Админка
+        Все записи
     </h1>
 
     <p>
-        Посты пользователей
+        Количество записей: {{ count($posts) }}
+    </p>
+
+    <p>
+        Процент не опубликованных записей: {{ round(count($postsNotPublished) / count($posts), 2) * 100 }}%
+    </p>
+
+    <p>
+        Процент опубликованных записей: {{ round(count($postsPublished) / count($posts), 2) * 100 }}%
     </p>
 
     @if (count($posts) == 0)

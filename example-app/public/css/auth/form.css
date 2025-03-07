@@ -13,7 +13,8 @@
     font-size: .875rem;
     text-align: center;
 
-    color: var(--text-muted);
+    /* color: var(--text-muted); */
+    opacity: .5;
 }
 
 .authentication .authentication-back {
@@ -27,7 +28,8 @@
     align-items: center;
     text-decoration: none;
 
-    color: var(--text-muted) !important;
+    /* color: var(--text-muted) !important; */
+    opacity: .5;
 }
 
 .authentication .authentication-back a.authentication-back-close {
@@ -38,7 +40,8 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    color: var(--text-muted);
+    /* color: var(--text-muted); */
+    opacity: .5;
 }
 
 .authentication h1 {

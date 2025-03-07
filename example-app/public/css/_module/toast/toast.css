@@ -1,6 +1,6 @@
 .toast {
     border: none !important;
-    box-shadow: 0 0 .25rem var(--shadow) !important;
+    box-shadow: 0 0 .25rem var(--shadow-hover) !important;
     border-radius: 8px !important;
     background-color: var(--color-body-plane) !important;
 }

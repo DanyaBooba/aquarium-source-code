@@ -78,16 +78,21 @@
     margin-right: 1rem;
 }
 
-.row-user-bar .social .social-right div {
-    margin-left: 1rem;
+.row-user-bar .social .social-right div a {
+    padding: .75rem;
+    border-radius: 8px;
 }
 
 .row-user-bar .social .social-left div a.social-left-exit svg {
     stroke: var(--user-bar-exit);
 }
 
-.row-user-bar .social a.active svg {
-    stroke: var(--text-link-hover);
+.row-user-bar .social .social-right div a.active {
+    background-color: var(--page-main-accent) !important;
+}
+
+.row-user-bar .social .social-right div a.active svg {
+    stroke: white;
 }
 
 .row-user-content {
@@ -125,7 +130,7 @@ h1.title-has-back {
     }
 
     .row-user-content.row-user-content-feed {
-        max-width: 500px !important;
+        max-width: 600px !important;
     }
 }
 

@@ -73,6 +73,7 @@ class Kernel extends HttpKernel
         'login.no-test' => \App\Http\Middleware\Auth\NoTestMiddleware::class,
         'login.admin' => \App\Http\Middleware\User\AdminMiddleware::class,
         'user.verified' => \App\Http\Middleware\User\VerifiedMiddleware::class,
+        'user.check-email' => \App\Http\Middleware\User\CheckHasEmailUser::class,
         'user.blocked' => \App\Http\Middleware\User\BlockUserMiddleware::class,
     ];
 }

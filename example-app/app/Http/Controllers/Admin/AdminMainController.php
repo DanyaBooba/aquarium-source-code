@@ -13,18 +13,24 @@ class AdminMainController extends Controller
     public function index()
     {
         $users = User::get();
+        $usersVerified = User::where('verified', true)->get();
 
         return view('admin.index', [
-            'users' => $users
+            'users' => $users,
+            'usersVerified' => $usersVerified
         ]);
     }
 
     public function posts()
     {
         $posts = Post::get();
+        $postsNotPublished = Post::where('active', '<>', '1')->get();
+        $postsPublished = Post::where('active', '1')->get();
 
         return view('admin.posts', [
-            'posts' => $posts
+            'posts' => $posts,
+            'postsNotPublished' => $postsNotPublished,
+            'postsPublished' => $postsPublished,
         ]);
     }
 

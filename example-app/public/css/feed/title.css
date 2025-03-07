@@ -18,7 +18,8 @@
 
 .feed-title button:not(.active) {
     transform: scale(.85);
-    color: var(--text-muted) !important;
+    /* color: var(--text-muted) !important; */
+    opacity: .5;
 }
 
 .feed-title button:focus {

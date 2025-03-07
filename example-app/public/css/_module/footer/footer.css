@@ -21,7 +21,8 @@ footer.footer .container div.footer__main {
 }
 
 footer.footer .container div.footer__main span {
-    color: var(--text-muted);
+    /* color: var(--text-muted); */
+    opacity: .5;
 }
 
 footer.footer .container div.footer__main a {
@@ -46,7 +47,8 @@ footer.footer .container div.footer__social a {
 }
 
 footer.footer .container div.footer__social .footer__language a:not(.footer__social_active) {
-    color: var(--text-muted) !important;
+    /* color: var(--text-muted) !important; */
+    opacity: .5;
 }
 
 footer.footer .container div.footer__social a:not(.footer__social_active):is(:focus, :focus-visible, :focus-within) {

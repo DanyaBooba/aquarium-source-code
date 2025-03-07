@@ -85,3 +85,22 @@
 <x-user.profile.qr-code :nickname="$profile->username" :id="$profile->id" />
 
 <x-user.profile.offcanvas-info :profile="$profile" />
+
+{{-- <script>
+    const userProfileImage = document.getElementById('userProfileImage')
+
+    let angle = 0; // Начальное значение переменной
+    const speed = 1; // Скорость изменения в градусах в секунду
+
+    function updateAngle() {
+        angle += speed; // Увеличиваем угол на значение скорости
+        if (angle >= 360) {
+            angle = 0; // Сбрасываем угол, если он достиг 360
+        }
+        userProfileImage.style.filter = `hue-rotate(${angle}deg)`
+    }
+
+    // Устанавливаем интервал обновления угла
+    const interval = 15; // Интервал в миллисекундах
+    setInterval(updateAngle, interval);
+</script> --}}

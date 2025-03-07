@@ -5,7 +5,8 @@
 .container-settings .text-title {
     text-transform: uppercase;
     font-family: Inter-Bold !important;
-    color: var(--text-muted);
+    /* color: var(--text-muted); */
+    opacity: .5;
     margin-bottom: .5rem;
     padding-left: 12px;
     font-size: .8rem;
@@ -45,13 +46,15 @@
     font-size: .875rem;
     height: 100%;
 
-    color: var(--text-muted);
+    /* color: var(--text-muted); */
+    opacity: .5;
     cursor: pointer;
 }
 
 .col-load label svg {
     margin-bottom: .5rem;
-    stroke: var(--text-muted);
+    /* stroke: var(--text-muted); */
+    opacity: .5;
 }
 
 .container-settings form.form-settings-image .col label {
@@ -75,7 +78,8 @@
     border: none !important;
     border-radius: 12px;
 
-    color: var(--text-muted);
+    /* color: var(--text-muted); */
+    opacity: .5;
     background-color: var(--color-body-plane);
 }
 
@@ -170,7 +174,8 @@
 }
 
 .container-settings form div p {
-    color: var(--text-muted);
+    /* color: var(--text-muted); */
+    opacity: .5;
     font-size: .875rem;
     margin-bottom: 0;
     padding-left: 12px;
