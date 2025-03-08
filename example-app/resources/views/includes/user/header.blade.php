@@ -20,7 +20,8 @@
             </a>
         </div>
         <div>
-            <a href="{{ route('user.notifications') }}" class="{{ header_route_active_link('user.notifications') }}"
+            <a href="{{ route('user.notifications') }}"
+                class="notification {{ header_route_active_link('user.notifications') }}"
                 title="{{ __('Уведомления') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -28,6 +29,11 @@
                     <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
                 </svg>
             </a>
+            @if (session()->has('notificationsUnread'))
+                <div class="red-dot">
+                    <div class="red-dot-content"></div>
+                </div>
+            @endif
         </div>
     </div>
 </header>

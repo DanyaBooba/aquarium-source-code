@@ -70,6 +70,10 @@
     display: flex;
 }
 
+.social-right:has(a.notification.active) .red-dot {
+    background-color: white !important;
+}
+
 .social-right .red-dot {
     position: absolute;
     transform: translate(23px, -29px);

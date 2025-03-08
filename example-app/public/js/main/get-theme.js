@@ -1,8 +1,6 @@
 function CheckColorTheme() {
     const colorTheme = localStorage.getItem('color-theme')
 
-    if(colorTheme === null) return
-
     const darkMedia = document.getElementById('stylesheetdark')
     const darkMediaBase = document.getElementById('stylesheetdark_base')
     const lightMedia = document.getElementById('stylesheetlight')
@@ -19,6 +17,12 @@ function CheckColorTheme() {
         lightMediaBase.media = "all"
         darkMedia.media = "not all"
         darkMediaBase.media = "not all"
+    }
+    else {
+        lightMedia.media = "(prefers-color-scheme: light)"
+        lightMediaBase.media = "(prefers-color-scheme: light)"
+        darkMedia.media = "(prefers-color-scheme: dark)"
+        darkMediaBase.media = "(prefers-color-scheme: dark)"
     }
 }
 

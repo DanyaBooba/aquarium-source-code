@@ -34,7 +34,7 @@ if (!function_exists('route_active_link')) {
 if (!function_exists('footer_locale_active_link')) {
     function footer_locale_active_link(string $locale): string
     {
-        return locale_active_link($locale, "footer__social_active");
+        return locale_active_link($locale, "checked");
     }
 }
 

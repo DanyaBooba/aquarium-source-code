@@ -24,6 +24,29 @@ main.row-user-content header .header__logo svg {
     fill: var(--text) !important;
 }
 
+main.row-user-content header .header__meta:has(a.notification.active) .red-dot {
+    background-color: white !important;
+}
+
+main.row-user-content header .header__meta .red-dot {
+    position: absolute;
+    transform: translate(23px, -29px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--body);
+}
+
+main.row-user-content header .header__meta .red-dot-content {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--user-bar-exit);
+}
+
 main.row-user-content header .header__meta {
     display: flex;
     /* gap: 1rem; */

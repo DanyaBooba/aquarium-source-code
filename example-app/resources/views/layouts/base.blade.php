@@ -72,6 +72,7 @@
 <script src="{{ asset('js/main/button.js') }}"></script>
 <script src="{{ asset('js/main/get-theme.js') }}"></script>
 <script src="{{ asset('js/main/theme-color-change.js') }}"></script>
+<script src="{{ asset('js/main/change-theme.js') }}"></script>
 
 @stack('js')
 
