@@ -1,0 +1,93 @@
+.col-theme {
+    display: flex;
+    flex-direction: column;
+    height: 322px;
+    background-color: var(--color-body-plane);
+    border-radius: 24px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 16px;
+    max-width: 580px;
+    transition: .15s;
+}
+
+.col-theme a {
+    text-decoration: none !important;
+}
+
+.col-theme .col-theme__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: auto;
+    padding: 4px 1.5rem 1.5rem 1.5rem;
+}
+
+.col-theme .col-theme__bottom .col-theme__user {
+    margin-right: auto;
+}
+
+.col-theme .col-theme__bottom .col-theme__user div {
+    display: flex;
+    gap: .25rem;
+    align-items: center;
+}
+
+.col-theme .col-theme__bottom .col-theme__user div img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.col-theme .col-theme__bottom .col-theme__user div span {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-width: 100px;
+    font-size: 1.25rem;
+    font-family: ResistSans;
+}
+
+.col-theme .col-theme__bottom .col-theme__info {
+    opacity: .5;
+    font-size: .875rem;
+}
+
+.col-theme .col-theme__post {
+    flex: 1;
+    font-size: 1.5rem;
+    padding: 12px;
+}
+
+.col-theme .col-theme__post .col-theme__post-bg {
+    height: 100%;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.col-theme .col-theme__post .col-theme__post-content {
+    max-height: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white !important;
+    font-family: ResistSans;
+    text-shadow: 2px 2px 2px var(--user-post-text-shadow);
+    padding: 14px;
+}
+
+.col-theme:has(.col-theme__post:focus) {
+    box-shadow: 0 20px 40px 0 var(--shadow-hover);
+}
+
+@media(hover: hover) {
+    .col-theme:has(.col-theme__post:hover) {
+        box-shadow: 0 20px 40px 0 var(--shadow-hover);
+    }
+}
+
+.col-theme:has(.col-theme__post:active) {
+    box-shadow: 0 20px 40px 0 var(--shadow-hover);
+}

@@ -4,6 +4,7 @@
     'idPost' => 0,
     'countLikes' => 0,
     'views' => 0,
+    'date' => '15 февраля 2025 года',
 ])
 
 <div class="post-show-footer">
@@ -36,13 +37,18 @@
         </button>
     </div>
     <div class="post-show-footer__right">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye">
-            <path
-                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
-            <circle cx="12" cy="12" r="3" />
-        </svg>
-        <span>{{ $views }}</span>
+        <div class="post-show-footer__right-views">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye">
+                <path
+                    d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                <circle cx="12" cy="12" r="3" />
+            </svg>
+            <span>{{ $views }}</span>
+        </div>
+        <div class="post-show-footer__right-date">
+            {{ $date }}
+        </div>
     </div>
 </div>
 

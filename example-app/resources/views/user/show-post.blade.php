@@ -54,7 +54,7 @@
             <x-post.modal-link />
             <x-post.show.bottom :like="false" :idPost="$post->idPost" :idUser="$user->id" />
             <x-post.show.footer :like="$like" :views="$views" :countLikes="$countLikes" :idPost="$post->idPost"
-                :idUser="$user->id" />
+                :idUser="$user->id" :date="$post->updated_at->translatedFormat('j F Y')" />
         </div>
         {{-- <x-post.show.comments :comments="$comments" /> --}}
     </div>

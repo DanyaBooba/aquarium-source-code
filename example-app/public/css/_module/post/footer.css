@@ -14,10 +14,29 @@
 }
 
 .post-show-footer .post-show-footer__right {
+    opacity: .5;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-show-footer .post-show-footer__right .post-show-footer__right-views {
     display: flex;
     align-items: center;
     gap: .25rem;
-    opacity: .5;
+    justify-content: end;
+}
+
+.post-show-footer .post-show-footer__right .post-show-footer__right-views svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.post-show-footer .post-show-footer__right .post-show-footer__right-views span {
+    font-size: .875rem;
+}
+
+.post-show-footer .post-show-footer__right .post-show-footer__right-date {
+    font-size: .875rem;
 }
 
 .post-show-footer .post-show-footer__like {
