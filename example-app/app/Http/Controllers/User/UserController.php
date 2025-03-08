@@ -68,6 +68,8 @@ class UserController extends Controller
 
         $notifications = Notification::where('iduser', $findUser->id)->get();
 
+        session()->forget('notificationsUnread');
+
         return view('user.notifications', [
             'notifications' => $notifications,
             'count' => count($notifications)

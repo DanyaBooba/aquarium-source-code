@@ -1,7 +1,7 @@
 <?php
 
 if (!function_exists('send_mail_change_email')) {
-    function send_mail_change_email(string $email, string $newEmail): bool
+    function send_mail_change_email(string $email, string $newEmail, bool $needSendNotification = false): bool
     {
         $subject = 'Смена почты аккаунта';
 
@@ -12,6 +12,10 @@ if (!function_exists('send_mail_change_email')) {
             '<a href="mailto:daniil@dybka.ru">daniil@dybka.ru</a>' . '<br><br>';
 
         $sendMail = send_mail($email, $subject, $message);
+
+        if ($needSendNotification) {
+            send_notification($subject, $message);
+        }
 
         return $sendMail;
     }

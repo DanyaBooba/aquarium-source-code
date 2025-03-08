@@ -1,7 +1,7 @@
 <?php
 
 if (!function_exists('send_mail_login')) {
-    function send_mail_login(string $email): bool
+    function send_mail_login(string $email, bool $needSendNotification = false): bool
     {
         date_default_timezone_set('Europe/Moscow');
         $date = info_date_send_mail();
@@ -17,6 +17,10 @@ if (!function_exists('send_mail_login')) {
         $message .= '<b>Если это были не вы</b>, смените пароль аккаунта (Настройки > Профиль > Сменить пароль).';
 
         $sendMail = send_mail($email, $subject, $message);
+
+        if ($needSendNotification) {
+            send_notification($subject, $message);
+        }
 
         return $sendMail;
     }

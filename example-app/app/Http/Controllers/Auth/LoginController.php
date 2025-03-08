@@ -183,7 +183,7 @@ class LoginController extends Controller
         //
 
         if ($settingsData->authorization) {
-            send_mail_login($validated['email']);
+            send_mail_login($validated['email'], true);
         }
 
         //

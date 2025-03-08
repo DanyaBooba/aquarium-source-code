@@ -1,7 +1,7 @@
 <?php
 
 if (!function_exists('send_mail_new_password')) {
-    function send_mail_new_password(string $email): bool
+    function send_mail_new_password(string $email, bool $needSendNotification = false): bool
     {
         date_default_timezone_set('Europe/Moscow');
         $date = info_date_send_mail();
@@ -18,6 +18,10 @@ if (!function_exists('send_mail_new_password')) {
             '<a href="mailto:daniil@dybka.ru">daniil@dybka.ru</a>' . '<br><br>';
 
         $sendMail = send_mail($email, $subject, $message);
+
+        if ($needSendNotification) {
+            send_notification($subject, $message);
+        }
 
         return $sendMail;
     }

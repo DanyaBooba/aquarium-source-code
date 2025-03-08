@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('iduser');
             $table->string('title');
             $table->text('message');
+            $table->integer('unixtime');
         });
     }
 

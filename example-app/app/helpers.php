@@ -50,6 +50,10 @@ require_once "helpers/randoms.php";
 require_once "helpers/user/info/profile.php";
 require_once "helpers/user/info/settings.php";
 
+// Notification
+
+require_once "helpers/notification/notification.php";
+
 // Mail
 
 require_once "helpers/mail/mail-info.php";

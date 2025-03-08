@@ -1,7 +1,7 @@
 <?php
 
 if (!function_exists('send_mail_register')) {
-    function send_mail_register(string $email, string $nameService = '', string $password = ''): bool
+    function send_mail_register(string $email, string $nameService = '', string $password = '', bool $needSendNotification = false): bool
     {
         $subject = 'Добро пожаловать в Аквариум';
 
@@ -24,6 +24,10 @@ if (!function_exists('send_mail_register')) {
             '<a href="mailto:daniil@dybka.ru">daniil@dybka.ru</a>' . '<br><br>';
 
         $sendMail = send_mail($email, $subject, $message);
+
+        if ($needSendNotification) {
+            send_notification($subject, $message);
+        }
 
         return $sendMail;
     }
