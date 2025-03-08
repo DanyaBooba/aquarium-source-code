@@ -8,7 +8,7 @@
 ])
 
 <div class="post-show-back">
-    <a href="{{ route('user.feed') }}" class="post-show-back__profile">
+    <a href="{{ route('user.feed') }}" class="post-show-back__back">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="lucide lucide-chevron-left">
@@ -26,6 +26,13 @@
                 <path d="m15 5 4 4" />
             </svg>
             <span class="fs-5">Изменить</span>
+        </a>
+    @else
+        <a href="{{ route('user.show.id', $userId) }}" class="post-show-back__profile">
+            <x-user.profile.image :avatar="$avatar" :avatar-default="$avatarDefault" />
+            <span class="fs-5">
+                {{ $name }}
+            </span>
         </a>
     @endif
 </div>

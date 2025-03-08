@@ -16,9 +16,21 @@
     height: 20px !important;
 }
 
-.post-show-back a.post-show-back__profile {
+.post-show-back a.post-show-back__back {
     margin-right: auto;
     text-decoration: none;
+}
+
+.post-show-back a.post-show-back__profile {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-left: auto;
+    text-decoration: none;
+}
+
+.post-show-back a.post-show-back__profile span {
+    font-family: ResistSans;
 }
 
 .post-show-back a {
