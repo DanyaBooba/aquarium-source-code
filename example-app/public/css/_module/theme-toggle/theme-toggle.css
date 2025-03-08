@@ -46,7 +46,7 @@
 .theme-toggle .btn-secondary.show,
 .theme-toggle .btn-secondary:first-child:active,
 :not(.btn-check)+.theme-toggle .btn-secondary:active {
-    color: var(--text) !important;
+    color: white !important;
     background: var(--page-main-accent) !important;
     border: 0;
 }
