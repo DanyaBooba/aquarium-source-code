@@ -23,7 +23,7 @@
         {{ __('Загрузить аватарку') }}
     </p>
 
-    <div class="container px-0">
+    <div class="container" style="padding-left: 0 !important; padding-right: 0 !important">
         <div class="mb-4 d-none" id="avatar-upload-block">
             <div id="upload-avatar" style="max-width: 300px"></div>
             <button class="btn btn-success" id="upload-avatar-button"
@@ -56,7 +56,7 @@
         {{ __('Загрузить шапку') }}
     </p>
 
-    <div class="container px-0">
+    <div class="container" style="padding-left: 0 !important; padding-right: 0 !important">
         <div class="mb-4 d-none" id="cap-upload-block">
             <div id="upload-cap" style="max-width: 600px"></div>
             <button class="btn btn-success" id="upload-cap-button"
@@ -96,12 +96,15 @@
             @for ($i = 1; $i <= 7; $i++)
                 <x-user.settings.appearance.avatar-default sex='MAN' :id="$i" :avatar="$profile->avatar" />
             @endfor
-        </div>
-        <div class="row row-settings-avatar">
             @for ($i = 1; $i <= 7; $i++)
                 <x-user.settings.appearance.avatar-default sex='WOMAN' :id="$i" :avatar="$profile->avatar" />
             @endfor
         </div>
+        {{-- <div class="row row-settings-avatar">
+            @for ($i = 1; $i <= 7; $i++)
+                <x-user.settings.appearance.avatar-default sex='WOMAN' :id="$i" :avatar="$profile->avatar" />
+            @endfor
+        </div> --}}
         <p class="text-title mt-4">
             {{ __('Шапка') }}
         </p>

@@ -22,13 +22,16 @@
             <li class="list-group-item">
                 <a href="{{ url()->current() }}" class="settings-profile" id="changethemeauto" OnClick="ButtonAuto()">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
-                        <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
-                        <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
-                        <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
-                        <path
-                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-moon">
+                        <path d="M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.9 4.9 1.4 1.4" />
+                        <path d="m17.7 17.7 1.4 1.4" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.3 17.7-1.4 1.4" />
+                        <path d="m19.1 4.9-1.4 1.4" />
                     </svg>
                     <span>
                         {{ __('Системная') }}
@@ -38,13 +41,16 @@
             <li class="list-group-item">
                 <a href="{{ url()->current() }}" class="settings-profile" id="changethemelight" OnClick="ButtonLight()">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
-                        <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
-                        <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
-                        <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
-                        <path
-                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.93 4.93 1.41 1.41" />
+                        <path d="m17.66 17.66 1.41 1.41" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.34 17.66-1.41 1.41" />
+                        <path d="m19.07 4.93-1.41 1.41" />
                     </svg>
                     <span>
                         {{ __('Всегда светлая') }}
@@ -54,13 +60,8 @@
             <li class="list-group-item">
                 <a href="{{ url()->current() }}" class="settings-profile" id="changethemedark" OnClick="ButtonDark()">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
-                        <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
-                        <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
-                        <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
-                        <path
-                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
                     </svg>
                     <span>
                         {{ __('Всегда темная') }}
@@ -69,9 +70,10 @@
             </li>
         </ul>
         <p class="text-title mt-4">
-            {{ __('Светлая тема') }}
+            {{ __('Светлая цветовая схема') }}
         </p>
-        <ul class="list-group">
+        <x-user.settings.themes.light-scheme />
+        {{-- <ul class="list-group">
             <li class="list-group-item">
                 <a href="{{ route('main.settheme.light', 'default') }}"
                     class="{{ settings_theme_active_link('default', true) }}">
@@ -249,11 +251,12 @@
                     </span>
                 </a>
             </li>
-        </ul>
+        </ul> --}}
         <p class="text-title mt-4">
-            {{ __('Темная тема') }}
+            {{ __('Темная цветовая схема') }}
         </p>
-        <ul class="list-group">
+        <x-user.settings.themes.dark-scheme />
+        {{-- <ul class="list-group">
             <li class="list-group-item">
                 <a href="{{ route('main.settheme.dark', 'default') }}"
                     class="{{ settings_theme_active_link('default', false) }}">
@@ -431,7 +434,7 @@
                     </span>
                 </a>
             </li>
-        </ul>
+        </ul> --}}
     </div>
 @endsection
 

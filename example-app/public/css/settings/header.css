@@ -10,6 +10,13 @@
     padding-bottom: 1rem;
     padding-top: 1.25rem;
 
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+
+    box-shadow: 0 16px 10px -10px var(--shadow-hover);
+
     /* -webkit-box-shadow: 4px 4px 30px 18px var(--body);
     -moz-box-shadow: 4px 4px 30px 18px var(--body);
     box-shadow: 4px 4px 30px 18px var(--body); */
@@ -54,11 +61,11 @@
 
 /* media */
 
-@media(max-width: 1023.98px) {
+/* @media(max-width: 1023.98px) {
     .container-settings-header {
         position: -webkit-sticky;
         position: sticky;
         top: 0;
         z-index: 1020;
     }
-}
+} */

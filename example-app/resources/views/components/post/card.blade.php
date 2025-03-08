@@ -9,9 +9,51 @@
 ])
 
 @if ($_status == 'image')
-    image
+    <div class="col col-image">
+        @if ($showUser)
+            <a href="{{ route('user.show.id', $post->idUser) }}" class="card-overflow">
+                <div class="card-overflow__profile">
+                    <x-user.profile.image :avatar="$post->userAvatar" :avatar-default="$post->userAvatarDefault" />
+                    <span>{{ $post->userName }}</span>
+                </div>
+            </a>
+        @endif
+        <a href="{{ route('post.show', [$post->idUser, $post->idPost]) }}" class="card">
+            <div class="post">
+                <p>
+                    {{ $post->desc }}
+                </p>
+            </div>
+        </a>
+        {{-- user
+    like
+
+    date
+    тематика --}}
+    </div>
 @elseif($_status == 'theme')
-    theme
+    <div class="col col-theme">
+        @if ($showUser)
+            <a href="{{ route('user.show.id', $post->idUser) }}" class="card-overflow">
+                <div class="card-overflow__profile">
+                    <x-user.profile.image :avatar="$post->userAvatar" :avatar-default="$post->userAvatarDefault" />
+                    <span>{{ $post->userName }}</span>
+                </div>
+            </a>
+        @endif
+        <a href="{{ route('post.show', [$post->idUser, $post->idPost]) }}" class="card">
+            <div class="post">
+                <p>
+                    {{ $post->desc }}
+                </p>
+            </div>
+        </a>
+        {{-- user
+    like
+
+    date
+    тематика --}}
+    </div>
 @else
     <div class="col col-text">
         @if ($showUser)

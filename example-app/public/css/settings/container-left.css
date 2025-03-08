@@ -8,7 +8,7 @@
     /* color: var(--text-muted); */
     opacity: .5;
     margin-bottom: .5rem;
-    padding-left: 12px;
+    padding-left: 8px;
     font-size: .8rem;
     letter-spacing: 1.5px;
 }
@@ -211,10 +211,12 @@
 
     .col-load:hover label {
         color: var(--text) !important;
+        opacity: 1;
     }
 
     .col-load:hover label svg {
         stroke: var(--text);
+        opacity: 1;
     }
 }
 

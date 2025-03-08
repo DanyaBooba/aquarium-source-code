@@ -60,4 +60,9 @@ class MainRouteController extends Controller
     {
         return view('main.smi');
     }
+
+    public function adaptivity()
+    {
+        return view('main.adaptivity');
+    }
 }

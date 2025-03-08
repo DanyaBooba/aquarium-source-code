@@ -17,6 +17,7 @@ return new class extends Migration
 
             $table->integer('idUser');
             $table->integer('idUserFrom');
+            $table->string('reason')->max(254);
         });
     }
 

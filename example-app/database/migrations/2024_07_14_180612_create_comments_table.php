@@ -21,7 +21,7 @@ return new class extends Migration
             $table->integer('idUser');
 
             $table->boolean('reply');
-            $table->integer('idUserReply');
+            $table->integer('idMainMessageReply');
 
             $table->text('message');
         });

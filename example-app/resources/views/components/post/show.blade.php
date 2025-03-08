@@ -9,7 +9,7 @@
 @else
     <div class="row row-cols-1 row-cols-lg-1 gx-3">
         @foreach ($posts as $post)
-            <x-post.card :post="$post" :showUser="$showUser" status='default' />
+            <x-post.card :post="$post" :showUser="$showUser" status='deul' />
         @endforeach
     </div>
 @endif

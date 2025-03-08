@@ -90,64 +90,8 @@
     text-overflow: ellipsis;
 }
 
-.posts .row .col-text {
-    padding-bottom: 16px;
-    transition: .15s !important;
-    height: 322px;
-}
-
 .posts .row .col-img a.card-overflow {
     color: white !important;
-}
-
-.posts .row .col-text a.card-overflow {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    z-index: 100;
-    text-decoration: none;
-    text-shadow: none !important;
-    box-shadow: none !important;
-    padding-top: .5rem;
-    padding-left: .5rem;
-    height: auto !important;
-    background: transparent !important;
-    border-radius: 0px !important;
-    transition: .3s !important;
-}
-
-.posts .row .col-text a {
-    height: 100%;
-    background-color: var(--color-body-plane) !important;
-    border: none !important;
-    /* border-color: var(--color-body-plane-2) !important; */
-    box-shadow: 0 0 .25rem var(--shadow);
-    border-radius: 12px;
-    padding: 1rem;
-    text-decoration: none !important;
-    transition: .3s;
-}
-
-.posts .row .col-text a .post {
-    display: flex;
-    margin-top: auto;
-    flex-direction: column;
-}
-
-.posts .row .col-text a .post p {
-    margin-bottom: 0;
-    max-height: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    font-family: ResistSans;
-    font-size: 1.5rem;
-    margin-bottom: .25rem;
-    line-height: 110%;
-
-    max-height: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 @media(hover: hover) {
@@ -159,11 +103,6 @@
     .posts .row .col-img:hover img {
         transform: scale(1.05);
         transition: .3s;
-    }
-
-    .posts .row .col-text:hover a {
-        box-shadow: 0 20px 40px 0 var(--shadow-hover);
-        border-color: var(--text-link-hover) !important;
     }
 
     .posts .row .col-img:hover a.card-overflow {
@@ -184,20 +123,9 @@
         transition: .3s;
     }
 
-    .posts .row .col-text:active a {
-        border-color: var(--text-link-hover) !important;
-    }
-
     .posts .row .col-img:active a.card-overflow {
         color: var(--text-default) !important;
         text-decoration: underline;
         text-decoration-color: var(--text-default) !important;
-    }
-}
-
-@media(max-width: 767.98px) {
-    .posts .row .col-text {
-        height: auto !important;
-        min-height: 322px;
     }
 }

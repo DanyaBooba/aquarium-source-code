@@ -14,6 +14,13 @@
     width: calc(100% - 440px);
 }
 
+.row-first .row-first-left .row-first-left__background-text-1 {
+    opacity: .25;
+    font-size: 2rem !important;
+    font-family: ResistSans !important;
+    margin-bottom: 0;
+}
+
 .row-first .row-first-right div.p-3 {
     display: flex;
     flex-direction: column;

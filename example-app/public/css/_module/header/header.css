@@ -46,23 +46,34 @@ header.header .header-content-logo svg {
     fill: var(--text);
 }
 
-header.header .header-content-links a.link-download:is(:focus, :focus-within, :focus-visible) {
+header.header .header-content-links li {
+    padding-left: 0 !important;
+}
+
+/* header.header .header-content-links a.link-download:is(:focus, :focus-within, :focus-visible) {
     color: var(--text) !important;
+} */
+
+header.header .header-content-links a.link-download svg {
+    width: 20px;
+    height: 20px;
 }
 
 header.header .header-content-links a.link-download {
     display: flex;
     justify-content: center;
-    width: 124px !important;
+    align-items: center;
+    gap: .25rem;
+    /* width: 124px !important; */
 
-    background-color: var(--header-link-download-bg);
-    border: .1rem solid var(--header-link-download-border);
+    background-color: var(--page-main-accent);
     border-radius: 22px;
+    color: white !important;
 
     text-decoration: none !important;
 
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
     margin-left: 1rem;
 }
 
@@ -248,9 +259,15 @@ header.header .header-content button.navbar-toggler {
 }
 
 @media(min-width: 992px) {
+    header.header .header-content-links li {
+        padding-left: .25rem !important;
+        padding-right: .25rem;
+    }
+
     header.header .header-content-links li a {
         text-underline-offset: 1.8rem !important;
         text-decoration-thickness: 0.2rem !important;
+        font-family: Inter-Bold !important;
     }
 
     header.header .header-content-links {
@@ -284,8 +301,8 @@ header.header .header-content button.navbar-toggler {
     }
 
     header.header .header-content-links a.link-download:hover {
-        color: var(--text) !important;
-        background-color: var(--header-link-download-border);
+        /* color: var(--text) !important; */
+        background-color: var(--page-main-accent);
     }
 }
 
@@ -305,7 +322,7 @@ header.header .header-content button.navbar-toggler {
     }
 
     header.header .header-content-links a.link-download:active {
-        color: var(--text) !important;
+        /* color: var(--text) !important; */
         background-color: var(--header-link-download-border);
     }
 }

@@ -5,7 +5,7 @@
 
 <h3 id="comments" style="margin-top: 5rem">
     {{ __('Комментарии') }}
-    <span class="text-muted">{{ count($comments) }}</span>
+    <span style="opacity: .5">{{ count($comments) }}</span>
 </h3>
 
 <x-form.error-first />

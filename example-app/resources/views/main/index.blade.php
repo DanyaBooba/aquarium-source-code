@@ -38,6 +38,17 @@
                         </picture>
                     </a>
                 </div>
+                {{-- <div class="row-first-left__background-text">
+                    <p class="row-first-left__background-text-1">
+                        Цветовые темы
+                    </p>
+                    <p class="row-first-left__background-text-2">
+                        Публикация записей
+                    </p>
+                    <p class="row-first-left__background-text-3">
+                        Загрузка собственных аватарок
+                    </p>
+                </div> --}}
             </div>
         </div>
         <div class="row-first-right">
@@ -94,7 +105,7 @@
             <div class="col">
                 <img src="{{ asset('img/emoji/partying-face.png') }}" alt="{{ __('Счастливое лицо') }}">
                 <h3>{{ __('Удобство') }}</h3>
-                <p>{!! __('Для мобильных <nobr>и десктопных</nobr> версий.') !!}</p>
+                <p>{!! __('Адаптирован для всех устройств.') !!}</p>
             </div>
             <div class="col">
                 <img src="{{ asset('img/emoji/robot.png') }}" alt="{{ __('Робот') }}">
@@ -104,22 +115,22 @@
             <div class="col">
                 <img src="{{ asset('img/emoji/rocket.png') }}" alt="{{ __('Ракета') }}">
                 <h3>{{ __('Скорость') }}</h3>
-                <p>{{ __('Быстрая загрузка даже при слабой сети.') }}</p>
+                <p>{{ __('Быстрая работа даже при слабой сети.') }}</p>
             </div>
             <div class="col">
                 <img src="{{ asset('img/emoji/fish.png') }}" alt="{{ __('Рыбка') }}">
                 <h3>{{ __('Тематика') }}</h3>
-                <p>{{ __('Социальная платформа понравится каждому.') }}</p>
+                <p>{{ __('Уютное место для приятного общения.') }}</p>
             </div>
             <div class="col">
                 <img src="{{ asset('img/emoji/friends.png') }}" alt="{{ __('Друзья') }}">
                 <h3>{{ __('Аудитория') }}</h3>
-                <p>{{ __('Большое количество разных интересных людей.') }}</p>
+                <p>{{ __('Более 100 человек аудитории.') }}</p>
             </div>
             <div class="col">
                 <img src="{{ asset('img/emoji/dizzy.png') }}" alt="{{ __('Звезда') }}">
                 <h3>{{ __('Лента') }}</h3>
-                <p>{!! __('Персональная лента <nobr>с вашими</nobr> подписками.') !!}</p>
+                <p>{!! __('Смотрите только то, что хотите именно вы.') !!}</p>
             </div>
             <div class="col">
                 <img src="{{ asset('img/emoji/heart.png') }}" alt="{{ __('Сердце') }}">
@@ -129,7 +140,7 @@
             <div class="col">
                 <img src="{{ asset('img/emoji/shooting-star.png') }}" alt="{{ __('Падающая звезда') }}">
                 <h3>{{ __('Фотографии') }}</h3>
-                <p>{{ __('Персонализируйте свою страницу.') }}</p>
+                <p>{{ __('Загружайте фотографии и самовыражайтесь.') }}</p>
             </div>
             <div class="col">
                 <img src="{{ asset('img/emoji/dove.png') }}" alt="{{ __('Белый голубь') }}">
@@ -145,7 +156,7 @@
                 class="mb-3">
             <h2>{{ __('Телеграм-канал проекта') }}</h2>
             <p class="col-lg-6 mx-auto fs-5 text-muted">
-                {{ __('Показываем фотографии дизайна, рассказываем про важные обновления и планы, актуальные новости и обновления проекта.') }}
+                {{ __('Узнайте первым, что уже добавилось или что находится в планах.') }}
             </p>
             <div class="d-inline-flex gap-2">
                 <button onClick="buttonOpenURL('https://aquariumsocial.t.me')"
@@ -270,7 +281,7 @@
         </h1>
         <div class="col-lg-6 mx-auto">
             <p class="fs-5 text-muted mb-4">
-                {{ __('Содержимое сайта доступно для всех людей, даже для тех, у кого наблюдается нарушение работы слуха, зрения, двигательных функций или когнитивных функций.') }}
+                {{ __('Мы считаем, что доступность содержимого важна для каждого человека.') }}
             </p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <button onClick="buttonOpenURL('{{ route('main.accessibility') }}')"
@@ -297,8 +308,18 @@
             <div class="col-lg-6">
                 <h2 class="display-5 lh-1 mb-3">{!! __('Адаптивный <nobr>веб-дизайн</nobr>') !!}</h2>
                 <p class="fs-5 text-muted">
-                    {{ __('Сайт адаптирован к возможностям устройств и браузеров, качественный подход в разработке помогает уверенно масштабировать проект и добавлять новые возможности.') }}
+                    {{ __('На сайте применяются правила адаптивности, что позволяет открывать сайт при любом сценарии.') }}
                 </p>
+                <button onClick="buttonOpenURL('{{ route('main.adaptivity') }}')"
+                    class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button"
+                    style="padding-left: 40px !important">
+                    {{ __('Правила адаптивности') }}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="ms-1"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
@@ -322,19 +343,17 @@
                     <p class="text-center text-muted fs-5">
                         {{ __('Удобное взаимодействие для обмена информацией.') }}
                     </p>
-                    <p class="fs-5">
-                        <a href="{{ route('main.api') }}" class="d-flex align-items-center justify-content-center">
-                            <span>
-                                {{ __('Читать') }}
-                            </span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-chevron-right">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
-                        </a>
-                    </p>
                 </div>
+                <button onClick="buttonOpenURL('{{ route('main.api') }}')"
+                    class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button"
+                    style="padding-left: 40px !important">
+                    {{ __('Документация API') }}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="ms-1"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                </button>
             </div>
             <div class="col text-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
@@ -352,19 +371,17 @@
                     <p class="text-center text-muted fs-5">
                         {{ __('Открытый протокол авторизации.') }}
                     </p>
-                    <p class="fs-5">
-                        <a href="{{ route('main.oauth') }}" class="d-flex align-items-center justify-content-center">
-                            <span>
-                                {{ __('Читать') }}
-                            </span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-chevron-right">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
-                        </a>
-                    </p>
                 </div>
+                <button onClick="buttonOpenURL('{{ route('main.oauth') }}')"
+                    class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button"
+                    style="padding-left: 40px !important">
+                    {{ __('Применение OAuth') }}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="ms-1"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                </button>
             </div>
         </div>
     </div>

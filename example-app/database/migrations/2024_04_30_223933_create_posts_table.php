@@ -15,15 +15,15 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->boolean('active')->default(false);
+            $table->integer('active')->default(0);
             $table->integer('idPost');
             $table->integer('idUser');
 
-            $table->boolean('haveimage')->default(false);
-            $table->string('imagename')->nullable();
-            $table->string('title')->nullable();
+            $table->integer('postType')->default(0);
+            $table->string('image')->nullable();
+            $table->integer('theme')->nullable();
+
             $table->text('message');
-            $table->text('themeId')->nullable();
             $table->string('desc')->max(254);
 
             $table->integer('likes')->default(0);

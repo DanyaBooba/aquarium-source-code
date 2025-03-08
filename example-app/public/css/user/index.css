@@ -19,6 +19,9 @@
 @import "user-info.css";
 
 @import "posts.css";
+@import "posts/col-text.css";
+@import "posts/col-image.css";
+@import "posts/col-theme.css";
 
 @import "header.css";
 

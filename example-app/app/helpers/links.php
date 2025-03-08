@@ -48,7 +48,7 @@ if (!function_exists('settings_locale_active_link')) {
 if (!function_exists('settings_theme_active_link')) {
     function settings_theme_active_link(string $theme, bool $is_light): string
     {
-        return session($is_light ? "theme" : "theme_dark") === $theme ? "settings-devices" : "settings-profile";
+        return session($is_light ? "theme" : "theme_dark") === $theme ? "active" : "";
     }
 }
 
