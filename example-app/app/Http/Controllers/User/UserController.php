@@ -104,7 +104,7 @@ class UserController extends Controller
         }
 
         return view('user.feed', [
-            'posts' => $posts
+            'posts' => $posts,
         ]);
     }
 

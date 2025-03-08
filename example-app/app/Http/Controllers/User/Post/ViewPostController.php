@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User\Post;
 
 use App\Http\Controllers\Controller;
+use App\Models\User\Comment;
 use App\Models\User\Post;
 use App\Models\User\User;
 use Illuminate\Http\Request;
@@ -25,9 +26,9 @@ class ViewPostController extends Controller
     {
         $findUserSession = user_profile();
         $post = Post::where('idPost', $idPost)->where('idUser', $user->id)->firstOrFail();
+        $comments = Comment::where('idPost', $post->id)->orderBy('updated_at', 'desc')->get();
 
         $itsmypost = false;
-        $comments = [];
         $like = false;
         $views = $post->views;
 

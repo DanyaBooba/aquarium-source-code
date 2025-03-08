@@ -10,6 +10,12 @@ class Comment extends Model
     use HasFactory;
 
     protected $fillable = [
-
+        'active',
+        'idMessage',
+        'idPost',
+        'idUser',
+        'reply',
+        'idUserReply',
+        'message',
     ];
 }

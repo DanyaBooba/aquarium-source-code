@@ -20,8 +20,8 @@ return new class extends Migration
             $table->integer('idPost');
             $table->integer('idUser');
 
-            $table->boolean('reply');
-            $table->integer('idMainMessageReply');
+            $table->boolean('reply')->default(false);
+            $table->integer('idMainMessageReply')->nullable();
 
             $table->text('message');
         });
