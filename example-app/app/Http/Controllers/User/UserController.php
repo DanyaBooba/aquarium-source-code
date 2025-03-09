@@ -29,9 +29,9 @@ class UserController extends Controller
             $achivs,
         ];
 
-        $posts = Post::where('idUser', $user->id)->where('active', 1)->orderBy('created_at', 'desc')->get();
-        $privatePosts = Post::where('idUser', $user->id)->where('active', 0)->orderBy('created_at', 'desc')->get();
-        $nullPosts = Post::where('idUser', $user->id)->where('active', -1)->orderBy('created_at', 'desc')->get();
+        $posts = Post::where('idUser', $user->id)->where('active', 1)->orderBy('updated_at', 'desc')->get();
+        $privatePosts = Post::where('idUser', $user->id)->where('active', 0)->orderBy('updated_at', 'desc')->get();
+        $nullPosts = Post::where('idUser', $user->id)->where('active', -1)->orderBy('updated_at', 'desc')->get();
 
         $countAllPosts = Post::where('idUser', $user->id)->count();
 
