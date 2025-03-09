@@ -20,8 +20,6 @@
                 <div class="d-flex justify-content-center my-auto">
                     <a href="https://aquariumsocial.t.me" target="_blank" aria-label="{{ __('Открыть Телеграм канал') }}"
                         style="margin-right: -30px; margin-top: -4px;">
-                        {{-- <img src="{{ asset('img/main/Nothing Phone.png') }}" class="img-fluid" width="200"
-                            aria-label="{{ __('Телефон со страницей сайта') }}"> --}}
                         <picture>
                             <source type="image/webp" srcSet="{{ asset('img/main/Nothing Phone.webp') }}" />
                             <img src="{{ asset('img/main/Nothing Phone.png') }}" class="img-fluid" width="200"
@@ -29,8 +27,6 @@
                         </picture>
                     </a>
                     <a href="https://aquariumsocial.t.me" target="_blank" aria-label="{{ __('Открыть Телеграм канал') }}">
-                        {{-- <img src="{{ asset('img/main/iPhone.png') }}" class="img-fluid" width="210"
-                            aria-label="{{ __('Телефон со страницей сайта') }}"> --}}
                         <picture>
                             <source type="image/webp" srcSet="{{ asset('img/main/iPhone.webp') }}" />
                             <img src="{{ asset('img/main/iPhone.png') }}" class="img-fluid" width="200"

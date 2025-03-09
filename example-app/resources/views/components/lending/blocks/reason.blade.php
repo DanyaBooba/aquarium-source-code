@@ -1,4 +1,4 @@
-<h2 class="fs-1 text-center" style="margin-bottom: 3rem">{{ __('Почему люди выбирают Аквариум?') }}</h2>
+<h2 class="fs-1 text-center" style="margin-bottom: 5rem">{{ __('Почему люди выбирают Аквариум?') }}</h2>
 <div class="container px-0 text-center" style="margin-bottom: 3rem">
     <div class="row row-cols-1 row-cols-lg-2 g-2">
         <div class="col d-flex flex-column align-items-center justify-content-center" style="margin-bottom: 2rem">

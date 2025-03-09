@@ -52,11 +52,15 @@
             }
 
             .bg-gradient {
-                background-color: var(--page-main-accent);
+                background-color: var(--color-body-plane);
             }
 
             .bg-gradient svg {
-                stroke: white;
+                stroke: var(--page-main-accent);
+            }
+
+            .border-bottom {
+                border-color: var(--header-border) !important;
             }
 
             /* main { background-color: rgb(from #ff0000 r g b / 0.5); } */
@@ -64,6 +68,12 @@
             @media(max-width: 575px) {
                 .lending-hero-image {
                     display: none !important;
+                }
+            }
+
+            @media(max-width: 767.98px) {
+                .lending__row {
+                    flex-direction: column;
                 }
             }
         </style>

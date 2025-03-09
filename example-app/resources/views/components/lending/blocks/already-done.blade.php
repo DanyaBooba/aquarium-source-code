@@ -16,7 +16,7 @@
             <span class="d-flex align-items-center container-simple-numbers">
                 <span class="display-3 text-success">{{ __('цветовые темы') }}</span>
             </span>
-            <span class="container-simple-numbers-text">{{ __('в размере 20 штук') }}</span>
+            <span class="container-simple-numbers-text">{{ __('в количестве 20 штук') }}</span>
         </h3>
     </div>
     <div style="background-color: var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem;">

@@ -12,8 +12,8 @@
         </svg>
         {{ __('Статистика') }}
     </h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="feature col">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 lending__row">
+        <div class="feature col d-flex flex-column" style="flex: 1">
             <div
                 class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24"
@@ -28,8 +28,8 @@
             <p>
                 Аудитория соцсети более 100 человек. Каждый пользователь может самовыражаться как он хочет.
             </p>
-            <a href="{{ route('auth.signup') }}" class="icon-link">
-                Зарегистрироваться
+            <a href="{{ route('auth.signup') }}" class="icon-link mt-auto" style="width: fit-content">
+                {{ __('Создать аккаунт') }}
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="lucide lucide-chevron-right">
@@ -37,7 +37,7 @@
                 </svg>
             </a>
         </div>
-        <div class="feature col">
+        <div class="feature col d-flex flex-column" style="flex: 1">
             <div
                 class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24"
@@ -52,7 +52,7 @@
             <p>
                 На Телеграм-канал подписано более 50 человек. Там мы освещаем обновления и изменения соцсети.
             </p>
-            <a href="https://aquariumsocial.t.me" target="_blank" class="icon-link">
+            <a href="https://aquariumsocial.t.me" target="_blank" class="icon-link mt-auto" style="width: fit-content">
                 Подписаться
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -61,7 +61,7 @@
                 </svg>
             </a>
         </div>
-        <div class="feature col">
+        <div class="feature col d-flex flex-column" style="flex: 1">
             <div
                 class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24"
@@ -78,7 +78,7 @@
             <p>
                 {{ __('API доступен для разработчиков. Это возможность работать с данными в удобном формате.') }}
             </p>
-            <a href="{{ route('main.api') }}" class="icon-link">
+            <a href="{{ route('main.api') }}" class="icon-link mt-auto" style="width: fit-content">
                 Читать документацию
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

@@ -14,7 +14,8 @@
             </p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <button type="button" onClick="buttonOpenURL('{{ route('auth.signup') }}')"
-                    class="btn btn-primary btn-lg px-4 me-md-2" style="border-radius: 100px">
+                    class="btn btn-primary btn-lg px-4 me-md-2"
+                    style="border-radius: 100px; background-color: var(--page-main-accent) !important; border: none !important;">
                     {{ __('Создать аккаунт') }}
                 </button>
             </div>
