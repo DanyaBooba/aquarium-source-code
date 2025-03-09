@@ -24,7 +24,7 @@ class AddPostController extends Controller
         $validated = $request->validate(['message' => ['required', 'string', 'min:1', 'max: 30000']]);
 
         $post = strip_tags($validated['message'], post_free_tags());
-        $shortPost = mb_substr(strip_tags($post), 0, 255);
+        $shortPost = $this->privateCreateDescription($post);
 
         $findUser = user_profile();
 
@@ -52,5 +52,29 @@ class AddPostController extends Controller
         ]);
 
         return redirect()->route('post.show', [$findUser->id, $idPost]);
+    }
+
+    private function privateCreateDescription($post)
+    {
+        // Заменяем <br> на пробелы
+        $postContent = str_replace(['<br>', '<br/>', '<br />'], ' ', $post);
+
+        // Добавляем пробелы между тегами
+        $postContent = preg_replace('/(<\/[^>]+>)(<[^>\/][^>]*>)/', '$1 $2', $postContent);
+
+        // Удаляем все HTML-теги
+        $postContent = strip_tags($postContent);
+
+        // Удаляем лишние пробелы
+        $postContent = preg_replace('/\s+/', ' ', $postContent);
+        $postContent = trim($postContent);
+
+        // Обрезаем текст до 255 символов, не обрезая последнее слово
+        if (mb_strlen($postContent) > 255) {
+            $postContent = mb_substr($postContent, 0, 255);
+            $postContent = mb_substr($postContent, 0, mb_strrpos($postContent, ' '));
+        }
+
+        return $postContent;
     }
 }

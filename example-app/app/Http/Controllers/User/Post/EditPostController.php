@@ -41,7 +41,7 @@ class EditPostController extends Controller
         $post = Post::where('idUser', $user->id)->where('idPost', $validated['idPost'])->firstOrFail();
 
         $message = strip_tags($validated['message'], post_free_tags());
-        $desc = mb_substr(strip_tags($message), 0, 255);
+        $desc = $this->privateCreateDescription($message);
         $active = in_array($user->id, white_id_posts());
 
         if ($user->usertype == -1) {
@@ -56,5 +56,29 @@ class EditPostController extends Controller
         $post->save();
 
         return redirect()->route('post.show', [$user->id, $validated['idPost']]);
+    }
+
+    private function privateCreateDescription($post)
+    {
+        // Заменяем <br> на пробелы
+        $postContent = str_replace(['<br>', '<br/>', '<br />'], ' ', $post);
+
+        // Добавляем пробелы между тегами
+        $postContent = preg_replace('/(<\/[^>]+>)(<[^>\/][^>]*>)/', '$1 $2', $postContent);
+
+        // Удаляем все HTML-теги
+        $postContent = strip_tags($postContent);
+
+        // Удаляем лишние пробелы
+        $postContent = preg_replace('/\s+/', ' ', $postContent);
+        $postContent = trim($postContent);
+
+        // Обрезаем текст до 255 символов, не обрезая последнее слово
+        if (mb_strlen($postContent) > 255) {
+            $postContent = mb_substr($postContent, 0, 255);
+            $postContent = mb_substr($postContent, 0, mb_strrpos($postContent, ' '));
+        }
+
+        return $postContent;
     }
 }

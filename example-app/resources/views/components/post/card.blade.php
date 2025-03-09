@@ -11,11 +11,11 @@
 @if ($_status == 'image')
     <div class="col col-image">
         <a href="{{ route('post.show', [$post->idUser, $post->idPost]) }}" class="col-image__post">
-            <div>
+            <div class="col-image__text">
                 {{ $post->desc }}
             </div>
+            <div class="col-image__image" style="background-image: url(/img/posts/gradient-example-2.jpg)"></div>
         </a>
-        <a href="#" class="col-image__image" style="background-image: url(/img/posts/gradient-example-2.jpg)"></a>
         <div class="col-image__bottom">
             @if ($showUser)
                 <a href="{{ route('user.show.id', $post->idUser) }}" class="col-image__user">
