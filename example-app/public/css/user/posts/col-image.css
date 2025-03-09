@@ -1,7 +1,7 @@
 .col-image {
     display: flex;
     flex-direction: column;
-    height: 322px;
+    height: 500px;
     background-color: var(--color-body-plane);
     border-radius: 24px;
     padding-left: 0;
@@ -44,7 +44,7 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    max-width: 100px;
+    max-width: 200px;
     font-size: 1.25rem;
     font-family: ResistSans;
 }
@@ -79,12 +79,14 @@
     background-repeat: no-repeat;
 }
 
-.col-image:has(.col-image__post:focus) {
+.col-image:has(.col-image__post:focus),
+.col-image:has(.col-image__image:focus) {
     box-shadow: 0 20px 40px 0 var(--shadow-hover);
 }
 
 @media(hover: hover) {
-    .col-image:has(.col-image__post:hover) {
+    .col-image:has(.col-image__post:hover),
+    .col-image:has(.col-image__image:hover) {
         box-shadow: 0 20px 40px 0 var(--shadow-hover);
     }
 }

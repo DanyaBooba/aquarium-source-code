@@ -15,7 +15,7 @@
                 {{ $post->desc }}
             </div>
         </a>
-        <div class="col-image__image" style="background-image: url(/img/posts/gradient-example-2.jpg)"></div>
+        <a href="#" class="col-image__image" style="background-image: url(/img/posts/gradient-example-2.jpg)"></a>
         <div class="col-image__bottom">
             @if ($showUser)
                 <a href="{{ route('user.show.id', $post->idUser) }}" class="col-image__user">
