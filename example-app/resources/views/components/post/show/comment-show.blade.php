@@ -26,7 +26,7 @@
             {{ $message }}
         </div>
     </div>
-    <div class="comments__more">
+    {{-- <div class="comments__more">
         <div class="dropdown">
             <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -38,7 +38,7 @@
                 </svg>
             </button>
             <ul class="dropdown-menu">
-                {{-- <li>
+                <li>
                     <a class="dropdown-item" href="#">
                         {{ __('Изменить') }}
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -49,7 +49,7 @@
                             <path d="m15 5 4 4" />
                         </svg>
                     </a>
-                </li> --}}
+                </li>
                 <li class="comments__dropdown-delete">
                     <a class="dropdown-item" href="#">
                         {{ __('Удалить') }}
@@ -79,5 +79,5 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> --}}
 </div>
