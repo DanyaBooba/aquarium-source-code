@@ -4,7 +4,7 @@
     'id' => 0,
 ])
 
-<h3 id="comments" style="margin-top: 5rem">
+<h3 style="margin-top: 5rem">
     {{ __('Комментарии') }}
     <span style="opacity: .5">{{ count($comments) }}</span>
 </h3>
@@ -32,10 +32,15 @@
     Войдите в аккаунт, чтобы оставить комментарий
 @endif
 
-@if (count($comments) > 0)
-    > 0
-@else
-    <p>
-        Комментариев нет.
-    </p>
-@endif
+<div class="comments">
+    @if (count($comments) > 0)
+        @foreach ($comments as $comment)
+            <x-post.show.comment-show :avatar="$comment->findUser->avatar" :avatar-default="$comment->findUser->avatarDefault" :user-name="$comment->findUser->userName" :message="$comment->message"
+                :id-user="$comment->findUser->id" :date="$comment->updated_at->diffForHumans()" />
+        @endforeach
+    @else
+        <p>
+            Комментариев нет.
+        </p>
+    @endif
+</div>

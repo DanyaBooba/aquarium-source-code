@@ -26,7 +26,13 @@ class ViewPostController extends Controller
     {
         $findUserSession = user_profile();
         $post = Post::where('idPost', $idPost)->where('idUser', $user->id)->firstOrFail();
-        $comments = Comment::where('idPost', $post->id)->orderBy('updated_at', 'desc')->get();
+        $comments = Comment::where('idPost', $post->id)->where('active', 1)->orderBy('updated_at', 'desc')->get();
+
+        foreach ($comments as $comment) {
+            $findUser = User::where('id', $comment->idUser)->first();
+            $findUser->userName = profile_display_name($findUser->firstName, $findUser->lastName);;
+            $comment->findUser = $findUser;
+        }
 
         $itsmypost = false;
         $like = false;

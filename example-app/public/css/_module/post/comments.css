@@ -1,0 +1,36 @@
+.container-post .comments {
+    margin-top: 3rem;
+}
+
+.container-post .comments .comments__comment {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    margin-bottom: 2rem;
+    border-bottom: .1rem solid var(--header-border);
+    padding-bottom: 1rem;
+}
+
+.container-post .comments .comments__comment .comments__user img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.container-post .comments .comments__comment .comments__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.container-post .comments .comments__comment .comments__content .comments__name a {
+    font-size: 1.25rem;
+    font-family: ResistSans;
+    text-decoration: none !important;
+}
+
+.container-post .comments .comments__comment .comments__content .comments__date {
+    font-size: .875rem;
+    opacity: .5;
+    transform: translate(0px, -4px);
+}

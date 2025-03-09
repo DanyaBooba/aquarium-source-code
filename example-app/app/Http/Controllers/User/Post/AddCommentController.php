@@ -43,6 +43,7 @@ class AddCommentController extends Controller
         $idMessage = (Comment::where('idMessage', $findUserSession->id)->max('idMessage') ?? 0) + 1;
 
         Comment::query()->create([
+            'active' => true,
             'idPost' => $id,
             'message' => $message,
             'idUser' => $findUserSession->id,
