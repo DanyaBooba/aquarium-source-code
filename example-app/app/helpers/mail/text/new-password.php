@@ -15,7 +15,7 @@ if (!function_exists('send_mail_new_password')) {
         $message .= 'Устройство: ' . $device . '<br><br>';
         $message .= 'Место: ' . $place . '<br><br>';
         $message .= 'Если считаете, что произошла ошибка — свяжитесь с Администрацией Аквариума: ' .
-            '<a href="mailto:daniil@dybka.ru">daniil@dybka.ru</a>' . '<br><br>';
+            '<a href="mailto:daniil@dybka.ru">daniil@dybka.ru</a>';
 
         $sendMail = send_mail($email, $subject, $message);
 

@@ -11,7 +11,8 @@
     {{ __('Уже реализовано') }}
 </h2>
 <div class="d-flex flex-wrap gap-3" style="margin-bottom: 5rem">
-    <div style="background-color: var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem;">
+    <div
+        style="background-color: var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem 2.5rem;">
         <h3 class="d-flex flex-wrap flex-column h-100 justify-content-center mb-0">
             <span class="d-flex align-items-center container-simple-numbers">
                 <span class="display-3 text-success">{{ __('цветовые темы') }}</span>
@@ -19,7 +20,8 @@
             <span class="container-simple-numbers-text">{{ __('в количестве 20 штук') }}</span>
         </h3>
     </div>
-    <div style="background-color: var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem;">
+    <div
+        style="background-color: var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem 2.5rem;">
         <h3 class="d-flex flex-wrap flex-column h-100 justify-content-center mb-0">
             <span class="d-flex align-items-center container-simple-numbers">
                 <span class="display-3 text-success">{{ __('Обновленный') }}</span>
@@ -27,7 +29,8 @@
             <span class="container-simple-numbers-text">{{ __('интерфейс') }}</span>
         </h3>
     </div>
-    <div style="background-color: var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem;">
+    <div
+        style="background-color: var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem 2.5rem;">
         <h3 class="d-flex flex-wrap flex-column h-100 justify-content-center mb-0">
             <span class="container-simple-numbers-text">{{ __('переход на архитектуру') }}</span>
             <span class="d-flex align-items-center container-simple-numbers">
@@ -35,7 +38,8 @@
             </span>
         </h3>
     </div>
-    <div style="background-color: var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem;">
+    <div
+        style="background-color: var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem 2.5rem;">
         <h3 class="d-flex flex-wrap flex-column h-100 justify-content-center mb-0">
             <span class="d-flex align-items-center container-simple-numbers">
                 <span class="display-3 text-success">{{ __('API') }}</span>
@@ -43,7 +47,8 @@
             <span class="container-simple-numbers-text">{{ __('интерфейс') }}</span>
         </h3>
     </div>
-    <div style="background-color: var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem;">
+    <div
+        style="background-color: var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem 2.5rem;">
         <h3 class="d-flex flex-wrap flex-column h-100 justify-content-center mb-0">
             <span class="d-flex align-items-center container-simple-numbers">
                 <span class="display-3 text-success">{{ __('OAuth') }}</span>
@@ -51,7 +56,8 @@
             <span class="container-simple-numbers-text">{{ __('авторизация') }}</span>
         </h3>
     </div>
-    <div style="background-color: var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem;">
+    <div
+        style="background-color: var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem 2.5rem;">
         <h3 class="d-flex flex-wrap flex-column h-100 justify-content-center mb-0">
             <span class="d-flex align-items-center container-simple-numbers">
                 <span class="display-3 text-success">{{ __('Записи') }}</span>

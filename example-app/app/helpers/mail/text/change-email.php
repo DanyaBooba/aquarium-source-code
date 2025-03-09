@@ -9,7 +9,7 @@ if (!function_exists('send_mail_change_email')) {
         $message .= 'Данная почта более не может быть использована для входа в аккаунт.<br><br>';
         $message .= 'Новая почта для входа в аккаунт: ' . $newEmail . '<br><br>';
         $message .= 'Если считаете, что произошла ошибка — свяжитесь с Администрацией Аквариума: ' .
-            '<a href="mailto:daniil@dybka.ru">daniil@dybka.ru</a>' . '<br><br>';
+            '<a href="mailto:daniil@dybka.ru">daniil@dybka.ru</a>';
 
         $sendMail = send_mail($email, $subject, $message);
 

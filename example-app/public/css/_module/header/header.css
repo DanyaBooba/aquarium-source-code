@@ -129,9 +129,17 @@ header.header .header-content-links li:has(.display-none) {
 }
 
 header.header .header-content-links li a {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
     padding-left: .5rem;
     padding-right: .5rem;
     color: var(--text);
+}
+
+header.header .header-content-links li a svg {
+    width: 16px;
+    height: 16px;
 }
 
 header.header .header-content button.navbar-toggler svg {

@@ -63,6 +63,39 @@
                 border-color: var(--header-border) !important;
             }
 
+            .lending-faq .accordion-item:first-of-type .accordion-button,
+            .lending-faq .accordion-item:first-of-type {
+                border-top-left-radius: 12px !important;
+                border-top-right-radius: 12px !important;
+            }
+
+            .lending-faq .accordion-item:last-of-type .accordion-button,
+            .lending-faq .accordion-item:last-of-type {
+                border-bottom-left-radius: 12px !important;
+                border-bottom-right-radius: 12px !important;
+            }
+
+            .lending-faq .accordion-item,
+            .lending-faq .accordion-item button {
+                background-color: var(--color-body-plane);
+                color: var(--text) !important;
+            }
+
+            .lending-faq .accordion-item .accordion-header button::after {
+                filter: var(--collapse-filter) !important;
+            }
+
+            .lending-faq button,
+            .lending-faq .accordion-body {
+                font-size: 1.25rem !important;
+            }
+
+            .lending-faq .accordion-item button,
+            .lending-faq .accordion-body {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+
             /* main { background-color: rgb(from #ff0000 r g b / 0.5); } */
 
             @media(max-width: 575px) {
@@ -93,6 +126,8 @@
     <x-lending.blocks.plans />
 
     <x-lending.blocks.already-done />
+
+    <x-lending.blocks.faq />
 
     <x-lending.blocks.come />
 @endsection

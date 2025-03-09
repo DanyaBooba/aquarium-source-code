@@ -13,7 +13,8 @@
     {{ __('В планах на реализацию') }}
 </h2>
 <div class="d-flex flex-wrap gap-3" style="margin-bottom: 5rem">
-    <div style="border: .2rem dashed var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem;">
+    <div
+        style="border: .2rem dashed var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem 2.5rem;">
         <h3 class="d-flex flex-wrap flex-column h-100 justify-content-center mb-0">
             <span class="container-simple-numbers-text">{{ __('Автоматическое') }}</span>
             <span class="d-flex align-items-center container-simple-numbers">
@@ -21,7 +22,8 @@
             </span>
         </h3>
     </div>
-    <div style="border: .2rem dashed var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem;">
+    <div
+        style="border: .2rem dashed var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem 2.5rem;">
         <h3 class="d-flex flex-wrap flex-column h-100 justify-content-center mb-0">
             <span class="container-simple-numbers-text">{{ __('Расширенная') }}</span>
             <span class="d-flex align-items-center container-simple-numbers">
@@ -30,16 +32,17 @@
             <span class="container-simple-numbers-text">{{ __('для лиц с ОВЗ') }}</span>
         </h3>
     </div>
-    <div style="border: .2rem dashed var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem;">
+    <div
+        style="border: .2rem dashed var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem 2.5rem;">
         <h3 class="d-flex flex-wrap flex-column h-100 justify-content-center mb-0">
             <span class="container-simple-numbers-text">{{ __('Личные') }}</span>
             <span class="d-flex align-items-center container-simple-numbers">
                 <span class="display-3 text-success">{{ __('сообщения') }}</span>
             </span>
-            <span class="container-simple-numbers-text">{{ __('в Аквариуме') }}</span>
         </h3>
     </div>
-    <div style="border: .2rem dashed var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem;">
+    <div
+        style="border: .2rem dashed var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem 2.5rem;">
         <h3 class="d-flex flex-wrap flex-column h-100 justify-content-center mb-0">
             <span class="d-flex align-items-center container-simple-numbers">
                 <span class="display-3 text-success">{{ __('Android и iOS') }}</span>
@@ -47,12 +50,22 @@
             <span class="container-simple-numbers-text">{{ __('приложения') }}</span>
         </h3>
     </div>
-    <div style="border: .2rem dashed var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem;">
+    <div
+        style="border: .2rem dashed var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem 2.5rem;">
         <h3 class="d-flex flex-wrap flex-column h-100 justify-content-center mb-0">
             <span class="d-flex align-items-center container-simple-numbers">
                 <span class="display-3 text-success">{{ __('OAuth') }}</span>
             </span>
             <span class="container-simple-numbers-text">{{ __('Аквариума') }}</span>
+        </h3>
+    </div>
+    <div
+        style="border: .2rem dashed var(--color-body-plane); border-radius: 24px; width: fit-content; padding: 2rem 2.5rem;">
+        <h3 class="d-flex flex-wrap flex-column h-100 justify-content-center mb-0">
+            <span class="container-simple-numbers-text">{{ __('Тематические') }}</span>
+            <span class="d-flex align-items-center container-simple-numbers">
+                <span class="display-3 text-success">{{ __('каналы') }}</span>
+            </span>
         </h3>
     </div>
 </div>
