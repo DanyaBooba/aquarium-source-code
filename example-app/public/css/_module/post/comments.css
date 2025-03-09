@@ -34,3 +34,41 @@
     opacity: .5;
     transform: translate(0px, -4px);
 }
+
+.container-post .comments .comments__comment .comments__more button {
+    outline: none !important;
+    border: none !important;
+    background-color: transparent !important;
+    padding: 4px !important;
+}
+
+.container-post .comments .comments__comment .comments__more button svg {
+    stroke: var(--text) !important;
+}
+
+.container-post .comments .comments__comment .comments__more ul {
+    border-radius: 12px;
+    box-shadow: 0 .125rem .25rem var(--shadow-hover) !important;
+    border: none !important;
+    background: var(--header);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.container-post .comments .comments__comment .comments__more ul li {
+    padding-left: 0 !important;
+}
+
+.container-post .comments .comments__comment .comments__more ul li a {
+    display: flex;
+    align-items: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    gap: 1rem;
+}
+
+.container-post .comments .comments__comment .comments__more ul li a svg {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+}

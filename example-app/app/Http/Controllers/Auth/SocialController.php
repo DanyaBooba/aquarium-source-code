@@ -32,7 +32,7 @@ class SocialController extends Controller
         return $this->auth($profile, true);
     }
 
-    public function github() 
+    public function github()
     {
         $profile = $this->githubData();
         return $this->auth($profile);
@@ -141,7 +141,7 @@ class SocialController extends Controller
         return $profile;
     }
 
-    private function githubData() 
+    private function githubData()
     {
         if (empty($_GET['code'])) return "error";
 
@@ -150,18 +150,18 @@ class SocialController extends Controller
             'client_secret' => GITHUB_CLIENT_SECRET_FIRST,
             'redirect_uri'  => GITHUB_CALLBACK_URL_FIRST,
             'code'          => $_GET['code']
-        );	
-                
+        );
+
         $ch = curl_init('https://github.com/login/oauth/access_token');
         curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, urldecode(http_build_query($params))); 
+        curl_setopt($ch, CURLOPT_POSTFIELDS, urldecode(http_build_query($params)));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_HEADER, false);
         $data = curl_exec($ch);
-        curl_close($ch);	
+        curl_close($ch);
         parse_str($data, $data);
-    
+
         if (empty($data['access_token'])) return "error";
 
         $ch = curl_init('https://api.github.com/user');
@@ -190,7 +190,7 @@ class SocialController extends Controller
 
     private function vkData()
     {
-        if(empty($_GET['code'])) return "error";
+        if (empty($_GET['code'])) return "error";
 
         $params = array(
             'client_id'     => VK_APP_ID,
@@ -198,11 +198,11 @@ class SocialController extends Controller
             'redirect_uri'  => VK_REDIRECT_URI_LOGIN,
             'code'          => $_GET['code']
         );
-        
+
         $data = file_get_contents('https://oauth.vk.com/access_token?' . urldecode(http_build_query($params)));
         $data = json_decode($data, true);
 
-        if(empty($data['access_token'])) return "error";
+        if (empty($data['access_token'])) return "error";
 
         $email = $data['email'];
 
@@ -235,7 +235,7 @@ class SocialController extends Controller
         if ($findNickname) $profileObject->nickname = '';
 
         $avatarDefault = empty($profileObject->avatar);
-        if(empty($profileObject->avatar)) $profileObject->avatar = user_image_random($profileObject->sex ?? '');
+        if (empty($profileObject->avatar)) $profileObject->avatar = user_image_random($profileObject->sex ?? '');
 
         return (object) [
             'email' => $profileObject->email,
@@ -250,7 +250,7 @@ class SocialController extends Controller
 
     private function auth($profile, $loginAtSecondAccount = false)
     {
-        if($profile === 'error') return redirect()->route('auth.signin');
+        if ($profile === 'error') return redirect()->route('auth.signin');
 
         $findUser = User::where('email', $profile->email)->first();
 
@@ -329,7 +329,7 @@ class SocialController extends Controller
         }
 
         $serviceName = '';
-        switch($profile->service) {
+        switch ($profile->service) {
             case 'ya':
                 $serviceName = 'Яндекс';
                 break;
@@ -347,7 +347,7 @@ class SocialController extends Controller
         $code = set_new_verify();
 
         send_mail_verify($profile->email, $code);
-        send_mail_register($profile->email, $serviceName, $password);
+        send_mail_register($profile->email, $serviceName, $password, true);
 
         return redirect()->route('user')->with('alert.success', __('Добро пожаловать!'));
     }

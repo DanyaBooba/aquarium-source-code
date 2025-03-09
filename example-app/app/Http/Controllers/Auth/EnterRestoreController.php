@@ -55,7 +55,7 @@ class EnterRestoreController extends Controller
         $settingsData = $findUser->settings_notifications ? (object) json_decode($findUser->settings_notifications) : $settingsDefault;
 
         if ($settingsData->passwordChange) {
-            send_mail_new_password($findUser->email);
+            send_mail_new_password($findUser->email, true);
         }
 
         return redirect()->route('auth.signin.email');

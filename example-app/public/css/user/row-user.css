@@ -97,8 +97,8 @@
     margin-right: auto;
 }
 
-.row-user-bar .social .social-left div {
-    margin-right: 1rem;
+.row-user-bar .social .social-left div a {
+    padding: .75rem;
 }
 
 .row-user-bar .social .social-right div a {

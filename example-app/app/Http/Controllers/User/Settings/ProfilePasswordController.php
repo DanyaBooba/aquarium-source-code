@@ -49,7 +49,7 @@ class ProfilePasswordController extends Controller
         $settingsData = $user->settings_notifications ? (object) json_decode($user->settings_notifications) : $settingsDefault;
 
         if ($settingsData->passwordChange) {
-            send_mail_new_password($user->email);
+            send_mail_new_password($user->email, true);
         }
 
         return redirect()->route('user')->with('alert.success', __('Пароль был успешно сменен.'));

@@ -54,7 +54,7 @@ class ProfileEmailController extends Controller
         $code = set_new_verify();
         send_mail_verify($validated['newEmail'], $code);
 
-        send_mail_change_email($validated['currentEmail'], $validated['newEmail']);
+        send_mail_change_email($validated['currentEmail'], $validated['newEmail'], true);
 
         return redirect()->route('user');
     }
