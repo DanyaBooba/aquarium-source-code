@@ -30,7 +30,7 @@ class AddCommentController extends Controller
         $findPostWithId = Post::where('id', $id)->firstOrFail();
         $findUserSession = user_profile();
 
-        if ($findUserSession === null) {
+        if ($findUserSession === null || $findUserSession->usertype == -1) {
             return redirect()->back();
         }
 

@@ -10,7 +10,7 @@
 @else
     <div class="row row-cols-1 row-cols-lg-1 gx-3 px-2">
         @foreach ($posts as $post)
-            <x-post.card :post="$post" :showUser="$showUser" status='{{ $_test[$post->id % 3] }}' />
+            <x-post.card :post="$post" :showUser="$showUser" status='default' />
         @endforeach
     </div>
 @endif
